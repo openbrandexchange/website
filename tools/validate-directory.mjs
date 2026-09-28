@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-// Validates a directory.json against the OBX Directory schema (copied from the spec repo into
-// tools/schemas) plus the listing rules from spec docs/directory.md:
+// Validates a directory.json against the OBX Directory schema (the copy the site publishes at
+// public/schemas/v0.1/, synced from the spec by npm run sync:spec) plus the listing rules from
+// spec docs/directory.md:
 // unique ids, entries sorted by id, https discovery URLs ending in /.well-known/obx.
 // With --fetch it also asks every non-demo entry's discovery URL for its document.
 import { readFileSync, readdirSync } from 'node:fs';
@@ -14,7 +15,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 export function loadValidator() {
   const ajv = new Ajv2020({ allErrors: true, strict: false });
   addFormats(ajv);
-  const dir = join(here, 'schemas');
+  const dir = join(here, '..', 'public', 'schemas', 'v0.1');
   for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     ajv.addSchema(JSON.parse(readFileSync(join(dir, file), 'utf8')));
   }
