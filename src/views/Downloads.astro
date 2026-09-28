@@ -1,0 +1,47 @@
+---
+import { messages, nativeNames, repo, url, type Lang } from '../i18n';
+import { switchKitPath } from '../lib/switch-kit';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = messages[lang];
+const c = t.downloads;
+const kitLangs: Lang[] = lang === 'en' ? ['en'] : [lang, 'en'];
+---
+
+<section class="hero">
+  <div class="wrap">
+    <h1>{c.h1}</h1>
+    <p class="lead">{c.lead}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cards">
+      <article class="card" aria-labelledby="brochure">
+        <h2 id="brochure" class="card-title">{c.brochureTitle}</h2>
+        <p>{c.brochureP}</p>
+        <ul class="plain">
+          <li><a href="/downloads/retailers-nl.pdf" hreflang="nl" download>{c.dutch} (PDF)</a></li>
+          <li><a href="/downloads/retailers-en.pdf" hreflang="en" download>{c.english} (PDF)</a></li>
+        </ul>
+      </article>
+      <article class="card" aria-labelledby="kit">
+        <h2 id="kit" class="card-title">{c.kitTitle}</h2>
+        <p>{c.kitP} <a href={url(lang, 'retailers', '#switch-kit')}>{t.nav.retailers}</a></p>
+        <ul class="plain">
+          {kitLangs.map((l) => <li><a href={switchKitPath(l)} hreflang={l} download>{nativeNames[l]} (TXT)</a></li>)}
+        </ul>
+      </article>
+      <article class="card" aria-labelledby="examples">
+        <h2 id="examples" class="card-title">{c.exampleTitle}</h2>
+        <p>{c.exampleP}</p>
+        <p><a href={repo('spec', '/tree/main/fixtures/kestrel')}>{c.exampleLink}</a></p>
+        <p class="small muted">{c.templateP}</p>
+      </article>
+    </div>
+  </div>
+</section>

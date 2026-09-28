@@ -1,0 +1,55 @@
+---
+import { format, messages, url, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = messages[lang];
+const c = t.brands;
+const ids = ['portal', 'api', 'automate', 'own'];
+---
+
+<section class="hero">
+  <div class="wrap">
+    <h1>{c.h1}</h1>
+    <p class="lead">{c.lead}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cards two">
+      {
+        c.blocks.map((b, i) => (
+          <article class="card" aria-labelledby={ids[i]}>
+            <h2 id={ids[i]} class="card-title">{b.h}</h2>
+            <p>{format(b.p, { portal: t.portalWord })}</p>
+            <ul>{b.items.map((item) => <li>{item}</li>)}</ul>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="admin">
+  <div class="wrap prose">
+    <h2 id="admin">{c.adminTitle}</h2>
+    <dl class="definition-list">
+      {
+        c.admin.map((row) => (
+          <>
+            <dt>{row.k}</dt>
+            <dd>{row.v}</dd>
+          </>
+        ))
+      }
+    </dl>
+    <h2 id="next">{c.nextTitle}</h2>
+    <div class="actions">
+      <a class="button primary" href={url(lang, 'hosting')}>{c.nextHosting}</a>
+      <a class="button secondary" href={url(lang, 'automation')}>{c.nextAutomation}</a>
+    </div>
+  </div>
+</section>

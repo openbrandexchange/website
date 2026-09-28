@@ -1,0 +1,153 @@
+---
+import Code from '../components/Code.astro';
+import { localized, messages, repo, url, type Lang } from '../i18n';
+import { countryName, languageName, list } from '../lib/names';
+import * as s from '../data/snippets';
+import providerData from '../data/providers.json';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = messages[lang];
+const c = t.hosting;
+const statusLabel: Record<string, string> = {
+  in_development: t.common.inDevelopment,
+  available: t.common.available,
+};
+const env: [string, string][] = [
+  ['OBX_PUBLIC_URL', c.envPublicUrl],
+  ['OBX_SECRET_KEY', c.envSecretKey],
+  ['OBX_SETUP_CODE', c.envSetupCode],
+  ['PORT', c.envPort],
+];
+const providers = providerData.providers;
+---
+
+<section class="hero">
+  <div class="wrap">
+    <h1>{c.h1}</h1>
+    <p class="lead">{c.lead}</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="providers">
+  <div class="wrap">
+    <h2 id="providers">{c.p1Title}</h2>
+    <p class="prose">{c.p1P}</p>
+    <div class="cards">
+      {
+        providers.map((p) => (
+          <article class="card dir-entry" aria-labelledby={`provider-${p.id}`}>
+            <h3 id={`provider-${p.id}`}>
+              {p.name}
+              <span class="badge">{localized(p.relation, lang)}</span>
+            </h3>
+            <p>{localized(p.offers, lang)}</p>
+            <dl>
+              <dt>{c.fieldBased}</dt>
+              <dd>{countryName(lang, p.based_in)}</dd>
+              <dt>{c.fieldLanguages}</dt>
+              <dd>{list(lang, p.languages.map((l) => languageName(lang, l)))}</dd>
+              <dt>{c.fieldStatus}</dt>
+              <dd>{statusLabel[p.obx_status] ?? p.obx_status}</dd>
+              <dt>{c.fieldExport}</dt>
+              <dd>{p.data_export ? t.common.yes : '–'}</dd>
+              <dt>{c.fieldWebsite}</dt>
+              <dd>
+                <a href={p.website}>{p.website.replace(/^https:\/\//, '')}</a>
+              </dd>
+            </dl>
+          </article>
+        ))
+      }
+      <article class="card accent" aria-labelledby="become-provider">
+        <h3 id="become-provider">{c.listTitle}</h3>
+        <p>{c.listP}</p>
+        <ul>{c.listItems.map((i) => <li>{i}</li>)}</ul>
+        <p class="small">
+          {c.listHow} <a href={repo('website')}>openbrandexchange/website</a>
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="one-click">
+  <div class="wrap">
+    <h2 id="one-click">{c.p2Title}</h2>
+    <p class="prose">{c.p2P}</p>
+
+    <div class="option" id="cloudflare">
+      <h3>{t.common.editionCloudflare}</h3>
+      <div class="prose">
+        <p>{c.cfP}</p>
+        <p>
+          <a class="button primary" href="https://deploy.workers.cloudflare.com/?url=https://github.com/openbrandexchange/node-ts"
+            >{c.cfButton}</a
+          >
+        </p>
+        <p class="small"><a href={repo('node-ts')}>openbrandexchange/node-ts</a></p>
+      </div>
+    </div>
+
+    <div class="option" id="cloud-run">
+      <h3>{t.common.editionGoogle}</h3>
+      <div class="prose">
+        <p>{c.runP}</p>
+        <Code code={s.cloudRun} />
+        <p class="small"><a href={repo('node-go')}>openbrandexchange/node-go</a> · <a href="#docker">Docker</a></p>
+      </div>
+    </div>
+
+    <div class="option" id="web-hosting">
+      <h3>{t.common.editionHosting}</h3>
+      <div class="prose">
+        <p>{c.phpP}</p>
+        <ol>{c.phpSteps.map((st) => <li>{st}</li>)}</ol>
+        <p class="small"><a href={repo('node-php', '/releases/latest')}>{c.phpDownload}</a> · <a href={repo('node-php')}>openbrandexchange/node-php</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="docker">
+  <div class="wrap">
+    <h2 id="docker">{c.p3Title}</h2>
+    <div class="prose">
+      <p>{c.p3P}</p>
+      <Code code={s.dockerRun} />
+      <p>{c.composeP}</p>
+      <Code label="compose.yaml" code={s.dockerCompose} />
+      <h3>{c.envTitle}</h3>
+      <div class="table-scroll">
+        <table>
+          <tbody>
+            {
+              env.map(([k, v]) => (
+                <tr>
+                  <th scope="row">
+                    <code>{k}</code>
+                  </th>
+                  <td>{v}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h2 id="first-start">{c.firstTitle}</h2>
+    <div class="prose">
+      <ol>{c.first.map((f) => <li>{f}</li>)}</ol>
+      <p class="muted">{c.firstWhy}</p>
+    </div>
+
+    <h2 id="domain">{c.domainTitle}</h2>
+    <p class="prose">{c.domainP}</p>
+
+    <h2 id="editions">{c.compareTitle}</h2>
+    <p class="prose">{c.compareP} <a href={url(lang, 'developers', '#implementations')}>{c.compareLink}</a>.</p>
+  </div>
+</section>

@@ -1,0 +1,101 @@
+---
+import { messages, repo, type Lang } from '../i18n';
+import { countryName, languageName, list } from '../lib/names';
+import directory from '../../public/directory.json';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = messages[lang];
+const c = t.directory;
+const categories = c.categories as Record<string, string>;
+
+type Entry = (typeof directory.entries)[number] & { 'x-obx-demo'?: boolean };
+const entries = [...(directory.entries as Entry[])].sort((a, b) => a.name.localeCompare(b.name, lang));
+const dateFormat = new Intl.DateTimeFormat(lang, { dateStyle: 'long', timeZone: 'UTC' });
+const portalUrl = (discovery: string) => new URL(discovery).origin + '/';
+const searchText = (e: Entry) =>
+  [e.name, ...e.brands, ...(e.countries ?? []).map((cc) => countryName(lang, cc)), ...(e.categories ?? []).map((k) => categories[k] ?? k)]
+    .join(' ')
+    .toLowerCase();
+---
+
+<section class="hero">
+  <div class="wrap">
+    <h1>{c.h1}</h1>
+    <p class="lead">{c.lead}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="dir-tools" data-dir-tools hidden>
+      <label>
+        {c.search}
+        <input type="search" data-dir-search autocomplete="off" />
+      </label>
+    </div>
+    <div class="cards" data-dir-list>
+      {
+        entries.map((e) => (
+          <article class="card dir-entry" aria-labelledby={`entry-${e.id}`} data-search={searchText(e)}>
+            <h2 id={`entry-${e.id}`} class="card-title">
+              {e.name}
+              {e['x-obx-demo'] && <span class="badge demo">{c.demo}</span>}
+            </h2>
+            {e['x-obx-demo'] && <p class="small muted">{c.demoNote}</p>}
+            <dl>
+              <dt>{c.fieldBrands}</dt>
+              <dd>{list(lang, e.brands)}</dd>
+              {e.countries?.length ? (
+                <>
+                  <dt>{c.fieldCountries}</dt>
+                  <dd>{list(lang, e.countries.map((cc) => countryName(lang, cc)))}</dd>
+                </>
+              ) : null}
+              {e.categories?.length ? (
+                <>
+                  <dt>{c.fieldCategories}</dt>
+                  <dd>{list(lang, e.categories.map((k) => categories[k] ?? k))}</dd>
+                </>
+              ) : null}
+              <dt>{c.fieldLanguages}</dt>
+              <dd>{list(lang, e.languages.map((l) => languageName(lang, l)))}</dd>
+              <dt>{c.fieldListed}</dt>
+              <dd>
+                <time datetime={e.listed_at}>{dateFormat.format(new Date(e.listed_at + 'T00:00:00Z'))}</time>
+              </dd>
+              {e.website && (
+                <>
+                  <dt>{c.fieldWebsite}</dt>
+                  <dd>{e['x-obx-demo'] ? e.website.replace(/^https:\/\//, '') : <a href={e.website} rel="nofollow">{e.website.replace(/^https:\/\//, '')}</a>}</dd>
+                </>
+              )}
+            </dl>
+            {!e['x-obx-demo'] && (
+              <p>
+                <a class="button secondary" href={portalUrl(e.discovery_url)} rel="nofollow">{c.openPortal}</a>
+              </p>
+            )}
+          </article>
+        ))
+      }
+    </div>
+    <p data-dir-empty hidden>{c.noResults}</p>
+    <p class="small">{c.jsonP} <a href="/directory.json"><code>/directory.json</code></a></p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="get-listed">
+  <div class="wrap prose">
+    <h2 id="get-listed">{c.listTitle}</h2>
+    <ol>{c.listSteps.map((step) => <li>{step}</li>)}</ol>
+    <p>{c.listRule}</p>
+    <p>
+      <a href={repo('website', '/blob/main/public/directory.json')}>public/directory.json</a> ·
+      <a href={repo('spec', '/blob/main/docs/directory.md')}>directory.md</a>
+    </p>
+    <p class="muted">{c.removeP}</p>
+  </div>
+</section>

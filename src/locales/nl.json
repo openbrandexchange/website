@@ -1,0 +1,621 @@
+{
+  "portalWord": "Beeldbank",
+  "common": {
+    "skip": "Naar de inhoud",
+    "menu": "Menu",
+    "mainMenu": "Hoofdmenu",
+    "language": "Taal",
+    "languageLabel": "Kies een taal",
+    "home": "Open Brand Exchange, homepage",
+    "copy": "Kopieer",
+    "copied": "Gekopieerd",
+    "draft": "Specificatie 0.1 (concept): de software wordt nu gebouwd. Nog niet bedoeld voor productie.",
+    "footerAbout": "Een gratis, open manier voor merken om productbeelden en artikeldata aan hun retailers te leveren.",
+    "footerMore": "Meer",
+    "footerSource": "Broncode en specificatie",
+    "footerLicence": "Inhoud CC-BY-4.0, code MIT.",
+    "footerWorking": "\"Open Brand Exchange\" is een werknaam. Specificatie 0.1, in ontwikkeling.",
+    "editionCloudflare": "Portaal voor Cloudflare",
+    "editionGoogle": "Portaal voor Google Cloud & Docker",
+    "editionHosting": "Portaal voor webhosting",
+    "yes": "Ja",
+    "inDevelopment": "In ontwikkeling",
+    "available": "Beschikbaar"
+  },
+  "nav": {
+    "brands": "Voor merken",
+    "automation": "Automatiseren",
+    "hosting": "Hosting",
+    "retailers": "Voor retailers",
+    "developers": "Ontwikkelaars",
+    "directory": "Merkenlijst",
+    "downloads": "Downloads",
+    "faq": "Veelgestelde vragen",
+    "governance": "Governance en naam",
+    "privacy": "Privacy"
+  },
+  "meta": {
+    "home": {
+      "title": "Open Brand Exchange: één plek en één API voor al je retailers",
+      "description": "Een gratis, open standaard en software voor merken: een portaal voor je retailers, een standaard-API voor hun software en automatisch publiceren vanuit je eigen systemen."
+    },
+    "brands": {
+      "title": "Voor merken",
+      "description": "Een eigen portaal voor je retailers, een standaard-API en automatisch publiceren vanuit je PIM, ERP of map. Gratis zelf hosten of via een provider."
+    },
+    "automation": {
+      "title": "Automatiseren",
+      "description": "Publiceer automatisch: geplande imports, de obx-tool, cron, GitHub Actions, n8n, Make, Zapier of curl. Recepten om te kopiëren."
+    },
+    "hosting": {
+      "title": "Hosting",
+      "description": "Van eenvoudig naar zelf doen: een provider, één klik op Cloudflare, Google Cloud Run of gewone webhosting, of Docker."
+    },
+    "retailers": {
+      "title": "Voor retailers",
+      "description": "Wat een merkportaal je geeft, een API-sleutel voor je eigen software en een kant-en-klare mail voor merken die nog niet meedoen."
+    },
+    "developers": {
+      "title": "Ontwikkelaars",
+      "description": "De specificatie, de drie API's, de SDK en de commandline-tool, de conformancetest en de implementaties."
+    },
+    "directory": {
+      "title": "Merkenlijst",
+      "description": "Merken die via Open Brand Exchange publiceren, en hoe je merk op de lijst komt."
+    },
+    "downloads": {
+      "title": "Downloads",
+      "description": "Brochures, e-mailteksten en voorbeeldbestanden."
+    },
+    "faq": {
+      "title": "Veelgestelde vragen",
+      "description": "Antwoorden op de vragen die merken en retailers het vaakst stellen."
+    },
+    "governance": {
+      "title": "Governance en naam",
+      "description": "Wie beslist over de standaard, hoe je bijdraagt, de licenties en waarom de naam een werknaam is."
+    },
+    "privacy": {
+      "title": "Privacy",
+      "description": "Deze site volgt je niet: geen cookies, geen tracking."
+    }
+  },
+  "home": {
+    "eyebrow": "Een open standaard voor merken",
+    "h1": "Eén plek en één API voor al je retailers",
+    "lead": "Open Brand Exchange is een gratis, open manier om je definitieve productbeelden en artikeldata aan je retailers te leveren. Je retailers krijgen een portaal bij jou, hun software een standaard-API, en jij publiceert automatisch vanuit je eigen systemen.",
+    "ctaBrands": "Zo werkt het voor merken",
+    "ctaRetailers": "Ik ben retailer",
+    "howTitle": "Zo werkt het",
+    "steps": [
+      {
+        "h": "Zet je portaal neer",
+        "p": "Laat een provider het draaien, of host het zelf gratis met één klik of één commando.",
+        "link": "Hostingopties"
+      },
+      {
+        "h": "Publiceer automatisch",
+        "p": "Eén CSV-bestand en foto's met een vaste naam. Je PIM, ERP of een gewone map levert ze elke nacht aan, zonder handwerk.",
+        "link": "Automatiseren"
+      },
+      {
+        "h": "Je retailers doen de rest",
+        "p": "Retailers loggen in, plakken hun EAN-lijst en downloaden. Hun software haalt dezelfde content op via de standaard-API.",
+        "link": "Voor retailers"
+      }
+    ],
+    "whatTitle": "Wat je levert",
+    "what": [
+      {
+        "h": "Beelden, zoals jij ze bedoelt",
+        "p": "Packshots, modelfoto's en details, met volgorde, aanzicht, gebruiksrechten, embargo en of er AI bij kwam kijken."
+      },
+      {
+        "h": "Artikeldata per maat",
+        "p": "Stijlnummer, kleur, EAN per maat, seizoen, omschrijving, materiaal en wasvoorschrift, in meerdere talen."
+      },
+      {
+        "h": "Wijzigingen gaan vanzelf mee",
+        "p": "Een vervangen packshot of een ingetrokken beeld komt vanzelf bij je retailers terecht."
+      }
+    ],
+    "whyTitle": "Waarom open",
+    "why": [
+      {
+        "h": "Gratis",
+        "p": "De standaard en de software kosten niets. Je betaalt hooguit je hosting, of een provider als je het liever uitbesteedt."
+      },
+      {
+        "h": "Van jou",
+        "p": "Je content staat op je eigen server of bij een provider die je kunt verlaten. Elk portaal spreekt dezelfde taal."
+      },
+      {
+        "h": "Eén kanaal in plaats van tien",
+        "p": "Eén publicatie voor al je retailers. Geen WeTransfers, mails met zips of een aparte koppeling per winkel meer."
+      }
+    ],
+    "status": "Open Brand Exchange staat aan het begin. De specificatie is een eerste concept (0.1) en de software wordt nu gebouwd. We tonen geen klanten of aantallen die er nog niet zijn.",
+    "statusLink": "Lees hoe het wordt bestuurd"
+  },
+  "brands": {
+    "h1": "Voor merken",
+    "lead": "Je retailers willen je beelden en artikeldata, het liefst direct gekoppeld aan hun eigen artikelen. Met Open Brand Exchange regel je dat één keer goed, voor allemaal tegelijk.",
+    "blocks": [
+      {
+        "h": "Een portaal voor je retailers",
+        "p": "Je portaal draagt jouw naam en huisstijl: \"Kestrel · {portal}\", op je eigen domein als je wilt. Retailers vragen toegang aan, jij keurt goed of af.",
+        "items": [
+          "Zoeken en filteren op merk, seizoen, collectie en producttype",
+          "Een lijst EAN's plakken en direct zien wat er is en wat ontbreekt",
+          "Eén foto downloaden, één artikel, of een zip van een hele selectie",
+          "In het formaat dat ze nodig hebben: origineel, web (2000 px) of vierkant",
+          "Artikeldata als spreadsheet, met materiaal en wasvoorschrift"
+        ]
+      },
+      {
+        "h": "Een standaard-API voor hun software",
+        "p": "Retailers die met software werken, krijgen een API-sleutel voor hun software. Hun kassasysteem, PIM of webshopsoftware haalt alles één keer op en daarna alleen nog de wijzigingen.",
+        "items": [
+          "Opzoeken op EAN, zodat beelden op het juiste artikel en de juiste maat landen",
+          "Wijzigingen komen vanzelf binnen, ook wat je intrekt",
+          "Gebruiksrechten, embargo en AI-herkomst reizen mee met elk beeld",
+          "Eén keer gebouwd, werkt het bij elk merk dat Open Brand Exchange gebruikt"
+        ]
+      },
+      {
+        "h": "Automatisch uploaden",
+        "p": "Niemand hoeft nog bestanden te slepen. Je portaal haalt je export zelf op, of je eigen systemen sturen hem aan.",
+        "items": [
+          "Geplande import vanaf een webadres, SFTP-server of S3-bucket, zonder code",
+          "Een map die automatisch wordt gepubliceerd met de obx-tool",
+          "Recepten voor cron, GitHub Actions, n8n, Make en Zapier",
+          "Eén CSV-formaat en één naamregel voor foto's: KO-1001_NVY_1.jpg"
+        ]
+      },
+      {
+        "h": "Het is van jou",
+        "p": "Open Brand Exchange is geen platform waar je je merk aan overdraagt. Je draait je eigen portaal, of laat een provider dat voor je doen.",
+        "items": [
+          "Zelf hosten is gratis: de software is open source",
+          "Liever uitbesteden? Kies een provider, en stap over wanneer je wilt",
+          "Je ziet wie wat downloadt, per retailer",
+          "Jij bepaalt wie toegang krijgt, tot welke merken en of originelen mogen"
+        ]
+      }
+    ],
+    "adminTitle": "Wat je zelf regelt",
+    "admin": [
+      {
+        "k": "Catalogus",
+        "v": "merken, artikelen, kleuren en maten, beelden en hun volgorde"
+      },
+      {
+        "k": "Imports",
+        "v": "uploaden of gepland ophalen, met een duidelijke melding bij elke regel die misging"
+      },
+      {
+        "k": "Retailers",
+        "v": "aanvragen goed- of afkeuren (met reden), accounts uitnodigen of blokkeren"
+      },
+      {
+        "k": "API-sleutels",
+        "v": "sleutels voor de software van je retailers: één keer getoond, makkelijk te vernieuwen of in te trekken"
+      },
+      {
+        "k": "Automatisch uploaden",
+        "v": "sleutels voor je eigen systemen, en meldingen als een retailer toegang vraagt of een import klaar is"
+      },
+      {
+        "k": "Statistieken",
+        "v": "downloads en gebruik per retailer"
+      },
+      {
+        "k": "Instellingen",
+        "v": "logo, accentkleur, welkomsttekst, standaard gebruiksrechten en je eigen domein"
+      }
+    ],
+    "nextTitle": "Volgende stap",
+    "nextHosting": "Kies hoe je het host",
+    "nextAutomation": "Bekijk de automatiseringsrecepten"
+  },
+  "automation": {
+    "h1": "Automatiseren",
+    "lead": "Je PIM, ERP, DAM of een gedeelde map heeft de data en de foto's al. Kies het eerste recept dat past: ze werken met elk Open Brand Exchange-portaal.",
+    "chooseTitle": "Welk recept past bij jou?",
+    "head": [
+      "Je hebt…",
+      "Gebruik",
+      "Code nodig"
+    ],
+    "rows": [
+      [
+        "een CSV of zip op een webadres, SFTP-server of S3-bucket",
+        "Geplande import",
+        "nee"
+      ],
+      [
+        "een map waar exports in terechtkomen",
+        "obx watch",
+        "nee"
+      ],
+      [
+        "een server of pc die 's nachts taken draait",
+        "cron of Taakplanner",
+        "één regel"
+      ],
+      [
+        "je exports in een Git-repository",
+        "GitHub Action",
+        "één YAML-bestand"
+      ],
+      [
+        "n8n, Make of Zapier",
+        "HTTP-stappen",
+        "nee (visueel)"
+      ],
+      [
+        "een ontwikkelaar die je PIM of ERP koppelt",
+        "De API direct",
+        "een beetje"
+      ]
+    ],
+    "formatTitle": "Eén formaat voor alles",
+    "formatP": "Elke manier van publiceren leest hetzelfde: een products.csv met één regel per maat, en foto's met de naam {style}_{color}_{position}.jpg (stijl, kleur, positie). Heb je dat, dan werkt elk recept hieronder.",
+    "formatLink": "Het volledige importformaat",
+    "csvLabel": "products.csv (ingekort)",
+    "namesLabel": "Bestandsnamen van foto's",
+    "keyTitle": "Wat je nodig hebt",
+    "keyP": "Ga in je beheeromgeving naar Automatisch uploaden en maak een nieuwe sleutel aan. Je hebt dan twee waarden: het adres van je portaal (OBX_URL) en de sleutel zelf (OBX_TOKEN). De sleutel wordt maar één keer getoond.",
+    "keyTip": "Geef elk systeem een eigen sleutel. Dan kun je er één intrekken zonder de rest te breken.",
+    "scheduledTitle": "1. Geplande import (zonder code)",
+    "scheduledP": "In je beheeromgeving: Imports → Geplande imports → Toevoegen. Kies de bron en hoe vaak hij moet draaien.",
+    "scheduled": [
+      {
+        "k": "Webadres (HTTPS)",
+        "v": "het adres van een products.csv, of van een zip met products.csv en foto's. Inloggegevens worden versleuteld bewaard."
+      },
+      {
+        "k": "SFTP",
+        "v": "server, gebruiker, wachtwoord of sleutel, en de map met de export."
+      },
+      {
+        "k": "S3-bucket",
+        "v": "AWS S3, Cloudflare R2, MinIO of Backblaze: endpoint, bucket, map en een alleen-lezen sleutel."
+      }
+    ],
+    "scheduledMode": "Kies \"Bijwerken\" (alleen toevoegen en wijzigen) of \"Spiegelen\" (ook offline halen wat uit het bestand verdween). Spiegelen weigert als meer dan de helft van een merk zou verdwijnen, zodat een kapotte export nooit je catalogus leegmaakt. Met \"Verbinding testen\" zie je welke bestanden hij zou lezen.",
+    "cliTitle": "De obx-tool",
+    "cliP": "obx is één programma voor Windows, macOS en Linux. Het leest OBX_URL en OBX_TOKEN uit de omgeving, uploadt alleen nieuwe of gewijzigde foto's, maakt waar nodig de webversies en wacht tot je portaal alles heeft verwerkt. Draai het zo vaak als je wilt: ongewijzigde artikelen kosten niets.",
+    "cliExit": "Exitcode 0 = alles goed, 2 = klaar maar sommige regels hadden fouten (die worden getoond), 1 = mislukt.",
+    "cliGet": "obx downloaden",
+    "watchTitle": "2. Een map die zichzelf publiceert: obx watch",
+    "watchP": "Laat je PIM, ERP of een collega exports in een map zetten. obx watch publiceert zodra er iets verandert en slaat foto's over die hetzelfde bleven. Laat het draaien als dienst, of met Docker:",
+    "cronTitle": "3. cron of Windows Taakplanner",
+    "cronLinux": "Linux of macOS",
+    "cronWindows": "Windows (PowerShell, eenmalig)",
+    "githubTitle": "4. GitHub Action",
+    "githubP": "Zet OBX_URL en OBX_TOKEN als repository secrets. Hetzelfde werkt in GitLab CI, Bitbucket of Azure DevOps: installeer obx en draai obx push.",
+    "httpTitle": "5. n8n, Make of Zapier",
+    "httpP": "Gebruik een gewone HTTP Request-stap met de header Authorization: Bearer gevolgd door je sleutel. Elke stap mag je herhalen: dezelfde data twee keer sturen verandert niets.",
+    "httpProduct": "Artikel (bijvoorbeeld als het in je PIM wijzigt)",
+    "httpVariant": "Kleur en maat, met de EAN",
+    "httpImage": "Foto: eerst de gegevens, dan het bestand zelf",
+    "httpImageNote": "Sommige portalen (het Portaal voor Cloudflare) maken zelf geen webversies van foto's. Gebruik daar een geplande import of obx: die maken ze voor je.",
+    "httpOffline": "Iets offline halen",
+    "httpHooks": "Wil je een seintje als er iets gebeurt? Zet in je beheeromgeving een melding (webhook) op een afgeronde import of een nieuwe toegangsaanvraag, en laat die een trigger in n8n, Make of Zapier starten.",
+    "apiTitle": "6. De API direct (voor ontwikkelaars)",
+    "apiP": "Een koppeling onthoudt wat hij de vorige keer stuurde en stuurt alleen wijzigingen, in batches. Of stuur de CSV zoals hij is en laat het portaal hem lezen.",
+    "apiBatch": "Foto's overslaan die het portaal al heeft, dan één batch versturen",
+    "apiImport": "Een CSV en een zip met foto's in één keer",
+    "apiMore": "Alle details staan in de specificatie:",
+    "apiSpec": "Ingest API",
+    "apiAuto": "automatiseringsrecepten",
+    "apiSdk": "Go-SDK"
+  },
+  "hosting": {
+    "h1": "Hosting",
+    "lead": "Eén portaal is één merkbedrijf op één server. Jij kiest hoe je het draait, van volledig uitbesteed tot helemaal zelf. Hieronder van eenvoudig naar zelf doen.",
+    "p1Title": "1. Via een provider",
+    "p1P": "Het makkelijkst: een bedrijf host je portaal, houdt het bij en helpt je bij de inrichting. Omdat elk portaal dezelfde standaard spreekt, kun je later overstappen naar een andere provider of naar eigen hosting.",
+    "fieldBased": "Gevestigd in",
+    "fieldLanguages": "Talen",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Al je content exporteren",
+    "fieldWebsite": "Website",
+    "listTitle": "Zelf provider worden?",
+    "listP": "Elke hostingpartij, elk bureau en elke softwareleverancier kan hier staan. De voorwaarden zijn voor iedereen gelijk:",
+    "listItems": [
+      "je portaal slaagt voor de conformancetest",
+      "een merk kan al zijn data en beelden exporteren en vertrekken",
+      "je vermeldt je eigen prijzen en voorwaarden op je eigen site"
+    ],
+    "listHow": "Open een pull request op de website-repository met je gegevens in src/data/providers.json. De initiatiefnemer staat bovenaan, de rest alfabetisch.",
+    "p2Title": "2. Met één klik",
+    "p2P": "Je eigen portaal op je eigen account, zonder een server te beheren.",
+    "cfP": "Draait op Cloudflare Workers, met D1 als database en R2 voor de beelden. Klik op de knop, log in bij Cloudflare en volg de stappen. Cloudflare heeft gratis tegoeden; bekijk hun actuele prijzen voor grote catalogi. De webversies van je foto's maken je browser en de obx-tool, dus daar hoef je niets voor te doen.",
+    "cfButton": "Installeren op Cloudflare",
+    "runP": "Een script dat je portaal op Google Cloud Run zet. Je hebt een Google Cloud-account en de gcloud-tool nodig.",
+    "phpP": "Voor het webhostingpakket dat je misschien al hebt, met PHP en een database. Geen commando's nodig:",
+    "phpSteps": [
+      "Download obx-node-php.zip bij de nieuwste release.",
+      "Pak het uit en upload de map met (S)FTP naar je hosting.",
+      "Laat je (sub)domein, bijvoorbeeld beeldbank.jouwmerk.nl, naar de map public wijzen.",
+      "Open dat adres en volg de installatiewizard."
+    ],
+    "phpDownload": "Download de nieuwste release",
+    "p3Title": "3. Docker",
+    "p3P": "Op je eigen server of bij elke cloud die containers draait. Eén commando:",
+    "composeP": "Of met HTTPS erbij, via Caddy:",
+    "envTitle": "Instellingen",
+    "envPublicUrl": "het openbare adres van je portaal",
+    "envSecretKey": "een lange willekeurige sleutel (openssl rand -hex 32); bewaar hem goed",
+    "envSetupCode": "optioneel: een setupcode die je vooraf kiest",
+    "envPort": "poort, standaard 8080",
+    "firstTitle": "Na het installeren: de eerste start",
+    "first": [
+      "Open het adres van je portaal in je browser.",
+      "Vul de eenmalige setupcode in. Die staat in het log bij de eerste start, of je stelt hem vooraf in met OBX_SETUP_CODE.",
+      "Vul je bedrijf en je eerste merk in en kies je eigen wachtwoord. Er is nooit een standaardwachtwoord."
+    ],
+    "firstWhy": "De setupcode zorgt ervoor dat niemand anders een net geïnstalleerd portaal kan claimen.",
+    "domainTitle": "Je eigen domein",
+    "domainP": "Gebruik een subdomein zoals beeldbank.jouwmerk.nl of b2b.jouwmerk.nl. Retailers zien dan jouw naam, en je adres blijft hetzelfde als je van hosting wisselt.",
+    "compareTitle": "Drie edities, één portaal",
+    "compareP": "De drie edities doen hetzelfde en hebben dezelfde beheeromgeving en hetzelfde retailerportaal. Kies wat bij je hosting past; wisselen kan later altijd.",
+    "compareLink": "Bekijk de implementaties"
+  },
+  "retailers": {
+    "h1": "Voor retailers",
+    "lead": "Merken die Open Brand Exchange gebruiken, leveren hun beelden en artikeldata op één vaste manier, of je nu met de hand downloadt of software gebruikt.",
+    "portalTitle": "Wat een merkportaal je geeft",
+    "portalP": "Elk merk draait een eigen portaal, met zijn eigen naam erop: bijvoorbeeld \"Kestrel · {portal}\".",
+    "portal": [
+      {
+        "h": "Toegang aanvragen",
+        "p": "Vraag toegang aan op het portaal van het merk. Het merk keurt goed en je krijgt een uitnodiging per e-mail."
+      },
+      {
+        "h": "Zoeken en filteren",
+        "p": "Op merk, seizoen, collectie, producttype of kleur. Elk artikel met al zijn beelden en data."
+      },
+      {
+        "h": "Je EAN-lijst plakken",
+        "p": "Plak de EAN's uit je kassasysteem en zie meteen welke artikelen er zijn en welke nog ontbreken."
+      },
+      {
+        "h": "Downloaden zoals jij wilt",
+        "p": "Eén foto, één artikel, je selectie of alles binnen een filter als zip. Origineel (als het merk dat toestaat), web of vierkant."
+      },
+      {
+        "h": "Artikeldata als spreadsheet",
+        "p": "EAN per maat, kleur, materiaal, wasvoorschrift en omschrijving, klaar voor je eigen systeem."
+      },
+      {
+        "h": "Wat mag",
+        "p": "Gebruiksrechten, embargodatum en of een beeld met AI is gemaakt, staan bij elk beeld."
+      }
+    ],
+    "apiTitle": "Een API-sleutel voor je software",
+    "apiP": "Haalt je PIM, kassasysteem of webshopsoftware zelf beelden op? Vraag dan een API-sleutel voor je software aan. Die haalt eerst alles op en daarna alleen nog de wijzigingen, ook wat het merk intrekt. Beelden worden op EAN aan je artikelen gekoppeld.",
+    "apiDev": "Voor je ontwikkelaar: zo ziet het eruit.",
+    "toolsTitle": "Photopilot en andere software",
+    "toolsP": "Open Brand Exchange is een open standaard: elk programma kan hem lezen. Photopilot, de initiatiefnemer, kan hem gebruiken in zijn software voor retailers, en andere leveranciers kunnen hetzelfde doen. Je hebt geen bepaalde software nodig: een browser is genoeg.",
+    "toolsLink": "Specificatie voor ontwikkelaars",
+    "findTitle": "Een merk vinden",
+    "findP": "Merken die zich laten vermelden, staan in de merkenlijst. Geeft een merk je gewoon het adres van zijn portaal, dan werkt dat ook.",
+    "findLink": "Naar de merkenlijst",
+    "kitTitle": "Staat je merk er niet op? Stuur ze dit",
+    "kitP": "De snelste manier om een merk mee te krijgen, is dat winkels erom vragen. Kopieer deze mail, vul de haakjes in en stuur hem naar je contactpersoon of vertegenwoordiger bij het merk.",
+    "kitEnglish": "Engels (voor internationale merken)",
+    "kitDownload": "Download als tekstbestand",
+    "kitMore": "Meer materiaal, zoals de brochure voor retailers, staat bij de downloads."
+  },
+  "switchKit": {
+    "subject": "Jullie productbeelden en artikeldata via Open Brand Exchange?",
+    "body": "Beste [naam],\n\nWij verkopen [merk] in onze winkel en webshop. Om jullie artikelen goed te laten zien, hebben we jullie definitieve productfoto's en artikeldata nodig: de EAN per maat, materiaal, wasvoorschrift en de beelden in de juiste volgorde.\n\nNu komt dat vaak binnen via losse bestanden en mails. Willen jullie kijken naar Open Brand Exchange? Dat is een gratis, open standaard waarmee een merk zijn content één keer publiceert voor al zijn retailers:\n\n- een eigen portaal waar wij inloggen, zoeken op onze EAN's en downloaden;\n- een standaard-API, zodat onze software beelden en data zelf ophaalt;\n- automatisch publiceren vanuit jullie PIM, ERP of een map met exports.\n\nDe software is open source: jullie kunnen hem zelf gratis hosten of een provider kiezen. Jullie bepalen wie toegang krijgt en zien wie wat downloadt.\n\nMeer informatie: {url}\n\nMet vriendelijke groet,\n\n[naam]\n[winkel]\n[plaats]"
+  },
+  "developers": {
+    "h1": "Ontwikkelaars",
+    "lead": "Open Brand Exchange is een specificatie met drie API's, JSON Schema's, testdata en een conformancetest. De specificatie is de bron; de implementaties volgen haar.",
+    "specTitle": "De specificatie",
+    "specP": "Versie 0.1 (concept). OpenAPI 3.1, JSON Schema 2020-12, voorbeelden en een fictief testmerk, Kestrel Outfitters. Licentie CC-BY-4.0: vrij te implementeren, ook commercieel.",
+    "specStart": "Begin bij protocol.md",
+    "apisTitle": "Drie API's",
+    "apisHead": [
+      "API",
+      "Voor",
+      "Status",
+      "Contract"
+    ],
+    "apis": [
+      {
+        "who": "software van retailers: discovery, OAuth2 client credentials, wijzigingsfeed, opzoeken op GTIN, renditions, exports, webhooks",
+        "status": "normatief"
+      },
+      {
+        "who": "de automatisering van een merk: idempotente upserts op de eigen id's van het merk, uploads op sha256, batches, imports",
+        "status": "normatief"
+      },
+      {
+        "who": "de gedeelde beheeromgeving en het retailerportaal",
+        "status": "niet-normatief"
+      }
+    ],
+    "readTitle": "Een merkportaal uitlezen in een paar regels",
+    "sdkTitle": "SDK en commandline-tool",
+    "sdkP": "obx-go bevat de Go-SDK (types, een protocolclient en een ingestclient met ontdubbeling, multipart-uploads en batches), de obx-tool voor merken, obx-conformance en een mockserver. In andere talen werkt elke HTTP-client: het contract staat in de OpenAPI-bestanden.",
+    "confTitle": "Conformance",
+    "confP": "Een implementatie is OBX-conformant voor een profiel als obx-conformance alle verplichte tests van dat profiel haalt. Er zijn drie profielen: protocol, ingest en portal.",
+    "implTitle": "Implementaties",
+    "implHead": [
+      "Repository",
+      "Wat",
+      "Licentie",
+      "Status"
+    ],
+    "impl": [
+      "specificatie, schema's, testdata",
+      "Go-SDK, obx-tool, conformancetest, mockserver",
+      "gedeelde webinterface: beheer en retailerportaal",
+      "Go: Docker en Google Cloud Run",
+      "PHP: gewone webhosting",
+      "TypeScript: Cloudflare Workers"
+    ],
+    "statusDraft": "concept 0.1",
+    "implP": "Bouw je zelf een implementatie of een afnemer? Laat het weten met een issue of pull request; hij komt in deze tabel zodra hij de conformancetest haalt.",
+    "docsTitle": "Documenten",
+    "docs": [
+      "het protocol, in gewone tekst",
+      "publiceren via de Ingest API",
+      "het CSV-formaat en de bestandsnamen",
+      "automatiseringsrecepten",
+      "beveiligingseisen",
+      "versies en compatibiliteit",
+      "merkenlijsten"
+    ],
+    "contribute": "Bijdragen gaan via pull requests op de spec-repository.",
+    "governanceLink": "Hoe beslissingen worden genomen"
+  },
+  "directory": {
+    "h1": "Merkenlijst",
+    "lead": "Merken die via Open Brand Exchange publiceren en op de lijst willen staan. Een vermelding bevat alleen het adres van het portaal van het merk en een paar zoekgegevens, nooit productdata.",
+    "search": "Zoek op naam, merk of land",
+    "demo": "Voorbeeld",
+    "demoNote": "Kestrel Outfitters is een fictief merk voor voorbeelden en tests. Het adres werkt niet.",
+    "fieldBrands": "Merken",
+    "fieldCountries": "Verkoopt in",
+    "fieldCategories": "Categorieën",
+    "fieldLanguages": "Talen",
+    "fieldListed": "Op de lijst sinds",
+    "fieldWebsite": "Website",
+    "openPortal": "Portaal openen",
+    "noResults": "Geen merken gevonden voor je zoekopdracht.",
+    "categories": {
+      "fashion": "Mode",
+      "shoes": "Schoenen",
+      "accessories": "Accessoires",
+      "sports": "Sport",
+      "outdoor": "Outdoor",
+      "kids": "Kinderen",
+      "lingerie": "Lingerie",
+      "home": "Wonen"
+    },
+    "jsonP": "De lijst is ook beschikbaar als JSON voor software:",
+    "listTitle": "Zo kom je op de lijst",
+    "listSteps": [
+      "Zorg dat je portaal online is en slaagt voor de conformancetest.",
+      "Open een pull request op de website-repository dat één vermelding toevoegt aan public/directory.json, gesorteerd op id.",
+      "De website controleert de vermelding automatisch en vraagt je portaal om zijn gegevens.",
+      "Na een controle verschijnt je merk hier."
+    ],
+    "listRule": "Alleen het merk zelf, of zijn hostingprovider namens het merk, kan een vermelding aanvragen.",
+    "removeP": "Wil je eraf? Open een pull request dat de vermelding verwijdert, of open een issue."
+  },
+  "downloads": {
+    "h1": "Downloads",
+    "lead": "Materiaal om te delen met collega's, merken en retailers.",
+    "brochureTitle": "Brochure voor retailers",
+    "brochureP": "Twee pagina's over wat Open Brand Exchange betekent voor een winkel, om te geven aan een collega of een merk.",
+    "kitTitle": "Mail voor merken die nog niet meedoen",
+    "kitP": "De kant-en-klare mail van de retailerpagina, als tekstbestand.",
+    "exampleTitle": "Voorbeeldbestanden",
+    "exampleP": "Een products.csv en beelden van het fictieve merk Kestrel Outfitters, om een import uit te proberen.",
+    "exampleLink": "Voorbeeldbestanden in de specificatie",
+    "templateP": "Een leeg CSV-sjabloon staat ook in de beheeromgeving van elk portaal, onder Imports.",
+    "dutch": "Nederlands",
+    "english": "Engels"
+  },
+  "faq": {
+    "h1": "Veelgestelde vragen",
+    "items": [
+      {
+        "q": "Wat kost het?",
+        "a": "De standaard en de software zijn gratis. Host je zelf, dan betaal je alleen je hosting. Een provider rekent zijn eigen prijzen; die vind je op zijn eigen website."
+      },
+      {
+        "q": "Hebben we een ontwikkelaar nodig?",
+        "a": "Niet voor de basis. Een portaal installeer je met één klik, en een geplande import vanaf een webadres, SFTP-server of bucket vraagt geen code. Een ontwikkelaar helpt als je je PIM of ERP direct wilt koppelen."
+      },
+      {
+        "q": "Is dit weer een platform waar we op moeten?",
+        "a": "Nee. Elk merk draait zijn eigen portaal, op zijn eigen domein als het wil. Er is geen centraal platform dat je content beheert."
+      },
+      {
+        "q": "Wie bepaalt welke retailer toegang krijgt?",
+        "a": "Jij. Retailers vragen toegang aan en jij keurt elke aanvraag goed of af. Je kiest ook welke merken een retailer ziet en of originelen gedownload mogen worden."
+      },
+      {
+        "q": "Wat hebben retailers nodig?",
+        "a": "Een browser. Retailers met software die zelf beelden ophaalt, kunnen een API-sleutel voor die software aanvragen."
+      },
+      {
+        "q": "Welke beeldformaten zijn er?",
+        "a": "Het origineel, precies zoals je het uploadde, plus een webversie (maximaal 2000 px), een vierkante versie en een kleine preview. Retailers kiezen wat ze nodig hebben."
+      },
+      {
+        "q": "Blijft informatie over AI en rechten bij de beelden?",
+        "a": "Ja. Gebruiksrechten, embargodatum en of er AI bij kwam kijken, horen bij elk beeld. Originelen worden onveranderd bewaard en geleverd, inclusief ingebedde content credentials."
+      },
+      {
+        "q": "Kunnen we later van provider wisselen?",
+        "a": "Ja. Elk portaal spreekt dezelfde standaard en elke provider op deze site laat je al je content exporteren. Je eigen domein blijft hetzelfde."
+      },
+      {
+        "q": "Is het klaar?",
+        "a": "Nog niet. De specificatie is een eerste concept (0.1) en de software wordt gebouwd. Je kunt het al uitproberen, maar het is nog niet bedoeld voor productie."
+      },
+      {
+        "q": "Wie zit erachter?",
+        "a": "Open Brand Exchange is gestart door Photopilot, een Nederlands bedrijf dat software voor productfotografie maakt. De standaard is open, en het doel is dat hij van de merken en retailers wordt die hem gebruiken."
+      }
+    ]
+  },
+  "governance": {
+    "h1": "Governance en naam",
+    "lead": "Open Brand Exchange hoort van de merken, retailers en softwareleveranciers te zijn die hem gebruiken, niet van één bedrijf.",
+    "sections": [
+      {
+        "h": "Wie beslist",
+        "p": "Tot er drie onafhankelijke implementaties zijn die de conformancetest halen, beslissen de maintainers bij Photopilot over wijzigingen, na openbare discussie. Daarna neemt een stuurgroep het over, met één zetel per implementeerder en minstens één merk en één retailer."
+      },
+      {
+        "h": "Hoe wijzigingen gaan",
+        "p": "Elke wijziging aan de standaard is een openbaar pull request met een korte onderbouwing. Grotere voorstellen staan minstens 14 dagen open voor commentaar. Iedereen kan bijdragen, zonder een bijdragersovereenkomst te tekenen."
+      },
+      {
+        "h": "Neutraal ontworpen",
+        "p": "Niets in de standaard mag een bepaalde leverancier of gehoste dienst vereisen. Iedereen mag hem implementeren, voor anderen hosten of er een concurrerend product op bouwen. De software van Photopilot krijgt geen voorkeursbehandeling in de conformancetest."
+      },
+      {
+        "h": "Licenties",
+        "p": "De specificatie en de inhoud van deze site zijn CC-BY-4.0. De SDK, de obx-tool en de gedeelde webinterface zijn Apache-2.0. De drie portaaledities zijn AGPL-3.0, zodat verbeteringen open blijven. De code van deze site is MIT."
+      }
+    ],
+    "nameTitle": "Over de naam",
+    "nameP": "\"Open Brand Exchange\" is een werknaam. Hij kan vóór versie 1.0 nog veranderen, na een merkenonderzoek. Het is geen geregistreerd merk. Software die de conformancetest haalt, mag zeggen dat hij \"werkt met Open Brand Exchange\".",
+    "specLink": "Volledig governancedocument"
+  },
+  "privacy": {
+    "h1": "Privacy",
+    "lead": "Deze website volgt je niet.",
+    "sections": [
+      {
+        "h": "Geen cookies",
+        "p": "We plaatsen geen cookies. Kies je een taal, dan onthoudt je browser die keuze lokaal; die wordt nooit naar ons gestuurd."
+      },
+      {
+        "h": "Geen tracking",
+        "p": "Geen advertenties, geen socialemediaknoppen, geen lettertypes van derden en geen trackingscripts. Hooguit gebruiken we Cloudflare Web Analytics, dat bezoeken telt zonder cookies en zonder je over andere sites te volgen."
+      },
+      {
+        "h": "Hosting",
+        "p": "De site draait op Cloudflare Pages. Zoals elke webserver verwerkt Cloudflare je IP-adres om de pagina's te leveren en te beschermen tegen misbruik."
+      },
+      {
+        "h": "Merkportalen staan hier los van",
+        "p": "Elk merkportaal wordt gedraaid door het merk zelf of zijn provider. Daar geldt hun privacyverklaring, niet deze."
+      }
+    ],
+    "contact": "Vragen? Open een issue op de website-repository."
+  }
+}

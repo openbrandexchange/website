@@ -1,0 +1,123 @@
+---
+import Code from '../components/Code.astro';
+import { messages, repo, specDoc, url, type Lang } from '../i18n';
+import { retailerCurl, conformance } from '../data/snippets';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = messages[lang];
+const c = t.developers;
+
+const apis = [
+  { name: 'OBX Protocol', file: 'openapi/obx-protocol.yaml' },
+  { name: 'OBX Ingest API', file: 'openapi/obx-ingest.yaml' },
+  { name: 'Node Admin + Portal API', file: 'openapi/node-admin.yaml' },
+];
+const impl = [
+  { repo: 'spec', licence: 'CC-BY-4.0', edition: '' },
+  { repo: 'obx-go', licence: 'Apache-2.0', edition: '' },
+  { repo: 'admin-ui', licence: 'Apache-2.0', edition: '' },
+  { repo: 'node-go', licence: 'AGPL-3.0', edition: t.common.editionGoogle },
+  { repo: 'node-php', licence: 'AGPL-3.0', edition: t.common.editionHosting },
+  { repo: 'node-ts', licence: 'AGPL-3.0', edition: t.common.editionCloudflare },
+];
+const docs = [
+  'docs/protocol.md',
+  'docs/ingest.md',
+  'docs/import-format.md',
+  'docs/automation.md',
+  'docs/security.md',
+  'docs/versioning.md',
+  'docs/directory.md',
+];
+---
+
+<section class="hero">
+  <div class="wrap">
+    <h1>{c.h1}</h1>
+    <p class="lead">{c.lead}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2 id="spec">{c.specTitle}</h2>
+    <p class="prose">{c.specP} <a href={repo('spec')}>openbrandexchange/spec</a> · <a href={specDoc('docs/protocol.md')}>{c.specStart}</a></p>
+
+    <h2 id="apis">{c.apisTitle}</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr>{c.apisHead.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+        <tbody>
+          {
+            apis.map((api, i) => (
+              <tr>
+                <th scope="row">{api.name}</th>
+                <td>{c.apis[i].who}</td>
+                <td>{c.apis[i].status}</td>
+                <td>
+                  <a href={specDoc(api.file)}>
+                    <code>{api.file.replace('openapi/', '')}</code>
+                  </a>
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="read">{c.readTitle}</h2>
+    <div class="prose"><Code code={retailerCurl} /></div>
+
+    <h2 id="sdk">{c.sdkTitle}</h2>
+    <p class="prose">{c.sdkP} <a href={repo('obx-go')}>obx-go</a> · <a href={url(lang, 'automation', '#cli')}>obx</a></p>
+
+    <h2 id="conformance">{c.confTitle}</h2>
+    <p class="prose">{c.confP} <a href={specDoc('docs/conformance.md')}>conformance.md</a></p>
+    <div class="prose"><Code code={conformance} /></div>
+
+    <h2 id="implementations">{c.implTitle}</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr>{c.implHead.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+        <tbody>
+          {
+            impl.map((row, i) => (
+              <tr>
+                <th scope="row">
+                  <a href={repo(row.repo)}>{row.repo}</a>
+                </th>
+                <td>
+                  {row.edition && <strong>{row.edition}</strong>}
+                  {row.edition && <br />}
+                  {c.impl[i]}
+                </td>
+                <td>{row.licence}</td>
+                <td>{i === 0 ? c.statusDraft : t.common.inDevelopment}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="prose">{c.implP}</p>
+
+    <h2 id="docs">{c.docsTitle}</h2>
+    <ul class="prose">
+      {
+        docs.map((file, i) => (
+          <li>
+            <a href={specDoc(file)}>
+              <code>{file.replace('docs/', '')}</code>
+            </a>
+            : {c.docs[i]}
+          </li>
+        ))
+      }
+    </ul>
+    <p class="prose">{c.contribute} <a href={url(lang, 'governance')}>{c.governanceLink}</a>.</p>
+  </div>
+</section>

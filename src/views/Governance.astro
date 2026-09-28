@@ -1,0 +1,34 @@
+---
+import { messages, specDoc, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const c = messages[lang].governance;
+---
+
+<section class="hero">
+  <div class="wrap">
+    <h1>{c.h1}</h1>
+    <p class="lead">{c.lead}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap prose">
+    {
+      c.sections.map((s) => (
+        <>
+          <h2>{s.h}</h2>
+          <p>{s.p}</p>
+        </>
+      ))
+    }
+    <h2 id="name">{c.nameTitle}</h2>
+    <div class="callout">
+      <p>{c.nameP}</p>
+    </div>
+    <p><a href={specDoc('docs/governance.md')}>{c.specLink}</a></p>
+  </div>
+</section>

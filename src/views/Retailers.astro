@@ -1,0 +1,77 @@
+---
+import Code from '../components/Code.astro';
+import { format, messages, nativeNames, url, type Lang } from '../i18n';
+import { retailerCurl } from '../data/snippets';
+import { switchKit, switchKitPath } from '../lib/switch-kit';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = messages[lang];
+const c = t.retailers;
+const kits: { lang: Lang; label: string }[] = [{ lang, label: nativeNames[lang] }];
+if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });
+---
+
+<section class="hero">
+  <div class="wrap">
+    <h1>{c.h1}</h1>
+    <p class="lead">{c.lead}</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="portal">
+  <div class="wrap">
+    <h2 id="portal">{c.portalTitle}</h2>
+    <p class="prose">{format(c.portalP, { portal: t.portalWord })}</p>
+    <div class="cards">
+      {
+        c.portal.map((p) => (
+          <div class="card">
+            <h3>{p.h}</h3>
+            <p>{p.p}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="api">
+  <div class="wrap prose">
+    <h2 id="api">{c.apiTitle}</h2>
+    <p>{c.apiP}</p>
+    <p class="muted">{c.apiDev}</p>
+    <Code code={retailerCurl} />
+
+    <h2 id="software">{c.toolsTitle}</h2>
+    <p>{c.toolsP} <a href={url(lang, 'developers')}>{c.toolsLink}</a>.</p>
+
+    <h2 id="find">{c.findTitle}</h2>
+    <p>{c.findP} <a href={url(lang, 'directory')}>{c.findLink}</a>.</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="switch-kit">
+  <div class="wrap prose">
+    <h2 id="switch-kit">{c.kitTitle}</h2>
+    <p>{c.kitP}</p>
+    {
+      kits.map((k) => {
+        const kit = switchKit(k.lang);
+        return (
+          <div class="email-template" lang={k.lang}>
+            <Code label={k.label} code={kit.text} />
+            <p class="small">
+              <a href={switchKitPath(k.lang)} download>
+                {c.kitDownload} ({k.label})
+              </a>
+            </p>
+          </div>
+        );
+      })
+    }
+    <p class="muted">{c.kitMore} <a href={url(lang, 'downloads')}>{t.nav.downloads}</a>.</p>
+  </div>
+</section>

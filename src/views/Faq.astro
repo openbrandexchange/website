@@ -1,0 +1,28 @@
+---
+import { messages, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const c = messages[lang].faq;
+---
+
+<section class="hero">
+  <div class="wrap">
+    <h1>{c.h1}</h1>
+  </div>
+</section>
+
+<section class="section faq">
+  <div class="wrap">
+    {
+      c.items.map((item, i) => (
+        <details id={`q${i + 1}`}>
+          <summary>{item.q}</summary>
+          <p>{item.a}</p>
+        </details>
+      ))
+    }
+  </div>
+</section>
