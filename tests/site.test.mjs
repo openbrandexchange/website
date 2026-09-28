@@ -152,3 +152,28 @@ test('the cookie statement and the privacy page say there are no cookies', { ski
   assert.match(read('en/cookies/index.html'), /This website sets no cookies\./);
   assert.match(read('en/privacy/index.html'), /Autoriteit Persoonsgegevens/);
 });
+
+test('the web hosting steps match the release: its file name, the writable folders, the setup code file and the cron job', { skip: !built && 'dist/ not built' }, () => {
+  for (const lang of langs) {
+    const html = read(`${lang}/hosting/index.html`);
+    const steps = html.slice(html.indexOf('id="web-hosting"'), html.indexOf('id="docker"'));
+    assert.ok(steps.includes('obx-portal-php-&lt;version&gt;.zip'), `${lang}: release file name`);
+    assert.doesNotMatch(steps, /obx-node-php\.zip/, `${lang}: old file name`);
+    assert.ok(steps.includes('data/SETUP-CODE.txt'), `${lang}: where the setup code is`);
+    assert.match(steps, /775/, `${lang}: folder permissions`);
+    assert.match(steps, /cron/i, `${lang}: cron job`);
+    assert.ok(html.includes('./deploy/cloudrun.sh'), `${lang}: node-go's real deploy script`);
+  }
+});
+
+test('the automation page names the admin menus as the portal shows them', { skip: !built && 'dist/ not built' }, async () => {
+  const { readFile } = await import('node:fs/promises');
+  for (const lang of langs) {
+    const admin = JSON.parse(await readFile(new URL(`../../admin-ui/src/locales/${lang}.json`, import.meta.url), 'utf8').catch(() => 'null'));
+    if (!admin) return; // admin-ui is not checked out next to the website (CI): nothing to compare
+    const html = read(`${lang}/automation/index.html`).replaceAll('&gt;', '>').replaceAll('&#39;', "'").replaceAll('&amp;', '&');
+    const nav = admin.admin.nav.automation;
+    assert.ok(html.includes(`${nav} → ${admin.automation.tab.tokens}`), `${lang}: access keys path`);
+    assert.ok(html.includes(`${nav} → ${admin.automation.tab.sources} → ${admin.sources.add}`), `${lang}: scheduled import path`);
+  }
+});

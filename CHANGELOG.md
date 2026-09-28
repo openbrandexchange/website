@@ -5,6 +5,12 @@ its texts; the repository itself is versioned with [Semantic Versioning](https:/
 
 ## [Unreleased]
 
+### Fixed
+
+- Hosting, *Portal for web hosting*: the release file is `obx-portal-php-<version>.zip` (not `obx-node-php.zip`), and the steps now include making `data` and `config` writable, the setup code in `data/SETUP-CODE.txt` and the cron job; the first-start steps say where that edition keeps the code.
+- Hosting, *Portal for Google Cloud & Docker*: the deploy script is `deploy/cloudrun.sh`, and it takes the project from `gcloud config` instead of asking.
+- Automation: the admin paths are *Automatic upload → Access keys* and *Automatic upload → Scheduled imports → Add scheduled import*, in the portal's own words per language.
+
 ## [0.1.0] - 2026-09-28
 
 First complete version of the site, not yet deployed.
