@@ -177,3 +177,31 @@ test('the automation page names the admin menus as the portal shows them', { ski
     assert.ok(html.includes(`${nav} → ${admin.automation.tab.sources} → ${admin.sources.add}`), `${lang}: scheduled import path`);
   }
 });
+
+test('the automation page names the import modes and the connection test as the portal shows them', { skip: !built && 'dist/ not built' }, async () => {
+  const { readFile } = await import('node:fs/promises');
+  for (const lang of langs) {
+    const admin = JSON.parse(await readFile(new URL(`../../admin-ui/src/locales/${lang}.json`, import.meta.url), 'utf8').catch(() => 'null'));
+    if (!admin) return; // admin-ui is not checked out next to the website (CI): nothing to compare
+    const html = read(`${lang}/automation/index.html`).replaceAll('&#39;', "'").replaceAll('&amp;', '&');
+    for (const label of [admin.imports.modeUpsert, admin.imports.modeMirror, admin.sources.test]) assert.ok(html.includes(label), `${lang}: "${label}"`);
+  }
+});
+
+test('the Cloudflare edition says which plan it needs and where its web versions come from', { skip: !built && 'dist/ not built' }, () => {
+  for (const lang of langs) {
+    assert.ok(read(`${lang}/hosting/index.html`).includes('Workers Paid'), `${lang}: hosting names the Workers Paid plan`);
+    assert.match(read(`${lang}/automation/index.html`), /obx/, `${lang}: automation names obx`);
+  }
+  // A scheduled import delivers originals only; on Cloudflare it does not make web versions.
+  assert.doesNotMatch(read('en/automation/index.html'), /use a scheduled import or obx: they make them/);
+});
+
+test('the example files are one download in every language', { skip: !built && 'dist/ not built' }, () => {
+  const zip = readFileSync(new URL('downloads/kestrel-example.zip', dist));
+  assert.equal(zip.subarray(0, 4).toString('latin1'), 'PK\x03\x04');
+  const names = zip.toString('latin1');
+  for (const f of ['kestrel-example/products.csv', 'kestrel-example/assets.csv', 'kestrel-example/images/KO-1001_NVY_1_front.png']) assert.ok(names.includes(f), f);
+  assert.ok(!names.includes('images.json'), 'test metadata stays out');
+  for (const lang of langs) assert.ok(read(`${lang}/downloads/index.html`).includes('href="/downloads/kestrel-example.zip"'), `${lang}: link`);
+});
