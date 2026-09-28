@@ -10,6 +10,12 @@ its texts; the repository itself is versioned with [Semantic Versioning](https:/
 - Hosting, *Portal for web hosting*: the release file is `obx-portal-php-<version>.zip` (not `obx-node-php.zip`), and the steps now include making `data` and `config` writable, the setup code in `data/SETUP-CODE.txt` and the cron job; the first-start steps say where that edition keeps the code.
 - Hosting, *Portal for Google Cloud & Docker*: the deploy script is `deploy/cloudrun.sh`, and it takes the project from `gcloud config` instead of asking.
 - Automation: the admin paths are *Automatic upload → Access keys* and *Automatic upload → Scheduled imports → Add scheduled import*, in the portal's own words per language.
+- Automation: the import modes are called what the portal calls them (*Only add and update*, *Also take missing articles offline*), and the note on the Portal for Cloudflare no longer says a scheduled import makes web versions of photos (it delivers originals; obx and the Imports screen make them).
+- Hosting, *Portal for Cloudflare*: says that a portal in daily use needs the Workers Paid plan, instead of only pointing at free allowances.
+
+### Added
+
+- Downloads: the Kestrel example files as one zip (`/downloads/kestrel-example.zip`, built from the specification's fixtures with `scripts/build-example-zip.sh`), next to the link to the specification.
 
 ## [0.1.0] - 2026-09-28
 
