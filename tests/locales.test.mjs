@@ -53,6 +53,17 @@ test('every locale other than English is actually translated', () => {
 // src/data/glossary.json is a copy of admin-ui/src/i18n/glossary.json (npm run sync:glossary).
 const glossary = JSON.parse(readFileSync(new URL('../src/data/glossary.json', import.meta.url), 'utf8')).terms;
 const lower = (s) => s.toLocaleLowerCase();
+// src/data/glossary-publisher.json comes from spec/docs/glossary.md ("The project and its publisher").
+const publisher = JSON.parse(readFileSync(new URL('../src/data/glossary-publisher.json', import.meta.url), 'utf8')).languages;
+
+test('the publisher line uses the glossary wording in every language', () => {
+  assert.deepEqual(Object.keys(publisher).sort(), [...langs].sort());
+  for (const lang of langs) {
+    const { org } = load(lang);
+    assert.equal(org.inFormation, publisher[lang].inFormation, `${lang} org.inFormation`);
+    assert.equal(org.initiative, `${publisher[lang].initiative} {person}`, `${lang} org.initiative`);
+  }
+});
 
 test('the glossary covers exactly the site languages', () => {
   assert.deepEqual(Object.keys(glossary.portal).sort(), [...langs].sort());
