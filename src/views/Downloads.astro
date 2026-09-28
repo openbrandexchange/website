@@ -1,6 +1,8 @@
 ---
 import { messages, nativeNames, repo, url, type Lang } from '../i18n';
 import { switchKitPath } from '../lib/switch-kit';
+import { brochurePath, type BrochureKind } from '../lib/brochures';
+import { langs } from '../i18n';
 
 interface Props {
   lang: Lang;
@@ -9,6 +11,10 @@ const { lang } = Astro.props;
 const t = messages[lang];
 const c = t.downloads;
 const kitLangs: Lang[] = lang === 'en' ? ['en'] : [lang, 'en'];
+const brochures: { kind: BrochureKind; title: string; p: string }[] = [
+  { kind: 'brands', title: c.brandsTitle, p: c.brandsP },
+  { kind: 'retailers', title: c.brochureTitle, p: c.brochureP },
+];
 ---
 
 <section class="hero">
@@ -21,14 +27,35 @@ const kitLangs: Lang[] = lang === 'en' ? ['en'] : [lang, 'en'];
 <section class="section">
   <div class="wrap">
     <div class="cards">
-      <article class="card" aria-labelledby="brochure">
-        <h2 id="brochure" class="card-title">{c.brochureTitle}</h2>
-        <p>{c.brochureP}</p>
-        <ul class="plain">
-          <li><a href="/downloads/retailers-nl.pdf" hreflang="nl" download>{c.dutch} (PDF)</a></li>
-          <li><a href="/downloads/retailers-en.pdf" hreflang="en" download>{c.english} (PDF)</a></li>
-        </ul>
-      </article>
+      {
+        brochures.map((b) => (
+          <article class="card" aria-labelledby={`brochure-${b.kind}`}>
+            <h2 id={`brochure-${b.kind}`} class="card-title">{b.title}</h2>
+            <p>{b.p}</p>
+            <ul class="plain">
+              {kitLangs.map((l) => (
+                <li>
+                  <a href={brochurePath(b.kind, l)} hreflang={l} lang={l} type="application/pdf" download>
+                    {nativeNames[l]} (PDF)
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <details class="more-langs">
+              <summary>{c.allLanguages}</summary>
+              <ul class="plain lang-grid">
+                {langs.map((l) => (
+                  <li>
+                    <a href={brochurePath(b.kind, l)} hreflang={l} lang={l} type="application/pdf" download>
+                      {nativeNames[l]}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          </article>
+        ))
+      }
       <article class="card" aria-labelledby="kit">
         <h2 id="kit" class="card-title">{c.kitTitle}</h2>
         <p>{c.kitP} <a href={url(lang, 'retailers', '#switch-kit')}>{t.nav.retailers}</a></p>
