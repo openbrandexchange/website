@@ -9,18 +9,18 @@
     "home": "Open Brand Exchange, sākumlapa",
     "copy": "Kopēt",
     "copied": "Nokopēts",
-    "draft": "Specifikācija 0.1 (melnraksts): programmatūra tiek veidota. Vēl nav paredzēta ražošanas lietošanai.",
+    "draft": "Versija 0.1 tiek testēta. Tiek gatavots pirmais publiskais laidiens.",
     "footerAbout": "Bezmaksas, atvērts veids, kā zīmoli var piegādāt produktu fotoattēlus un preču datus saviem tirgotājiem.",
     "footerMore": "Vairāk",
     "footerSource": "Pirmkods un specifikācija",
     "footerLicence": "Saturs CC-BY-4.0, kods MIT.",
-    "footerWorking": "“Open Brand Exchange” ir darba nosaukums. Specifikācija 0.1, izstrādē.",
     "editionCloudflare": "Portāls Cloudflare",
     "editionGoogle": "Portāls Google Cloud un Docker",
     "editionHosting": "Portāls tīmekļa mitināšanai",
     "yes": "Jā",
     "inDevelopment": "Izstrādē",
-    "available": "Pieejams"
+    "available": "Pieejams",
+    "footerContact": "Kontakti"
   },
   "nav": {
     "brands": "Zīmoliem",
@@ -32,7 +32,9 @@
     "downloads": "Lejupielādes",
     "faq": "Biežāk uzdotie jautājumi",
     "governance": "Pārvaldība un nosaukums",
-    "privacy": "Privātums"
+    "privacy": "Privātums",
+    "imprint": "Izdevēja informācija",
+    "cookies": "Sīkdatnes"
   },
   "meta": {
     "home": {
@@ -73,11 +75,19 @@
     },
     "governance": {
       "title": "Pārvaldība un nosaukums",
-      "description": "Kas lemj par standartu, kā piedalīties, licences un kāpēc nosaukums ir darba nosaukums."
+      "description": "Kas ir standarta pamatā, kas lemj, kā piedalīties, licences un nosaukums."
     },
     "privacy": {
       "title": "Privātums",
-      "description": "Šī vietne jums neseko: bez sīkdatnēm, bez izsekošanas."
+      "description": "Šī vietne jums neseko. Kādi nedaudzie dati tiek apstrādāti un kāpēc."
+    },
+    "imprint": {
+      "title": "Izdevēja informācija",
+      "description": "Kas izdod šo vietni un kā ar mums sazināties."
+    },
+    "cookies": {
+      "title": "Sīkdatnes",
+      "description": "Šī vietne neizmanto sīkdatnes."
     }
   },
   "home": {
@@ -134,7 +144,7 @@
         "p": "Viena publikācija visiem tirgotājiem. Vairs nekādu failu sūtīšanu, e-pastu ar zip arhīviem un atsevišķu integrāciju katram veikalam."
       }
     ],
-    "status": "Open Brand Exchange ir sākumposmā. Specifikācija ir pirmais melnraksts (0.1), un programmatūra tiek veidota tagad. Mēs nerādām klientus vai skaitļus, kuru vēl nav.",
+    "status": "Open Brand Exchange ir pašā sākumā. Specifikācijas un programmatūras versija 0.1 tiek testēta, un tiek gatavots pirmais publiskais laidiens. Mēs nerādām klientus vai skaitļus, kuru vēl nav.",
     "statusLink": "Uzziniet, kā tas tiek pārvaldīts"
   },
   "brands": {
@@ -185,13 +195,34 @@
     ],
     "adminTitle": "Ko pārvaldāt paši",
     "admin": [
-      { "k": "Katalogs", "v": "zīmoli, preces, krāsas un izmēri, fotoattēli un to secība" },
-      { "k": "Importi", "v": "augšupielāde vai plānota saņemšana ar skaidru ziņojumu par katru neveiksmīgo rindu" },
-      { "k": "Tirgotāji", "v": "pieprasījumu apstiprināšana vai noraidīšana (ar iemeslu), kontu uzaicināšana vai bloķēšana" },
-      { "k": "API atslēgas", "v": "atslēgas tirgotāju sistēmām: parādītas vienreiz, viegli atjaunojamas vai atsaucamas" },
-      { "k": "Automātiska augšupielāde", "v": "atslēgas jūsu sistēmām un paziņojumi, kad tirgotājs pieprasa piekļuvi vai imports beidzas" },
-      { "k": "Statistika", "v": "lejupielādes un lietojums pa tirgotājiem" },
-      { "k": "Iestatījumi", "v": "logotips, akcenta krāsa, sveiciena teksts, noklusējuma lietošanas tiesības un savs domēns" }
+      {
+        "k": "Katalogs",
+        "v": "zīmoli, preces, krāsas un izmēri, fotoattēli un to secība"
+      },
+      {
+        "k": "Importi",
+        "v": "augšupielāde vai plānota saņemšana ar skaidru ziņojumu par katru neveiksmīgo rindu"
+      },
+      {
+        "k": "Tirgotāji",
+        "v": "pieprasījumu apstiprināšana vai noraidīšana (ar iemeslu), kontu uzaicināšana vai bloķēšana"
+      },
+      {
+        "k": "API atslēgas",
+        "v": "atslēgas tirgotāju sistēmām: parādītas vienreiz, viegli atjaunojamas vai atsaucamas"
+      },
+      {
+        "k": "Automātiska augšupielāde",
+        "v": "atslēgas jūsu sistēmām un paziņojumi, kad tirgotājs pieprasa piekļuvi vai imports beidzas"
+      },
+      {
+        "k": "Statistika",
+        "v": "lejupielādes un lietojums pa tirgotājiem"
+      },
+      {
+        "k": "Iestatījumi",
+        "v": "logotips, akcenta krāsa, sveiciena teksts, noklusējuma lietošanas tiesības un savs domēns"
+      }
     ],
     "nextTitle": "Nākamais solis",
     "nextHosting": "Izvēlieties mitināšanu",
@@ -201,14 +232,42 @@
     "h1": "Automatizācija",
     "lead": "Jūsu PIM, ERP, DAM vai koplietota mape jau satur datus un fotoattēlus. Izvēlieties pirmo piemēroto recepti: visas darbojas ar jebkuru Open Brand Exchange portālu.",
     "chooseTitle": "Kura recepte jums der?",
-    "head": ["Jums ir…", "Izmantojiet", "Vajadzīgais kods"],
+    "head": [
+      "Jums ir…",
+      "Izmantojiet",
+      "Vajadzīgais kods"
+    ],
     "rows": [
-      ["CSV vai zip tīmekļa adresē, SFTP serverī vai S3 krātuvē", "Plānots imports", "nav"],
-      ["mape, kurā nonāk eksporti", "obx watch", "nav"],
-      ["serveris vai dators, kas naktī izpilda uzdevumus", "cron vai Uzdevumu plānotājs", "viena rinda"],
-      ["eksporti Git repozitorijā", "GitHub Action", "viens YAML fails"],
-      ["n8n, Make vai Zapier", "HTTP soļi", "nav (vizuāli)"],
-      ["izstrādātājs, kas pieslēdz jūsu PIM vai ERP", "Tieši API", "nedaudz"]
+      [
+        "CSV vai zip tīmekļa adresē, SFTP serverī vai S3 krātuvē",
+        "Plānots imports",
+        "nav"
+      ],
+      [
+        "mape, kurā nonāk eksporti",
+        "obx watch",
+        "nav"
+      ],
+      [
+        "serveris vai dators, kas naktī izpilda uzdevumus",
+        "cron vai Uzdevumu plānotājs",
+        "viena rinda"
+      ],
+      [
+        "eksporti Git repozitorijā",
+        "GitHub Action",
+        "viens YAML fails"
+      ],
+      [
+        "n8n, Make vai Zapier",
+        "HTTP soļi",
+        "nav (vizuāli)"
+      ],
+      [
+        "izstrādātājs, kas pieslēdz jūsu PIM vai ERP",
+        "Tieši API",
+        "nedaudz"
+      ]
     ],
     "formatTitle": "Viens formāts visam",
     "formatP": "Visi publicēšanas veidi lasa vienu un to pašu: products.csv ar vienu rindu katram izmēram un fotoattēlus ar nosaukumu {style}_{color}_{position}.jpg (modelis, krāsa, pozīcija). Kad tas ir, darbojas visas zemāk esošās receptes.",
@@ -221,9 +280,18 @@
     "scheduledTitle": "1. Plānots imports (bez koda)",
     "scheduledP": "Pārvaldībā: Importi → Plānotie importi → Pievienot. Izvēlieties avotu un biežumu.",
     "scheduled": [
-      { "k": "Tīmekļa adrese (HTTPS)", "v": "products.csv vai zip arhīva ar products.csv un fotoattēliem adrese. Pieteikšanās dati tiek glabāti šifrēti." },
-      { "k": "SFTP", "v": "serveris, lietotājs, parole vai atslēga un mape ar eksportu." },
-      { "k": "S3 krātuve", "v": "AWS S3, Cloudflare R2, MinIO vai Backblaze: galapunkts, krātuve, mape un tikai lasāma atslēga." }
+      {
+        "k": "Tīmekļa adrese (HTTPS)",
+        "v": "products.csv vai zip arhīva ar products.csv un fotoattēliem adrese. Pieteikšanās dati tiek glabāti šifrēti."
+      },
+      {
+        "k": "SFTP",
+        "v": "serveris, lietotājs, parole vai atslēga un mape ar eksportu."
+      },
+      {
+        "k": "S3 krātuve",
+        "v": "AWS S3, Cloudflare R2, MinIO vai Backblaze: galapunkts, krātuve, mape un tikai lasāma atslēga."
+      }
     ],
     "scheduledMode": "Izvēlieties “Atjaunināt” (tikai pievienot un mainīt) vai “Spoguļot” (atsauc arī to, kas pazudis no faila). Spoguļošana atsakās, ja pazustu vairāk nekā puse zīmola, tāpēc bojāts eksports nekad neiztukšo jūsu katalogu. “Pārbaudīt savienojumu” parāda, kurus failus tas nolasītu.",
     "cliTitle": "Rīks obx",
@@ -271,7 +339,7 @@
       "zīmols var eksportēt visus savus datus un fotoattēlus un aiziet",
       "savas cenas un nosacījumus publicējat savā vietnē"
     ],
-    "listHow": "Atveriet pull request vietnes repozitorijā ar saviem datiem failā src/data/providers.json. Iniciators ir pirmais, pārējie alfabētiskā secībā.",
+    "listHow": "Atveriet pull request vietnes repozitorijā ar saviem datiem failā src/data/providers.json. Iniciatora uzņēmums ir norādīts pirmais, visi pārējie alfabēta secībā.",
     "p2Title": "2. Ar vienu klikšķi",
     "p2P": "Savs portāls savā kontā, bez servera pārvaldīšanas.",
     "cfP": "Darbojas Cloudflare Workers ar D1 kā datubāzi un R2 fotoattēliem. Noklikšķiniet uz pogas, piesakieties Cloudflare un izpildiet soļus. Cloudflare ir bezmaksas limiti; lieliem katalogiem pārbaudiet aktuālās cenas. Fotoattēlu tīmekļa versijas izveido jūsu pārlūks un rīks obx, tāpēc jums nekas nav jādara.",
@@ -312,18 +380,36 @@
     "portalTitle": "Ko jums dod zīmola portāls",
     "portalP": "Katram zīmolam ir savs portāls ar savu nosaukumu, piemēram, “Kestrel · {portal}”.",
     "portal": [
-      { "h": "Piekļuves pieprasījums", "p": "Pieprasiet piekļuvi zīmola portālā. Zīmols apstiprina, un jūs saņemat ielūgumu e-pastā." },
-      { "h": "Meklēšana un filtri", "p": "Pēc zīmola, sezonas, kolekcijas, produkta veida vai krāsas. Katra prece ar visiem fotoattēliem un datiem." },
-      { "h": "Ielīmējiet savu EAN sarakstu", "p": "Ielīmējiet EAN kodus no kases sistēmas un uzreiz redziet, kuras preces ir un kuras vēl trūkst." },
-      { "h": "Lejupielāde pēc jūsu izvēles", "p": "Viens fotoattēls, viena prece, jūsu izlase vai viss filtrā kā zip. Oriģināls (ja zīmols atļauj), tīmeklis vai kvadrāts." },
-      { "h": "Preču dati izklājlapā", "p": "EAN katram izmēram, krāsa, materiāls, kopšanas norādījumi un apraksts, gatavi jūsu sistēmai." },
-      { "h": "Kas ir atļauts", "p": "Lietošanas tiesības, embargo datums un tas, vai fotoattēls veidots ar mākslīgo intelektu, ir norādīts pie katra fotoattēla." }
+      {
+        "h": "Piekļuves pieprasījums",
+        "p": "Pieprasiet piekļuvi zīmola portālā. Zīmols apstiprina, un jūs saņemat ielūgumu e-pastā."
+      },
+      {
+        "h": "Meklēšana un filtri",
+        "p": "Pēc zīmola, sezonas, kolekcijas, produkta veida vai krāsas. Katra prece ar visiem fotoattēliem un datiem."
+      },
+      {
+        "h": "Ielīmējiet savu EAN sarakstu",
+        "p": "Ielīmējiet EAN kodus no kases sistēmas un uzreiz redziet, kuras preces ir un kuras vēl trūkst."
+      },
+      {
+        "h": "Lejupielāde pēc jūsu izvēles",
+        "p": "Viens fotoattēls, viena prece, jūsu izlase vai viss filtrā kā zip. Oriģināls (ja zīmols atļauj), tīmeklis vai kvadrāts."
+      },
+      {
+        "h": "Preču dati izklājlapā",
+        "p": "EAN katram izmēram, krāsa, materiāls, kopšanas norādījumi un apraksts, gatavi jūsu sistēmai."
+      },
+      {
+        "h": "Kas ir atļauts",
+        "p": "Lietošanas tiesības, embargo datums un tas, vai fotoattēls veidots ar mākslīgo intelektu, ir norādīts pie katra fotoattēla."
+      }
     ],
-    "apiTitle": "API atslēga jūsu sistēmai",
+    "apiTitle": "API atslēga jūsu programmatūrai",
     "apiP": "Vai jūsu PIM, kases sistēma vai interneta veikals pats saņem fotoattēlus? Tad pieprasiet API atslēgu savai sistēmai. Tā vispirms saņem visu un pēc tam tikai izmaiņas, arī to, ko zīmols atsauc. Fotoattēli tiek sasaistīti ar jūsu precēm pēc EAN.",
     "apiDev": "Jūsu izstrādātājam: lūk, kā tas izskatās.",
-    "toolsTitle": "Photopilot un cita programmatūra",
-    "toolsP": "Open Brand Exchange ir atvērts standarts: to var nolasīt jebkura programmatūra. Photopilot, iniciators, var to izmantot savā programmatūrā tirgotājiem, un citi piegādātāji var darīt to pašu. Jums nav vajadzīga noteikta programmatūra: pietiek ar pārlūku.",
+    "toolsTitle": "Kāda programmatūra ar to darbojas",
+    "toolsP": "Open Brand Exchange ir atvērts standarts: to var atbalstīt jebkura programmatūra. Photopilot, iniciatora uzņēmums, to iebūvē savā programmatūrā tirgotājiem, un citi piegādātāji var darīt to pašu. Jums nav vajadzīga nekāda konkrēta programmatūra: pietiek ar pārlūku.",
     "toolsLink": "Specifikācija izstrādātājiem",
     "findTitle": "Kā atrast zīmolu",
     "findP": "Zīmoli, kas vēlas būt redzami, ir zīmolu sarakstā. Ja zīmols jums vienkārši iedod sava portāla adresi, arī tas darbojas.",
@@ -345,11 +431,25 @@
     "specP": "Versija 0.1 (melnraksts). OpenAPI 3.1, JSON Schema 2020-12, piemēri un izdomāts testa zīmols Kestrel Outfitters. Licence CC-BY-4.0: brīvi implementējama, arī komerciāli.",
     "specStart": "Sāciet ar protocol.md",
     "apisTitle": "Trīs API",
-    "apisHead": ["API", "Kam", "Statuss", "Līgums"],
+    "apisHead": [
+      "API",
+      "Kam",
+      "Statuss",
+      "Līgums"
+    ],
     "apis": [
-      { "who": "tirgotāju programmatūra: discovery, OAuth2 client credentials, izmaiņu plūsma, GTIN meklēšana, renditions, eksporti, webhooks", "status": "normatīvs" },
-      { "who": "zīmola automatizācija: idempotenti upserts pēc zīmola paša ID, ar sha256 adresētas augšupielādes, partijas, importi", "status": "normatīvs" },
-      { "who": "kopīgā pārvaldība un tirgotāju portāls", "status": "nenormatīvs" }
+      {
+        "who": "tirgotāju programmatūra: discovery, OAuth2 client credentials, izmaiņu plūsma, GTIN meklēšana, renditions, eksporti, webhooks",
+        "status": "normatīvs"
+      },
+      {
+        "who": "zīmola automatizācija: idempotenti upserts pēc zīmola paša ID, ar sha256 adresētas augšupielādes, partijas, importi",
+        "status": "normatīvs"
+      },
+      {
+        "who": "kopīgā pārvaldība un tirgotāju portāls",
+        "status": "nenormatīvs"
+      }
     ],
     "readTitle": "Zīmola portāla nolasīšana dažās rindās",
     "sdkTitle": "SDK un komandrindas rīks",
@@ -357,7 +457,12 @@
     "confTitle": "Atbilstība",
     "confP": "Implementācija atbilst OBX profilam, ja obx-conformance iztur visus šī profila obligātos testus. Ir trīs profili: protocol, ingest un portal.",
     "implTitle": "Implementācijas",
-    "implHead": ["Repozitorijs", "Kas", "Licence", "Statuss"],
+    "implHead": [
+      "Repozitorijs",
+      "Kas",
+      "Licence",
+      "Statuss"
+    ],
     "impl": [
       "specifikācija, shēmas, testa dati",
       "Go SDK, rīks obx, atbilstības testi, imitācijas serveris",
@@ -420,53 +525,230 @@
     "h1": "Lejupielādes",
     "lead": "Materiāli, ko dalīt ar kolēģiem, zīmoliem un tirgotājiem.",
     "brochureTitle": "Brošūra tirgotājiem",
-    "brochureP": "Divas lappuses par to, ko Open Brand Exchange nozīmē veikalam, lai nodotu kolēģim vai zīmolam.",
+    "brochureP": "Ko Open Brand Exchange nozīmē veikalam: zīmola portāls, API atslēga jūsu programmatūrai un kas jau ir gatavs. Lai nodotu kolēģim vai zīmolam.",
     "kitTitle": "E-pasts zīmoliem, kas vēl nav pievienojušies",
     "kitP": "Gatavais e-pasts no tirgotāju lapas kā teksta fails.",
     "exampleTitle": "Paraugfaili",
     "exampleP": "products.csv un izdomātā zīmola Kestrel Outfitters fotoattēli importa izmēģināšanai.",
     "exampleLink": "Paraugfaili specifikācijā",
     "templateP": "Tukša CSV veidne ir pieejama arī katra portāla pārvaldībā sadaļā Importi.",
-    "dutch": "Nīderlandiešu",
-    "english": "Angļu"
+    "brandsTitle": "Brošūra zīmoliem",
+    "brandsP": "Savs portāls tirgotājiem, API, automātiska augšupielāde un mitināšana, kā arī tas, kas jau ir gatavs. Lai dalītos ar komandu.",
+    "allLanguages": "Visas valodas"
   },
   "faq": {
     "h1": "Biežāk uzdotie jautājumi",
     "items": [
-      { "q": "Cik tas maksā?", "a": "Standarts un programmatūra ir bez maksas. Ja mitināt paši, maksājat tikai par mitināšanu. Pakalpojumu sniedzējam ir savas cenas, kas atrodamas viņa vietnē." },
-      { "q": "Vai mums vajag izstrādātāju?", "a": "Pamatiem ne. Portālu instalē ar vienu klikšķi, un plānotam importam no tīmekļa adreses, SFTP servera vai krātuves kods nav vajadzīgs. Izstrādātājs palīdz, ja vēlaties tieši pieslēgt PIM vai ERP." },
-      { "q": "Vai tā ir vēl viena platforma, kurai jāpievienojas?", "a": "Nē. Katrs zīmols pārvalda savu portālu, ja vēlas, savā domēnā. Nav centrālas platformas, kas glabātu jūsu saturu." },
-      { "q": "Kas izlemj, kurš tirgotājs saņem piekļuvi?", "a": "Jūs. Tirgotāji pieprasa piekļuvi, un jūs katru pieprasījumu apstiprināt vai noraidāt. Jūs arī izvēlaties, kurus zīmolus tirgotājs redz un vai drīkst lejupielādēt oriģinālus." },
-      { "q": "Kas vajadzīgs tirgotājiem?", "a": "Pārlūks. Tirgotāji, kuru programmatūra pati saņem fotoattēlus, var pieprasīt API atslēgu šai programmatūrai." },
-      { "q": "Kādi attēlu formāti ir pieejami?", "a": "Oriģināls tieši tāds, kādu to augšupielādējāt, kā arī tīmekļa versija (līdz 2000 px), kvadrātveida versija un neliels priekšskatījums. Tirgotāji izvēlas, kas vajadzīgs." },
-      { "q": "Vai informācija par mākslīgo intelektu un tiesībām paliek pie fotoattēliem?", "a": "Jā. Lietošanas tiesības, embargo datums un mākslīgā intelekta izmantošana ir katra fotoattēla daļa. Oriģināli tiek glabāti un piegādāti nemainīti, ieskaitot iegultos content credentials." },
-      { "q": "Vai vēlāk varam mainīt pakalpojumu sniedzēju?", "a": "Jā. Visi portāli runā vienā standartā, un katrs šeit minētais pakalpojumu sniedzējs ļauj eksportēt visu saturu. Jūsu domēns paliek tas pats." },
-      { "q": "Vai tas ir gatavs?", "a": "Vēl nē. Specifikācija ir pirmais melnraksts (0.1), un programmatūra tiek veidota. Jūs jau varat to izmēģināt, taču ražošanas lietošanai tā vēl nav paredzēta." },
-      { "q": "Kas ir aiz tā?", "a": "Open Brand Exchange aizsāka Photopilot, Nīderlandes uzņēmums, kas izstrādā produktu fotografēšanas programmatūru. Standarts ir atvērts, un mērķis ir, lai tas piederētu zīmoliem un tirgotājiem, kas to izmanto." }
+      {
+        "q": "Cik tas maksā?",
+        "a": "Standarts un programmatūra ir bez maksas. Ja mitināt paši, maksājat tikai par mitināšanu. Pakalpojumu sniedzējam ir savas cenas, kas atrodamas viņa vietnē."
+      },
+      {
+        "q": "Vai mums vajag izstrādātāju?",
+        "a": "Pamatiem ne. Portālu instalē ar vienu klikšķi, un plānotam importam no tīmekļa adreses, SFTP servera vai krātuves kods nav vajadzīgs. Izstrādātājs palīdz, ja vēlaties tieši pieslēgt PIM vai ERP."
+      },
+      {
+        "q": "Vai tā ir vēl viena platforma, kurai jāpievienojas?",
+        "a": "Nē. Katrs zīmols pārvalda savu portālu, ja vēlas, savā domēnā. Nav centrālas platformas, kas glabātu jūsu saturu."
+      },
+      {
+        "q": "Kas izlemj, kurš tirgotājs saņem piekļuvi?",
+        "a": "Jūs. Tirgotāji pieprasa piekļuvi, un jūs katru pieprasījumu apstiprināt vai noraidāt. Jūs arī izvēlaties, kurus zīmolus tirgotājs redz un vai drīkst lejupielādēt oriģinālus."
+      },
+      {
+        "q": "Kas vajadzīgs tirgotājiem?",
+        "a": "Pārlūks. Tirgotāji, kuru programmatūra pati saņem fotoattēlus, var pieprasīt API atslēgu šai programmatūrai."
+      },
+      {
+        "q": "Kādi attēlu formāti ir pieejami?",
+        "a": "Oriģināls tieši tāds, kādu to augšupielādējāt, kā arī tīmekļa versija (līdz 2000 px), kvadrātveida versija un neliels priekšskatījums. Tirgotāji izvēlas, kas vajadzīgs."
+      },
+      {
+        "q": "Vai informācija par mākslīgo intelektu un tiesībām paliek pie fotoattēliem?",
+        "a": "Jā. Lietošanas tiesības, embargo datums un mākslīgā intelekta izmantošana ir katra fotoattēla daļa. Oriģināli tiek glabāti un piegādāti nemainīti, ieskaitot iegultos content credentials."
+      },
+      {
+        "q": "Vai vēlāk varam mainīt pakalpojumu sniedzēju?",
+        "a": "Jā. Visi portāli runā vienā standartā, un katrs šeit minētais pakalpojumu sniedzējs ļauj eksportēt visu saturu. Jūsu domēns paliek tas pats."
+      },
+      {
+        "q": "Vai tas ir gatavs?",
+        "a": "Gandrīz. Specifikācijas un trīs portāla izdevumu versija 0.1 tiek testēta. Tiek gatavots pirmais publiskais laidiens; līdz tam programmatūra nav publiski pieejama."
+      },
+      {
+        "q": "Kas ir aiz tā?",
+        "a": "Open Brand Exchange iniciators ir {person}, kurš dibinājis arī produktu fotografēšanas programmatūras uzņēmumu Photopilot. Viss tiks nodots organizācijai {foundation}, lai standarts piederētu zīmoliem, tirgotājiem un programmatūras piegādātājiem, kas to izmanto, nevis vienam uzņēmumam."
+      }
     ]
   },
   "governance": {
     "h1": "Pārvaldība un nosaukums",
     "lead": "Open Brand Exchange jāpieder zīmoliem, tirgotājiem un programmatūras piegādātājiem, kas to izmanto, nevis vienam uzņēmumam.",
     "sections": [
-      { "h": "Kas lemj", "p": "Kamēr nav trīs neatkarīgu implementāciju, kas iztur atbilstības testus, par izmaiņām pēc publiskas apspriešanas lemj Photopilot uzturētāji. Pēc tam vadību pārņem vadības grupa ar vienu vietu katram implementētājam un vismaz vienu zīmolu un vienu tirgotāju." },
-      { "h": "Kā notiek izmaiņas", "p": "Katra standarta izmaiņa ir publisks pull request ar īsu pamatojumu. Lielāki priekšlikumi ir atvērti komentāriem vismaz 14 dienas. Ikviens var piedalīties, neparakstot ieguldījuma līgumu." },
-      { "h": "Neitrāls pēc būtības", "p": "Nekas standartā nedrīkst prasīt konkrētu piegādātāju vai mitinātu pakalpojumu. Ikviens var to implementēt, mitināt citiem vai uz tā būvēt konkurējošu produktu. Photopilot programmatūrai atbilstības testos nav īpašas attieksmes." },
-      { "h": "Licences", "p": "Specifikācijai un šīs vietnes saturam ir CC-BY-4.0 licence. SDK, rīkam obx un kopīgajai tīmekļa saskarnei ir Apache-2.0 licence. Trīs portāla izdevumiem ir AGPL-3.0 licence, lai uzlabojumi paliktu atvērti. Šīs vietnes kodam ir MIT licence." }
+      {
+        "h": "Kas lemj",
+        "p": "Kamēr nav trīs neatkarīgu ieviešanu, kas iztur atbilstības testus, par izmaiņām pēc publiskas diskusijas lemj iniciators. Pēc tam vadību pārņem vadības grupa ar vienu vietu katram ieviesējam un vismaz vienu zīmolu un vienu tirgotāju."
+      },
+      {
+        "h": "Kā notiek izmaiņas",
+        "p": "Katra standarta izmaiņa ir publisks pull request ar īsu pamatojumu. Lielāki priekšlikumi ir atvērti komentāriem vismaz 14 dienas. Ikviens var piedalīties, neparakstot ieguldījuma līgumu."
+      },
+      {
+        "h": "Neitrāls pēc būtības",
+        "p": "Nekas standartā nedrīkst prasīt konkrētu piegādātāju vai mitinātu pakalpojumu. Ikviens drīkst to ieviest, mitināt citiem vai uz tā būvēt konkurējošu produktu. Nevienai ieviešanai atbilstības testos nav priekšrocību, arī ne Photopilot, iniciatora uzņēmuma, ieviešanai."
+      },
+      {
+        "h": "Licences",
+        "p": "Specifikācijai un šīs vietnes saturam ir CC-BY-4.0 licence. SDK, rīkam obx un kopīgajai tīmekļa saskarnei ir Apache-2.0 licence. Trīs portāla izdevumiem ir AGPL-3.0 licence, lai uzlabojumi paliktu atvērti. Šīs vietnes kodam ir MIT licence."
+      }
     ],
     "nameTitle": "Par nosaukumu",
-    "nameP": "“Open Brand Exchange” ir darba nosaukums. Tas var mainīties pirms versijas 1.0 pēc preču zīmju pārbaudes. Tā nav reģistrēta preču zīme. Programmatūra, kas iztur atbilstības testus, var norādīt, ka tā “darbojas ar Open Brand Exchange”.",
-    "specLink": "Pilns pārvaldības dokuments"
+    "nameP": "Nosaukums “Open Brand Exchange” visās valodās ir vienāds un nekad netiek tulkots. Tā vēl nav reģistrēta preču zīme. Programmatūra, kas iztur atbilstības testus, drīkst teikt, ka tā “darbojas ar Open Brand Exchange”.",
+    "specLink": "Pilns pārvaldības dokuments",
+    "foundationTitle": "Kas ir aiz tā",
+    "foundationP": "Open Brand Exchange iniciators ir {person}. Viņš dibina organizāciju {foundation}, kas būs Nīderlandes nodibinājums (stichting). Tiklīdz tas būs izveidots, tam tiks nodotas autortiesības, nosaukums, domēns un GitHub organizācija. Līdz tam tie ir reģistrēti uz šo vārdu: {person}."
   },
   "privacy": {
     "h1": "Privātums",
-    "lead": "Šī tīmekļa vietne jums neseko.",
+    "lead": "Šī vietne jums neseko. Tālāk aprakstīts, kādi nedaudzie dati tiek apstrādāti un kāpēc.",
     "sections": [
-      { "h": "Bez sīkdatnēm", "p": "Mēs neizmantojam sīkdatnes. Ja izvēlaties valodu, jūsu pārlūks atceras izvēli lokāli; tā nekad netiek nosūtīta mums." },
-      { "h": "Bez izsekošanas", "p": "Bez reklāmām, bez sociālo tīklu pogām, bez trešo pušu fontiem un bez izsekošanas skriptiem. Augstākais, mēs izmantojam Cloudflare Web Analytics, kas skaita apmeklējumus bez sīkdatnēm un neseko jums citās vietnēs." },
-      { "h": "Mitināšana", "p": "Vietne tiek mitināta Cloudflare Pages. Kā jebkurš tīmekļa serveris, Cloudflare apstrādā jūsu IP adresi, lai piegādātu lapas un aizsargātu tās pret ļaunprātīgu izmantošanu." },
-      { "h": "Zīmolu portāli ir atsevišķi", "p": "Katru zīmola portālu pārvalda pats zīmols vai tā pakalpojumu sniedzējs. Tur ir spēkā viņu privātuma politika, nevis šī." }
+      {
+        "h": "Kas ir atbildīgs",
+        "p": "Šo vietni uztur {person} (skatiet izdevēja informāciju). Visos privātuma jautājumos rakstiet uz {email}."
+      },
+      {
+        "h": "Ko mēs vācam",
+        "p": "Neko, pēc kā jūs varētu identificēt. Šajā vietnē nav veidlapu, kontu, jaunumu vēstules un sīkdatņu."
+      },
+      {
+        "h": "Mitināšana",
+        "p": "Vietne tiek mitināta Cloudflare Pages. Kā jebkurš tīmekļa serveris, Cloudflare apstrādā tehniskos datus, piemēram, jūsu IP adresi, lai piegādātu lapas un aizsargātu tās pret ļaunprātīgu izmantošanu. Paši mēs piekļuves žurnālus neglabājam."
+      },
+      {
+        "h": "Apmeklējumu statistika",
+        "p": "Ja apmeklējumu statistika ir ieslēgta, mēs izmantojam Cloudflare Web Analytics. Tā skaita lapu skatījumus bez sīkdatnēm un neizsekojot jūs starp vietnēm. Mēs redzam tikai kopsummas."
+      },
+      {
+        "h": "E-pasts",
+        "p": "Ja jūs mums rakstāt, jūsu adresi un ziņu izmantojam tikai, lai atbildētu, un izdzēšam tās, kad tās tam vairs nav vajadzīgas."
+      },
+      {
+        "h": "Jūsu tiesības",
+        "p": "Varat jautāt, kādi jūsu personas dati mums ir, un lūgt tos labot vai dzēst. Varat arī iesniegt sūdzību Nīderlandes datu aizsardzības iestādei (Autoriteit Persoonsgegevens)."
+      },
+      {
+        "h": "Zīmolu portāli ir atsevišķi",
+        "p": "Katru zīmola portālu uztur pats zīmols vai tā pakalpojumu sniedzējs. Tur ir spēkā viņu privātuma paziņojums, nevis šis."
+      }
     ],
-    "contact": "Jautājumi? Atveriet issue vietnes repozitorijā."
+    "contact": "Jautājumi par privātumu? Rakstiet uz {email}.",
+    "updated": "Pēdējoreiz atjaunināts: {date}"
+  },
+  "org": {
+    "initiative": "Iniciators: {person}",
+    "inFormation": "dibināšanas procesā"
+  },
+  "imprint": {
+    "h1": "Izdevēja informācija",
+    "lead": "Kas izdod šo vietni un kā ar mums sazināties.",
+    "publisherTitle": "Izdevējs",
+    "foundationP": "{foundation} tiek dibināta kā Nīderlandes nodibinājums (stichting). Līdz tās reģistrācijai par šo vietni atbild {person}.",
+    "addressLabel": "Pasta adrese",
+    "phoneLabel": "Tālrunis",
+    "registrationLabel": "Reģistrācijas numurs",
+    "contactTitle": "Kontakti",
+    "generalLabel": "Vispārīgi jautājumi",
+    "securityLabel": "Drošības problēmas",
+    "securityNote": "Par ievainojamībām ziņojiet konfidenciāli uz šo adresi, nevis publiskā issue.",
+    "contentTitle": "Saturs un licences",
+    "contentP": "Mēs rakstām šo vietni rūpīgi, taču tajā var būt kļūdas. Tehniskajās detaļās noteicošā ir specifikācija. Tekstus drīkst atkārtoti izmantot saskaņā ar CC BY 4.0 licenci, norādot autorību; šīs vietnes kods ir ar MIT licenci."
+  },
+  "cookies": {
+    "h1": "Paziņojums par sīkdatnēm",
+    "lead": "Šī vietne neizmanto sīkdatnes.",
+    "sections": [
+      {
+        "h": "Nekādu sīkdatņu no mums",
+        "p": "Mēs neizmantojam sīkdatnes statistikai, reklāmai vai kam citam, tāpēc arī neprasām jūsu piekrišanu."
+      },
+      {
+        "h": "Jūsu valodas izvēle",
+        "p": "Ja izvēlaties valodu, pārlūks to atceras savā krātuvē (localStorage), lai nākamais apmeklējums atvērtos šajā valodā. Tā mums nekad netiek sūtīta. Ja pārlūkā izdzēšat šīs vietnes datus, tā pazūd."
+      },
+      {
+        "h": "Mūsu mitinātāja drošības pārbaudes",
+        "p": "Tikai tad, ja Cloudflare, mūsu mitinātājam, jāpārbauda, vai apmeklētājs nav automatizēts uzbrukums, tas šai pārbaudei var iestatīt noteikti nepieciešamu drošības sīkdatni. Tā netiek izmantota nekam citam."
+      },
+      {
+        "h": "Zīmolu portāli",
+        "p": "Zīmolu portāli ir atsevišķas vietnes, ko uztur zīmols vai tā pakalpojumu sniedzējs. Tur ir spēkā viņu pašu paziņojums par sīkdatnēm."
+      }
+    ],
+    "contact": "Jautājumi? Rakstiet uz {email}."
+  },
+  "brochure": {
+    "brandsFlow": [
+      {
+        "h": "Jūsu sistēmas",
+        "p": "PIM, ERP vai mape"
+      },
+      {
+        "h": "Jūsu portāls",
+        "p": "jūsu vārds, jūsu domēns"
+      },
+      {
+        "h": "Jūsu tirgotāji",
+        "p": "pārlūkā un caur API"
+      }
+    ],
+    "retailersH1": "Katra zīmola attēli un preču dati, vienmēr vienādi",
+    "retailersFlow": [
+      {
+        "h": "Zīmols",
+        "p": "publicē vienreiz"
+      },
+      {
+        "h": "Zīmola portāls",
+        "p": "vienāds katram zīmolam"
+      },
+      {
+        "h": "Jūsu veikals",
+        "p": "lejupielāde vai API, sasaistīts pēc EAN"
+      }
+    ],
+    "statusTitle": "Kas ir gatavs un kas vēl būs",
+    "readyTitle": "Gatavs versijā 0.1",
+    "comingTitle": "Drīzumā",
+    "readyBadge": "Gatavs",
+    "comingBadge": "Drīzumā",
+    "brandsReady": [
+      "Savs portāls ar administrēšanu, 25 valodās, jūsu domēnā",
+      "CSV un fotoattēlu imports manuāli vai pēc grafika no tīmekļa adreses, SFTP vai S3",
+      "Rīks obx un receptes cron, GitHub Actions, n8n, Make un Zapier",
+      "Piekļuves pieprasījumi, uzaicinājumi un API atslēgas jūsu tirgotāju programmatūrai",
+      "Trīs izdevumi: Cloudflare, Google Cloud & Docker un parasta tīmekļa mitināšana"
+    ],
+    "brandsComing": [
+      "Pirmais publiskais laidiens ar instalēšanu vienā klikšķī",
+      "Pakalpojumu sniedzēji, kas uztur portālu jūsu vietā",
+      "Pirmie īstie zīmoli zīmolu sarakstā"
+    ],
+    "retailersReady": [
+      "Piekļuves pieprasīšana un pieteikšanās zīmola portālā",
+      "Meklēšana, filtrēšana un EAN saraksta ielīmēšana, lai redzētu, kas ir un kas trūkst",
+      "Fotoattēlu lejupielāde zip arhīvā un preču datu lejupielāde tabulā",
+      "API atslēga jūsu programmatūrai: vispirms viss, pēc tam tikai izmaiņas",
+      "Lietošanas tiesības, embargo un MI izcelsme pie katra attēla"
+    ],
+    "retailersComing": [
+      "Vairāk zīmolu: zīmolu saraksts tikai sākas",
+      "Spraudņi, kas attēlus ieliek tieši Shopware un WooCommerce",
+      "Atbalsts vairāk kases, PIM un e-veikalu programmās, kad piegādātāji to pievieno"
+    ],
+    "kitP": "Zīmols pievienojas visātrāk, ja to lūdz veikali. Gatavu e-pastu savai kontaktpersonai zīmolā atradīsiet adresē {url}.",
+    "ctaTitle": "Jautājumi, vai vēlaties piedalīties no paša sākuma?",
+    "ctaBrands": "Meklējam zīmolus, kas vēlas veidot pirmo versiju: kādas sistēmas izmantojat un cik tirgotājus apkalpojat? Rakstiet mums.",
+    "ctaRetailers": "Meklējam tirgotājus, kas vēlas veidot pirmo versiju: kurus zīmolus vēlaties pieslēgt un kādu programmatūru izmantojat? Rakstiet mums.",
+    "footer": "Sadaļas “Drīzumā” funkcijas tiek izstrādātas. Versija 0.1, {date}."
   }
 }

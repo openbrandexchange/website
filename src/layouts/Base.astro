@@ -11,6 +11,7 @@ import {
   type Lang,
   type PageKey,
 } from '../i18n';
+import { HELLO_EMAIL, initiativeLine } from '../lib/org';
 
 interface Props {
   lang: Lang;
@@ -28,7 +29,7 @@ const canonical = site + url(lang, page);
 const analyticsToken = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
 
 const nav: PageKey[] = ['brands', 'automation', 'hosting', 'retailers', 'developers', 'directory'];
-const footer: PageKey[] = ['downloads', 'faq', 'governance', 'privacy'];
+const footer: PageKey[] = ['downloads', 'faq', 'governance', 'imprint', 'privacy', 'cookies'];
 ---
 
 <!doctype html>
@@ -47,6 +48,12 @@ const footer: PageKey[] = ['downloads', 'faq', 'governance', 'privacy'];
     <meta property="og:description" content={m.description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={ogLocales[lang]} />
+    <meta property="og:image" content={`${site}/og/${lang}.jpg`} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={t.home.h1} />
+    <meta name="twitter:card" content="summary_large_image" />
     {langs.filter((l) => l !== lang).map((l) => <meta property="og:locale:alternate" content={ogLocales[l]} />)}
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -123,7 +130,12 @@ const footer: PageKey[] = ['downloads', 'faq', 'governance', 'privacy'];
         <div>
           <p class="footer-name">Open Brand Exchange</p>
           <p>{t.common.footerAbout}</p>
-          <p class="muted small">{t.common.footerWorking}</p>
+          <p class="small footer-org">
+            <a href={url(lang, 'imprint')}>{initiativeLine(lang)}</a>
+          </p>
+          <p class="small">
+            {t.common.footerContact}: <a href={`mailto:${HELLO_EMAIL}`}>{HELLO_EMAIL}</a>
+          </p>
         </div>
         <nav aria-label={t.common.footerMore}>
           <ul class="plain">

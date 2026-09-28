@@ -9,18 +9,18 @@
     "home": "Open Brand Exchange, domača stran",
     "copy": "Kopiraj",
     "copied": "Kopirano",
-    "draft": "Specifikacija 0.1 (osnutek): programska oprema je v izdelavi. Še ni namenjena produkcijski rabi.",
+    "draft": "Različica 0.1 je v preizkušanju. Pripravljamo prvo javno izdajo.",
     "footerAbout": "Brezplačen in odprt način, da blagovne znamke svojim trgovcem dostavijo fotografije izdelkov in podatke o artiklih.",
     "footerMore": "Več",
     "footerSource": "Izvorna koda in specifikacija",
     "footerLicence": "Vsebina CC-BY-4.0, koda MIT.",
-    "footerWorking": "»Open Brand Exchange« je delovno ime. Specifikacija 0.1, v razvoju.",
     "editionCloudflare": "Portal za Cloudflare",
     "editionGoogle": "Portal za Google Cloud in Docker",
     "editionHosting": "Portal za spletno gostovanje",
     "yes": "Da",
     "inDevelopment": "V razvoju",
-    "available": "Na voljo"
+    "available": "Na voljo",
+    "footerContact": "Kontakt"
   },
   "nav": {
     "brands": "Za blagovne znamke",
@@ -32,7 +32,9 @@
     "downloads": "Prenosi",
     "faq": "Pogosta vprašanja",
     "governance": "Upravljanje in ime",
-    "privacy": "Zasebnost"
+    "privacy": "Zasebnost",
+    "imprint": "Kolofon",
+    "cookies": "Piškotki"
   },
   "meta": {
     "home": {
@@ -73,11 +75,19 @@
     },
     "governance": {
       "title": "Upravljanje in ime",
-      "description": "Kdo odloča o standardu, kako prispevati, licence in zakaj je ime delovno."
+      "description": "Kdo stoji za standardom, kdo odloča, kako prispevati, licence in ime."
     },
     "privacy": {
       "title": "Zasebnost",
-      "description": "To spletno mesto vam ne sledi: brez piškotkov, brez sledenja."
+      "description": "To spletno mesto vas ne sledi. Katerih nekaj podatkov se obdeluje in zakaj."
+    },
+    "imprint": {
+      "title": "Kolofon",
+      "description": "Kdo izdaja to spletno mesto in kako nas dosežete."
+    },
+    "cookies": {
+      "title": "Piškotki",
+      "description": "To spletno mesto ne nastavlja piškotkov."
     }
   },
   "home": {
@@ -134,7 +144,7 @@
         "p": "Ena objava za vse trgovce. Konec prenosov datotek, e-sporočil z arhivi zip in ločene integracije za vsako trgovino."
       }
     ],
-    "status": "Open Brand Exchange je na začetku. Specifikacija je prvi osnutek (0.1), programska oprema pa nastaja zdaj. Ne prikazujemo strank ali številk, ki jih še ni.",
+    "status": "Open Brand Exchange je na začetku. Različica 0.1 specifikacije in programske opreme je v preizkušanju, pripravljamo pa prvo javno izdajo. Ne kažemo strank ali številk, ki jih še ni.",
     "statusLink": "Preberite, kako se upravlja"
   },
   "brands": {
@@ -185,13 +195,34 @@
     ],
     "adminTitle": "Kaj upravljate sami",
     "admin": [
-      { "k": "Katalog", "v": "znamke, artikli, barve in velikosti, fotografije in njihov vrstni red" },
-      { "k": "Uvozi", "v": "nalaganje ali načrtovani prevzem, z jasnim sporočilom za vsako napačno vrstico" },
-      { "k": "Trgovci", "v": "odobritev ali zavrnitev prošenj (z razlogom), povabilo ali blokada računov" },
-      { "k": "Ključi API", "v": "ključi za sisteme trgovcev: prikazani enkrat, preprosto jih obnovite ali prekličete" },
-      { "k": "Samodejno nalaganje", "v": "ključi za vaše sisteme in obvestila, ko trgovec zaprosi za dostop ali se uvoz konča" },
-      { "k": "Statistika", "v": "prenosi in uporaba po trgovcih" },
-      { "k": "Nastavitve", "v": "logotip, poudarjena barva, pozdravno besedilo, privzete pravice uporabe in lastna domena" }
+      {
+        "k": "Katalog",
+        "v": "znamke, artikli, barve in velikosti, fotografije in njihov vrstni red"
+      },
+      {
+        "k": "Uvozi",
+        "v": "nalaganje ali načrtovani prevzem, z jasnim sporočilom za vsako napačno vrstico"
+      },
+      {
+        "k": "Trgovci",
+        "v": "odobritev ali zavrnitev prošenj (z razlogom), povabilo ali blokada računov"
+      },
+      {
+        "k": "Ključi API",
+        "v": "ključi za sisteme trgovcev: prikazani enkrat, preprosto jih obnovite ali prekličete"
+      },
+      {
+        "k": "Samodejno nalaganje",
+        "v": "ključi za vaše sisteme in obvestila, ko trgovec zaprosi za dostop ali se uvoz konča"
+      },
+      {
+        "k": "Statistika",
+        "v": "prenosi in uporaba po trgovcih"
+      },
+      {
+        "k": "Nastavitve",
+        "v": "logotip, poudarjena barva, pozdravno besedilo, privzete pravice uporabe in lastna domena"
+      }
     ],
     "nextTitle": "Naslednji korak",
     "nextHosting": "Izberite gostovanje",
@@ -201,14 +232,42 @@
     "h1": "Avtomatizacija",
     "lead": "Vaš PIM, ERP, DAM ali skupna mapa že ima podatke in fotografije. Izberite prvi recept, ki ustreza: vsi delujejo z vsakim portalom Open Brand Exchange.",
     "chooseTitle": "Kateri recept vam ustreza?",
-    "head": ["Imate …", "Uporabite", "Potrebna koda"],
+    "head": [
+      "Imate …",
+      "Uporabite",
+      "Potrebna koda"
+    ],
     "rows": [
-      ["CSV ali zip na spletnem naslovu, strežniku SFTP ali v vedru S3", "Načrtovani uvoz", "brez"],
-      ["mapo, kamor prihajajo izvozi", "obx watch", "brez"],
-      ["strežnik ali računalnik, ki ponoči izvaja opravila", "cron ali Razporejevalnik opravil", "ena vrstica"],
-      ["izvoze v repozitoriju Git", "GitHub Action", "ena datoteka YAML"],
-      ["n8n, Make ali Zapier", "Koraki HTTP", "brez (vizualno)"],
-      ["razvijalca, ki poveže vaš PIM ali ERP", "Neposredno API", "malo"]
+      [
+        "CSV ali zip na spletnem naslovu, strežniku SFTP ali v vedru S3",
+        "Načrtovani uvoz",
+        "brez"
+      ],
+      [
+        "mapo, kamor prihajajo izvozi",
+        "obx watch",
+        "brez"
+      ],
+      [
+        "strežnik ali računalnik, ki ponoči izvaja opravila",
+        "cron ali Razporejevalnik opravil",
+        "ena vrstica"
+      ],
+      [
+        "izvoze v repozitoriju Git",
+        "GitHub Action",
+        "ena datoteka YAML"
+      ],
+      [
+        "n8n, Make ali Zapier",
+        "Koraki HTTP",
+        "brez (vizualno)"
+      ],
+      [
+        "razvijalca, ki poveže vaš PIM ali ERP",
+        "Neposredno API",
+        "malo"
+      ]
     ],
     "formatTitle": "En format za vse",
     "formatP": "Vsi načini objave berejo isto: products.csv z eno vrstico na velikost in fotografije z imeni {style}_{color}_{position}.jpg (model, barva, položaj). Ko to imate, delujejo vsi spodnji recepti.",
@@ -221,9 +280,18 @@
     "scheduledTitle": "1. Načrtovani uvoz (brez kode)",
     "scheduledP": "V skrbništvu: Uvozi → Načrtovani uvozi → Dodaj. Izberite vir in kako pogosto naj se izvaja.",
     "scheduled": [
-      { "k": "Spletni naslov (HTTPS)", "v": "naslov datoteke products.csv ali arhiva zip s products.csv in fotografijami. Podatki za prijavo so shranjeni šifrirano." },
-      { "k": "SFTP", "v": "strežnik, uporabnik, geslo ali ključ ter mapa z izvozom." },
-      { "k": "Vedro S3", "v": "AWS S3, Cloudflare R2, MinIO ali Backblaze: končna točka, vedro, mapa in ključ samo za branje." }
+      {
+        "k": "Spletni naslov (HTTPS)",
+        "v": "naslov datoteke products.csv ali arhiva zip s products.csv in fotografijami. Podatki za prijavo so shranjeni šifrirano."
+      },
+      {
+        "k": "SFTP",
+        "v": "strežnik, uporabnik, geslo ali ključ ter mapa z izvozom."
+      },
+      {
+        "k": "Vedro S3",
+        "v": "AWS S3, Cloudflare R2, MinIO ali Backblaze: končna točka, vedro, mapa in ključ samo za branje."
+      }
     ],
     "scheduledMode": "Izberite »Posodobi« (samo dodajanje in spreminjanje) ali »Zrcali« (umakne tudi, kar je izginilo iz datoteke). Zrcaljenje zavrne, če bi izginila več kot polovica znamke, zato pokvarjen izvoz nikoli ne izprazni kataloga. »Preizkusi povezavo« pokaže, katere datoteke bi se prebrale.",
     "cliTitle": "Orodje obx",
@@ -271,7 +339,7 @@
       "znamka lahko izvozi vse podatke in fotografije ter odide",
       "lastne cene in pogoje objavite na svojem spletnem mestu"
     ],
-    "listHow": "Odprite pull request v repozitoriju spletnega mesta s svojimi podatki v src/data/providers.json. Pobudnik je naveden prvi, drugi po abecedi.",
+    "listHow": "Odprite pull request v repozitoriju spletnega mesta s svojimi podatki v src/data/providers.json. Podjetje pobudnika je navedeno prvo, vsi drugi po abecedi.",
     "p2Title": "2. Z enim klikom",
     "p2P": "Lasten portal na lastnem računu, brez upravljanja strežnika.",
     "cfP": "Deluje na Cloudflare Workers, z D1 kot bazo podatkov in R2 za fotografije. Kliknite gumb, se prijavite v Cloudflare in sledite korakom. Cloudflare ima brezplačne kvote; za velike kataloge preverite trenutne cene. Spletne različice fotografij izdelata vaš brskalnik in orodje obx, zato vam ni treba storiti ničesar.",
@@ -312,18 +380,36 @@
     "portalTitle": "Kaj vam da portal znamke",
     "portalP": "Vsaka znamka upravlja lasten portal s svojim imenom, na primer »Kestrel · {portal}«.",
     "portal": [
-      { "h": "Prošnja za dostop", "p": "Za dostop zaprosite na portalu znamke. Znamka odobri, vi pa prejmete povabilo po e-pošti." },
-      { "h": "Iskanje in filtri", "p": "Po znamki, sezoni, kolekciji, vrsti izdelka ali barvi. Vsak artikel z vsemi fotografijami in podatki." },
-      { "h": "Prilepite seznam EAN", "p": "Prilepite kode EAN iz blagajne in takoj vidite, kateri artikli so na voljo in kateri še manjkajo." },
-      { "h": "Prenos po vaši meri", "p": "Ena fotografija, en artikel, vaš izbor ali vse v filtru kot zip. Izvirnik (če znamka dovoli), splet ali kvadrat." },
-      { "h": "Podatki o artiklih v preglednici", "p": "EAN po velikosti, barva, material, navodila za nego in opis, pripravljeno za vaš sistem." },
-      { "h": "Kaj je dovoljeno", "p": "Pravice uporabe, datum embarga in podatek, ali je fotografija nastala z umetno inteligenco, so pri vsaki fotografiji." }
+      {
+        "h": "Prošnja za dostop",
+        "p": "Za dostop zaprosite na portalu znamke. Znamka odobri, vi pa prejmete povabilo po e-pošti."
+      },
+      {
+        "h": "Iskanje in filtri",
+        "p": "Po znamki, sezoni, kolekciji, vrsti izdelka ali barvi. Vsak artikel z vsemi fotografijami in podatki."
+      },
+      {
+        "h": "Prilepite seznam EAN",
+        "p": "Prilepite kode EAN iz blagajne in takoj vidite, kateri artikli so na voljo in kateri še manjkajo."
+      },
+      {
+        "h": "Prenos po vaši meri",
+        "p": "Ena fotografija, en artikel, vaš izbor ali vse v filtru kot zip. Izvirnik (če znamka dovoli), splet ali kvadrat."
+      },
+      {
+        "h": "Podatki o artiklih v preglednici",
+        "p": "EAN po velikosti, barva, material, navodila za nego in opis, pripravljeno za vaš sistem."
+      },
+      {
+        "h": "Kaj je dovoljeno",
+        "p": "Pravice uporabe, datum embarga in podatek, ali je fotografija nastala z umetno inteligenco, so pri vsaki fotografiji."
+      }
     ],
-    "apiTitle": "Ključ API za vaš sistem",
+    "apiTitle": "API ključ za vašo programsko opremo",
     "apiP": "Vaš PIM, blagajniški sistem ali spletna trgovina sama prevzema fotografije? Potem zaprosite za ključ API za svoj sistem. Najprej prevzame vse, nato samo spremembe, tudi to, kar znamka umakne. Fotografije se z vašimi artikli povežejo prek EAN.",
     "apiDev": "Za vašega razvijalca: tako je videti.",
-    "toolsTitle": "Photopilot in druga programska oprema",
-    "toolsP": "Open Brand Exchange je odprt standard: prebere ga lahko katera koli programska oprema. Photopilot, pobudnik, ga lahko uporablja v svoji programski opremi za trgovce, drugi ponudniki pa lahko storijo enako. Ne potrebujete posebne programske opreme: dovolj je brskalnik.",
+    "toolsTitle": "Katera programska oprema deluje z njim",
+    "toolsP": "Open Brand Exchange je odprt standard: podpira ga lahko katera koli programska oprema. Photopilot, podjetje pobudnika, ga vgrajuje v svojo programsko opremo za trgovce, drugi ponudniki pa lahko storijo enako. Ne potrebujete nobene posebne programske opreme: dovolj je brskalnik.",
     "toolsLink": "Specifikacija za razvijalce",
     "findTitle": "Kako najti znamko",
     "findP": "Znamke, ki želijo biti vidne, so na seznamu znamk. Če vam znamka preprosto da naslov svojega portala, deluje tudi to.",
@@ -345,11 +431,25 @@
     "specP": "Različica 0.1 (osnutek). OpenAPI 3.1, JSON Schema 2020-12, primeri in izmišljena testna znamka Kestrel Outfitters. Licenca CC-BY-4.0: prosto za implementacijo, tudi komercialno.",
     "specStart": "Začnite s protocol.md",
     "apisTitle": "Trije API-ji",
-    "apisHead": ["API", "Za", "Stanje", "Pogodba"],
+    "apisHead": [
+      "API",
+      "Za",
+      "Stanje",
+      "Pogodba"
+    ],
     "apis": [
-      { "who": "programska oprema trgovcev: discovery, OAuth2 client credentials, tok sprememb, iskanje po GTIN, renditions, izvozi, webhooki", "status": "normativen" },
-      { "who": "avtomatizacija znamke: idempotentni upserti po lastnih ID-jih znamke, nalaganja naslovljena s sha256, paketi, uvozi", "status": "normativen" },
-      { "who": "skupno skrbništvo in portal za trgovce", "status": "nenormativen" }
+      {
+        "who": "programska oprema trgovcev: discovery, OAuth2 client credentials, tok sprememb, iskanje po GTIN, renditions, izvozi, webhooki",
+        "status": "normativen"
+      },
+      {
+        "who": "avtomatizacija znamke: idempotentni upserti po lastnih ID-jih znamke, nalaganja naslovljena s sha256, paketi, uvozi",
+        "status": "normativen"
+      },
+      {
+        "who": "skupno skrbništvo in portal za trgovce",
+        "status": "nenormativen"
+      }
     ],
     "readTitle": "Branje portala znamke v nekaj vrsticah",
     "sdkTitle": "SDK in orodje za ukazno vrstico",
@@ -357,7 +457,12 @@
     "confTitle": "Skladnost",
     "confP": "Implementacija je skladna z OBX za profil, ko obx-conformance opravi vse obvezne teste tega profila. Obstajajo trije profili: protocol, ingest in portal.",
     "implTitle": "Implementacije",
-    "implHead": ["Repozitorij", "Kaj", "Licenca", "Stanje"],
+    "implHead": [
+      "Repozitorij",
+      "Kaj",
+      "Licenca",
+      "Stanje"
+    ],
     "impl": [
       "specifikacija, sheme, testni podatki",
       "Go SDK, orodje obx, testi skladnosti, navidezni strežnik",
@@ -420,53 +525,230 @@
     "h1": "Prenosi",
     "lead": "Gradivo za deljenje s sodelavci, znamkami in trgovci.",
     "brochureTitle": "Brošura za trgovce",
-    "brochureP": "Dve strani o tem, kaj Open Brand Exchange pomeni za trgovino, da jo date sodelavcu ali znamki.",
+    "brochureP": "Kaj Open Brand Exchange pomeni za trgovino: portal znamke, API ključ za vašo programsko opremo in kaj je že pripravljeno. Za predajo sodelavcu ali znamki.",
     "kitTitle": "E-sporočilo za znamke, ki še niso vključene",
     "kitP": "Pripravljeno e-sporočilo s strani za trgovce kot besedilna datoteka.",
     "exampleTitle": "Vzorčne datoteke",
     "exampleP": "Datoteka products.csv in fotografije izmišljene znamke Kestrel Outfitters za preizkus uvoza.",
     "exampleLink": "Vzorčne datoteke v specifikaciji",
     "templateP": "Prazna predloga CSV je na voljo tudi v skrbništvu vsakega portala, pod Uvozi.",
-    "dutch": "Nizozemščina",
-    "english": "Angleščina"
+    "brandsTitle": "Brošura za znamke",
+    "brandsP": "Lasten portal za trgovce, API, samodejno nalaganje in gostovanje ter kaj je že pripravljeno. Za deljenje z ekipo.",
+    "allLanguages": "Vsi jeziki"
   },
   "faq": {
     "h1": "Pogosta vprašanja",
     "items": [
-      { "q": "Koliko stane?", "a": "Standard in programska oprema sta brezplačna. Če gostite sami, plačate samo gostovanje. Ponudnik ima lastne cene, ki jih najdete na njegovem spletnem mestu." },
-      { "q": "Ali potrebujemo razvijalca?", "a": "Za osnove ne. Portal namestite z enim klikom, načrtovani uvoz s spletnega naslova, strežnika SFTP ali vedra pa ne zahteva kode. Razvijalec pomaga, če želite neposredno povezati PIM ali ERP." },
-      { "q": "Je to še ena platforma, ki se ji moramo pridružiti?", "a": "Ne. Vsaka znamka upravlja lasten portal, po želji na lastni domeni. Ni osrednje platforme, ki bi hranila vašo vsebino." },
-      { "q": "Kdo odloča, kateri trgovec dobi dostop?", "a": "Vi. Trgovci zaprosijo za dostop, vi pa vsako prošnjo odobrite ali zavrnete. Izberete tudi, katere znamke trgovec vidi in ali lahko prenaša izvirnike." },
-      { "q": "Kaj potrebujejo trgovci?", "a": "Brskalnik. Trgovci s programsko opremo, ki sama prevzema fotografije, lahko zaprosijo za ključ API za to programsko opremo." },
-      { "q": "Katere oblike fotografij so na voljo?", "a": "Izvirnik, natanko tak, kot ste ga naložili, ter spletna različica (največ 2000 px), kvadratna različica in majhen predogled. Trgovci izberejo, kar potrebujejo." },
-      { "q": "Ali podatki o umetni inteligenci in pravicah ostanejo s fotografijami?", "a": "Da. Pravice uporabe, datum embarga in podatek o uporabi umetne inteligence so del vsake fotografije. Izvirniki so shranjeni in dostavljeni nespremenjeni, vključno z vdelanimi content credentials." },
-      { "q": "Ali lahko pozneje zamenjamo ponudnika?", "a": "Da. Vsi portali govorijo isti standard in vsak tukaj naveden ponudnik vam omogoča izvoz celotne vsebine. Vaša domena ostane enaka." },
-      { "q": "Je že pripravljeno?", "a": "Še ne. Specifikacija je prvi osnutek (0.1), programska oprema pa nastaja. Lahko jo že preizkusite, a še ni namenjena produkcijski rabi." },
-      { "q": "Kdo stoji za tem?", "a": "Open Brand Exchange je začel Photopilot, nizozemsko podjetje, ki razvija programsko opremo za fotografiranje izdelkov. Standard je odprt, cilj pa je, da pripada znamkam in trgovcem, ki ga uporabljajo." }
+      {
+        "q": "Koliko stane?",
+        "a": "Standard in programska oprema sta brezplačna. Če gostite sami, plačate samo gostovanje. Ponudnik ima lastne cene, ki jih najdete na njegovem spletnem mestu."
+      },
+      {
+        "q": "Ali potrebujemo razvijalca?",
+        "a": "Za osnove ne. Portal namestite z enim klikom, načrtovani uvoz s spletnega naslova, strežnika SFTP ali vedra pa ne zahteva kode. Razvijalec pomaga, če želite neposredno povezati PIM ali ERP."
+      },
+      {
+        "q": "Je to še ena platforma, ki se ji moramo pridružiti?",
+        "a": "Ne. Vsaka znamka upravlja lasten portal, po želji na lastni domeni. Ni osrednje platforme, ki bi hranila vašo vsebino."
+      },
+      {
+        "q": "Kdo odloča, kateri trgovec dobi dostop?",
+        "a": "Vi. Trgovci zaprosijo za dostop, vi pa vsako prošnjo odobrite ali zavrnete. Izberete tudi, katere znamke trgovec vidi in ali lahko prenaša izvirnike."
+      },
+      {
+        "q": "Kaj potrebujejo trgovci?",
+        "a": "Brskalnik. Trgovci s programsko opremo, ki sama prevzema fotografije, lahko zaprosijo za ključ API za to programsko opremo."
+      },
+      {
+        "q": "Katere oblike fotografij so na voljo?",
+        "a": "Izvirnik, natanko tak, kot ste ga naložili, ter spletna različica (največ 2000 px), kvadratna različica in majhen predogled. Trgovci izberejo, kar potrebujejo."
+      },
+      {
+        "q": "Ali podatki o umetni inteligenci in pravicah ostanejo s fotografijami?",
+        "a": "Da. Pravice uporabe, datum embarga in podatek o uporabi umetne inteligence so del vsake fotografije. Izvirniki so shranjeni in dostavljeni nespremenjeni, vključno z vdelanimi content credentials."
+      },
+      {
+        "q": "Ali lahko pozneje zamenjamo ponudnika?",
+        "a": "Da. Vsi portali govorijo isti standard in vsak tukaj naveden ponudnik vam omogoča izvoz celotne vsebine. Vaša domena ostane enaka."
+      },
+      {
+        "q": "Je že pripravljeno?",
+        "a": "Skoraj. Različica 0.1 specifikacije in treh izdaj portala je v preizkušanju. Pripravljamo prvo javno izdajo; do takrat programska oprema ni javno dostopna."
+      },
+      {
+        "q": "Kdo stoji za tem?",
+        "a": "Pobudnik Open Brand Exchange je {person}, ki je ustanovil tudi Photopilot, podjetje za programsko opremo za fotografiranje izdelkov. Vse bo preneseno na {foundation}, da bo standard pripadal znamkam, trgovcem in ponudnikom programske opreme, ki ga uporabljajo, ne enemu podjetju."
+      }
     ]
   },
   "governance": {
     "h1": "Upravljanje in ime",
     "lead": "Open Brand Exchange naj pripada znamkam, trgovcem in ponudnikom programske opreme, ki ga uporabljajo, ne enemu podjetju.",
     "sections": [
-      { "h": "Kdo odloča", "p": "Dokler ne obstajajo tri neodvisne implementacije, ki opravijo teste skladnosti, o spremembah po javni razpravi odločajo vzdrževalci iz podjetja Photopilot. Nato vodenje prevzame usmerjevalna skupina z enim sedežem za vsakega implementatorja ter vsaj eno znamko in enim trgovcem." },
-      { "h": "Kako potekajo spremembe", "p": "Vsaka sprememba standarda je javen pull request s kratko utemeljitvijo. Večji predlogi so odprti za komentarje vsaj 14 dni. Prispeva lahko vsak, brez podpisa pogodbe o prispevkih." },
-      { "h": "Nevtralen po zasnovi", "p": "Nič v standardu ne sme zahtevati določenega ponudnika ali gostovane storitve. Vsak ga lahko implementira, gosti za druge ali na njem zgradi konkurenčen izdelek. Programska oprema podjetja Photopilot v testih skladnosti nima posebne obravnave." },
-      { "h": "Licence", "p": "Specifikacija in vsebina tega spletnega mesta sta pod licenco CC-BY-4.0. SDK, orodje obx in skupni spletni vmesnik so pod licenco Apache-2.0. Tri izdaje portala so pod licenco AGPL-3.0, da izboljšave ostanejo odprte. Koda tega spletnega mesta je pod licenco MIT." }
+      {
+        "h": "Kdo odloča",
+        "p": "Dokler ne obstajajo tri neodvisne implementacije, ki opravijo preizkuse skladnosti, o spremembah po javni razpravi odloča pobudnik. Nato vodenje prevzame usmerjevalna skupina z enim sedežem na izvajalca ter vsaj eno znamko in enim trgovcem."
+      },
+      {
+        "h": "Kako potekajo spremembe",
+        "p": "Vsaka sprememba standarda je javen pull request s kratko utemeljitvijo. Večji predlogi so odprti za komentarje vsaj 14 dni. Prispeva lahko vsak, brez podpisa pogodbe o prispevkih."
+      },
+      {
+        "h": "Nevtralen po zasnovi",
+        "p": "Nič v standardu ne sme zahtevati določenega ponudnika ali gostovane storitve. Vsakdo ga lahko implementira, gosti za druge ali na njem zgradi konkurenčen izdelek. Nobena implementacija nima prednosti v preizkusih skladnosti, tudi ne tista od Photopilota, podjetja pobudnika."
+      },
+      {
+        "h": "Licence",
+        "p": "Specifikacija in vsebina tega spletnega mesta sta pod licenco CC-BY-4.0. SDK, orodje obx in skupni spletni vmesnik so pod licenco Apache-2.0. Tri izdaje portala so pod licenco AGPL-3.0, da izboljšave ostanejo odprte. Koda tega spletnega mesta je pod licenco MIT."
+      }
     ],
     "nameTitle": "O imenu",
-    "nameP": "»Open Brand Exchange« je delovno ime. Pred različico 1.0 se lahko po pregledu blagovnih znamk še spremeni. Ni registrirana blagovna znamka. Programska oprema, ki opravi teste skladnosti, lahko navaja, da »deluje z Open Brand Exchange«.",
-    "specLink": "Celoten dokument o upravljanju"
+    "nameP": "Ime »Open Brand Exchange« je v vseh jezikih enako in se nikoli ne prevaja. Še ni registrirana blagovna znamka. Programska oprema, ki opravi preizkuse skladnosti, lahko navaja, da »deluje z Open Brand Exchange«.",
+    "specLink": "Celoten dokument o upravljanju",
+    "foundationTitle": "Kdo stoji za tem",
+    "foundationP": "Pobudnik Open Brand Exchange je {person}. Ustanavlja {foundation}, ki bo nizozemska fundacija (stichting). Ko bo ustanovljena, bodo nanjo prenesene avtorske pravice, ime, domena in organizacija na GitHubu. Do takrat so vodeni na ime: {person}."
   },
   "privacy": {
     "h1": "Zasebnost",
-    "lead": "To spletno mesto vam ne sledi.",
+    "lead": "To spletno mesto vas ne sledi. Spodaj je opisano, katerih nekaj podatkov se obdeluje in zakaj.",
     "sections": [
-      { "h": "Brez piškotkov", "p": "Ne uporabljamo piškotkov. Če izberete jezik, si ga brskalnik zapomni lokalno; nikoli nam ga ne pošlje." },
-      { "h": "Brez sledenja", "p": "Brez oglasov, brez gumbov družbenih omrežij, brez pisav tretjih oseb in brez skriptov za sledenje. Največ uporabljamo Cloudflare Web Analytics, ki šteje obiske brez piškotkov in vam ne sledi med spletnimi mesti." },
-      { "h": "Gostovanje", "p": "Spletno mesto gostuje na Cloudflare Pages. Kot vsak spletni strežnik Cloudflare obdeluje vaš naslov IP, da dostavi strani in jih zaščiti pred zlorabo." },
-      { "h": "Portali znamk so ločeni", "p": "Vsak portal znamke upravlja znamka sama ali njen ponudnik. Tam velja njihova politika zasebnosti, ne ta." }
+      {
+        "h": "Kdo je odgovoren",
+        "p": "To spletno mesto upravlja {person} (glejte kolofon). Za vse o zasebnosti pišite na {email}."
+      },
+      {
+        "h": "Kaj zbiramo",
+        "p": "Nič, kar bi vas identificiralo. To spletno mesto nima obrazcev, računov, novic po e-pošti niti piškotkov."
+      },
+      {
+        "h": "Gostovanje",
+        "p": "Spletno mesto gostuje na Cloudflare Pages. Kot vsak spletni strežnik Cloudflare obdeluje tehnične podatke, kot je vaš naslov IP, da dostavi strani in jih zaščiti pred zlorabo. Sami ne hranimo dnevnikov dostopa."
+      },
+      {
+        "h": "Statistika obiska",
+        "p": "Če je statistika obiska vklopljena, uporabljamo Cloudflare Web Analytics. Šteje oglede strani brez piškotkov in brez sledenja med spletnimi mesti. Vidimo le skupne vsote."
+      },
+      {
+        "h": "E-pošta",
+        "p": "Če nam pišete, vaš naslov in sporočilo uporabimo le za odgovor ter ju izbrišemo, ko za to nista več potrebna."
+      },
+      {
+        "h": "Vaše pravice",
+        "p": "Lahko vprašate, katere osebne podatke imamo o vas, ter zahtevate njihov popravek ali izbris. Pritožbo lahko vložite tudi pri nizozemskem organu za varstvo podatkov (Autoriteit Persoonsgegevens)."
+      },
+      {
+        "h": "Portali znamk so ločeni",
+        "p": "Vsak portal znamke upravlja znamka sama ali njen ponudnik. Tam velja njihova izjava o zasebnosti, ne ta."
+      }
     ],
-    "contact": "Vprašanja? Odprite issue v repozitoriju spletnega mesta."
+    "contact": "Vprašanja o zasebnosti? Pišite na {email}.",
+    "updated": "Zadnja posodobitev: {date}"
+  },
+  "org": {
+    "initiative": "Pobudnik: {person}",
+    "inFormation": "v ustanavljanju"
+  },
+  "imprint": {
+    "h1": "Kolofon",
+    "lead": "Kdo izdaja to spletno mesto in kako nas dosežete.",
+    "publisherTitle": "Izdajatelj",
+    "foundationP": "{foundation} se ustanavlja kot nizozemska fundacija (stichting). Do njenega vpisa je za to spletno mesto odgovoren {person}.",
+    "addressLabel": "Poštni naslov",
+    "phoneLabel": "Telefon",
+    "registrationLabel": "Matična številka",
+    "contactTitle": "Kontakt",
+    "generalLabel": "Splošna vprašanja",
+    "securityLabel": "Varnostne težave",
+    "securityNote": "Ranljivosti prijavite zaupno na ta naslov, ne v javnem issueju.",
+    "contentTitle": "Vsebina in licence",
+    "contentP": "To spletno mesto pišemo skrbno, vendar lahko vsebuje napake. Pri tehničnih podrobnostih velja specifikacija. Besedila je mogoče ponovno uporabiti pod licenco CC BY 4.0 z navedbo avtorja; koda tega spletnega mesta je pod licenco MIT."
+  },
+  "cookies": {
+    "h1": "Izjava o piškotkih",
+    "lead": "To spletno mesto ne nastavlja piškotkov.",
+    "sections": [
+      {
+        "h": "Nobenih piškotkov od nas",
+        "p": "Piškotkov ne uporabljamo za statistiko, oglaševanje ali kar koli drugega, zato vas tudi ne prosimo za privolitev."
+      },
+      {
+        "h": "Vaša izbira jezika",
+        "p": "Če izberete jezik, si ga brskalnik zapomni v lastni shrambi (localStorage), da se naslednji obisk odpre v tem jeziku. Nikoli nam ni poslan. Če v brskalniku izbrišete podatke tega spletnega mesta, izgine."
+      },
+      {
+        "h": "Varnostna preverjanja našega gostitelja",
+        "p": "Le če mora Cloudflare, naš gostitelj, preveriti, da obiskovalec ni avtomatiziran napad, lahko za to preverjanje nastavi nujno potreben varnostni piškotek. Za nič drugega se ne uporablja."
+      },
+      {
+        "h": "Portali znamk",
+        "p": "Portali znamk so ločena spletna mesta, ki jih upravlja znamka ali njen ponudnik. Tam velja njihova lastna izjava o piškotkih."
+      }
+    ],
+    "contact": "Vprašanja? Pišite na {email}."
+  },
+  "brochure": {
+    "brandsFlow": [
+      {
+        "h": "Vaši sistemi",
+        "p": "PIM, ERP ali mapa"
+      },
+      {
+        "h": "Vaš portal",
+        "p": "vaše ime, vaša domena"
+      },
+      {
+        "h": "Vaši trgovci",
+        "p": "v brskalniku in prek API-ja"
+      }
+    ],
+    "retailersH1": "Fotografije in podatki o artiklih vsake znamke, vedno na enak način",
+    "retailersFlow": [
+      {
+        "h": "Znamka",
+        "p": "objavi enkrat"
+      },
+      {
+        "h": "Portal znamke",
+        "p": "enak pri vsaki znamki"
+      },
+      {
+        "h": "Vaša trgovina",
+        "p": "prenos ali API, povezano po EAN"
+      }
+    ],
+    "statusTitle": "Kaj je pripravljeno in kaj prihaja",
+    "readyTitle": "Pripravljeno v različici 0.1",
+    "comingTitle": "Prihaja",
+    "readyBadge": "Pripravljeno",
+    "comingBadge": "Kmalu",
+    "brandsReady": [
+      "Lasten portal z upravljanjem, v 25 jezikih, na vaši lastni domeni",
+      "Uvoz CSV in fotografij ročno ali po urniku s spletnega naslova, SFTP ali S3",
+      "Orodje obx in recepti za cron, GitHub Actions, n8n, Make in Zapier",
+      "Prošnje za dostop, povabila in API ključi za programsko opremo vaših trgovcev",
+      "Tri izdaje: Cloudflare, Google Cloud & Docker in običajno spletno gostovanje"
+    ],
+    "brandsComing": [
+      "Prva javna izdaja z namestitvijo z enim klikom",
+      "Ponudniki, ki portal upravljajo za vas",
+      "Prve prave znamke na seznamu znamk"
+    ],
+    "retailersReady": [
+      "Zaprositi za dostop in se prijaviti v portal znamke",
+      "Iskati, filtrirati in prilepiti seznam EAN, da vidite, kaj je na voljo in kaj manjka",
+      "Prenesti fotografije kot zip in podatke o artiklih kot preglednico",
+      "API ključ za vašo programsko opremo: najprej vse, nato le spremembe",
+      "Pravice uporabe, embargo in izvor UI pri vsaki sliki"
+    ],
+    "retailersComing": [
+      "Več znamk: seznam znamk se šele začenja",
+      "Vtičniki, ki slike prenesejo neposredno v Shopware in WooCommerce",
+      "Podpora v več blagajniških, PIM in spletnotrgovinskih rešitvah, ko jo ponudniki dodajo"
+    ],
+    "kitP": "Znamka se najhitreje pridruži, ko to zahtevajo trgovine. Pripravljeno e-poštno sporočilo za vašo kontaktno osebo pri znamki najdete na {url}.",
+    "ctaTitle": "Imate vprašanja ali želite sodelovati od začetka?",
+    "ctaBrands": "Iščemo znamke, ki želijo sooblikovati prvo različico: katere sisteme uporabljate in koliko trgovcev oskrbujete? Pišite nam.",
+    "ctaRetailers": "Iščemo trgovce, ki želijo sooblikovati prvo različico: katere znamke želite povezati in katero programsko opremo uporabljate? Pišite nam.",
+    "footer": "Funkcije pod »Prihaja« so v razvoju. Različica 0.1, {date}."
   }
 }

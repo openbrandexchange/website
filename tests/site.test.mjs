@@ -8,7 +8,7 @@ import { checkSite } from '../tools/check-links.mjs';
 
 const dist = new URL('../dist/', import.meta.url);
 const read = (path) => readFileSync(new URL(path, dist), 'utf8');
-const slugs = ['', 'for-brands/', 'automation/', 'hosting/', 'for-retailers/', 'developers/', 'directory/', 'downloads/', 'faq/', 'governance/', 'privacy/'];
+const slugs = ['', 'for-brands/', 'automation/', 'hosting/', 'for-retailers/', 'developers/', 'directory/', 'downloads/', 'faq/', 'governance/', 'privacy/', 'cookies/', 'imprint/'];
 const built = existsSync(new URL('index.html', dist));
 
 test('every page exists in every language, with the right lang, canonical and hreflang set', { skip: !built && 'dist/ not built' }, () => {
@@ -67,8 +67,6 @@ test('switch-kit emails exist per language and link to that language', { skip: !
     assert.ok(text.includes(`https://openbrandexchange.com/${lang}/for-brands/`), lang);
     assert.match(text, /\[/);
   }
-  assert.ok(existsSync(new URL('downloads/retailers-nl.pdf', dist)));
-  assert.ok(existsSync(new URL('downloads/retailers-en.pdf', dist)));
 });
 
 /** Run the built /js/lang.js with a fake browser and return where it sends the visitor. */
@@ -94,4 +92,63 @@ test('the home address sends visitors to their language', { skip: !built && 'dis
   assert.equal(landing({ stored: 'xx', languages: ['nn-NO'] }), '/nb/');
   assert.equal(landing({ languages: ['ja-JP'] }), '/nl/');
   assert.equal(landing({ languages: ['sv'], storageThrows: true, hash: '#x' }), '/sv/#x');
+});
+
+test('every page has a social preview image in its own language', { skip: !built && 'dist/ not built' }, () => {
+  for (const lang of langs) {
+    for (const slug of slugs) {
+      const html = read(`${lang}/${slug}index.html`);
+      const image = html.match(/<meta property="og:image" content="([^"]+)"/)?.[1];
+      assert.equal(image, `https://openbrandexchange.com/og/${lang}.jpg`, `${lang}/${slug}`);
+      assert.match(html, /<meta name="twitter:card" content="summary_large_image"/);
+    }
+    assert.ok(existsSync(new URL(`og/${lang}.jpg`, dist)), `og/${lang}.jpg`);
+  }
+});
+
+test('the downloads page offers both brochures in every language, and the files exist', { skip: !built && 'dist/ not built' }, () => {
+  for (const lang of langs) {
+    const html = read(`${lang}/downloads/index.html`);
+    for (const kind of ['brands', 'retailers']) {
+      for (const l of langs) {
+        assert.ok(html.includes(`href="/downloads/${kind}-${l}.pdf"`), `${lang}: link to ${kind}-${l}.pdf`);
+        assert.ok(existsSync(new URL(`downloads/${kind}-${l}.pdf`, dist)), `${kind}-${l}.pdf`);
+      }
+    }
+  }
+});
+
+test('the imprint names the initiator and the foundation in formation, with the contact addresses', { skip: !built && 'dist/ not built' }, () => {
+  const en = read('en/imprint/index.html');
+  assert.match(en, /An initiative of Richard Lindhout · Open Brand Exchange Foundation \(in formation\)/);
+  assert.match(en, /Dutch foundation \(stichting\)/);
+  assert.match(en, /href="mailto:hello@openbrandexchange.com"/);
+  assert.match(en, /href="mailto:security@openbrandexchange.com"/);
+  // No address or phone is shown until the owner fills them in (src/data/imprint.json).
+  assert.doesNotMatch(en, /Postal address|href="tel:/);
+  assert.match(read('nl/imprint/index.html'), /Open Brand Exchange Foundation \(in oprichting\)/);
+  assert.match(read('de/imprint/index.html'), /Open Brand Exchange Foundation \(in Gründung\)/);
+  assert.match(read('fr/imprint/index.html'), /Open Brand Exchange Foundation \(en cours de constitution\)/);
+});
+
+test('every page footer links the imprint and the general contact address', { skip: !built && 'dist/ not built' }, () => {
+  for (const lang of langs) {
+    const html = read(`${lang}/index.html`);
+    assert.ok(html.includes(`href="/${lang}/imprint/"`), lang);
+    assert.ok(html.includes('href="mailto:hello@openbrandexchange.com"'), lang);
+  }
+});
+
+test('the site never points people at a company address instead of the project addresses', { skip: !built && 'dist/ not built' }, () => {
+  for (const lang of langs) {
+    for (const slug of slugs) {
+      const html = read(`${lang}/${slug}index.html`);
+      assert.doesNotMatch(html, /[\w.+-]+@(?!openbrandexchange\.com)[\w-]+\.[\w.]+/, `${lang}/${slug}: an e-mail address outside openbrandexchange.com`);
+    }
+  }
+});
+
+test('the cookie statement and the privacy page say there are no cookies', { skip: !built && 'dist/ not built' }, () => {
+  assert.match(read('en/cookies/index.html'), /This website sets no cookies\./);
+  assert.match(read('en/privacy/index.html'), /Autoriteit Persoonsgegevens/);
 });

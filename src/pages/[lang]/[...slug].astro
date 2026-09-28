@@ -12,6 +12,8 @@ import Downloads from '../../views/Downloads.astro';
 import Faq from '../../views/Faq.astro';
 import Governance from '../../views/Governance.astro';
 import Privacy from '../../views/Privacy.astro';
+import Cookies from '../../views/Cookies.astro';
+import Imprint from '../../views/Imprint.astro';
 
 export function getStaticPaths() {
   return langs.flatMap((lang) =>
@@ -34,6 +36,8 @@ const views = {
   faq: Faq,
   governance: Governance,
   privacy: Privacy,
+  cookies: Cookies,
+  imprint: Imprint,
 };
 
 const { lang, page } = Astro.props as { lang: Lang; page: PageKey };

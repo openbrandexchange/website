@@ -50,12 +50,23 @@ test('every locale other than English is actually translated', () => {
   }
 });
 
-test('the portal is named with the glossary word in the primary markets', () => {
-  assert.equal(load('nl').portalWord, 'Beeldbank');
-  assert.equal(load('de').portalWord, 'Händlerportal');
-  assert.equal(load('fr').portalWord, 'Espace revendeurs');
-  assert.equal(load('en').portalWord, 'Brand portal');
+// src/data/glossary.json is a copy of admin-ui/src/i18n/glossary.json (npm run sync:glossary).
+const glossary = JSON.parse(readFileSync(new URL('../src/data/glossary.json', import.meta.url), 'utf8')).terms;
+const lower = (s) => s.toLocaleLowerCase();
+
+test('the glossary covers exactly the site languages', () => {
+  assert.deepEqual(Object.keys(glossary.portal).sort(), [...langs].sort());
 });
+
+for (const lang of langs) {
+  test(`${lang}: portal, API key and automatic upload use the glossary words`, () => {
+    const t = load(lang);
+    assert.equal(t.portalWord, glossary.portal[lang]);
+    assert.ok(lower(t.retailers.apiTitle).endsWith(lower(glossary.apiKey[lang])), `retailers.apiTitle "${t.retailers.apiTitle}" should end with "${glossary.apiKey[lang]}"`);
+    assert.ok(lower(t.brochure.retailersReady[3]).includes(lower(glossary.apiKey[lang])), 'brochure.retailersReady[3]');
+    assert.equal(t.brands.blocks[2].h, glossary.automaticUpload[lang]);
+  });
+}
 
 test('brand- and retailer-facing copy avoids protocol terms', () => {
   // The developers page and the API labels may name the APIs; everything else speaks plain language.

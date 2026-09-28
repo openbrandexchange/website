@@ -9,18 +9,18 @@
     "home": "Open Brand Exchange, pagina principală",
     "copy": "Copiază",
     "copied": "Copiat",
-    "draft": "Specificația 0.1 (ciornă): software-ul este în construcție. Încă nu este destinat producției.",
+    "draft": "Versiunea 0.1 este în testare. Prima versiune publică este în pregătire.",
     "footerAbout": "O modalitate gratuită și deschisă prin care mărcile le livrează comercianților fotografii de produs și date despre articole.",
     "footerMore": "Mai mult",
     "footerSource": "Cod sursă și specificație",
     "footerLicence": "Conținut CC-BY-4.0, cod MIT.",
-    "footerWorking": "„Open Brand Exchange” este un nume provizoriu. Specificația 0.1, în dezvoltare.",
     "editionCloudflare": "Portal pentru Cloudflare",
     "editionGoogle": "Portal pentru Google Cloud și Docker",
     "editionHosting": "Portal pentru găzduire web",
     "yes": "Da",
     "inDevelopment": "În dezvoltare",
-    "available": "Disponibil"
+    "available": "Disponibil",
+    "footerContact": "Contact"
   },
   "nav": {
     "brands": "Pentru mărci",
@@ -32,7 +32,9 @@
     "downloads": "Descărcări",
     "faq": "Întrebări frecvente",
     "governance": "Guvernanță și nume",
-    "privacy": "Confidențialitate"
+    "privacy": "Confidențialitate",
+    "imprint": "Informații legale",
+    "cookies": "Cookie-uri"
   },
   "meta": {
     "home": {
@@ -73,11 +75,19 @@
     },
     "governance": {
       "title": "Guvernanță și nume",
-      "description": "Cine decide asupra standardului, cum contribuiți, licențele și de ce numele este provizoriu."
+      "description": "Cine se află în spatele standardului, cine decide, cum contribuiți, licențele și numele."
     },
     "privacy": {
       "title": "Confidențialitate",
-      "description": "Acest site nu vă urmărește: fără cookie-uri, fără urmărire."
+      "description": "Acest site nu vă urmărește. Puținele date prelucrate și de ce."
+    },
+    "imprint": {
+      "title": "Informații legale",
+      "description": "Cine publică acest site și cum ne puteți contacta."
+    },
+    "cookies": {
+      "title": "Cookie-uri",
+      "description": "Acest site nu setează cookie-uri."
     }
   },
   "home": {
@@ -134,7 +144,7 @@
         "p": "O singură publicare pentru toți comercianții. Gata cu transferurile de fișiere, e-mailurile cu arhive zip și integrările separate pentru fiecare magazin."
       }
     ],
-    "status": "Open Brand Exchange este la început. Specificația este o primă ciornă (0.1), iar software-ul se construiește acum. Nu afișăm clienți sau cifre care încă nu există.",
+    "status": "Open Brand Exchange este la început. Versiunea 0.1 a specificației și a software-ului este în testare, iar prima versiune publică este în pregătire. Nu arătăm clienți sau cifre care încă nu există.",
     "statusLink": "Citiți cum este guvernat"
   },
   "brands": {
@@ -185,13 +195,34 @@
     ],
     "adminTitle": "Ce gestionați singuri",
     "admin": [
-      { "k": "Catalog", "v": "mărci, articole, culori și mărimi, fotografii și ordinea lor" },
-      { "k": "Importuri", "v": "încărcare sau preluare programată, cu un mesaj clar pentru fiecare rând eșuat" },
-      { "k": "Comercianți", "v": "aprobarea sau respingerea cererilor (cu motiv), invitarea sau blocarea conturilor" },
-      { "k": "Chei API", "v": "chei pentru sistemele comercianților: afișate o singură dată, ușor de reînnoit sau revocat" },
-      { "k": "Încărcare automată", "v": "chei pentru propriile sisteme și notificări când un comerciant cere acces sau un import se încheie" },
-      { "k": "Statistici", "v": "descărcări și utilizare pe comerciant" },
-      { "k": "Setări", "v": "logo, culoare de accent, text de bun venit, drepturi de utilizare implicite și propriul domeniu" }
+      {
+        "k": "Catalog",
+        "v": "mărci, articole, culori și mărimi, fotografii și ordinea lor"
+      },
+      {
+        "k": "Importuri",
+        "v": "încărcare sau preluare programată, cu un mesaj clar pentru fiecare rând eșuat"
+      },
+      {
+        "k": "Comercianți",
+        "v": "aprobarea sau respingerea cererilor (cu motiv), invitarea sau blocarea conturilor"
+      },
+      {
+        "k": "Chei API",
+        "v": "chei pentru sistemele comercianților: afișate o singură dată, ușor de reînnoit sau revocat"
+      },
+      {
+        "k": "Încărcare automată",
+        "v": "chei pentru propriile sisteme și notificări când un comerciant cere acces sau un import se încheie"
+      },
+      {
+        "k": "Statistici",
+        "v": "descărcări și utilizare pe comerciant"
+      },
+      {
+        "k": "Setări",
+        "v": "logo, culoare de accent, text de bun venit, drepturi de utilizare implicite și propriul domeniu"
+      }
     ],
     "nextTitle": "Pasul următor",
     "nextHosting": "Alegeți găzduirea",
@@ -201,14 +232,42 @@
     "h1": "Automatizare",
     "lead": "PIM-ul, ERP-ul, DAM-ul sau un folder partajat are deja datele și fotografiile. Alegeți prima rețetă potrivită: toate funcționează cu orice portal Open Brand Exchange.",
     "chooseTitle": "Ce rețetă vi se potrivește?",
-    "head": ["Aveți…", "Folosiți", "Cod necesar"],
+    "head": [
+      "Aveți…",
+      "Folosiți",
+      "Cod necesar"
+    ],
     "rows": [
-      ["un CSV sau zip la o adresă web, pe un server SFTP sau într-un bucket S3", "Import programat", "deloc"],
-      ["un folder în care ajung exporturile", "obx watch", "deloc"],
-      ["un server sau PC care rulează sarcini noaptea", "cron sau Planificatorul de activități", "un rând"],
-      ["exporturile într-un depozit Git", "GitHub Action", "un fișier YAML"],
-      ["n8n, Make sau Zapier", "Pași HTTP", "deloc (vizual)"],
-      ["un dezvoltator care conectează PIM-ul sau ERP-ul", "API-ul direct", "puțin"]
+      [
+        "un CSV sau zip la o adresă web, pe un server SFTP sau într-un bucket S3",
+        "Import programat",
+        "deloc"
+      ],
+      [
+        "un folder în care ajung exporturile",
+        "obx watch",
+        "deloc"
+      ],
+      [
+        "un server sau PC care rulează sarcini noaptea",
+        "cron sau Planificatorul de activități",
+        "un rând"
+      ],
+      [
+        "exporturile într-un depozit Git",
+        "GitHub Action",
+        "un fișier YAML"
+      ],
+      [
+        "n8n, Make sau Zapier",
+        "Pași HTTP",
+        "deloc (vizual)"
+      ],
+      [
+        "un dezvoltator care conectează PIM-ul sau ERP-ul",
+        "API-ul direct",
+        "puțin"
+      ]
     ],
     "formatTitle": "Un singur format pentru tot",
     "formatP": "Orice metodă de publicare citește același lucru: un products.csv cu un rând pe mărime și fotografii numite {style}_{color}_{position}.jpg (model, culoare, poziție). Odată ce aveți asta, funcționează toate rețetele de mai jos.",
@@ -221,9 +280,18 @@
     "scheduledTitle": "1. Import programat (fără cod)",
     "scheduledP": "În administrare: Importuri → Importuri programate → Adăugați. Alegeți sursa și cât de des rulează.",
     "scheduled": [
-      { "k": "Adresă web (HTTPS)", "v": "adresa unui products.csv sau a unei arhive zip cu products.csv și fotografii. Datele de autentificare sunt stocate criptat." },
-      { "k": "SFTP", "v": "server, utilizator, parolă sau cheie și folderul cu exportul." },
-      { "k": "Bucket S3", "v": "AWS S3, Cloudflare R2, MinIO sau Backblaze: endpoint, bucket, folder și o cheie doar pentru citire." }
+      {
+        "k": "Adresă web (HTTPS)",
+        "v": "adresa unui products.csv sau a unei arhive zip cu products.csv și fotografii. Datele de autentificare sunt stocate criptat."
+      },
+      {
+        "k": "SFTP",
+        "v": "server, utilizator, parolă sau cheie și folderul cu exportul."
+      },
+      {
+        "k": "Bucket S3",
+        "v": "AWS S3, Cloudflare R2, MinIO sau Backblaze: endpoint, bucket, folder și o cheie doar pentru citire."
+      }
     ],
     "scheduledMode": "Alegeți „Actualizare” (doar adăugare și modificare) sau „Oglindire” (retrage și ce a dispărut din fișier). Oglindirea refuză dacă ar dispărea mai mult de jumătate dintr-o marcă, așa că un export defect nu vă golește niciodată catalogul. „Testați conexiunea” arată ce fișiere ar fi citite.",
     "cliTitle": "Instrumentul obx",
@@ -271,7 +339,7 @@
       "o marcă își poate exporta toate datele și fotografiile și poate pleca",
       "vă publicați prețurile și condițiile pe propriul site"
     ],
-    "listHow": "Deschideți un pull request în depozitul site-ului, cu datele dvs. în src/data/providers.json. Inițiatorul apare primul, ceilalți în ordine alfabetică.",
+    "listHow": "Deschideți un pull request în depozitul site-ului cu datele dvs. în src/data/providers.json. Compania inițiatorului apare prima, toți ceilalți în ordine alfabetică.",
     "p2Title": "2. Cu un clic",
     "p2P": "Propriul portal în propriul cont, fără să administrați un server.",
     "cfP": "Rulează pe Cloudflare Workers, cu D1 ca bază de date și R2 pentru fotografii. Faceți clic pe buton, autentificați-vă în Cloudflare și urmați pașii. Cloudflare are cote gratuite; verificați prețurile actuale pentru cataloage mari. Versiunile web ale fotografiilor sunt create de browserul dvs. și de instrumentul obx, așa că nu trebuie să faceți nimic.",
@@ -312,18 +380,36 @@
     "portalTitle": "Ce vă oferă portalul unei mărci",
     "portalP": "Fiecare marcă își administrează propriul portal, cu propriul nume, de exemplu „Kestrel · {portal}”.",
     "portal": [
-      { "h": "Solicitați acces", "p": "Solicitați acces pe portalul mărcii. Marca aprobă, iar dvs. primiți o invitație prin e-mail." },
-      { "h": "Căutare și filtrare", "p": "După marcă, sezon, colecție, tip de produs sau culoare. Fiecare articol cu toate fotografiile și datele." },
-      { "h": "Lipiți lista de coduri EAN", "p": "Lipiți codurile EAN din casa de marcat și vedeți imediat ce articole există și care lipsesc încă." },
-      { "h": "Descărcați cum doriți", "p": "O fotografie, un articol, selecția dvs. sau tot dintr-un filtru ca zip. Original (dacă marca permite), web sau pătrat." },
-      { "h": "Datele articolelor în foaie de calcul", "p": "EAN pe mărime, culoare, material, îngrijire și descriere, gata pentru propriul sistem." },
-      { "h": "Ce este permis", "p": "Drepturile de utilizare, data embargoului și dacă o fotografie a fost creată cu IA apar la fiecare fotografie." }
+      {
+        "h": "Solicitați acces",
+        "p": "Solicitați acces pe portalul mărcii. Marca aprobă, iar dvs. primiți o invitație prin e-mail."
+      },
+      {
+        "h": "Căutare și filtrare",
+        "p": "După marcă, sezon, colecție, tip de produs sau culoare. Fiecare articol cu toate fotografiile și datele."
+      },
+      {
+        "h": "Lipiți lista de coduri EAN",
+        "p": "Lipiți codurile EAN din casa de marcat și vedeți imediat ce articole există și care lipsesc încă."
+      },
+      {
+        "h": "Descărcați cum doriți",
+        "p": "O fotografie, un articol, selecția dvs. sau tot dintr-un filtru ca zip. Original (dacă marca permite), web sau pătrat."
+      },
+      {
+        "h": "Datele articolelor în foaie de calcul",
+        "p": "EAN pe mărime, culoare, material, îngrijire și descriere, gata pentru propriul sistem."
+      },
+      {
+        "h": "Ce este permis",
+        "p": "Drepturile de utilizare, data embargoului și dacă o fotografie a fost creată cu IA apar la fiecare fotografie."
+      }
     ],
-    "apiTitle": "O cheie API pentru sistemul dvs.",
+    "apiTitle": "O cheie API pentru software-ul dvs.",
     "apiP": "PIM-ul, casa de marcat sau magazinul online preia singur fotografiile? Atunci solicitați o cheie API pentru sistemul dvs. Acesta preia întâi totul, apoi doar modificările, inclusiv ce retrage marca. Fotografiile sunt asociate articolelor dvs. prin EAN.",
     "apiDev": "Pentru dezvoltatorul dvs.: așa arată.",
-    "toolsTitle": "Photopilot și alte programe",
-    "toolsP": "Open Brand Exchange este un standard deschis: orice software îl poate citi. Photopilot, inițiatorul, îl poate folosi în software-ul său pentru comercianți, iar alți furnizori pot face la fel. Nu aveți nevoie de un anumit software: un browser este suficient.",
+    "toolsTitle": "Ce software funcționează cu el",
+    "toolsP": "Open Brand Exchange este un standard deschis: orice software îl poate suporta. Photopilot, compania inițiatorului, îl integrează în software-ul său pentru comercianți, iar alți furnizori pot face la fel. Nu aveți nevoie de un anumit software: un browser este suficient.",
     "toolsLink": "Specificație pentru dezvoltatori",
     "findTitle": "Găsirea unei mărci",
     "findP": "Mărcile care aleg să fie vizibile sunt în lista mărcilor. Dacă o marcă vă dă pur și simplu adresa portalului său, funcționează și așa.",
@@ -345,11 +431,25 @@
     "specP": "Versiunea 0.1 (ciornă). OpenAPI 3.1, JSON Schema 2020-12, exemple și o marcă de test fictivă, Kestrel Outfitters. Licență CC-BY-4.0: liber de implementat, inclusiv comercial.",
     "specStart": "Începeți cu protocol.md",
     "apisTitle": "Trei API-uri",
-    "apisHead": ["API", "Pentru", "Stare", "Contract"],
+    "apisHead": [
+      "API",
+      "Pentru",
+      "Stare",
+      "Contract"
+    ],
     "apis": [
-      { "who": "software-ul comercianților: discovery, OAuth2 client credentials, flux de modificări, căutare după GTIN, renditions, exporturi, webhookuri", "status": "normativ" },
-      { "who": "automatizarea unei mărci: upserturi idempotente după ID-urile proprii ale mărcii, încărcări adresate prin sha256, loturi, importuri", "status": "normativ" },
-      { "who": "administrarea comună și portalul pentru comercianți", "status": "nenormativ" }
+      {
+        "who": "software-ul comercianților: discovery, OAuth2 client credentials, flux de modificări, căutare după GTIN, renditions, exporturi, webhookuri",
+        "status": "normativ"
+      },
+      {
+        "who": "automatizarea unei mărci: upserturi idempotente după ID-urile proprii ale mărcii, încărcări adresate prin sha256, loturi, importuri",
+        "status": "normativ"
+      },
+      {
+        "who": "administrarea comună și portalul pentru comercianți",
+        "status": "nenormativ"
+      }
     ],
     "readTitle": "Citirea portalului unei mărci în câteva rânduri",
     "sdkTitle": "SDK și instrument de linie de comandă",
@@ -357,7 +457,12 @@
     "confTitle": "Conformitate",
     "confP": "O implementare este conformă OBX pentru un profil când obx-conformance trece toate testele obligatorii ale acelui profil. Există trei profiluri: protocol, ingest și portal.",
     "implTitle": "Implementări",
-    "implHead": ["Depozit", "Ce", "Licență", "Stare"],
+    "implHead": [
+      "Depozit",
+      "Ce",
+      "Licență",
+      "Stare"
+    ],
     "impl": [
       "specificație, scheme, date de test",
       "SDK Go, instrumentul obx, teste de conformitate, server simulat",
@@ -420,53 +525,230 @@
     "h1": "Descărcări",
     "lead": "Materiale de împărtășit cu colegii, mărcile și comercianții.",
     "brochureTitle": "Broșură pentru comercianți",
-    "brochureP": "Două pagini despre ce înseamnă Open Brand Exchange pentru un magazin, de dat unui coleg sau unei mărci.",
+    "brochureP": "Ce înseamnă Open Brand Exchange pentru un magazin: portalul mărcii, o cheie API pentru software-ul dvs. și ce este deja gata. De dat unui coleg sau unei mărci.",
     "kitTitle": "E-mail pentru mărcile care nu s-au alăturat încă",
     "kitP": "E-mailul gata făcut de pe pagina pentru comercianți, ca fișier text.",
     "exampleTitle": "Fișiere exemplu",
     "exampleP": "Un products.csv și fotografii ale mărcii fictive Kestrel Outfitters, pentru a încerca un import.",
     "exampleLink": "Fișiere exemplu în specificație",
     "templateP": "Un șablon CSV gol există și în administrarea fiecărui portal, la Importuri.",
-    "dutch": "Neerlandeză",
-    "english": "Engleză"
+    "brandsTitle": "Broșură pentru mărci",
+    "brandsP": "Propriul portal pentru comercianți, API-ul, încărcarea automată și găzduirea, plus ce este deja gata. De împărtășit cu echipa dvs.",
+    "allLanguages": "Toate limbile"
   },
   "faq": {
     "h1": "Întrebări frecvente",
     "items": [
-      { "q": "Cât costă?", "a": "Standardul și software-ul sunt gratuite. Dacă îl găzduiți singuri, plătiți doar găzduirea. Un furnizor are propriile prețuri, pe care le găsiți pe site-ul său." },
-      { "q": "Avem nevoie de un dezvoltator?", "a": "Nu pentru elementele de bază. Un portal se instalează cu un clic, iar un import programat de la o adresă web, un server SFTP sau un bucket nu necesită cod. Un dezvoltator ajută dacă vreți să conectați direct PIM-ul sau ERP-ul." },
-      { "q": "Este încă o platformă la care trebuie să aderăm?", "a": "Nu. Fiecare marcă își administrează propriul portal, pe propriul domeniu dacă dorește. Nu există o platformă centrală care să vă dețină conținutul." },
-      { "q": "Cine decide ce comerciant primește acces?", "a": "Dvs. Comercianții solicită acces, iar dvs. aprobați sau respingeți fiecare cerere. Alegeți și ce mărci vede un comerciant și dacă poate descărca originalele." },
-      { "q": "De ce au nevoie comercianții?", "a": "De un browser. Comercianții al căror software preia singur fotografiile pot solicita o cheie API pentru acel software." },
-      { "q": "Ce formate de imagine există?", "a": "Originalul, exact cum l-ați încărcat, plus o versiune web (maximum 2000 px), o versiune pătrată și o previzualizare mică. Comercianții aleg ce le trebuie." },
-      { "q": "Informațiile despre IA și drepturi rămân la fotografii?", "a": "Da. Drepturile de utilizare, data embargoului și dacă s-a folosit IA fac parte din fiecare fotografie. Originalele sunt stocate și livrate neschimbate, inclusiv content credentials încorporate." },
-      { "q": "Putem schimba furnizorul mai târziu?", "a": "Da. Toate portalurile vorbesc același standard și fiecare furnizor listat aici vă permite să exportați tot conținutul. Domeniul dvs. rămâne același." },
-      { "q": "Este gata?", "a": "Încă nu. Specificația este o primă ciornă (0.1), iar software-ul se construiește. Îl puteți încerca deja, dar nu este încă destinat producției." },
-      { "q": "Cine se află în spate?", "a": "Open Brand Exchange a fost inițiat de Photopilot, o companie neerlandeză care dezvoltă software pentru fotografia de produs. Standardul este deschis, iar scopul este să aparțină mărcilor și comercianților care îl folosesc." }
+      {
+        "q": "Cât costă?",
+        "a": "Standardul și software-ul sunt gratuite. Dacă îl găzduiți singuri, plătiți doar găzduirea. Un furnizor are propriile prețuri, pe care le găsiți pe site-ul său."
+      },
+      {
+        "q": "Avem nevoie de un dezvoltator?",
+        "a": "Nu pentru elementele de bază. Un portal se instalează cu un clic, iar un import programat de la o adresă web, un server SFTP sau un bucket nu necesită cod. Un dezvoltator ajută dacă vreți să conectați direct PIM-ul sau ERP-ul."
+      },
+      {
+        "q": "Este încă o platformă la care trebuie să aderăm?",
+        "a": "Nu. Fiecare marcă își administrează propriul portal, pe propriul domeniu dacă dorește. Nu există o platformă centrală care să vă dețină conținutul."
+      },
+      {
+        "q": "Cine decide ce comerciant primește acces?",
+        "a": "Dvs. Comercianții solicită acces, iar dvs. aprobați sau respingeți fiecare cerere. Alegeți și ce mărci vede un comerciant și dacă poate descărca originalele."
+      },
+      {
+        "q": "De ce au nevoie comercianții?",
+        "a": "De un browser. Comercianții al căror software preia singur fotografiile pot solicita o cheie API pentru acel software."
+      },
+      {
+        "q": "Ce formate de imagine există?",
+        "a": "Originalul, exact cum l-ați încărcat, plus o versiune web (maximum 2000 px), o versiune pătrată și o previzualizare mică. Comercianții aleg ce le trebuie."
+      },
+      {
+        "q": "Informațiile despre IA și drepturi rămân la fotografii?",
+        "a": "Da. Drepturile de utilizare, data embargoului și dacă s-a folosit IA fac parte din fiecare fotografie. Originalele sunt stocate și livrate neschimbate, inclusiv content credentials încorporate."
+      },
+      {
+        "q": "Putem schimba furnizorul mai târziu?",
+        "a": "Da. Toate portalurile vorbesc același standard și fiecare furnizor listat aici vă permite să exportați tot conținutul. Domeniul dvs. rămâne același."
+      },
+      {
+        "q": "Este gata?",
+        "a": "Aproape. Versiunea 0.1 a specificației și a celor trei ediții de portal este în testare. Prima versiune publică este în pregătire; până atunci, software-ul nu este disponibil public."
+      },
+      {
+        "q": "Cine se află în spate?",
+        "a": "Open Brand Exchange este o inițiativă a lui {person}, care a fondat și Photopilot, o companie de software pentru fotografia de produs. Totul va fi transferat către {foundation}, astfel încât standardul să aparțină mărcilor, comercianților și furnizorilor de software care îl folosesc, nu unei singure companii."
+      }
     ]
   },
   "governance": {
     "h1": "Guvernanță și nume",
     "lead": "Open Brand Exchange trebuie să aparțină mărcilor, comercianților și furnizorilor de software care îl folosesc, nu unei singure companii.",
     "sections": [
-      { "h": "Cine decide", "p": "Până când vor exista trei implementări independente care trec testele de conformitate, întreținătorii de la Photopilot decid asupra modificărilor, după o discuție publică. Apoi preia conducerea un grup director, cu un loc pentru fiecare implementator și cel puțin o marcă și un comerciant." },
-      { "h": "Cum se fac modificările", "p": "Orice modificare a standardului este un pull request public cu o scurtă justificare. Propunerile mai mari rămân deschise pentru comentarii cel puțin 14 zile. Oricine poate contribui, fără să semneze un acord de contribuție." },
-      { "h": "Neutru prin concepție", "p": "Nimic din standard nu poate impune un anumit furnizor sau serviciu găzduit. Oricine îl poate implementa, găzdui pentru alții sau construi pe el un produs concurent. Software-ul Photopilot nu beneficiază de tratament special în testele de conformitate." },
-      { "h": "Licențe", "p": "Specificația și conținutul acestui site sunt sub licența CC-BY-4.0. SDK-ul, instrumentul obx și interfața web comună sunt sub licența Apache-2.0. Cele trei ediții ale portalului sunt sub licența AGPL-3.0, pentru ca îmbunătățirile să rămână deschise. Codul acestui site este sub licența MIT." }
+      {
+        "h": "Cine decide",
+        "p": "Până când există trei implementări independente care trec suita de conformitate, inițiatorul decide asupra modificărilor, după o discuție publică. Apoi preia un grup de coordonare, cu un loc pentru fiecare implementator și cel puțin o marcă și un comerciant."
+      },
+      {
+        "h": "Cum se fac modificările",
+        "p": "Orice modificare a standardului este un pull request public cu o scurtă justificare. Propunerile mai mari rămân deschise pentru comentarii cel puțin 14 zile. Oricine poate contribui, fără să semneze un acord de contribuție."
+      },
+      {
+        "h": "Neutru prin concepție",
+        "p": "Nimic din standard nu poate impune un anumit furnizor sau serviciu găzduit. Oricine îl poate implementa, găzdui pentru alții sau construi pe el un produs concurent. Nicio implementare nu primește tratament preferențial în suita de conformitate, nici cea a Photopilot, compania inițiatorului."
+      },
+      {
+        "h": "Licențe",
+        "p": "Specificația și conținutul acestui site sunt sub licența CC-BY-4.0. SDK-ul, instrumentul obx și interfața web comună sunt sub licența Apache-2.0. Cele trei ediții ale portalului sunt sub licența AGPL-3.0, pentru ca îmbunătățirile să rămână deschise. Codul acestui site este sub licența MIT."
+      }
     ],
     "nameTitle": "Despre nume",
-    "nameP": "„Open Brand Exchange” este un nume provizoriu. Se poate schimba înainte de versiunea 1.0, după o verificare a mărcilor înregistrate. Nu este o marcă înregistrată. Software-ul care trece testele de conformitate poate spune că „funcționează cu Open Brand Exchange”.",
-    "specLink": "Documentul complet de guvernanță"
+    "nameP": "Numele „Open Brand Exchange” este același în toate limbile și nu se traduce niciodată. Nu este încă o marcă înregistrată. Software-ul care trece suita de conformitate poate spune că „funcționează cu Open Brand Exchange”.",
+    "specLink": "Documentul complet de guvernanță",
+    "foundationTitle": "Cine se află în spate",
+    "foundationP": "Open Brand Exchange este o inițiativă a lui {person}. El înființează {foundation}, care va fi o fundație olandeză (stichting). De îndată ce va exista, drepturile de autor, numele, domeniul și organizația GitHub îi vor fi transferate. Până atunci, sunt pe numele lui {person}."
   },
   "privacy": {
     "h1": "Confidențialitate",
-    "lead": "Acest site nu vă urmărește.",
+    "lead": "Acest site nu vă urmărește. Mai jos sunt puținele date prelucrate și motivul.",
     "sections": [
-      { "h": "Fără cookie-uri", "p": "Nu folosim cookie-uri. Dacă alegeți o limbă, browserul memorează local alegerea; aceasta nu ne este trimisă niciodată." },
-      { "h": "Fără urmărire", "p": "Fără reclame, fără butoane de rețele sociale, fără fonturi de la terți și fără scripturi de urmărire. Cel mult folosim Cloudflare Web Analytics, care numără vizitele fără cookie-uri și fără să vă urmărească pe alte site-uri." },
-      { "h": "Găzduire", "p": "Site-ul este găzduit pe Cloudflare Pages. Ca orice server web, Cloudflare vă prelucrează adresa IP pentru a livra paginile și a le proteja împotriva abuzurilor." },
-      { "h": "Portalurile mărcilor sunt separate", "p": "Fiecare portal de marcă este administrat de marca însăși sau de furnizorul ei. Acolo se aplică politica lor de confidențialitate, nu aceasta." }
+      {
+        "h": "Cine este responsabil",
+        "p": "Acest site este administrat de {person} (vezi informațiile legale). Pentru orice întrebare despre confidențialitate, scrieți la {email}."
+      },
+      {
+        "h": "Ce colectăm",
+        "p": "Nimic care să vă identifice. Acest site nu are formulare, conturi, newsletter sau cookie-uri."
+      },
+      {
+        "h": "Găzduire",
+        "p": "Site-ul este găzduit pe Cloudflare Pages. Ca orice server web, Cloudflare prelucrează date tehnice precum adresa dvs. IP pentru a livra paginile și a le proteja împotriva abuzurilor. Noi nu păstrăm jurnale de acces."
+      },
+      {
+        "h": "Statistici de vizitare",
+        "p": "Dacă statisticile de vizitare sunt activate, folosim Cloudflare Web Analytics. Numără afișările de pagini fără cookie-uri și fără să vă urmărească pe alte site-uri. Vedem doar totaluri."
+      },
+      {
+        "h": "E-mail",
+        "p": "Dacă ne scrieți, folosim adresa și mesajul dvs. doar pentru a vă răspunde și le ștergem când nu mai sunt necesare pentru asta."
+      },
+      {
+        "h": "Drepturile dvs.",
+        "p": "Puteți întreba ce date personale avem despre dvs. și puteți cere corectarea sau ștergerea lor. De asemenea, puteți depune o plângere la autoritatea olandeză pentru protecția datelor (Autoriteit Persoonsgegevens)."
+      },
+      {
+        "h": "Portalurile mărcilor sunt separate",
+        "p": "Fiecare portal de marcă este administrat de marca însăși sau de furnizorul ei. Acolo se aplică declarația lor de confidențialitate, nu aceasta."
+      }
     ],
-    "contact": "Întrebări? Deschideți un issue în depozitul site-ului."
+    "contact": "Întrebări despre confidențialitate? Scrieți la {email}.",
+    "updated": "Ultima actualizare: {date}"
+  },
+  "org": {
+    "initiative": "O inițiativă a lui {person}",
+    "inFormation": "în curs de constituire"
+  },
+  "imprint": {
+    "h1": "Informații legale",
+    "lead": "Cine publică acest site și cum ne puteți contacta.",
+    "publisherTitle": "Publicat de",
+    "foundationP": "{foundation} este în curs de înființare ca fundație olandeză (stichting). Până la înregistrarea ei, {person} este responsabil pentru acest site.",
+    "addressLabel": "Adresă poștală",
+    "phoneLabel": "Telefon",
+    "registrationLabel": "Număr de înregistrare",
+    "contactTitle": "Contact",
+    "generalLabel": "Întrebări generale",
+    "securityLabel": "Probleme de securitate",
+    "securityNote": "Raportați vulnerabilitățile confidențial la această adresă, nu într-un issue public.",
+    "contentTitle": "Conținut și licențe",
+    "contentP": "Scriem acest site cu grijă, dar poate conține greșeli. Pentru detaliile tehnice, specificația are întâietate. Textele pot fi refolosite sub licența CC BY 4.0, cu atribuire; codul acestui site este sub licența MIT."
+  },
+  "cookies": {
+    "h1": "Declarație privind cookie-urile",
+    "lead": "Acest site nu setează cookie-uri.",
+    "sections": [
+      {
+        "h": "Niciun cookie de la noi",
+        "p": "Nu folosim cookie-uri pentru statistici, publicitate sau altceva, așa că nici nu vă cerem consimțământul."
+      },
+      {
+        "h": "Alegerea limbii",
+        "p": "Dacă alegeți o limbă, browserul o reține în propria memorie (localStorage), ca următoarea vizită să se deschidă în acea limbă. Nu ne este trimisă niciodată. Dacă ștergeți datele acestui site din browser, dispare."
+      },
+      {
+        "h": "Verificări de securitate ale gazdei noastre",
+        "p": "Doar dacă Cloudflare, gazda noastră, trebuie să verifice că un vizitator nu este un atac automat, poate seta un cookie de securitate strict necesar pentru această verificare. Nu este folosit pentru nimic altceva."
+      },
+      {
+        "h": "Portalurile mărcilor",
+        "p": "Portalurile mărcilor sunt site-uri separate, administrate de marcă sau de furnizorul ei. Acolo se aplică propria lor declarație privind cookie-urile."
+      }
+    ],
+    "contact": "Întrebări? Scrieți la {email}."
+  },
+  "brochure": {
+    "brandsFlow": [
+      {
+        "h": "Sistemele dvs.",
+        "p": "PIM, ERP sau un dosar"
+      },
+      {
+        "h": "Portalul dvs.",
+        "p": "numele dvs., domeniul dvs."
+      },
+      {
+        "h": "Comercianții dvs.",
+        "p": "în browser și prin API"
+      }
+    ],
+    "retailersH1": "Imaginile și datele de articol ale fiecărei mărci, mereu în același fel",
+    "retailersFlow": [
+      {
+        "h": "Marca",
+        "p": "publică o singură dată"
+      },
+      {
+        "h": "Portalul mărcii",
+        "p": "la fel pentru fiecare marcă"
+      },
+      {
+        "h": "Magazinul dvs.",
+        "p": "descărcare sau API, asociat după EAN"
+      }
+    ],
+    "statusTitle": "Ce este gata și ce urmează",
+    "readyTitle": "Gata în versiunea 0.1",
+    "comingTitle": "Urmează",
+    "readyBadge": "Gata",
+    "comingBadge": "În curând",
+    "brandsReady": [
+      "Propriul portal cu administrare, în 25 de limbi, pe propriul domeniu",
+      "Importul unui CSV și al fotografiilor manual sau programat, de la o adresă web, prin SFTP sau din S3",
+      "Instrumentul obx și rețete pentru cron, GitHub Actions, n8n, Make și Zapier",
+      "Cereri de acces, invitații și chei API pentru software-ul comercianților dvs.",
+      "Trei ediții: Cloudflare, Google Cloud & Docker și găzduire web obișnuită"
+    ],
+    "brandsComing": [
+      "Prima versiune publică, cu instalare dintr-un clic",
+      "Furnizori care administrează un portal pentru dvs.",
+      "Primele mărci reale în lista mărcilor"
+    ],
+    "retailersReady": [
+      "Cererea accesului și autentificarea în portalul unei mărci",
+      "Căutare, filtrare și lipirea listei de EAN-uri pentru a vedea ce există și ce lipsește",
+      "Descărcarea fotografiilor ca zip și a datelor de articol ca foaie de calcul",
+      "O cheie API pentru software-ul dvs.: întâi tot, apoi doar modificările",
+      "Drepturi de utilizare, embargo și proveniență AI la fiecare imagine"
+    ],
+    "retailersComing": [
+      "Mai multe mărci: lista mărcilor abia începe",
+      "Pluginuri care aduc imaginile direct în Shopware și WooCommerce",
+      "Suport în mai multe programe de casă, PIM și magazin online, pe măsură ce furnizorii îl adaugă"
+    ],
+    "kitP": "O marcă se alătură cel mai repede când magazinele o cer. Un e-mail gata făcut pentru persoana dvs. de contact de la marcă găsiți la {url}.",
+    "ctaTitle": "Întrebări sau vreți să participați de la început?",
+    "ctaBrands": "Căutăm mărci care vor să contribuie la prima versiune: ce sisteme folosiți și câți comercianți deserviți? Scrieți-ne.",
+    "ctaRetailers": "Căutăm comercianți care vor să contribuie la prima versiune: ce mărci vreți să conectați și ce software folosiți? Scrieți-ne.",
+    "footer": "Funcțiile de la „Urmează” sunt în dezvoltare. Versiunea 0.1, {date}."
   }
 }

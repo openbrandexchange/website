@@ -781,3 +781,51 @@ input[type='search'] {
     grid-template-columns: repeat(3, minmax(9rem, 1fr));
   }
 }
+
+/* Imprint and other key/value facts. */
+.facts {
+  display: grid;
+  grid-template-columns: minmax(8rem, max-content) 1fr;
+  gap: 0.5rem 1.5rem;
+  margin: 0 0 1.5rem;
+}
+.facts dt {
+  font-weight: 600;
+}
+.facts dd {
+  margin: 0;
+}
+.facts address {
+  font-style: normal;
+}
+@media (max-width: 34rem) {
+  .facts {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+  .facts dd {
+    margin-bottom: 0.75rem;
+  }
+}
+.imprint-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+.footer-org {
+  margin-top: 0.75rem;
+}
+.more-langs {
+  margin-top: 0.5rem;
+}
+.more-langs summary {
+  cursor: pointer;
+  color: var(--accent);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  gap: 0.25rem 1rem;
+}

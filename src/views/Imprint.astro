@@ -1,0 +1,80 @@
+---
+import { format, messages, url, type Lang } from '../i18n';
+import { HELLO_EMAIL, SECURITY_EMAIL, imprintDetails, initiativeLine, orgVars } from '../lib/org';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = messages[lang];
+const c = t.imprint;
+const { address, phone, registration } = imprintDetails;
+---
+
+<section class="hero">
+  <div class="wrap">
+    <h1>{c.h1}</h1>
+    <p class="lead">{c.lead}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap prose">
+    <h2>{c.publisherTitle}</h2>
+    <p class="imprint-name">{initiativeLine(lang)}</p>
+    <p>{format(c.foundationP, orgVars(lang))}</p>
+    {
+      (address || phone || registration) && (
+        <dl class="facts">
+          {address && (
+            <>
+              <dt>{c.addressLabel}</dt>
+              <dd>
+                <address>
+                  {address.map((line, i) => (
+                    <>
+                      {i > 0 && <br />}
+                      {line}
+                    </>
+                  ))}
+                </address>
+              </dd>
+            </>
+          )}
+          {phone && (
+            <>
+              <dt>{c.phoneLabel}</dt>
+              <dd>
+                <a href={`tel:${phone.replace(/[^+\d]/g, '')}`}>{phone}</a>
+              </dd>
+            </>
+          )}
+          {registration && (
+            <>
+              <dt>{c.registrationLabel}</dt>
+              <dd>{registration}</dd>
+            </>
+          )}
+        </dl>
+      )
+    }
+
+    <h2>{c.contactTitle}</h2>
+    <dl class="facts">
+      <dt>{c.generalLabel}</dt>
+      <dd><a href={`mailto:${HELLO_EMAIL}`}>{HELLO_EMAIL}</a></dd>
+      <dt>{c.securityLabel}</dt>
+      <dd>
+        <a href={`mailto:${SECURITY_EMAIL}`}>{SECURITY_EMAIL}</a>
+        <br /><span class="muted small">{c.securityNote}</span>
+      </dd>
+    </dl>
+
+    <h2>{c.contentTitle}</h2>
+    <p>{c.contentP}</p>
+    <p>
+      <a href={url(lang, 'governance')}>{t.nav.governance}</a> · <a href={url(lang, 'privacy')}>{t.nav.privacy}</a> ·
+      <a href={url(lang, 'cookies')}>{t.nav.cookies}</a>
+    </p>
+  </div>
+</section>

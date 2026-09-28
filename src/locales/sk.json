@@ -9,18 +9,18 @@
     "home": "Open Brand Exchange, úvodná stránka",
     "copy": "Kopírovať",
     "copied": "Skopírované",
-    "draft": "Špecifikácia 0.1 (návrh): softvér sa práve vyvíja. Zatiaľ nie je určený na ostrú prevádzku.",
+    "draft": "Verzia 0.1 sa testuje. Pripravuje sa prvé verejné vydanie.",
     "footerAbout": "Bezplatný a otvorený spôsob, ako môžu značky odovzdávať produktové fotografie a údaje o tovare svojim predajcom.",
     "footerMore": "Viac",
     "footerSource": "Zdrojový kód a špecifikácia",
     "footerLicence": "Obsah CC-BY-4.0, kód MIT.",
-    "footerWorking": "„Open Brand Exchange“ je pracovný názov. Špecifikácia 0.1, vo vývoji.",
     "editionCloudflare": "Portál pre Cloudflare",
     "editionGoogle": "Portál pre Google Cloud a Docker",
     "editionHosting": "Portál pre webhosting",
     "yes": "Áno",
     "inDevelopment": "Vo vývoji",
-    "available": "Dostupné"
+    "available": "Dostupné",
+    "footerContact": "Kontakt"
   },
   "nav": {
     "brands": "Pre značky",
@@ -32,7 +32,9 @@
     "downloads": "Na stiahnutie",
     "faq": "Časté otázky",
     "governance": "Správa a názov",
-    "privacy": "Súkromie"
+    "privacy": "Súkromie",
+    "imprint": "Tiráž",
+    "cookies": "Cookies"
   },
   "meta": {
     "home": {
@@ -73,11 +75,19 @@
     },
     "governance": {
       "title": "Správa a názov",
-      "description": "Kto rozhoduje o štandarde, ako prispieť, licencie a prečo je názov pracovný."
+      "description": "Kto stojí za štandardom, kto rozhoduje, ako prispieť, licencie a názov."
     },
     "privacy": {
       "title": "Súkromie",
-      "description": "Tento web vás nesleduje: žiadne cookies, žiadne sledovanie."
+      "description": "Tento web vás nesleduje. Aké nemnohé údaje sa spracúvajú a prečo."
+    },
+    "imprint": {
+      "title": "Tiráž",
+      "description": "Kto tento web vydáva a ako nás kontaktovať."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "description": "Tento web nepoužíva cookies."
     }
   },
   "home": {
@@ -134,7 +144,7 @@
         "p": "Jedna publikácia pre všetkých predajcov. Koniec prenosov súborov, e-mailov so zipmi a samostatnej integrácie pre každý obchod."
       }
     ],
-    "status": "Open Brand Exchange je na začiatku. Špecifikácia je prvý návrh (0.1) a softvér sa práve stavia. Neukazujeme zákazníkov ani čísla, ktoré ešte neexistujú.",
+    "status": "Open Brand Exchange je na začiatku. Verzia 0.1 špecifikácie a softvéru sa testuje a pripravuje sa prvé verejné vydanie. Neukazujeme zákazníkov ani čísla, ktoré ešte neexistujú.",
     "statusLink": "Prečítajte si, ako je spravovaný"
   },
   "brands": {
@@ -185,13 +195,34 @@
     ],
     "adminTitle": "Čo spravujete sami",
     "admin": [
-      { "k": "Katalóg", "v": "značky, položky, farby a veľkosti, fotografie a ich poradie" },
-      { "k": "Importy", "v": "nahranie alebo plánované stiahnutie, s jasnou správou pri každom chybnom riadku" },
-      { "k": "Predajcovia", "v": "schválenie alebo zamietnutie žiadostí (s dôvodom), pozvanie alebo zablokovanie účtov" },
-      { "k": "API kľúče", "v": "kľúče pre systémy predajcov: zobrazia sa raz, ľahko ich obnovíte alebo zrušíte" },
-      { "k": "Automatické nahrávanie", "v": "kľúče pre vaše systémy a upozornenia, keď predajca požiada o prístup alebo skončí import" },
-      { "k": "Štatistiky", "v": "sťahovanie a využitie podľa predajcov" },
-      { "k": "Nastavenia", "v": "logo, farba zvýraznenia, uvítací text, predvolené práva na použitie a vlastná doména" }
+      {
+        "k": "Katalóg",
+        "v": "značky, položky, farby a veľkosti, fotografie a ich poradie"
+      },
+      {
+        "k": "Importy",
+        "v": "nahranie alebo plánované stiahnutie, s jasnou správou pri každom chybnom riadku"
+      },
+      {
+        "k": "Predajcovia",
+        "v": "schválenie alebo zamietnutie žiadostí (s dôvodom), pozvanie alebo zablokovanie účtov"
+      },
+      {
+        "k": "API kľúče",
+        "v": "kľúče pre systémy predajcov: zobrazia sa raz, ľahko ich obnovíte alebo zrušíte"
+      },
+      {
+        "k": "Automatické nahrávanie",
+        "v": "kľúče pre vaše systémy a upozornenia, keď predajca požiada o prístup alebo skončí import"
+      },
+      {
+        "k": "Štatistiky",
+        "v": "sťahovanie a využitie podľa predajcov"
+      },
+      {
+        "k": "Nastavenia",
+        "v": "logo, farba zvýraznenia, uvítací text, predvolené práva na použitie a vlastná doména"
+      }
     ],
     "nextTitle": "Ďalší krok",
     "nextHosting": "Vyberte hosting",
@@ -201,14 +232,42 @@
     "h1": "Automatizácia",
     "lead": "Váš PIM, ERP, DAM alebo zdieľaný priečinok už údaje aj fotografie má. Vyberte prvý návod, ktorý sedí: všetky fungujú s každým portálom Open Brand Exchange.",
     "chooseTitle": "Ktorý návod sa vám hodí?",
-    "head": ["Máte…", "Použite", "Potrebný kód"],
+    "head": [
+      "Máte…",
+      "Použite",
+      "Potrebný kód"
+    ],
     "rows": [
-      ["CSV alebo zip na webovej adrese, serveri SFTP alebo v buckete S3", "Plánovaný import", "žiadny"],
-      ["priečinok, kam prichádzajú exporty", "obx watch", "žiadny"],
-      ["server alebo PC, ktorý v noci spúšťa úlohy", "cron alebo Plánovač úloh", "jeden riadok"],
-      ["exporty v repozitári Git", "GitHub Action", "jeden súbor YAML"],
-      ["n8n, Make alebo Zapier", "Kroky HTTP", "žiadny (vizuálne)"],
-      ["vývojára, ktorý napojí váš PIM alebo ERP", "Priamo API", "trochu"]
+      [
+        "CSV alebo zip na webovej adrese, serveri SFTP alebo v buckete S3",
+        "Plánovaný import",
+        "žiadny"
+      ],
+      [
+        "priečinok, kam prichádzajú exporty",
+        "obx watch",
+        "žiadny"
+      ],
+      [
+        "server alebo PC, ktorý v noci spúšťa úlohy",
+        "cron alebo Plánovač úloh",
+        "jeden riadok"
+      ],
+      [
+        "exporty v repozitári Git",
+        "GitHub Action",
+        "jeden súbor YAML"
+      ],
+      [
+        "n8n, Make alebo Zapier",
+        "Kroky HTTP",
+        "žiadny (vizuálne)"
+      ],
+      [
+        "vývojára, ktorý napojí váš PIM alebo ERP",
+        "Priamo API",
+        "trochu"
+      ]
     ],
     "formatTitle": "Jeden formát na všetko",
     "formatP": "Všetky spôsoby publikovania čítajú to isté: products.csv s jedným riadkom na veľkosť a fotky pomenované {style}_{color}_{position}.jpg (model, farba, pozícia). Keď to máte, fungujú všetky návody nižšie.",
@@ -221,9 +280,18 @@
     "scheduledTitle": "1. Plánovaný import (bez kódu)",
     "scheduledP": "V administrácii: Importy → Plánované importy → Pridať. Zvoľte zdroj a ako často sa má spúšťať.",
     "scheduled": [
-      { "k": "Webová adresa (HTTPS)", "v": "adresa súboru products.csv alebo zipu s products.csv a fotografiami. Prihlasovacie údaje sa ukladajú šifrovane." },
-      { "k": "SFTP", "v": "server, používateľ, heslo alebo kľúč a priečinok s exportom." },
-      { "k": "Bucket S3", "v": "AWS S3, Cloudflare R2, MinIO alebo Backblaze: endpoint, bucket, priečinok a kľúč iba na čítanie." }
+      {
+        "k": "Webová adresa (HTTPS)",
+        "v": "adresa súboru products.csv alebo zipu s products.csv a fotografiami. Prihlasovacie údaje sa ukladajú šifrovane."
+      },
+      {
+        "k": "SFTP",
+        "v": "server, používateľ, heslo alebo kľúč a priečinok s exportom."
+      },
+      {
+        "k": "Bucket S3",
+        "v": "AWS S3, Cloudflare R2, MinIO alebo Backblaze: endpoint, bucket, priečinok a kľúč iba na čítanie."
+      }
     ],
     "scheduledMode": "Zvoľte „Aktualizovať“ (iba pridávať a meniť) alebo „Zrkadliť“ (stiahnuť aj to, čo zo súboru zmizlo). Zrkadlenie odmietne, ak by zmizla viac ako polovica značky, takže chybný export nikdy nevyprázdni váš katalóg. „Otestovať pripojenie“ ukáže, ktoré súbory by sa načítali.",
     "cliTitle": "Nástroj obx",
@@ -271,7 +339,7 @@
       "značka môže exportovať všetky údaje a fotografie a odísť",
       "vlastné ceny a podmienky zverejňujete na svojom webe"
     ],
-    "listHow": "Otvorte pull request v repozitári webu so svojimi údajmi v src/data/providers.json. Iniciátor je uvedený prvý, ostatní abecedne.",
+    "listHow": "Otvorte pull request v repozitári webu so svojimi údajmi v src/data/providers.json. Firma iniciátora je uvedená prvá, ostatní abecedne.",
     "p2Title": "2. Jedným kliknutím",
     "p2P": "Vlastný portál na vlastnom účte, bez správy servera.",
     "cfP": "Beží na Cloudflare Workers, s D1 ako databázou a R2 pre fotografie. Kliknite na tlačidlo, prihláste sa do Cloudflare a postupujte podľa krokov. Cloudflare má bezplatné limity; pri veľkých katalógoch si overte aktuálne ceny. Webové verzie fotografií vytvára váš prehliadač a nástroj obx, takže nemusíte nič robiť.",
@@ -312,18 +380,36 @@
     "portalTitle": "Čo vám dá portál značky",
     "portalP": "Každá značka prevádzkuje vlastný portál pod svojím menom, napríklad „Kestrel · {portal}“.",
     "portal": [
-      { "h": "Žiadosť o prístup", "p": "Požiadajte o prístup na portáli značky. Značka schváli a vy dostanete pozvánku e-mailom." },
-      { "h": "Vyhľadávanie a filtre", "p": "Podľa značky, sezóny, kolekcie, typu produktu alebo farby. Každá položka so všetkými fotkami a údajmi." },
-      { "h": "Vloženie zoznamu EAN", "p": "Vložte EAN zo svojej pokladnice a hneď uvidíte, ktoré položky sú k dispozícii a ktoré ešte chýbajú." },
-      { "h": "Sťahovanie podľa vás", "p": "Jedna fotka, jedna položka, váš výber alebo všetko vo filtri ako zip. Originál (ak to značka povolí), web alebo štvorec." },
-      { "h": "Údaje o tovare v tabuľke", "p": "EAN pre veľkosť, farba, materiál, pokyny na údržbu a popis, pripravené pre váš systém." },
-      { "h": "Čo je povolené", "p": "Práva na použitie, dátum embarga a informácia, či fotografia vznikla s pomocou AI, sú pri každej fotografii." }
+      {
+        "h": "Žiadosť o prístup",
+        "p": "Požiadajte o prístup na portáli značky. Značka schváli a vy dostanete pozvánku e-mailom."
+      },
+      {
+        "h": "Vyhľadávanie a filtre",
+        "p": "Podľa značky, sezóny, kolekcie, typu produktu alebo farby. Každá položka so všetkými fotkami a údajmi."
+      },
+      {
+        "h": "Vloženie zoznamu EAN",
+        "p": "Vložte EAN zo svojej pokladnice a hneď uvidíte, ktoré položky sú k dispozícii a ktoré ešte chýbajú."
+      },
+      {
+        "h": "Sťahovanie podľa vás",
+        "p": "Jedna fotka, jedna položka, váš výber alebo všetko vo filtri ako zip. Originál (ak to značka povolí), web alebo štvorec."
+      },
+      {
+        "h": "Údaje o tovare v tabuľke",
+        "p": "EAN pre veľkosť, farba, materiál, pokyny na údržbu a popis, pripravené pre váš systém."
+      },
+      {
+        "h": "Čo je povolené",
+        "p": "Práva na použitie, dátum embarga a informácia, či fotografia vznikla s pomocou AI, sú pri každej fotografii."
+      }
     ],
-    "apiTitle": "API kľúč pre váš systém",
+    "apiTitle": "API kľúč pre váš softvér",
     "apiP": "Sťahuje váš PIM, pokladničný systém alebo e-shop fotky sám? Potom požiadajte o API kľúč pre svoj systém. Najprv stiahne všetko a potom iba zmeny, vrátane toho, čo značka stiahne. Fotky sa k vašim položkám priraďujú podľa EAN.",
     "apiDev": "Pre vášho vývojára: takto to vyzerá.",
-    "toolsTitle": "Photopilot a ďalší softvér",
-    "toolsP": "Open Brand Exchange je otvorený štandard: prečíta ho akýkoľvek softvér. Photopilot, iniciátor, ho môže používať vo svojom softvéri pre predajcov a ostatní dodávatelia môžu urobiť to isté. Nepotrebujete žiadny konkrétny softvér: stačí prehliadač.",
+    "toolsTitle": "Aký softvér s tým funguje",
+    "toolsP": "Open Brand Exchange je otvorený štandard: podporovať ho môže akýkoľvek softvér. Photopilot, firma iniciátora, ho zabudováva do svojho softvéru pre predajcov a ostatní dodávatelia môžu urobiť to isté. Nepotrebujete žiadny konkrétny softvér: stačí prehliadač.",
     "toolsLink": "Špecifikácia pre vývojárov",
     "findTitle": "Ako nájsť značku",
     "findP": "Značky, ktoré chcú byť viditeľné, sú v zozname značiek. Ak vám značka jednoducho dá adresu svojho portálu, funguje to tiež.",
@@ -345,11 +431,25 @@
     "specP": "Verzia 0.1 (návrh). OpenAPI 3.1, JSON Schema 2020-12, príklady a fiktívna testovacia značka Kestrel Outfitters. Licencia CC-BY-4.0: voľne implementovateľné, aj komerčne.",
     "specStart": "Začnite súborom protocol.md",
     "apisTitle": "Tri API",
-    "apisHead": ["API", "Pre", "Stav", "Kontrakt"],
+    "apisHead": [
+      "API",
+      "Pre",
+      "Stav",
+      "Kontrakt"
+    ],
     "apis": [
-      { "who": "softvér predajcov: discovery, OAuth2 client credentials, kanál zmien, vyhľadávanie podľa GTIN, renditions, exporty, webhooky", "status": "normatívne" },
-      { "who": "automatizácia značky: idempotentné upserty podľa vlastných ID značky, nahrávanie adresované sha256, dávky, importy", "status": "normatívne" },
-      { "who": "zdieľaná administrácia a portál pre predajcov", "status": "nenormatívne" }
+      {
+        "who": "softvér predajcov: discovery, OAuth2 client credentials, kanál zmien, vyhľadávanie podľa GTIN, renditions, exporty, webhooky",
+        "status": "normatívne"
+      },
+      {
+        "who": "automatizácia značky: idempotentné upserty podľa vlastných ID značky, nahrávanie adresované sha256, dávky, importy",
+        "status": "normatívne"
+      },
+      {
+        "who": "zdieľaná administrácia a portál pre predajcov",
+        "status": "nenormatívne"
+      }
     ],
     "readTitle": "Čítanie portálu značky na pár riadkoch",
     "sdkTitle": "SDK a nástroj pre príkazový riadok",
@@ -357,7 +457,12 @@
     "confTitle": "Zhoda",
     "confP": "Implementácia je v zhode s OBX pre daný profil, keď obx-conformance prejde všetkými povinnými testami tohto profilu. Existujú tri profily: protocol, ingest a portal.",
     "implTitle": "Implementácie",
-    "implHead": ["Repozitár", "Čo", "Licencia", "Stav"],
+    "implHead": [
+      "Repozitár",
+      "Čo",
+      "Licencia",
+      "Stav"
+    ],
     "impl": [
       "špecifikácia, schémy, testovacie údaje",
       "Go SDK, nástroj obx, testy zhody, mock server",
@@ -420,53 +525,230 @@
     "h1": "Na stiahnutie",
     "lead": "Materiály na zdieľanie s kolegami, značkami a predajcami.",
     "brochureTitle": "Brožúra pre predajcov",
-    "brochureP": "Dve strany o tom, čo Open Brand Exchange znamená pre obchod, na odovzdanie kolegovi alebo značke.",
+    "brochureP": "Čo Open Brand Exchange znamená pre obchod: portál značky, API kľúč pre váš softvér a čo je už hotové. Na odovzdanie kolegovi alebo značke.",
     "kitTitle": "E-mail pre značky, ktoré ešte nie sú zapojené",
     "kitP": "Hotový e-mail zo stránky pre predajcov ako textový súbor.",
     "exampleTitle": "Ukážkové súbory",
     "exampleP": "Súbor products.csv a fotografie fiktívnej značky Kestrel Outfitters na vyskúšanie importu.",
     "exampleLink": "Ukážkové súbory v špecifikácii",
     "templateP": "Prázdnu šablónu CSV nájdete aj v administrácii každého portálu v sekcii Importy.",
-    "dutch": "Holandčina",
-    "english": "Angličtina"
+    "brandsTitle": "Brožúra pre značky",
+    "brandsP": "Vlastný portál pre predajcov, API, automatické nahrávanie a hosting a čo je už hotové. Na zdieľanie s tímom.",
+    "allLanguages": "Všetky jazyky"
   },
   "faq": {
     "h1": "Časté otázky",
     "items": [
-      { "q": "Koľko to stojí?", "a": "Štandard aj softvér sú zadarmo. Ak prevádzkujete sami, platíte iba hosting. Poskytovateľ má vlastné ceny, ktoré nájdete na jeho webe." },
-      { "q": "Potrebujeme vývojára?", "a": "Na základy nie. Portál nainštalujete jedným kliknutím a plánovaný import z webovej adresy, servera SFTP alebo bucketu nevyžaduje žiadny kód. Vývojár pomôže, ak chcete priamo napojiť PIM alebo ERP." },
-      { "q": "Je to ďalšia platforma, ku ktorej sa musíme pridať?", "a": "Nie. Každá značka prevádzkuje vlastný portál, ak chce, na vlastnej doméne. Neexistuje žiadna centrálna platforma, ktorá by držala váš obsah." },
-      { "q": "Kto rozhoduje, ktorý predajca dostane prístup?", "a": "Vy. Predajcovia žiadajú o prístup a vy každú žiadosť schválite alebo zamietnete. Tiež volíte, aké značky predajca uvidí a či smie sťahovať originály." },
-      { "q": "Čo predajcovia potrebujú?", "a": "Prehliadač. Predajcovia so softvérom, ktorý si fotografie sťahuje sám, môžu požiadať o API kľúč pre tento softvér." },
-      { "q": "Aké formáty fotografií sú k dispozícii?", "a": "Originál presne tak, ako ste ho nahrali, a k tomu webová verzia (max. 2000 px), štvorcová verzia a malý náhľad. Predajcovia si vyberú, čo potrebujú." },
-      { "q": "Zostávajú pri fotografiách informácie o AI a právach?", "a": "Áno. Práva na použitie, dátum embarga a informácia o použití AI sú súčasťou každej fotografie. Originály sa ukladajú a doručujú bez zmeny, vrátane vložených content credentials." },
-      { "q": "Môžeme neskôr zmeniť poskytovateľa?", "a": "Áno. Všetky portály hovoria rovnakým štandardom a každý tu uvedený poskytovateľ vám umožní exportovať všetok obsah. Vaša doména zostane rovnaká." },
-      { "q": "Je to hotové?", "a": "Zatiaľ nie. Špecifikácia je prvý návrh (0.1) a softvér sa stavia. Vyskúšať si ho už môžete, ale zatiaľ nie je určený na ostrú prevádzku." },
-      { "q": "Kto za tým stojí?", "a": "Open Brand Exchange založila spoločnosť Photopilot, holandská firma vyvíjajúca softvér na produktovú fotografiu. Štandard je otvorený a cieľom je, aby patril značkám a predajcom, ktorí ho používajú." }
+      {
+        "q": "Koľko to stojí?",
+        "a": "Štandard aj softvér sú zadarmo. Ak prevádzkujete sami, platíte iba hosting. Poskytovateľ má vlastné ceny, ktoré nájdete na jeho webe."
+      },
+      {
+        "q": "Potrebujeme vývojára?",
+        "a": "Na základy nie. Portál nainštalujete jedným kliknutím a plánovaný import z webovej adresy, servera SFTP alebo bucketu nevyžaduje žiadny kód. Vývojár pomôže, ak chcete priamo napojiť PIM alebo ERP."
+      },
+      {
+        "q": "Je to ďalšia platforma, ku ktorej sa musíme pridať?",
+        "a": "Nie. Každá značka prevádzkuje vlastný portál, ak chce, na vlastnej doméne. Neexistuje žiadna centrálna platforma, ktorá by držala váš obsah."
+      },
+      {
+        "q": "Kto rozhoduje, ktorý predajca dostane prístup?",
+        "a": "Vy. Predajcovia žiadajú o prístup a vy každú žiadosť schválite alebo zamietnete. Tiež volíte, aké značky predajca uvidí a či smie sťahovať originály."
+      },
+      {
+        "q": "Čo predajcovia potrebujú?",
+        "a": "Prehliadač. Predajcovia so softvérom, ktorý si fotografie sťahuje sám, môžu požiadať o API kľúč pre tento softvér."
+      },
+      {
+        "q": "Aké formáty fotografií sú k dispozícii?",
+        "a": "Originál presne tak, ako ste ho nahrali, a k tomu webová verzia (max. 2000 px), štvorcová verzia a malý náhľad. Predajcovia si vyberú, čo potrebujú."
+      },
+      {
+        "q": "Zostávajú pri fotografiách informácie o AI a právach?",
+        "a": "Áno. Práva na použitie, dátum embarga a informácia o použití AI sú súčasťou každej fotografie. Originály sa ukladajú a doručujú bez zmeny, vrátane vložených content credentials."
+      },
+      {
+        "q": "Môžeme neskôr zmeniť poskytovateľa?",
+        "a": "Áno. Všetky portály hovoria rovnakým štandardom a každý tu uvedený poskytovateľ vám umožní exportovať všetok obsah. Vaša doména zostane rovnaká."
+      },
+      {
+        "q": "Je to hotové?",
+        "a": "Takmer. Verzia 0.1 špecifikácie a troch edícií portálu sa testuje. Pripravuje sa prvé verejné vydanie; dovtedy softvér nie je verejne dostupný."
+      },
+      {
+        "q": "Kto za tým stojí?",
+        "a": "Za Open Brand Exchange stojí {person}, ktorý založil aj Photopilot, firmu vyvíjajúcu softvér na produktovú fotografiu. Všetko sa prevedie na {foundation}, aby štandard patril značkám, predajcom a dodávateľom softvéru, ktorí ho používajú, a nie jednej firme."
+      }
     ]
   },
   "governance": {
     "h1": "Správa a názov",
     "lead": "Open Brand Exchange má patriť značkám, predajcom a dodávateľom softvéru, ktorí ho používajú, nie jednej firme.",
     "sections": [
-      { "h": "Kto rozhoduje", "p": "Kým nevzniknú tri nezávislé implementácie, ktoré prejdú testami zhody, rozhodujú o zmenách po verejnej diskusii správcovia zo spoločnosti Photopilot. Potom prevezme riadenie skupina s jedným miestom pre každého implementátora a aspoň jednou značkou a jedným predajcom." },
-      { "h": "Ako prebiehajú zmeny", "p": "Každá zmena štandardu je verejný pull request s krátkym zdôvodnením. Väčšie návrhy zostávajú otvorené komentárom aspoň 14 dní. Prispieť môže ktokoľvek bez podpisu zmluvy o príspevkoch." },
-      { "h": "Neutrálny od základu", "p": "Nič v štandarde nesmie vyžadovať konkrétneho dodávateľa ani hostovanú službu. Ktokoľvek ho smie implementovať, hostovať pre iných alebo na ňom postaviť konkurenčný produkt. Softvér spoločnosti Photopilot nemá v testoch zhody žiadne zvýhodnenie." },
-      { "h": "Licencie", "p": "Špecifikácia a obsah tohto webu sú pod licenciou CC-BY-4.0. SDK, nástroj obx a zdieľané webové rozhranie sú pod licenciou Apache-2.0. Tri edície portálu sú pod licenciou AGPL-3.0, aby vylepšenia zostali otvorené. Kód tohto webu je pod licenciou MIT." }
+      {
+        "h": "Kto rozhoduje",
+        "p": "Kým neexistujú tri nezávislé implementácie, ktoré prejdú testami zhody, o zmenách po verejnej diskusii rozhoduje iniciátor. Potom prevezme riadenie riadiaca skupina s jedným miestom pre každého implementátora a aspoň jednou značkou a jedným predajcom."
+      },
+      {
+        "h": "Ako prebiehajú zmeny",
+        "p": "Každá zmena štandardu je verejný pull request s krátkym zdôvodnením. Väčšie návrhy zostávajú otvorené komentárom aspoň 14 dní. Prispieť môže ktokoľvek bez podpisu zmluvy o príspevkoch."
+      },
+      {
+        "h": "Neutrálny od základu",
+        "p": "Nič v štandarde nesmie vyžadovať konkrétneho dodávateľa ani hostovanú službu. Ktokoľvek ho môže implementovať, hostovať pre iných alebo na ňom postaviť konkurenčný produkt. Žiadna implementácia nemá v testoch zhody prednosť, ani tá od Photopilot, firmy iniciátora."
+      },
+      {
+        "h": "Licencie",
+        "p": "Špecifikácia a obsah tohto webu sú pod licenciou CC-BY-4.0. SDK, nástroj obx a zdieľané webové rozhranie sú pod licenciou Apache-2.0. Tri edície portálu sú pod licenciou AGPL-3.0, aby vylepšenia zostali otvorené. Kód tohto webu je pod licenciou MIT."
+      }
     ],
     "nameTitle": "O názve",
-    "nameP": "„Open Brand Exchange“ je pracovný názov. Pred verziou 1.0 sa môže po rešerši ochranných známok zmeniť. Nie je to registrovaná ochranná známka. Softvér, ktorý prejde testami zhody, smie uvádzať, že „funguje s Open Brand Exchange“.",
-    "specLink": "Úplný dokument o správe"
+    "nameP": "Názov „Open Brand Exchange“ je vo všetkých jazykoch rovnaký a nikdy sa neprekladá. Zatiaľ nie je registrovanou ochrannou známkou. Softvér, ktorý prejde testami zhody, môže uvádzať, že „funguje s Open Brand Exchange“.",
+    "specLink": "Úplný dokument o správe",
+    "foundationTitle": "Kto za tým stojí",
+    "foundationP": "Za Open Brand Exchange stojí {person}. Zakladá {foundation}, ktorá bude holandskou nadáciou (stichting). Hneď ako vznikne, prevedú sa na ňu autorské práva, názov, doména a organizácia na GitHube. Dovtedy sú vedené na meno: {person}."
   },
   "privacy": {
     "h1": "Súkromie",
-    "lead": "Tento web vás nesleduje.",
+    "lead": "Tento web vás nesleduje. Nižšie je opísané, aké nemnohé údaje sa spracúvajú a prečo.",
     "sections": [
-      { "h": "Žiadne cookies", "p": "Nepoužívame cookies. Keď si vyberiete jazyk, váš prehliadač si voľbu zapamätá lokálne; nikdy sa nám neodosiela." },
-      { "h": "Žiadne sledovanie", "p": "Žiadna reklama, žiadne tlačidlá sociálnych sietí, žiadne písma tretích strán a žiadne sledovacie skripty. Nanajvýš používame Cloudflare Web Analytics, ktoré počíta návštevy bez cookies a bez sledovania naprieč webmi." },
-      { "h": "Hosting", "p": "Web beží na Cloudflare Pages. Ako každý webový server spracúva Cloudflare vašu IP adresu, aby mohol stránky doručiť a chrániť ich pred zneužitím." },
-      { "h": "Portály značiek sú oddelené", "p": "Každý portál značky prevádzkuje samotná značka alebo jej poskytovateľ. Tam platia ich zásady ochrany súkromia, nie tieto." }
+      {
+        "h": "Kto zodpovedá",
+        "p": "Tento web prevádzkuje {person} (pozri tiráž). So všetkým, čo sa týka súkromia, píšte na {email}."
+      },
+      {
+        "h": "Čo zbierame",
+        "p": "Nič, čo by vás identifikovalo. Tento web nemá formuláre, účty, newsletter ani cookies."
+      },
+      {
+        "h": "Hosting",
+        "p": "Web je hostovaný na Cloudflare Pages. Ako každý webový server spracúva Cloudflare technické údaje, napríklad vašu IP adresu, aby mohol stránky doručiť a chrániť ich pred zneužitím. My sami žiadne prístupové logy neuchovávame."
+      },
+      {
+        "h": "Štatistiky návštevnosti",
+        "p": "Ak sú štatistiky návštevnosti zapnuté, používame Cloudflare Web Analytics. Počíta zobrazenia stránok bez cookies a bez sledovania naprieč webmi. Vidíme len súčty."
+      },
+      {
+        "h": "E-mail",
+        "p": "Keď nám napíšete, použijeme vašu adresu a správu len na odpoveď a vymažeme ich, keď na to už nebudú potrebné."
+      },
+      {
+        "h": "Vaše práva",
+        "p": "Môžete sa opýtať, aké osobné údaje o vás máme, a nechať ich opraviť alebo vymazať. Môžete sa tiež sťažovať na holandskom úrade na ochranu osobných údajov (Autoriteit Persoonsgegevens)."
+      },
+      {
+        "h": "Portály značiek sú samostatné",
+        "p": "Každý portál značky prevádzkuje samotná značka alebo jej poskytovateľ. Tam platí ich vyhlásenie o ochrane súkromia, nie toto."
+      }
     ],
-    "contact": "Máte otázku? Založte issue v repozitári webu."
+    "contact": "Otázky o súkromí? Píšte na {email}.",
+    "updated": "Naposledy aktualizované: {date}"
+  },
+  "org": {
+    "initiative": "Iniciatíva, za ktorou stojí {person}",
+    "inFormation": "v zakladaní"
+  },
+  "imprint": {
+    "h1": "Tiráž",
+    "lead": "Kto tento web vydáva a ako nás kontaktovať.",
+    "publisherTitle": "Vydáva",
+    "foundationP": "{foundation} sa zakladá ako holandská nadácia (stichting). Do jej zápisu zodpovedá za tento web {person}.",
+    "addressLabel": "Poštová adresa",
+    "phoneLabel": "Telefón",
+    "registrationLabel": "Registračné číslo",
+    "contactTitle": "Kontakt",
+    "generalLabel": "Všeobecné otázky",
+    "securityLabel": "Bezpečnostné problémy",
+    "securityNote": "Zraniteľnosti hláste dôverne na túto adresu, nie vo verejnom issue.",
+    "contentTitle": "Obsah a licencie",
+    "contentP": "Tento web píšeme starostlivo, no môže obsahovať chyby. V technických otázkach je rozhodujúca špecifikácia. Texty možno znova použiť pod licenciou CC BY 4.0 s uvedením autora; kód tohto webu je pod licenciou MIT."
+  },
+  "cookies": {
+    "h1": "Vyhlásenie o cookies",
+    "lead": "Tento web nepoužíva cookies.",
+    "sections": [
+      {
+        "h": "Žiadne cookies od nás",
+        "p": "Nepoužívame cookies na štatistiky, reklamu ani nič iné, a preto vás ani nežiadame o súhlas."
+      },
+      {
+        "h": "Vaša voľba jazyka",
+        "p": "Keď si vyberiete jazyk, prehliadač si ho zapamätá vo vlastnom úložisku (localStorage), aby sa ďalšia návšteva otvorila v tomto jazyku. Nikdy sa nám neodosiela. Vymazaním údajov tohto webu v prehliadači ju odstránite."
+      },
+      {
+        "h": "Bezpečnostné kontroly nášho hostingu",
+        "p": "Len ak Cloudflare, náš hosting, musí overiť, že návštevník nie je automatizovaný útok, môže na túto kontrolu uložiť nevyhnutne potrebnú bezpečnostnú cookie. Na nič iné sa nepoužíva."
+      },
+      {
+        "h": "Portály značiek",
+        "p": "Portály značiek sú samostatné weby, ktoré prevádzkuje značka alebo jej poskytovateľ. Tam platí ich vlastné vyhlásenie o cookies."
+      }
+    ],
+    "contact": "Otázky? Píšte na {email}."
+  },
+  "brochure": {
+    "brandsFlow": [
+      {
+        "h": "Vaše systémy",
+        "p": "PIM, ERP alebo priečinok"
+      },
+      {
+        "h": "Váš portál",
+        "p": "vaše meno, vaša doména"
+      },
+      {
+        "h": "Vaši predajcovia",
+        "p": "v prehliadači aj cez API"
+      }
+    ],
+    "retailersH1": "Fotografie a údaje o tovare každej značky, vždy rovnakým spôsobom",
+    "retailersFlow": [
+      {
+        "h": "Značka",
+        "p": "publikuje raz"
+      },
+      {
+        "h": "Portál značky",
+        "p": "pri každej značke rovnaký"
+      },
+      {
+        "h": "Váš obchod",
+        "p": "stiahnutie alebo API, spárované podľa EAN"
+      }
+    ],
+    "statusTitle": "Čo je hotové a čo príde",
+    "readyTitle": "Hotové vo verzii 0.1",
+    "comingTitle": "Pripravujeme",
+    "readyBadge": "Hotové",
+    "comingBadge": "Čoskoro",
+    "brandsReady": [
+      "Vlastný portál so správou, v 25 jazykoch, na vašej vlastnej doméne",
+      "Import CSV a fotografií ručne alebo podľa plánu z webovej adresy, SFTP alebo S3",
+      "Nástroj obx a recepty pre cron, GitHub Actions, n8n, Make a Zapier",
+      "Žiadosti o prístup, pozvánky a API kľúče pre softvér vašich predajcov",
+      "Tri edície: Cloudflare, Google Cloud & Docker a bežný webhosting"
+    ],
+    "brandsComing": [
+      "Prvé verejné vydanie s inštaláciou na jedno kliknutie",
+      "Poskytovatelia, ktorí pre vás portál prevádzkujú",
+      "Prvé skutočné značky v zozname značiek"
+    ],
+    "retailersReady": [
+      "Požiadať o prístup a prihlásiť sa do portálu značky",
+      "Hľadať, filtrovať a vložiť zoznam EAN, aby ste videli, čo je k dispozícii a čo chýba",
+      "Stiahnuť fotografie ako zip a údaje o tovare ako tabuľku",
+      "API kľúč pre váš softvér: najprv všetko, potom už len zmeny",
+      "Práva na použitie, embargo a pôvod AI pri každom obrázku"
+    ],
+    "retailersComing": [
+      "Viac značiek: zoznam značiek sa ešte len začína",
+      "Pluginy, ktoré prenesú obrázky priamo do Shopware a WooCommerce",
+      "Podpora v ďalšom pokladničnom, PIM a e-shopovom softvéri, ako ju dodávatelia doplnia"
+    ],
+    "kitP": "Značka sa najrýchlejšie pridá, keď o to obchody požiadajú. Hotový e-mail pre vašu kontaktnú osobu v značke nájdete na {url}.",
+    "ctaTitle": "Máte otázky alebo chcete byť pri tom od začiatku?",
+    "ctaBrands": "Hľadáme značky, ktoré chcú spolutvoriť prvú verziu: aké systémy používate a koľkým predajcom dodávate? Napíšte nám.",
+    "ctaRetailers": "Hľadáme predajcov, ktorí chcú spolutvoriť prvú verziu: aké značky chcete prepojiť a aký softvér používate? Napíšte nám.",
+    "footer": "Funkcie v časti „Pripravujeme“ sú vo vývoji. Verzia 0.1, {date}."
   }
 }

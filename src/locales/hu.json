@@ -9,18 +9,18 @@
     "home": "Open Brand Exchange, kezdőlap",
     "copy": "Másolás",
     "copied": "Másolva",
-    "draft": "0.1-es specifikáció (tervezet): a szoftver most készül. Éles használatra még nem alkalmas.",
+    "draft": "A 0.1-es verzió tesztelés alatt áll. Az első nyilvános kiadás előkészítés alatt van.",
     "footerAbout": "Ingyenes, nyílt módszer, amellyel a márkák termékfotókat és cikkadatokat juttathatnak el viszonteladóiknak.",
     "footerMore": "Továbbiak",
     "footerSource": "Forráskód és specifikáció",
     "footerLicence": "Tartalom CC-BY-4.0, kód MIT.",
-    "footerWorking": "Az „Open Brand Exchange” munkanév. 0.1-es specifikáció, fejlesztés alatt.",
     "editionCloudflare": "Portál Cloudflare-re",
     "editionGoogle": "Portál Google Cloudra és Dockerre",
     "editionHosting": "Portál webtárhelyre",
     "yes": "Igen",
     "inDevelopment": "Fejlesztés alatt",
-    "available": "Elérhető"
+    "available": "Elérhető",
+    "footerContact": "Kapcsolat"
   },
   "nav": {
     "brands": "Márkáknak",
@@ -32,7 +32,9 @@
     "downloads": "Letöltések",
     "faq": "Gyakori kérdések",
     "governance": "Irányítás és név",
-    "privacy": "Adatvédelem"
+    "privacy": "Adatvédelem",
+    "imprint": "Impresszum",
+    "cookies": "Sütik"
   },
   "meta": {
     "home": {
@@ -73,11 +75,19 @@
     },
     "governance": {
       "title": "Irányítás és név",
-      "description": "Ki dönt a szabványról, hogyan lehet hozzájárulni, a licencek, és miért munkanév a név."
+      "description": "Ki áll a szabvány mögött, ki dönt, hogyan lehet hozzájárulni, a licencek és a név."
     },
     "privacy": {
       "title": "Adatvédelem",
-      "description": "Ez az oldal nem követi Önt: nincsenek sütik, nincs nyomkövetés."
+      "description": "Ez az oldal nem követi Önt. Milyen kevés adatot kezelünk, és miért."
+    },
+    "imprint": {
+      "title": "Impresszum",
+      "description": "Ki adja ki ezt a weboldalt, és hogyan érhet el minket."
+    },
+    "cookies": {
+      "title": "Sütik",
+      "description": "Ez a weboldal nem használ sütiket."
     }
   },
   "home": {
@@ -134,7 +144,7 @@
         "p": "Egyetlen közzététel minden viszonteladónak. Nincs több fájlküldés, zipes e-mail és külön integráció minden üzlethez."
       }
     ],
-    "status": "Az Open Brand Exchange az elején tart. A specifikáció első tervezet (0.1), a szoftver most készül. Nem mutatunk olyan ügyfeleket vagy számokat, amelyek még nem léteznek.",
+    "status": "Az Open Brand Exchange az út elején jár. A specifikáció és a szoftver 0.1-es verziója tesztelés alatt áll, az első nyilvános kiadás előkészítés alatt van. Nem mutatunk olyan ügyfeleket vagy számokat, amelyek még nem léteznek.",
     "statusLink": "Olvassa el, hogyan irányítják"
   },
   "brands": {
@@ -185,13 +195,34 @@
     ],
     "adminTitle": "Amit maga kezel",
     "admin": [
-      { "k": "Katalógus", "v": "márkák, cikkek, színek és méretek, fotók és azok sorrendje" },
-      { "k": "Importok", "v": "feltöltés vagy ütemezett letöltés, egyértelmű üzenettel minden hibás sorról" },
-      { "k": "Viszonteladók", "v": "kérések jóváhagyása vagy elutasítása (indoklással), fiókok meghívása vagy letiltása" },
-      { "k": "API-kulcsok", "v": "kulcsok a viszonteladók rendszereihez: egyszer jelennek meg, könnyen megújíthatók vagy visszavonhatók" },
-      { "k": "Automatikus feltöltés", "v": "kulcsok a saját rendszereihez, és értesítések, ha egy viszonteladó hozzáférést kér vagy egy import befejeződik" },
-      { "k": "Statisztika", "v": "letöltések és használat viszonteladónként" },
-      { "k": "Beállítások", "v": "logó, kiemelőszín, üdvözlő szöveg, alapértelmezett felhasználási jogok és saját domain" }
+      {
+        "k": "Katalógus",
+        "v": "márkák, cikkek, színek és méretek, fotók és azok sorrendje"
+      },
+      {
+        "k": "Importok",
+        "v": "feltöltés vagy ütemezett letöltés, egyértelmű üzenettel minden hibás sorról"
+      },
+      {
+        "k": "Viszonteladók",
+        "v": "kérések jóváhagyása vagy elutasítása (indoklással), fiókok meghívása vagy letiltása"
+      },
+      {
+        "k": "API-kulcsok",
+        "v": "kulcsok a viszonteladók rendszereihez: egyszer jelennek meg, könnyen megújíthatók vagy visszavonhatók"
+      },
+      {
+        "k": "Automatikus feltöltés",
+        "v": "kulcsok a saját rendszereihez, és értesítések, ha egy viszonteladó hozzáférést kér vagy egy import befejeződik"
+      },
+      {
+        "k": "Statisztika",
+        "v": "letöltések és használat viszonteladónként"
+      },
+      {
+        "k": "Beállítások",
+        "v": "logó, kiemelőszín, üdvözlő szöveg, alapértelmezett felhasználási jogok és saját domain"
+      }
     ],
     "nextTitle": "Következő lépés",
     "nextHosting": "Válasszon üzemeltetést",
@@ -201,14 +232,42 @@
     "h1": "Automatizálás",
     "lead": "A PIM, ERP, DAM vagy egy megosztott mappa már tartalmazza az adatokat és a fotókat. Válassza az első megfelelő receptet: mind működik minden Open Brand Exchange-portállal.",
     "chooseTitle": "Melyik recept illik Önhöz?",
-    "head": ["Önnek van…", "Használja", "Szükséges kód"],
+    "head": [
+      "Önnek van…",
+      "Használja",
+      "Szükséges kód"
+    ],
     "rows": [
-      ["CSV vagy zip egy webcímen, SFTP-szerveren vagy S3-tárolóban", "Ütemezett import", "nincs"],
-      ["egy mappa, ahová az exportok kerülnek", "obx watch", "nincs"],
-      ["egy szerver vagy PC, amely éjjel feladatokat futtat", "cron vagy Feladatütemező", "egy sor"],
-      ["exportok egy Git-tárolóban", "GitHub Action", "egy YAML-fájl"],
-      ["n8n, Make vagy Zapier", "HTTP-lépések", "nincs (vizuális)"],
-      ["egy fejlesztő, aki bekapcsolja a PIM-et vagy ERP-t", "Közvetlenül az API", "egy kevés"]
+      [
+        "CSV vagy zip egy webcímen, SFTP-szerveren vagy S3-tárolóban",
+        "Ütemezett import",
+        "nincs"
+      ],
+      [
+        "egy mappa, ahová az exportok kerülnek",
+        "obx watch",
+        "nincs"
+      ],
+      [
+        "egy szerver vagy PC, amely éjjel feladatokat futtat",
+        "cron vagy Feladatütemező",
+        "egy sor"
+      ],
+      [
+        "exportok egy Git-tárolóban",
+        "GitHub Action",
+        "egy YAML-fájl"
+      ],
+      [
+        "n8n, Make vagy Zapier",
+        "HTTP-lépések",
+        "nincs (vizuális)"
+      ],
+      [
+        "egy fejlesztő, aki bekapcsolja a PIM-et vagy ERP-t",
+        "Közvetlenül az API",
+        "egy kevés"
+      ]
     ],
     "formatTitle": "Egy formátum mindenhez",
     "formatP": "Minden közzétételi mód ugyanazt olvassa: egy products.csv fájlt méretenként egy sorral, és {style}_{color}_{position}.jpg nevű fotókat (cikkszám, szín, pozíció). Ha ez megvan, minden lenti recept működik.",
@@ -221,9 +280,18 @@
     "scheduledTitle": "1. Ütemezett import (kód nélkül)",
     "scheduledP": "Az adminisztrációban: Importok → Ütemezett importok → Hozzáadás. Válassza ki a forrást és a gyakoriságot.",
     "scheduled": [
-      { "k": "Webcím (HTTPS)", "v": "egy products.csv, vagy products.csv-t és fotókat tartalmazó zip címe. A belépési adatokat titkosítva tároljuk." },
-      { "k": "SFTP", "v": "szerver, felhasználó, jelszó vagy kulcs, valamint az exportot tartalmazó mappa." },
-      { "k": "S3-tároló", "v": "AWS S3, Cloudflare R2, MinIO vagy Backblaze: végpont, tároló, mappa és egy csak olvasható kulcs." }
+      {
+        "k": "Webcím (HTTPS)",
+        "v": "egy products.csv, vagy products.csv-t és fotókat tartalmazó zip címe. A belépési adatokat titkosítva tároljuk."
+      },
+      {
+        "k": "SFTP",
+        "v": "szerver, felhasználó, jelszó vagy kulcs, valamint az exportot tartalmazó mappa."
+      },
+      {
+        "k": "S3-tároló",
+        "v": "AWS S3, Cloudflare R2, MinIO vagy Backblaze: végpont, tároló, mappa és egy csak olvasható kulcs."
+      }
     ],
     "scheduledMode": "Válassza a „Frissítés” (csak hozzáadás és módosítás) vagy a „Tükrözés” (a fájlból eltűnt tételek visszavonása is) módot. A tükrözés megtagadja a műveletet, ha egy márka több mint fele eltűnne, így egy hibás export soha nem üríti ki a katalógust. A „Kapcsolat tesztelése” megmutatja, mely fájlokat olvasná be.",
     "cliTitle": "Az obx eszköz",
@@ -271,7 +339,7 @@
       "egy márka minden adatát és fotóját exportálhatja és távozhat",
       "saját árait és feltételeit a saját weboldalán teszi közzé"
     ],
-    "listHow": "Nyisson pull requestet a weboldal tárolójában, adatait az src/data/providers.json fájlba írva. A kezdeményező áll az első helyen, a többiek ábécérendben.",
+    "listHow": "Nyisson egy pull requestet a weboldal tárolójában az adataival az src/data/providers.json fájlban. A kezdeményező cége áll az első helyen, mindenki más ábécérendben.",
     "p2Title": "2. Egy kattintással",
     "p2P": "Saját portál a saját fiókjában, szerverkezelés nélkül.",
     "cfP": "Cloudflare Workers-en fut, D1 adatbázissal és R2 tárolóval a fotókhoz. Kattintson a gombra, jelentkezzen be a Cloudflare-be, és kövesse a lépéseket. A Cloudflare ingyenes kereteket kínál; nagy katalógusok esetén nézze meg az aktuális árakat. A fotók webes változatait a böngészője és az obx eszköz készíti el, így Önnek nincs vele teendője.",
@@ -312,18 +380,36 @@
     "portalTitle": "Mit ad egy márkaportál",
     "portalP": "Minden márka saját portált üzemeltet a saját nevével, például „Kestrel · {portal}”.",
     "portal": [
-      { "h": "Hozzáférés kérése", "p": "Kérjen hozzáférést a márka portálján. A márka jóváhagyja, és e-mailben meghívót kap." },
-      { "h": "Keresés és szűrés", "p": "Márka, szezon, kollekció, terméktípus vagy szín szerint. Minden cikk az összes fotójával és adatával." },
-      { "h": "EAN-lista beillesztése", "p": "Illessze be a pénztárrendszer EAN-kódjait, és azonnal látja, mely cikkek vannak meg és melyek hiányoznak még." },
-      { "h": "Letöltés, ahogy szeretné", "p": "Egy fotó, egy cikk, a válogatása vagy egy szűrés teljes tartalma zipben. Eredeti (ha a márka engedi), web vagy négyzetes." },
-      { "h": "Cikkadatok táblázatban", "p": "Méretenkénti EAN, szín, anyag, kezelési útmutató és leírás, a saját rendszerébe készen." },
-      { "h": "Mi megengedett", "p": "A felhasználási jogok, az embargó dátuma és az, hogy a fotó MI-vel készült-e, minden fotónál látható." }
+      {
+        "h": "Hozzáférés kérése",
+        "p": "Kérjen hozzáférést a márka portálján. A márka jóváhagyja, és e-mailben meghívót kap."
+      },
+      {
+        "h": "Keresés és szűrés",
+        "p": "Márka, szezon, kollekció, terméktípus vagy szín szerint. Minden cikk az összes fotójával és adatával."
+      },
+      {
+        "h": "EAN-lista beillesztése",
+        "p": "Illessze be a pénztárrendszer EAN-kódjait, és azonnal látja, mely cikkek vannak meg és melyek hiányoznak még."
+      },
+      {
+        "h": "Letöltés, ahogy szeretné",
+        "p": "Egy fotó, egy cikk, a válogatása vagy egy szűrés teljes tartalma zipben. Eredeti (ha a márka engedi), web vagy négyzetes."
+      },
+      {
+        "h": "Cikkadatok táblázatban",
+        "p": "Méretenkénti EAN, szín, anyag, kezelési útmutató és leírás, a saját rendszerébe készen."
+      },
+      {
+        "h": "Mi megengedett",
+        "p": "A felhasználási jogok, az embargó dátuma és az, hogy a fotó MI-vel készült-e, minden fotónál látható."
+      }
     ],
-    "apiTitle": "API-kulcs a rendszeréhez",
+    "apiTitle": "API-kulcs a szoftveréhez",
     "apiP": "A PIM-je, pénztárrendszere vagy webáruháza maga tölti le a fotókat? Akkor kérjen API-kulcsot a rendszeréhez. Először mindent letölt, utána csak a változásokat, a márka által visszavontakat is. A fotók EAN alapján kapcsolódnak a cikkeihez.",
     "apiDev": "A fejlesztőjének: így néz ki.",
-    "toolsTitle": "Photopilot és más szoftverek",
-    "toolsP": "Az Open Brand Exchange nyílt szabvány: bármely szoftver olvashatja. A kezdeményező Photopilot használhatja a viszonteladóknak szánt szoftverében, és más szállítók is megtehetik ugyanezt. Nincs szüksége semmilyen különleges szoftverre: egy böngésző elég.",
+    "toolsTitle": "Milyen szoftver működik vele",
+    "toolsP": "Az Open Brand Exchange nyílt szabvány: bármely szoftver támogathatja. A Photopilot, a kezdeményező cége, beépíti a viszonteladóknak szóló szoftverébe, és más szállítók is megtehetik ugyanezt. Nincs szüksége semmilyen különleges szoftverre: egy böngésző elég.",
     "toolsLink": "Specifikáció fejlesztőknek",
     "findTitle": "Márka keresése",
     "findP": "A láthatóságot vállaló márkák a márkajegyzékben szerepelnek. Ha egy márka egyszerűen megadja portálja címét, az is működik.",
@@ -345,11 +431,25 @@
     "specP": "0.1-es verzió (tervezet). OpenAPI 3.1, JSON Schema 2020-12, példák és egy kitalált tesztmárka, a Kestrel Outfitters. Licenc CC-BY-4.0: szabadon implementálható, üzleti célra is.",
     "specStart": "Kezdje a protocol.md fájllal",
     "apisTitle": "Három API",
-    "apisHead": ["API", "Kinek", "Állapot", "Szerződés"],
+    "apisHead": [
+      "API",
+      "Kinek",
+      "Állapot",
+      "Szerződés"
+    ],
     "apis": [
-      { "who": "a viszonteladók szoftverei: discovery, OAuth2 client credentials, változásfolyam, GTIN-keresés, renditions, exportok, webhookok", "status": "normatív" },
-      { "who": "egy márka automatizálása: idempotens upsertek a márka saját azonosítói alapján, sha256-címzett feltöltések, kötegek, importok", "status": "normatív" },
-      { "who": "a közös adminisztráció és a viszonteladói portál", "status": "nem normatív" }
+      {
+        "who": "a viszonteladók szoftverei: discovery, OAuth2 client credentials, változásfolyam, GTIN-keresés, renditions, exportok, webhookok",
+        "status": "normatív"
+      },
+      {
+        "who": "egy márka automatizálása: idempotens upsertek a márka saját azonosítói alapján, sha256-címzett feltöltések, kötegek, importok",
+        "status": "normatív"
+      },
+      {
+        "who": "a közös adminisztráció és a viszonteladói portál",
+        "status": "nem normatív"
+      }
     ],
     "readTitle": "Egy márkaportál olvasása néhány sorban",
     "sdkTitle": "SDK és parancssori eszköz",
@@ -357,7 +457,12 @@
     "confTitle": "Megfelelőség",
     "confP": "Egy implementáció akkor OBX-megfelelő egy profilra, ha az obx-conformance a profil minden kötelező tesztjén átmegy. Három profil van: protocol, ingest és portal.",
     "implTitle": "Implementációk",
-    "implHead": ["Tároló", "Mi", "Licenc", "Állapot"],
+    "implHead": [
+      "Tároló",
+      "Mi",
+      "Licenc",
+      "Állapot"
+    ],
     "impl": [
       "specifikáció, sémák, tesztadatok",
       "Go SDK, obx eszköz, megfelelőségi tesztek, álszerver",
@@ -420,53 +525,230 @@
     "h1": "Letöltések",
     "lead": "Anyagok kollégákkal, márkákkal és viszonteladókkal való megosztáshoz.",
     "brochureTitle": "Brosúra viszonteladóknak",
-    "brochureP": "Két oldal arról, mit jelent az Open Brand Exchange egy üzlet számára, kollégának vagy márkának átadva.",
+    "brochureP": "Mit jelent az Open Brand Exchange egy üzlet számára: a márka portálja, API-kulcs a szoftveréhez, és ami már ma kész. Átadható egy kollégának vagy egy márkának.",
     "kitTitle": "E-mail a még nem csatlakozott márkáknak",
     "kitP": "A viszonteladói oldal kész e-mailje szövegfájlként.",
     "exampleTitle": "Mintafájlok",
     "exampleP": "Egy products.csv és fotók a kitalált Kestrel Outfitters márkától, egy import kipróbálásához.",
     "exampleLink": "Mintafájlok a specifikációban",
     "templateP": "Üres CSV-sablon minden portál adminisztrációjában is található, az Importok alatt.",
-    "dutch": "Holland",
-    "english": "Angol"
+    "brandsTitle": "Tájékoztató márkáknak",
+    "brandsP": "Saját portál a viszonteladóknak, az API, az automatikus feltöltés és a tárhely, valamint ami már ma kész. Megosztható a csapatával.",
+    "allLanguages": "Minden nyelv"
   },
   "faq": {
     "h1": "Gyakori kérdések",
     "items": [
-      { "q": "Mennyibe kerül?", "a": "A szabvány és a szoftver ingyenes. Ha maga üzemelteti, csak a tárhelyért fizet. A szolgáltatóknak saját áraik vannak, ezeket a weboldalukon találja." },
-      { "q": "Szükségünk van fejlesztőre?", "a": "Az alapokhoz nem. A portál egy kattintással telepíthető, és egy webcímről, SFTP-szerverről vagy tárolóból érkező ütemezett import nem igényel kódot. Fejlesztő akkor segít, ha a PIM-et vagy ERP-t közvetlenül akarja bekapcsolni." },
-      { "q": "Ez is egy újabb platform, amelyhez csatlakozni kell?", "a": "Nem. Minden márka saját portált üzemeltet, ha szeretné, saját domainen. Nincs központi platform, amely a tartalmát tárolná." },
-      { "q": "Ki dönti el, melyik viszonteladó kap hozzáférést?", "a": "Ön. A viszonteladók hozzáférést kérnek, Ön pedig minden kérést jóváhagy vagy elutasít. Azt is Ön választja ki, mely márkákat lát egy viszonteladó, és letöltheti-e az eredetiket." },
-      { "q": "Mire van szükségük a viszonteladóknak?", "a": "Egy böngészőre. Azok a viszonteladók, akiknek szoftvere maga tölti le a fotókat, API-kulcsot kérhetnek ehhez a szoftverhez." },
-      { "q": "Milyen képformátumok vannak?", "a": "Az eredeti, pontosan úgy, ahogy feltöltötte, továbbá egy webes változat (legfeljebb 2000 px), egy négyzetes változat és egy kis előnézet. A viszonteladók azt választják, amire szükségük van." },
-      { "q": "Az MI-re és a jogokra vonatkozó információk a fotókkal maradnak?", "a": "Igen. A felhasználási jogok, az embargó dátuma és az MI használata minden fotó része. Az eredetiket változatlanul tároljuk és adjuk tovább, a beágyazott content credentials adatokkal együtt." },
-      { "q": "Válthatunk később szolgáltatót?", "a": "Igen. Minden portál ugyanazt a szabványt beszéli, és minden itt felsorolt szolgáltató lehetővé teszi a teljes tartalom exportálását. A saját domainje ugyanaz marad." },
-      { "q": "Kész van?", "a": "Még nincs. A specifikáció első tervezet (0.1), a szoftver készül. Már kipróbálhatja, de éles használatra még nem alkalmas." },
-      { "q": "Ki áll mögötte?", "a": "Az Open Brand Exchange-et a Photopilot indította el, egy holland cég, amely termékfotózási szoftvert fejleszt. A szabvány nyílt, és a cél az, hogy az azt használó márkáké és viszonteladóké legyen." }
+      {
+        "q": "Mennyibe kerül?",
+        "a": "A szabvány és a szoftver ingyenes. Ha maga üzemelteti, csak a tárhelyért fizet. A szolgáltatóknak saját áraik vannak, ezeket a weboldalukon találja."
+      },
+      {
+        "q": "Szükségünk van fejlesztőre?",
+        "a": "Az alapokhoz nem. A portál egy kattintással telepíthető, és egy webcímről, SFTP-szerverről vagy tárolóból érkező ütemezett import nem igényel kódot. Fejlesztő akkor segít, ha a PIM-et vagy ERP-t közvetlenül akarja bekapcsolni."
+      },
+      {
+        "q": "Ez is egy újabb platform, amelyhez csatlakozni kell?",
+        "a": "Nem. Minden márka saját portált üzemeltet, ha szeretné, saját domainen. Nincs központi platform, amely a tartalmát tárolná."
+      },
+      {
+        "q": "Ki dönti el, melyik viszonteladó kap hozzáférést?",
+        "a": "Ön. A viszonteladók hozzáférést kérnek, Ön pedig minden kérést jóváhagy vagy elutasít. Azt is Ön választja ki, mely márkákat lát egy viszonteladó, és letöltheti-e az eredetiket."
+      },
+      {
+        "q": "Mire van szükségük a viszonteladóknak?",
+        "a": "Egy böngészőre. Azok a viszonteladók, akiknek szoftvere maga tölti le a fotókat, API-kulcsot kérhetnek ehhez a szoftverhez."
+      },
+      {
+        "q": "Milyen képformátumok vannak?",
+        "a": "Az eredeti, pontosan úgy, ahogy feltöltötte, továbbá egy webes változat (legfeljebb 2000 px), egy négyzetes változat és egy kis előnézet. A viszonteladók azt választják, amire szükségük van."
+      },
+      {
+        "q": "Az MI-re és a jogokra vonatkozó információk a fotókkal maradnak?",
+        "a": "Igen. A felhasználási jogok, az embargó dátuma és az MI használata minden fotó része. Az eredetiket változatlanul tároljuk és adjuk tovább, a beágyazott content credentials adatokkal együtt."
+      },
+      {
+        "q": "Válthatunk később szolgáltatót?",
+        "a": "Igen. Minden portál ugyanazt a szabványt beszéli, és minden itt felsorolt szolgáltató lehetővé teszi a teljes tartalom exportálását. A saját domainje ugyanaz marad."
+      },
+      {
+        "q": "Kész van?",
+        "a": "Majdnem. A specifikáció és a három portálváltozat 0.1-es verziója tesztelés alatt áll. Az első nyilvános kiadás előkészítés alatt van; addig a szoftver nyilvánosan nem érhető el."
+      },
+      {
+        "q": "Ki áll mögötte?",
+        "a": "Az Open Brand Exchange kezdeményezője {person}, aki a termékfotózási szoftvereket fejlesztő Photopilot céget is alapította. Minden át lesz ruházva a(z) {foundation} részére, hogy a szabvány az azt használó márkáké, viszonteladóké és szoftverszállítóké legyen, ne egyetlen cégé."
+      }
     ]
   },
   "governance": {
     "h1": "Irányítás és név",
     "lead": "Az Open Brand Exchange azoké a márkáké, viszonteladóké és szoftverszállítóké kell legyen, akik használják, nem egyetlen cégé.",
     "sections": [
-      { "h": "Ki dönt", "p": "Amíg nincs három független, a megfelelőségi teszteken átmenő implementáció, a változásokról nyilvános vita után a Photopilot karbantartói döntenek. Ezt követően egy irányítócsoport veszi át, amelyben minden implementálónak egy helye van, és legalább egy márka és egy viszonteladó is részt vesz." },
-      { "h": "Hogyan születnek a változások", "p": "A szabvány minden módosítása nyilvános pull request rövid indoklással. A nagyobb javaslatok legalább 14 napig nyitottak a hozzászólásokra. Bárki hozzájárulhat, hozzájárulási megállapodás aláírása nélkül." },
-      { "h": "Eleve semleges", "p": "A szabvány semmiben sem követelhet meg egy adott szállítót vagy üzemeltetett szolgáltatást. Bárki implementálhatja, üzemeltetheti másoknak, vagy versenytárs terméket építhet rá. A Photopilot szoftvere nem élvez előnyt a megfelelőségi teszteken." },
-      { "h": "Licencek", "p": "A specifikáció és ennek az oldalnak a tartalma CC-BY-4.0 licencű. Az SDK, az obx eszköz és a közös webes felület Apache-2.0 licencű. A három portálkiadás AGPL-3.0 licencű, hogy a fejlesztések nyíltak maradjanak. Ennek az oldalnak a kódja MIT licencű." }
+      {
+        "h": "Ki dönt",
+        "p": "Amíg nincs három független megvalósítás, amely átmegy a megfelelőségi teszteken, a változtatásokról nyilvános vita után a kezdeményező dönt. Ezután egy irányítócsoport veszi át, megvalósítónként egy hellyel, és legalább egy márkával és egy viszonteladóval."
+      },
+      {
+        "h": "Hogyan születnek a változások",
+        "p": "A szabvány minden módosítása nyilvános pull request rövid indoklással. A nagyobb javaslatok legalább 14 napig nyitottak a hozzászólásokra. Bárki hozzájárulhat, hozzájárulási megállapodás aláírása nélkül."
+      },
+      {
+        "h": "Eleve semleges",
+        "p": "A szabványban semmi sem követelhet meg egy adott szállítót vagy hosztolt szolgáltatást. Bárki megvalósíthatja, üzemeltetheti másoknak, vagy versengő terméket építhet rá. Egyetlen megvalósítás sem élvez előnyt a megfelelőségi teszteken, a Photopiloté, a kezdeményező cégéé sem."
+      },
+      {
+        "h": "Licencek",
+        "p": "A specifikáció és ennek az oldalnak a tartalma CC-BY-4.0 licencű. Az SDK, az obx eszköz és a közös webes felület Apache-2.0 licencű. A három portálkiadás AGPL-3.0 licencű, hogy a fejlesztések nyíltak maradjanak. Ennek az oldalnak a kódja MIT licencű."
+      }
     ],
     "nameTitle": "A névről",
-    "nameP": "Az „Open Brand Exchange” munkanév. Az 1.0-s verzió előtt egy védjegykutatás után még megváltozhat. Nem bejegyzett védjegy. A megfelelőségi teszteken átmenő szoftver feltüntetheti, hogy „működik az Open Brand Exchange-dzsel”.",
-    "specLink": "A teljes irányítási dokumentum"
+    "nameP": "Az „Open Brand Exchange” név minden nyelven ugyanaz, és soha nem fordítjuk le. Még nem bejegyzett védjegy. Az a szoftver, amely átmegy a megfelelőségi teszteken, feltüntetheti, hogy „működik az Open Brand Exchange-dzsel”.",
+    "specLink": "A teljes irányítási dokumentum",
+    "foundationTitle": "Ki áll mögötte",
+    "foundationP": "Az Open Brand Exchange kezdeményezője {person}. Ő alapítja meg a(z) {foundation} szervezetet, amely holland alapítvány (stichting) lesz. Amint létrejön, átruházzák rá a szerzői jogot, a nevet, a domaint és a GitHub-szervezetet. Addig ezek {person} nevén vannak."
   },
   "privacy": {
     "h1": "Adatvédelem",
-    "lead": "Ez a weboldal nem követi Önt.",
+    "lead": "Ez a weboldal nem követi Önt. Alább olvasható, milyen kevés adatot kezelünk, és miért.",
     "sections": [
-      { "h": "Nincsenek sütik", "p": "Nem használunk sütiket. Ha nyelvet választ, a böngészője helyben megjegyzi a választást; ezt soha nem küldi el nekünk." },
-      { "h": "Nincs nyomkövetés", "p": "Nincsenek hirdetések, közösségimédia-gombok, harmadik féltől származó betűtípusok és nyomkövető szkriptek. Legfeljebb a Cloudflare Web Analyticset használjuk, amely sütik nélkül számolja a látogatásokat, és nem követi Önt más oldalakon." },
-      { "h": "Üzemeltetés", "p": "Az oldal a Cloudflare Pagesen fut. Mint minden webszerver, a Cloudflare is kezeli az IP-címét, hogy kiszolgálja az oldalakat és megvédje őket a visszaélésektől." },
-      { "h": "A márkaportálok különállók", "p": "Minden márkaportált maga a márka vagy a szolgáltatója üzemeltet. Ott az ő adatvédelmi tájékoztatójuk érvényes, nem ez." }
+      {
+        "h": "Ki a felelős",
+        "p": "Ezt a weboldalt {person} üzemelteti (lásd az impresszumot). Adatvédelmi kérdésekben írjon a(z) {email} címre."
+      },
+      {
+        "h": "Mit gyűjtünk",
+        "p": "Semmit, ami alapján azonosítható lenne. Ezen az oldalon nincs űrlap, fiók, hírlevél és süti."
+      },
+      {
+        "h": "Tárhely",
+        "p": "Az oldal a Cloudflare Pages szolgáltatáson fut. Mint minden webszerver, a Cloudflare is kezel technikai adatokat, például az IP-címét, hogy kiszolgálja az oldalakat és megvédje őket a visszaélésektől. Mi magunk nem tárolunk hozzáférési naplót."
+      },
+      {
+        "h": "Látogatottsági statisztika",
+        "p": "Ha a látogatottsági statisztika be van kapcsolva, a Cloudflare Web Analytics szolgáltatást használjuk. Sütik nélkül és az oldalak közötti követés nélkül számolja az oldalmegtekintéseket. Mi csak összesítéseket látunk."
+      },
+      {
+        "h": "E-mail",
+        "p": "Ha ír nekünk, a címét és az üzenetét csak a válaszhoz használjuk, és töröljük, amint erre már nincs szükség."
+      },
+      {
+        "h": "Az Ön jogai",
+        "p": "Megkérdezheti, milyen személyes adatokat tárolunk Önről, és kérheti azok helyesbítését vagy törlését. Panaszt is tehet a holland adatvédelmi hatóságnál (Autoriteit Persoonsgegevens)."
+      },
+      {
+        "h": "A márkaportálok külön állnak",
+        "p": "Minden márkaportált maga a márka vagy a szolgáltatója üzemeltet. Ott az ő adatvédelmi nyilatkozatuk érvényes, nem ez."
+      }
     ],
-    "contact": "Kérdése van? Nyisson issue-t a weboldal tárolójában."
+    "contact": "Adatvédelmi kérdése van? Írjon a(z) {email} címre.",
+    "updated": "Utolsó frissítés: {date}"
+  },
+  "org": {
+    "initiative": "Kezdeményező: {person}",
+    "inFormation": "alapítás alatt"
+  },
+  "imprint": {
+    "h1": "Impresszum",
+    "lead": "Ki adja ki ezt a weboldalt, és hogyan érhet el minket.",
+    "publisherTitle": "Kiadó",
+    "foundationP": "A(z) {foundation} holland alapítványként (stichting) alakul. Bejegyzéséig ezért a weboldalért {person} felel.",
+    "addressLabel": "Postacím",
+    "phoneLabel": "Telefon",
+    "registrationLabel": "Nyilvántartási szám",
+    "contactTitle": "Kapcsolat",
+    "generalLabel": "Általános kérdések",
+    "securityLabel": "Biztonsági problémák",
+    "securityNote": "A sebezhetőségeket bizalmasan erre a címre jelentse, ne nyilvános issue-ban.",
+    "contentTitle": "Tartalom és licencek",
+    "contentP": "Gondosan írjuk ezt az oldalt, de hibákat tartalmazhat. Műszaki részletekben a specifikáció a mérvadó. A szövegek a CC BY 4.0 licenc alapján, a forrás megjelölésével újra felhasználhatók; az oldal kódja MIT-licencű."
+  },
+  "cookies": {
+    "h1": "Sütinyilatkozat",
+    "lead": "Ez a weboldal nem használ sütiket.",
+    "sections": [
+      {
+        "h": "Tőlünk nincs süti",
+        "p": "Nem használunk sütiket statisztikához, hirdetéshez vagy bármi máshoz, ezért hozzájárulást sem kérünk."
+      },
+      {
+        "h": "Az Ön nyelvválasztása",
+        "p": "Ha nyelvet választ, a böngészője a saját tárolójában (localStorage) jegyzi meg, hogy a következő látogatás ezen a nyelven nyíljon meg. Soha nem küldi el nekünk. Ha törli ennek az oldalnak az adatait a böngészőben, eltűnik."
+      },
+      {
+        "h": "Tárhelyszolgáltatónk biztonsági ellenőrzései",
+        "p": "Csak ha a Cloudflare-nek, a tárhelyszolgáltatónknak ellenőriznie kell, hogy egy látogató nem automatizált támadás, helyezhet el ehhez az ellenőrzéshez egy feltétlenül szükséges biztonsági sütit. Semmi másra nem használják."
+      },
+      {
+        "h": "Márkaportálok",
+        "p": "A márkaportálok külön weboldalak, amelyeket a márka vagy a szolgáltatója üzemeltet. Ott a saját sütinyilatkozatuk érvényes."
+      }
+    ],
+    "contact": "Kérdése van? Írjon a(z) {email} címre."
+  },
+  "brochure": {
+    "brandsFlow": [
+      {
+        "h": "Az Ön rendszerei",
+        "p": "PIM, ERP vagy egy mappa"
+      },
+      {
+        "h": "Az Ön portálja",
+        "p": "az Ön neve, az Ön domainje"
+      },
+      {
+        "h": "Az Ön viszonteladói",
+        "p": "a böngészőben és az API-n keresztül"
+      }
+    ],
+    "retailersH1": "Minden márka képei és termékadatai, mindig ugyanúgy",
+    "retailersFlow": [
+      {
+        "h": "A márka",
+        "p": "egyszer tesz közzé"
+      },
+      {
+        "h": "A márka portálja",
+        "p": "minden márkánál ugyanolyan"
+      },
+      {
+        "h": "Az Ön üzlete",
+        "p": "letöltés vagy API, EAN alapján párosítva"
+      }
+    ],
+    "statusTitle": "Mi van kész, és mi jön még",
+    "readyTitle": "Kész a 0.1-es verzióban",
+    "comingTitle": "Hamarosan",
+    "readyBadge": "Kész",
+    "comingBadge": "Hamarosan",
+    "brandsReady": [
+      "Saját portál adminfelülettel, 25 nyelven, a saját domainjén",
+      "CSV és fotók importálása kézzel vagy ütemezve webcímről, SFTP-ről vagy S3-ból",
+      "Az obx eszköz és receptek cronhoz, GitHub Actionshöz, n8n-hez, Make-hez és Zapierhez",
+      "Hozzáférési kérelmek, meghívók és API-kulcsok a viszonteladói szoftverekhez",
+      "Három változat: Cloudflare, Google Cloud & Docker és hagyományos webtárhely"
+    ],
+    "brandsComing": [
+      "Az első nyilvános kiadás, egykattintásos telepítéssel",
+      "Szolgáltatók, akik üzemeltetik Ön helyett a portált",
+      "Az első valódi márkák a márkajegyzékben"
+    ],
+    "retailersReady": [
+      "Hozzáférés kérése és bejelentkezés egy márka portáljára",
+      "Keresés, szűrés és az EAN-lista beillesztése, hogy lássa, mi van meg és mi hiányzik",
+      "Fotók letöltése zipként és termékadatok táblázatként",
+      "API-kulcs a szoftveréhez: először minden, utána csak a változások",
+      "Felhasználási jogok, embargó és MI-eredet minden képnél"
+    ],
+    "retailersComing": [
+      "Több márka: a márkajegyzék még csak most indul",
+      "Bővítmények, amelyek a képeket közvetlenül a Shopware-be és a WooCommerce-be viszik",
+      "Támogatás további pénztár-, PIM- és webáruház-szoftverekben, ahogy a szállítók beépítik"
+    ],
+    "kitP": "Egy márka akkor csatlakozik a leggyorsabban, ha az üzletek kérik. Kész e-mailt a márkánál dolgozó kapcsolattartójának itt talál: {url}.",
+    "ctaTitle": "Kérdése van, vagy az elejétől részt venne?",
+    "ctaBrands": "Olyan márkákat keresünk, akik szívesen formálják az első verziót: milyen rendszereket használ, és hány viszonteladót szolgál ki? Írjon nekünk.",
+    "ctaRetailers": "Olyan viszonteladókat keresünk, akik szívesen formálják az első verziót: mely márkákat kapcsolná be, és milyen szoftvert használ? Írjon nekünk.",
+    "footer": "A „Hamarosan” alatti funkciók fejlesztés alatt állnak. 0.1-es verzió, {date}."
   }
 }

@@ -9,18 +9,18 @@
     "home": "Open Brand Exchange, forside",
     "copy": "Kopier",
     "copied": "Kopiert",
-    "draft": "Spesifikasjon 0.1 (utkast): programvaren bygges nå. Ennå ikke ment for produksjon.",
+    "draft": "Versjon 0.1 testes. Den første offentlige utgivelsen forberedes.",
     "footerAbout": "En gratis, åpen måte for merkevarer å levere produktbilder og artikkeldata til forhandlerne sine.",
     "footerMore": "Mer",
     "footerSource": "Kildekode og spesifikasjon",
     "footerLicence": "Innhold CC-BY-4.0, kode MIT.",
-    "footerWorking": "«Open Brand Exchange» er et arbeidsnavn. Spesifikasjon 0.1, under utvikling.",
     "editionCloudflare": "Portal for Cloudflare",
     "editionGoogle": "Portal for Google Cloud og Docker",
     "editionHosting": "Portal for webhotell",
     "yes": "Ja",
     "inDevelopment": "Under utvikling",
-    "available": "Tilgjengelig"
+    "available": "Tilgjengelig",
+    "footerContact": "Kontakt"
   },
   "nav": {
     "brands": "For merkevarer",
@@ -32,7 +32,9 @@
     "downloads": "Nedlastinger",
     "faq": "Vanlige spørsmål",
     "governance": "Styring og navn",
-    "privacy": "Personvern"
+    "privacy": "Personvern",
+    "imprint": "Om nettstedet",
+    "cookies": "Informasjonskapsler"
   },
   "meta": {
     "home": {
@@ -73,11 +75,19 @@
     },
     "governance": {
       "title": "Styring og navn",
-      "description": "Hvem som bestemmer over standarden, hvordan du bidrar, lisensene og hvorfor navnet er et arbeidsnavn."
+      "description": "Hvem som står bak standarden, hvem som bestemmer, hvordan man bidrar, lisensene og navnet."
     },
     "privacy": {
       "title": "Personvern",
-      "description": "Dette nettstedet sporer deg ikke: ingen informasjonskapsler, ingen sporing."
+      "description": "Dette nettstedet sporer deg ikke. De få opplysningene som behandles, og hvorfor."
+    },
+    "imprint": {
+      "title": "Om nettstedet",
+      "description": "Hvem som utgir dette nettstedet, og hvordan du når oss."
+    },
+    "cookies": {
+      "title": "Informasjonskapsler",
+      "description": "Dette nettstedet bruker ingen informasjonskapsler."
     }
   },
   "home": {
@@ -134,7 +144,7 @@
         "p": "Én publisering for alle forhandlerne dine. Slutt på filoverføringer, e-post med zip-filer og egne integrasjoner per butikk."
       }
     ],
-    "status": "Open Brand Exchange er i startfasen. Spesifikasjonen er et første utkast (0.1), og programvaren bygges nå. Vi viser ingen kunder eller tall som ikke finnes ennå.",
+    "status": "Open Brand Exchange er i startfasen. Versjon 0.1 av spesifikasjonen og programvaren testes, og den første offentlige utgivelsen forberedes. Vi viser ikke kunder eller tall som ikke finnes ennå.",
     "statusLink": "Les hvordan det styres"
   },
   "brands": {
@@ -185,13 +195,34 @@
     ],
     "adminTitle": "Dette styrer du selv",
     "admin": [
-      { "k": "Katalog", "v": "merkevarer, artikler, farger og størrelser, bilder og rekkefølgen deres" },
-      { "k": "Importer", "v": "last opp eller hent etter plan, med tydelig beskjed for hver linje som feilet" },
-      { "k": "Forhandlere", "v": "godkjenn eller avslå forespørsler (med begrunnelse), inviter eller sperr kontoer" },
-      { "k": "API-nøkler", "v": "nøkler for forhandlernes systemer: vises én gang, enkle å fornye eller trekke tilbake" },
-      { "k": "Automatisk opplasting", "v": "nøkler for dine egne systemer, og varsler når en forhandler ber om tilgang eller en import er ferdig" },
-      { "k": "Statistikk", "v": "nedlastinger og bruk per forhandler" },
-      { "k": "Innstillinger", "v": "logo, aksentfarge, velkomsttekst, standard bruksrettigheter og ditt eget domene" }
+      {
+        "k": "Katalog",
+        "v": "merkevarer, artikler, farger og størrelser, bilder og rekkefølgen deres"
+      },
+      {
+        "k": "Importer",
+        "v": "last opp eller hent etter plan, med tydelig beskjed for hver linje som feilet"
+      },
+      {
+        "k": "Forhandlere",
+        "v": "godkjenn eller avslå forespørsler (med begrunnelse), inviter eller sperr kontoer"
+      },
+      {
+        "k": "API-nøkler",
+        "v": "nøkler for forhandlernes systemer: vises én gang, enkle å fornye eller trekke tilbake"
+      },
+      {
+        "k": "Automatisk opplasting",
+        "v": "nøkler for dine egne systemer, og varsler når en forhandler ber om tilgang eller en import er ferdig"
+      },
+      {
+        "k": "Statistikk",
+        "v": "nedlastinger og bruk per forhandler"
+      },
+      {
+        "k": "Innstillinger",
+        "v": "logo, aksentfarge, velkomsttekst, standard bruksrettigheter og ditt eget domene"
+      }
     ],
     "nextTitle": "Neste steg",
     "nextHosting": "Velg hosting",
@@ -201,14 +232,42 @@
     "h1": "Automatisering",
     "lead": "PIM, ERP, DAM eller en delt mappe har allerede dataene og bildene. Velg den første oppskriften som passer: alle fungerer med alle Open Brand Exchange-portaler.",
     "chooseTitle": "Hvilken oppskrift passer deg?",
-    "head": ["Du har …", "Bruk", "Kode som trengs"],
+    "head": [
+      "Du har …",
+      "Bruk",
+      "Kode som trengs"
+    ],
     "rows": [
-      ["en CSV eller zip på en nettadresse, SFTP-server eller S3-bøtte", "Planlagt import", "ingen"],
-      ["en mappe der eksporter havner", "obx watch", "ingen"],
-      ["en server eller PC som kjører jobber om natten", "cron eller Oppgaveplanlegging", "én linje"],
-      ["eksportene dine i et Git-repo", "GitHub Action", "én YAML-fil"],
-      ["n8n, Make eller Zapier", "HTTP-steg", "ingen (visuelt)"],
-      ["en utvikler som kobler til PIM eller ERP", "API-et direkte", "litt"]
+      [
+        "en CSV eller zip på en nettadresse, SFTP-server eller S3-bøtte",
+        "Planlagt import",
+        "ingen"
+      ],
+      [
+        "en mappe der eksporter havner",
+        "obx watch",
+        "ingen"
+      ],
+      [
+        "en server eller PC som kjører jobber om natten",
+        "cron eller Oppgaveplanlegging",
+        "én linje"
+      ],
+      [
+        "eksportene dine i et Git-repo",
+        "GitHub Action",
+        "én YAML-fil"
+      ],
+      [
+        "n8n, Make eller Zapier",
+        "HTTP-steg",
+        "ingen (visuelt)"
+      ],
+      [
+        "en utvikler som kobler til PIM eller ERP",
+        "API-et direkte",
+        "litt"
+      ]
     ],
     "formatTitle": "Ett format for alt",
     "formatP": "Alle måter å publisere på leser det samme: en products.csv med én linje per størrelse, og bilder med navnet {style}_{color}_{position}.jpg (varenummer, farge, posisjon). Når du har det, virker alle oppskriftene nedenfor.",
@@ -221,9 +280,18 @@
     "scheduledTitle": "1. Planlagt import (uten kode)",
     "scheduledP": "I administrasjonen: Importer → Planlagte importer → Legg til. Velg kilde og hvor ofte den skal kjøre.",
     "scheduled": [
-      { "k": "Nettadresse (HTTPS)", "v": "adressen til en products.csv, eller til en zip med products.csv og bilder. Innloggingsdata lagres kryptert." },
-      { "k": "SFTP", "v": "server, bruker, passord eller nøkkel, og mappen med eksporten." },
-      { "k": "S3-bøtte", "v": "AWS S3, Cloudflare R2, MinIO eller Backblaze: endpoint, bøtte, mappe og en skrivebeskyttet nøkkel." }
+      {
+        "k": "Nettadresse (HTTPS)",
+        "v": "adressen til en products.csv, eller til en zip med products.csv og bilder. Innloggingsdata lagres kryptert."
+      },
+      {
+        "k": "SFTP",
+        "v": "server, bruker, passord eller nøkkel, og mappen med eksporten."
+      },
+      {
+        "k": "S3-bøtte",
+        "v": "AWS S3, Cloudflare R2, MinIO eller Backblaze: endpoint, bøtte, mappe og en skrivebeskyttet nøkkel."
+      }
     ],
     "scheduledMode": "Velg «Oppdater» (bare legge til og endre) eller «Speil» (også ta offline det som har forsvunnet fra filen). Speil nekter hvis mer enn halvparten av en merkevare ville forsvinne, så en feil eksport aldri tømmer katalogen. «Test tilkobling» viser hvilke filer som ville blitt lest.",
     "cliTitle": "obx-verktøyet",
@@ -271,7 +339,7 @@
       "en merkevare kan eksportere alle data og bilder og forlate deg",
       "du oppgir dine egne priser og vilkår på ditt eget nettsted"
     ],
-    "listHow": "Åpne en pull request i nettstedets repo med opplysningene dine i src/data/providers.json. Initiativtakeren står først, alle andre alfabetisk.",
+    "listHow": "Åpne en pull request i nettstedets repository med opplysningene dine i src/data/providers.json. Initiativtakerens selskap står først, alle andre alfabetisk.",
     "p2Title": "2. Med ett klikk",
     "p2P": "Din egen portal på din egen konto, uten å drifte en server.",
     "cfP": "Kjører på Cloudflare Workers, med D1 som database og R2 for bildene. Klikk på knappen, logg inn hos Cloudflare og følg stegene. Cloudflare har gratiskvoter; sjekk de gjeldende prisene for store kataloger. Webversjonene av bildene dine lages av nettleseren din og obx-verktøyet, så du trenger ikke gjøre noe.",
@@ -312,18 +380,36 @@
     "portalTitle": "Hva en merkevareportal gir deg",
     "portalP": "Hver merkevare driver sin egen portal med sitt eget navn, for eksempel «Kestrel · {portal}».",
     "portal": [
-      { "h": "Be om tilgang", "p": "Be om tilgang i merkevarens portal. Merkevaren godkjenner, og du får en invitasjon på e-post." },
-      { "h": "Søk og filtrer", "p": "På merkevare, sesong, kolleksjon, produkttype eller farge. Hver artikkel med alle bilder og data." },
-      { "h": "Lim inn EAN-listen din", "p": "Lim inn EAN fra kassesystemet og se med en gang hvilke artikler som finnes og hvilke som mangler." },
-      { "h": "Last ned som du vil", "p": "Ett bilde, én artikkel, utvalget ditt eller alt i et filter som zip. Original (hvis merkevaren tillater det), web eller kvadratisk." },
-      { "h": "Artikkeldata som regneark", "p": "EAN per størrelse, farge, materiale, vaskeråd og beskrivelse, klart for ditt eget system." },
-      { "h": "Hva som er tillatt", "p": "Bruksrettigheter, embargodato og om et bilde er laget med KI vises ved hvert bilde." }
+      {
+        "h": "Be om tilgang",
+        "p": "Be om tilgang i merkevarens portal. Merkevaren godkjenner, og du får en invitasjon på e-post."
+      },
+      {
+        "h": "Søk og filtrer",
+        "p": "På merkevare, sesong, kolleksjon, produkttype eller farge. Hver artikkel med alle bilder og data."
+      },
+      {
+        "h": "Lim inn EAN-listen din",
+        "p": "Lim inn EAN fra kassesystemet og se med en gang hvilke artikler som finnes og hvilke som mangler."
+      },
+      {
+        "h": "Last ned som du vil",
+        "p": "Ett bilde, én artikkel, utvalget ditt eller alt i et filter som zip. Original (hvis merkevaren tillater det), web eller kvadratisk."
+      },
+      {
+        "h": "Artikkeldata som regneark",
+        "p": "EAN per størrelse, farge, materiale, vaskeråd og beskrivelse, klart for ditt eget system."
+      },
+      {
+        "h": "Hva som er tillatt",
+        "p": "Bruksrettigheter, embargodato og om et bilde er laget med KI vises ved hvert bilde."
+      }
     ],
-    "apiTitle": "En API-nøkkel for systemet ditt",
+    "apiTitle": "En API-nøkkel for programvaren deres",
     "apiP": "Henter PIM-, kasse- eller nettbutikksystemet ditt bilder selv? Be da om en API-nøkkel for systemet ditt. Det henter først alt og deretter bare endringene, også det merkevaren trekker tilbake. Bildene kobles til artiklene dine via EAN.",
     "apiDev": "Til utvikleren din: slik ser det ut.",
-    "toolsTitle": "Photopilot og annen programvare",
-    "toolsP": "Open Brand Exchange er en åpen standard: all programvare kan lese den. Photopilot, initiativtakeren, kan bruke den i programvaren sin for forhandlere, og andre leverandører kan gjøre det samme. Du trenger ingen bestemt programvare: en nettleser holder.",
+    "toolsTitle": "Hvilken programvare som fungerer med det",
+    "toolsP": "Open Brand Exchange er en åpen standard: all programvare kan støtte den. Photopilot, initiativtakerens selskap, bygger den inn i sin programvare for forhandlere, og andre leverandører kan gjøre det samme. Du trenger ingen bestemt programvare: en nettleser er nok.",
     "toolsLink": "Spesifikasjon for utviklere",
     "findTitle": "Finn en merkevare",
     "findP": "Merkevarer som vil være synlige, står i merkevareoversikten. Gir en merkevare deg bare adressen til portalen sin, fungerer det også.",
@@ -345,11 +431,25 @@
     "specP": "Versjon 0.1 (utkast). OpenAPI 3.1, JSON Schema 2020-12, eksempler og en fiktiv testmerkevare, Kestrel Outfitters. Lisens CC-BY-4.0: fritt å implementere, også kommersielt.",
     "specStart": "Start med protocol.md",
     "apisTitle": "Tre API-er",
-    "apisHead": ["API", "For", "Status", "Kontrakt"],
+    "apisHead": [
+      "API",
+      "For",
+      "Status",
+      "Kontrakt"
+    ],
     "apis": [
-      { "who": "forhandleres programvare: discovery, OAuth2 client credentials, endringsstrøm, GTIN-oppslag, renditions, eksporter, webhooks", "status": "normativ" },
-      { "who": "en merkevares automatisering: idempotente upserts på merkevarens egne ID-er, opplastinger adressert med sha256, bunker, importer", "status": "normativ" },
-      { "who": "den felles administrasjonen og forhandlerportalen", "status": "ikke-normativ" }
+      {
+        "who": "forhandleres programvare: discovery, OAuth2 client credentials, endringsstrøm, GTIN-oppslag, renditions, eksporter, webhooks",
+        "status": "normativ"
+      },
+      {
+        "who": "en merkevares automatisering: idempotente upserts på merkevarens egne ID-er, opplastinger adressert med sha256, bunker, importer",
+        "status": "normativ"
+      },
+      {
+        "who": "den felles administrasjonen og forhandlerportalen",
+        "status": "ikke-normativ"
+      }
     ],
     "readTitle": "Les en merkevareportal på noen få linjer",
     "sdkTitle": "SDK og kommandolinjeverktøy",
@@ -357,7 +457,12 @@
     "confTitle": "Samsvar",
     "confP": "En implementasjon er OBX-samsvarende for en profil når obx-conformance består alle obligatoriske tester i profilen. Det finnes tre profiler: protocol, ingest og portal.",
     "implTitle": "Implementasjoner",
-    "implHead": ["Repo", "Hva", "Lisens", "Status"],
+    "implHead": [
+      "Repo",
+      "Hva",
+      "Lisens",
+      "Status"
+    ],
     "impl": [
       "spesifikasjon, skjemaer, testdata",
       "Go-SDK, obx-verktøy, samsvarstester, mockserver",
@@ -420,53 +525,230 @@
     "h1": "Nedlastinger",
     "lead": "Materiell å dele med kolleger, merkevarer og forhandlere.",
     "brochureTitle": "Brosjyre for forhandlere",
-    "brochureP": "To sider om hva Open Brand Exchange betyr for en butikk, til å gi en kollega eller en merkevare.",
+    "brochureP": "Hva Open Brand Exchange betyr for en butikk: merkevarens portal, en API-nøkkel for programvaren deres, og hva som allerede er klart. Til å gi videre til en kollega eller en merkevare.",
     "kitTitle": "E-post til merkevarer som ikke er med ennå",
     "kitP": "Den ferdige e-posten fra forhandlersiden, som tekstfil.",
     "exampleTitle": "Eksempelfiler",
     "exampleP": "En products.csv og bilder fra den fiktive merkevaren Kestrel Outfitters, for å prøve en import.",
     "exampleLink": "Eksempelfiler i spesifikasjonen",
     "templateP": "En tom CSV-mal finnes også i administrasjonen for hver portal, under Importer.",
-    "dutch": "Nederlandsk",
-    "english": "Engelsk"
+    "brandsTitle": "Brosjyre for merkevarer",
+    "brandsP": "Din egen portal for forhandlere, API-et, automatisk opplasting og hosting, og hva som allerede er klart. Til å dele med teamet ditt.",
+    "allLanguages": "Alle språk"
   },
   "faq": {
     "h1": "Vanlige spørsmål",
     "items": [
-      { "q": "Hva koster det?", "a": "Standarden og programvaren er gratis. Driver du selv, betaler du bare for hosting. En leverandør har egne priser, som du finner på leverandørens nettsted." },
-      { "q": "Trenger vi en utvikler?", "a": "Ikke for det grunnleggende. En portal installeres med ett klikk, og en planlagt import fra en nettadresse, SFTP-server eller bøtte krever ingen kode. En utvikler hjelper hvis du vil koble til PIM eller ERP direkte." },
-      { "q": "Er dette enda en plattform vi må være med på?", "a": "Nei. Hver merkevare driver sin egen portal, på sitt eget domene om den vil. Det finnes ingen sentral plattform som har innholdet ditt." },
-      { "q": "Hvem bestemmer hvilke forhandlere som får tilgang?", "a": "Det gjør du. Forhandlere ber om tilgang, og du godkjenner eller avslår hver forespørsel. Du velger også hvilke merkevarer en forhandler ser, og om originaler kan lastes ned." },
-      { "q": "Hva trenger forhandlerne?", "a": "En nettleser. Forhandlere med programvare som henter bilder selv, kan be om en API-nøkkel for den programvaren." },
-      { "q": "Hvilke bildeformater finnes?", "a": "Originalen, akkurat slik du lastet den opp, pluss en webversjon (maks 2000 px), en kvadratisk versjon og en liten forhåndsvisning. Forhandlerne velger det de trenger." },
-      { "q": "Følger opplysninger om KI og rettigheter med bildene?", "a": "Ja. Bruksrettigheter, embargodato og om KI er brukt, hører til hvert bilde. Originaler lagres og leveres uendret, inkludert innebygde content credentials." },
-      { "q": "Kan vi bytte leverandør senere?", "a": "Ja. Alle portaler snakker samme standard, og alle leverandører som står her, lar deg eksportere alt innholdet ditt. Ditt eget domene er det samme." },
-      { "q": "Er det klart?", "a": "Ikke ennå. Spesifikasjonen er et første utkast (0.1), og programvaren bygges nå. Du kan allerede prøve det, men det er ennå ikke ment for produksjon." },
-      { "q": "Hvem står bak?", "a": "Open Brand Exchange ble startet av Photopilot, et nederlandsk selskap som lager programvare for produktfotografering. Standarden er åpen, og målet er at den skal tilhøre merkevarene og forhandlerne som bruker den." }
+      {
+        "q": "Hva koster det?",
+        "a": "Standarden og programvaren er gratis. Driver du selv, betaler du bare for hosting. En leverandør har egne priser, som du finner på leverandørens nettsted."
+      },
+      {
+        "q": "Trenger vi en utvikler?",
+        "a": "Ikke for det grunnleggende. En portal installeres med ett klikk, og en planlagt import fra en nettadresse, SFTP-server eller bøtte krever ingen kode. En utvikler hjelper hvis du vil koble til PIM eller ERP direkte."
+      },
+      {
+        "q": "Er dette enda en plattform vi må være med på?",
+        "a": "Nei. Hver merkevare driver sin egen portal, på sitt eget domene om den vil. Det finnes ingen sentral plattform som har innholdet ditt."
+      },
+      {
+        "q": "Hvem bestemmer hvilke forhandlere som får tilgang?",
+        "a": "Det gjør du. Forhandlere ber om tilgang, og du godkjenner eller avslår hver forespørsel. Du velger også hvilke merkevarer en forhandler ser, og om originaler kan lastes ned."
+      },
+      {
+        "q": "Hva trenger forhandlerne?",
+        "a": "En nettleser. Forhandlere med programvare som henter bilder selv, kan be om en API-nøkkel for den programvaren."
+      },
+      {
+        "q": "Hvilke bildeformater finnes?",
+        "a": "Originalen, akkurat slik du lastet den opp, pluss en webversjon (maks 2000 px), en kvadratisk versjon og en liten forhåndsvisning. Forhandlerne velger det de trenger."
+      },
+      {
+        "q": "Følger opplysninger om KI og rettigheter med bildene?",
+        "a": "Ja. Bruksrettigheter, embargodato og om KI er brukt, hører til hvert bilde. Originaler lagres og leveres uendret, inkludert innebygde content credentials."
+      },
+      {
+        "q": "Kan vi bytte leverandør senere?",
+        "a": "Ja. Alle portaler snakker samme standard, og alle leverandører som står her, lar deg eksportere alt innholdet ditt. Ditt eget domene er det samme."
+      },
+      {
+        "q": "Er det klart?",
+        "a": "Nesten. Versjon 0.1 av spesifikasjonen og av de tre portalutgavene testes. Den første offentlige utgivelsen forberedes; inntil da er programvaren ikke offentlig tilgjengelig."
+      },
+      {
+        "q": "Hvem står bak?",
+        "a": "Open Brand Exchange er et initiativ fra {person}, som også grunnla Photopilot, et selskap som lager programvare for produktfotografering. Alt blir overført til {foundation}, slik at standarden tilhører merkevarene, forhandlerne og programvareleverandørene som bruker den, og ikke ett selskap."
+      }
     ]
   },
   "governance": {
     "h1": "Styring og navn",
     "lead": "Open Brand Exchange skal tilhøre merkevarene, forhandlerne og programvareleverandørene som bruker det, ikke ett enkelt selskap.",
     "sections": [
-      { "h": "Hvem bestemmer", "p": "Inntil det finnes tre uavhengige implementasjoner som består samsvarstestene, bestemmer vedlikeholderne i Photopilot over endringer etter offentlig diskusjon. Deretter overtar en styringsgruppe med én plass per implementør og minst én merkevare og én forhandler." },
-      { "h": "Slik gjøres endringer", "p": "Hver endring i standarden er en offentlig pull request med en kort begrunnelse. Større forslag er åpne for kommentarer i minst 14 dager. Alle kan bidra uten å signere en bidragsavtale." },
-      { "h": "Nøytralt fra starten", "p": "Ingenting i standarden kan kreve en bestemt leverandør eller hostet tjeneste. Hvem som helst kan implementere den, drifte den for andre eller bygge et konkurrerende produkt på den. Photopilots programvare får ingen særbehandling i samsvarstestene." },
-      { "h": "Lisenser", "p": "Spesifikasjonen og innholdet på dette nettstedet er CC-BY-4.0. SDK-et, obx-verktøyet og det felles nettgrensesnittet er Apache-2.0. De tre portalutgavene er AGPL-3.0, slik at forbedringer forblir åpne. Koden til dette nettstedet er MIT." }
+      {
+        "h": "Hvem bestemmer",
+        "p": "Inntil det finnes tre uavhengige implementasjoner som består samsvarstestene, bestemmer initiativtakeren over endringer etter offentlig diskusjon. Deretter tar en styringsgruppe over, med én plass per implementør og minst én merkevare og én forhandler."
+      },
+      {
+        "h": "Slik gjøres endringer",
+        "p": "Hver endring i standarden er en offentlig pull request med en kort begrunnelse. Større forslag er åpne for kommentarer i minst 14 dager. Alle kan bidra uten å signere en bidragsavtale."
+      },
+      {
+        "h": "Nøytralt fra starten",
+        "p": "Ingenting i standarden kan kreve en bestemt leverandør eller hostet tjeneste. Alle kan implementere den, hoste den for andre eller bygge et konkurrerende produkt på den. Ingen implementasjon får særbehandling i samsvarstestene, heller ikke den fra Photopilot, initiativtakerens selskap."
+      },
+      {
+        "h": "Lisenser",
+        "p": "Spesifikasjonen og innholdet på dette nettstedet er CC-BY-4.0. SDK-et, obx-verktøyet og det felles nettgrensesnittet er Apache-2.0. De tre portalutgavene er AGPL-3.0, slik at forbedringer forblir åpne. Koden til dette nettstedet er MIT."
+      }
     ],
     "nameTitle": "Om navnet",
-    "nameP": "«Open Brand Exchange» er et arbeidsnavn. Det kan endres før versjon 1.0, etter et varemerkesøk. Det er ikke et registrert varemerke. Programvare som består samsvarstestene, kan si at den «fungerer med Open Brand Exchange».",
-    "specLink": "Hele styringsdokumentet"
+    "nameP": "Navnet «Open Brand Exchange» er det samme på alle språk og oversettes aldri. Det er ennå ikke et registrert varemerke. Programvare som består samsvarstestene, kan si at den «fungerer med Open Brand Exchange».",
+    "specLink": "Hele styringsdokumentet",
+    "foundationTitle": "Hvem står bak",
+    "foundationP": "Open Brand Exchange er et initiativ fra {person}. Han oppretter {foundation}, som blir en nederlandsk stiftelse (stichting). Så snart den finnes, overføres opphavsretten, navnet, domenet og GitHub-organisasjonen til den. Inntil da står de i navnet til {person}."
   },
   "privacy": {
     "h1": "Personvern",
-    "lead": "Dette nettstedet sporer deg ikke.",
+    "lead": "Dette nettstedet sporer deg ikke. Her ser du de få opplysningene som behandles, og hvorfor.",
     "sections": [
-      { "h": "Ingen informasjonskapsler", "p": "Vi bruker ingen informasjonskapsler. Velger du et språk, husker nettleseren valget lokalt; det sendes aldri til oss." },
-      { "h": "Ingen sporing", "p": "Ingen reklame, ingen knapper for sosiale medier, ingen skrifter fra tredjeparter og ingen sporingsskript. Høyst bruker vi Cloudflare Web Analytics, som teller besøk uten informasjonskapsler og uten å følge deg mellom nettsteder." },
-      { "h": "Hosting", "p": "Nettstedet ligger på Cloudflare Pages. Som alle webservere behandler Cloudflare IP-adressen din for å levere sidene og beskytte dem mot misbruk." },
-      { "h": "Merkevareportaler er atskilt", "p": "Hver merkevareportal drives av merkevaren selv eller leverandøren dens. Der gjelder deres personvernerklæring, ikke denne." }
+      {
+        "h": "Hvem er ansvarlig",
+        "p": "Dette nettstedet drives av {person} (se Om nettstedet). Skriv til {email} om alt som gjelder personvern."
+      },
+      {
+        "h": "Hva vi samler inn",
+        "p": "Ingenting som identifiserer deg. Nettstedet har ingen skjemaer, kontoer, nyhetsbrev eller informasjonskapsler."
+      },
+      {
+        "h": "Hosting",
+        "p": "Nettstedet hostes på Cloudflare Pages. Som enhver webserver behandler Cloudflare tekniske opplysninger som IP-adressen din for å levere sidene og beskytte dem mot misbruk. Selv lagrer vi ingen tilgangslogger."
+      },
+      {
+        "h": "Besøksstatistikk",
+        "p": "Hvis besøksstatistikk er slått på, bruker vi Cloudflare Web Analytics. Det teller sidevisninger uten informasjonskapsler og uten å følge deg mellom nettsteder. Vi ser bare totaler."
+      },
+      {
+        "h": "E-post",
+        "p": "Hvis du skriver til oss, bruker vi adressen og meldingen din bare til å svare deg, og sletter dem når de ikke lenger trengs til det."
+      },
+      {
+        "h": "Dine rettigheter",
+        "p": "Du kan spørre hvilke personopplysninger vi har om deg, og få dem rettet eller slettet. Du kan også klage til det nederlandske datatilsynet (Autoriteit Persoonsgegevens)."
+      },
+      {
+        "h": "Merkevareportaler er atskilt",
+        "p": "Hver merkevareportal drives av merkevaren selv eller leverandøren dens. Der gjelder deres personvernerklæring, ikke denne."
+      }
     ],
-    "contact": "Spørsmål? Åpne et issue i nettstedets repo."
+    "contact": "Spørsmål om personvern? Skriv til {email}.",
+    "updated": "Sist oppdatert: {date}"
+  },
+  "org": {
+    "initiative": "Et initiativ fra {person}",
+    "inFormation": "under stiftelse"
+  },
+  "imprint": {
+    "h1": "Om nettstedet",
+    "lead": "Hvem som utgir dette nettstedet, og hvordan du når oss.",
+    "publisherTitle": "Utgitt av",
+    "foundationP": "{foundation} er under opprettelse som en nederlandsk stiftelse (stichting). Inntil den er registrert, er {person} ansvarlig for dette nettstedet.",
+    "addressLabel": "Postadresse",
+    "phoneLabel": "Telefon",
+    "registrationLabel": "Registreringsnummer",
+    "contactTitle": "Kontakt",
+    "generalLabel": "Generelle spørsmål",
+    "securityLabel": "Sikkerhetsproblemer",
+    "securityNote": "Rapporter sårbarheter fortrolig til denne adressen, ikke i et offentlig issue.",
+    "contentTitle": "Innhold og lisenser",
+    "contentP": "Vi skriver dette nettstedet nøye, men det kan inneholde feil. For tekniske detaljer er spesifikasjonen avgjørende. Tekstene kan gjenbrukes under CC BY 4.0 med kildehenvisning; koden til nettstedet er under MIT-lisensen."
+  },
+  "cookies": {
+    "h1": "Erklæring om informasjonskapsler",
+    "lead": "Dette nettstedet bruker ingen informasjonskapsler.",
+    "sections": [
+      {
+        "h": "Ingen informasjonskapsler fra oss",
+        "p": "Vi bruker ingen informasjonskapsler til statistikk, reklame eller noe annet, så vi ber heller ikke om samtykke."
+      },
+      {
+        "h": "Språkvalget ditt",
+        "p": "Velger du et språk, husker nettleseren det i sin egen lagring (localStorage), slik at neste besøk åpnes på det språket. Det sendes aldri til oss. Sletter du dette nettstedets data i nettleseren, forsvinner det."
+      },
+      {
+        "h": "Sikkerhetskontroller hos verten vår",
+        "p": "Bare hvis Cloudflare, verten vår, må sjekke at en besøkende ikke er et automatisert angrep, kan den sette en strengt nødvendig sikkerhetskapsel for den kontrollen. Den brukes ikke til noe annet."
+      },
+      {
+        "h": "Merkevareportaler",
+        "p": "Merkevareportaler er egne nettsteder, drevet av merkevaren eller leverandøren dens. Der gjelder deres egen erklæring om informasjonskapsler."
+      }
+    ],
+    "contact": "Spørsmål? Skriv til {email}."
+  },
+  "brochure": {
+    "brandsFlow": [
+      {
+        "h": "Systemene dine",
+        "p": "PIM, ERP eller en mappe"
+      },
+      {
+        "h": "Portalen din",
+        "p": "ditt navn, ditt domene"
+      },
+      {
+        "h": "Forhandlerne dine",
+        "p": "i nettleseren og via API-et"
+      }
+    ],
+    "retailersH1": "Bilder og artikkeldata fra hver merkevare, alltid på samme måte",
+    "retailersFlow": [
+      {
+        "h": "Merkevaren",
+        "p": "publiserer én gang"
+      },
+      {
+        "h": "Merkevarens portal",
+        "p": "lik for alle merkevarer"
+      },
+      {
+        "h": "Butikken din",
+        "p": "nedlasting eller API, koblet på EAN"
+      }
+    ],
+    "statusTitle": "Hva som er klart, og hva som kommer",
+    "readyTitle": "Klart i versjon 0.1",
+    "comingTitle": "Kommer snart",
+    "readyBadge": "Klart",
+    "comingBadge": "Snart",
+    "brandsReady": [
+      "Din egen portal med administrasjon, på 25 språk, på ditt eget domene",
+      "Import av CSV og bilder manuelt eller etter plan fra en nettadresse, SFTP eller S3",
+      "Verktøyet obx og oppskrifter for cron, GitHub Actions, n8n, Make og Zapier",
+      "Tilgangsforespørsler, invitasjoner og API-nøkler for forhandlernes programvare",
+      "Tre utgaver: Cloudflare, Google Cloud & Docker og vanlig webhotell"
+    ],
+    "brandsComing": [
+      "Den første offentlige utgivelsen, med installasjon med ett klikk",
+      "Leverandører som drifter en portal for deg",
+      "De første ekte merkevarene i merkevareoversikten"
+    ],
+    "retailersReady": [
+      "Be om tilgang og logg inn på en merkevares portal",
+      "Søk, filtrer og lim inn EAN-listen din for å se hva som finnes og hva som mangler",
+      "Last ned bilder som zip og artikkeldata som regneark",
+      "En API-nøkkel for programvaren deres: først alt, deretter bare endringene",
+      "Bruksrettigheter, embargo og KI-opprinnelse ved hvert bilde"
+    ],
+    "retailersComing": [
+      "Flere merkevarer: merkevareoversikten har så vidt startet",
+      "Tillegg som sender bilder rett inn i Shopware og WooCommerce",
+      "Støtte i mer kasse-, PIM- og nettbutikkprogramvare, etter hvert som leverandørene legger det inn"
+    ],
+    "kitP": "En merkevare blir raskest med når butikkene ber om det. En ferdig e-post til kontaktpersonen din hos merkevaren finner du på {url}.",
+    "ctaTitle": "Spørsmål, eller vil du være med fra starten?",
+    "ctaBrands": "Vi ser etter merkevarer som vil være med å forme den første versjonen: hvilke systemer bruker du, og hvor mange forhandlere betjener du? Skriv til oss.",
+    "ctaRetailers": "Vi ser etter forhandlere som vil være med å forme den første versjonen: hvilke merkevarer vil du koble til, og hvilken programvare bruker du? Skriv til oss.",
+    "footer": "Funksjoner under «Kommer snart» er under utvikling. Versjon 0.1, {date}."
   }
 }

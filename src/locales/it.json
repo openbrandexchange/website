@@ -9,18 +9,18 @@
     "home": "Open Brand Exchange, home",
     "copy": "Copia",
     "copied": "Copiato",
-    "draft": "Specifica 0.1 (bozza): il software è in costruzione. Non ancora pensato per la produzione.",
+    "draft": "La versione 0.1 è in fase di test. Si sta preparando la prima versione pubblica.",
     "footerAbout": "Un modo gratuito e aperto per i brand di consegnare immagini prodotto e dati articolo ai propri rivenditori.",
     "footerMore": "Altro",
     "footerSource": "Codice sorgente e specifica",
     "footerLicence": "Contenuti CC-BY-4.0, codice MIT.",
-    "footerWorking": "«Open Brand Exchange» è un nome provvisorio. Specifica 0.1, in sviluppo.",
     "editionCloudflare": "Portale per Cloudflare",
     "editionGoogle": "Portale per Google Cloud e Docker",
     "editionHosting": "Portale per web hosting",
     "yes": "Sì",
     "inDevelopment": "In sviluppo",
-    "available": "Disponibile"
+    "available": "Disponibile",
+    "footerContact": "Contatti"
   },
   "nav": {
     "brands": "Per i brand",
@@ -32,7 +32,9 @@
     "downloads": "Download",
     "faq": "Domande frequenti",
     "governance": "Governance e nome",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "imprint": "Note legali",
+    "cookies": "Cookie"
   },
   "meta": {
     "home": {
@@ -73,11 +75,19 @@
     },
     "governance": {
       "title": "Governance e nome",
-      "description": "Chi decide sullo standard, come contribuire, le licenze e perché il nome è provvisorio."
+      "description": "Chi c'è dietro lo standard, chi decide, come contribuire, le licenze e il nome."
     },
     "privacy": {
       "title": "Privacy",
-      "description": "Questo sito non ti traccia: niente cookie, niente tracciamento."
+      "description": "Questo sito non ti traccia. I pochi dati trattati, e perché."
+    },
+    "imprint": {
+      "title": "Note legali",
+      "description": "Chi pubblica questo sito e come contattarci."
+    },
+    "cookies": {
+      "title": "Cookie",
+      "description": "Questo sito non imposta cookie."
     }
   },
   "home": {
@@ -134,7 +144,7 @@
         "p": "Una sola pubblicazione per tutti i rivenditori. Basta trasferimenti di file, e-mail con zip e un'integrazione per ogni negozio."
       }
     ],
-    "status": "Open Brand Exchange è agli inizi. La specifica è una prima bozza (0.1) e il software è in costruzione. Non mostriamo clienti o numeri che ancora non esistono.",
+    "status": "Open Brand Exchange è all'inizio. La versione 0.1 della specifica e del software è in fase di test e si sta preparando la prima versione pubblica. Non mostriamo clienti o numeri che ancora non esistono.",
     "statusLink": "Scopri come è governato"
   },
   "brands": {
@@ -185,13 +195,34 @@
     ],
     "adminTitle": "Cosa gestisci tu",
     "admin": [
-      { "k": "Catalogo", "v": "brand, articoli, colori e taglie, immagini e il loro ordine" },
-      { "k": "Import", "v": "caricamento o recupero pianificato, con un messaggio chiaro per ogni riga non riuscita" },
-      { "k": "Rivenditori", "v": "approvare o rifiutare richieste (con motivazione), invitare o bloccare account" },
-      { "k": "Chiavi API", "v": "chiavi per i software dei rivenditori: mostrate una volta sola, facili da rinnovare o revocare" },
-      { "k": "Caricamento automatico", "v": "chiavi per i tuoi sistemi e notifiche quando un rivenditore chiede l'accesso o un import termina" },
-      { "k": "Statistiche", "v": "download e utilizzo per rivenditore" },
-      { "k": "Impostazioni", "v": "logo, colore d'accento, testo di benvenuto, diritti d'uso predefiniti e il tuo dominio" }
+      {
+        "k": "Catalogo",
+        "v": "brand, articoli, colori e taglie, immagini e il loro ordine"
+      },
+      {
+        "k": "Import",
+        "v": "caricamento o recupero pianificato, con un messaggio chiaro per ogni riga non riuscita"
+      },
+      {
+        "k": "Rivenditori",
+        "v": "approvare o rifiutare richieste (con motivazione), invitare o bloccare account"
+      },
+      {
+        "k": "Chiavi API",
+        "v": "chiavi per i software dei rivenditori: mostrate una volta sola, facili da rinnovare o revocare"
+      },
+      {
+        "k": "Caricamento automatico",
+        "v": "chiavi per i tuoi sistemi e notifiche quando un rivenditore chiede l'accesso o un import termina"
+      },
+      {
+        "k": "Statistiche",
+        "v": "download e utilizzo per rivenditore"
+      },
+      {
+        "k": "Impostazioni",
+        "v": "logo, colore d'accento, testo di benvenuto, diritti d'uso predefiniti e il tuo dominio"
+      }
     ],
     "nextTitle": "Prossimo passo",
     "nextHosting": "Scegli l'hosting",
@@ -201,14 +232,42 @@
     "h1": "Automazione",
     "lead": "Il tuo PIM, ERP, DAM o una cartella condivisa ha già i dati e le foto. Scegli la prima ricetta adatta: funzionano con qualsiasi portale Open Brand Exchange.",
     "chooseTitle": "Quale ricetta fa per te?",
-    "head": ["Hai…", "Usa", "Codice necessario"],
+    "head": [
+      "Hai…",
+      "Usa",
+      "Codice necessario"
+    ],
     "rows": [
-      ["un CSV o uno zip su un indirizzo web, un server SFTP o un bucket S3", "Import pianificato", "nessuno"],
-      ["una cartella dove arrivano gli export", "obx watch", "nessuno"],
-      ["un server o PC che esegue attività di notte", "cron o Utilità di pianificazione", "una riga"],
-      ["i tuoi export in un repository Git", "GitHub Action", "un file YAML"],
-      ["n8n, Make o Zapier", "Passaggi HTTP", "nessuno (visuale)"],
-      ["uno sviluppatore che collega il tuo PIM o ERP", "L'API direttamente", "un po'"]
+      [
+        "un CSV o uno zip su un indirizzo web, un server SFTP o un bucket S3",
+        "Import pianificato",
+        "nessuno"
+      ],
+      [
+        "una cartella dove arrivano gli export",
+        "obx watch",
+        "nessuno"
+      ],
+      [
+        "un server o PC che esegue attività di notte",
+        "cron o Utilità di pianificazione",
+        "una riga"
+      ],
+      [
+        "i tuoi export in un repository Git",
+        "GitHub Action",
+        "un file YAML"
+      ],
+      [
+        "n8n, Make o Zapier",
+        "Passaggi HTTP",
+        "nessuno (visuale)"
+      ],
+      [
+        "uno sviluppatore che collega il tuo PIM o ERP",
+        "L'API direttamente",
+        "un po'"
+      ]
     ],
     "formatTitle": "Un formato per tutto",
     "formatP": "Ogni modo di pubblicare legge la stessa cosa: un products.csv con una riga per taglia e foto chiamate {style}_{color}_{position}.jpg (modello, colore, posizione). Una volta pronto questo, tutte le ricette qui sotto funzionano.",
@@ -221,9 +280,18 @@
     "scheduledTitle": "1. Import pianificato (senza codice)",
     "scheduledP": "Nella tua amministrazione: Import → Import pianificati → Aggiungi. Scegli la sorgente e ogni quanto deve girare.",
     "scheduled": [
-      { "k": "Indirizzo web (HTTPS)", "v": "l'indirizzo di un products.csv, o di uno zip con products.csv e le foto. Le credenziali sono conservate cifrate." },
-      { "k": "SFTP", "v": "server, utente, password o chiave, e la cartella con l'export." },
-      { "k": "Bucket S3", "v": "AWS S3, Cloudflare R2, MinIO o Backblaze: endpoint, bucket, cartella e una chiave di sola lettura." }
+      {
+        "k": "Indirizzo web (HTTPS)",
+        "v": "l'indirizzo di un products.csv, o di uno zip con products.csv e le foto. Le credenziali sono conservate cifrate."
+      },
+      {
+        "k": "SFTP",
+        "v": "server, utente, password o chiave, e la cartella con l'export."
+      },
+      {
+        "k": "Bucket S3",
+        "v": "AWS S3, Cloudflare R2, MinIO o Backblaze: endpoint, bucket, cartella e una chiave di sola lettura."
+      }
     ],
     "scheduledMode": "Scegli «Aggiorna» (solo aggiungere e modificare) o «Rispecchia» (ritirare anche ciò che è sparito dal file). Rispecchia si rifiuta se sparirebbe più della metà di un brand, così un export difettoso non svuota mai il catalogo. «Prova connessione» mostra quali file verrebbero letti.",
     "cliTitle": "Lo strumento obx",
@@ -271,7 +339,7 @@
       "un brand può esportare tutti i suoi dati e immagini e andarsene",
       "pubblichi prezzi e condizioni sul tuo sito"
     ],
-    "listHow": "Apri una pull request sul repository del sito con i tuoi dati in src/data/providers.json. Il promotore è indicato per primo, tutti gli altri in ordine alfabetico.",
+    "listHow": "Apri una pull request sul repository del sito con i tuoi dati in src/data/providers.json. L'azienda dell'iniziatore è elencata per prima, tutti gli altri in ordine alfabetico.",
     "p2Title": "2. Con un clic",
     "p2P": "Il tuo portale sul tuo account, senza gestire un server.",
     "cfP": "Gira su Cloudflare Workers, con D1 come database e R2 per le immagini. Clicca il pulsante, accedi a Cloudflare e segui i passaggi. Cloudflare offre quote gratuite; controlla i prezzi attuali per cataloghi grandi. Le versioni web delle foto le creano il tuo browser e lo strumento obx, quindi non devi fare nulla.",
@@ -312,18 +380,36 @@
     "portalTitle": "Cosa ti offre il portale di un brand",
     "portalP": "Ogni brand gestisce il proprio portale, con il proprio nome: per esempio «Kestrel · {portal}».",
     "portal": [
-      { "h": "Richiedere l'accesso", "p": "Richiedi l'accesso sul portale del brand. Il brand approva e ricevi un invito via e-mail." },
-      { "h": "Cercare e filtrare", "p": "Per brand, stagione, collezione, tipo di prodotto o colore. Ogni articolo con tutte le sue immagini e i dati." },
-      { "h": "Incollare la tua lista di EAN", "p": "Incolla gli EAN dalla tua cassa e vedi subito quali articoli ci sono e quali mancano ancora." },
-      { "h": "Scaricare come vuoi", "p": "Una foto, un articolo, la tua selezione o tutto un filtro in zip. Originale (se il brand lo consente), web o quadrato." },
-      { "h": "Dati articolo in un foglio di calcolo", "p": "EAN per taglia, colore, materiale, manutenzione e descrizione, pronti per il tuo sistema." },
-      { "h": "Cosa è consentito", "p": "Diritti d'uso, data di embargo e se un'immagine è stata creata con l'IA sono indicati per ogni immagine." }
+      {
+        "h": "Richiedere l'accesso",
+        "p": "Richiedi l'accesso sul portale del brand. Il brand approva e ricevi un invito via e-mail."
+      },
+      {
+        "h": "Cercare e filtrare",
+        "p": "Per brand, stagione, collezione, tipo di prodotto o colore. Ogni articolo con tutte le sue immagini e i dati."
+      },
+      {
+        "h": "Incollare la tua lista di EAN",
+        "p": "Incolla gli EAN dalla tua cassa e vedi subito quali articoli ci sono e quali mancano ancora."
+      },
+      {
+        "h": "Scaricare come vuoi",
+        "p": "Una foto, un articolo, la tua selezione o tutto un filtro in zip. Originale (se il brand lo consente), web o quadrato."
+      },
+      {
+        "h": "Dati articolo in un foglio di calcolo",
+        "p": "EAN per taglia, colore, materiale, manutenzione e descrizione, pronti per il tuo sistema."
+      },
+      {
+        "h": "Cosa è consentito",
+        "p": "Diritti d'uso, data di embargo e se un'immagine è stata creata con l'IA sono indicati per ogni immagine."
+      }
     ],
     "apiTitle": "Una chiave API per il tuo software",
     "apiP": "Il tuo PIM, la tua cassa o il tuo e-commerce prende le immagini da solo? Allora richiedi una chiave API per il tuo software. Prima prende tutto e poi solo le modifiche, compreso ciò che il brand ritira. Le immagini vengono abbinate ai tuoi articoli tramite EAN.",
     "apiDev": "Per il tuo sviluppatore: ecco come funziona.",
-    "toolsTitle": "Photopilot e altri software",
-    "toolsP": "Open Brand Exchange è uno standard aperto: qualsiasi software può leggerlo. Photopilot, il promotore, può usarlo nel suo software per rivenditori, e altri fornitori possono fare lo stesso. Non ti serve un software particolare: basta un browser.",
+    "toolsTitle": "Quali software lo supportano",
+    "toolsP": "Open Brand Exchange è uno standard aperto: qualsiasi software può supportarlo. Photopilot, l'azienda dell'iniziatore, lo sta integrando nel suo software per rivenditori, e altri fornitori possono fare lo stesso. Non ti serve un software particolare: basta un browser.",
     "toolsLink": "Specifica per sviluppatori",
     "findTitle": "Trovare un brand",
     "findP": "I brand che scelgono di comparire sono nell'elenco dei brand. Se un brand ti dà semplicemente l'indirizzo del suo portale, funziona lo stesso.",
@@ -345,11 +431,25 @@
     "specP": "Versione 0.1 (bozza). OpenAPI 3.1, JSON Schema 2020-12, esempi e un brand di test fittizio, Kestrel Outfitters. Licenza CC-BY-4.0: libera da implementare, anche commercialmente.",
     "specStart": "Inizia da protocol.md",
     "apisTitle": "Tre API",
-    "apisHead": ["API", "Per", "Stato", "Contratto"],
+    "apisHead": [
+      "API",
+      "Per",
+      "Stato",
+      "Contratto"
+    ],
     "apis": [
-      { "who": "i software dei rivenditori: discovery, OAuth2 client credentials, feed delle modifiche, ricerca per GTIN, renditions, export, webhook", "status": "normativa" },
-      { "who": "l'automazione di un brand: upsert idempotenti sugli ID propri del brand, upload indirizzati per sha256, lotti, import", "status": "normativa" },
-      { "who": "l'amministrazione condivisa e l'area rivenditori", "status": "non normativa" }
+      {
+        "who": "i software dei rivenditori: discovery, OAuth2 client credentials, feed delle modifiche, ricerca per GTIN, renditions, export, webhook",
+        "status": "normativa"
+      },
+      {
+        "who": "l'automazione di un brand: upsert idempotenti sugli ID propri del brand, upload indirizzati per sha256, lotti, import",
+        "status": "normativa"
+      },
+      {
+        "who": "l'amministrazione condivisa e l'area rivenditori",
+        "status": "non normativa"
+      }
     ],
     "readTitle": "Leggere il portale di un brand in poche righe",
     "sdkTitle": "SDK e strumento da riga di comando",
@@ -357,7 +457,12 @@
     "confTitle": "Conformità",
     "confP": "Un'implementazione è conforme OBX per un profilo quando obx-conformance supera tutti i test obbligatori di quel profilo. I profili sono tre: protocol, ingest e portal.",
     "implTitle": "Implementazioni",
-    "implHead": ["Repository", "Cosa", "Licenza", "Stato"],
+    "implHead": [
+      "Repository",
+      "Cosa",
+      "Licenza",
+      "Stato"
+    ],
     "impl": [
       "specifica, schemi, dati di test",
       "SDK Go, strumento obx, test di conformità, server fittizio",
@@ -420,53 +525,230 @@
     "h1": "Download",
     "lead": "Materiale da condividere con colleghi, brand e rivenditori.",
     "brochureTitle": "Brochure per i rivenditori",
-    "brochureP": "Due pagine su cosa significa Open Brand Exchange per un negozio, da dare a un collega o a un brand.",
+    "brochureP": "Cosa significa Open Brand Exchange per un negozio: l'area rivenditori del brand, una chiave API per il tuo software e cosa è già pronto. Da dare a un collega o a un brand.",
     "kitTitle": "E-mail per i brand che ancora non ci sono",
     "kitP": "L'e-mail pronta della pagina per i rivenditori, come file di testo.",
     "exampleTitle": "File di esempio",
     "exampleP": "Un products.csv e immagini del brand fittizio Kestrel Outfitters, per provare un import.",
     "exampleLink": "File di esempio nella specifica",
     "templateP": "Un modello CSV vuoto è disponibile anche nell'amministrazione di ogni portale, sotto Import.",
-    "dutch": "Olandese",
-    "english": "Inglese"
+    "brandsTitle": "Brochure per i brand",
+    "brandsP": "Il tuo portale per i rivenditori, l'API, il caricamento automatico e l'hosting, e cosa è già pronto. Da condividere con il tuo team.",
+    "allLanguages": "Tutte le lingue"
   },
   "faq": {
     "h1": "Domande frequenti",
     "items": [
-      { "q": "Quanto costa?", "a": "Lo standard e il software sono gratuiti. Se lo ospiti tu, paghi solo l'hosting. Un provider applica i propri prezzi, che trovi sul suo sito." },
-      { "q": "Serve uno sviluppatore?", "a": "Non per le basi. Un portale si installa con un clic, e un import pianificato da un indirizzo web, un server SFTP o un bucket non richiede codice. Uno sviluppatore è utile se vuoi collegare direttamente il tuo PIM o ERP." },
-      { "q": "È l'ennesima piattaforma a cui iscriversi?", "a": "No. Ogni brand gestisce il proprio portale, sul proprio dominio se vuole. Non esiste una piattaforma centrale che detiene i tuoi contenuti." },
-      { "q": "Chi decide quale rivenditore ha accesso?", "a": "Tu. I rivenditori chiedono l'accesso e tu approvi o rifiuti ogni richiesta. Scegli anche quali brand vede un rivenditore e se gli originali si possono scaricare." },
-      { "q": "Di cosa hanno bisogno i rivenditori?", "a": "Di un browser. I rivenditori con un software che prende le immagini da solo possono richiedere una chiave API per quel software." },
-      { "q": "Quali formati di immagine ci sono?", "a": "L'originale, esattamente come l'hai caricato, più una versione web (al massimo 2000 px), una versione quadrata e una piccola anteprima. I rivenditori scelgono ciò che serve." },
-      { "q": "Le informazioni su IA e diritti restano con le immagini?", "a": "Sì. Diritti d'uso, data di embargo e l'eventuale uso di IA fanno parte di ogni immagine. Gli originali vengono conservati e consegnati senza modifiche, comprese le content credentials incorporate." },
-      { "q": "Possiamo cambiare provider in seguito?", "a": "Sì. Ogni portale parla lo stesso standard e ogni provider elencato qui ti permette di esportare tutti i tuoi contenuti. Il tuo dominio resta lo stesso." },
-      { "q": "È pronto?", "a": "Non ancora. La specifica è una prima bozza (0.1) e il software è in costruzione. Puoi già provarlo, ma non è ancora pensato per la produzione." },
-      { "q": "Chi c'è dietro?", "a": "Open Brand Exchange è stato avviato da Photopilot, un'azienda olandese che sviluppa software per la fotografia di prodotto. Lo standard è aperto e l'obiettivo è che appartenga ai brand e ai rivenditori che lo usano." }
+      {
+        "q": "Quanto costa?",
+        "a": "Lo standard e il software sono gratuiti. Se lo ospiti tu, paghi solo l'hosting. Un provider applica i propri prezzi, che trovi sul suo sito."
+      },
+      {
+        "q": "Serve uno sviluppatore?",
+        "a": "Non per le basi. Un portale si installa con un clic, e un import pianificato da un indirizzo web, un server SFTP o un bucket non richiede codice. Uno sviluppatore è utile se vuoi collegare direttamente il tuo PIM o ERP."
+      },
+      {
+        "q": "È l'ennesima piattaforma a cui iscriversi?",
+        "a": "No. Ogni brand gestisce il proprio portale, sul proprio dominio se vuole. Non esiste una piattaforma centrale che detiene i tuoi contenuti."
+      },
+      {
+        "q": "Chi decide quale rivenditore ha accesso?",
+        "a": "Tu. I rivenditori chiedono l'accesso e tu approvi o rifiuti ogni richiesta. Scegli anche quali brand vede un rivenditore e se gli originali si possono scaricare."
+      },
+      {
+        "q": "Di cosa hanno bisogno i rivenditori?",
+        "a": "Di un browser. I rivenditori con un software che prende le immagini da solo possono richiedere una chiave API per quel software."
+      },
+      {
+        "q": "Quali formati di immagine ci sono?",
+        "a": "L'originale, esattamente come l'hai caricato, più una versione web (al massimo 2000 px), una versione quadrata e una piccola anteprima. I rivenditori scelgono ciò che serve."
+      },
+      {
+        "q": "Le informazioni su IA e diritti restano con le immagini?",
+        "a": "Sì. Diritti d'uso, data di embargo e l'eventuale uso di IA fanno parte di ogni immagine. Gli originali vengono conservati e consegnati senza modifiche, comprese le content credentials incorporate."
+      },
+      {
+        "q": "Possiamo cambiare provider in seguito?",
+        "a": "Sì. Ogni portale parla lo stesso standard e ogni provider elencato qui ti permette di esportare tutti i tuoi contenuti. Il tuo dominio resta lo stesso."
+      },
+      {
+        "q": "È pronto?",
+        "a": "Quasi. La versione 0.1 della specifica e delle tre edizioni del portale è in fase di test. Si sta preparando la prima versione pubblica; fino ad allora il software non è disponibile pubblicamente."
+      },
+      {
+        "q": "Chi c'è dietro?",
+        "a": "Open Brand Exchange è un'iniziativa di {person}, che ha fondato anche Photopilot, un'azienda di software per la fotografia di prodotto. Tutto sarà trasferito alla {foundation}, perché lo standard appartenga ai brand, ai rivenditori e ai fornitori di software che lo usano, non a una sola azienda."
+      }
     ]
   },
   "governance": {
     "h1": "Governance e nome",
     "lead": "Open Brand Exchange deve appartenere ai brand, ai rivenditori e ai fornitori di software che lo usano, non a una singola azienda.",
     "sections": [
-      { "h": "Chi decide", "p": "Finché non ci saranno tre implementazioni indipendenti che superano i test di conformità, i maintainer di Photopilot decidono sulle modifiche dopo una discussione pubblica. Poi subentra un comitato direttivo, con un seggio per ogni implementatore e almeno un brand e un rivenditore." },
-      { "h": "Come si fanno le modifiche", "p": "Ogni modifica allo standard è una pull request pubblica con una breve motivazione. Le proposte più ampie restano aperte ai commenti per almeno 14 giorni. Chiunque può contribuire, senza firmare accordi di contribuzione." },
-      { "h": "Neutrale per costruzione", "p": "Nulla nello standard può richiedere un fornitore o un servizio ospitato specifico. Chiunque può implementarlo, ospitarlo per altri o costruirci sopra un prodotto concorrente. Il software di Photopilot non ha alcun trattamento di favore nei test di conformità." },
-      { "h": "Licenze", "p": "La specifica e i contenuti di questo sito sono CC-BY-4.0. L'SDK, lo strumento obx e l'interfaccia web condivisa sono Apache-2.0. Le tre edizioni del portale sono AGPL-3.0, così i miglioramenti restano aperti. Il codice di questo sito è MIT." }
+      {
+        "h": "Chi decide",
+        "p": "Finché non ci sono tre implementazioni indipendenti che superano la suite di conformità, l'iniziatore decide sulle modifiche, dopo una discussione pubblica. Poi subentra un gruppo direttivo, con un seggio per implementatore e almeno un brand e un rivenditore."
+      },
+      {
+        "h": "Come si fanno le modifiche",
+        "p": "Ogni modifica allo standard è una pull request pubblica con una breve motivazione. Le proposte più ampie restano aperte ai commenti per almeno 14 giorni. Chiunque può contribuire, senza firmare accordi di contribuzione."
+      },
+      {
+        "h": "Neutrale per costruzione",
+        "p": "Nulla nello standard può richiedere un fornitore o un servizio ospitato particolare. Chiunque può implementarlo, ospitarlo per altri o costruirci sopra un prodotto concorrente. Nessuna implementazione riceve un trattamento di favore nella suite di conformità, nemmeno quella di Photopilot, l'azienda dell'iniziatore."
+      },
+      {
+        "h": "Licenze",
+        "p": "La specifica e i contenuti di questo sito sono CC-BY-4.0. L'SDK, lo strumento obx e l'interfaccia web condivisa sono Apache-2.0. Le tre edizioni del portale sono AGPL-3.0, così i miglioramenti restano aperti. Il codice di questo sito è MIT."
+      }
     ],
     "nameTitle": "Sul nome",
-    "nameP": "«Open Brand Exchange» è un nome provvisorio. Potrebbe cambiare prima della versione 1.0, dopo una ricerca sui marchi. Non è un marchio registrato. Il software che supera i test di conformità può dire di «funzionare con Open Brand Exchange».",
-    "specLink": "Documento di governance completo"
+    "nameP": "Il nome «Open Brand Exchange» è lo stesso in tutte le lingue e non viene mai tradotto. Non è ancora un marchio registrato. Il software che supera la suite di conformità può dire che «funziona con Open Brand Exchange».",
+    "specLink": "Documento di governance completo",
+    "foundationTitle": "Chi c'è dietro",
+    "foundationP": "Open Brand Exchange è un'iniziativa di {person}. Sta costituendo la {foundation}, che sarà una fondazione di diritto olandese (stichting). Appena esisterà, le verranno trasferiti il diritto d'autore, il nome, il dominio e l'organizzazione GitHub. Fino ad allora sono intestati a {person}."
   },
   "privacy": {
     "h1": "Privacy",
-    "lead": "Questo sito non ti traccia.",
+    "lead": "Questo sito non ti traccia. Ecco i pochi dati trattati, e perché.",
     "sections": [
-      { "h": "Niente cookie", "p": "Non usiamo cookie. Se scegli una lingua, il tuo browser ricorda la scelta localmente; non ci viene mai inviata." },
-      { "h": "Niente tracciamento", "p": "Niente pubblicità, niente pulsanti social, niente font di terze parti e niente script di tracciamento. Al massimo usiamo Cloudflare Web Analytics, che conta le visite senza cookie e senza seguirti su altri siti." },
-      { "h": "Hosting", "p": "Il sito è ospitato su Cloudflare Pages. Come ogni server web, Cloudflare tratta il tuo indirizzo IP per fornire le pagine e proteggerle dagli abusi." },
-      { "h": "I portali dei brand sono separati", "p": "Ogni portale di brand è gestito dal brand stesso o dal suo provider. Lì vale la loro informativa sulla privacy, non questa." }
+      {
+        "h": "Chi è responsabile",
+        "p": "Questo sito è gestito da {person} (vedi le note legali). Per qualsiasi questione di privacy scrivi a {email}."
+      },
+      {
+        "h": "Cosa raccogliamo",
+        "p": "Niente che ti identifichi. Questo sito non ha moduli, account, newsletter né cookie."
+      },
+      {
+        "h": "Hosting",
+        "p": "Il sito è ospitato su Cloudflare Pages. Come ogni server web, Cloudflare tratta dati tecnici come il tuo indirizzo IP per servire le pagine e proteggerle dagli abusi. Noi non conserviamo log di accesso."
+      },
+      {
+        "h": "Statistiche delle visite",
+        "p": "Se le statistiche delle visite sono attive, usiamo Cloudflare Web Analytics. Conta le pagine viste senza cookie e senza seguirti da un sito all'altro. Vediamo solo i totali."
+      },
+      {
+        "h": "E-mail",
+        "p": "Se ci scrivi, usiamo il tuo indirizzo e il tuo messaggio solo per risponderti, e li cancelliamo quando non servono più a questo scopo."
+      },
+      {
+        "h": "I tuoi diritti",
+        "p": "Puoi chiedere quali dati personali abbiamo su di te e farli correggere o cancellare. Puoi anche presentare reclamo all'autorità olandese per la protezione dei dati (Autoriteit Persoonsgegevens)."
+      },
+      {
+        "h": "I portali dei brand sono separati",
+        "p": "Ogni portale di brand è gestito dal brand stesso o dal suo fornitore. Lì vale la loro informativa sulla privacy, non questa."
+      }
     ],
-    "contact": "Domande? Apri una issue sul repository del sito."
+    "contact": "Domande sulla privacy? Scrivi a {email}.",
+    "updated": "Ultimo aggiornamento: {date}"
+  },
+  "org": {
+    "initiative": "Un'iniziativa di {person}",
+    "inFormation": "in costituzione"
+  },
+  "imprint": {
+    "h1": "Note legali",
+    "lead": "Chi pubblica questo sito e come contattarci.",
+    "publisherTitle": "Pubblicato da",
+    "foundationP": "La {foundation} è in fase di costituzione come fondazione di diritto olandese (stichting). Fino alla sua registrazione, il responsabile di questo sito è {person}.",
+    "addressLabel": "Indirizzo postale",
+    "phoneLabel": "Telefono",
+    "registrationLabel": "Numero di registrazione",
+    "contactTitle": "Contatti",
+    "generalLabel": "Domande generali",
+    "securityLabel": "Problemi di sicurezza",
+    "securityNote": "Segnala le vulnerabilità in modo riservato a questo indirizzo, non in una issue pubblica.",
+    "contentTitle": "Contenuti e licenze",
+    "contentP": "Scriviamo questo sito con cura, ma può contenere errori. Per i dettagli tecnici fa fede la specifica. I testi possono essere riutilizzati con licenza CC BY 4.0 citando la fonte; il codice di questo sito è sotto licenza MIT."
+  },
+  "cookies": {
+    "h1": "Informativa sui cookie",
+    "lead": "Questo sito non imposta cookie.",
+    "sections": [
+      {
+        "h": "Nessun cookie da parte nostra",
+        "p": "Non usiamo cookie per statistiche, pubblicità o altro, quindi non ti chiediamo nemmeno il consenso."
+      },
+      {
+        "h": "La tua scelta della lingua",
+        "p": "Se scegli una lingua, il tuo browser la ricorda nella propria memoria (localStorage), così la visita successiva si apre in quella lingua. Non ci viene mai inviata. Cancellando i dati di questo sito nel browser la rimuovi."
+      },
+      {
+        "h": "Controlli di sicurezza del nostro hosting",
+        "p": "Solo se Cloudflare, il nostro hosting, deve verificare che un visitatore non sia un attacco automatico, può impostare un cookie di sicurezza strettamente necessario per quella verifica. Non viene usato per nient'altro."
+      },
+      {
+        "h": "Portali dei brand",
+        "p": "I portali dei brand sono siti separati, gestiti dal brand o dal suo fornitore. Lì vale la loro informativa sui cookie."
+      }
+    ],
+    "contact": "Domande? Scrivi a {email}."
+  },
+  "brochure": {
+    "brandsFlow": [
+      {
+        "h": "I tuoi sistemi",
+        "p": "PIM, ERP o una cartella"
+      },
+      {
+        "h": "Il tuo portale",
+        "p": "il tuo nome, il tuo dominio"
+      },
+      {
+        "h": "I tuoi rivenditori",
+        "p": "nel browser e tramite l'API"
+      }
+    ],
+    "retailersH1": "Le immagini e i dati articolo di ogni brand, sempre nello stesso modo",
+    "retailersFlow": [
+      {
+        "h": "Il brand",
+        "p": "pubblica una volta sola"
+      },
+      {
+        "h": "L'area rivenditori del brand",
+        "p": "uguale per ogni brand"
+      },
+      {
+        "h": "Il tuo negozio",
+        "p": "download o API, abbinato per EAN"
+      }
+    ],
+    "statusTitle": "Cosa è pronto e cosa arriverà",
+    "readyTitle": "Pronto nella versione 0.1",
+    "comingTitle": "In arrivo",
+    "readyBadge": "Pronto",
+    "comingBadge": "Presto",
+    "brandsReady": [
+      "Il tuo portale con area di amministrazione, in 25 lingue, sul tuo dominio",
+      "Importare un CSV e le foto a mano, oppure in modo programmato da un indirizzo web, SFTP o S3",
+      "Lo strumento obx e ricette per cron, GitHub Actions, n8n, Make e Zapier",
+      "Richieste di accesso, inviti e chiavi API per il software dei tuoi rivenditori",
+      "Tre edizioni: Cloudflare, Google Cloud & Docker e normale hosting web"
+    ],
+    "brandsComing": [
+      "La prima versione pubblica, con installazione in un clic",
+      "Fornitori che gestiscono un portale per te",
+      "I primi brand reali nell'elenco"
+    ],
+    "retailersReady": [
+      "Richiedere l'accesso ed entrare nell'area rivenditori di un brand",
+      "Cercare, filtrare e incollare la tua lista di EAN per vedere cosa c'è e cosa manca",
+      "Scaricare le foto in uno zip e i dati articolo come foglio di calcolo",
+      "Una chiave API per il tuo software: prima tutto, poi solo le modifiche",
+      "Diritti d'uso, embargo e provenienza IA con ogni immagine"
+    ],
+    "retailersComing": [
+      "Più brand: l'elenco è appena iniziato",
+      "Plugin che portano le immagini direttamente in Shopware e WooCommerce",
+      "Supporto in altri software di cassa, PIM ed e-commerce, man mano che i fornitori lo aggiungono"
+    ],
+    "kitP": "Un brand aderisce prima se sono i negozi a chiederlo. Su {url} trovi un'e-mail pronta da inviare al tuo referente presso il brand.",
+    "ctaTitle": "Domande, o vuoi partecipare fin dall'inizio?",
+    "ctaBrands": "Cerchiamo brand che vogliano contribuire a dare forma alla prima versione: quali sistemi usi e quanti rivenditori servi? Scrivici.",
+    "ctaRetailers": "Cerchiamo rivenditori che vogliano contribuire a dare forma alla prima versione: quali brand vuoi collegare e quale software usi? Scrivici.",
+    "footer": "Le funzioni sotto «In arrivo» sono in sviluppo. Versione 0.1, {date}."
   }
 }

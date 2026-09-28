@@ -9,18 +9,18 @@
     "home": "Open Brand Exchange, home",
     "copy": "Copy",
     "copied": "Copied",
-    "draft": "Specification 0.1 (draft): the software is being built. Not for production use yet.",
+    "draft": "Version 0.1 is in testing. The first public release is being prepared.",
     "footerAbout": "A free, open way for brands to deliver product images and article data to their retailers.",
     "footerMore": "More",
     "footerSource": "Source code and specification",
     "footerLicence": "Content CC-BY-4.0, code MIT.",
-    "footerWorking": "\"Open Brand Exchange\" is a working name. Specification 0.1, in development.",
     "editionCloudflare": "Portal for Cloudflare",
     "editionGoogle": "Portal for Google Cloud & Docker",
     "editionHosting": "Portal for web hosting",
     "yes": "Yes",
     "inDevelopment": "In development",
-    "available": "Available"
+    "available": "Available",
+    "footerContact": "Contact"
   },
   "nav": {
     "brands": "For brands",
@@ -32,7 +32,9 @@
     "downloads": "Downloads",
     "faq": "FAQ",
     "governance": "Governance and name",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "imprint": "Imprint",
+    "cookies": "Cookies"
   },
   "meta": {
     "home": {
@@ -73,11 +75,19 @@
     },
     "governance": {
       "title": "Governance and name",
-      "description": "Who decides on the standard, how to contribute, the licences, and why the name is a working name."
+      "description": "Who is behind the standard, who decides, how to contribute, the licences and the name."
     },
     "privacy": {
       "title": "Privacy",
-      "description": "This site does not track you: no cookies, no tracking."
+      "description": "This site does not track you. What little data is processed, and why."
+    },
+    "imprint": {
+      "title": "Imprint",
+      "description": "Who publishes this website, and how to reach us."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "description": "This website sets no cookies."
     }
   },
   "home": {
@@ -134,7 +144,7 @@
         "p": "One publication for all your retailers. No more file transfers, emails with zips or a separate integration per store."
       }
     ],
-    "status": "Open Brand Exchange is at the start. The specification is a first draft (0.1) and the software is being built now. We do not show customers or numbers that do not exist yet.",
+    "status": "Open Brand Exchange is at the start. Version 0.1 of the specification and the software is in testing, and the first public release is being prepared. We do not show customers or numbers that do not exist yet.",
     "statusLink": "Read how it is governed"
   },
   "brands": {
@@ -329,7 +339,7 @@
       "a brand can export all its data and images and leave",
       "you publish your own prices and terms on your own site"
     ],
-    "listHow": "Open a pull request on the website repository with your details in src/data/providers.json. The initiator is listed first, everyone else alphabetically.",
+    "listHow": "Open a pull request on the website repository with your details in src/data/providers.json. The initiator's company is listed first, everyone else alphabetically.",
     "p2Title": "2. With one click",
     "p2P": "Your own portal on your own account, without managing a server.",
     "cfP": "Runs on Cloudflare Workers, with D1 as the database and R2 for the images. Click the button, sign in to Cloudflare and follow the steps. Cloudflare has free allowances; check their current prices for large catalogs. Web versions of your photos are made by your browser and the obx tool, so you do not have to do anything for that.",
@@ -398,8 +408,8 @@
     "apiTitle": "An API key for your software",
     "apiP": "Does your PIM, POS or shop software fetch images by itself? Then request an API key for your software. It first fetches everything and after that only the changes, including what the brand withdraws. Images are matched to your articles by EAN.",
     "apiDev": "For your developer: this is what it looks like.",
-    "toolsTitle": "Photopilot and other software",
-    "toolsP": "Open Brand Exchange is an open standard: any software can read it. Photopilot, the initiator, can use it in its software for retailers, and other vendors can do the same. You do not need any particular software: a browser is enough.",
+    "toolsTitle": "Which software works with it",
+    "toolsP": "Open Brand Exchange is an open standard: any software can support it. Photopilot, the initiator's company, is building it into its software for retailers, and other vendors can do the same. You do not need any particular software: a browser is enough.",
     "toolsLink": "Specification for developers",
     "findTitle": "Finding a brand",
     "findP": "Brands that choose to be listed are in the directory. If a brand simply gives you the address of its portal, that works too.",
@@ -515,15 +525,16 @@
     "h1": "Downloads",
     "lead": "Material to share with colleagues, brands and retailers.",
     "brochureTitle": "Brochure for retailers",
-    "brochureP": "Two pages about what Open Brand Exchange means for a store, to hand to a colleague or a brand.",
+    "brochureP": "What Open Brand Exchange means for a store: the brand portal, an API key for your software, and what is ready today. To hand to a colleague or a brand.",
     "kitTitle": "Email for brands that are not on it yet",
     "kitP": "The ready-made email from the retailers page, as a text file.",
     "exampleTitle": "Example files",
     "exampleP": "A products.csv and images for the fictional brand Kestrel Outfitters, to try an import.",
     "exampleLink": "Example files in the specification",
     "templateP": "An empty CSV template is also available in the admin of every portal, under Imports.",
-    "dutch": "Dutch",
-    "english": "English"
+    "brandsTitle": "Brochure for brands",
+    "brandsP": "Your own portal for retailers, the API, automatic upload and hosting, and what is ready today. To share with your team.",
+    "allLanguages": "All languages"
   },
   "faq": {
     "h1": "Frequently asked questions",
@@ -562,11 +573,11 @@
       },
       {
         "q": "Is it ready?",
-        "a": "Not yet. The specification is a first draft (0.1) and the software is being built. You can already try it, but it is not meant for production use yet."
+        "a": "Almost. Version 0.1 of the specification and of the three portal editions is in testing. The first public release is being prepared; until then the software is not publicly available."
       },
       {
         "q": "Who is behind it?",
-        "a": "Open Brand Exchange was started by Photopilot, a Dutch company making product photo software. The standard is open, and the goal is for it to belong to the brands and retailers who use it."
+        "a": "Open Brand Exchange is an initiative of {person}, who also founded the product photo software company Photopilot. Everything will be transferred to the {foundation}, so that the standard belongs to the brands, retailers and software vendors who use it, not to one company."
       }
     ]
   },
@@ -576,7 +587,7 @@
     "sections": [
       {
         "h": "Who decides",
-        "p": "Until there are three independent implementations that pass the conformance suite, the maintainers at Photopilot decide on changes, after public discussion. After that, a steering group takes over, with one seat per implementer and at least one brand and one retailer."
+        "p": "Until there are three independent implementations that pass the conformance suite, the initiator decides on changes, after public discussion. After that, a steering group takes over, with one seat per implementer and at least one brand and one retailer."
       },
       {
         "h": "How changes are made",
@@ -584,7 +595,7 @@
       },
       {
         "h": "Neutral by design",
-        "p": "Nothing in the standard may require a particular vendor or hosted service. Anyone may implement it, host it for others or build a competing product on it. Photopilot's software gets no special treatment in the conformance suite."
+        "p": "Nothing in the standard may require a particular vendor or hosted service. Anyone may implement it, host it for others or build a competing product on it. No implementation gets special treatment in the conformance suite, including that of Photopilot, the initiator's company."
       },
       {
         "h": "Licences",
@@ -592,30 +603,152 @@
       }
     ],
     "nameTitle": "About the name",
-    "nameP": "\"Open Brand Exchange\" is a working name. It may change before version 1.0, after a trademark search. It is not a registered trademark. Software that passes the conformance suite may say it \"works with Open Brand Exchange\".",
-    "specLink": "Full governance document"
+    "nameP": "The name \"Open Brand Exchange\" is the same in every language and is never translated. It is not a registered trademark yet. Software that passes the conformance suite may say it \"works with Open Brand Exchange\".",
+    "specLink": "Full governance document",
+    "foundationTitle": "Who is behind it",
+    "foundationP": "Open Brand Exchange is an initiative of {person}. He is setting up the {foundation}, which will be a Dutch foundation (stichting). Once it exists, the copyright, the name, the domain and the GitHub organisation will be transferred to it. Until then they are in the name of {person}."
   },
   "privacy": {
     "h1": "Privacy",
-    "lead": "This website does not track you.",
+    "lead": "This website does not track you. Below is what little data is processed, and why.",
     "sections": [
       {
-        "h": "No cookies",
-        "p": "We set no cookies. If you choose a language, your browser remembers that choice locally; it is never sent to us."
+        "h": "Who is responsible",
+        "p": "This website is run by {person} (see the imprint). For anything about privacy, email {email}."
       },
       {
-        "h": "No tracking",
-        "p": "No advertising, no social media buttons, no third-party fonts and no tracking scripts. At most we use Cloudflare Web Analytics, which counts visits without cookies and without following you across sites."
+        "h": "What we collect",
+        "p": "Nothing that identifies you. This site has no forms, no accounts, no newsletter and no cookies."
       },
       {
         "h": "Hosting",
-        "p": "The site is hosted on Cloudflare Pages. Like every web server, Cloudflare processes your IP address to deliver the pages and protect them against abuse."
+        "p": "The site is hosted on Cloudflare Pages. Like every web server, Cloudflare processes technical data such as your IP address to deliver the pages and protect them against abuse. We keep no access logs ourselves."
+      },
+      {
+        "h": "Visitor statistics",
+        "p": "If visitor statistics are switched on, we use Cloudflare Web Analytics. It counts page views without cookies and without following you across sites. We only see totals."
+      },
+      {
+        "h": "Email",
+        "p": "If you email us, we use your address and message only to answer you, and delete them once they are no longer needed for that."
+      },
+      {
+        "h": "Your rights",
+        "p": "You may ask what personal data we have about you, and have it corrected or deleted. You may also complain to the Dutch Data Protection Authority (Autoriteit Persoonsgegevens)."
       },
       {
         "h": "Brand portals are separate",
         "p": "Every brand portal is run by the brand itself or its provider. Their privacy statement applies there, not this one."
       }
     ],
-    "contact": "Questions? Open an issue on the website repository."
+    "contact": "Questions about privacy? Email {email}.",
+    "updated": "Last updated: {date}"
+  },
+  "org": {
+    "initiative": "An initiative of {person}",
+    "inFormation": "in formation"
+  },
+  "imprint": {
+    "h1": "Imprint",
+    "lead": "Who publishes this website, and how to reach us.",
+    "publisherTitle": "Published by",
+    "foundationP": "The {foundation} is being set up as a Dutch foundation (stichting). Until it is registered, {person} is responsible for this website.",
+    "addressLabel": "Postal address",
+    "phoneLabel": "Phone",
+    "registrationLabel": "Registration number",
+    "contactTitle": "Contact",
+    "generalLabel": "General questions",
+    "securityLabel": "Security problems",
+    "securityNote": "Please report vulnerabilities privately to this address, not in a public issue.",
+    "contentTitle": "Content and licences",
+    "contentP": "We write this site with care, but it may contain mistakes. For technical details, the specification is authoritative. The texts may be reused under CC BY 4.0 with attribution; the code of this site is MIT-licensed."
+  },
+  "cookies": {
+    "h1": "Cookie statement",
+    "lead": "This website sets no cookies.",
+    "sections": [
+      {
+        "h": "No cookies from us",
+        "p": "We use no cookies for statistics, advertising or anything else, so we do not ask for your consent either."
+      },
+      {
+        "h": "Your language choice",
+        "p": "If you pick a language, your browser remembers it in its own storage (localStorage), so your next visit opens in that language. It is never sent to us. Clearing this site's data in your browser removes it."
+      },
+      {
+        "h": "Security checks by our host",
+        "p": "Only if Cloudflare, our host, has to check that a visitor is not an automated attack, it may set a strictly necessary security cookie for that check. It is not used for anything else."
+      },
+      {
+        "h": "Brand portals",
+        "p": "Brand portals are separate websites, run by the brand or its provider. Their own cookie statement applies there."
+      }
+    ],
+    "contact": "Questions? Email {email}."
+  },
+  "brochure": {
+    "brandsFlow": [
+      {
+        "h": "Your systems",
+        "p": "PIM, ERP or a folder"
+      },
+      {
+        "h": "Your portal",
+        "p": "your name, your domain"
+      },
+      {
+        "h": "Your retailers",
+        "p": "in the browser and through the API"
+      }
+    ],
+    "retailersH1": "Every brand's images and article data, in one consistent way",
+    "retailersFlow": [
+      {
+        "h": "The brand",
+        "p": "publishes once"
+      },
+      {
+        "h": "The brand's portal",
+        "p": "the same for every brand"
+      },
+      {
+        "h": "Your store",
+        "p": "download or API, matched by EAN"
+      }
+    ],
+    "statusTitle": "What is ready, and what is coming",
+    "readyTitle": "Ready in version 0.1",
+    "comingTitle": "Coming next",
+    "readyBadge": "Ready",
+    "comingBadge": "Coming",
+    "brandsReady": [
+      "Your own portal with an admin, in 25 languages, on your own domain",
+      "Import a CSV and photos by hand, or on a schedule from a web address, SFTP or S3",
+      "The obx tool and recipes for cron, GitHub Actions, n8n, Make and Zapier",
+      "Access requests, invitations and API keys for your retailers' software",
+      "Three editions: Cloudflare, Google Cloud & Docker, and ordinary web hosting"
+    ],
+    "brandsComing": [
+      "The first public release, with one-click installation",
+      "Providers who run a portal for you",
+      "The first real brands in the directory"
+    ],
+    "retailersReady": [
+      "Request access and sign in to a brand's portal",
+      "Search, filter and paste your EAN list to see what is there and what is missing",
+      "Download photos as a zip and article data as a spreadsheet",
+      "An API key for your software: everything once, then only the changes",
+      "Usage rights, embargo and AI provenance with every image"
+    ],
+    "retailersComing": [
+      "More brands: the directory is just starting",
+      "Plugins that bring images straight into Shopware and WooCommerce",
+      "Support in more POS, PIM and shop software, as vendors add it"
+    ],
+    "kitP": "The quickest way to get a brand on board is for stores to ask for it. A ready-made email to send your contact at the brand is on {url}.",
+    "ctaTitle": "Questions, or want to take part from the start?",
+    "ctaBrands": "We are looking for brands that want to help shape the first version: which systems do you use, and how many retailers do you serve? Email us.",
+    "ctaRetailers": "We are looking for retailers who want to help shape the first version: which brands would you like to connect, and which software do you use? Email us.",
+    "footer": "Features under \"Coming next\" are in development. Version 0.1, {date}."
   }
 }

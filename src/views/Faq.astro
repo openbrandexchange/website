@@ -1,5 +1,6 @@
 ---
-import { messages, type Lang } from '../i18n';
+import { format, messages, type Lang } from '../i18n';
+import { orgVars } from '../lib/org';
 
 interface Props {
   lang: Lang;
@@ -20,7 +21,7 @@ const c = messages[lang].faq;
       c.items.map((item, i) => (
         <details id={`q${i + 1}`}>
           <summary>{item.q}</summary>
-          <p>{item.a}</p>
+          <p>{format(item.a, orgVars(lang))}</p>
         </details>
       ))
     }

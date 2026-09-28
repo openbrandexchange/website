@@ -9,18 +9,18 @@
     "home": "Open Brand Exchange, homepage",
     "copy": "Kopieer",
     "copied": "Gekopieerd",
-    "draft": "Specificatie 0.1 (concept): de software wordt nu gebouwd. Nog niet bedoeld voor productie.",
+    "draft": "Versie 0.1 wordt getest. De eerste openbare release wordt voorbereid.",
     "footerAbout": "Een gratis, open manier voor merken om productbeelden en artikeldata aan hun retailers te leveren.",
     "footerMore": "Meer",
     "footerSource": "Broncode en specificatie",
     "footerLicence": "Inhoud CC-BY-4.0, code MIT.",
-    "footerWorking": "\"Open Brand Exchange\" is een werknaam. Specificatie 0.1, in ontwikkeling.",
     "editionCloudflare": "Portaal voor Cloudflare",
     "editionGoogle": "Portaal voor Google Cloud & Docker",
     "editionHosting": "Portaal voor webhosting",
     "yes": "Ja",
     "inDevelopment": "In ontwikkeling",
-    "available": "Beschikbaar"
+    "available": "Beschikbaar",
+    "footerContact": "Contact"
   },
   "nav": {
     "brands": "Voor merken",
@@ -32,7 +32,9 @@
     "downloads": "Downloads",
     "faq": "Veelgestelde vragen",
     "governance": "Governance en naam",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "imprint": "Colofon",
+    "cookies": "Cookies"
   },
   "meta": {
     "home": {
@@ -73,11 +75,19 @@
     },
     "governance": {
       "title": "Governance en naam",
-      "description": "Wie beslist over de standaard, hoe je bijdraagt, de licenties en waarom de naam een werknaam is."
+      "description": "Wie er achter de standaard zit, wie beslist, hoe je bijdraagt, de licenties en de naam."
     },
     "privacy": {
       "title": "Privacy",
-      "description": "Deze site volgt je niet: geen cookies, geen tracking."
+      "description": "Deze site volgt je niet. Welke paar gegevens er worden verwerkt, en waarom."
+    },
+    "imprint": {
+      "title": "Colofon",
+      "description": "Wie deze website uitgeeft, en hoe je ons bereikt."
+    },
+    "cookies": {
+      "title": "Cookies",
+      "description": "Deze website plaatst geen cookies."
     }
   },
   "home": {
@@ -134,7 +144,7 @@
         "p": "Eén publicatie voor al je retailers. Geen WeTransfers, mails met zips of een aparte koppeling per winkel meer."
       }
     ],
-    "status": "Open Brand Exchange staat aan het begin. De specificatie is een eerste concept (0.1) en de software wordt nu gebouwd. We tonen geen klanten of aantallen die er nog niet zijn.",
+    "status": "Open Brand Exchange staat aan het begin. Versie 0.1 van de specificatie en de software wordt getest, en de eerste openbare release wordt voorbereid. We tonen geen klanten of cijfers die er nog niet zijn.",
     "statusLink": "Lees hoe het wordt bestuurd"
   },
   "brands": {
@@ -329,7 +339,7 @@
       "een merk kan al zijn data en beelden exporteren en vertrekken",
       "je vermeldt je eigen prijzen en voorwaarden op je eigen site"
     ],
-    "listHow": "Open een pull request op de website-repository met je gegevens in src/data/providers.json. De initiatiefnemer staat bovenaan, de rest alfabetisch.",
+    "listHow": "Open een pull request op de website-repository met je gegevens in src/data/providers.json. Het bedrijf van de initiatiefnemer staat bovenaan, de rest alfabetisch.",
     "p2Title": "2. Met één klik",
     "p2P": "Je eigen portaal op je eigen account, zonder een server te beheren.",
     "cfP": "Draait op Cloudflare Workers, met D1 als database en R2 voor de beelden. Klik op de knop, log in bij Cloudflare en volg de stappen. Cloudflare heeft gratis tegoeden; bekijk hun actuele prijzen voor grote catalogi. De webversies van je foto's maken je browser en de obx-tool, dus daar hoef je niets voor te doen.",
@@ -398,8 +408,8 @@
     "apiTitle": "Een API-sleutel voor je software",
     "apiP": "Haalt je PIM, kassasysteem of webshopsoftware zelf beelden op? Vraag dan een API-sleutel voor je software aan. Die haalt eerst alles op en daarna alleen nog de wijzigingen, ook wat het merk intrekt. Beelden worden op EAN aan je artikelen gekoppeld.",
     "apiDev": "Voor je ontwikkelaar: zo ziet het eruit.",
-    "toolsTitle": "Photopilot en andere software",
-    "toolsP": "Open Brand Exchange is een open standaard: elk programma kan hem lezen. Photopilot, de initiatiefnemer, kan hem gebruiken in zijn software voor retailers, en andere leveranciers kunnen hetzelfde doen. Je hebt geen bepaalde software nodig: een browser is genoeg.",
+    "toolsTitle": "Welke software ermee werkt",
+    "toolsP": "Open Brand Exchange is een open standaard: elke software kan hem ondersteunen. Photopilot, het bedrijf van de initiatiefnemer, bouwt hem in zijn software voor retailers, en andere leveranciers kunnen hetzelfde doen. Je hebt geen bepaalde software nodig: een browser is genoeg.",
     "toolsLink": "Specificatie voor ontwikkelaars",
     "findTitle": "Een merk vinden",
     "findP": "Merken die zich laten vermelden, staan in de merkenlijst. Geeft een merk je gewoon het adres van zijn portaal, dan werkt dat ook.",
@@ -515,15 +525,16 @@
     "h1": "Downloads",
     "lead": "Materiaal om te delen met collega's, merken en retailers.",
     "brochureTitle": "Brochure voor retailers",
-    "brochureP": "Twee pagina's over wat Open Brand Exchange betekent voor een winkel, om te geven aan een collega of een merk.",
+    "brochureP": "Wat Open Brand Exchange voor een winkel betekent: de beeldbank van het merk, een API-sleutel voor je software, en wat vandaag al klaar is. Om door te geven aan een collega of een merk.",
     "kitTitle": "Mail voor merken die nog niet meedoen",
     "kitP": "De kant-en-klare mail van de retailerpagina, als tekstbestand.",
     "exampleTitle": "Voorbeeldbestanden",
     "exampleP": "Een products.csv en beelden van het fictieve merk Kestrel Outfitters, om een import uit te proberen.",
     "exampleLink": "Voorbeeldbestanden in de specificatie",
     "templateP": "Een leeg CSV-sjabloon staat ook in de beheeromgeving van elk portaal, onder Imports.",
-    "dutch": "Nederlands",
-    "english": "Engels"
+    "brandsTitle": "Brochure voor merken",
+    "brandsP": "Je eigen portaal voor retailers, de API, automatisch uploaden en hosting, en wat vandaag al klaar is. Om te delen met je team.",
+    "allLanguages": "Alle talen"
   },
   "faq": {
     "h1": "Veelgestelde vragen",
@@ -562,11 +573,11 @@
       },
       {
         "q": "Is het klaar?",
-        "a": "Nog niet. De specificatie is een eerste concept (0.1) en de software wordt gebouwd. Je kunt het al uitproberen, maar het is nog niet bedoeld voor productie."
+        "a": "Bijna. Versie 0.1 van de specificatie en van de drie portaaledities wordt getest. De eerste openbare release wordt voorbereid; tot die tijd is de software niet openbaar beschikbaar."
       },
       {
         "q": "Wie zit erachter?",
-        "a": "Open Brand Exchange is gestart door Photopilot, een Nederlands bedrijf dat software voor productfotografie maakt. De standaard is open, en het doel is dat hij van de merken en retailers wordt die hem gebruiken."
+        "a": "Open Brand Exchange is een initiatief van {person}, die ook het productfotografiesoftwarebedrijf Photopilot heeft opgericht. Alles wordt overgedragen aan de {foundation}, zodat de standaard van de merken, retailers en softwareleveranciers is die hem gebruiken, niet van één bedrijf."
       }
     ]
   },
@@ -576,7 +587,7 @@
     "sections": [
       {
         "h": "Wie beslist",
-        "p": "Tot er drie onafhankelijke implementaties zijn die de conformancetest halen, beslissen de maintainers bij Photopilot over wijzigingen, na openbare discussie. Daarna neemt een stuurgroep het over, met één zetel per implementeerder en minstens één merk en één retailer."
+        "p": "Tot er drie onafhankelijke implementaties zijn die de conformiteitstests doorstaan, beslist de initiatiefnemer over wijzigingen, na openbare discussie. Daarna neemt een stuurgroep het over, met één zetel per implementator en ten minste één merk en één retailer."
       },
       {
         "h": "Hoe wijzigingen gaan",
@@ -584,7 +595,7 @@
       },
       {
         "h": "Neutraal ontworpen",
-        "p": "Niets in de standaard mag een bepaalde leverancier of gehoste dienst vereisen. Iedereen mag hem implementeren, voor anderen hosten of er een concurrerend product op bouwen. De software van Photopilot krijgt geen voorkeursbehandeling in de conformancetest."
+        "p": "Niets in de standaard mag een bepaalde leverancier of gehoste dienst vereisen. Iedereen mag hem implementeren, voor anderen hosten of er een concurrerend product op bouwen. Geen enkele implementatie krijgt een voorkeursbehandeling in de conformiteitstests, ook die van Photopilot, het bedrijf van de initiatiefnemer, niet."
       },
       {
         "h": "Licenties",
@@ -592,30 +603,152 @@
       }
     ],
     "nameTitle": "Over de naam",
-    "nameP": "\"Open Brand Exchange\" is een werknaam. Hij kan vóór versie 1.0 nog veranderen, na een merkenonderzoek. Het is geen geregistreerd merk. Software die de conformancetest haalt, mag zeggen dat hij \"werkt met Open Brand Exchange\".",
-    "specLink": "Volledig governancedocument"
+    "nameP": "De naam „Open Brand Exchange” is in elke taal hetzelfde en wordt nooit vertaald. Het is nog geen geregistreerd merk. Software die de conformiteitstests doorstaat, mag zeggen dat hij „werkt met Open Brand Exchange”.",
+    "specLink": "Volledig governancedocument",
+    "foundationTitle": "Wie erachter zit",
+    "foundationP": "Open Brand Exchange is een initiatief van {person}. Hij richt de {foundation} op, die een Nederlandse stichting wordt. Zodra die bestaat, worden het auteursrecht, de naam, het domein en de GitHub-organisatie aan haar overgedragen. Tot die tijd staan ze op naam van {person}."
   },
   "privacy": {
     "h1": "Privacy",
-    "lead": "Deze website volgt je niet.",
+    "lead": "Deze website volgt je niet. Hieronder staat welke paar gegevens er worden verwerkt, en waarom.",
     "sections": [
       {
-        "h": "Geen cookies",
-        "p": "We plaatsen geen cookies. Kies je een taal, dan onthoudt je browser die keuze lokaal; die wordt nooit naar ons gestuurd."
+        "h": "Wie verantwoordelijk is",
+        "p": "Deze website wordt beheerd door {person} (zie het colofon). Voor alles over privacy mail je naar {email}."
       },
       {
-        "h": "Geen tracking",
-        "p": "Geen advertenties, geen socialemediaknoppen, geen lettertypes van derden en geen trackingscripts. Hooguit gebruiken we Cloudflare Web Analytics, dat bezoeken telt zonder cookies en zonder je over andere sites te volgen."
+        "h": "Wat we verzamelen",
+        "p": "Niets waarmee je te herkennen bent. Deze site heeft geen formulieren, geen accounts, geen nieuwsbrief en geen cookies."
       },
       {
         "h": "Hosting",
-        "p": "De site draait op Cloudflare Pages. Zoals elke webserver verwerkt Cloudflare je IP-adres om de pagina's te leveren en te beschermen tegen misbruik."
+        "p": "De site wordt gehost op Cloudflare Pages. Zoals elke webserver verwerkt Cloudflare technische gegevens zoals je IP-adres om de pagina's te leveren en tegen misbruik te beschermen. Zelf bewaren we geen toegangslogs."
       },
       {
-        "h": "Merkportalen staan hier los van",
-        "p": "Elk merkportaal wordt gedraaid door het merk zelf of zijn provider. Daar geldt hun privacyverklaring, niet deze."
+        "h": "Bezoekersstatistieken",
+        "p": "Als bezoekersstatistieken aanstaan, gebruiken we Cloudflare Web Analytics. Dat telt paginabezoeken zonder cookies en zonder je over andere sites te volgen. Wij zien alleen totalen."
+      },
+      {
+        "h": "E-mail",
+        "p": "Als je ons mailt, gebruiken we je adres en bericht alleen om je te antwoorden, en verwijderen we ze zodra ze daarvoor niet meer nodig zijn."
+      },
+      {
+        "h": "Je rechten",
+        "p": "Je mag vragen welke persoonsgegevens we van je hebben, en ze laten corrigeren of verwijderen. Je kunt ook een klacht indienen bij de Autoriteit Persoonsgegevens."
+      },
+      {
+        "h": "Beeldbanken van merken staan hier los van",
+        "p": "Elk merkportaal wordt beheerd door het merk zelf of zijn aanbieder. Daar geldt hun privacyverklaring, niet deze."
       }
     ],
-    "contact": "Vragen? Open een issue op de website-repository."
+    "contact": "Vragen over privacy? Mail naar {email}.",
+    "updated": "Laatst bijgewerkt: {date}"
+  },
+  "org": {
+    "initiative": "Een initiatief van {person}",
+    "inFormation": "in oprichting"
+  },
+  "imprint": {
+    "h1": "Colofon",
+    "lead": "Wie deze website uitgeeft, en hoe je ons bereikt.",
+    "publisherTitle": "Uitgegeven door",
+    "foundationP": "De {foundation} wordt opgericht als Nederlandse stichting. Tot ze is ingeschreven, is {person} verantwoordelijk voor deze website.",
+    "addressLabel": "Postadres",
+    "phoneLabel": "Telefoon",
+    "registrationLabel": "Inschrijvingsnummer",
+    "contactTitle": "Contact",
+    "generalLabel": "Algemene vragen",
+    "securityLabel": "Beveiligingsproblemen",
+    "securityNote": "Meld kwetsbaarheden vertrouwelijk aan dit adres, niet in een openbaar issue.",
+    "contentTitle": "Inhoud en licenties",
+    "contentP": "We schrijven deze site met zorg, maar er kunnen fouten in staan. Voor technische details is de specificatie leidend. De teksten mogen worden hergebruikt onder CC BY 4.0 met naamsvermelding; de code van deze site valt onder de MIT-licentie."
+  },
+  "cookies": {
+    "h1": "Cookieverklaring",
+    "lead": "Deze website plaatst geen cookies.",
+    "sections": [
+      {
+        "h": "Geen cookies van ons",
+        "p": "We gebruiken geen cookies voor statistieken, advertenties of iets anders, dus we vragen ook geen toestemming."
+      },
+      {
+        "h": "Je taalkeuze",
+        "p": "Kies je een taal, dan onthoudt je browser die in zijn eigen opslag (localStorage), zodat je volgende bezoek in die taal opent. Die keuze wordt nooit naar ons gestuurd. Wis je de gegevens van deze site in je browser, dan is ze weg."
+      },
+      {
+        "h": "Beveiligingscontroles door onze host",
+        "p": "Alleen als Cloudflare, onze host, moet controleren dat een bezoeker geen geautomatiseerde aanval is, kan het voor die controle een strikt noodzakelijk beveiligingscookie plaatsen. Dat wordt nergens anders voor gebruikt."
+      },
+      {
+        "h": "Beeldbanken van merken",
+        "p": "Merkportalen zijn aparte websites, beheerd door het merk of zijn aanbieder. Daar geldt hun eigen cookieverklaring."
+      }
+    ],
+    "contact": "Vragen? Mail naar {email}."
+  },
+  "brochure": {
+    "brandsFlow": [
+      {
+        "h": "Jouw systemen",
+        "p": "PIM, ERP of een map"
+      },
+      {
+        "h": "Jouw beeldbank",
+        "p": "jouw naam, jouw domein"
+      },
+      {
+        "h": "Jouw retailers",
+        "p": "in de browser en via de API"
+      }
+    ],
+    "retailersH1": "De beelden en artikeldata van elk merk, op één vaste manier",
+    "retailersFlow": [
+      {
+        "h": "Het merk",
+        "p": "publiceert één keer"
+      },
+      {
+        "h": "De beeldbank van het merk",
+        "p": "hetzelfde voor elk merk"
+      },
+      {
+        "h": "Jouw winkel",
+        "p": "downloaden of API, gekoppeld op EAN"
+      }
+    ],
+    "statusTitle": "Wat klaar is, en wat eraan komt",
+    "readyTitle": "Klaar in versie 0.1",
+    "comingTitle": "Komt hierna",
+    "readyBadge": "Klaar",
+    "comingBadge": "Binnenkort",
+    "brandsReady": [
+      "Je eigen portaal met beheeromgeving, in 25 talen, op je eigen domein",
+      "Een CSV en foto's importeren met de hand, of volgens planning vanaf een webadres, SFTP of S3",
+      "De obx-tool en recepten voor cron, GitHub Actions, n8n, Make en Zapier",
+      "Toegangsaanvragen, uitnodigingen en API-sleutels voor de software van je retailers",
+      "Drie edities: Cloudflare, Google Cloud & Docker, en gewone webhosting"
+    ],
+    "brandsComing": [
+      "De eerste openbare release, met installatie in één klik",
+      "Aanbieders die een portaal voor je draaien",
+      "De eerste echte merken in de merkenlijst"
+    ],
+    "retailersReady": [
+      "Toegang aanvragen en inloggen bij de beeldbank van een merk",
+      "Zoeken, filteren en je EAN-lijst plakken om te zien wat er is en wat ontbreekt",
+      "Foto's downloaden als zip en artikeldata als spreadsheet",
+      "Een API-sleutel voor je software: eerst alles, daarna alleen de wijzigingen",
+      "Gebruiksrechten, embargo en AI-herkomst bij elk beeld"
+    ],
+    "retailersComing": [
+      "Meer merken: de merkenlijst begint net",
+      "Plugins die beelden rechtstreeks in Shopware en WooCommerce zetten",
+      "Ondersteuning in meer kassa-, PIM- en webshopsoftware, zodra leveranciers het inbouwen"
+    ],
+    "kitP": "Een merk komt het snelst aan boord als winkels erom vragen. Een kant-en-klare e-mail voor je contactpersoon bij het merk staat op {url}.",
+    "ctaTitle": "Vragen, of vanaf het begin meedoen?",
+    "ctaBrands": "We zoeken merken die de eerste versie mee willen vormgeven: welke systemen gebruik je, en hoeveel retailers bedien je? Mail ons.",
+    "ctaRetailers": "We zoeken retailers die de eerste versie mee willen vormgeven: welke merken wil je koppelen, en welke software gebruik je? Mail ons.",
+    "footer": "Functies onder „Komt hierna” zijn in ontwikkeling. Versie 0.1, {date}."
   }
 }

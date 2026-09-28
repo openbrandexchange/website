@@ -1,5 +1,6 @@
 ---
-import { messages, specDoc, type Lang } from '../i18n';
+import { format, messages, specDoc, url, type Lang } from '../i18n';
+import { orgVars } from '../lib/org';
 
 interface Props {
   lang: Lang;
@@ -17,6 +18,8 @@ const c = messages[lang].governance;
 
 <section class="section">
   <div class="wrap prose">
+    <h2 id="foundation">{c.foundationTitle}</h2>
+    <p>{format(c.foundationP, orgVars(lang))} <a href={url(lang, 'imprint')}>{messages[lang].nav.imprint}</a>.</p>
     {
       c.sections.map((s) => (
         <>

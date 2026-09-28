@@ -1,11 +1,17 @@
 ---
-import { messages, repo, type Lang } from '../i18n';
+import { format, messages, url, type Lang } from '../i18n';
+import { HELLO_EMAIL, PRIVACY_UPDATED, longDate, orgVars } from '../lib/org';
 
 interface Props {
   lang: Lang;
 }
 const { lang } = Astro.props;
-const c = messages[lang].privacy;
+const t = messages[lang];
+const c = t.privacy;
+const vars = orgVars(lang);
+// "{email}" becomes a mailto link; the rest of the sentence stays plain text.
+const withEmail = (text: string) => format(text, { ...vars, email: '\u0000' }).split('\u0000');
+const contact = withEmail(c.contact);
 ---
 
 <section class="hero">
@@ -18,13 +24,29 @@ const c = messages[lang].privacy;
 <section class="section">
   <div class="wrap prose">
     {
-      c.sections.map((s) => (
-        <>
-          <h2>{s.h}</h2>
-          <p>{s.p}</p>
-        </>
-      ))
+      c.sections.map((s) => {
+        const parts = withEmail(s.p);
+        return (
+          <>
+            <h2>{s.h}</h2>
+            <p>
+              {parts.map((part, j) => (
+                <>
+                  {part}
+                  {j < parts.length - 1 && <a href={`mailto:${HELLO_EMAIL}`}>{HELLO_EMAIL}</a>}
+                </>
+              ))}
+            </p>
+          </>
+        );
+      })
     }
-    <p class="muted">{c.contact} <a href={repo('website', '/issues')}>openbrandexchange/website</a></p>
+    <p>
+      <a href={url(lang, 'imprint')}>{t.imprint.h1}</a> · <a href={url(lang, 'cookies')}>{t.cookies.h1}</a>
+    </p>
+    <p class="muted">
+      {contact[0]}<a href={`mailto:${HELLO_EMAIL}`}>{HELLO_EMAIL}</a>{contact[1]}
+    </p>
+    <p class="muted small">{format(c.updated, { date: longDate(lang, PRIVACY_UPDATED) })}</p>
   </div>
 </section>
