@@ -1,15 +1,27 @@
-# Cloudflare Pages response headers.
+# Cloudflare Pages response headers (see docs/security.md). tools/serve-dist.mjs applies the
+# same file in the end-to-end tests, so a change here is tested under the real policy.
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
-  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Cross-Origin-Opener-Policy: same-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), browsing-topics=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
 
+# The public brand directory is read by software on other sites: the only cross-origin resource.
 /directory.json
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=300
 
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
+
+/downloads/*
+  Cache-Control: public, max-age=86400
+
+/og/*
+  Cache-Control: public, max-age=604800
+
+/js/*
+  Cache-Control: public, max-age=3600

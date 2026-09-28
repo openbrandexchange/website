@@ -37,6 +37,7 @@ const footer: PageKey[] = ['downloads', 'faq', 'governance', 'imprint', 'privacy
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="/js/early.js" is:inline></script>
     <title>{title}</title>
     <meta name="description" content={m.description} />
     <link rel="canonical" href={canonical} />
@@ -120,8 +121,8 @@ const footer: PageKey[] = ['downloads', 'faq', 'governance', 'imprint', 'privacy
           </details>
         </nav>
       </div>
+      <p class="draft-banner"><span class="wrap">{t.common.draft}</span></p>
     </header>
-    <p class="draft-banner"><span class="wrap">{t.common.draft}</span></p>
     <main id="main" tabindex="-1">
       <slot />
     </main>

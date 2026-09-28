@@ -43,7 +43,7 @@ const brochures: { kind: BrochureKind; title: string; p: string }[] = [
             </ul>
             <details class="more-langs">
               <summary>{c.allLanguages}</summary>
-              <ul class="plain lang-grid">
+              <ul class="plain brochure-langs">
                 {langs.map((l) => (
                   <li>
                     <a href={brochurePath(b.kind, l)} hreflang={l} lang={l} type="application/pdf" download>

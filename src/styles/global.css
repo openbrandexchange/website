@@ -533,14 +533,19 @@ th {
 /* Tabs-less option list (hosting) */
 .option {
   display: grid;
+  /* minmax(0, …): a wide code block scrolls inside its box instead of widening the page. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 0.25rem 1.5rem;
   padding: 1.5rem 0;
   border-top: 1px solid var(--border);
 }
 @media (min-width: 56rem) {
   .option {
-    grid-template-columns: 16rem 1fr;
+    grid-template-columns: 16rem minmax(0, 1fr);
   }
+}
+.option > * {
+  min-width: 0;
 }
 .option h3 {
   margin: 0;
@@ -824,8 +829,12 @@ input[type='search'] {
   display: flex;
   align-items: center;
 }
-.lang-grid {
+.brochure-langs {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
   gap: 0.25rem 1rem;
+}
+.brochure-langs a {
+  display: inline-block;
+  padding: 0.35rem 0;
 }
