@@ -1,0 +1,138 @@
+---
+import '../styles/global.css';
+import {
+  langs,
+  messages,
+  nativeNames,
+  ogLocales,
+  repo,
+  url,
+  xDefaultLang,
+  type Lang,
+  type PageKey,
+} from '../i18n';
+
+interface Props {
+  lang: Lang;
+  page: PageKey;
+}
+
+const { lang, page } = Astro.props;
+const t = messages[lang];
+const m = t.meta[page];
+const title = page === 'home' ? m.title : `${m.title} · Open Brand Exchange`;
+const site = Astro.site!.toString().replace(/\/$/, '');
+const canonical = site + url(lang, page);
+
+// Optional, cookieless Cloudflare Web Analytics. Off unless the token is set at build time.
+const analyticsToken = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
+
+const nav: PageKey[] = ['brands', 'automation', 'hosting', 'retailers', 'developers', 'directory'];
+const footer: PageKey[] = ['downloads', 'faq', 'governance', 'privacy'];
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={m.description} />
+    <link rel="canonical" href={canonical} />
+    {langs.map((l) => <link rel="alternate" hreflang={l} href={site + url(l, page)} />)}
+    <link rel="alternate" hreflang="x-default" href={site + url(xDefaultLang, page)} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Open Brand Exchange" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={m.description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={ogLocales[lang]} />
+    {langs.filter((l) => l !== lang).map((l) => <meta property="og:locale:alternate" content={ogLocales[l]} />)}
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap.xml" />
+    <script src="/js/site.js" defer is:inline></script>
+    {
+      analyticsToken && (
+        <script
+          is:inline
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon={JSON.stringify({ token: analyticsToken })}
+        />
+      )
+    }
+  </head>
+  <body data-copy={t.common.copy} data-copied={t.common.copied}>
+    <a class="skip" href="#main">{t.common.skip}</a>
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="logo" href={url(lang, 'home')} aria-label={t.common.home}>
+          <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+            <rect x="2" y="2" width="28" height="28" rx="7" fill="var(--accent)"></rect>
+            <path d="M10 16h12M16 10v12" stroke="var(--on-accent)" stroke-width="3" stroke-linecap="round"></path>
+          </svg>
+          <span>Open Brand Exchange</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>{t.common.menu}</button>
+        <nav id="site-nav" class="site-nav" aria-label={t.common.mainMenu}>
+          <ul>
+            {
+              nav.map((p) => (
+                <li>
+                  <a href={url(lang, p)} aria-current={p === page ? 'page' : undefined}>
+                    {t.nav[p as keyof typeof t.nav]}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+          <details class="lang-switch">
+            <summary>
+              <span aria-hidden="true">{lang.toUpperCase()}</span>
+              <span class="lang-current">{nativeNames[lang]}</span>
+              <span class="sr-only">, {t.common.languageLabel}</span>
+            </summary>
+            <ul class="lang-list" aria-label={t.common.languageLabel}>
+              {
+                langs.map((l) => (
+                  <li>
+                    <a
+                      href={url(l, page)}
+                      hreflang={l}
+                      lang={l}
+                      data-lang-choice={l}
+                      aria-current={l === lang ? 'true' : undefined}
+                    >
+                      {nativeNames[l]}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </details>
+        </nav>
+      </div>
+    </header>
+    <p class="draft-banner"><span class="wrap">{t.common.draft}</span></p>
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <p class="footer-name">Open Brand Exchange</p>
+          <p>{t.common.footerAbout}</p>
+          <p class="muted small">{t.common.footerWorking}</p>
+        </div>
+        <nav aria-label={t.common.footerMore}>
+          <ul class="plain">
+            {footer.map((p) => <li><a href={url(lang, p)}>{t.nav[p as keyof typeof t.nav]}</a></li>)}
+            <li><a href={repo('')}>{t.common.footerSource}</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="wrap"><p class="muted small">{t.common.footerLicence}</p></div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+---
+// The home address: /js/lang.js sends visitors to their remembered or browser language
+// (Dutch when none matches). Without JavaScript this page is a plain language chooser.
+import '../styles/global.css';
+import { langs, nativeNames, SITE, url, xDefaultLang } from '../i18n';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Open Brand Exchange</title>
+    <meta name="description" content="One place and one API for all your retailers. A free, open standard and software for brands." />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href={SITE + url(xDefaultLang, 'home')} />
+    {langs.map((l) => <link rel="alternate" hreflang={l} href={SITE + url(l, 'home')} />)}
+    <link rel="alternate" hreflang="x-default" href={SITE + url(xDefaultLang, 'home')} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script src="/js/lang.js" is:inline></script>
+  </head>
+  <body>
+    <main id="main" class="wrap section">
+      <h1>Open Brand Exchange</h1>
+      <ul class="lang-grid">
+        {langs.map((l) => <li><a href={url(l, 'home')} hreflang={l} lang={l}>{nativeNames[l]}</a></li>)}
+      </ul>
+    </main>
+  </body>
+</html>

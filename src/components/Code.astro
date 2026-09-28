@@ -1,0 +1,14 @@
+---
+// A code or text block with a copy button (added by /js/site.js).
+interface Props {
+  code: string;
+  label?: string;
+  lang?: string;
+}
+const { code, label, lang } = Astro.props;
+---
+
+<figure class="code">
+  {label && <figcaption>{label}</figcaption>}
+  <pre data-copyable tabindex="0" data-lang={lang}><code>{code.trim()}</code></pre>
+</figure>

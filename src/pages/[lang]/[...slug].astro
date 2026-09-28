@@ -1,0 +1,45 @@
+---
+import Base from '../../layouts/Base.astro';
+import { langs, pageKeys, slugs, type Lang, type PageKey } from '../../i18n';
+import Home from '../../views/Home.astro';
+import Brands from '../../views/Brands.astro';
+import Automation from '../../views/Automation.astro';
+import Hosting from '../../views/Hosting.astro';
+import Retailers from '../../views/Retailers.astro';
+import Developers from '../../views/Developers.astro';
+import Directory from '../../views/Directory.astro';
+import Downloads from '../../views/Downloads.astro';
+import Faq from '../../views/Faq.astro';
+import Governance from '../../views/Governance.astro';
+import Privacy from '../../views/Privacy.astro';
+
+export function getStaticPaths() {
+  return langs.flatMap((lang) =>
+    pageKeys.map((page) => ({
+      params: { lang, slug: slugs[page] || undefined },
+      props: { lang, page },
+    })),
+  );
+}
+
+const views = {
+  home: Home,
+  brands: Brands,
+  automation: Automation,
+  hosting: Hosting,
+  retailers: Retailers,
+  developers: Developers,
+  directory: Directory,
+  downloads: Downloads,
+  faq: Faq,
+  governance: Governance,
+  privacy: Privacy,
+};
+
+const { lang, page } = Astro.props as { lang: Lang; page: PageKey };
+const View = views[page];
+---
+
+<Base lang={lang} page={page}>
+  <View lang={lang} />
+</Base>
