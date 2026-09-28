@@ -27,6 +27,7 @@ Node 22.18 or newer. For the end-to-end tests, once: `npx playwright install chr
 | `npm run check:licenses` | licence policy for every dependency |
 | `npm run build:brochures` | regenerate the 50 brochure PDFs and 25 social images (needs Chrome) |
 | `npm run sync:glossary` | copy the glossary from `../admin-ui` and `../spec` |
+| `npm run sync:spec` | copy the rendered API reference, the schemas and the error codes from `../spec` |
 | `sh scripts/deploy-cloudflare-pages.sh` | deploy (see [docs/deploying.md](docs/deploying.md)) |
 
 ## What is where

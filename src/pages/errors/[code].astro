@@ -1,0 +1,38 @@
+---
+import Reference from '../../layouts/Reference.astro';
+import data from '../../data/errors.json';
+import { specDoc } from '../../i18n';
+
+export function getStaticPaths() {
+  return data.errors.map((e) => ({ params: { code: e.code }, props: e }));
+}
+const { code, status, meaning } = Astro.props as (typeof data.errors)[number];
+const parts = meaning.split('`').map((s, i) => ({ s, code: i % 2 === 1 }));
+const plain = meaning.replace(/`/g, '');
+---
+
+<Reference title={code} description={`Open Brand Exchange error ${code} (HTTP ${status}): ${plain}.`} path={`/errors/${code}/`}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="muted small"><a href="/errors/">Error codes</a></p>
+      <h1><code>{code}</code></h1>
+      <p class="lead">{parts.map((p) => (p.code ? <code>{p.s}</code> : p.s))}.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap prose">
+      <dl>
+        <dt>HTTP status</dt>
+        <dd>{status}</dd>
+        <dt>Problem type</dt>
+        <dd><code>https://openbrandexchange.com/errors/{code}</code></dd>
+      </dl>
+      <p>
+        The answer is an <code>application/problem+json</code> document with <code>type</code>, <code>title</code>,
+        <code>status</code>, <code>detail</code> and <code>obx_error</code>; field problems are listed in <code>errors[]</code>
+        with a JSON Pointer. See <a href={specDoc('docs/protocol.md')}>protocol.md</a> and the
+        <a href="/reference/">API reference</a>.
+      </p>
+    </div>
+  </section>
+</Reference>

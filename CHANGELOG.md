@@ -14,9 +14,12 @@ its texts; the repository itself is versioned with [Semantic Versioning](https:/
 - Hosting, *Portal for Cloudflare*: says that a portal in daily use needs the Workers Paid plan, instead of only pointing at free allowances.
 - Hosting, Docker: `docker logs obx 2>&1 | grep -i "setup code"` (the node logs to standard error, so without `2>&1` the command found nothing); the secret key is written to a file once instead of being generated inside the command, where nobody could keep it; the Caddy example sets `OBX_TRUST_PROXY`, so rate limits count per visitor and not for everyone behind Caddy together.
 - Hosting, *Portal for Google Cloud & Docker*: `DRY_RUN=1 ./deploy/cloudrun.sh` shows the commands first without changing anything.
+- Developers: there are four conformance profiles (protocol, ingest, portal and security), not three.
+- The footer says the CC-BY-4.0/MIT line is about this website; the specification, the SDK and admin UI, and the portals have their own licences (listed on the developers page).
 
 ### Added
 
+- Developers: the specification's rendered API reference at `/reference/`, the JSON Schemas at the address of their `$id` (`/schemas/v0.1/…`), and a page per error code at `/errors/<obx_error>`, the `type` of every problem the APIs answer with; `npm run sync:spec` copies them from the spec. The developers page links the reference next to each OpenAPI file.
 - Downloads: the Kestrel example files as one zip (`/downloads/kestrel-example.zip`, built from the specification's fixtures with `scripts/build-example-zip.sh`), next to the link to the specification.
 - For retailers: the developer example also shows `obx pull`.
 

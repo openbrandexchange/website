@@ -1,0 +1,45 @@
+---
+import Reference from '../../layouts/Reference.astro';
+import data from '../../data/errors.json';
+import { specDoc } from '../../i18n';
+
+// `code` spans of the spec's table cells, rendered as <code>.
+const parts = (text: string) => text.split('`').map((s, i) => ({ s, code: i % 2 === 1 }));
+---
+
+<Reference title="Error codes" description="The problem types of the Open Brand Exchange APIs: every obx_error with its HTTP status and meaning." path="/errors/">
+  <section class="hero">
+    <div class="wrap">
+      <h1>Error codes</h1>
+      <p class="lead">
+        Every Open Brand Exchange API answers errors as <code>application/problem+json</code> with a machine-readable
+        <code>obx_error</code> and <code>type</code> = <code>https://openbrandexchange.com/errors/&lt;obx_error&gt;</code>, the
+        pages below. Software must handle codes it does not know by their HTTP status.
+      </p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">obx_error</th><th scope="col">HTTP</th><th scope="col">Meaning</th></tr></thead>
+          <tbody>
+            {
+              data.errors.map((e) => (
+                <tr id={e.code}>
+                  <th scope="row"><a href={`/errors/${e.code}/`}><code>{e.code}</code></a></th>
+                  <td>{e.status}</td>
+                  <td>{parts(e.meaning).map((p) => (p.code ? <code>{p.s}</code> : p.s))}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="prose">
+        Source: the error table of <a href={specDoc('docs/protocol.md')}>protocol.md</a>. The OpenAPI descriptions are in the
+        <a href="/reference/">API reference</a>.
+      </p>
+    </div>
+  </section>
+</Reference>

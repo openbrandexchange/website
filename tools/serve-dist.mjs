@@ -15,13 +15,18 @@ const types = {
   '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.pdf': 'application/pdf', '.ico': 'image/x-icon',
 };
 
-/** Parse _headers: a path pattern line, then indented "Name: value" lines. `*` matches anything. */
+/**
+ * Parse _headers: a path pattern line, then indented "Name: value" lines. `*` matches anything.
+ * As on Cloudflare Pages, a header set by several matching rules is joined with ", ", and
+ * "! Name" detaches a header that a broader rule set.
+ */
 function parseHeaders(file) {
   if (!existsSync(file)) return [];
   const rules = [];
   for (const line of readFileSync(file, 'utf8').split('\n')) {
     if (!line.trim() || line.trim().startsWith('#')) continue;
-    if (!/^\s/.test(line)) rules.push({ re: new RegExp('^' + line.trim().replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*') + '$'), headers: [] });
+    if (!/^\s/.test(line)) rules.push({ re: new RegExp('^' + line.trim().replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*') + '$'), headers: [], detach: [] });
+    else if (line.trim().startsWith('! ')) rules.at(-1)?.detach.push(line.trim().slice(2).trim().toLowerCase());
     else rules.at(-1)?.headers.push(line.trim().split(/:\s*(.*)/s).slice(0, 2));
   }
   return rules;
@@ -57,7 +62,14 @@ createServer((req, res) => {
     file = join(root, '404.html');
   }
   const headers = { 'Content-Type': types[extname(file)] ?? 'application/octet-stream' };
-  for (const rule of headerRules) if (rule.re.test(path)) for (const [k, v] of rule.headers) headers[k] = v;
+  const matching = headerRules.filter((rule) => rule.re.test(path));
+  const detached = new Set(matching.flatMap((rule) => rule.detach));
+  for (const rule of matching) {
+    for (const [k, v] of rule.headers) {
+      if (detached.has(k.toLowerCase())) continue;
+      headers[k] = k in headers && k !== 'Content-Type' ? `${headers[k]}, ${v}` : v;
+    }
+  }
   res.writeHead(status, headers);
   res.end(req.method === 'HEAD' ? undefined : readFileSync(file));
 }).listen(port, '127.0.0.1', () => console.log(`serving ${root} on http://127.0.0.1:${port}/`));

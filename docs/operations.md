@@ -48,6 +48,7 @@ language choice in the visitor's own `localStorage`.
   30 days (spec docs/directory.md).
 - **Brochures:** the last page says "Version 0.1, <month year>". Bump `EDITION` in
   `scripts/brochure/template.mjs` when the content changes and rebuild.
+- **Specification:** after a spec change to its OpenAPI files, schemas or error table, run `npm run sync:spec` (it copies `site/` to `public/reference/`, the schemas to `public/schemas/` and the error codes to `src/data/errors.json`) and commit the result.
 - **Glossary:** after a glossary change in admin-ui or the spec, run `npm run sync:glossary`
   and fix what `npm test` reports.
 - **Privacy and cookie statements:** when anything about hosting, statistics or contact changes,

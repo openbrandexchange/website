@@ -10,10 +10,11 @@ const { lang } = Astro.props;
 const t = messages[lang];
 const c = t.developers;
 
+// `page` is the rendered reference of the spec, served at /reference/ (npm run sync:spec).
 const apis = [
-  { name: 'OBX Protocol', file: 'openapi/obx-protocol.yaml' },
-  { name: 'OBX Ingest API', file: 'openapi/obx-ingest.yaml' },
-  { name: 'Node Admin + Portal API', file: 'openapi/node-admin.yaml' },
+  { name: 'OBX Protocol', file: 'openapi/obx-protocol.yaml', page: '/reference/protocol.html' },
+  { name: 'OBX Ingest API', file: 'openapi/obx-ingest.yaml', page: '/reference/ingest.html' },
+  { name: 'Node Admin + Portal API', file: 'openapi/node-admin.yaml', page: '/reference/admin.html' },
 ];
 const impl = [
   { repo: 'spec', licence: 'CC-BY-4.0', edition: '' },
@@ -60,7 +61,8 @@ const docs = [
                 <td>
                   <a href={specDoc(api.file)}>
                     <code>{api.file.replace('openapi/', '')}</code>
-                  </a>
+                  </a>{' '}
+                  · <a href={api.page}>HTML</a>
                 </td>
               </tr>
             ))

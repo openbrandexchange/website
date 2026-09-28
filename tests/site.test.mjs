@@ -1,7 +1,7 @@
 // Checks the built site in dist/ (run `npm run build` first; `npm run check` does both).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import vm from 'node:vm';
 import { langs } from '../src/lib/i18n-core.ts';
 import { checkSite } from '../tools/check-links.mjs';
@@ -213,4 +213,30 @@ test('the Docker steps work when copied: the setup code is read from the log on 
   assert.doesNotMatch(html, /OBX_SECRET_KEY="\$\(openssl/, 'a key generated inline cannot be kept');
   assert.ok(html.includes('OBX_TRUST_PROXY: "true"'), 'behind Caddy the node trusts its X-Forwarded-For');
   assert.ok(html.includes('DRY_RUN=1 ./deploy/cloudrun.sh'), 'Cloud Run dry run');
+});
+
+test('every error code has a page at its problem type URL, with its HTTP status', { skip: !built && 'dist/ not built' }, () => {
+  const { errors } = JSON.parse(readFileSync(new URL('../src/data/errors.json', import.meta.url), 'utf8'));
+  const known = JSON.parse(read('schemas/v0.1/Common.json')).$defs.ErrorCode.enum;
+  assert.deepEqual(errors.map((e) => e.code).sort(), [...known].sort(), 'the pages cover exactly the codes of the schemas');
+  for (const e of errors) {
+    const html = read(`errors/${e.code}/index.html`);
+    assert.ok(html.includes(`https://openbrandexchange.com/errors/${e.code}`), e.code);
+    assert.match(html, new RegExp(`<dd>${e.status}</dd>`), `${e.code}: HTTP ${e.status}`);
+    for (const [, attrs] of html.matchAll(/<script([^>]*)>/g)) assert.match(attrs, /\ssrc="/, `${e.code}: inline script`);
+    assert.doesNotMatch(html, /<style[\s>]|\sstyle="/, `${e.code}: inline style`);
+    assert.doesNotMatch(html, /[\w.+-]+@(?!openbrandexchange\.com)[\w-]+\.[\w.]+/, `${e.code}: e-mail address outside openbrandexchange.com`);
+  }
+});
+
+test('the schemas are served at the address of their $id, and the API reference with them', { skip: !built && 'dist/ not built' }, () => {
+  const files = readdirSync(new URL('schemas/v0.1/', dist)).filter((f) => f.endsWith('.json'));
+  assert.ok(files.length >= 40, `${files.length} schemas`);
+  for (const f of files) assert.equal(JSON.parse(read(`schemas/v0.1/${f}`)).$id, `https://openbrandexchange.com/schemas/v0.1/${f}`);
+  for (const page of ['index', 'protocol', 'ingest', 'admin']) {
+    assert.match(read(`reference/${page}.html`), /<meta http-equiv="Content-Security-Policy"/, `reference/${page}.html has its own policy`);
+  }
+  const headers = read('_headers');
+  const rule = headers.slice(headers.indexOf('/reference/*'));
+  assert.match(rule, /^\/reference\/\*\n {2}! Content-Security-Policy\n/, 'the site-wide policy is detached for /reference/ only');
 });

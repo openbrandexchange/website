@@ -1,0 +1,70 @@
+---
+// English-only pages for software and developers: /errors/, the problem types every portal
+// answers with (`type` = https://openbrandexchange.com/errors/<obx_error>). Same look, header
+// and footer as the site; the API reference itself is the spec's rendered site at /reference/.
+import '../styles/global.css';
+import { messages, url } from '../i18n';
+import { HELLO_EMAIL, initiativeLine } from '../lib/org';
+
+interface Props {
+  title: string;
+  description: string;
+  path: string;
+}
+const { title, description, path } = Astro.props;
+const t = messages.en;
+const site = Astro.site!.toString().replace(/\/$/, '');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="/js/early.js" is:inline></script>
+    <title>{title} · Open Brand Exchange</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={site + path} />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script src="/js/site.js" defer is:inline></script>
+  </head>
+  <body data-copy={t.common.copy} data-copied={t.common.copied}>
+    <a class="skip" href="#main">{t.common.skip}</a>
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="logo" href={url('en', 'home')} aria-label={t.common.home}>
+          <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+            <rect x="2" y="2" width="28" height="28" rx="7" fill="var(--accent)"></rect>
+            <path d="M10 16h12M16 10v12" stroke="var(--on-accent)" stroke-width="3" stroke-linecap="round"></path>
+          </svg>
+          <span>Open Brand Exchange</span>
+        </a>
+        <nav id="site-nav" class="site-nav" aria-label={t.common.mainMenu}>
+          <ul>
+            <li><a href={url('en', 'developers')}>{t.nav.developers}</a></li>
+            <li><a href="/reference/">API reference</a></li>
+            <li><a href="/errors/">Error codes</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <p class="footer-name">Open Brand Exchange</p>
+          <p class="small footer-org">
+            <a href={url('en', 'imprint')}>{initiativeLine('en')}</a>
+          </p>
+          <p class="small">
+            {t.common.footerContact}: <a href={`mailto:${HELLO_EMAIL}`}>{HELLO_EMAIL}</a>
+          </p>
+        </div>
+      </div>
+      <div class="wrap"><p class="muted small">{t.common.footerLicence}</p></div>
+    </footer>
+  </body>
+</html>
