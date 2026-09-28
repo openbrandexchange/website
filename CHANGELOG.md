@@ -12,10 +12,13 @@ its texts; the repository itself is versioned with [Semantic Versioning](https:/
 - Automation: the admin paths are *Automatic upload → Access keys* and *Automatic upload → Scheduled imports → Add scheduled import*, in the portal's own words per language.
 - Automation: the import modes are called what the portal calls them (*Only add and update*, *Also take missing articles offline*), and the note on the Portal for Cloudflare no longer says a scheduled import makes web versions of photos (it delivers originals; obx and the Imports screen make them).
 - Hosting, *Portal for Cloudflare*: says that a portal in daily use needs the Workers Paid plan, instead of only pointing at free allowances.
+- Hosting, Docker: `docker logs obx 2>&1 | grep -i "setup code"` (the node logs to standard error, so without `2>&1` the command found nothing); the secret key is written to a file once instead of being generated inside the command, where nobody could keep it; the Caddy example sets `OBX_TRUST_PROXY`, so rate limits count per visitor and not for everyone behind Caddy together.
+- Hosting, *Portal for Google Cloud & Docker*: `DRY_RUN=1 ./deploy/cloudrun.sh` shows the commands first without changing anything.
 
 ### Added
 
 - Downloads: the Kestrel example files as one zip (`/downloads/kestrel-example.zip`, built from the specification's fixtures with `scripts/build-example-zip.sh`), next to the link to the specification.
+- For retailers: the developer example also shows `obx pull`.
 
 ## [0.1.0] - 2026-09-28
 

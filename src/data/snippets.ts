@@ -124,15 +124,18 @@ TOKEN=$(curl -s -u "$CLIENT_ID:$CLIENT_SECRET" -d grant_type=client_credentials 
   $HOST/obx/v1/oauth/token | jq -r .access_token)
 curl -s -H "Authorization: Bearer $TOKEN" "$HOST/obx/v1/changes?limit=500"   # everything, then only changes
 curl -s -H "Authorization: Bearer $TOKEN" -X POST -H 'Content-Type: application/json' \\
-  -d '{"gtins":["2000100101025"]}' "$HOST/obx/v1/products:by-gtin"`;
+  -d '{"gtins":["2000100101025"]}' "$HOST/obx/v1/products:by-gtin"
+# or let the obx tool keep a copy in a folder, only fetching what changed:
+OBX_CLIENT_ID=$CLIENT_ID OBX_CLIENT_SECRET=$CLIENT_SECRET obx pull $HOST --out ./kestrel`;
 
-export const dockerRun = `docker run -d --name obx --restart unless-stopped \\
+export const dockerRun = `openssl rand -hex 32 > obx-secret.key      # once; keep this file safe, with your backups
+docker run -d --name obx --restart unless-stopped \\
   -p 8080:8080 -v obx-data:/data \\
   -e OBX_PUBLIC_URL=https://brands.example.com \\
-  -e OBX_SECRET_KEY="$(openssl rand -hex 32)" \\
+  -e OBX_SECRET_KEY="$(cat obx-secret.key)" \\
   ghcr.io/openbrandexchange/node-go
 
-docker logs obx | grep -i "setup code"      # the one-time code for the first-run wizard`;
+docker logs obx 2>&1 | grep -i "setup code"      # the one-time code for the first-run wizard`;
 
 export const dockerCompose = `# compose.yaml: the node behind Caddy, which gets an HTTPS certificate by itself.
 services:
@@ -142,6 +145,7 @@ services:
     environment:
       OBX_PUBLIC_URL: https://brands.example.com
       OBX_SECRET_KEY: \${OBX_SECRET_KEY}      # openssl rand -hex 32, keep it safe
+      OBX_TRUST_PROXY: "true"               # every request comes through Caddy (rate limits per visitor)
     volumes:
       - obx-data:/data
   caddy:
@@ -158,6 +162,7 @@ volumes:
 export const cloudRun = `git clone https://github.com/openbrandexchange/node-go
 cd node-go
 gcloud config set project my-project   # once: your Google Cloud project (billing on)
+DRY_RUN=1 ./deploy/cloudrun.sh         # optional: only show what it would do, change nothing
 ./deploy/cloudrun.sh                   # region europe-west4; REGION=… for another`;
 
 export const conformance = `obx-conformance all --url http://localhost:8080 --setup-code …   # a fresh portal: setup, fixtures, every profile

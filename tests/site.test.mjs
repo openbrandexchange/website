@@ -205,3 +205,12 @@ test('the example files are one download in every language', { skip: !built && '
   assert.ok(!names.includes('images.json'), 'test metadata stays out');
   for (const lang of langs) assert.ok(read(`${lang}/downloads/index.html`).includes('href="/downloads/kestrel-example.zip"'), `${lang}: link`);
 });
+
+test('the Docker steps work when copied: the setup code is read from the log on stderr, the key is kept', { skip: !built && 'dist/ not built' }, () => {
+  const html = read('en/hosting/index.html').replaceAll('&gt;', '>').replaceAll('&amp;', '&').replaceAll('&quot;', '"');
+  // The node logs to standard error; "docker logs obx | grep" would find nothing.
+  assert.ok(html.includes('docker logs obx 2>&1 | grep -i "setup code"'), 'setup code from both streams');
+  assert.doesNotMatch(html, /OBX_SECRET_KEY="\$\(openssl/, 'a key generated inline cannot be kept');
+  assert.ok(html.includes('OBX_TRUST_PROXY: "true"'), 'behind Caddy the node trusts its X-Forwarded-For');
+  assert.ok(html.includes('DRY_RUN=1 ./deploy/cloudrun.sh'), 'Cloud Run dry run');
+});
