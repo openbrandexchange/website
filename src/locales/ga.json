@@ -1,0 +1,472 @@
+{
+  "portalWord": "Tairseach miondíoltóirí",
+  "common": {
+    "skip": "Téigh go dtí an t-ábhar",
+    "menu": "Roghchlár",
+    "mainMenu": "Príomh-roghchlár",
+    "language": "Teanga",
+    "languageLabel": "Roghnaigh teanga",
+    "home": "Open Brand Exchange, leathanach baile",
+    "copy": "Cóipeáil",
+    "copied": "Cóipeáilte",
+    "draft": "Sonraíocht 0.1 (dréacht): tá na bogearraí á dtógáil. Níl siad réidh le haghaidh úsáide táirgthe fós.",
+    "footerAbout": "Bealach saor in aisce agus oscailte do bhrandaí grianghraif táirgí agus sonraí earraí a sheachadadh chuig a gcuid miondíoltóirí.",
+    "footerMore": "Tuilleadh",
+    "footerSource": "Cód foinseach agus sonraíocht",
+    "footerLicence": "Ábhar CC-BY-4.0, cód MIT.",
+    "footerWorking": "Is ainm oibre é \"Open Brand Exchange\". Sonraíocht 0.1, á forbairt.",
+    "editionCloudflare": "Tairseach do Cloudflare",
+    "editionGoogle": "Tairseach do Google Cloud agus Docker",
+    "editionHosting": "Tairseach d'óstáil gréasáin",
+    "yes": "Tá",
+    "inDevelopment": "Á forbairt",
+    "available": "Ar fáil"
+  },
+  "nav": {
+    "brands": "Do bhrandaí",
+    "automation": "Uathoibriú",
+    "hosting": "Óstáil",
+    "retailers": "Do mhiondíoltóirí",
+    "developers": "Do fhorbróirí",
+    "directory": "Eolaire brandaí",
+    "downloads": "Íoslódálacha",
+    "faq": "Ceisteanna coitianta",
+    "governance": "Rialachas agus ainm",
+    "privacy": "Príobháideachas"
+  },
+  "meta": {
+    "home": {
+      "title": "Open Brand Exchange: áit amháin agus API amháin do do mhiondíoltóirí go léir",
+      "description": "Caighdeán oscailte agus bogearraí saor in aisce do bhrandaí: tairseach do do mhiondíoltóirí, API caighdeánach dá gcórais agus foilsiú uathoibríoch ó do chórais féin."
+    },
+    "brands": {
+      "title": "Do bhrandaí",
+      "description": "Do thairseach féin do mhiondíoltóirí, API caighdeánach agus foilsiú uathoibríoch ó do PIM, ERP nó fillteáin. Óstáil tú féin saor in aisce é nó bain úsáid as soláthraí."
+    },
+    "automation": {
+      "title": "Uathoibriú",
+      "description": "Foilsigh go huathoibríoch: allmhairí sceidealta, an uirlis obx, cron, GitHub Actions, n8n, Make, Zapier nó curl. Oidis le cóipeáil."
+    },
+    "hosting": {
+      "title": "Óstáil",
+      "description": "Ón rogha is simplí go dtí an ceann is teicniúla: soláthraí, cliceáil amháin ar Cloudflare, Google Cloud Run nó gnáth-óstáil ghréasáin, nó Docker."
+    },
+    "retailers": {
+      "title": "Do mhiondíoltóirí",
+      "description": "Cad a thugann tairseach branda duit, eochair API do do chóras agus ríomhphost réidh do bhrandaí nach bhfuil páirteach fós."
+    },
+    "developers": {
+      "title": "Do fhorbróirí",
+      "description": "An tsonraíocht, na trí API, an SDK agus an uirlis líne ordaithe, na tástálacha comhréireachta agus na cur chun feidhme."
+    },
+    "directory": {
+      "title": "Eolaire brandaí",
+      "description": "Brandaí a fhoilsíonn trí Open Brand Exchange, agus conas do bhranda féin a chur ar an liosta."
+    },
+    "downloads": {
+      "title": "Íoslódálacha",
+      "description": "Bróisiúir, teimpléid ríomhphoist agus comhaid samplacha."
+    },
+    "faq": {
+      "title": "Ceisteanna coitianta",
+      "description": "Freagraí ar na ceisteanna is minice a chuireann brandaí agus miondíoltóirí."
+    },
+    "governance": {
+      "title": "Rialachas agus ainm",
+      "description": "Cé a chinneann faoin gcaighdeán, conas cur leis, na ceadúnais agus cén fáth gur ainm oibre é an t-ainm."
+    },
+    "privacy": {
+      "title": "Príobháideachas",
+      "description": "Ní rianaíonn an suíomh seo thú: gan fianáin, gan rianú."
+    }
+  },
+  "home": {
+    "eyebrow": "Caighdeán oscailte do bhrandaí",
+    "h1": "Áit amháin agus API amháin do do mhiondíoltóirí go léir",
+    "lead": "Is bealach saor in aisce agus oscailte é Open Brand Exchange chun do ghrianghraif táirgí deiridh agus do shonraí earraí a sheachadadh chuig do mhiondíoltóirí. Faigheann do mhiondíoltóirí tairseach leat, faigheann a gcórais API caighdeánach, agus foilsíonn tú go huathoibríoch ó do chórais féin.",
+    "ctaBrands": "Conas a oibríonn sé do bhrandaí",
+    "ctaRetailers": "Is miondíoltóir mé",
+    "howTitle": "Conas a oibríonn sé",
+    "steps": [
+      {
+        "h": "Cuir do thairseach ar bun",
+        "p": "Lig do sholáthraí é a reáchtáil, nó óstáil tú féin é saor in aisce le cliceáil amháin nó ordú amháin.",
+        "link": "Roghanna óstála"
+      },
+      {
+        "h": "Foilsigh go huathoibríoch",
+        "p": "Comhad CSV amháin agus grianghraif le hainm seasta. Seachadann do PIM, ERP nó fillteán simplí iad gach oíche, gan obair láimhe.",
+        "link": "Uathoibriú"
+      },
+      {
+        "h": "Déanann do mhiondíoltóirí an chuid eile",
+        "p": "Logálann miondíoltóirí isteach, greamaíonn siad a liosta EAN agus íoslódálann siad. Faigheann a gcórais an t-ábhar céanna tríd an API caighdeánach.",
+        "link": "Do mhiondíoltóirí"
+      }
+    ],
+    "whatTitle": "Cad a sheachadann tú",
+    "what": [
+      {
+        "h": "Grianghraif, díreach mar a bhí i gceist agat",
+        "p": "Grianghraif táirge, grianghraif le samhlacha agus mionsonraí, lena n-ord, a n-amharc, cearta úsáide, lánchosc agus cé acu ar úsáideadh IS nó nár úsáideadh."
+      },
+      {
+        "h": "Sonraí earra de réir méide",
+        "p": "Uimhir stíle, dath, EAN do gach méid, séasúr, cur síos, ábhar agus treoracha cúraim, i roinnt teangacha."
+      },
+      {
+        "h": "Taistealaíonn athruithe leo féin",
+        "p": "Sroicheann grianghraf táirge athsholáthraithe nó íomhá tarraingthe siar do mhiondíoltóirí leis féin."
+      }
+    ],
+    "whyTitle": "Cén fáth oscailte",
+    "why": [
+      {
+        "h": "Saor in aisce",
+        "p": "Ní chosnaíonn an caighdeán ná na bogearraí faic. Ar a mhéad íocann tú as óstáil, nó as soláthraí más fearr leat é a sheachfhoinsiú."
+      },
+      {
+        "h": "Leatsa",
+        "p": "Tá d'ábhar ar do fhreastalaí féin nó le soláthraí ar féidir leat é a fhágáil. Labhraíonn gach tairseach an teanga chéanna."
+      },
+      {
+        "h": "Cainéal amháin in ionad go leor",
+        "p": "Foilseachán amháin do do mhiondíoltóirí go léir. Deireadh le haistrithe comhad, ríomhphoist le zipeanna agus comhtháthú ar leith do gach siopa."
+      }
+    ],
+    "status": "Tá Open Brand Exchange ag an tús. Is céad dréacht (0.1) í an tsonraíocht agus tá na bogearraí á dtógáil anois. Ní thaispeánaimid custaiméirí ná uimhreacha nach bhfuil ann fós.",
+    "statusLink": "Léigh conas a rialaítear é"
+  },
+  "brands": {
+    "h1": "Do bhrandaí",
+    "lead": "Teastaíonn do ghrianghraif agus do shonraí earraí ó do mhiondíoltóirí, nasctha go díreach lena n-earraí féin más féidir. Le Open Brand Exchange socraíonn tú é sin uair amháin, dóibh go léir le chéile.",
+    "blocks": [
+      {
+        "h": "Tairseach do do mhiondíoltóirí",
+        "p": "Tá d'ainm agus do stíl ar do thairseach: \"Kestrel · {portal}\", ar d'fhearann féin más mian leat. Iarrann miondíoltóirí rochtain, agus ceadaíonn nó diúltaíonn tusa.",
+        "items": [
+          "Cuardaigh agus scag de réir branda, séasúir, bailiúcháin agus cineál táirge",
+          "Greamaigh liosta EAN agus feic láithreach cad atá ann agus cad atá in easnamh",
+          "Íoslódáil grianghraf amháin, earra amháin nó zip de rogha iomlán",
+          "Sa bhformáid atá ag teastáil: bunaidh, gréasán (2000 px) nó cearnach",
+          "Sonraí earraí mar scarbhileog, le hábhar agus treoracha cúraim"
+        ]
+      },
+      {
+        "h": "API caighdeánach dá gcórais",
+        "p": "Faigheann miondíoltóirí a oibríonn le bogearraí eochair API dá gcóras. Faigheann a gcóras díolacháin, PIM nó siopa ar líne gach rud uair amháin agus ansin na hathruithe amháin.",
+        "items": [
+          "Cuardach de réir EAN, ionas go dtagann grianghraif ar an earra agus an méid cheart",
+          "Tagann athruithe leo féin, fiú an méid a tharraingíonn tú siar",
+          "Taistealaíonn cearta úsáide, lánchosc agus bunús IS le gach grianghraf",
+          "Tógtha uair amháin, oibríonn sé le gach branda a úsáideann Open Brand Exchange"
+        ]
+      },
+      {
+        "h": "Uaslódáil uathoibríoch",
+        "p": "Ní gá d'éinne comhaid a tharraingt thart. Faigheann do thairseach d'easpórtáil léi féin, nó seolann do chórais féin í.",
+        "items": [
+          "Allmhairiú sceidealta ó sheoladh gréasáin, freastalaí SFTP nó buicéad S3, gan chód",
+          "Fillteán a fhoilsítear go huathoibríoch leis an uirlis obx",
+          "Oidis do cron, GitHub Actions, n8n, Make agus Zapier",
+          "Formáid CSV amháin agus riail ainmniúcháin amháin do ghrianghraif: KO-1001_NVY_1.jpg"
+        ]
+      },
+      {
+        "h": "Is leatsa é",
+        "p": "Ní ardán é Open Brand Exchange a dtugann tú do bhranda dó. Reáchtálann tú do thairseach féin, nó ligeann tú do sholáthraí é a dhéanamh.",
+        "items": [
+          "Tá féin-óstáil saor in aisce: is bogearraí foinse oscailte iad",
+          "Arbh fhearr leat é a sheachfhoinsiú? Roghnaigh soláthraí, agus athraigh aon uair is mian leat",
+          "Feiceann tú cé a íoslódálann cad, de réir miondíoltóra",
+          "Is tusa a chinneann cé a fhaigheann rochtain, ar na brandaí, agus an gceadaítear bunleaganacha"
+        ]
+      }
+    ],
+    "adminTitle": "An méid a bhainistíonn tú féin",
+    "admin": [
+      { "k": "Catalóg", "v": "brandaí, earraí, dathanna agus méideanna, grianghraif agus a n-ord" },
+      { "k": "Allmhairí", "v": "uaslódáil nó faigh de réir sceidil, le teachtaireacht shoiléir do gach líne a theip" },
+      { "k": "Miondíoltóirí", "v": "ceadaigh nó diúltaigh iarratais (le cúis), tabhair cuireadh chuig cuntais nó cuir bac orthu" },
+      { "k": "Eochracha API", "v": "eochracha do chórais do mhiondíoltóirí: taispeántar uair amháin iad, éasca le hathnuachan nó le cúlghairm" },
+      { "k": "Uaslódáil uathoibríoch", "v": "eochracha do do chórais féin, agus fógraí nuair a iarrann miondíoltóir rochtain nó nuair a chríochnaíonn allmhairiú" },
+      { "k": "Staitisticí", "v": "íoslódálacha agus úsáid de réir miondíoltóra" },
+      { "k": "Socruithe", "v": "lógó, dath béime, téacs fáilte, cearta úsáide réamhshocraithe agus d'fhearann féin" }
+    ],
+    "nextTitle": "An chéad chéim eile",
+    "nextHosting": "Roghnaigh conas é a óstáil",
+    "nextAutomation": "Féach ar na hoidis uathoibrithe"
+  },
+  "automation": {
+    "h1": "Uathoibriú",
+    "lead": "Tá na sonraí agus na grianghraif cheana féin i do PIM, ERP, DAM nó i bhfillteán comhroinnte. Roghnaigh an chéad oideas a oireann: oibríonn siad go léir le gach tairseach Open Brand Exchange.",
+    "chooseTitle": "Cén t-oideas a oireann duit?",
+    "head": ["Tá agat…", "Úsáid", "Cód ag teastáil"],
+    "rows": [
+      ["CSV nó zip ar sheoladh gréasáin, freastalaí SFTP nó buicéad S3", "Allmhairiú sceidealta", "níl"],
+      ["fillteán ina dtagann easpórtálacha", "obx watch", "níl"],
+      ["freastalaí nó ríomhaire a ritheann tascanna san oíche", "cron nó Sceidealóir Tascanna", "líne amháin"],
+      ["d'easpórtálacha i stór Git", "GitHub Action", "comhad YAML amháin"],
+      ["n8n, Make nó Zapier", "Céimeanna HTTP", "níl (amhairc)"],
+      ["forbróir a nascann do PIM nó ERP", "An API go díreach", "beagán"]
+    ],
+    "formatTitle": "Formáid amháin do gach rud",
+    "formatP": "Léann gach bealach foilsithe an rud céanna: products.csv le líne amháin do gach méid, agus grianghraif darb ainm {style}_{color}_{position}.jpg (stíl, dath, suíomh). Nuair atá sé sin agat, oibríonn gach oideas thíos.",
+    "formatLink": "An fhormáid allmhairithe iomlán",
+    "csvLabel": "products.csv (giorraithe)",
+    "namesLabel": "Ainmneacha comhad na ngrianghraf",
+    "keyTitle": "Cad atá de dhíth ort",
+    "keyP": "I do riarachán, oscail Uaslódáil uathoibríoch agus cruthaigh eochair nua. Beidh dhá luach agat ansin: seoladh do thairsí (OBX_URL) agus an eochair féin (OBX_TOKEN). Ní thaispeántar an eochair ach uair amháin.",
+    "keyTip": "Tabhair a eochair féin do gach córas. Ansin is féidir leat ceann amháin a chúlghairm gan na cinn eile a bhriseadh.",
+    "scheduledTitle": "1. Allmhairiú sceidealta (gan chód)",
+    "scheduledP": "I do riarachán: Allmhairí → Allmhairí sceidealta → Cuir leis. Roghnaigh an fhoinse agus cé chomh minic a ritheann sé.",
+    "scheduled": [
+      { "k": "Seoladh gréasáin (HTTPS)", "v": "seoladh products.csv, nó zip le products.csv agus grianghraif. Stóráiltear sonraí logála isteach criptithe." },
+      { "k": "SFTP", "v": "freastalaí, úsáideoir, pasfhocal nó eochair, agus an fillteán ina bhfuil an easpórtáil." },
+      { "k": "Buicéad S3", "v": "AWS S3, Cloudflare R2, MinIO nó Backblaze: críochphointe, buicéad, fillteán agus eochair inléite amháin." }
+    ],
+    "scheduledMode": "Roghnaigh \"Nuashonraigh\" (cuir leis agus athraigh amháin) nó \"Scáthánaigh\" (bain freisin an méid a d'imigh as an gcomhad). Diúltaíonn Scáthánaigh má d'imeodh níos mó ná leath de bhranda, ionas nach bhfolmhaíonn easpórtáil bhriste do chatalóg riamh. Taispeánann \"Tástáil an nasc\" na comhaid a léifeadh sé.",
+    "cliTitle": "An uirlis obx",
+    "cliP": "Is clár aonair é obx do Windows, macOS agus Linux. Léann sé OBX_URL agus OBX_TOKEN ón timpeallacht, ní uaslódálann sé ach grianghraif nua nó athraithe, déanann sé na leaganacha gréasáin nuair is gá agus fanann sé go dtí go bhfuil gach rud próiseáilte ag do thairseach. Rith é chomh minic agus is mian leat: ní chosnaíonn earraí gan athrú faic.",
+    "cliExit": "Cód scoir 0 = gach rud i gceart, 2 = críochnaithe ach bhí earráidí i roinnt línte (liostaítear iad), 1 = theip air.",
+    "cliGet": "Íoslódáil obx",
+    "watchTitle": "2. Fillteán a fhoilsíonn é féin: obx watch",
+    "watchP": "Lig do do PIM, ERP nó do chomhghleacaí easpórtálacha a shábháil i bhfillteán. Foilsíonn obx watch a luaithe a athraíonn rud éigin agus scipeálann sé grianghraif nár athraigh. Rith é mar sheirbhís, nó le Docker:",
+    "cronTitle": "3. cron nó Sceidealóir Tascanna Windows",
+    "cronLinux": "Linux nó macOS",
+    "cronWindows": "Windows (PowerShell, uair amháin)",
+    "githubTitle": "4. GitHub Action",
+    "githubP": "Stóráil OBX_URL agus OBX_TOKEN mar rúin an stóir. Oibríonn an rud céanna in GitLab CI, Bitbucket nó Azure DevOps: suiteáil obx agus rith obx push.",
+    "httpTitle": "5. n8n, Make nó Zapier",
+    "httpP": "Úsáid gnáthchéim HTTP Request leis an gceanntásc Authorization: Bearer agus d'eochair ina dhiaidh. Is féidir gach céim a athdhéanamh go sábháilte: ní athraíonn na sonraí céanna a sheoladh faoi dhó faic.",
+    "httpProduct": "Earra (mar shampla nuair a athraíonn sé i do PIM)",
+    "httpVariant": "Dath agus méid, lena EAN",
+    "httpImage": "Grianghraf: na sonraí ar dtús, ansin an comhad féin",
+    "httpImageNote": "Ní dhéanann roinnt tairseacha (an Tairseach do Cloudflare) leaganacha gréasáin de ghrianghraif iad féin. Ansin, úsáid allmhairiú sceidealta nó obx: déanann siad duit iad.",
+    "httpOffline": "Rud a thógáil as líne",
+    "httpHooks": "Ar mhaith leat fógra nuair a tharlaíonn rud éigin? I do riarachán, cuir fógra (webhook) leis le haghaidh allmhairiú críochnaithe nó iarratas nua ar rochtain, agus lig dó truicear a thosú in n8n, Make nó Zapier.",
+    "apiTitle": "6. An API go díreach (d'fhorbróirí)",
+    "apiP": "Cuimhníonn comhtháthú ar an méid a sheol sé an uair dheireanach agus ní sheolann sé ach na hathruithe, i mbaisceanna. Nó seol an CSV mar atá agus lig don tairseach é a léamh.",
+    "apiBatch": "Scipeáil grianghraif atá ag an tairseach cheana, ansin seol baisc amháin",
+    "apiImport": "CSV agus zip de ghrianghraif in aon iarraidh amháin",
+    "apiMore": "Tá gach mionsonra sa tsonraíocht:",
+    "apiSpec": "Ingest API",
+    "apiAuto": "oidis uathoibrithe",
+    "apiSdk": "Go SDK"
+  },
+  "hosting": {
+    "h1": "Óstáil",
+    "lead": "Is ionann tairseach amháin agus cuideachta branda amháin ar fhreastalaí amháin. Is tusa a roghnaíonn conas é a reáchtáil, ó sheachfhoinsiú iomlán go déanamh go hiomlán tú féin. Thíos, ón gceann is simplí go dtí an ceann is teicniúla.",
+    "p1Title": "1. Le soláthraí",
+    "p1P": "An rogha is éasca: óstálann cuideachta do thairseach, coinníonn sí cothrom le dáta é agus cabhraíonn sí leis an socrú. Toisc go labhraíonn gach tairseach an caighdeán céanna, is féidir leat bogadh níos déanaí chuig soláthraí eile nó chuig d'óstáil féin.",
+    "fieldBased": "Lonnaithe i",
+    "fieldLanguages": "Teangacha",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "D'ábhar go léir a easpórtáil",
+    "fieldWebsite": "Suíomh gréasáin",
+    "listTitle": "Ar mhaith leat a bheith i do sholáthraí?",
+    "listP": "Is féidir le haon chuideachta óstála, gníomhaireacht nó díoltóir bogearraí a bheith liostaithe anseo. Tá na coinníollacha mar an gcéanna do chách:",
+    "listItems": [
+      "éiríonn le do thairseach sna tástálacha comhréireachta",
+      "is féidir le branda a shonraí agus a ghrianghraif go léir a easpórtáil agus imeacht",
+      "foilsíonn tú do phraghsanna agus do théarmaí féin ar do shuíomh féin"
+    ],
+    "listHow": "Oscail pull request ar stór an tsuímh gréasáin le do shonraí in src/data/providers.json. Liostaítear an tionscnóir ar dtús, gach duine eile in ord aibítre.",
+    "p2Title": "2. Le cliceáil amháin",
+    "p2P": "Do thairseach féin ar do chuntas féin, gan freastalaí a bhainistiú.",
+    "cfP": "Ritheann sé ar Cloudflare Workers, le D1 mar bhunachar sonraí agus R2 do na grianghraif. Cliceáil an cnaipe, sínigh isteach ar Cloudflare agus lean na céimeanna. Tá liúntais saor in aisce ag Cloudflare; seiceáil a bpraghsanna reatha le haghaidh catalóg mhór. Déanann do bhrabhsálaí agus an uirlis obx leaganacha gréasáin de do ghrianghraif, mar sin ní gá duit faic a dhéanamh.",
+    "cfButton": "Suiteáil ar Cloudflare",
+    "runP": "Script a chuireann do thairseach ar Google Cloud Run. Teastaíonn cuntas Google Cloud agus an uirlis gcloud uait.",
+    "phpP": "Don phacáiste óstála gréasáin atá agat b'fhéidir cheana, le PHP agus bunachar sonraí. Níl aon orduithe ag teastáil:",
+    "phpSteps": [
+      "Íoslódáil obx-node-php.zip ón eisiúint is déanaí.",
+      "Díphacáil é agus uaslódáil an fillteán chuig d'óstáil le (S)FTP.",
+      "Dírigh d'(fho)fhearann, mar shampla retailers.dobhranda.ie, ar an bhfillteán public.",
+      "Oscail an seoladh sin agus lean an draoi socraithe."
+    ],
+    "phpDownload": "Íoslódáil an eisiúint is déanaí",
+    "p3Title": "3. Docker",
+    "p3P": "Ar do fhreastalaí féin nó ar aon scamall a ritheann coimeádáin. Ordú amháin:",
+    "composeP": "Nó le HTTPS san áireamh, trí Caddy:",
+    "envTitle": "Socruithe",
+    "envPublicUrl": "seoladh poiblí do thairsí",
+    "envSecretKey": "eochair randamach fhada (openssl rand -hex 32); coinnigh slán í",
+    "envSetupCode": "roghnach: cód socraithe a roghnaíonn tú roimh ré",
+    "envPort": "port, 8080 de réir réamhshocraithe",
+    "firstTitle": "Tar éis suiteála: an chéad tosú",
+    "first": [
+      "Oscail seoladh do thairsí i do bhrabhsálaí.",
+      "Cuir isteach an cód socraithe aonuaire. Tá sé sa loga ar an gcéad tosú, nó socraíonn tú roimh ré é le OBX_SETUP_CODE.",
+      "Líon isteach do chuideachta agus do chéad bhranda, agus roghnaigh do phasfhocal féin. Ní bhíonn pasfhocal réamhshocraithe ann riamh."
+    ],
+    "firstWhy": "Cinntíonn an cód socraithe nach féidir le haon duine eile tairseach nuashuiteáilte a éileamh.",
+    "domainTitle": "D'fhearann féin",
+    "domainP": "Úsáid fofhearann mar retailers.dobhranda.ie nó b2b.dobhranda.ie. Feiceann miondíoltóirí d'ainm ansin, agus fanann do sheoladh mar an gcéanna nuair a athraíonn tú óstáil.",
+    "compareTitle": "Trí eagrán, tairseach amháin",
+    "compareP": "Déanann na trí eagrán an rud céanna agus tá an riarachán céanna agus an tairseach miondíoltóirí chéanna acu. Roghnaigh an ceann a oireann d'óstáil; is féidir leat athrú níos déanaí.",
+    "compareLink": "Féach ar na cur chun feidhme"
+  },
+  "retailers": {
+    "h1": "Do mhiondíoltóirí",
+    "lead": "Seachadann brandaí a úsáideann Open Brand Exchange a ngrianghraif agus a sonraí earraí ar bhealach comhsheasmhach amháin, cibé an íoslódálann tú de láimh nó an úsáideann tú bogearraí.",
+    "portalTitle": "Cad a thugann tairseach branda duit",
+    "portalP": "Reáchtálann gach branda a thairseach féin, lena ainm féin air: mar shampla \"Kestrel · {portal}\".",
+    "portal": [
+      { "h": "Iarr rochtain", "p": "Iarr rochtain ar thairseach an bhranda. Ceadaíonn an branda é, agus faigheann tú cuireadh trí ríomhphost." },
+      { "h": "Cuardaigh agus scag", "p": "De réir branda, séasúir, bailiúcháin, cineál táirge nó datha. Gach earra lena ghrianghraif agus a shonraí go léir." },
+      { "h": "Greamaigh do liosta EAN", "p": "Greamaigh na EANanna ó do chóras díolacháin agus feic láithreach cé na hearraí atá ann agus cé na cinn atá fós in easnamh." },
+      { "h": "Íoslódáil mar is mian leat", "p": "Grianghraf amháin, earra amháin, do rogha nó gach rud i scagaire mar zip. Bunaidh (má cheadaíonn an branda é), gréasán nó cearnach." },
+      { "h": "Sonraí earraí mar scarbhileog", "p": "EAN do gach méid, dath, ábhar, cúram agus cur síos, réidh do do chóras féin." },
+      { "h": "Cad atá ceadaithe", "p": "Taispeántar cearta úsáide, dáta an lánchoisc agus cé acu ar cruthaíodh íomhá le IS nó nár cruthaíodh le gach íomhá." }
+    ],
+    "apiTitle": "Eochair API do do chóras",
+    "apiP": "An bhfaigheann do PIM, do chóras díolacháin nó do shiopa ar líne íomhánna leis féin? Iarr eochair API do do chóras mar sin. Faigheann sé gach rud ar dtús agus ina dhiaidh sin na hathruithe amháin, fiú an méid a tharraingíonn an branda siar. Meaitseáiltear íomhánna le d'earraí de réir EAN.",
+    "apiDev": "Do d'fhorbróir: seo an chuma atá air.",
+    "toolsTitle": "Photopilot agus bogearraí eile",
+    "toolsP": "Is caighdeán oscailte é Open Brand Exchange: is féidir le haon bhogearraí é a léamh. Is féidir le Photopilot, an tionscnóir, é a úsáid ina bhogearraí do mhiondíoltóirí, agus is féidir le díoltóirí eile an rud céanna a dhéanamh. Níl aon bhogearraí ar leith ag teastáil uait: is leor brabhsálaí.",
+    "toolsLink": "Sonraíocht d'fhorbróirí",
+    "findTitle": "Branda a aimsiú",
+    "findP": "Tá brandaí a roghnaíonn a bheith liostaithe san eolaire. Má thugann branda seoladh a thairsí duit go simplí, oibríonn sé sin freisin.",
+    "findLink": "Téigh chuig an eolaire",
+    "kitTitle": "Níl do bhranda air? Seol é seo chucu",
+    "kitP": "Is é an bealach is tapúla le branda a mhealladh ná go n-iarrann siopaí é. Cóipeáil an ríomhphost seo, líon isteach na lúibíní cearnacha agus seol chuig do theagmhálaí nó d'ionadaí díolacháin ag an mbranda é.",
+    "kitEnglish": "Béarla (do bhrandaí idirnáisiúnta)",
+    "kitDownload": "Íoslódáil mar chomhad téacs",
+    "kitMore": "Tá tuilleadh ábhair, mar an bróisiúr do mhiondíoltóirí, ar an leathanach íoslódálacha."
+  },
+  "switchKit": {
+    "subject": "Bhur ngrianghraif táirgí agus bhur sonraí earraí trí Open Brand Exchange?",
+    "body": "A [ainm], a chara,\n\nDíolaimid [branda] inár siopa agus inár siopa ar líne. Chun bhur n-earraí a chur i láthair go maith, teastaíonn bhur ngrianghraif táirgí deiridh agus bhur sonraí earraí uainn: an EAN do gach méid, an t-ábhar, treoracha cúraim agus na grianghraif san ord ceart.\n\nFaoi láthair is minic a thagann sé seo chugainn mar chomhaid scaoilte agus ríomhphoist. An smaoineodh sibh ar Open Brand Exchange? Is caighdeán oscailte saor in aisce é a ligeann do bhranda a ábhar a fhoilsiú uair amháin dá mhiondíoltóirí go léir:\n\n- bhur dtairseach féin ina logálaimid isteach, ina gcuardaímid de réir ár EANanna agus ina n-íoslódálaimid;\n- API caighdeánach, ionas go bhfaigheann ár mbogearraí íomhánna agus sonraí leo féin;\n- foilsiú uathoibríoch ó bhur PIM, ERP nó fillteán easpórtálacha.\n\nIs bogearraí foinse oscailte iad: is féidir libh iad a óstáil sibh féin saor in aisce nó soláthraí a roghnú. Is sibhse a chinneann cé a fhaigheann rochtain agus feiceann sibh cé a íoslódálann cad.\n\nTuilleadh eolais: {url}\n\nLe dea-mhéin,\n\n[ainm]\n[siopa]\n[baile]"
+  },
+  "developers": {
+    "h1": "Do fhorbróirí",
+    "lead": "Is sonraíocht é Open Brand Exchange le trí API, JSON Schemas, sonraí tástála agus tástálacha comhréireachta. Is í an tsonraíocht an fhoinse fírinne; leanann na cur chun feidhme í.",
+    "specTitle": "An tsonraíocht",
+    "specP": "Leagan 0.1 (dréacht). OpenAPI 3.1, JSON Schema 2020-12, samplaí agus branda tástála bréige, Kestrel Outfitters. Ceadúnas CC-BY-4.0: saor le cur chun feidhme, go tráchtála freisin.",
+    "specStart": "Tosaigh le protocol.md",
+    "apisTitle": "Trí API",
+    "apisHead": ["API", "Do", "Stádas", "Conradh"],
+    "apis": [
+      { "who": "bogearraí miondíoltóirí: discovery, OAuth2 client credentials, fotha athruithe, cuardach GTIN, renditions, easpórtálacha, webhooks", "status": "normatach" },
+      { "who": "uathoibriú branda: upserts idempotent de réir aitheantóirí an bhranda féin, uaslódálacha seolta le sha256, baisceanna, allmhairí", "status": "normatach" },
+      { "who": "an riarachán comhroinnte agus an tairseach miondíoltóirí", "status": "neamhnormatach" }
+    ],
+    "readTitle": "Tairseach branda a léamh i gcúpla líne",
+    "sdkTitle": "SDK agus uirlis líne ordaithe",
+    "sdkP": "Tá an Go SDK in obx-go (cineálacha, cliant prótacail agus cliant ingest le díbhlúiriú, uaslódálacha ilchodacha agus baisceanna), an uirlis obx do bhrandaí, obx-conformance agus freastalaí bréige. I dteangacha eile oibríonn aon chliant HTTP: tá an conradh sna comhaid OpenAPI.",
+    "confTitle": "Comhréireacht",
+    "confP": "Tá cur chun feidhme comhréireach le OBX do phróifíl nuair a éiríonn le obx-conformance i ngach tástáil éigeantach den phróifíl sin. Tá trí phróifíl ann: protocol, ingest agus portal.",
+    "implTitle": "Cur chun feidhme",
+    "implHead": ["Stór", "Cad", "Ceadúnas", "Stádas"],
+    "impl": [
+      "sonraíocht, scéimeanna, sonraí tástála",
+      "Go SDK, uirlis obx, tástálacha comhréireachta, freastalaí bréige",
+      "comhéadan gréasáin comhroinnte: riarachán agus tairseach miondíoltóirí",
+      "Go: Docker agus Google Cloud Run",
+      "PHP: gnáth-óstáil ghréasáin",
+      "TypeScript: Cloudflare Workers"
+    ],
+    "statusDraft": "dréacht 0.1",
+    "implP": "Ag tógáil do chur chun feidhme nó do chliant féin? Cuir in iúl dúinn le issue nó pull request, agus rachaidh sé sa tábla seo a luaithe a éiríonn leis sna tástálacha comhréireachta.",
+    "docsTitle": "Doiciméid",
+    "docs": [
+      "an prótacal, i bprós",
+      "foilsiú tríd an Ingest API",
+      "an fhormáid CSV agus ainmneacha comhad",
+      "oidis uathoibrithe",
+      "riachtanais slándála",
+      "leaganacha agus comhoiriúnacht",
+      "eolairí brandaí"
+    ],
+    "contribute": "Déantar ranníocaíochtaí trí pull requests ar an stór spec.",
+    "governanceLink": "Conas a dhéantar cinntí"
+  },
+  "directory": {
+    "h1": "Eolaire brandaí",
+    "lead": "Brandaí a fhoilsíonn trí Open Brand Exchange agus a roghnaíonn a bheith liostaithe. Níl in iontráil ach seoladh thairseach an bhranda agus cúpla mionsonra cuardaigh, riamh sonraí táirge.",
+    "search": "Cuardaigh de réir ainm, branda nó tíre",
+    "demo": "Iontráil samplach",
+    "demoNote": "Is branda bréige é Kestrel Outfitters a úsáidtear le haghaidh samplaí agus tástálacha. Ní oibríonn a sheoladh.",
+    "fieldBrands": "Brandaí",
+    "fieldCountries": "Díolann i",
+    "fieldCategories": "Catagóirí",
+    "fieldLanguages": "Teangacha",
+    "fieldListed": "Liostaithe ó",
+    "fieldWebsite": "Suíomh gréasáin",
+    "openPortal": "Oscail an tairseach",
+    "noResults": "Níl aon bhranda ag teacht le do chuardach.",
+    "categories": {
+      "fashion": "Faisean",
+      "shoes": "Bróga",
+      "accessories": "Oiriúintí",
+      "sports": "Spórt",
+      "outdoor": "Amuigh faoin aer",
+      "kids": "Páistí",
+      "lingerie": "Fo-éadaí",
+      "home": "Baile"
+    },
+    "jsonP": "Tá an liosta ar fáil freisin mar JSON do bhogearraí:",
+    "listTitle": "Conas a bheith liostaithe",
+    "listSteps": [
+      "Cinntigh go bhfuil do thairseach ar líne agus go n-éiríonn léi sna tástálacha comhréireachta.",
+      "Oscail pull request ar stór an tsuímh gréasáin a chuireann iontráil amháin le public/directory.json, sórtáilte de réir id.",
+      "Seiceálann an suíomh gréasáin an iontráil go huathoibríoch agus iarrann sé a mionsonraí ar do thairseach.",
+      "Tar éis athbhreithnithe, tagann do bhranda chun solais anseo."
+    ],
+    "listRule": "Ní féidir ach leis an mbranda féin, nó lena sholáthraí óstála thar a cheann, liostú a iarraidh.",
+    "removeP": "Le baint den liosta, oscail pull request a bhaineann an iontráil, nó oscail issue."
+  },
+  "downloads": {
+    "h1": "Íoslódálacha",
+    "lead": "Ábhar le roinnt le comhghleacaithe, brandaí agus miondíoltóirí.",
+    "brochureTitle": "Bróisiúr do mhiondíoltóirí",
+    "brochureP": "Dhá leathanach faoin méid a chiallaíonn Open Brand Exchange do shiopa, le tabhairt do chomhghleacaí nó do bhranda.",
+    "kitTitle": "Ríomhphost do bhrandaí nach bhfuil páirteach fós",
+    "kitP": "An ríomhphost réidh ón leathanach do mhiondíoltóirí, mar chomhad téacs.",
+    "exampleTitle": "Comhaid shamplacha",
+    "exampleP": "products.csv agus íomhánna don bhranda bréige Kestrel Outfitters, chun allmhairiú a thriail.",
+    "exampleLink": "Comhaid shamplacha sa tsonraíocht",
+    "templateP": "Tá teimpléad CSV folamh ar fáil freisin i riarachán gach tairsí, faoi Allmhairí.",
+    "dutch": "Ollainnis",
+    "english": "Béarla"
+  },
+  "faq": {
+    "h1": "Ceisteanna coitianta",
+    "items": [
+      { "q": "Cé mhéad a chosnaíonn sé?", "a": "Tá an caighdeán agus na bogearraí saor in aisce. Má óstálann tú féin é, ní íocann tú ach as d'óstáil. Tá a phraghsanna féin ag soláthraí, agus gheobhaidh tú iad ar a shuíomh gréasáin." },
+      { "q": "An dteastaíonn forbróir uainn?", "a": "Ní don bhunobair. Is féidir leat tairseach a shuiteáil le cliceáil amháin, agus ní theastaíonn cód ó allmhairiú sceidealta ó sheoladh gréasáin, freastalaí SFTP nó buicéad. Cabhraíonn forbróir más mian leat do PIM nó ERP a nascadh go díreach." },
+      { "q": "An ardán eile é seo a gcaithfimid a bheith páirteach ann?", "a": "Ní hea. Reáchtálann gach branda a thairseach féin, ar a fhearann féin más mian leis. Níl aon ardán lárnach a choinníonn d'ábhar." },
+      { "q": "Cé a chinneann cén miondíoltóir a fhaigheann rochtain?", "a": "Tusa. Iarrann miondíoltóirí rochtain, agus ceadaíonn nó diúltaíonn tú gach iarratas. Roghnaíonn tú freisin cé na brandaí a fheiceann miondíoltóir agus an féidir bunleaganacha a íoslódáil." },
+      { "q": "Cad a theastaíonn ó mhiondíoltóirí?", "a": "Brabhsálaí. Is féidir le miondíoltóirí a bhfuil bogearraí acu a fhaigheann íomhánna leo féin eochair API a iarraidh do na bogearraí sin." },
+      { "q": "Cé na formáidí íomhá atá ann?", "a": "An bunleagan, díreach mar a d'uaslódáil tú é, móide leagan gréasáin (2000 px ar a mhéad), leagan cearnach agus réamhamharc beag. Roghnaíonn miondíoltóirí an méid a theastaíonn uathu." },
+      { "q": "An bhfanann eolas faoi IS agus faoi chearta leis na híomhánna?", "a": "Fanann. Is cuid de gach íomhá iad cearta úsáide, dáta an lánchoisc agus cé acu ar úsáideadh IS nó nár úsáideadh. Stóráiltear agus seachadtar bunleaganacha gan athrú, lena n-áirítear aon content credentials leabaithe." },
+      { "q": "An féidir linn soláthraí a athrú níos déanaí?", "a": "Is féidir. Labhraíonn gach tairseach an caighdeán céanna agus ligeann gach soláthraí atá liostaithe anseo duit d'ábhar go léir a easpórtáil. Fanann d'fhearann féin mar an gcéanna." },
+      { "q": "An bhfuil sé réidh?", "a": "Níl fós. Is céad dréacht (0.1) í an tsonraíocht agus tá na bogearraí á dtógáil. Is féidir leat triail a bhaint as cheana, ach níl sé i gceist fós é a úsáid i dtáirgeadh." },
+      { "q": "Cé atá taobh thiar de?", "a": "Is é Photopilot, comhlacht Ollannach a dhéanann bogearraí grianghrafadóireachta táirgí, a chuir tús le Open Brand Exchange. Tá an caighdeán oscailte, agus is é an sprioc go mbainfidh sé leis na brandaí agus na miondíoltóirí a úsáideann é." }
+    ]
+  },
+  "governance": {
+    "h1": "Rialachas agus ainm",
+    "lead": "Ba cheart go mbeadh Open Brand Exchange ag na brandaí, na miondíoltóirí agus na díoltóirí bogearraí a úsáideann é, ní ag comhlacht amháin.",
+    "sections": [
+      { "h": "Cé a chinneann", "p": "Go dtí go mbeidh trí chur chun feidhme neamhspleácha ann a n-éiríonn leo sna tástálacha comhréireachta, cinneann cothaitheoirí Photopilot faoi athruithe tar éis plé poiblí. Ina dhiaidh sin glacann grúpa stiúrtha seilbh, le suíochán amháin do gach cur chun feidhme agus branda amháin agus miondíoltóir amháin ar a laghad." },
+      { "h": "Conas a dhéantar athruithe", "p": "Is pull request poiblí le cúis ghearr é gach athrú ar an gcaighdeán. Fanann tograí níos mó oscailte do thráchtanna ar feadh 14 lá ar a laghad. Is féidir le duine ar bith cur leis, gan comhaontú ranníocaíochta a shíniú." },
+      { "h": "Neodrach ó dhearadh", "p": "Ní fhéadfaidh aon ní sa chaighdeán díoltóir nó seirbhís óstáilte áirithe a éileamh. Is féidir le duine ar bith é a chur chun feidhme, é a óstáil do dhaoine eile nó táirge iomaíoch a thógáil air. Ní fhaigheann bogearraí Photopilot aon chóir speisialta sna tástálacha comhréireachta." },
+      { "h": "Ceadúnais", "p": "Tá an tsonraíocht agus ábhar an tsuímh seo faoi CC-BY-4.0. Tá an SDK, an uirlis obx agus an comhéadan gréasáin comhroinnte faoi Apache-2.0. Tá na trí eagrán tairsí faoi AGPL-3.0, ionas go bhfanann feabhsuithe oscailte. Tá cód an tsuímh seo faoi MIT." }
+    ],
+    "nameTitle": "Maidir leis an ainm",
+    "nameP": "Is ainm oibre é \"Open Brand Exchange\". D'fhéadfadh sé athrú roimh leagan 1.0, tar éis cuardach trádmharcanna. Ní trádmharc cláraithe é. Is féidir le bogearraí a n-éiríonn leo sna tástálacha comhréireachta a rá go n-\"oibríonn siad le Open Brand Exchange\".",
+    "specLink": "An doiciméad rialachais iomlán"
+  },
+  "privacy": {
+    "h1": "Príobháideachas",
+    "lead": "Ní rianaíonn an suíomh gréasáin seo thú.",
+    "sections": [
+      { "h": "Gan fianáin", "p": "Ní shocraímid aon fhianáin. Má roghnaíonn tú teanga, cuimhníonn do bhrabhsálaí ar an rogha sin go háitiúil; ní sheoltar chugainn riamh í." },
+      { "h": "Gan rianú", "p": "Gan fógraíocht, gan cnaipí meán sóisialta, gan clónna tríú páirtí agus gan scripteanna rianaithe. Ar a mhéad úsáidimid Cloudflare Web Analytics, a chomhaireann cuairteanna gan fianáin agus gan tú a leanúint ó shuíomh go suíomh." },
+      { "h": "Óstáil", "p": "Tá an suíomh óstáilte ar Cloudflare Pages. Cosúil le gach freastalaí gréasáin, próiseálann Cloudflare do sheoladh IP chun na leathanaigh a sheachadadh agus iad a chosaint ar mhí-úsáid." },
+      { "h": "Tá tairseacha branda ar leith", "p": "Is é an branda féin nó a sholáthraí a reáchtálann gach tairseach branda. Is é a ráiteas príobháideachais siúd atá i bhfeidhm ansin, ní an ceann seo." }
+    ],
+    "contact": "Ceisteanna? Oscail issue ar stór an tsuímh gréasáin."
+  }
+}

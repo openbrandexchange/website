@@ -1,0 +1,472 @@
+{
+  "portalWord": "Portal dla sprzedawców",
+  "common": {
+    "skip": "Przejdź do treści",
+    "menu": "Menu",
+    "mainMenu": "Menu główne",
+    "language": "Język",
+    "languageLabel": "Wybierz język",
+    "home": "Open Brand Exchange, strona główna",
+    "copy": "Kopiuj",
+    "copied": "Skopiowano",
+    "draft": "Specyfikacja 0.1 (wersja robocza): oprogramowanie jest w budowie. Jeszcze nie do użytku produkcyjnego.",
+    "footerAbout": "Bezpłatny, otwarty sposób, w jaki marki mogą dostarczać zdjęcia produktów i dane artykułów swoim sprzedawcom.",
+    "footerMore": "Więcej",
+    "footerSource": "Kod źródłowy i specyfikacja",
+    "footerLicence": "Treść CC-BY-4.0, kod MIT.",
+    "footerWorking": "„Open Brand Exchange” to nazwa robocza. Specyfikacja 0.1, w rozwoju.",
+    "editionCloudflare": "Portal dla Cloudflare",
+    "editionGoogle": "Portal dla Google Cloud i Dockera",
+    "editionHosting": "Portal na hosting WWW",
+    "yes": "Tak",
+    "inDevelopment": "W rozwoju",
+    "available": "Dostępny"
+  },
+  "nav": {
+    "brands": "Dla marek",
+    "automation": "Automatyzacja",
+    "hosting": "Hosting",
+    "retailers": "Dla sprzedawców",
+    "developers": "Dla programistów",
+    "directory": "Katalog marek",
+    "downloads": "Do pobrania",
+    "faq": "Najczęstsze pytania",
+    "governance": "Zarządzanie i nazwa",
+    "privacy": "Prywatność"
+  },
+  "meta": {
+    "home": {
+      "title": "Open Brand Exchange: jedno miejsce i jedno API dla wszystkich Twoich sprzedawców",
+      "description": "Bezpłatny, otwarty standard wraz z oprogramowaniem dla marek: portal dla Twoich sprzedawców, standardowe API dla ich systemów i automatyczna publikacja z Twoich własnych systemów."
+    },
+    "brands": {
+      "title": "Dla marek",
+      "description": "Własny portal dla sprzedawców, standardowe API i automatyczna publikacja z PIM, ERP lub folderów. Hostuj samodzielnie za darmo albo skorzystaj z dostawcy."
+    },
+    "automation": {
+      "title": "Automatyzacja",
+      "description": "Publikuj automatycznie: zaplanowane importy, narzędzie obx, cron, GitHub Actions, n8n, Make, Zapier lub curl. Gotowe przepisy do skopiowania."
+    },
+    "hosting": {
+      "title": "Hosting",
+      "description": "Od najprostszego do najbardziej technicznego: dostawca, jedno kliknięcie w Cloudflare, Google Cloud Run lub zwykły hosting WWW, albo Docker."
+    },
+    "retailers": {
+      "title": "Dla sprzedawców",
+      "description": "Co daje Ci portal marki, klucz API dla Twojego systemu i gotowy e-mail do marek, których jeszcze nie ma."
+    },
+    "developers": {
+      "title": "Dla programistów",
+      "description": "Specyfikacja, trzy API, SDK i narzędzie wiersza poleceń, testy zgodności i implementacje."
+    },
+    "directory": {
+      "title": "Katalog marek",
+      "description": "Marki publikujące przez Open Brand Exchange i sposób, by dodać do katalogu swoją."
+    },
+    "downloads": {
+      "title": "Do pobrania",
+      "description": "Broszury, szablony e-maili i pliki przykładowe."
+    },
+    "faq": {
+      "title": "Najczęstsze pytania",
+      "description": "Odpowiedzi na pytania, które marki i sprzedawcy zadają najczęściej."
+    },
+    "governance": {
+      "title": "Zarządzanie i nazwa",
+      "description": "Kto decyduje o standardzie, jak się włączyć, licencje i dlaczego nazwa jest robocza."
+    },
+    "privacy": {
+      "title": "Prywatność",
+      "description": "Ta strona Cię nie śledzi: żadnych plików cookie, żadnego śledzenia."
+    }
+  },
+  "home": {
+    "eyebrow": "Otwarty standard dla marek",
+    "h1": "Jedno miejsce i jedno API dla wszystkich Twoich sprzedawców",
+    "lead": "Open Brand Exchange to bezpłatny, otwarty sposób na dostarczanie ostatecznych zdjęć produktów i danych artykułów Twoim sprzedawcom. Sprzedawcy dostają u Ciebie portal, ich systemy standardowe API, a Ty publikujesz automatycznie z własnych systemów.",
+    "ctaBrands": "Jak to działa dla marek",
+    "ctaRetailers": "Jestem sprzedawcą",
+    "howTitle": "Jak to działa",
+    "steps": [
+      {
+        "h": "Uruchom swój portal",
+        "p": "Powierz go dostawcy albo hostuj samodzielnie za darmo, jednym kliknięciem lub jednym poleceniem.",
+        "link": "Opcje hostingu"
+      },
+      {
+        "h": "Publikuj automatycznie",
+        "p": "Jeden plik CSV i zdjęcia o stałych nazwach. PIM, ERP albo zwykły folder dostarcza je co noc, bez ręcznej pracy.",
+        "link": "Automatyzacja"
+      },
+      {
+        "h": "Resztą zajmują się sprzedawcy",
+        "p": "Sprzedawcy logują się, wklejają listę kodów EAN i pobierają. Ich systemy pobierają te same treści przez standardowe API.",
+        "link": "Dla sprzedawców"
+      }
+    ],
+    "whatTitle": "Co dostarczasz",
+    "what": [
+      {
+        "h": "Zdjęcia takie, jak je zaplanowałeś",
+        "p": "Packshoty, zdjęcia na modelach i detale, z kolejnością, ujęciem, prawami do użycia, embargiem i informacją, czy użyto AI."
+      },
+      {
+        "h": "Dane artykułu dla każdego rozmiaru",
+        "p": "Numer modelu, kolor, EAN dla rozmiaru, sezon, opis, materiał i zalecenia pielęgnacji, w wielu językach."
+      },
+      {
+        "h": "Zmiany docierają same",
+        "p": "Wymieniony packshot lub wycofane zdjęcie samo trafia do Twoich sprzedawców."
+      }
+    ],
+    "whyTitle": "Dlaczego otwarty",
+    "why": [
+      {
+        "h": "Bezpłatny",
+        "p": "Standard i oprogramowanie nic nie kosztują. Płacisz najwyżej za hosting albo za dostawcę, jeśli wolisz to zlecić."
+      },
+      {
+        "h": "Twój",
+        "p": "Twoje treści są na Twoim serwerze albo u dostawcy, od którego możesz odejść. Każdy portal mówi tym samym językiem."
+      },
+      {
+        "h": "Jeden kanał zamiast wielu",
+        "p": "Jedna publikacja dla wszystkich sprzedawców. Koniec z przesyłaniem plików, e-mailami z archiwami zip i osobną integracją dla każdego sklepu."
+      }
+    ],
+    "status": "Open Brand Exchange jest na początku drogi. Specyfikacja to pierwsza wersja robocza (0.1), a oprogramowanie właśnie powstaje. Nie pokazujemy klientów ani liczb, których jeszcze nie ma.",
+    "statusLink": "Zobacz, jak jest zarządzany"
+  },
+  "brands": {
+    "h1": "Dla marek",
+    "lead": "Twoi sprzedawcy chcą Twoich zdjęć i danych artykułów, najlepiej połączonych bezpośrednio z ich własnymi artykułami. Z Open Brand Exchange ustawiasz to raz, dla wszystkich naraz.",
+    "blocks": [
+      {
+        "h": "Portal dla Twoich sprzedawców",
+        "p": "Twój portal nosi Twoją nazwę i identyfikację: „Kestrel · {portal}”, jeśli chcesz, we własnej domenie. Sprzedawcy proszą o dostęp, a Ty akceptujesz albo odrzucasz.",
+        "items": [
+          "Wyszukiwanie i filtrowanie według marki, sezonu, kolekcji i typu produktu",
+          "Wklejenie listy kodów EAN i natychmiastowy podgląd, co jest, a czego brakuje",
+          "Pobranie jednego zdjęcia, jednego artykułu albo archiwum zip z całym wyborem",
+          "W potrzebnym formacie: oryginał, web (2000 px) lub kwadrat",
+          "Dane artykułów w arkuszu kalkulacyjnym, z materiałem i pielęgnacją"
+        ]
+      },
+      {
+        "h": "Standardowe API dla ich systemów",
+        "p": "Sprzedawcy pracujący z oprogramowaniem dostają klucz API dla swojego systemu. Kasa, PIM czy sklep internetowy pobiera wszystko raz, a potem tylko zmiany.",
+        "items": [
+          "Wyszukiwanie po EAN, aby zdjęcia trafiały do właściwego artykułu i rozmiaru",
+          "Zmiany przychodzą same, także to, co wycofujesz",
+          "Prawa do użycia, embargo i pochodzenie AI towarzyszą każdemu zdjęciu",
+          "Zbudowane raz działa z każdą marką korzystającą z Open Brand Exchange"
+        ]
+      },
+      {
+        "h": "Automatyczne przesyłanie",
+        "p": "Nikt nie musi przeciągać plików. Portal sam pobiera Twój eksport albo wysyłają go Twoje systemy.",
+        "items": [
+          "Zaplanowany import z adresu WWW, serwera SFTP lub zasobnika S3, bez kodu",
+          "Folder publikowany automatycznie narzędziem obx",
+          "Przepisy dla cron, GitHub Actions, n8n, Make i Zapier",
+          "Jeden format CSV i jedna zasada nazywania zdjęć: KO-1001_NVY_1.jpg"
+        ]
+      },
+      {
+        "h": "To należy do Ciebie",
+        "p": "Open Brand Exchange nie jest platformą, której oddajesz swoją markę. Prowadzisz własny portal albo robi to za Ciebie dostawca.",
+        "items": [
+          "Samodzielny hosting jest bezpłatny: oprogramowanie jest otwarte",
+          "Wolisz to zlecić? Wybierz dostawcę i zmień go, kiedy chcesz",
+          "Widzisz, kto co pobiera, z podziałem na sprzedawców",
+          "Ty decydujesz, kto ma dostęp, do jakich marek i czy dozwolone są oryginały"
+        ]
+      }
+    ],
+    "adminTitle": "Czym zarządzasz sam",
+    "admin": [
+      { "k": "Katalog", "v": "marki, artykuły, kolory i rozmiary, zdjęcia i ich kolejność" },
+      { "k": "Importy", "v": "przesyłanie lub pobieranie według harmonogramu, z jasnym komunikatem dla każdego błędnego wiersza" },
+      { "k": "Sprzedawcy", "v": "akceptowanie lub odrzucanie próśb (z uzasadnieniem), zapraszanie lub blokowanie kont" },
+      { "k": "Klucze API", "v": "klucze dla systemów sprzedawców: pokazywane raz, łatwe do odnowienia lub unieważnienia" },
+      { "k": "Automatyczne przesyłanie", "v": "klucze dla Twoich systemów i powiadomienia, gdy sprzedawca prosi o dostęp lub import się kończy" },
+      { "k": "Statystyki", "v": "pobrania i korzystanie według sprzedawcy" },
+      { "k": "Ustawienia", "v": "logo, kolor akcentu, tekst powitalny, domyślne prawa do użycia i własna domena" }
+    ],
+    "nextTitle": "Następny krok",
+    "nextHosting": "Wybierz hosting",
+    "nextAutomation": "Zobacz przepisy automatyzacji"
+  },
+  "automation": {
+    "h1": "Automatyzacja",
+    "lead": "Twój PIM, ERP, DAM albo wspólny folder ma już dane i zdjęcia. Wybierz pierwszy pasujący przepis: każdy działa z każdym portalem Open Brand Exchange.",
+    "chooseTitle": "Który przepis do Ciebie pasuje?",
+    "head": ["Masz…", "Użyj", "Potrzebny kod"],
+    "rows": [
+      ["plik CSV lub zip pod adresem WWW, na serwerze SFTP lub w zasobniku S3", "Zaplanowany import", "brak"],
+      ["folder, do którego trafiają eksporty", "obx watch", "brak"],
+      ["serwer lub komputer, który nocą uruchamia zadania", "cron lub Harmonogram zadań", "jedna linia"],
+      ["eksporty w repozytorium Git", "GitHub Action", "jeden plik YAML"],
+      ["n8n, Make lub Zapier", "Kroki HTTP", "brak (wizualnie)"],
+      ["programistę, który podłączy Twój PIM lub ERP", "Bezpośrednio API", "trochę"]
+    ],
+    "formatTitle": "Jeden format do wszystkiego",
+    "formatP": "Każda metoda publikacji czyta to samo: products.csv z jednym wierszem na rozmiar i zdjęcia o nazwach {style}_{color}_{position}.jpg (model, kolor, pozycja). Gdy to masz, działa każdy przepis poniżej.",
+    "formatLink": "Pełny format importu",
+    "csvLabel": "products.csv (skrócony)",
+    "namesLabel": "Nazwy plików zdjęć",
+    "keyTitle": "Czego potrzebujesz",
+    "keyP": "W panelu administracyjnym otwórz Automatyczne przesyłanie i utwórz nowy klucz. Masz wtedy dwie wartości: adres portalu (OBX_URL) i sam klucz (OBX_TOKEN). Klucz jest pokazywany tylko raz.",
+    "keyTip": "Daj każdemu systemowi osobny klucz. Wtedy możesz unieważnić jeden, nie psując pozostałych.",
+    "scheduledTitle": "1. Zaplanowany import (bez kodu)",
+    "scheduledP": "W panelu: Importy → Zaplanowane importy → Dodaj. Wybierz źródło i częstotliwość.",
+    "scheduled": [
+      { "k": "Adres WWW (HTTPS)", "v": "adres pliku products.csv albo archiwum zip z products.csv i zdjęciami. Dane logowania są przechowywane w postaci zaszyfrowanej." },
+      { "k": "SFTP", "v": "serwer, użytkownik, hasło lub klucz oraz folder z eksportem." },
+      { "k": "Zasobnik S3", "v": "AWS S3, Cloudflare R2, MinIO lub Backblaze: endpoint, zasobnik, folder i klucz tylko do odczytu." }
+    ],
+    "scheduledMode": "Wybierz „Aktualizuj” (tylko dodawanie i zmiany) albo „Odzwierciedlaj” (także wycofywanie tego, co zniknęło z pliku). Odzwierciedlanie odmawia, jeśli zniknąć miałaby ponad połowa marki, więc wadliwy eksport nigdy nie opróżni katalogu. „Testuj połączenie” pokazuje, które pliki zostałyby odczytane.",
+    "cliTitle": "Narzędzie obx",
+    "cliP": "obx to jeden program dla Windows, macOS i Linuksa. Odczytuje OBX_URL i OBX_TOKEN ze środowiska, przesyła tylko nowe lub zmienione zdjęcia, w razie potrzeby tworzy wersje webowe i czeka, aż portal wszystko przetworzy. Uruchamiaj go tak często, jak chcesz: niezmienione artykuły nic nie kosztują.",
+    "cliExit": "Kod wyjścia 0 = wszystko w porządku, 2 = gotowe, ale niektóre wiersze miały błędy (są wypisane), 1 = niepowodzenie.",
+    "cliGet": "Pobierz obx",
+    "watchTitle": "2. Folder, który publikuje się sam: obx watch",
+    "watchP": "Niech PIM, ERP lub współpracownik zapisuje eksporty w folderze. obx watch publikuje, gdy tylko coś się zmieni, i pomija niezmienione zdjęcia. Uruchom go jako usługę lub w Dockerze:",
+    "cronTitle": "3. cron lub Harmonogram zadań Windows",
+    "cronLinux": "Linux lub macOS",
+    "cronWindows": "Windows (PowerShell, jednorazowo)",
+    "githubTitle": "4. GitHub Action",
+    "githubP": "Zapisz OBX_URL i OBX_TOKEN jako sekrety repozytorium. Tak samo działa to w GitLab CI, Bitbucket i Azure DevOps: zainstaluj obx i uruchom obx push.",
+    "httpTitle": "5. n8n, Make lub Zapier",
+    "httpP": "Użyj zwykłego kroku HTTP Request z nagłówkiem Authorization: Bearer i Twoim kluczem. Każdy krok można bezpiecznie powtórzyć: dwukrotne wysłanie tych samych danych niczego nie zmienia.",
+    "httpProduct": "Artykuł (na przykład gdy zmieni się w PIM)",
+    "httpVariant": "Kolor i rozmiar wraz z EAN",
+    "httpImage": "Zdjęcie: najpierw dane, potem sam plik",
+    "httpImageNote": "Niektóre portale (Portal dla Cloudflare) same nie tworzą wersji webowych zdjęć. Tam użyj zaplanowanego importu lub obx: zrobią je za Ciebie.",
+    "httpOffline": "Wycofanie czegoś",
+    "httpHooks": "Chcesz dostać sygnał, gdy coś się wydarzy? W panelu dodaj powiadomienie (webhook) o zakończonym imporcie lub nowej prośbie o dostęp i niech uruchamia wyzwalacz w n8n, Make lub Zapier.",
+    "apiTitle": "6. Bezpośrednio API (dla programistów)",
+    "apiP": "Integracja pamięta, co wysłała ostatnio, i wysyła tylko zmiany, w paczkach. Możesz też wysłać plik CSV bez zmian i pozwolić portalowi go odczytać.",
+    "apiBatch": "Pomiń zdjęcia, które portal już ma, i wyślij jedną paczkę",
+    "apiImport": "Plik CSV i zip ze zdjęciami za jednym razem",
+    "apiMore": "Wszystkie szczegóły są w specyfikacji:",
+    "apiSpec": "Ingest API",
+    "apiAuto": "przepisy automatyzacji",
+    "apiSdk": "SDK Go"
+  },
+  "hosting": {
+    "h1": "Hosting",
+    "lead": "Jeden portal to jedna firma markowa na jednym serwerze. Sam wybierasz, jak go prowadzić: od całkowitego zlecenia po pełną samodzielność. Poniżej od najprostszego do najbardziej technicznego.",
+    "p1Title": "1. Przez dostawcę",
+    "p1P": "Najprościej: firma hostuje Twój portal, aktualizuje go i pomaga w konfiguracji. Ponieważ każdy portal mówi tym samym standardem, możesz później przejść do innego dostawcy albo na własny hosting.",
+    "fieldBased": "Siedziba",
+    "fieldLanguages": "Języki",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Eksport wszystkich treści",
+    "fieldWebsite": "Strona internetowa",
+    "listTitle": "Chcesz zostać dostawcą?",
+    "listP": "Tu może znaleźć się każda firma hostingowa, agencja czy producent oprogramowania. Warunki są takie same dla wszystkich:",
+    "listItems": [
+      "Twój portal przechodzi testy zgodności",
+      "marka może wyeksportować wszystkie dane i zdjęcia i odejść",
+      "własne ceny i warunki publikujesz na własnej stronie"
+    ],
+    "listHow": "Otwórz pull request w repozytorium strony, dodając swoje dane w src/data/providers.json. Inicjator jest pierwszy, pozostali w kolejności alfabetycznej.",
+    "p2Title": "2. Jednym kliknięciem",
+    "p2P": "Własny portal na własnym koncie, bez zarządzania serwerem.",
+    "cfP": "Działa na Cloudflare Workers, z D1 jako bazą danych i R2 na zdjęcia. Kliknij przycisk, zaloguj się do Cloudflare i postępuj zgodnie z krokami. Cloudflare ma bezpłatne limity; sprawdź aktualne ceny dla dużych katalogów. Wersje webowe zdjęć tworzy Twoja przeglądarka i narzędzie obx, więc nie musisz nic robić.",
+    "cfButton": "Zainstaluj w Cloudflare",
+    "runP": "Skrypt, który uruchamia Twój portal w Google Cloud Run. Potrzebujesz konta Google Cloud i narzędzia gcloud.",
+    "phpP": "Na hosting WWW, który być może już masz, z PHP i bazą danych. Bez żadnych poleceń:",
+    "phpSteps": [
+      "Pobierz obx-node-php.zip z najnowszego wydania.",
+      "Rozpakuj go i prześlij folder na hosting przez (S)FTP.",
+      "Skieruj swoją (sub)domenę, na przykład sprzedawcy.twojamarka.pl, na folder public.",
+      "Otwórz ten adres i postępuj zgodnie z kreatorem instalacji."
+    ],
+    "phpDownload": "Pobierz najnowsze wydanie",
+    "p3Title": "3. Docker",
+    "p3P": "Na własnym serwerze lub w dowolnej chmurze uruchamiającej kontenery. Jedno polecenie:",
+    "composeP": "Albo od razu z HTTPS, przez Caddy:",
+    "envTitle": "Ustawienia",
+    "envPublicUrl": "publiczny adres Twojego portalu",
+    "envSecretKey": "długi losowy klucz (openssl rand -hex 32); przechowuj go bezpiecznie",
+    "envSetupCode": "opcjonalnie: kod konfiguracji wybrany z góry",
+    "envPort": "port, domyślnie 8080",
+    "firstTitle": "Po instalacji: pierwsze uruchomienie",
+    "first": [
+      "Otwórz adres swojego portalu w przeglądarce.",
+      "Wpisz jednorazowy kod konfiguracji. Znajdziesz go w logu przy pierwszym uruchomieniu albo ustawisz z góry przez OBX_SETUP_CODE.",
+      "Podaj swoją firmę i pierwszą markę i wybierz własne hasło. Nigdy nie ma hasła domyślnego."
+    ],
+    "firstWhy": "Kod konfiguracji sprawia, że nikt inny nie przejmie świeżo zainstalowanego portalu.",
+    "domainTitle": "Własna domena",
+    "domainP": "Użyj subdomeny, np. sprzedawcy.twojamarka.pl lub b2b.twojamarka.pl. Sprzedawcy widzą wtedy Twoją nazwę, a adres pozostaje ten sam, gdy zmienisz hosting.",
+    "compareTitle": "Trzy edycje, jeden portal",
+    "compareP": "Trzy edycje robią to samo i mają ten sam panel administracyjny oraz ten sam portal dla sprzedawców. Wybierz tę, która pasuje do Twojego hostingu; zmienić możesz później.",
+    "compareLink": "Zobacz implementacje"
+  },
+  "retailers": {
+    "h1": "Dla sprzedawców",
+    "lead": "Marki korzystające z Open Brand Exchange dostarczają zdjęcia i dane artykułów w jeden spójny sposób, niezależnie od tego, czy pobierasz ręcznie, czy używasz oprogramowania.",
+    "portalTitle": "Co daje Ci portal marki",
+    "portalP": "Każda marka prowadzi własny portal pod własną nazwą, na przykład „Kestrel · {portal}”.",
+    "portal": [
+      { "h": "Prośba o dostęp", "p": "Poproś o dostęp w portalu marki. Marka zatwierdza, a Ty dostajesz zaproszenie e-mailem." },
+      { "h": "Wyszukiwanie i filtry", "p": "Według marki, sezonu, kolekcji, typu produktu lub koloru. Każdy artykuł ze wszystkimi zdjęciami i danymi." },
+      { "h": "Wklej listę kodów EAN", "p": "Wklej kody EAN z systemu kasowego i od razu zobacz, które artykuły są, a których jeszcze brakuje." },
+      { "h": "Pobieraj, jak chcesz", "p": "Jedno zdjęcie, jeden artykuł, Twój wybór albo wszystko w filtrze jako zip. Oryginał (jeśli marka pozwala), web lub kwadrat." },
+      { "h": "Dane artykułów w arkuszu", "p": "EAN dla rozmiaru, kolor, materiał, pielęgnacja i opis, gotowe dla Twojego systemu." },
+      { "h": "Co wolno", "p": "Prawa do użycia, data embarga i informacja, czy zdjęcie powstało z użyciem AI, są przy każdym zdjęciu." }
+    ],
+    "apiTitle": "Klucz API dla Twojego systemu",
+    "apiP": "Twój PIM, system kasowy lub sklep internetowy sam pobiera zdjęcia? Poproś więc o klucz API dla swojego systemu. Najpierw pobierze wszystko, a potem tylko zmiany, także to, co marka wycofuje. Zdjęcia są przypisywane do Twoich artykułów po kodzie EAN.",
+    "apiDev": "Dla Twojego programisty: tak to wygląda.",
+    "toolsTitle": "Photopilot i inne oprogramowanie",
+    "toolsP": "Open Brand Exchange to otwarty standard: każde oprogramowanie może go odczytać. Photopilot, inicjator, może go używać w swoim oprogramowaniu dla sprzedawców, a inni dostawcy mogą robić to samo. Nie potrzebujesz żadnego konkretnego oprogramowania: wystarczy przeglądarka.",
+    "toolsLink": "Specyfikacja dla programistów",
+    "findTitle": "Jak znaleźć markę",
+    "findP": "Marki, które chcą być widoczne, są w katalogu marek. Jeśli marka po prostu poda Ci adres swojego portalu, to też działa.",
+    "findLink": "Przejdź do katalogu marek",
+    "kitTitle": "Twojej marki tu nie ma? Wyślij jej to",
+    "kitP": "Najszybciej marka dołącza, gdy proszą o to sklepy. Skopiuj ten e-mail, uzupełnij nawiasy i wyślij go do swojego opiekuna lub przedstawiciela marki.",
+    "kitEnglish": "Angielski (dla marek międzynarodowych)",
+    "kitDownload": "Pobierz jako plik tekstowy",
+    "kitMore": "Więcej materiałów, np. broszura dla sprzedawców, znajdziesz w sekcji do pobrania."
+  },
+  "switchKit": {
+    "subject": "Wasze zdjęcia produktów i dane artykułów przez Open Brand Exchange?",
+    "body": "Dzień dobry [imię],\n\nsprzedajemy [marka] w naszym sklepie stacjonarnym i internetowym. Aby dobrze prezentować Wasze artykuły, potrzebujemy ostatecznych zdjęć produktów i danych artykułów: EAN dla każdego rozmiaru, materiału, zaleceń pielęgnacji i zdjęć we właściwej kolejności.\n\nDziś trafia to do nas często jako pojedyncze pliki i e-maile. Czy moglibyście rozważyć Open Brand Exchange? To bezpłatny, otwarty standard, dzięki któremu marka publikuje treści raz dla wszystkich swoich sprzedawców:\n\n- własny portal, w którym logujemy się, szukamy po naszych kodach EAN i pobieramy;\n- standardowe API, dzięki któremu nasz system sam pobiera zdjęcia i dane;\n- automatyczna publikacja z Waszego PIM, ERP lub folderu z eksportami.\n\nOprogramowanie jest otwarte: możecie hostować je samodzielnie za darmo albo wybrać dostawcę. To Wy decydujecie, kto ma dostęp, i widzicie, kto co pobiera.\n\nWięcej informacji: {url}\n\nZ pozdrowieniami\n\n[imię]\n[sklep]\n[miasto]"
+  },
+  "developers": {
+    "h1": "Dla programistów",
+    "lead": "Open Brand Exchange to specyfikacja z trzema API, schematami JSON, danymi testowymi i testami zgodności. Specyfikacja jest źródłem prawdy; implementacje za nią podążają.",
+    "specTitle": "Specyfikacja",
+    "specP": "Wersja 0.1 (robocza). OpenAPI 3.1, JSON Schema 2020-12, przykłady i fikcyjna marka testowa Kestrel Outfitters. Licencja CC-BY-4.0: swobodna implementacja, także komercyjna.",
+    "specStart": "Zacznij od protocol.md",
+    "apisTitle": "Trzy API",
+    "apisHead": ["API", "Dla", "Status", "Kontrakt"],
+    "apis": [
+      { "who": "oprogramowanie sprzedawców: discovery, OAuth2 client credentials, strumień zmian, wyszukiwanie po GTIN, renditions, eksporty, webhooki", "status": "normatywne" },
+      { "who": "automatyzacja marki: idempotentne upserty po własnych identyfikatorach marki, przesyłanie adresowane sha256, paczki, importy", "status": "normatywne" },
+      { "who": "wspólny panel administracyjny i portal dla sprzedawców", "status": "nienormatywne" }
+    ],
+    "readTitle": "Odczyt portalu marki w kilku linijkach",
+    "sdkTitle": "SDK i narzędzie wiersza poleceń",
+    "sdkP": "obx-go zawiera SDK Go (typy, klienta protokołu i klienta ingest z deduplikacją, przesyłaniem wieloczęściowym i paczkami), narzędzie obx dla marek, obx-conformance i serwer atrapę. W innych językach wystarczy dowolny klient HTTP: kontrakt jest w plikach OpenAPI.",
+    "confTitle": "Zgodność",
+    "confP": "Implementacja jest zgodna z OBX dla danego profilu, gdy obx-conformance zalicza wszystkie obowiązkowe testy tego profilu. Są trzy profile: protocol, ingest i portal.",
+    "implTitle": "Implementacje",
+    "implHead": ["Repozytorium", "Co", "Licencja", "Status"],
+    "impl": [
+      "specyfikacja, schematy, dane testowe",
+      "SDK Go, narzędzie obx, testy zgodności, serwer atrapa",
+      "wspólny interfejs WWW: panel administracyjny i portal dla sprzedawców",
+      "Go: Docker i Google Cloud Run",
+      "PHP: zwykły hosting WWW",
+      "TypeScript: Cloudflare Workers"
+    ],
+    "statusDraft": "wersja robocza 0.1",
+    "implP": "Tworzysz własną implementację lub klienta? Daj znać przez issue lub pull request; trafi do tej tabeli, gdy przejdzie testy zgodności.",
+    "docsTitle": "Dokumenty",
+    "docs": [
+      "protokół opisowo",
+      "publikowanie przez Ingest API",
+      "format CSV i nazwy plików",
+      "przepisy automatyzacji",
+      "wymagania bezpieczeństwa",
+      "wersje i zgodność",
+      "katalogi marek"
+    ],
+    "contribute": "Wkład odbywa się przez pull requesty w repozytorium spec.",
+    "governanceLink": "Jak podejmowane są decyzje"
+  },
+  "directory": {
+    "h1": "Katalog marek",
+    "lead": "Marki, które publikują przez Open Brand Exchange i chcą być widoczne. Wpis zawiera tylko adres portalu marki i kilka danych do wyszukiwania, nigdy danych produktów.",
+    "search": "Szukaj po nazwie, marce lub kraju",
+    "demo": "Wpis przykładowy",
+    "demoNote": "Kestrel Outfitters to fikcyjna marka do przykładów i testów. Jej adres nie działa.",
+    "fieldBrands": "Marki",
+    "fieldCountries": "Sprzedaje w",
+    "fieldCategories": "Kategorie",
+    "fieldLanguages": "Języki",
+    "fieldListed": "W katalogu od",
+    "fieldWebsite": "Strona internetowa",
+    "openPortal": "Otwórz portal",
+    "noResults": "Żadna marka nie pasuje do wyszukiwania.",
+    "categories": {
+      "fashion": "Moda",
+      "shoes": "Obuwie",
+      "accessories": "Akcesoria",
+      "sports": "Sport",
+      "outdoor": "Outdoor",
+      "kids": "Dzieci",
+      "lingerie": "Bielizna",
+      "home": "Dom"
+    },
+    "jsonP": "Lista jest też dostępna w formacie JSON dla oprogramowania:",
+    "listTitle": "Jak trafić do katalogu",
+    "listSteps": [
+      "Upewnij się, że Twój portal działa i przechodzi testy zgodności.",
+      "Otwórz pull request w repozytorium strony, dodający jeden wpis do public/directory.json, posortowany według id.",
+      "Strona automatycznie sprawdza wpis i pobiera dane z Twojego portalu.",
+      "Po weryfikacji Twoja marka pojawia się tutaj."
+    ],
+    "listRule": "O wpis może poprosić tylko sama marka albo jej dostawca hostingu w jej imieniu.",
+    "removeP": "Aby zostać usuniętym, otwórz pull request usuwający wpis albo zgłoś issue."
+  },
+  "downloads": {
+    "h1": "Do pobrania",
+    "lead": "Materiały do przekazania współpracownikom, markom i sprzedawcom.",
+    "brochureTitle": "Broszura dla sprzedawców",
+    "brochureP": "Dwie strony o tym, co Open Brand Exchange oznacza dla sklepu, do przekazania współpracownikowi lub marce.",
+    "kitTitle": "E-mail do marek, których jeszcze nie ma",
+    "kitP": "Gotowy e-mail ze strony dla sprzedawców, jako plik tekstowy.",
+    "exampleTitle": "Pliki przykładowe",
+    "exampleP": "Plik products.csv i zdjęcia fikcyjnej marki Kestrel Outfitters, aby wypróbować import.",
+    "exampleLink": "Pliki przykładowe w specyfikacji",
+    "templateP": "Pusty szablon CSV jest też w panelu administracyjnym każdego portalu, w sekcji Importy.",
+    "dutch": "Niderlandzki",
+    "english": "Angielski"
+  },
+  "faq": {
+    "h1": "Najczęstsze pytania",
+    "items": [
+      { "q": "Ile to kosztuje?", "a": "Standard i oprogramowanie są bezpłatne. Jeśli hostujesz samodzielnie, płacisz tylko za hosting. Dostawca ma własne ceny, które znajdziesz na jego stronie." },
+      { "q": "Czy potrzebujemy programisty?", "a": "Nie do podstaw. Portal instalujesz jednym kliknięciem, a zaplanowany import z adresu WWW, serwera SFTP lub zasobnika nie wymaga kodu. Programista przyda się, jeśli chcesz bezpośrednio podłączyć PIM lub ERP." },
+      { "q": "Czy to kolejna platforma, do której musimy dołączyć?", "a": "Nie. Każda marka prowadzi własny portal, jeśli chce, we własnej domenie. Nie ma centralnej platformy przechowującej Twoje treści." },
+      { "q": "Kto decyduje, który sprzedawca dostaje dostęp?", "a": "Ty. Sprzedawcy proszą o dostęp, a Ty akceptujesz lub odrzucasz każdą prośbę. Wybierasz też, jakie marki widzi sprzedawca i czy może pobierać oryginały." },
+      { "q": "Czego potrzebują sprzedawcy?", "a": "Przeglądarki. Sprzedawcy, których oprogramowanie samo pobiera zdjęcia, mogą poprosić o klucz API dla tego oprogramowania." },
+      { "q": "Jakie są formaty zdjęć?", "a": "Oryginał, dokładnie taki, jak go przesłano, plus wersja webowa (maks. 2000 px), wersja kwadratowa i mały podgląd. Sprzedawcy wybierają to, czego potrzebują." },
+      { "q": "Czy informacje o AI i prawach zostają przy zdjęciach?", "a": "Tak. Prawa do użycia, data embarga i informacja o użyciu AI są częścią każdego zdjęcia. Oryginały są przechowywane i dostarczane bez zmian, łącznie z osadzonymi content credentials." },
+      { "q": "Czy możemy później zmienić dostawcę?", "a": "Tak. Każdy portal mówi tym samym standardem, a każdy wymieniony tu dostawca pozwala wyeksportować wszystkie treści. Twoja domena pozostaje taka sama." },
+      { "q": "Czy to już gotowe?", "a": "Jeszcze nie. Specyfikacja to pierwsza wersja robocza (0.1), a oprogramowanie powstaje. Możesz już próbować, ale nie jest jeszcze przeznaczone do produkcji." },
+      { "q": "Kto za tym stoi?", "a": "Open Brand Exchange zapoczątkował Photopilot, holenderska firma tworząca oprogramowanie do fotografii produktowej. Standard jest otwarty, a celem jest, by należał do marek i sprzedawców, którzy z niego korzystają." }
+    ]
+  },
+  "governance": {
+    "h1": "Zarządzanie i nazwa",
+    "lead": "Open Brand Exchange ma należeć do marek, sprzedawców i dostawców oprogramowania, którzy z niego korzystają, a nie do jednej firmy.",
+    "sections": [
+      { "h": "Kto decyduje", "p": "Dopóki nie powstaną trzy niezależne implementacje przechodzące testy zgodności, o zmianach decydują opiekunowie z Photopilot, po publicznej dyskusji. Potem przejmuje to grupa sterująca z jednym miejscem na każdego implementującego oraz co najmniej jedną marką i jednym sprzedawcą." },
+      { "h": "Jak wprowadza się zmiany", "p": "Każda zmiana standardu to publiczny pull request z krótkim uzasadnieniem. Większe propozycje są otwarte na komentarze przez co najmniej 14 dni. Każdy może wnieść wkład bez podpisywania umowy." },
+      { "h": "Neutralny z założenia", "p": "Nic w standardzie nie może wymagać konkretnego dostawcy ani usługi hostowanej. Każdy może go zaimplementować, hostować dla innych lub zbudować na nim konkurencyjny produkt. Oprogramowanie Photopilot nie jest traktowane w testach zgodności w szczególny sposób." },
+      { "h": "Licencje", "p": "Specyfikacja i treść tej strony są na licencji CC-BY-4.0. SDK, narzędzie obx i wspólny interfejs WWW są na licencji Apache-2.0. Trzy edycje portalu są na licencji AGPL-3.0, aby ulepszenia pozostawały otwarte. Kod tej strony jest na licencji MIT." }
+    ],
+    "nameTitle": "O nazwie",
+    "nameP": "„Open Brand Exchange” to nazwa robocza. Może się zmienić przed wersją 1.0, po badaniu znaków towarowych. Nie jest zarejestrowanym znakiem towarowym. Oprogramowanie, które przechodzi testy zgodności, może mówić, że „działa z Open Brand Exchange”.",
+    "specLink": "Pełny dokument o zarządzaniu"
+  },
+  "privacy": {
+    "h1": "Prywatność",
+    "lead": "Ta strona Cię nie śledzi.",
+    "sections": [
+      { "h": "Bez plików cookie", "p": "Nie używamy plików cookie. Jeśli wybierzesz język, Twoja przeglądarka zapamięta ten wybór lokalnie; nigdy nie jest on do nas wysyłany." },
+      { "h": "Bez śledzenia", "p": "Bez reklam, bez przycisków mediów społecznościowych, bez czcionek zewnętrznych i bez skryptów śledzących. Co najwyżej korzystamy z Cloudflare Web Analytics, które liczy odwiedziny bez plików cookie i bez śledzenia Cię na innych stronach." },
+      { "h": "Hosting", "p": "Strona działa na Cloudflare Pages. Jak każdy serwer WWW, Cloudflare przetwarza Twój adres IP, aby dostarczać strony i chronić je przed nadużyciami." },
+      { "h": "Portale marek są osobne", "p": "Każdy portal marki prowadzi sama marka lub jej dostawca. Tam obowiązuje ich polityka prywatności, a nie ta." }
+    ],
+    "contact": "Pytania? Zgłoś issue w repozytorium strony."
+  }
+}

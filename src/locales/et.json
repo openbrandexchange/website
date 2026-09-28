@@ -1,0 +1,472 @@
+{
+  "portalWord": "Edasimüüjate portaal",
+  "common": {
+    "skip": "Liigu sisu juurde",
+    "menu": "Menüü",
+    "mainMenu": "Peamenüü",
+    "language": "Keel",
+    "languageLabel": "Valige keel",
+    "home": "Open Brand Exchange, avaleht",
+    "copy": "Kopeeri",
+    "copied": "Kopeeritud",
+    "draft": "Spetsifikatsioon 0.1 (mustand): tarkvara on valmimas. Tootmiskasutuseks see veel ei sobi.",
+    "footerAbout": "Tasuta ja avatud viis, kuidas kaubamärgid saavad edasimüüjatele tootefotosid ja tooteandmeid edastada.",
+    "footerMore": "Veel",
+    "footerSource": "Lähtekood ja spetsifikatsioon",
+    "footerLicence": "Sisu CC-BY-4.0, kood MIT.",
+    "footerWorking": "„Open Brand Exchange” on töönimi. Spetsifikatsioon 0.1, arendamisel.",
+    "editionCloudflare": "Portaal Cloudflare'ile",
+    "editionGoogle": "Portaal Google Cloudile ja Dockerile",
+    "editionHosting": "Portaal veebimajutusele",
+    "yes": "Jah",
+    "inDevelopment": "Arendamisel",
+    "available": "Saadaval"
+  },
+  "nav": {
+    "brands": "Kaubamärkidele",
+    "automation": "Automatiseerimine",
+    "hosting": "Majutus",
+    "retailers": "Edasimüüjatele",
+    "developers": "Arendajatele",
+    "directory": "Kaubamärkide loend",
+    "downloads": "Allalaadimised",
+    "faq": "KKK",
+    "governance": "Juhtimine ja nimi",
+    "privacy": "Privaatsus"
+  },
+  "meta": {
+    "home": {
+      "title": "Open Brand Exchange: üks koht ja üks API kõigile teie edasimüüjatele",
+      "description": "Tasuta avatud standard ja tarkvara kaubamärkidele: portaal teie edasimüüjatele, standardne API nende süsteemidele ja automaatne avaldamine teie enda süsteemidest."
+    },
+    "brands": {
+      "title": "Kaubamärkidele",
+      "description": "Oma portaal edasimüüjatele, standardne API ja automaatne avaldamine PIM-ist, ERP-st või kaustadest. Majutage ise tasuta või kasutage teenusepakkujat."
+    },
+    "automation": {
+      "title": "Automatiseerimine",
+      "description": "Avaldage automaatselt: ajastatud impordid, tööriist obx, cron, GitHub Actions, n8n, Make, Zapier või curl. Kopeeritavad retseptid."
+    },
+    "hosting": {
+      "title": "Majutus",
+      "description": "Kõige lihtsamast kõige tehnilisemani: teenusepakkuja, üks klõps Cloudflare'is, Google Cloud Run või tavaline veebimajutus, või Docker."
+    },
+    "retailers": {
+      "title": "Edasimüüjatele",
+      "description": "Mida kaubamärgi portaal teile annab, API-võti teie süsteemile ja valmis e-kiri kaubamärkidele, kes pole veel liitunud."
+    },
+    "developers": {
+      "title": "Arendajatele",
+      "description": "Spetsifikatsioon, kolm API-t, SDK ja käsureatööriist, vastavustestid ja teostused."
+    },
+    "directory": {
+      "title": "Kaubamärkide loend",
+      "description": "Kaubamärgid, mis avaldavad Open Brand Exchange'i kaudu, ja kuidas oma kaubamärk loendisse lisada."
+    },
+    "downloads": {
+      "title": "Allalaadimised",
+      "description": "Brošüürid, e-kirja mallid ja näidisfailid."
+    },
+    "faq": {
+      "title": "KKK",
+      "description": "Vastused küsimustele, mida kaubamärgid ja edasimüüjad kõige sagedamini küsivad."
+    },
+    "governance": {
+      "title": "Juhtimine ja nimi",
+      "description": "Kes otsustab standardi üle, kuidas panustada, litsentsid ja miks nimi on töönimi."
+    },
+    "privacy": {
+      "title": "Privaatsus",
+      "description": "See sait ei jälgi teid: küpsiseid ega jälgimist pole."
+    }
+  },
+  "home": {
+    "eyebrow": "Avatud standard kaubamärkidele",
+    "h1": "Üks koht ja üks API kõigile teie edasimüüjatele",
+    "lead": "Open Brand Exchange on tasuta ja avatud viis edastada lõplikud tootefotod ja tooteandmed oma edasimüüjatele. Edasimüüjad saavad teie juures portaali, nende süsteemid standardse API ja teie avaldate automaatselt oma süsteemidest.",
+    "ctaBrands": "Kuidas see kaubamärkidele toimib",
+    "ctaRetailers": "Olen edasimüüja",
+    "howTitle": "Kuidas see toimib",
+    "steps": [
+      {
+        "h": "Seadistage oma portaal",
+        "p": "Laske teenusepakkujal seda hallata või majutage ise tasuta ühe klõpsu või ühe käsuga.",
+        "link": "Majutusvõimalused"
+      },
+      {
+        "h": "Avaldage automaatselt",
+        "p": "Üks CSV-fail ja kindla nimega fotod. Teie PIM, ERP või tavaline kaust toimetab need kohale igal ööl, ilma käsitööta.",
+        "link": "Automatiseerimine"
+      },
+      {
+        "h": "Ülejäänu teevad edasimüüjad",
+        "p": "Edasimüüjad logivad sisse, kleebivad oma EAN-loendi ja laadivad alla. Nende süsteemid saavad sama sisu standardse API kaudu.",
+        "link": "Edasimüüjatele"
+      }
+    ],
+    "whatTitle": "Mida te edastate",
+    "what": [
+      {
+        "h": "Fotod nii, nagu te need mõtlesite",
+        "p": "Pakkfotod, modellifotod ja detailid koos järjekorra, vaate, kasutusõiguste, embargo ja teabega, kas kasutati tehisintellekti."
+      },
+      {
+        "h": "Tooteandmed suuruste kaupa",
+        "p": "Mudelinumber, värv, EAN suuruse kaupa, hooaeg, kirjeldus, materjal ja hooldusjuhised mitmes keeles."
+      },
+      {
+        "h": "Muudatused jõuavad ise kohale",
+        "p": "Asendatud pakkfoto või tagasi võetud foto jõuab teie edasimüüjateni iseenesest."
+      }
+    ],
+    "whyTitle": "Miks avatud",
+    "why": [
+      {
+        "h": "Tasuta",
+        "p": "Standard ja tarkvara ei maksa midagi. Maksate kõige rohkem majutuse eest või teenusepakkujale, kui eelistate selle sisse osta."
+      },
+      {
+        "h": "Teie oma",
+        "p": "Teie sisu on teie enda serveris või teenusepakkuja juures, kellest saate lahkuda. Kõik portaalid räägivad sama keelt."
+      },
+      {
+        "h": "Üks kanal paljude asemel",
+        "p": "Üks avaldamine kõigile edasimüüjatele. Enam ei ole failiedastusi, zip-failidega e-kirju ega eraldi liidest iga poe jaoks."
+      }
+    ],
+    "status": "Open Brand Exchange on alguses. Spetsifikatsioon on esimene mustand (0.1) ja tarkvara ehitatakse praegu. Me ei näita kliente ega numbreid, mida veel ei ole.",
+    "statusLink": "Lugege, kuidas seda juhitakse"
+  },
+  "brands": {
+    "h1": "Kaubamärkidele",
+    "lead": "Teie edasimüüjad soovivad teie fotosid ja tooteandmeid, eelistatult otse nende enda toodetega seotuna. Open Brand Exchange'iga seadistate selle ühe korra, kõigile korraga.",
+    "blocks": [
+      {
+        "h": "Portaal teie edasimüüjatele",
+        "p": "Teie portaal kannab teie nime ja stiili: „Kestrel · {portal}”, soovi korral teie oma domeenil. Edasimüüjad taotlevad juurdepääsu, teie kinnitate või lükkate tagasi.",
+        "items": [
+          "Otsing ja filtreerimine kaubamärgi, hooaja, kollektsiooni ja tootetüübi järgi",
+          "Kleepige EAN-loend ja näete kohe, mis on olemas ja mis puudub",
+          "Laadige alla üks foto, üks toode või terve valiku zip-fail",
+          "Vajalikus vormingus: originaal, veeb (2000 px) või ruut",
+          "Tooteandmed tabelina, koos materjali ja hooldusjuhistega"
+        ]
+      },
+      {
+        "h": "Standardne API nende süsteemidele",
+        "p": "Tarkvaraga töötavad edasimüüjad saavad API-võtme oma süsteemile. Kassa, PIM või e-pood laadib kõik korra alla ja seejärel ainult muudatused.",
+        "items": [
+          "Otsing EAN-i järgi, et fotod jõuaksid õige toote ja suuruse juurde",
+          "Muudatused tulevad ise, ka see, mille tagasi võtate",
+          "Kasutusõigused, embargo ja tehisintellekti päritolu liiguvad iga fotoga kaasa",
+          "Kord ehitatuna töötab see iga kaubamärgiga, mis kasutab Open Brand Exchange'i"
+        ]
+      },
+      {
+        "h": "Automaatne üleslaadimine",
+        "p": "Keegi ei pea faile lohistama. Teie portaal toob ekspordi ise või saadavad selle teie süsteemid.",
+        "items": [
+          "Ajastatud import veebiaadressilt, SFTP-serverist või S3-ämbrist, ilma koodita",
+          "Kaust, mis avaldatakse automaatselt tööriistaga obx",
+          "Retseptid cronile, GitHub Actionsile, n8n-ile, Make'ile ja Zapierile",
+          "Üks CSV-vorming ja üks fotode nimereegel: KO-1001_NVY_1.jpg"
+        ]
+      },
+      {
+        "h": "See on teie oma",
+        "p": "Open Brand Exchange ei ole platvorm, millele oma kaubamärgi üle annate. Haldate oma portaali ise või laseb seda teha teenusepakkuja.",
+        "items": [
+          "Ise majutamine on tasuta: tarkvara on avatud lähtekoodiga",
+          "Eelistate sisseostu? Valige teenusepakkuja ja vahetage, millal soovite",
+          "Näete, kes mida alla laadib, edasimüüjate kaupa",
+          "Teie otsustate, kes saab juurdepääsu, milliste kaubamärkide juurde ja kas originaalid on lubatud"
+        ]
+      }
+    ],
+    "adminTitle": "Mida haldate ise",
+    "admin": [
+      { "k": "Kataloog", "v": "kaubamärgid, tooted, värvid ja suurused, fotod ja nende järjekord" },
+      { "k": "Impordid", "v": "üleslaadimine või ajastatud toomine, selge teatega iga ebaõnnestunud rea kohta" },
+      { "k": "Edasimüüjad", "v": "taotluste kinnitamine või tagasilükkamine (põhjendusega), kontode kutsumine või blokeerimine" },
+      { "k": "API-võtmed", "v": "võtmed edasimüüjate süsteemidele: kuvatakse üks kord, lihtne uuendada või tühistada" },
+      { "k": "Automaatne üleslaadimine", "v": "võtmed teie süsteemidele ja teavitused, kui edasimüüja taotleb juurdepääsu või import lõpeb" },
+      { "k": "Statistika", "v": "allalaadimised ja kasutus edasimüüjate kaupa" },
+      { "k": "Seaded", "v": "logo, rõhuvärv, tervitustekst, vaikimisi kasutusõigused ja oma domeen" }
+    ],
+    "nextTitle": "Järgmine samm",
+    "nextHosting": "Valige majutus",
+    "nextAutomation": "Vaadake automatiseerimise retsepte"
+  },
+  "automation": {
+    "h1": "Automatiseerimine",
+    "lead": "Teie PIM-is, ERP-s, DAM-is või jagatud kaustas on andmed ja fotod juba olemas. Valige esimene sobiv retsept: kõik töötavad iga Open Brand Exchange'i portaaliga.",
+    "chooseTitle": "Milline retsept teile sobib?",
+    "head": ["Teil on…", "Kasutage", "Vajalik kood"],
+    "rows": [
+      ["CSV või zip veebiaadressil, SFTP-serveris või S3-ämbris", "Ajastatud import", "puudub"],
+      ["kaust, kuhu ekspordid jõuavad", "obx watch", "puudub"],
+      ["server või arvuti, mis käitab öösel ülesandeid", "cron või Tööajasti", "üks rida"],
+      ["ekspordid Giti hoidlas", "GitHub Action", "üks YAML-fail"],
+      ["n8n, Make või Zapier", "HTTP-sammud", "puudub (visuaalne)"],
+      ["arendaja, kes ühendab teie PIM-i või ERP", "API otse", "natuke"]
+    ],
+    "formatTitle": "Üks vorming kõigeks",
+    "formatP": "Kõik avaldamisviisid loevad sama: products.csv ühe reaga suuruse kohta ja fotod nimega {style}_{color}_{position}.jpg (mudel, värv, asukoht). Kui see on olemas, töötab iga allpool olev retsept.",
+    "formatLink": "Täielik impordivorming",
+    "csvLabel": "products.csv (lühendatud)",
+    "namesLabel": "Fotode failinimed",
+    "keyTitle": "Mida vajate",
+    "keyP": "Avage halduses Automaatne üleslaadimine ja looge uus võti. Teil on siis kaks väärtust: portaali aadress (OBX_URL) ja võti ise (OBX_TOKEN). Võtit näidatakse ainult üks kord.",
+    "keyTip": "Andke igale süsteemile oma võti. Nii saate ühe tühistada ilma teisi rikkumata.",
+    "scheduledTitle": "1. Ajastatud import (ilma koodita)",
+    "scheduledP": "Halduses: Impordid → Ajastatud impordid → Lisa. Valige allikas ja kui sageli see käivitub.",
+    "scheduled": [
+      { "k": "Veebiaadress (HTTPS)", "v": "products.csv või products.csv ja fotosid sisaldava zip-faili aadress. Sisselogimisandmed salvestatakse krüptitult." },
+      { "k": "SFTP", "v": "server, kasutaja, parool või võti ning ekspordiga kaust." },
+      { "k": "S3-ämber", "v": "AWS S3, Cloudflare R2, MinIO või Backblaze: lõpp-punkt, ämber, kaust ja kirjutuskaitstud võti." }
+    ],
+    "scheduledMode": "Valige „Uuenda” (ainult lisamine ja muutmine) või „Peegelda” (võtab tagasi ka selle, mis failist kadus). Peegeldamine keeldub, kui kaoks üle poole kaubamärgist, nii et vigane eksport ei tühjenda kunagi teie kataloogi. „Testi ühendust” näitab, milliseid faile loetaks.",
+    "cliTitle": "Tööriist obx",
+    "cliP": "obx on üks programm Windowsile, macOS-ile ja Linuxile. See loeb keskkonnast OBX_URL-i ja OBX_TOKEN-i, laadib üles ainult uued või muudetud fotod, teeb vajaduse korral veebiversioonid ja ootab, kuni portaal on kõik töödelnud. Käivitage seda nii sageli, kui soovite: muutmata tooted ei maksa midagi.",
+    "cliExit": "Väljumiskood 0 = kõik korras, 2 = valmis, kuid mõnel real oli vigu (need loetletakse), 1 = ebaõnnestus.",
+    "cliGet": "Laadi obx alla",
+    "watchTitle": "2. Kaust, mis avaldab end ise: obx watch",
+    "watchP": "Laske PIM-il, ERP-l või kolleegil salvestada ekspordid kausta. obx watch avaldab kohe, kui midagi muutub, ja jätab muutmata fotod vahele. Käivitage see teenusena või Dockeriga:",
+    "cronTitle": "3. cron või Windowsi Tööajasti",
+    "cronLinux": "Linux või macOS",
+    "cronWindows": "Windows (PowerShell, üks kord)",
+    "githubTitle": "4. GitHub Action",
+    "githubP": "Salvestage OBX_URL ja OBX_TOKEN hoidla saladustena. Sama töötab GitLab CI-s, Bitbucketis või Azure DevOpsis: paigaldage obx ja käivitage obx push.",
+    "httpTitle": "5. n8n, Make või Zapier",
+    "httpP": "Kasutage tavalist HTTP Request sammu päisega Authorization: Bearer ja oma võtmega. Iga sammu võib ohutult korrata: samade andmete kaks korda saatmine ei muuda midagi.",
+    "httpProduct": "Toode (näiteks kui see PIM-is muutub)",
+    "httpVariant": "Värv ja suurus koos EAN-iga",
+    "httpImage": "Foto: kõigepealt andmed, siis fail ise",
+    "httpImageNote": "Mõned portaalid (Portaal Cloudflare'ile) ei tee fotodest ise veebiversioone. Kasutage seal ajastatud importi või obx-i: need teevad versioonid teie eest.",
+    "httpOffline": "Millegi tagasivõtmine",
+    "httpHooks": "Soovite teadet, kui midagi juhtub? Lisage halduses teavitus (webhook) lõppenud impordi või uue juurdepääsutaotluse kohta ja laske sellel käivitada päästik n8n-is, Make'is või Zapieris.",
+    "apiTitle": "6. API otse (arendajatele)",
+    "apiP": "Liides mäletab, mida see viimati saatis, ja saadab ainult muudatused, partiidena. Või saatke CSV nii, nagu see on, ja laske portaalil see lugeda.",
+    "apiBatch": "Jätke vahele fotod, mis portaalil juba on, ja saatke üks partii",
+    "apiImport": "CSV ja fotode zip ühe korraga",
+    "apiMore": "Kõik üksikasjad on spetsifikatsioonis:",
+    "apiSpec": "Ingest API",
+    "apiAuto": "automatiseerimise retseptid",
+    "apiSdk": "Go SDK"
+  },
+  "hosting": {
+    "h1": "Majutus",
+    "lead": "Üks portaal on üks kaubamärgiettevõte ühes serveris. Teie valite, kuidas seda käitada, täielikust sisseostust täiesti iseseisva haldamiseni. Allpool kõige lihtsamast kõige tehnilisemani.",
+    "p1Title": "1. Teenusepakkuja kaudu",
+    "p1P": "Kõige lihtsam: ettevõte majutab teie portaali, hoiab seda ajakohasena ja aitab seadistamisel. Kuna kõik portaalid räägivad sama standardit, saate hiljem üle minna teisele teenusepakkujale või oma majutusele.",
+    "fieldBased": "Asukoht",
+    "fieldLanguages": "Keeled",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Kogu sisu eksport",
+    "fieldWebsite": "Veebisait",
+    "listTitle": "Kas soovite saada teenusepakkujaks?",
+    "listP": "Siin võib olla iga majutusettevõte, agentuur või tarkvaratarnija. Tingimused on kõigile samad:",
+    "listItems": [
+      "teie portaal läbib vastavustestid",
+      "kaubamärk saab kõik oma andmed ja fotod eksportida ning lahkuda",
+      "avaldate oma hinnad ja tingimused oma veebisaidil"
+    ],
+    "listHow": "Avage veebisaidi hoidlas pull request oma andmetega failis src/data/providers.json. Algataja on esimene, teised tähestikulises järjekorras.",
+    "p2Title": "2. Ühe klõpsuga",
+    "p2P": "Oma portaal oma kontol, ilma serverit haldamata.",
+    "cfP": "Töötab Cloudflare Workersis, andmebaasiks D1 ja fotodele R2. Klõpsake nuppu, logige Cloudflare'i sisse ja järgige samme. Cloudflare'il on tasuta mahud; suurte kataloogide puhul kontrollige kehtivaid hindu. Fotode veebiversioonid teevad teie brauser ja tööriist obx, nii et teil pole vaja midagi teha.",
+    "cfButton": "Paigalda Cloudflare'i",
+    "runP": "Skript, mis paneb teie portaali Google Cloud Runi. Vajate Google Cloudi kontot ja tööriista gcloud.",
+    "phpP": "Veebimajutusele, mis teil ehk juba on, PHP ja andmebaasiga. Käske pole vaja:",
+    "phpSteps": [
+      "Laadige alla obx-node-php.zip uusimast väljalaskest.",
+      "Pakkige see lahti ja laadige kaust (S)FTP kaudu majutusse üles.",
+      "Suunake oma (ala)domeen, näiteks edasimyyjad.teiebrand.ee, kausta public.",
+      "Avage see aadress ja järgige paigaldusviisardit."
+    ],
+    "phpDownload": "Laadi alla uusim väljalase",
+    "p3Title": "3. Docker",
+    "p3P": "Oma serveris või mis tahes pilves, mis konteinereid käitab. Üks käsk:",
+    "composeP": "Või kohe HTTPS-iga, Caddy kaudu:",
+    "envTitle": "Seaded",
+    "envPublicUrl": "teie portaali avalik aadress",
+    "envSecretKey": "pikk juhuslik võti (openssl rand -hex 32); hoidke seda hoolikalt",
+    "envSetupCode": "valikuline: eelnevalt valitud seadistuskood",
+    "envPort": "port, vaikimisi 8080",
+    "firstTitle": "Pärast paigaldamist: esimene käivitus",
+    "first": [
+      "Avage oma portaali aadress brauseris.",
+      "Sisestage ühekordne seadistuskood. See on logis esimesel käivitamisel või määrate selle eelnevalt OBX_SETUP_CODE abil.",
+      "Sisestage oma ettevõte ja esimene kaubamärk ning valige oma parool. Vaikeparooli ei ole kunagi."
+    ],
+    "firstWhy": "Seadistuskood tagab, et keegi teine ei saa äsja paigaldatud portaali endale võtta.",
+    "domainTitle": "Oma domeen",
+    "domainP": "Kasutage alamdomeeni, näiteks edasimyyjad.teiebrand.ee või b2b.teiebrand.ee. Edasimüüjad näevad siis teie nime ja aadress jääb samaks ka majutust vahetades.",
+    "compareTitle": "Kolm väljaannet, üks portaal",
+    "compareP": "Kolm väljaannet teevad sama asja ning neil on sama haldus ja sama edasimüüjate portaal. Valige see, mis sobib teie majutusega; vahetada saab hiljem.",
+    "compareLink": "Vaadake teostusi"
+  },
+  "retailers": {
+    "h1": "Edasimüüjatele",
+    "lead": "Open Brand Exchange'i kasutavad kaubamärgid edastavad fotod ja tooteandmed ühtsel viisil, olenemata sellest, kas laadite käsitsi alla või kasutate tarkvara.",
+    "portalTitle": "Mida kaubamärgi portaal teile annab",
+    "portalP": "Igal kaubamärgil on oma portaal oma nimega, näiteks „Kestrel · {portal}”.",
+    "portal": [
+      { "h": "Juurdepääsu taotlemine", "p": "Taotlege juurdepääsu kaubamärgi portaalis. Kaubamärk kinnitab ja saate e-postiga kutse." },
+      { "h": "Otsing ja filtrid", "p": "Kaubamärgi, hooaja, kollektsiooni, tootetüübi või värvi järgi. Iga toode kõigi oma fotode ja andmetega." },
+      { "h": "Kleepige oma EAN-loend", "p": "Kleepige kassasüsteemi EAN-koodid ja näete kohe, millised tooted on olemas ja millised veel puuduvad." },
+      { "h": "Allalaadimine nii, nagu soovite", "p": "Üks foto, üks toode, teie valik või kõik filtris zip-failina. Originaal (kui kaubamärk lubab), veeb või ruut." },
+      { "h": "Tooteandmed tabelina", "p": "EAN suuruse kaupa, värv, materjal, hooldusjuhised ja kirjeldus, valmis teie süsteemi jaoks." },
+      { "h": "Mis on lubatud", "p": "Kasutusõigused, embargo kuupäev ja see, kas foto on tehtud tehisintellektiga, on näidatud iga foto juures." }
+    ],
+    "apiTitle": "API-võti teie süsteemile",
+    "apiP": "Kas teie PIM, kassasüsteem või e-pood toob fotod ise? Siis taotlege oma süsteemile API-võtit. See toob kõigepealt kõik ja seejärel ainult muudatused, ka selle, mille kaubamärk tagasi võtab. Fotod seotakse teie toodetega EAN-i kaudu.",
+    "apiDev": "Teie arendajale: see näeb välja nii.",
+    "toolsTitle": "Photopilot ja muu tarkvara",
+    "toolsP": "Open Brand Exchange on avatud standard: iga tarkvara saab seda lugeda. Algataja Photopilot võib seda kasutada oma edasimüüjatele mõeldud tarkvaras ja teised tarnijad võivad teha sama. Te ei vaja mingit kindlat tarkvara: piisab brauserist.",
+    "toolsLink": "Spetsifikatsioon arendajatele",
+    "findTitle": "Kaubamärgi leidmine",
+    "findP": "Nähtavaks jääda soovivad kaubamärgid on kaubamärkide loendis. Kui kaubamärk annab teile lihtsalt oma portaali aadressi, töötab ka see.",
+    "findLink": "Kaubamärkide loendisse",
+    "kitTitle": "Teie kaubamärki pole siin? Saatke neile see",
+    "kitP": "Kõige kiiremini liitub kaubamärk siis, kui poed seda küsivad. Kopeerige see e-kiri, täitke nurksulud ja saatke see oma kontaktisikule või müügiesindajale kaubamärgi juures.",
+    "kitEnglish": "Inglise keeles (rahvusvahelistele kaubamärkidele)",
+    "kitDownload": "Laadi alla tekstifailina",
+    "kitMore": "Rohkem materjale, näiteks edasimüüjate brošüüri, leiate allalaadimiste alt."
+  },
+  "switchKit": {
+    "subject": "Teie tootefotod ja tooteandmed Open Brand Exchange'i kaudu?",
+    "body": "Tere, [nimi]!\n\nMüüme [kaubamärk] tooteid oma poes ja e-poes. Teie toodete hästi esitlemiseks vajame teie lõplikke tootefotosid ja tooteandmeid: EAN suuruse kaupa, materjal, hooldusjuhised ja fotod õiges järjekorras.\n\nPraegu jõuab see meieni sageli eraldi failide ja e-kirjadena. Kas kaaluksite Open Brand Exchange'i? See on tasuta avatud standard, millega kaubamärk avaldab oma sisu üks kord kõigile oma edasimüüjatele:\n\n- oma portaal, kuhu logime sisse, otsime oma EAN-koodide järgi ja laadime alla;\n- standardne API, et meie süsteem tooks fotod ja andmed ise;\n- automaatne avaldamine teie PIM-ist, ERP-st või ekspordikaustast.\n\nTarkvara on avatud lähtekoodiga: saate seda ise tasuta majutada või valida teenusepakkuja. Teie otsustate, kes saab juurdepääsu, ja näete, kes mida alla laadib.\n\nLisateave: {url}\n\nParimate soovidega\n\n[nimi]\n[pood]\n[linn]"
+  },
+  "developers": {
+    "h1": "Arendajatele",
+    "lead": "Open Brand Exchange on spetsifikatsioon kolme API, JSON-skeemide, testandmete ja vastavustestidega. Spetsifikatsioon on tõe allikas; teostused järgivad seda.",
+    "specTitle": "Spetsifikatsioon",
+    "specP": "Versioon 0.1 (mustand). OpenAPI 3.1, JSON Schema 2020-12, näited ja väljamõeldud testkaubamärk Kestrel Outfitters. Litsents CC-BY-4.0: vabalt teostatav, ka äriliselt.",
+    "specStart": "Alustage failist protocol.md",
+    "apisTitle": "Kolm API-t",
+    "apisHead": ["API", "Kellele", "Olek", "Leping"],
+    "apis": [
+      { "who": "edasimüüjate tarkvara: discovery, OAuth2 client credentials, muudatuste voog, GTIN-otsing, renditions, ekspordid, webhookid", "status": "normatiivne" },
+      { "who": "kaubamärgi automatiseerimine: idempotentsed upsertid kaubamärgi enda ID-de järgi, sha256-adresseeritud üleslaadimised, partiid, impordid", "status": "normatiivne" },
+      { "who": "ühine haldus ja edasimüüjate portaal", "status": "mittenormatiivne" }
+    ],
+    "readTitle": "Kaubamärgi portaali lugemine mõne reaga",
+    "sdkTitle": "SDK ja käsureatööriist",
+    "sdkP": "obx-go sisaldab Go SDK-d (tüübid, protokolliklient ja ingest-klient dubleerimise vältimise, mitmeosaliste üleslaadimiste ja partiidega), kaubamärkidele mõeldud tööriista obx, obx-conformance'i ja näidisserverit. Teistes keeltes sobib iga HTTP-klient: leping on OpenAPI-failides.",
+    "confTitle": "Vastavus",
+    "confP": "Teostus vastab profiili puhul OBX-ile, kui obx-conformance läbib kõik selle profiili kohustuslikud testid. Profiile on kolm: protocol, ingest ja portal.",
+    "implTitle": "Teostused",
+    "implHead": ["Hoidla", "Mis", "Litsents", "Olek"],
+    "impl": [
+      "spetsifikatsioon, skeemid, testandmed",
+      "Go SDK, tööriist obx, vastavustestid, näidisserver",
+      "ühine veebiliides: haldus ja edasimüüjate portaal",
+      "Go: Docker ja Google Cloud Run",
+      "PHP: tavaline veebimajutus",
+      "TypeScript: Cloudflare Workers"
+    ],
+    "statusDraft": "mustand 0.1",
+    "implP": "Ehitate oma teostust või klienti? Andke teada issue või pull requesti kaudu; see lisatakse tabelisse, kui see läbib vastavustestid.",
+    "docsTitle": "Dokumendid",
+    "docs": [
+      "protokoll tekstina",
+      "avaldamine Ingest API kaudu",
+      "CSV-vorming ja failinimed",
+      "automatiseerimise retseptid",
+      "turvanõuded",
+      "versioonid ja ühilduvus",
+      "kaubamärkide loendid"
+    ],
+    "contribute": "Panustamine käib pull requestide kaudu spec-hoidlasse.",
+    "governanceLink": "Kuidas otsuseid tehakse"
+  },
+  "directory": {
+    "h1": "Kaubamärkide loend",
+    "lead": "Kaubamärgid, mis avaldavad Open Brand Exchange'i kaudu ja soovivad olla nähtavad. Kirje sisaldab ainult kaubamärgi portaali aadressi ja mõnda otsinguandmet, mitte kunagi tooteandmeid.",
+    "search": "Otsige nime, kaubamärgi või riigi järgi",
+    "demo": "Näidiskirje",
+    "demoNote": "Kestrel Outfitters on väljamõeldud kaubamärk näidete ja testide jaoks. Selle aadress ei tööta.",
+    "fieldBrands": "Kaubamärgid",
+    "fieldCountries": "Müüb riikides",
+    "fieldCategories": "Kategooriad",
+    "fieldLanguages": "Keeled",
+    "fieldListed": "Loendis alates",
+    "fieldWebsite": "Veebisait",
+    "openPortal": "Ava portaal",
+    "noResults": "Teie otsingule ei vasta ükski kaubamärk.",
+    "categories": {
+      "fashion": "Mood",
+      "shoes": "Jalatsid",
+      "accessories": "Aksessuaarid",
+      "sports": "Sport",
+      "outdoor": "Matkavarustus",
+      "kids": "Lapsed",
+      "lingerie": "Pesu",
+      "home": "Kodu"
+    },
+    "jsonP": "Loend on tarkvara jaoks saadaval ka JSON-ina:",
+    "listTitle": "Kuidas loendisse pääseda",
+    "listSteps": [
+      "Veenduge, et teie portaal on võrgus ja läbib vastavustestid.",
+      "Avage veebisaidi hoidlas pull request, mis lisab ühe kirje faili public/directory.json, sorteerituna id järgi.",
+      "Veebisait kontrollib kirjet automaatselt ja küsib teie portaalilt andmed.",
+      "Pärast ülevaatust ilmub teie kaubamärk siia."
+    ],
+    "listRule": "Kirjet saab taotleda ainult kaubamärk ise või selle nimel tema majutusteenuse pakkuja.",
+    "removeP": "Eemaldamiseks avage kirjet kustutav pull request või avage issue."
+  },
+  "downloads": {
+    "h1": "Allalaadimised",
+    "lead": "Materjalid jagamiseks kolleegide, kaubamärkide ja edasimüüjatega.",
+    "brochureTitle": "Brošüür edasimüüjatele",
+    "brochureP": "Kaks lehekülge sellest, mida Open Brand Exchange poe jaoks tähendab, kolleegile või kaubamärgile andmiseks.",
+    "kitTitle": "E-kiri kaubamärkidele, kes pole veel liitunud",
+    "kitP": "Edasimüüjate lehe valmis e-kiri tekstifailina.",
+    "exampleTitle": "Näidisfailid",
+    "exampleP": "products.csv ja väljamõeldud kaubamärgi Kestrel Outfitters fotod impordi proovimiseks.",
+    "exampleLink": "Näidisfailid spetsifikatsioonis",
+    "templateP": "Tühi CSV-mall on olemas ka iga portaali halduses jaotises Impordid.",
+    "dutch": "Hollandi",
+    "english": "Inglise"
+  },
+  "faq": {
+    "h1": "Korduma kippuvad küsimused",
+    "items": [
+      { "q": "Kui palju see maksab?", "a": "Standard ja tarkvara on tasuta. Kui majutate ise, maksate ainult majutuse eest. Teenusepakkujal on oma hinnad, mille leiate tema veebisaidilt." },
+      { "q": "Kas vajame arendajat?", "a": "Põhitegevuseks mitte. Portaali saab paigaldada ühe klõpsuga ning ajastatud import veebiaadressilt, SFTP-serverist või ämbrist ei vaja koodi. Arendaja aitab, kui soovite PIM-i või ERP otse ühendada." },
+      { "q": "Kas see on järjekordne platvorm, millega peame liituma?", "a": "Ei. Iga kaubamärk haldab oma portaali, soovi korral oma domeenil. Puudub keskne platvorm, mis teie sisu hoiaks." },
+      { "q": "Kes otsustab, milline edasimüüja juurdepääsu saab?", "a": "Teie. Edasimüüjad taotlevad juurdepääsu ja teie kinnitate või lükkate iga taotluse tagasi. Valite ka, milliseid kaubamärke edasimüüja näeb ja kas originaale tohib alla laadida." },
+      { "q": "Mida edasimüüjad vajavad?", "a": "Brauserit. Edasimüüjad, kelle tarkvara toob fotod ise, saavad taotleda sellele tarkvarale API-võtme." },
+      { "q": "Millised pildivormingud on olemas?", "a": "Originaal täpselt sellisena, nagu selle üles laadisite, lisaks veebiversioon (kuni 2000 px), ruutversioon ja väike eelvaade. Edasimüüjad valivad, mida vajavad." },
+      { "q": "Kas teave tehisintellekti ja õiguste kohta jääb fotodega kaasa?", "a": "Jah. Kasutusõigused, embargo kuupäev ja tehisintellekti kasutamine on iga foto osa. Originaale säilitatakse ja edastatakse muutmata kujul, sealhulgas manustatud content credentials." },
+      { "q": "Kas saame hiljem teenusepakkujat vahetada?", "a": "Jah. Kõik portaalid räägivad sama standardit ja iga siin loetletud teenusepakkuja võimaldab kogu sisu eksportida. Teie domeen jääb samaks." },
+      { "q": "Kas see on valmis?", "a": "Veel mitte. Spetsifikatsioon on esimene mustand (0.1) ja tarkvara ehitatakse. Saate seda juba proovida, kuid tootmiskasutuseks see veel ei sobi." },
+      { "q": "Kes on selle taga?", "a": "Open Brand Exchange'i algatas Photopilot, Hollandi ettevõte, mis teeb tootefotograafia tarkvara. Standard on avatud ja eesmärk on, et see kuuluks seda kasutavatele kaubamärkidele ja edasimüüjatele." }
+    ]
+  },
+  "governance": {
+    "h1": "Juhtimine ja nimi",
+    "lead": "Open Brand Exchange peab kuuluma seda kasutavatele kaubamärkidele, edasimüüjatele ja tarkvaratarnijatele, mitte ühele ettevõttele.",
+    "sections": [
+      { "h": "Kes otsustab", "p": "Kuni on olemas kolm sõltumatut teostust, mis läbivad vastavustestid, otsustavad muudatuste üle pärast avalikku arutelu Photopiloti hooldajad. Seejärel võtab juhtimise üle juhtrühm, kus igal teostajal on üks koht ning kus on vähemalt üks kaubamärk ja üks edasimüüja." },
+      { "h": "Kuidas muudatusi tehakse", "p": "Iga standardi muudatus on avalik pull request koos lühikese põhjendusega. Suuremad ettepanekud on kommenteerimiseks avatud vähemalt 14 päeva. Panustada saab igaüks, ilma kaastöölepingut allkirjastamata." },
+      { "h": "Oma olemuselt neutraalne", "p": "Miski standardis ei tohi nõuda kindlat tarnijat ega majutatud teenust. Igaüks võib seda teostada, teistele majutada või sellele konkureeriva toote ehitada. Photopiloti tarkvara ei saa vastavustestides eelisjärjekorda." },
+      { "h": "Litsentsid", "p": "Spetsifikatsioon ja selle saidi sisu on CC-BY-4.0 litsentsiga. SDK, tööriist obx ja ühine veebiliides on Apache-2.0 litsentsiga. Kolm portaali väljaannet on AGPL-3.0 litsentsiga, et täiustused jääksid avatuks. Selle saidi kood on MIT litsentsiga." }
+    ],
+    "nameTitle": "Nimest",
+    "nameP": "„Open Brand Exchange” on töönimi. See võib enne versiooni 1.0 kaubamärgiotsingu järel muutuda. See ei ole registreeritud kaubamärk. Vastavustestid läbinud tarkvara võib öelda, et see „töötab Open Brand Exchange'iga”.",
+    "specLink": "Täielik juhtimisdokument"
+  },
+  "privacy": {
+    "h1": "Privaatsus",
+    "lead": "See veebisait ei jälgi teid.",
+    "sections": [
+      { "h": "Küpsiseid pole", "p": "Me ei kasuta küpsiseid. Kui valite keele, jätab teie brauser valiku kohalikult meelde; seda ei saadeta meile kunagi." },
+      { "h": "Jälgimist pole", "p": "Pole reklaame, sotsiaalmeedia nuppe, kolmandate osapoolte fonte ega jälgimisskripte. Kõige rohkem kasutame Cloudflare Web Analyticsit, mis loendab külastusi küpsisteta ja ilma teid teistel saitidel jälgimata." },
+      { "h": "Majutus", "p": "Sait on majutatud Cloudflare Pagesis. Nagu iga veebiserver, töötleb Cloudflare teie IP-aadressi, et lehti edastada ja neid kuritarvitamise eest kaitsta." },
+      { "h": "Kaubamärkide portaalid on eraldi", "p": "Iga kaubamärgi portaali haldab kaubamärk ise või tema teenusepakkuja. Seal kehtib nende privaatsuspoliitika, mitte see." }
+    ],
+    "contact": "Küsimusi? Avage issue veebisaidi hoidlas."
+  }
+}

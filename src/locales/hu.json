@@ -1,0 +1,472 @@
+{
+  "portalWord": "Viszonteladói portál",
+  "common": {
+    "skip": "Ugrás a tartalomra",
+    "menu": "Menü",
+    "mainMenu": "Főmenü",
+    "language": "Nyelv",
+    "languageLabel": "Válasszon nyelvet",
+    "home": "Open Brand Exchange, kezdőlap",
+    "copy": "Másolás",
+    "copied": "Másolva",
+    "draft": "0.1-es specifikáció (tervezet): a szoftver most készül. Éles használatra még nem alkalmas.",
+    "footerAbout": "Ingyenes, nyílt módszer, amellyel a márkák termékfotókat és cikkadatokat juttathatnak el viszonteladóiknak.",
+    "footerMore": "Továbbiak",
+    "footerSource": "Forráskód és specifikáció",
+    "footerLicence": "Tartalom CC-BY-4.0, kód MIT.",
+    "footerWorking": "Az „Open Brand Exchange” munkanév. 0.1-es specifikáció, fejlesztés alatt.",
+    "editionCloudflare": "Portál Cloudflare-re",
+    "editionGoogle": "Portál Google Cloudra és Dockerre",
+    "editionHosting": "Portál webtárhelyre",
+    "yes": "Igen",
+    "inDevelopment": "Fejlesztés alatt",
+    "available": "Elérhető"
+  },
+  "nav": {
+    "brands": "Márkáknak",
+    "automation": "Automatizálás",
+    "hosting": "Üzemeltetés",
+    "retailers": "Viszonteladóknak",
+    "developers": "Fejlesztőknek",
+    "directory": "Márkajegyzék",
+    "downloads": "Letöltések",
+    "faq": "Gyakori kérdések",
+    "governance": "Irányítás és név",
+    "privacy": "Adatvédelem"
+  },
+  "meta": {
+    "home": {
+      "title": "Open Brand Exchange: egy hely és egy API minden viszonteladójának",
+      "description": "Ingyenes, nyílt szabvány és szoftver márkáknak: portál a viszonteladóinak, szabványos API a rendszereiknek és automatikus közzététel a saját rendszereiből."
+    },
+    "brands": {
+      "title": "Márkáknak",
+      "description": "Saját portál a viszonteladóknak, szabványos API és automatikus közzététel PIM-ből, ERP-ből vagy mappákból. Üzemeltesse ingyen maga, vagy bízza szolgáltatóra."
+    },
+    "automation": {
+      "title": "Automatizálás",
+      "description": "Tegyen közzé automatikusan: ütemezett importok, az obx eszköz, cron, GitHub Actions, n8n, Make, Zapier vagy curl. Másolható receptek."
+    },
+    "hosting": {
+      "title": "Üzemeltetés",
+      "description": "A legegyszerűbbtől a legtechnikaibbig: szolgáltató, egy kattintás a Cloudflare-en, Google Cloud Run vagy hagyományos webtárhely, illetve Docker."
+    },
+    "retailers": {
+      "title": "Viszonteladóknak",
+      "description": "Mit ad egy márkaportál, API-kulcs a rendszeréhez és egy kész e-mail azoknak a márkáknak, amelyek még nem csatlakoztak."
+    },
+    "developers": {
+      "title": "Fejlesztőknek",
+      "description": "A specifikáció, a három API, az SDK és a parancssori eszköz, a megfelelőségi tesztek és az implementációk."
+    },
+    "directory": {
+      "title": "Márkajegyzék",
+      "description": "Az Open Brand Exchange-en keresztül publikáló márkák, és hogyan kerülhet fel a saját márkája."
+    },
+    "downloads": {
+      "title": "Letöltések",
+      "description": "Brosúrák, e-mail-sablonok és mintafájlok."
+    },
+    "faq": {
+      "title": "Gyakori kérdések",
+      "description": "Válaszok a márkák és viszonteladók leggyakoribb kérdéseire."
+    },
+    "governance": {
+      "title": "Irányítás és név",
+      "description": "Ki dönt a szabványról, hogyan lehet hozzájárulni, a licencek, és miért munkanév a név."
+    },
+    "privacy": {
+      "title": "Adatvédelem",
+      "description": "Ez az oldal nem követi Önt: nincsenek sütik, nincs nyomkövetés."
+    }
+  },
+  "home": {
+    "eyebrow": "Nyílt szabvány márkáknak",
+    "h1": "Egy hely és egy API minden viszonteladójának",
+    "lead": "Az Open Brand Exchange ingyenes, nyílt módszer arra, hogy végleges termékfotóit és cikkadatait eljuttassa viszonteladóihoz. A viszonteladók portált kapnak Önnél, a rendszereik szabványos API-t, Ön pedig automatikusan publikál a saját rendszereiből.",
+    "ctaBrands": "Így működik a márkáknak",
+    "ctaRetailers": "Viszonteladó vagyok",
+    "howTitle": "Így működik",
+    "steps": [
+      {
+        "h": "Állítsa be a portálját",
+        "p": "Bízza szolgáltatóra, vagy üzemeltesse ingyen maga, egy kattintással vagy egyetlen paranccsal.",
+        "link": "Üzemeltetési lehetőségek"
+      },
+      {
+        "h": "Publikáljon automatikusan",
+        "p": "Egy CSV-fájl és rögzített nevű fotók. A PIM, az ERP vagy egy egyszerű mappa minden éjjel leszállítja őket, kézi munka nélkül.",
+        "link": "Automatizálás"
+      },
+      {
+        "h": "A többit a viszonteladók intézik",
+        "p": "A viszonteladók bejelentkeznek, beillesztik EAN-listájukat és letöltenek. Rendszereik ugyanazt a tartalmat a szabványos API-n keresztül érik el.",
+        "link": "Viszonteladóknak"
+      }
+    ],
+    "whatTitle": "Mit szállít",
+    "what": [
+      {
+        "h": "Fotók, ahogy elképzelte őket",
+        "p": "Packshotok, modellfotók és részletek sorrenddel, nézettel, felhasználási jogokkal, embargóval és azzal az információval, hogy használtak-e MI-t."
+      },
+      {
+        "h": "Cikkadatok méretenként",
+        "p": "Cikkszám, szín, méretenkénti EAN, szezon, leírás, anyag és kezelési útmutató, több nyelven."
+      },
+      {
+        "h": "A változások maguktól érkeznek",
+        "p": "Egy lecserélt packshot vagy egy visszavont fotó magától eljut a viszonteladóihoz."
+      }
+    ],
+    "whyTitle": "Miért nyílt",
+    "why": [
+      {
+        "h": "Ingyenes",
+        "p": "A szabvány és a szoftver semmibe sem kerül. Legfeljebb a tárhelyért fizet, vagy egy szolgáltatóért, ha inkább kiszervezi."
+      },
+      {
+        "h": "Az Öné",
+        "p": "Tartalma a saját szerverén vagy egy olyan szolgáltatónál van, akit bármikor elhagyhat. Minden portál ugyanazt a nyelvet beszéli."
+      },
+      {
+        "h": "Egy csatorna sok helyett",
+        "p": "Egyetlen közzététel minden viszonteladónak. Nincs több fájlküldés, zipes e-mail és külön integráció minden üzlethez."
+      }
+    ],
+    "status": "Az Open Brand Exchange az elején tart. A specifikáció első tervezet (0.1), a szoftver most készül. Nem mutatunk olyan ügyfeleket vagy számokat, amelyek még nem léteznek.",
+    "statusLink": "Olvassa el, hogyan irányítják"
+  },
+  "brands": {
+    "h1": "Márkáknak",
+    "lead": "Viszonteladói az Ön fotóit és cikkadatait szeretnék, lehetőleg közvetlenül a saját cikkeikhez kapcsolva. Az Open Brand Exchange-dzsel ezt egyszer állítja be, mindenkinek egyszerre.",
+    "blocks": [
+      {
+        "h": "Portál a viszonteladóinak",
+        "p": "Portálja az Ön nevét és arculatát viseli: „Kestrel · {portal}”, ha szeretné, saját domainen. A viszonteladók hozzáférést kérnek, Ön jóváhagyja vagy elutasítja.",
+        "items": [
+          "Keresés és szűrés márka, szezon, kollekció és terméktípus szerint",
+          "EAN-lista beillesztése, és azonnal látszik, mi van meg és mi hiányzik",
+          "Egy fotó, egy cikk vagy egy teljes válogatás letöltése zipben",
+          "A szükséges formátumban: eredeti, web (2000 px) vagy négyzetes",
+          "Cikkadatok táblázatban, anyaggal és kezelési útmutatóval"
+        ]
+      },
+      {
+        "h": "Szabványos API a rendszereiknek",
+        "p": "A szoftverrel dolgozó viszonteladók API-kulcsot kapnak a rendszerükhöz. A pénztár, a PIM vagy a webáruház egyszer mindent letölt, utána csak a változásokat.",
+        "items": [
+          "Keresés EAN alapján, hogy a fotók a megfelelő cikkhez és mérethez kerüljenek",
+          "A változások maguktól érkeznek, a visszavontak is",
+          "Felhasználási jogok, embargó és MI-eredet minden fotóval együtt utazik",
+          "Egyszer megépítve minden Open Brand Exchange-et használó márkával működik"
+        ]
+      },
+      {
+        "h": "Automatikus feltöltés",
+        "p": "Senkinek sem kell fájlokat húzogatnia. A portál maga tölti le az exportot, vagy a saját rendszerei küldik el.",
+        "items": [
+          "Ütemezett import webcímről, SFTP-szerverről vagy S3-tárolóból, kód nélkül",
+          "Egy mappa, amelyet az obx eszköz automatikusan publikál",
+          "Receptek cronhoz, GitHub Actionshöz, n8n-hez, Make-hez és Zapierhez",
+          "Egy CSV-formátum és egy fotóelnevezési szabály: KO-1001_NVY_1.jpg"
+        ]
+      },
+      {
+        "h": "Az Öné",
+        "p": "Az Open Brand Exchange nem egy platform, amelynek átadja a márkáját. Saját portált üzemeltet, vagy egy szolgáltató teszi ezt Ön helyett.",
+        "items": [
+          "A saját üzemeltetés ingyenes: a szoftver nyílt forráskódú",
+          "Inkább kiszervezné? Válasszon szolgáltatót, és váltson, amikor akar",
+          "Látja, ki mit tölt le, viszonteladónként",
+          "Ön dönti el, ki kap hozzáférést, mely márkákhoz, és letölthetők-e az eredetik"
+        ]
+      }
+    ],
+    "adminTitle": "Amit maga kezel",
+    "admin": [
+      { "k": "Katalógus", "v": "márkák, cikkek, színek és méretek, fotók és azok sorrendje" },
+      { "k": "Importok", "v": "feltöltés vagy ütemezett letöltés, egyértelmű üzenettel minden hibás sorról" },
+      { "k": "Viszonteladók", "v": "kérések jóváhagyása vagy elutasítása (indoklással), fiókok meghívása vagy letiltása" },
+      { "k": "API-kulcsok", "v": "kulcsok a viszonteladók rendszereihez: egyszer jelennek meg, könnyen megújíthatók vagy visszavonhatók" },
+      { "k": "Automatikus feltöltés", "v": "kulcsok a saját rendszereihez, és értesítések, ha egy viszonteladó hozzáférést kér vagy egy import befejeződik" },
+      { "k": "Statisztika", "v": "letöltések és használat viszonteladónként" },
+      { "k": "Beállítások", "v": "logó, kiemelőszín, üdvözlő szöveg, alapértelmezett felhasználási jogok és saját domain" }
+    ],
+    "nextTitle": "Következő lépés",
+    "nextHosting": "Válasszon üzemeltetést",
+    "nextAutomation": "Nézze meg az automatizálási recepteket"
+  },
+  "automation": {
+    "h1": "Automatizálás",
+    "lead": "A PIM, ERP, DAM vagy egy megosztott mappa már tartalmazza az adatokat és a fotókat. Válassza az első megfelelő receptet: mind működik minden Open Brand Exchange-portállal.",
+    "chooseTitle": "Melyik recept illik Önhöz?",
+    "head": ["Önnek van…", "Használja", "Szükséges kód"],
+    "rows": [
+      ["CSV vagy zip egy webcímen, SFTP-szerveren vagy S3-tárolóban", "Ütemezett import", "nincs"],
+      ["egy mappa, ahová az exportok kerülnek", "obx watch", "nincs"],
+      ["egy szerver vagy PC, amely éjjel feladatokat futtat", "cron vagy Feladatütemező", "egy sor"],
+      ["exportok egy Git-tárolóban", "GitHub Action", "egy YAML-fájl"],
+      ["n8n, Make vagy Zapier", "HTTP-lépések", "nincs (vizuális)"],
+      ["egy fejlesztő, aki bekapcsolja a PIM-et vagy ERP-t", "Közvetlenül az API", "egy kevés"]
+    ],
+    "formatTitle": "Egy formátum mindenhez",
+    "formatP": "Minden közzétételi mód ugyanazt olvassa: egy products.csv fájlt méretenként egy sorral, és {style}_{color}_{position}.jpg nevű fotókat (cikkszám, szín, pozíció). Ha ez megvan, minden lenti recept működik.",
+    "formatLink": "A teljes importformátum",
+    "csvLabel": "products.csv (rövidítve)",
+    "namesLabel": "A fotók fájlnevei",
+    "keyTitle": "Amire szüksége van",
+    "keyP": "Az adminisztrációban nyissa meg az Automatikus feltöltést, és hozzon létre új kulcsot. Két értéket kap: a portál címét (OBX_URL) és magát a kulcsot (OBX_TOKEN). A kulcs csak egyszer jelenik meg.",
+    "keyTip": "Minden rendszer kapjon saját kulcsot. Így egyet visszavonhat anélkül, hogy a többit elrontaná.",
+    "scheduledTitle": "1. Ütemezett import (kód nélkül)",
+    "scheduledP": "Az adminisztrációban: Importok → Ütemezett importok → Hozzáadás. Válassza ki a forrást és a gyakoriságot.",
+    "scheduled": [
+      { "k": "Webcím (HTTPS)", "v": "egy products.csv, vagy products.csv-t és fotókat tartalmazó zip címe. A belépési adatokat titkosítva tároljuk." },
+      { "k": "SFTP", "v": "szerver, felhasználó, jelszó vagy kulcs, valamint az exportot tartalmazó mappa." },
+      { "k": "S3-tároló", "v": "AWS S3, Cloudflare R2, MinIO vagy Backblaze: végpont, tároló, mappa és egy csak olvasható kulcs." }
+    ],
+    "scheduledMode": "Válassza a „Frissítés” (csak hozzáadás és módosítás) vagy a „Tükrözés” (a fájlból eltűnt tételek visszavonása is) módot. A tükrözés megtagadja a műveletet, ha egy márka több mint fele eltűnne, így egy hibás export soha nem üríti ki a katalógust. A „Kapcsolat tesztelése” megmutatja, mely fájlokat olvasná be.",
+    "cliTitle": "Az obx eszköz",
+    "cliP": "Az obx egyetlen program Windowsra, macOS-re és Linuxra. Az OBX_URL és OBX_TOKEN értékeket a környezetből olvassa, csak az új vagy módosult fotókat tölti fel, szükség esetén elkészíti a webes változatokat, és megvárja, amíg a portál mindent feldolgoz. Futtassa, amilyen gyakran csak akarja: a változatlan cikkek semmibe sem kerülnek.",
+    "cliExit": "Kilépési kód 0 = minden rendben, 2 = kész, de néhány sorban hiba volt (listázva), 1 = sikertelen.",
+    "cliGet": "Az obx letöltése",
+    "watchTitle": "2. Egy mappa, amely magát publikálja: obx watch",
+    "watchP": "A PIM, az ERP vagy egy kolléga mentse az exportokat egy mappába. Az obx watch azonnal publikál, ha valami változik, és kihagyja a változatlan fotókat. Futtassa szolgáltatásként vagy Dockerrel:",
+    "cronTitle": "3. cron vagy a Windows Feladatütemező",
+    "cronLinux": "Linux vagy macOS",
+    "cronWindows": "Windows (PowerShell, egyszer)",
+    "githubTitle": "4. GitHub Action",
+    "githubP": "Mentse az OBX_URL és OBX_TOKEN értékeket a tároló titkos adataiként. Ugyanígy működik GitLab CI-ban, Bitbucketben és Azure DevOpsban: telepítse az obx-et, és futtassa az obx push parancsot.",
+    "httpTitle": "5. n8n, Make vagy Zapier",
+    "httpP": "Használjon egy egyszerű HTTP Request lépést Authorization: Bearer fejléccel és a kulcsával. Minden lépés biztonságosan megismételhető: ugyanazon adatok kétszeri elküldése semmit sem változtat.",
+    "httpProduct": "Cikk (például ha a PIM-ben módosul)",
+    "httpVariant": "Szín és méret, EAN-nal",
+    "httpImage": "Fotó: előbb az adatok, aztán maga a fájl",
+    "httpImageNote": "Egyes portálok (a Portál Cloudflare-re) maguk nem készítenek webes változatot a fotókból. Ott használjon ütemezett importot vagy obx-et: ezek elkészítik Ön helyett.",
+    "httpOffline": "Valami visszavonása",
+    "httpHooks": "Szeretne jelzést kapni, ha történik valami? Az adminisztrációban adjon hozzá értesítést (webhook) egy befejezett importhoz vagy egy új hozzáférési kérelemhez, és indítson vele triggert az n8n-ben, a Make-ben vagy a Zapierben.",
+    "apiTitle": "6. Közvetlenül az API (fejlesztőknek)",
+    "apiP": "Egy integráció megjegyzi, mit küldött legutóbb, és csak a változásokat küldi, kötegekben. Vagy küldje el a CSV-t úgy, ahogy van, és hagyja, hogy a portál beolvassa.",
+    "apiBatch": "A portálon már meglévő fotók kihagyása, majd egy köteg elküldése",
+    "apiImport": "Egy CSV és egy zip fotókkal egyszerre",
+    "apiMore": "Minden részlet a specifikációban található:",
+    "apiSpec": "Ingest API",
+    "apiAuto": "automatizálási receptek",
+    "apiSdk": "Go SDK"
+  },
+  "hosting": {
+    "h1": "Üzemeltetés",
+    "lead": "Egy portál egy márkavállalat egy szerveren. Ön választja meg, hogyan üzemelteti, a teljes kiszervezéstől a teljesen saját üzemeltetésig. Lent a legegyszerűbbtől a legtechnikaibbig.",
+    "p1Title": "1. Szolgáltatón keresztül",
+    "p1P": "A legegyszerűbb: egy cég üzemelteti a portálját, naprakészen tartja, és segít a beállításban. Mivel minden portál ugyanazt a szabványt beszéli, később átválthat egy másik szolgáltatóra vagy saját üzemeltetésre.",
+    "fieldBased": "Székhely",
+    "fieldLanguages": "Nyelvek",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Minden tartalom exportálása",
+    "fieldWebsite": "Weboldal",
+    "listTitle": "Szolgáltató szeretne lenni?",
+    "listP": "Bármely tárhelycég, ügynökség vagy szoftverszállító szerepelhet itt. A feltételek mindenkire ugyanazok:",
+    "listItems": [
+      "a portálja átmegy a megfelelőségi teszteken",
+      "egy márka minden adatát és fotóját exportálhatja és távozhat",
+      "saját árait és feltételeit a saját weboldalán teszi közzé"
+    ],
+    "listHow": "Nyisson pull requestet a weboldal tárolójában, adatait az src/data/providers.json fájlba írva. A kezdeményező áll az első helyen, a többiek ábécérendben.",
+    "p2Title": "2. Egy kattintással",
+    "p2P": "Saját portál a saját fiókjában, szerverkezelés nélkül.",
+    "cfP": "Cloudflare Workers-en fut, D1 adatbázissal és R2 tárolóval a fotókhoz. Kattintson a gombra, jelentkezzen be a Cloudflare-be, és kövesse a lépéseket. A Cloudflare ingyenes kereteket kínál; nagy katalógusok esetén nézze meg az aktuális árakat. A fotók webes változatait a böngészője és az obx eszköz készíti el, így Önnek nincs vele teendője.",
+    "cfButton": "Telepítés Cloudflare-re",
+    "runP": "Egy szkript, amely a portált a Google Cloud Runra telepíti. Google Cloud-fiókra és a gcloud eszközre van szüksége.",
+    "phpP": "Ahhoz a webtárhelyhez, amely talán már megvan, PHP-val és adatbázissal. Nincs szükség parancsokra:",
+    "phpSteps": [
+      "Töltse le az obx-node-php.zip fájlt a legújabb kiadásból.",
+      "Csomagolja ki, és töltse fel a mappát (S)FTP-n a tárhelyére.",
+      "Irányítsa (al)domainjét, például viszontelado.markaja.hu, a public mappára.",
+      "Nyissa meg a címet, és kövesse a telepítővarázslót."
+    ],
+    "phpDownload": "A legújabb kiadás letöltése",
+    "p3Title": "3. Docker",
+    "p3P": "Saját szerveren vagy bármely felhőben, amely konténereket futtat. Egyetlen parancs:",
+    "composeP": "Vagy mindjárt HTTPS-sel, Caddyn keresztül:",
+    "envTitle": "Beállítások",
+    "envPublicUrl": "a portál nyilvános címe",
+    "envSecretKey": "hosszú véletlen kulcs (openssl rand -hex 32); őrizze biztonságban",
+    "envSetupCode": "opcionális: előre választott telepítési kód",
+    "envPort": "port, alapértelmezés szerint 8080",
+    "firstTitle": "Telepítés után: az első indítás",
+    "first": [
+      "Nyissa meg a portál címét a böngészőben.",
+      "Adja meg az egyszer használatos telepítési kódot. Az első indításkor a naplóban találja, vagy előre beállíthatja az OBX_SETUP_CODE értékkel.",
+      "Adja meg cégét és első márkáját, és válasszon saját jelszót. Alapértelmezett jelszó soha nincs."
+    ],
+    "firstWhy": "A telepítési kód biztosítja, hogy senki más ne vehesse át a frissen telepített portált.",
+    "domainTitle": "Saját domain",
+    "domainP": "Használjon aldomaint, például viszontelado.markaja.hu vagy b2b.markaja.hu. A viszonteladók így az Ön nevét látják, és a cím akkor is ugyanaz marad, ha üzemeltetőt vált.",
+    "compareTitle": "Három kiadás, egy portál",
+    "compareP": "A három kiadás ugyanazt tudja, és ugyanaz az adminisztrációja és viszonteladói portálja. Válassza azt, amelyik illik a tárhelyéhez; később válthat.",
+    "compareLink": "Az implementációk megtekintése"
+  },
+  "retailers": {
+    "h1": "Viszonteladóknak",
+    "lead": "Az Open Brand Exchange-et használó márkák egységes módon szállítják fotóikat és cikkadataikat, akár kézzel tölt le, akár szoftvert használ.",
+    "portalTitle": "Mit ad egy márkaportál",
+    "portalP": "Minden márka saját portált üzemeltet a saját nevével, például „Kestrel · {portal}”.",
+    "portal": [
+      { "h": "Hozzáférés kérése", "p": "Kérjen hozzáférést a márka portálján. A márka jóváhagyja, és e-mailben meghívót kap." },
+      { "h": "Keresés és szűrés", "p": "Márka, szezon, kollekció, terméktípus vagy szín szerint. Minden cikk az összes fotójával és adatával." },
+      { "h": "EAN-lista beillesztése", "p": "Illessze be a pénztárrendszer EAN-kódjait, és azonnal látja, mely cikkek vannak meg és melyek hiányoznak még." },
+      { "h": "Letöltés, ahogy szeretné", "p": "Egy fotó, egy cikk, a válogatása vagy egy szűrés teljes tartalma zipben. Eredeti (ha a márka engedi), web vagy négyzetes." },
+      { "h": "Cikkadatok táblázatban", "p": "Méretenkénti EAN, szín, anyag, kezelési útmutató és leírás, a saját rendszerébe készen." },
+      { "h": "Mi megengedett", "p": "A felhasználási jogok, az embargó dátuma és az, hogy a fotó MI-vel készült-e, minden fotónál látható." }
+    ],
+    "apiTitle": "API-kulcs a rendszeréhez",
+    "apiP": "A PIM-je, pénztárrendszere vagy webáruháza maga tölti le a fotókat? Akkor kérjen API-kulcsot a rendszeréhez. Először mindent letölt, utána csak a változásokat, a márka által visszavontakat is. A fotók EAN alapján kapcsolódnak a cikkeihez.",
+    "apiDev": "A fejlesztőjének: így néz ki.",
+    "toolsTitle": "Photopilot és más szoftverek",
+    "toolsP": "Az Open Brand Exchange nyílt szabvány: bármely szoftver olvashatja. A kezdeményező Photopilot használhatja a viszonteladóknak szánt szoftverében, és más szállítók is megtehetik ugyanezt. Nincs szüksége semmilyen különleges szoftverre: egy böngésző elég.",
+    "toolsLink": "Specifikáció fejlesztőknek",
+    "findTitle": "Márka keresése",
+    "findP": "A láthatóságot vállaló márkák a márkajegyzékben szerepelnek. Ha egy márka egyszerűen megadja portálja címét, az is működik.",
+    "findLink": "Tovább a márkajegyzékhez",
+    "kitTitle": "Nincs itt a márkája? Küldje el nekik ezt",
+    "kitP": "Egy márka akkor csatlakozik a leggyorsabban, ha az üzletek kérik. Másolja ki ezt az e-mailt, töltse ki a szögletes zárójeleket, és küldje el a márkánál lévő kapcsolattartójának vagy üzletkötőjének.",
+    "kitEnglish": "Angol (nemzetközi márkáknak)",
+    "kitDownload": "Letöltés szövegfájlként",
+    "kitMore": "További anyagokat, például a viszonteladói brosúrát, a letöltések között talál."
+  },
+  "switchKit": {
+    "subject": "Termékfotóik és cikkadataik az Open Brand Exchange-en keresztül?",
+    "body": "Kedves [név]!\n\nÜzletünkben és webáruházunkban a(z) [márka] termékeit forgalmazzuk. Ahhoz, hogy termékeiket jól bemutassuk, szükségünk van végleges termékfotóikra és cikkadataikra: méretenkénti EAN, anyag, kezelési útmutató és a fotók helyes sorrendben.\n\nMa ezek gyakran különálló fájlokban és e-mailekben érkeznek hozzánk. Megfontolnák az Open Brand Exchange használatát? Ez egy ingyenes, nyílt szabvány, amellyel egy márka egyszer teszi közzé tartalmát az összes viszonteladója számára:\n\n- saját portál, ahol bejelentkezünk, EAN-kódjaink alapján keresünk és letöltünk;\n- szabványos API, hogy rendszerünk maga töltse le a fotókat és az adatokat;\n- automatikus közzététel a PIM-ből, ERP-ből vagy egy exportmappából.\n\nA szoftver nyílt forráskódú: ingyen üzemeltethetik maguk, vagy választhatnak szolgáltatót. Önök döntik el, ki kap hozzáférést, és látják, ki mit tölt le.\n\nTovábbi információ: {url}\n\nÜdvözlettel:\n\n[név]\n[üzlet]\n[település]"
+  },
+  "developers": {
+    "h1": "Fejlesztőknek",
+    "lead": "Az Open Brand Exchange egy specifikáció három API-val, JSON-sémákkal, tesztadatokkal és megfelelőségi tesztekkel. A specifikáció a mérvadó; az implementációk ezt követik.",
+    "specTitle": "A specifikáció",
+    "specP": "0.1-es verzió (tervezet). OpenAPI 3.1, JSON Schema 2020-12, példák és egy kitalált tesztmárka, a Kestrel Outfitters. Licenc CC-BY-4.0: szabadon implementálható, üzleti célra is.",
+    "specStart": "Kezdje a protocol.md fájllal",
+    "apisTitle": "Három API",
+    "apisHead": ["API", "Kinek", "Állapot", "Szerződés"],
+    "apis": [
+      { "who": "a viszonteladók szoftverei: discovery, OAuth2 client credentials, változásfolyam, GTIN-keresés, renditions, exportok, webhookok", "status": "normatív" },
+      { "who": "egy márka automatizálása: idempotens upsertek a márka saját azonosítói alapján, sha256-címzett feltöltések, kötegek, importok", "status": "normatív" },
+      { "who": "a közös adminisztráció és a viszonteladói portál", "status": "nem normatív" }
+    ],
+    "readTitle": "Egy márkaportál olvasása néhány sorban",
+    "sdkTitle": "SDK és parancssori eszköz",
+    "sdkP": "Az obx-go tartalmazza a Go SDK-t (típusok, protokollkliens és ingest-kliens deduplikációval, többrészes feltöltéssel és kötegekkel), a márkáknak szóló obx eszközt, az obx-conformance-t és egy álszervert. Más nyelveken bármely HTTP-kliens megfelel: a szerződés az OpenAPI-fájlokban van.",
+    "confTitle": "Megfelelőség",
+    "confP": "Egy implementáció akkor OBX-megfelelő egy profilra, ha az obx-conformance a profil minden kötelező tesztjén átmegy. Három profil van: protocol, ingest és portal.",
+    "implTitle": "Implementációk",
+    "implHead": ["Tároló", "Mi", "Licenc", "Állapot"],
+    "impl": [
+      "specifikáció, sémák, tesztadatok",
+      "Go SDK, obx eszköz, megfelelőségi tesztek, álszerver",
+      "közös webes felület: adminisztráció és viszonteladói portál",
+      "Go: Docker és Google Cloud Run",
+      "PHP: hagyományos webtárhely",
+      "TypeScript: Cloudflare Workers"
+    ],
+    "statusDraft": "0.1-es tervezet",
+    "implP": "Saját implementációt vagy klienst épít? Jelezze issue-ban vagy pull requestben; amint átmegy a megfelelőségi teszteken, bekerül ebbe a táblázatba.",
+    "docsTitle": "Dokumentumok",
+    "docs": [
+      "a protokoll folyó szövegben",
+      "közzététel az Ingest API-n keresztül",
+      "a CSV-formátum és a fájlnevek",
+      "automatizálási receptek",
+      "biztonsági követelmények",
+      "verziók és kompatibilitás",
+      "márkajegyzékek"
+    ],
+    "contribute": "A hozzájárulás a spec tárolóba küldött pull requestekkel történik.",
+    "governanceLink": "Hogyan születnek a döntések"
+  },
+  "directory": {
+    "h1": "Márkajegyzék",
+    "lead": "Az Open Brand Exchange-en keresztül publikáló márkák, amelyek szeretnének szerepelni. Egy bejegyzés csak a márkaportál címét és néhány keresési adatot tartalmaz, termékadatot soha.",
+    "search": "Keresés név, márka vagy ország szerint",
+    "demo": "Minta-bejegyzés",
+    "demoNote": "A Kestrel Outfitters kitalált márka példákhoz és tesztekhez. A címe nem működik.",
+    "fieldBrands": "Márkák",
+    "fieldCountries": "Értékesít itt",
+    "fieldCategories": "Kategóriák",
+    "fieldLanguages": "Nyelvek",
+    "fieldListed": "A jegyzékben ekkor óta",
+    "fieldWebsite": "Weboldal",
+    "openPortal": "Portál megnyitása",
+    "noResults": "Egyetlen márka sem felel meg a keresésnek.",
+    "categories": {
+      "fashion": "Divat",
+      "shoes": "Cipők",
+      "accessories": "Kiegészítők",
+      "sports": "Sport",
+      "outdoor": "Szabadidő",
+      "kids": "Gyerek",
+      "lingerie": "Fehérnemű",
+      "home": "Otthon"
+    },
+    "jsonP": "A lista JSON formátumban is elérhető szoftverek számára:",
+    "listTitle": "Hogyan kerülhet fel a jegyzékbe",
+    "listSteps": [
+      "Győződjön meg róla, hogy portálja elérhető, és átmegy a megfelelőségi teszteken.",
+      "Nyisson pull requestet a weboldal tárolójában, amely egy bejegyzést ad a public/directory.json fájlhoz, id szerint rendezve.",
+      "A weboldal automatikusan ellenőrzi a bejegyzést, és lekéri portálja adatait.",
+      "Ellenőrzés után márkája itt megjelenik."
+    ],
+    "listRule": "Bejegyzést csak maga a márka vagy a nevében eljáró tárhelyszolgáltatója kérhet.",
+    "removeP": "Törléshez nyisson a bejegyzést eltávolító pull requestet, vagy nyisson issue-t."
+  },
+  "downloads": {
+    "h1": "Letöltések",
+    "lead": "Anyagok kollégákkal, márkákkal és viszonteladókkal való megosztáshoz.",
+    "brochureTitle": "Brosúra viszonteladóknak",
+    "brochureP": "Két oldal arról, mit jelent az Open Brand Exchange egy üzlet számára, kollégának vagy márkának átadva.",
+    "kitTitle": "E-mail a még nem csatlakozott márkáknak",
+    "kitP": "A viszonteladói oldal kész e-mailje szövegfájlként.",
+    "exampleTitle": "Mintafájlok",
+    "exampleP": "Egy products.csv és fotók a kitalált Kestrel Outfitters márkától, egy import kipróbálásához.",
+    "exampleLink": "Mintafájlok a specifikációban",
+    "templateP": "Üres CSV-sablon minden portál adminisztrációjában is található, az Importok alatt.",
+    "dutch": "Holland",
+    "english": "Angol"
+  },
+  "faq": {
+    "h1": "Gyakori kérdések",
+    "items": [
+      { "q": "Mennyibe kerül?", "a": "A szabvány és a szoftver ingyenes. Ha maga üzemelteti, csak a tárhelyért fizet. A szolgáltatóknak saját áraik vannak, ezeket a weboldalukon találja." },
+      { "q": "Szükségünk van fejlesztőre?", "a": "Az alapokhoz nem. A portál egy kattintással telepíthető, és egy webcímről, SFTP-szerverről vagy tárolóból érkező ütemezett import nem igényel kódot. Fejlesztő akkor segít, ha a PIM-et vagy ERP-t közvetlenül akarja bekapcsolni." },
+      { "q": "Ez is egy újabb platform, amelyhez csatlakozni kell?", "a": "Nem. Minden márka saját portált üzemeltet, ha szeretné, saját domainen. Nincs központi platform, amely a tartalmát tárolná." },
+      { "q": "Ki dönti el, melyik viszonteladó kap hozzáférést?", "a": "Ön. A viszonteladók hozzáférést kérnek, Ön pedig minden kérést jóváhagy vagy elutasít. Azt is Ön választja ki, mely márkákat lát egy viszonteladó, és letöltheti-e az eredetiket." },
+      { "q": "Mire van szükségük a viszonteladóknak?", "a": "Egy böngészőre. Azok a viszonteladók, akiknek szoftvere maga tölti le a fotókat, API-kulcsot kérhetnek ehhez a szoftverhez." },
+      { "q": "Milyen képformátumok vannak?", "a": "Az eredeti, pontosan úgy, ahogy feltöltötte, továbbá egy webes változat (legfeljebb 2000 px), egy négyzetes változat és egy kis előnézet. A viszonteladók azt választják, amire szükségük van." },
+      { "q": "Az MI-re és a jogokra vonatkozó információk a fotókkal maradnak?", "a": "Igen. A felhasználási jogok, az embargó dátuma és az MI használata minden fotó része. Az eredetiket változatlanul tároljuk és adjuk tovább, a beágyazott content credentials adatokkal együtt." },
+      { "q": "Válthatunk később szolgáltatót?", "a": "Igen. Minden portál ugyanazt a szabványt beszéli, és minden itt felsorolt szolgáltató lehetővé teszi a teljes tartalom exportálását. A saját domainje ugyanaz marad." },
+      { "q": "Kész van?", "a": "Még nincs. A specifikáció első tervezet (0.1), a szoftver készül. Már kipróbálhatja, de éles használatra még nem alkalmas." },
+      { "q": "Ki áll mögötte?", "a": "Az Open Brand Exchange-et a Photopilot indította el, egy holland cég, amely termékfotózási szoftvert fejleszt. A szabvány nyílt, és a cél az, hogy az azt használó márkáké és viszonteladóké legyen." }
+    ]
+  },
+  "governance": {
+    "h1": "Irányítás és név",
+    "lead": "Az Open Brand Exchange azoké a márkáké, viszonteladóké és szoftverszállítóké kell legyen, akik használják, nem egyetlen cégé.",
+    "sections": [
+      { "h": "Ki dönt", "p": "Amíg nincs három független, a megfelelőségi teszteken átmenő implementáció, a változásokról nyilvános vita után a Photopilot karbantartói döntenek. Ezt követően egy irányítócsoport veszi át, amelyben minden implementálónak egy helye van, és legalább egy márka és egy viszonteladó is részt vesz." },
+      { "h": "Hogyan születnek a változások", "p": "A szabvány minden módosítása nyilvános pull request rövid indoklással. A nagyobb javaslatok legalább 14 napig nyitottak a hozzászólásokra. Bárki hozzájárulhat, hozzájárulási megállapodás aláírása nélkül." },
+      { "h": "Eleve semleges", "p": "A szabvány semmiben sem követelhet meg egy adott szállítót vagy üzemeltetett szolgáltatást. Bárki implementálhatja, üzemeltetheti másoknak, vagy versenytárs terméket építhet rá. A Photopilot szoftvere nem élvez előnyt a megfelelőségi teszteken." },
+      { "h": "Licencek", "p": "A specifikáció és ennek az oldalnak a tartalma CC-BY-4.0 licencű. Az SDK, az obx eszköz és a közös webes felület Apache-2.0 licencű. A három portálkiadás AGPL-3.0 licencű, hogy a fejlesztések nyíltak maradjanak. Ennek az oldalnak a kódja MIT licencű." }
+    ],
+    "nameTitle": "A névről",
+    "nameP": "Az „Open Brand Exchange” munkanév. Az 1.0-s verzió előtt egy védjegykutatás után még megváltozhat. Nem bejegyzett védjegy. A megfelelőségi teszteken átmenő szoftver feltüntetheti, hogy „működik az Open Brand Exchange-dzsel”.",
+    "specLink": "A teljes irányítási dokumentum"
+  },
+  "privacy": {
+    "h1": "Adatvédelem",
+    "lead": "Ez a weboldal nem követi Önt.",
+    "sections": [
+      { "h": "Nincsenek sütik", "p": "Nem használunk sütiket. Ha nyelvet választ, a böngészője helyben megjegyzi a választást; ezt soha nem küldi el nekünk." },
+      { "h": "Nincs nyomkövetés", "p": "Nincsenek hirdetések, közösségimédia-gombok, harmadik féltől származó betűtípusok és nyomkövető szkriptek. Legfeljebb a Cloudflare Web Analyticset használjuk, amely sütik nélkül számolja a látogatásokat, és nem követi Önt más oldalakon." },
+      { "h": "Üzemeltetés", "p": "Az oldal a Cloudflare Pagesen fut. Mint minden webszerver, a Cloudflare is kezeli az IP-címét, hogy kiszolgálja az oldalakat és megvédje őket a visszaélésektől." },
+      { "h": "A márkaportálok különállók", "p": "Minden márkaportált maga a márka vagy a szolgáltatója üzemeltet. Ott az ő adatvédelmi tájékoztatójuk érvényes, nem ez." }
+    ],
+    "contact": "Kérdése van? Nyisson issue-t a weboldal tárolójában."
+  }
+}
