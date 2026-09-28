@@ -1,0 +1,21 @@
+name: check
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      # Schema + listing rules, build, internal links, unit and output tests.
+      - run: npm run check
+      # New or changed directory entries: ask each listed portal for its discovery document.
+      - name: Check directory entries are reachable
+        if: github.event_name == 'pull_request'
+        run: node tools/validate-directory.mjs public/directory.json --fetch
