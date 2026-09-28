@@ -73,8 +73,14 @@ const { address, phone, registration } = imprintDetails;
     <h2>{c.contentTitle}</h2>
     <p>{c.contentP}</p>
     <p>
-      <a href={url(lang, 'governance')}>{t.nav.governance}</a> · <a href={url(lang, 'privacy')}>{t.nav.privacy}</a> ·
-      <a href={url(lang, 'cookies')}>{t.nav.cookies}</a>
+      {
+        (['governance', 'privacy', 'cookies'] as const).map((k, i) => (
+          <>
+            {i > 0 && ' · '}
+            <a href={url(lang, k)}>{t.nav[k]}</a>
+          </>
+        ))
+      }
     </p>
   </div>
 </section>
