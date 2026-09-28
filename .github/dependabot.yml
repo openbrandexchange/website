@@ -1,0 +1,21 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      astro:
+        patterns: ['astro', '@astrojs/*']
+      test-tools:
+        patterns: ['@playwright/test', '@axe-core/*', 'typescript', 'ajv', 'ajv-formats']
+    # A new font version changes every brochure: bump it on purpose and rebuild the PDFs.
+    ignore:
+      - dependency-name: '@fontsource/inter'
+        update-types: ['version-update:semver-major', 'version-update:semver-minor', 'version-update:semver-patch']
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

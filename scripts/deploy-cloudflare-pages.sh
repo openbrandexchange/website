@@ -1,24 +1,27 @@
 #!/bin/sh
 # Deploy openbrandexchange.com to Cloudflare Pages.
 #
-# Needs: Node 22+, a Cloudflare account, and either `npx wrangler login` once on this machine
-# or CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID in the environment (token scope: Pages Edit).
+# Needs Node 22+ and either `npx wrangler login` once on this machine, or CLOUDFLARE_API_TOKEN
+# (scope: Account > Cloudflare Pages > Edit) + CLOUDFLARE_ACCOUNT_ID in the environment.
 #
-#   CF_PAGES_PROJECT=openbrandexchange sh scripts/deploy-cloudflare-pages.sh           # production
-#   CF_PAGES_PROJECT=openbrandexchange CF_PAGES_BRANCH=preview sh scripts/deploy-...   # preview URL
+#   sh scripts/deploy-cloudflare-pages.sh                        # production (branch main)
+#   CF_PAGES_BRANCH=preview sh scripts/deploy-cloudflare-pages.sh # preview URL
+#   DRY_RUN=1 sh scripts/deploy-cloudflare-pages.sh              # build and check only
 #
-# Optional: PUBLIC_CF_ANALYTICS_TOKEN enables cookieless Cloudflare Web Analytics at build time.
+# CF_PAGES_PROJECT (default openbrandexchange) names the Pages project; it is created on the
+# first deploy. PUBLIC_CF_ANALYTICS_TOKEN (optional) enables cookieless Web Analytics.
 set -eu
 
 PROJECT="${CF_PAGES_PROJECT:-openbrandexchange}"
 BRANCH="${CF_PAGES_BRANCH:-main}"
+WRANGLER="npx --yes wrangler@4"
 
 cd "$(dirname "$0")/.."
 
 echo "==> Installing dependencies"
 npm ci
 
-echo "==> Validating, building and checking links"
+echo "==> Validating, type-checking, building, checking links and running tests"
 npm run check
 
 if [ "${DRY_RUN:-0}" = "1" ]; then
@@ -26,6 +29,10 @@ if [ "${DRY_RUN:-0}" = "1" ]; then
   exit 0
 fi
 
+if ! $WRANGLER pages project list 2>/dev/null | grep -q "[[:space:]]${PROJECT}[[:space:]]"; then
+  echo "==> Creating Cloudflare Pages project '$PROJECT' (production branch main)"
+  $WRANGLER pages project create "$PROJECT" --production-branch main
+fi
+
 echo "==> Deploying dist/ to Cloudflare Pages project '$PROJECT' (branch '$BRANCH')"
-# Creates the project on first use; answer the prompt or create it in the dashboard first.
-npx --yes wrangler@4 pages deploy dist --project-name "$PROJECT" --branch "$BRANCH"
+$WRANGLER pages deploy dist --project-name "$PROJECT" --branch "$BRANCH" --commit-dirty=true
