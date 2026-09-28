@@ -1,0 +1,24 @@
+name: directory-recheck
+# The spec (docs/directory.md) asks directory operators to re-check listings weekly and remove
+# entries whose portal fails for 30 days. A failed run notifies the repository watchers; a
+# maintainer then contacts the brand (or its provider) and removes the entry after 30 days.
+on:
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node tools/validate-directory.mjs public/directory.json --fetch

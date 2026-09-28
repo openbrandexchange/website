@@ -1,0 +1,18 @@
+name: Something on the site is wrong
+description: A broken link or layout, wrong information, an accessibility problem or a brochure error.
+labels: [bug]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: The address of the page or the file name of the brochure, e.g. https://openbrandexchange.com/de/hosting/ or brands-el.pdf
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+      description: What you see, what you expected, and your browser and device if it is about layout.
+    validations:
+      required: true

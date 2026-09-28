@@ -1,0 +1,30 @@
+name: Translation
+description: A word or sentence that is wrong, unclear or unnatural in your language.
+labels: [translation]
+body:
+  - type: dropdown
+    id: lang
+    attributes:
+      label: Language
+      options: [bg, cs, da, de, el, en, es, et, fi, fr, ga, hr, hu, it, lt, lv, mt, nb, nl, pl, pt, ro, sk, sl, sv]
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Page or brochure
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: Current text and your suggestion
+      description: Words for the portal, API keys, automatic upload and similar come from the shared glossary; changing those is done there (see docs/translations.md).
+    validations:
+      required: true
+  - type: checkboxes
+    id: native
+    attributes:
+      label: About you
+      options:
+        - label: I am a native or professional speaker of this language

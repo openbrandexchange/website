@@ -1,51 +1,77 @@
 # Notes and decisions
 
-Choices made where the brief or spec left room. Report changes to the spec repo if they matter.
+Choices made where the brief or the spec left room, and the open points that are tracked here
+instead of as TODOs in the code. Report changes to the spec repository if they matter there.
 
-1. **Directory file location.** spec `docs/directory.md` says `data/directory.json`; the brief
-   says `public/directory.json`. The site keeps it in `public/` so the same file is served at
-   `https://openbrandexchange.com/directory.json` for software and rendered on /directory.
-   The spec doc should be updated to point at `public/directory.json`.
-2. **Demo entry.** Kestrel Outfitters is marked with the extension field `"x-obx-demo": true`
-   (the schema allows `x-<vendor>-<name>`). Demo entries must use a `.example` host, are shown
-   with a "Demo entry" badge and never link to their fake portal. Real entries may not use
-   reserved TLDs. Entries must be sorted by `id` and use `https://…/.well-known/obx`.
-3. **URLs.** English slugs in every language (`/de/for-brands/`), so URLs never need translating
-   and hreflang pairs are trivial. Old Dutch slugs were never deployed, so no redirects.
-4. **Default language.** `/` picks: remembered choice (localStorage) → first supported browser
-   language (primary subtag; `no`/`nn` → `nb`) → Dutch. `hreflang="x-default"` points at the
-   English pages. The root page is `noindex, follow` and lists all languages. Done in the
-   browser (`/js/lang.js`, generated from `src/lib/i18n-core.ts`) instead of a Pages Function,
-   so the site stays plain static files and also works on any other static host.
-   Accept-Language parsing is in `i18n-core.ts` (tested) for a future edge redirect.
-5. **Glossary.** The admin-ui agent owns `spec/docs/glossary.md` and
-   `admin-ui/src/i18n/glossary.json`; neither existed while this site was written. The portal
-   words used here (`portalWord` in each locale) follow the owner's list for nl/de/fr/en; the
-   others are my choice and should be aligned with the glossary when it lands:
-   bg Портал за търговци, cs Portál pro prodejce, da Forhandlerportal, el Πύλη μεταπωλητών,
-   es Portal para distribuidores, et Edasimüüjate portaal, fi Jälleenmyyjäportaali,
-   ga Tairseach miondíoltóirí, hr Portal za trgovce, hu Viszonteladói portál, it Area rivenditori,
-   lt Pardavėjų portalas, lv Tirgotāju portāls, mt Portal għall-bejjiegħa, nb Forhandlerportal,
-   pl Portal dla sprzedawców, pt Portal de revendedores, ro Portal pentru comercianți,
-   sk Portál pre predajcov, sl Portal za trgovce, sv Återförsäljarportal.
-   Admin menu names quoted on the automation page ("Automatic upload", "Imports → Scheduled
-   imports") are assumptions about the admin UI wording.
-6. **Wording.** Brand/retailer pages avoid node/ingest/GTIN/grant/cursor/tombstone (tested).
-   The developers page and API names keep the technical terms ("OBX Ingest API", GTIN), since
-   that audience needs them.
-7. **Edition names.** "Portal for Cloudflare" (node-ts), "Portal for Google Cloud & Docker"
-   (node-go), "Portal for web hosting" (node-php), translated per language. Repo names appear
-   only as links.
-8. **Switch-kit emails.** Written for every language; the retailers page shows the page
-   language plus English. Downloads are generated at build time
-   (`/downloads/switch-kit-<lang>.txt`) from the same locale text.
-9. **Brochures.** Only NL and EN PDFs exist; all languages link to both.
-10. **Provider texts** use the LocalizedText fallback (reader's language → en → first).
-    Photopilot's entry has nl/en/de/fr.
-11. **Translation quality.** en is the source; nl, de and fr were written with extra care.
-    The other 21 languages are complete but should get a native review, Irish (ga) and
-    Maltese (mt) first.
-12. **Links to not-yet-existing things.** GitHub repos are private and there are no releases
-    or packages yet, so links to releases, the Deploy-to-Cloudflare button and
-    `ghcr.io/openbrandexchange/*` images will only work once published. The link checker
-    checks internal links and anchors only; external links are listed with `--external`.
+## Decisions
+
+1. **Directory file.** `public/directory.json`, served as `https://openbrandexchange.com/directory.json`
+   and rendered on /directory. The spec's docs/directory.md now says the same. Demo entries use
+   `"x-obx-demo": true` (in the spec too), must use a `.example` host, get a "Demo entry" badge and
+   never link to their fake portal. A weekly workflow re-checks listed portals (spec: remove after
+   30 days of failures).
+2. **URLs.** English slugs in every language (`/de/for-brands/`), so URLs never need translating and
+   hreflang pairs are trivial.
+3. **Default language.** `/` picks: remembered choice (localStorage) → first supported browser
+   language (`no`/`nn` → `nb`) → Dutch. `x-default` points at English. Done in the browser
+   (`/js/lang.js`, generated from `src/lib/i18n-core.ts`) so the site stays plain static files
+   and works on any static host; the Accept-Language parser in `i18n-core.ts` is tested and ready
+   for an edge redirect if one is ever wanted.
+4. **Glossary.** Terms come from admin-ui (`src/data/glossary.json`), the publisher line from the
+   spec glossary (`src/data/glossary-publisher.json`); both are copied with `npm run sync:glossary`
+   and enforced by the locale tests for all 25 languages. Aligning with the glossary changed the
+   Lithuanian portal word (Prekybininkų portalas), the Croatian "automatic upload" (Automatsko
+   učitavanje) and the heading "API key for your software" in most languages.
+5. **Publisher and contact.** "An initiative of Richard Lindhout · Open Brand Exchange Foundation
+   (in formation)" in the footer, on the imprint, on the brochures and in NOTICE; the imprint and
+   the governance page say once that the foundation will be a Dutch stichting. Contact is only
+   hello@ and security@openbrandexchange.com (a test fails on any other e-mail address in the
+   built pages). The imprint shows a postal address, phone and registration number only when they
+   are filled in `src/data/imprint.json`; nothing is invented.
+6. **Legal pages.** Privacy (controller, what is processed, Cloudflare hosting, optional cookieless
+   statistics, e-mail, GDPR rights, Dutch DPA), a separate cookie statement (no cookies; language
+   choice in localStorage; Cloudflare may set a strictly necessary security cookie only when it
+   challenges a visitor) and an imprint. They are written for the site as it is: no forms,
+   accounts or tracking. They are not legal advice: have them reviewed before the launch.
+7. **Status wording.** The banner, the home status and the FAQ say that version 0.1 is in testing
+   and the first public release is being prepared, and the brochures split "ready in version 0.1"
+   from "coming next". Change these texts (all languages, then rebuild the brochures) on the day
+   the repositories and releases become public.
+8. **Brochures.** Brands and retailers, all 25 languages, generated from the site's own locale
+   texts (see docs/brochures.md). The retailer brochure includes the switch-kit e-mail. Contact
+   is hello@openbrandexchange.com; Photopilot is mentioned only as the initiator's company and as
+   one vendor building support, never as the way to get the service.
+9. **Photopilot on /hosting.** Listed as a provider, first, labelled "Company of the initiator of
+   Open Brand Exchange" so the relation is visible. Everyone else is listed alphabetically on the
+   same conditions.
+10. **Edition names.** "Portal for Cloudflare" (node-ts), "Portal for Google Cloud & Docker"
+    (node-go), "Portal for web hosting" (node-php), translated per language. Repo names appear only
+    as links.
+11. **Switch-kit e-mails.** Written for every language; the retailers page shows the page language
+    plus English; downloads are generated at build time (`/downloads/switch-kit-<lang>.txt`).
+12. **Provider texts** use the LocalizedText fallback (reader's language → en → first).
+13. **Fonts.** The site uses system fonts (no font files, no third-party requests). The brochures
+    and social images embed Inter (OFL-1.1) so Greek and Cyrillic render the same everywhere.
+
+## Open points (tracked here, not in the code)
+
+- **Native review of 21 languages.** en, nl, de and fr were written with extra care; the other 21
+  are complete and on-glossary but machine-quality. Irish (ga) and Maltese (mt) first.
+- **Links that only work once things are public.** GitHub repositories are private and nothing is
+  released, so links to releases, the Deploy-to-Cloudflare button (needs the node-ts repo to be
+  public) and `ghcr.io/openbrandexchange/*` images do not work for visitors yet. The internal link
+  checker checks internal links and anchors; `node tools/check-links.mjs dist --external` lists
+  the external ones for a check on launch day.
+- **Example host names in texts** (for example `haendler.ihremarke.de`, `brands.yourbrand.com`)
+  are illustrative, not links; some may be registered by someone. Code examples use `.example`.
+- **Trademark.** The site says the name is not a registered trademark yet; the spec's governance
+  describes the planned Benelux application. Update the governance page when it is filed.
+
+## Performance and accessibility (measured 2026-09-28)
+
+- Lighthouse (mobile preset, local build): `/en/`, `/el/for-brands/`, `/bg/hosting/`,
+  `/de/for-retailers/` all 100 / 100 / 100 / 100; LCP 0.9–1.1 s; CLS 0.
+- axe (WCAG 2.2 A/AA + best practices): no violations on all 13 page types in en, el and bg, light
+  and dark, desktop and phone; none on the language chooser. No horizontal scrolling on any of the
+  325 pages at phone width. Fixed on the way: a code block widened the hosting page on phones, the
+  draft banner was outside every landmark, and the phone menu collapsed after first paint.

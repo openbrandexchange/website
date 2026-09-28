@@ -1,79 +1,94 @@
 # openbrandexchange.com
 
-The website of **Open Brand Exchange**: a free, open way for brands to deliver product
-images and article data to their retailers. This repository is the whole site: a static
-[Astro](https://astro.build) build in 25 languages, deployable to Cloudflare Pages.
+The website of **Open Brand Exchange**: a free, open way for brands to deliver product images and
+article data to their retailers. This repository is the whole site: a static
+[Astro](https://astro.build) build in 25 languages, the brand directory, and the brochures for
+brands and retailers. It is deployed to Cloudflare Pages.
 
-"Open Brand Exchange" is a working name. The specification is at version 0.1 (draft).
+An initiative of Richard Lindhout · Open Brand Exchange Foundation (in formation).
+Contact: hello@openbrandexchange.com · security reports: security@openbrandexchange.com.
 
-## 60-second quickstart
+## Quickstart
 
 ```sh
 npm ci
-npm run dev          # http://localhost:4321/  (picks your browser language)
-npm run check        # validate directory, build, check links, run tests
+npm run dev          # http://localhost:4321/  (the home address picks your browser language)
+npm run check        # directory, typecheck, build, links, unit and output tests
 ```
 
-Node 22.18 or newer. No other tools needed.
+Node 22.18 or newer. For the end-to-end tests, once: `npx playwright install chromium`, then
+`npm run build && npm run test:e2e`.
+
+| Command | What it does |
+|---|---|
+| `npm run check` | validate `public/directory.json`, `astro check`, build `dist/`, check every internal link and anchor, run the unit and output tests |
+| `npm run test:e2e` | Playwright against `dist/` served with the real headers: axe on every page type (light and dark, Latin/Greek/Cyrillic), keyboard use, phone layout on all 325 pages, CSP |
+| `npm run lighthouse` | Lighthouse with budgets on four pages (needs Chrome) |
+| `npm run check:licenses` | licence policy for every dependency |
+| `npm run build:brochures` | regenerate the 50 brochure PDFs and 25 social images (needs Chrome) |
+| `npm run sync:glossary` | copy the glossary from `../admin-ui` and `../spec` |
+| `sh scripts/deploy-cloudflare-pages.sh` | deploy (see [docs/deploying.md](docs/deploying.md)) |
 
 ## What is where
 
 | Path | What |
 |---|---|
-| `src/locales/<lang>.json` | **All page text**, one file per language. `en.json` is the source; every other file must have exactly the same keys (a test enforces it). |
+| `src/locales/<lang>.json` | **All page and brochure text**, one file per language. `en.json` is the source; the tests keep the other 24 complete and on-glossary. |
 | `src/views/*.astro` | One view per page; they only read from the locale files. |
-| `src/data/snippets.ts` | Copy-paste code shown on the automation, hosting and developer pages (English, shared). |
-| `src/data/providers.json` | The hosted providers on /hosting. |
+| `src/lib/org-core.ts`, `src/data/imprint.json` | Who publishes the site and how to reach them; optional postal address, phone and registration number for the imprint (empty until the owner fills them in). |
+| `src/data/snippets.ts` | Copy-paste code on the automation, hosting and developer pages. |
+| `src/data/providers.json` | Hosted providers on /hosting. |
+| `src/data/glossary*.json` | Copies of the project glossary (admin-ui terms, spec publisher line). |
 | `public/directory.json` | The public brand directory, served as `/directory.json` and rendered on /directory. |
-| `public/downloads/` | Retailer brochures (NL, EN). The switch-kit emails are generated per language at `/downloads/switch-kit-<lang>.txt`. |
-| `tools/` | Directory validator (schema from the spec repo in `tools/schemas/`) and the link checker. |
-| `tests/` | Locale completeness and wording, language detection, directory rules, and checks on the built site. |
+| `public/downloads/` | Brochures `brands-<lang>.pdf` and `retailers-<lang>.pdf` (generated), their manifest. Switch-kit e-mails are generated at build time. |
+| `public/og/` | Social preview image per language (generated). |
+| `public/_headers`, `public/_redirects` | Security headers, caching, CORS for the directory, short links. |
+| `scripts/` | Brochure build, deploy script, glossary sync. |
+| `tools/` | Directory validator, link checker, licence check, static test server, Lighthouse runner. |
+| `tests/`, `e2e/` | Node unit and output tests; Playwright end-to-end tests. |
 
-## Languages
+## Pages and languages
 
-bg, cs, da, de, el, en, es, et, fi, fr, ga, hr, hu, it, lt, lv, mt, nl, nb, pl, pt, ro, sk, sl, sv.
+bg, cs, da, de, el, en, es, et, fi, fr, ga, hr, hu, it, lt, lv, mt, nb, nl, pl, pt, ro, sk, sl, sv.
 
-- Every page lives at `/<lang>/<english-slug>/` (for example `/nl/for-brands/`).
+- Every page lives at `/<lang>/<english-slug>/`: home, for-brands, automation, hosting,
+  for-retailers, developers, directory, downloads, faq, governance, privacy, cookies, imprint.
 - `/` sends visitors to their remembered choice, else their browser language, else Dutch.
   Without JavaScript it is a plain language chooser.
-- Every page carries `hreflang` links for all 25 languages and `x-default` → English.
-- The language menu remembers a choice in `localStorage` only (no cookie).
+- Every page carries `hreflang` links for all 25 languages plus `x-default` (English), a canonical
+  URL, Open Graph and Twitter card tags with a preview image in its language, and is listed in
+  `/sitemap.xml`. `robots.txt` allows everything and points at the sitemap.
+- No cookies. The language menu remembers a choice in `localStorage` only.
 
-To change a text: edit `en.json`, then the same key in the other 24 files. `npm test` fails if
-a key is missing, a placeholder such as `{portal}` or `{url}` was dropped, or a file is still
-mostly English. Brand- and retailer-facing texts must not use protocol words (node, ingest,
-GTIN, grant, cursor, tombstone); the test checks that too. Say EAN, portal, "automatic upload",
-"API key for your software".
+To change a text: edit `en.json`, then the same key in the other 24 files, see
+[docs/translations.md](docs/translations.md). If it is used in a brochure, `npm test` then reports
+the PDF as stale: `npm run build:brochures -- --lang <lang>`.
 
 ## Getting a brand listed
 
 Brands (or their hosting provider on their behalf) open a pull request that adds one entry to
 `public/directory.json`, sorted by `id`. CI validates it against the spec's Directory schema,
-checks the listing rules and, on pull requests, fetches the entry's `/.well-known/obx`.
-Format: [spec docs/directory.md](https://github.com/openbrandexchange/spec/blob/main/docs/directory.md).
+checks the listing rules and, on pull requests, fetches the entry's `/.well-known/obx`. A weekly
+workflow re-checks every listed portal. Format:
+[spec docs/directory.md](https://github.com/openbrandexchange/spec/blob/main/docs/directory.md).
 
 ## Becoming a listed provider
 
 Add yourself to `src/data/providers.json` (same fields as the existing entry, texts per
 language; readers see their language, else English). Conditions are on the hosting page.
 
-## Deploying
+## Documentation
 
-Cloudflare Pages, static output in `dist/`. Headers (`public/_headers`, strict CSP) and
-redirects (`public/_redirects`) are part of the build.
+- [docs/deploying.md](docs/deploying.md): Cloudflare Pages via GitHub Actions or by hand, domain, rollback, other hosts
+- [docs/operations.md](docs/operations.md): health checks, budgets, statistics, regular tasks
+- [docs/security.md](docs/security.md): headers, CSP, CORS, directory trust, supply chain
+- [docs/brochures.md](docs/brochures.md): how the PDFs and social images are made and checked
+- [docs/translations.md](docs/translations.md): languages, glossary, review status
+- [NOTES.md](NOTES.md): decisions and open points · [CHANGELOG.md](CHANGELOG.md)
+- [CONTRIBUTING.md](CONTRIBUTING.md) (DCO sign-off) · [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) · [SECURITY.md](SECURITY.md)
 
-```sh
-npx wrangler login                                   # once, or set CLOUDFLARE_API_TOKEN
-CF_PAGES_PROJECT=openbrandexchange sh scripts/deploy-cloudflare-pages.sh
-DRY_RUN=1 sh scripts/deploy-cloudflare-pages.sh      # build and check only
-```
+## Licence
 
-Or connect the repository in the Cloudflare dashboard: build command `npm run build`,
-output directory `dist`, environment variable `NODE_VERSION=22`.
-
-Optional: set `PUBLIC_CF_ANALYTICS_TOKEN` at build time for cookieless Cloudflare Web
-Analytics. Without it the site loads no third-party script at all.
-
-## License
-
-Code MIT, content CC-BY-4.0. See [LICENSE](LICENSE) and [LICENSE-CONTENT](LICENSE-CONTENT).
+Code MIT, content CC-BY-4.0. See [LICENSE](LICENSE), [LICENSE-CONTENT](LICENSE-CONTENT) and
+[NOTICE](NOTICE). The copyright and the name will be transferred to the Open Brand Exchange
+Foundation, a Dutch stichting that is being set up.

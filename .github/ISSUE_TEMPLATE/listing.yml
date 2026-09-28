@@ -1,0 +1,25 @@
+name: Directory listing
+description: Ask for a brand to be listed or removed (a pull request on public/directory.json is quicker).
+labels: [directory]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Request
+      options: [Add a brand, Change a listing, Remove a listing]
+    validations:
+      required: true
+  - type: input
+    id: discovery
+    attributes:
+      label: Discovery address of the portal
+      description: https://…/.well-known/obx
+    validations:
+      required: true
+  - type: textarea
+    id: who
+    attributes:
+      label: Who you are
+      description: Only the brand itself, or its hosting provider on its behalf, can request a listing.
+    validations:
+      required: true
