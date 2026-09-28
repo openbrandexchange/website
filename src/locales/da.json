@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (forkortet)",
     "namesLabel": "Filnavne på billeder",
     "keyTitle": "Det skal du bruge",
-    "keyP": "Gå til Automatisk upload i din administration, og opret en ny nøgle. Så har du to værdier: adressen på din portal (OBX_URL) og selve nøglen (OBX_TOKEN). Nøglen vises kun én gang.",
+    "keyP": "Gå til Automatisk upload → Adgangsnøgler i din administration, og opret en ny nøgle. Så har du to værdier: adressen på din portal (OBX_URL) og selve nøglen (OBX_TOKEN). Nøglen vises kun én gang.",
     "keyTip": "Giv hvert system sin egen nøgle. Så kan du tilbagekalde én uden at bryde de andre.",
     "scheduledTitle": "1. Planlagt import (uden kode)",
-    "scheduledP": "I din administration: Importer → Planlagte importer → Tilføj. Vælg kilden, og hvor ofte den skal køre.",
+    "scheduledP": "I din administration: Automatisk upload → Planlagte importer → Tilføj planlagt import. Vælg kilden, og hvor ofte den skal køre.",
     "scheduled": [
       {
         "k": "Webadresse (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Et script, der sætter din portal op på Google Cloud Run. Du skal bruge en Google Cloud-konto og gcloud-værktøjet.",
     "phpP": "Til det webhotel, du måske allerede har, med PHP og en database. Ingen kommandoer nødvendige:",
     "phpSteps": [
-      "Download obx-node-php.zip fra den nyeste udgivelse.",
+      "Download obx-portal-php-<version>.zip fra den nyeste udgivelse.",
       "Pak den ud, og upload mappen til dit webhotel med (S)FTP.",
       "Peg dit (under)domæne, for eksempel forhandler.ditbrand.dk, på mappen public.",
-      "Åbn adressen, og følg installationsguiden."
+      "Gør mapperne data og config skrivbare (rettigheder 775; siger installationen stadig, at de ikke er det, 777).",
+      "Åbn adressen. Installationen tjekker din server og beder om opsætningskoden fra filen data/SETUP-CODE.txt, som du åbner med dit FTP-program. Klik derefter på “Åbn opsætningsguiden”.",
+      "Tilføj den cron-adresse, installationen viser, som cronjob i dit webhotels kontrolpanel, hvert 5. minut. Portalen virker også uden."
     ],
     "phpDownload": "Download den nyeste udgivelse",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Efter installationen: første start",
     "first": [
       "Åbn adressen på din portal i browseren.",
-      "Indtast engangskoden til opsætning. Den står i loggen ved første start, eller du angiver den på forhånd med OBX_SETUP_CODE.",
+      "Indtast engangskoden til opsætning. Den står i loggen ved første start (Portal til webhotel: i data/SETUP-CODE.txt, og installationen udfylder den for dig), eller du angiver den på forhånd med OBX_SETUP_CODE.",
       "Udfyld din virksomhed og dit første brand, og vælg din egen adgangskode. Der er aldrig en standardadgangskode."
     ],
     "firstWhy": "Opsætningskoden sikrer, at ingen andre kan overtage en nyinstalleret portal.",

@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (sutrumpinta)",
     "namesLabel": "Nuotraukų failų pavadinimai",
     "keyTitle": "Ko jums reikia",
-    "keyP": "Administravimo skiltyje atidarykite Automatinis įkėlimas ir sukurkite naują raktą. Turėsite dvi reikšmes: portalo adresą (OBX_URL) ir patį raktą (OBX_TOKEN). Raktas rodomas tik vieną kartą.",
+    "keyP": "Administravimo skiltyje atidarykite Automatinis įkėlimas → Prieigos raktai ir sukurkite naują raktą. Turėsite dvi reikšmes: portalo adresą (OBX_URL) ir patį raktą (OBX_TOKEN). Raktas rodomas tik vieną kartą.",
     "keyTip": "Kiekvienai sistemai duokite atskirą raktą. Tada galėsite atšaukti vieną, nesugadindami kitų.",
     "scheduledTitle": "1. Suplanuotas importas (be kodo)",
-    "scheduledP": "Administravime: Importai → Suplanuoti importai → Pridėti. Pasirinkite šaltinį ir dažnumą.",
+    "scheduledP": "Administravime: Automatinis įkėlimas → Suplanuoti importai → Pridėti suplanuotą importą. Pasirinkite šaltinį ir dažnumą.",
     "scheduled": [
       {
         "k": "Interneto adresas (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Scenarijus, kuris įdiegia jūsų portalą Google Cloud Run. Jums reikia Google Cloud paskyros ir įrankio gcloud.",
     "phpP": "Interneto talpinimui, kurį galbūt jau turite, su PHP ir duomenų baze. Jokių komandų:",
     "phpSteps": [
-      "Atsisiųskite obx-node-php.zip iš naujausios versijos.",
+      "Atsisiųskite obx-portal-php-<version>.zip iš naujausios versijos.",
       "Išpakuokite ir įkelkite aplanką į talpinimą per (S)FTP.",
       "Nukreipkite savo (sub)domeną, pavyzdžiui, pardavejai.jusuzenklas.lt, į aplanką public.",
-      "Atidarykite šį adresą ir sekite diegimo vedlį."
+      "Leiskite rašyti į aplankus data ir config (teisės 775; jei diegimo programa vis dar sako, kad negalima, 777).",
+      "Atidarykite šį adresą. Diegimo programa patikrina serverį ir paprašo diegimo kodo iš failo data/SETUP-CODE.txt, kurį atidarote FTP programa. Tada spustelėkite „Atidaryti sąrankos vedlį“.",
+      "Diegimo programos parodytą cron adresą įtraukite kaip cron užduotį prieglobos valdymo skydelyje, kas 5 minutes. Portalas veikia ir be jo."
     ],
     "phpDownload": "Atsisiųsti naujausią versiją",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Po diegimo: pirmasis paleidimas",
     "first": [
       "Atidarykite savo portalo adresą naršyklėje.",
-      "Įveskite vienkartinį diegimo kodą. Jis yra žurnale pirmojo paleidimo metu arba jį nustatote iš anksto su OBX_SETUP_CODE.",
+      "Įveskite vienkartinį diegimo kodą. Jis yra žurnale pirmojo paleidimo metu (Portalas interneto talpinimui: faile data/SETUP-CODE.txt, o diegimo programa jį įrašo už jus) arba jį nustatote iš anksto su OBX_SETUP_CODE.",
       "Įveskite savo įmonę ir pirmąjį prekės ženklą ir pasirinkite savo slaptažodį. Numatytojo slaptažodžio niekada nėra."
     ],
     "firstWhy": "Diegimo kodas užtikrina, kad niekas kitas negalėtų perimti ką tik įdiegto portalo.",

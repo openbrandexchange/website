@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (lyhennetty)",
     "namesLabel": "Kuvien tiedostonimet",
     "keyTitle": "Mitä tarvitset",
-    "keyP": "Avaa hallinnasta Automaattinen lataus ja luo uusi avain. Saat kaksi arvoa: portaalisi osoitteen (OBX_URL) ja itse avaimen (OBX_TOKEN). Avain näytetään vain kerran.",
+    "keyP": "Avaa hallinnasta Automaattinen lataus → Käyttöavaimet ja luo uusi avain. Saat kaksi arvoa: portaalisi osoitteen (OBX_URL) ja itse avaimen (OBX_TOKEN). Avain näytetään vain kerran.",
     "keyTip": "Anna jokaiselle järjestelmälle oma avain. Silloin voit perua yhden rikkomatta muita.",
     "scheduledTitle": "1. Ajastettu tuonti (ilman koodia)",
-    "scheduledP": "Hallinnassa: Tuonnit → Ajastetut tuonnit → Lisää. Valitse lähde ja kuinka usein se ajetaan.",
+    "scheduledP": "Hallinnassa: Automaattinen lataus → Ajastetut tuonnit → Lisää ajastettu tuonti. Valitse lähde ja kuinka usein se ajetaan.",
     "scheduled": [
       {
         "k": "Verkko-osoite (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Skripti, joka asentaa portaalisi Google Cloud Runiin. Tarvitset Google Cloud -tilin ja gcloud-työkalun.",
     "phpP": "Webhotelliin, joka sinulla ehkä jo on, PHP:llä ja tietokannalla. Komentoja ei tarvita:",
     "phpSteps": [
-      "Lataa obx-node-php.zip uusimmasta julkaisusta.",
+      "Lataa obx-portal-php-<version>.zip uusimmasta julkaisusta.",
       "Pura se ja lataa kansio webhotelliisi (S)FTP:llä.",
       "Ohjaa (ali)verkkotunnuksesi, esimerkiksi jalleenmyyjat.brandisi.fi, public-kansioon.",
-      "Avaa osoite ja seuraa asennusohjelmaa."
+      "Salli kirjoittaminen kansioihin data ja config (oikeudet 775; jos asennus sanoo yhä, ettei se onnistu, 777).",
+      "Avaa osoite. Asennus tarkistaa palvelimesi ja kysyy asennuskoodia tiedostosta data/SETUP-CODE.txt, jonka avaat FTP-ohjelmalla. Valitse sitten “Avaa käyttöönottoavustaja”.",
+      "Lisää asennuksen näyttämä cron-osoite cron-ajoksi palvelusi hallintapaneeliin, 5 minuutin välein. Portaali toimii ilmankin."
     ],
     "phpDownload": "Lataa uusin julkaisu",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Asennuksen jälkeen: ensimmäinen käynnistys",
     "first": [
       "Avaa portaalisi osoite selaimessa.",
-      "Syötä kertakäyttöinen asennuskoodi. Se näkyy lokissa ensimmäisellä käynnistyskerralla, tai asetat sen etukäteen OBX_SETUP_CODE-arvolla.",
+      "Syötä kertakäyttöinen asennuskoodi. Se näkyy lokissa ensimmäisellä käynnistyskerralla (Portaali webhotelliin: tiedostossa data/SETUP-CODE.txt, ja asennus täyttää sen puolestasi), tai asetat sen etukäteen OBX_SETUP_CODE-arvolla.",
       "Täytä yrityksesi ja ensimmäinen brändisi ja valitse oma salasana. Oletussalasanaa ei ole koskaan."
     ],
     "firstWhy": "Asennuskoodi varmistaa, ettei kukaan muu voi ottaa haltuunsa juuri asennettua portaalia.",

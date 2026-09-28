@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (giorraithe)",
     "namesLabel": "Ainmneacha comhad na ngrianghraf",
     "keyTitle": "Cad atá de dhíth ort",
-    "keyP": "I do riarachán, oscail Uaslódáil uathoibríoch agus cruthaigh eochair nua. Beidh dhá luach agat ansin: seoladh do thairsí (OBX_URL) agus an eochair féin (OBX_TOKEN). Ní thaispeántar an eochair ach uair amháin.",
+    "keyP": "I do riarachán, oscail Uaslódáil uathoibríoch → Eochracha rochtana agus cruthaigh eochair nua. Beidh dhá luach agat ansin: seoladh do thairsí (OBX_URL) agus an eochair féin (OBX_TOKEN). Ní thaispeántar an eochair ach uair amháin.",
     "keyTip": "Tabhair a eochair féin do gach córas. Ansin is féidir leat ceann amháin a chúlghairm gan na cinn eile a bhriseadh.",
     "scheduledTitle": "1. Allmhairiú sceidealta (gan chód)",
-    "scheduledP": "I do riarachán: Allmhairí → Allmhairí sceidealta → Cuir leis. Roghnaigh an fhoinse agus cé chomh minic a ritheann sé.",
+    "scheduledP": "I do riarachán: Uaslódáil uathoibríoch → Iompórtálacha sceidealaithe → Cuir iompórtáil sceidealaithe leis. Roghnaigh an fhoinse agus cé chomh minic a ritheann sé.",
     "scheduled": [
       {
         "k": "Seoladh gréasáin (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Script a chuireann do thairseach ar Google Cloud Run. Teastaíonn cuntas Google Cloud agus an uirlis gcloud uait.",
     "phpP": "Don phacáiste óstála gréasáin atá agat b'fhéidir cheana, le PHP agus bunachar sonraí. Níl aon orduithe ag teastáil:",
     "phpSteps": [
-      "Íoslódáil obx-node-php.zip ón eisiúint is déanaí.",
+      "Íoslódáil obx-portal-php-<version>.zip ón eisiúint is déanaí.",
       "Díphacáil é agus uaslódáil an fillteán chuig d'óstáil le (S)FTP.",
       "Dírigh d'(fho)fhearann, mar shampla retailers.dobhranda.ie, ar an bhfillteán public.",
-      "Oscail an seoladh sin agus lean an draoi socraithe."
+      "Tabhair cead scríofa do na fillteáin data agus config (ceadanna 775; má deir an suiteálaí fós nach bhfuil, 777).",
+      "Oscail an seoladh sin. Seiceálann an suiteálaí do fhreastalaí agus iarrann sé an cód suiteála ón gcomhad data/SETUP-CODE.txt, a osclaíonn tú le do chlár FTP. Ansin cliceáil “Oscail an draoi socraithe”.",
+      "Cuir an seoladh cron a thaispeánann an suiteálaí leis mar jab cron i bpainéal rialaithe d'óstála, gach 5 nóiméad. Oibríonn an tairseach gan é freisin."
     ],
     "phpDownload": "Íoslódáil an eisiúint is déanaí",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Tar éis suiteála: an chéad tosú",
     "first": [
       "Oscail seoladh do thairsí i do bhrabhsálaí.",
-      "Cuir isteach an cód socraithe aonuaire. Tá sé sa loga ar an gcéad tosú, nó socraíonn tú roimh ré é le OBX_SETUP_CODE.",
+      "Cuir isteach an cód suiteála aonuaire. Tá sé sa loga ar an gcéad tosú (Tairseach d'óstáil gréasáin: in data/SETUP-CODE.txt, agus líonann an suiteálaí isteach duit é), nó socraíonn tú roimh ré é le OBX_SETUP_CODE.",
       "Líon isteach do chuideachta agus do chéad bhranda, agus roghnaigh do phasfhocal féin. Ní bhíonn pasfhocal réamhshocraithe ann riamh."
     ],
     "firstWhy": "Cinntíonn an cód socraithe nach féidir le haon duine eile tairseach nuashuiteáilte a éileamh.",

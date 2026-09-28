@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (prescurtat)",
     "namesLabel": "Numele fișierelor foto",
     "keyTitle": "De ce aveți nevoie",
-    "keyP": "În administrare, deschideți Încărcare automată și creați o cheie nouă. Veți avea două valori: adresa portalului (OBX_URL) și cheia însăși (OBX_TOKEN). Cheia este afișată o singură dată.",
+    "keyP": "În administrare, deschideți Încărcare automată → Chei de acces și creați o cheie nouă. Veți avea două valori: adresa portalului (OBX_URL) și cheia însăși (OBX_TOKEN). Cheia este afișată o singură dată.",
     "keyTip": "Dați fiecărui sistem propria cheie. Așa puteți revoca una fără să le afectați pe celelalte.",
     "scheduledTitle": "1. Import programat (fără cod)",
-    "scheduledP": "În administrare: Importuri → Importuri programate → Adăugați. Alegeți sursa și cât de des rulează.",
+    "scheduledP": "În administrare: Încărcare automată → Importuri programate → Adaugă import programat. Alegeți sursa și cât de des rulează.",
     "scheduled": [
       {
         "k": "Adresă web (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Un script care vă pune portalul pe Google Cloud Run. Aveți nevoie de un cont Google Cloud și de instrumentul gcloud.",
     "phpP": "Pentru găzduirea web pe care poate o aveți deja, cu PHP și o bază de date. Fără comenzi:",
     "phpSteps": [
-      "Descărcați obx-node-php.zip din cea mai recentă versiune.",
+      "Descărcați obx-portal-php-<version>.zip din cea mai recentă versiune.",
       "Dezarhivați-l și încărcați folderul pe găzduire prin (S)FTP.",
       "Direcționați (sub)domeniul, de exemplu comercianti.marcavoastra.ro, către folderul public.",
-      "Deschideți adresa și urmați asistentul de instalare."
+      "Permiteți scrierea în dosarele data și config (permisiuni 775; dacă programul de instalare încă spune că nu se poate, 777).",
+      "Deschideți adresa. Programul de instalare verifică serverul și cere codul de instalare din fișierul data/SETUP-CODE.txt, pe care îl deschideți cu programul FTP. Apoi faceți clic pe „Deschideți asistentul de configurare“.",
+      "Adăugați adresa cron afișată de programul de instalare ca sarcină cron în panoul găzduirii, la fiecare 5 minute. Și fără ea portalul funcționează."
     ],
     "phpDownload": "Descărcați cea mai recentă versiune",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "După instalare: prima pornire",
     "first": [
       "Deschideți adresa portalului în browser.",
-      "Introduceți codul de configurare de unică folosință. Îl găsiți în jurnal la prima pornire sau îl setați dinainte cu OBX_SETUP_CODE.",
+      "Introduceți codul de instalare de unică folosință. Îl găsiți în jurnal la prima pornire (Portal pentru găzduire web: în data/SETUP-CODE.txt, iar programul de instalare îl completează pentru dvs.) sau îl setați dinainte cu OBX_SETUP_CODE.",
       "Completați compania și prima marcă și alegeți-vă propria parolă. Nu există niciodată o parolă implicită."
     ],
     "firstWhy": "Codul de configurare asigură că nimeni altcineva nu poate prelua un portal proaspăt instalat.",

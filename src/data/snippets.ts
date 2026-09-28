@@ -3,7 +3,7 @@
 // fictional brand "Kestrel Outfitters" at brands.kestrel.example.
 
 export const env = `export OBX_URL=https://brands.kestrel.example
-export OBX_TOKEN=obxi_…   # admin → Automatic upload → New key (shown once)`;
+export OBX_TOKEN=obxi_…   # admin → Automatic upload → Access keys (shown once)`;
 
 export const cliBasics = `obx info                                            # check the token, see limits and brands
 obx push --csv products.csv --images ./images       # publish a CSV and a folder (or zip) of images
@@ -157,7 +157,8 @@ volumes:
 
 export const cloudRun = `git clone https://github.com/openbrandexchange/node-go
 cd node-go
-./deploy/cloud-run.sh      # asks for your Google Cloud project and region, then deploys`;
+gcloud config set project my-project   # once: your Google Cloud project (billing on)
+./deploy/cloudrun.sh                   # region europe-west4; REGION=… for another`;
 
 export const conformance = `obx-conformance all --url http://localhost:8080 --setup-code …   # a fresh portal: setup, fixtures, every profile
 obx-conformance protocol --url https://brands.kestrel.example --client-id obxc_… --client-secret obxs_…

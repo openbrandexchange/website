@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (skrátené)",
     "namesLabel": "Názvy súborov fotografií",
     "keyTitle": "Čo potrebujete",
-    "keyP": "V administrácii otvorte Automatické nahrávanie a vytvorte nový kľúč. Získate dve hodnoty: adresu portálu (OBX_URL) a samotný kľúč (OBX_TOKEN). Kľúč sa zobrazí iba raz.",
+    "keyP": "V administrácii otvorte Automatické nahrávanie → Prístupové kľúče a vytvorte nový kľúč. Získate dve hodnoty: adresu portálu (OBX_URL) a samotný kľúč (OBX_TOKEN). Kľúč sa zobrazí iba raz.",
     "keyTip": "Dajte každému systému vlastný kľúč. Potom môžete jeden zrušiť bez toho, aby ste pokazili ostatné.",
     "scheduledTitle": "1. Plánovaný import (bez kódu)",
-    "scheduledP": "V administrácii: Importy → Plánované importy → Pridať. Zvoľte zdroj a ako často sa má spúšťať.",
+    "scheduledP": "V administrácii: Automatické nahrávanie → Plánované importy → Pridať plánovaný import. Zvoľte zdroj a ako často sa má spúšťať.",
     "scheduled": [
       {
         "k": "Webová adresa (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Skript, ktorý váš portál nasadí na Google Cloud Run. Potrebujete účet Google Cloud a nástroj gcloud.",
     "phpP": "Pre webhosting, ktorý možno už máte, s PHP a databázou. Žiadne príkazy nie sú potrebné:",
     "phpSteps": [
-      "Stiahnite obx-node-php.zip z najnovšieho vydania.",
+      "Stiahnite obx-portal-php-<version>.zip z najnovšieho vydania.",
       "Rozbaľte ho a nahrajte priečinok na hosting cez (S)FTP.",
       "Nasmerujte svoju (sub)doménu, napríklad predajcovia.vasaznacka.sk, na priečinok public.",
-      "Otvorte túto adresu a prejdite inštalačným sprievodcom."
+      "Umožnite zápis do priečinkov data a config (oprávnenia 775; ak inštalátor stále hlási, že zápis nejde, 777).",
+      "Otvorte túto adresu. Inštalátor skontroluje server a vypýta si inštalačný kód zo súboru data/SETUP-CODE.txt, ktorý otvoríte programom FTP. Potom kliknite na „Otvoriť sprievodcu nastavením“.",
+      "Adresu pre cron, ktorú inštalátor ukáže, pridajte ako úlohu cron v ovládacom paneli hostingu, každých 5 minút. Aj bez nej portál funguje."
     ],
     "phpDownload": "Stiahnuť najnovšie vydanie",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Po inštalácii: prvé spustenie",
     "first": [
       "Otvorte adresu svojho portálu v prehliadači.",
-      "Zadajte jednorazový inštalačný kód. Nájdete ho v logu pri prvom spustení, alebo ho vopred nastavíte pomocou OBX_SETUP_CODE.",
+      "Zadajte jednorazový inštalačný kód. Nájdete ho v logu pri prvom spustení (Portál pre webhosting: v data/SETUP-CODE.txt a inštalátor ho vyplní za vás), alebo ho vopred nastavíte pomocou OBX_SETUP_CODE.",
       "Vyplňte svoju firmu a prvú značku a zvoľte si vlastné heslo. Predvolené heslo nikdy neexistuje."
     ],
     "firstWhy": "Inštalačný kód zaistí, že si čerstvo nainštalovaný portál nikto iný neprivlastní.",

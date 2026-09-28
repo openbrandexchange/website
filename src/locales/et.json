@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (lühendatud)",
     "namesLabel": "Fotode failinimed",
     "keyTitle": "Mida vajate",
-    "keyP": "Avage halduses Automaatne üleslaadimine ja looge uus võti. Teil on siis kaks väärtust: portaali aadress (OBX_URL) ja võti ise (OBX_TOKEN). Võtit näidatakse ainult üks kord.",
+    "keyP": "Avage halduses Automaatne üleslaadimine → Juurdepääsuvõtmed ja looge uus võti. Teil on siis kaks väärtust: portaali aadress (OBX_URL) ja võti ise (OBX_TOKEN). Võtit näidatakse ainult üks kord.",
     "keyTip": "Andke igale süsteemile oma võti. Nii saate ühe tühistada ilma teisi rikkumata.",
     "scheduledTitle": "1. Ajastatud import (ilma koodita)",
-    "scheduledP": "Halduses: Impordid → Ajastatud impordid → Lisa. Valige allikas ja kui sageli see käivitub.",
+    "scheduledP": "Halduses: Automaatne üleslaadimine → Ajastatud impordid → Lisa ajastatud import. Valige allikas ja kui sageli see käivitub.",
     "scheduled": [
       {
         "k": "Veebiaadress (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Skript, mis paneb teie portaali Google Cloud Runi. Vajate Google Cloudi kontot ja tööriista gcloud.",
     "phpP": "Veebimajutusele, mis teil ehk juba on, PHP ja andmebaasiga. Käske pole vaja:",
     "phpSteps": [
-      "Laadige alla obx-node-php.zip uusimast väljalaskest.",
+      "Laadige alla obx-portal-php-<version>.zip uusimast väljalaskest.",
       "Pakkige see lahti ja laadige kaust (S)FTP kaudu majutusse üles.",
       "Suunake oma (ala)domeen, näiteks edasimyyjad.teiebrand.ee, kausta public.",
-      "Avage see aadress ja järgige paigaldusviisardit."
+      "Muutke kaustad data ja config kirjutatavaks (õigused 775; kui paigaldaja ütleb endiselt, et pole, siis 777).",
+      "Avage see aadress. Paigaldaja kontrollib serverit ja küsib seadistuskoodi failist data/SETUP-CODE.txt, mille avate FTP-programmiga. Seejärel klõpsake „Ava seadistusviisard“.",
+      "Lisage paigaldaja näidatud cron-aadress oma majutuse juhtpaneelis cron-tööna, iga 5 minuti järel. Ka ilma selleta portaal töötab."
     ],
     "phpDownload": "Laadi alla uusim väljalase",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Pärast paigaldamist: esimene käivitus",
     "first": [
       "Avage oma portaali aadress brauseris.",
-      "Sisestage ühekordne seadistuskood. See on logis esimesel käivitamisel või määrate selle eelnevalt OBX_SETUP_CODE abil.",
+      "Sisestage ühekordne seadistuskood. See on logis esimesel käivitamisel (Portaal veebimajutusele: failis data/SETUP-CODE.txt ja paigaldaja täidab selle teie eest), või määrate selle eelnevalt OBX_SETUP_CODE abil.",
       "Sisestage oma ettevõte ja esimene kaubamärk ning valige oma parool. Vaikeparooli ei ole kunagi."
     ],
     "firstWhy": "Seadistuskood tagab, et keegi teine ei saa äsja paigaldatud portaali endale võtta.",

@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (förkortad)",
     "namesLabel": "Filnamn för bilder",
     "keyTitle": "Det här behöver du",
-    "keyP": "Gå till Automatisk uppladdning i din administration och skapa en ny nyckel. Då har du två värden: adressen till din portal (OBX_URL) och själva nyckeln (OBX_TOKEN). Nyckeln visas bara en gång.",
+    "keyP": "Gå till Automatisk uppladdning → Åtkomstnycklar i din administration och skapa en ny nyckel. Då har du två värden: adressen till din portal (OBX_URL) och själva nyckeln (OBX_TOKEN). Nyckeln visas bara en gång.",
     "keyTip": "Ge varje system en egen nyckel. Då kan du återkalla en utan att de andra slutar fungera.",
     "scheduledTitle": "1. Schemalagd import (utan kod)",
-    "scheduledP": "I din administration: Importer → Schemalagda importer → Lägg till. Välj källa och hur ofta den ska köras.",
+    "scheduledP": "I din administration: Automatisk uppladdning → Schemalagda importer → Lägg till schemalagd import. Välj källa och hur ofta den ska köras.",
     "scheduled": [
       {
         "k": "Webbadress (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Ett skript som lägger din portal på Google Cloud Run. Du behöver ett Google Cloud-konto och verktyget gcloud.",
     "phpP": "För webbhotellet du kanske redan har, med PHP och en databas. Inga kommandon behövs:",
     "phpSteps": [
-      "Ladda ner obx-node-php.zip från den senaste versionen.",
+      "Ladda ner obx-portal-php-<version>.zip från den senaste versionen.",
       "Packa upp den och ladda upp mappen till ditt webbhotell med (S)FTP.",
       "Peka din (under)domän, till exempel handlare.dittvarumarke.se, mot mappen public.",
-      "Öppna adressen och följ installationsguiden."
+      "Gör mapparna data och config skrivbara (behörighet 775; säger installationen fortfarande att de inte är det, 777).",
+      "Öppna adressen. Installationen kontrollerar servern och ber om installationskoden från filen data/SETUP-CODE.txt, som du öppnar med ditt FTP-program. Klicka sedan på “Öppna installationsguiden”.",
+      "Lägg in cron-adressen som installationen visar som ett cron-jobb i webbhotellets kontrollpanel, var 5:e minut. Portalen fungerar även utan."
     ],
     "phpDownload": "Ladda ner den senaste versionen",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Efter installationen: första starten",
     "first": [
       "Öppna adressen till din portal i webbläsaren.",
-      "Ange engångskoden för installationen. Den står i loggen vid första starten, eller så anger du den i förväg med OBX_SETUP_CODE.",
+      "Ange engångskoden för installationen. Den står i loggen vid första starten (Portal för webbhotell: i data/SETUP-CODE.txt, och installationen fyller i den åt dig), eller så anger du den i förväg med OBX_SETUP_CODE.",
       "Fyll i ditt företag och ditt första varumärke och välj ditt eget lösenord. Det finns aldrig något standardlösenord."
     ],
     "firstWhy": "Installationskoden gör att ingen annan kan ta över en nyinstallerad portal.",

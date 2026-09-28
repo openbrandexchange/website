@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (skraćeno)",
     "namesLabel": "Nazivi datoteka fotografija",
     "keyTitle": "Što vam treba",
-    "keyP": "U administraciji otvorite Automatsko učitavanje i izradite novi ključ. Dobivate dvije vrijednosti: adresu portala (OBX_URL) i sam ključ (OBX_TOKEN). Ključ se prikazuje samo jednom.",
+    "keyP": "U administraciji otvorite Automatsko učitavanje → Pristupni ključevi i izradite novi ključ. Dobivate dvije vrijednosti: adresu portala (OBX_URL) i sam ključ (OBX_TOKEN). Ključ se prikazuje samo jednom.",
     "keyTip": "Svakom sustavu dajte vlastiti ključ. Tako možete opozvati jedan, a da ne pokvarite ostale.",
     "scheduledTitle": "1. Planirani uvoz (bez koda)",
-    "scheduledP": "U administraciji: Uvozi → Planirani uvozi → Dodaj. Odaberite izvor i koliko se često pokreće.",
+    "scheduledP": "U administraciji: Automatsko učitavanje → Planirani uvozi → Dodaj planirani uvoz. Odaberite izvor i koliko se često pokreće.",
     "scheduled": [
       {
         "k": "Web adresa (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Skripta koja vaš portal postavlja na Google Cloud Run. Potrebni su vam Google Cloud račun i alat gcloud.",
     "phpP": "Za web hosting koji možda već imate, s PHP-om i bazom podataka. Nisu potrebne naredbe:",
     "phpSteps": [
-      "Preuzmite obx-node-php.zip iz najnovijeg izdanja.",
+      "Preuzmite obx-portal-php-<version>.zip iz najnovijeg izdanja.",
       "Raspakirajte ga i mapu prenesite na hosting putem (S)FTP-a.",
       "Usmjerite svoju (pod)domenu, na primjer trgovci.vasamarka.hr, na mapu public.",
-      "Otvorite tu adresu i slijedite čarobnjak za instalaciju."
+      "Omogućite pisanje u mape data i config (dopuštenja 775; ako instalacija i dalje javlja da nije moguće, 777).",
+      "Otvorite tu adresu. Instalacija provjerava poslužitelj i traži instalacijski kod iz datoteke data/SETUP-CODE.txt, koju otvarate FTP programom. Zatim kliknite „Otvori čarobnjak za postavljanje“.",
+      "Cron adresu koju prikazuje instalacija dodajte kao cron zadatak u upravljačkoj ploči hostinga, svakih 5 minuta. I bez nje portal radi."
     ],
     "phpDownload": "Preuzmi najnovije izdanje",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Nakon instalacije: prvo pokretanje",
     "first": [
       "Otvorite adresu svog portala u pregledniku.",
-      "Unesite jednokratni instalacijski kod. Nalazi se u zapisniku pri prvom pokretanju ili ga unaprijed postavite s OBX_SETUP_CODE.",
+      "Unesite jednokratni instalacijski kod. Nalazi se u zapisniku pri prvom pokretanju (Portal za web hosting: u data/SETUP-CODE.txt, a instalacija ga ispunjava umjesto vas) ili ga unaprijed postavite s OBX_SETUP_CODE.",
       "Unesite svoju tvrtku i prvu marku te odaberite vlastitu lozinku. Zadane lozinke nikad nema."
     ],
     "firstWhy": "Instalacijski kod osigurava da nitko drugi ne može preuzeti tek instalirani portal.",

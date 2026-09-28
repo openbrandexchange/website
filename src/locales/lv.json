@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (saīsināts)",
     "namesLabel": "Fotoattēlu failu nosaukumi",
     "keyTitle": "Kas jums vajadzīgs",
-    "keyP": "Pārvaldībā atveriet Automātiska augšupielāde un izveidojiet jaunu atslēgu. Jums būs divas vērtības: portāla adrese (OBX_URL) un pati atslēga (OBX_TOKEN). Atslēga tiek parādīta tikai vienreiz.",
+    "keyP": "Pārvaldībā atveriet Automātiska augšupielāde → Piekļuves atslēgas un izveidojiet jaunu atslēgu. Jums būs divas vērtības: portāla adrese (OBX_URL) un pati atslēga (OBX_TOKEN). Atslēga tiek parādīta tikai vienreiz.",
     "keyTip": "Katrai sistēmai dodiet savu atslēgu. Tā varat atsaukt vienu, nesabojājot pārējās.",
     "scheduledTitle": "1. Plānots imports (bez koda)",
-    "scheduledP": "Pārvaldībā: Importi → Plānotie importi → Pievienot. Izvēlieties avotu un biežumu.",
+    "scheduledP": "Pārvaldībā: Automātiska augšupielāde → Plānotie importi → Pievienot plānotu importu. Izvēlieties avotu un biežumu.",
     "scheduled": [
       {
         "k": "Tīmekļa adrese (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Skripts, kas izvieto jūsu portālu Google Cloud Run. Jums vajadzīgs Google Cloud konts un rīks gcloud.",
     "phpP": "Tīmekļa mitināšanai, kas jums, iespējams, jau ir, ar PHP un datubāzi. Komandas nav vajadzīgas:",
     "phpSteps": [
-      "Lejupielādējiet obx-node-php.zip no jaunākā laidiena.",
+      "Lejupielādējiet obx-portal-php-<version>.zip no jaunākā laidiena.",
       "Atarhivējiet to un augšupielādējiet mapi mitināšanā ar (S)FTP.",
       "Novirziet savu (apakš)domēnu, piemēram, tirgotaji.jusuzimols.lv, uz mapi public.",
-      "Atveriet šo adresi un izpildiet instalēšanas vedni."
+      "Padariet mapes data un config rakstāmas (atļaujas 775; ja instalētājs joprojām saka, ka nav, 777).",
+      "Atveriet šo adresi. Instalētājs pārbauda serveri un prasa instalēšanas kodu no faila data/SETUP-CODE.txt, ko atverat ar FTP programmu. Pēc tam noklikšķiniet uz „Atvērt iestatīšanas vedni“.",
+      "Instalētāja parādīto cron adresi pievienojiet kā cron uzdevumu hostinga vadības panelī, ik pēc 5 minūtēm. Portāls darbojas arī bez tā."
     ],
     "phpDownload": "Lejupielādēt jaunāko laidienu",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Pēc instalēšanas: pirmā palaišana",
     "first": [
       "Atveriet sava portāla adresi pārlūkā.",
-      "Ievadiet vienreizējo iestatīšanas kodu. Tas ir žurnālā pirmajā palaišanas reizē, vai arī iestatāt to iepriekš ar OBX_SETUP_CODE.",
+      "Ievadiet vienreizējo instalēšanas kodu. Tas ir žurnālā pirmajā palaišanas reizē (Portāls tīmekļa mitināšanai: failā data/SETUP-CODE.txt, un instalētājs to aizpilda jūsu vietā), vai arī iestatāt to iepriekš ar OBX_SETUP_CODE.",
       "Ievadiet savu uzņēmumu un pirmo zīmolu un izvēlieties savu paroli. Noklusējuma paroles nekad nav."
     ],
     "firstWhy": "Iestatīšanas kods nodrošina, ka neviens cits nevar pārņemt tikko instalētu portālu.",

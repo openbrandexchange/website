@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (abbreviato)",
     "namesLabel": "Nomi dei file delle foto",
     "keyTitle": "Cosa ti serve",
-    "keyP": "Nella tua amministrazione, apri Caricamento automatico e crea una nuova chiave. Avrai due valori: l'indirizzo del tuo portale (OBX_URL) e la chiave stessa (OBX_TOKEN). La chiave viene mostrata una sola volta.",
+    "keyP": "Nella tua amministrazione, apri Caricamento automatico → Chiavi di accesso e crea una nuova chiave. Avrai due valori: l'indirizzo del tuo portale (OBX_URL) e la chiave stessa (OBX_TOKEN). La chiave viene mostrata una sola volta.",
     "keyTip": "Dai a ogni sistema la sua chiave. Così puoi revocarne una senza bloccare le altre.",
     "scheduledTitle": "1. Import pianificato (senza codice)",
-    "scheduledP": "Nella tua amministrazione: Import → Import pianificati → Aggiungi. Scegli la sorgente e ogni quanto deve girare.",
+    "scheduledP": "Nella tua amministrazione: Caricamento automatico → Importazioni pianificate → Aggiungi importazione pianificata. Scegli la sorgente e ogni quanto deve girare.",
     "scheduled": [
       {
         "k": "Indirizzo web (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Uno script che mette il tuo portale su Google Cloud Run. Servono un account Google Cloud e lo strumento gcloud.",
     "phpP": "Per il pacchetto di web hosting che forse hai già, con PHP e un database. Nessun comando necessario:",
     "phpSteps": [
-      "Scarica obx-node-php.zip dall'ultima release.",
+      "Scarica obx-portal-php-<version>.zip dall'ultima release.",
       "Estrailo e carica la cartella sul tuo hosting via (S)FTP.",
       "Punta il tuo (sotto)dominio, per esempio rivenditori.tuobrand.it, sulla cartella public.",
-      "Apri quell'indirizzo e segui la procedura guidata."
+      "Rendi scrivibili le cartelle data e config (permessi 775; se l'installer dice ancora che non lo sono, 777).",
+      "Apri quell'indirizzo. L'installer controlla il server e chiede il codice di installazione dal file data/SETUP-CODE.txt, che apri con il tuo programma FTP. Poi fai clic su “Apri la procedura guidata”.",
+      "Aggiungi l'indirizzo cron mostrato dall'installer come cron job nel pannello del tuo hosting, ogni 5 minuti. Anche senza, il portale funziona."
     ],
     "phpDownload": "Scarica l'ultima release",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Dopo l'installazione: il primo avvio",
     "first": [
       "Apri l'indirizzo del tuo portale nel browser.",
-      "Inserisci il codice di configurazione monouso. Lo trovi nel log al primo avvio, oppure lo imposti in anticipo con OBX_SETUP_CODE.",
+      "Inserisci il codice di installazione monouso. Lo trovi nel log al primo avvio (Portale per web hosting: in data/SETUP-CODE.txt, e l'installer lo compila per te), oppure lo imposti in anticipo con OBX_SETUP_CODE.",
       "Inserisci la tua azienda e il tuo primo brand e scegli la tua password. Non esiste mai una password predefinita."
     ],
     "firstWhy": "Il codice di configurazione garantisce che nessun altro possa appropriarsi di un portale appena installato.",

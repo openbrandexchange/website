@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (skrócony)",
     "namesLabel": "Nazwy plików zdjęć",
     "keyTitle": "Czego potrzebujesz",
-    "keyP": "W panelu administracyjnym otwórz Automatyczne przesyłanie i utwórz nowy klucz. Masz wtedy dwie wartości: adres portalu (OBX_URL) i sam klucz (OBX_TOKEN). Klucz jest pokazywany tylko raz.",
+    "keyP": "W panelu administracyjnym otwórz Automatyczne przesyłanie → Klucze dostępu i utwórz nowy klucz. Masz wtedy dwie wartości: adres portalu (OBX_URL) i sam klucz (OBX_TOKEN). Klucz jest pokazywany tylko raz.",
     "keyTip": "Daj każdemu systemowi osobny klucz. Wtedy możesz unieważnić jeden, nie psując pozostałych.",
     "scheduledTitle": "1. Zaplanowany import (bez kodu)",
-    "scheduledP": "W panelu: Importy → Zaplanowane importy → Dodaj. Wybierz źródło i częstotliwość.",
+    "scheduledP": "W panelu: Automatyczne przesyłanie → Zaplanowane importy → Dodaj zaplanowany import. Wybierz źródło i częstotliwość.",
     "scheduled": [
       {
         "k": "Adres WWW (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Skrypt, który uruchamia Twój portal w Google Cloud Run. Potrzebujesz konta Google Cloud i narzędzia gcloud.",
     "phpP": "Na hosting WWW, który być może już masz, z PHP i bazą danych. Bez żadnych poleceń:",
     "phpSteps": [
-      "Pobierz obx-node-php.zip z najnowszego wydania.",
+      "Pobierz obx-portal-php-<version>.zip z najnowszego wydania.",
       "Rozpakuj go i prześlij folder na hosting przez (S)FTP.",
       "Skieruj swoją (sub)domenę, na przykład sprzedawcy.twojamarka.pl, na folder public.",
-      "Otwórz ten adres i postępuj zgodnie z kreatorem instalacji."
+      "Umożliw zapis w folderach data i config (uprawnienia 775; jeśli instalator nadal zgłasza brak zapisu, 777).",
+      "Otwórz ten adres. Instalator sprawdza serwer i prosi o kod instalacyjny z pliku data/SETUP-CODE.txt, który otwierasz programem FTP. Następnie kliknij „Otwórz kreator konfiguracji“.",
+      "Adres cron pokazany przez instalator dodaj jako zadanie cron w panelu hostingu, co 5 minut. Portal działa także bez niego."
     ],
     "phpDownload": "Pobierz najnowsze wydanie",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Po instalacji: pierwsze uruchomienie",
     "first": [
       "Otwórz adres swojego portalu w przeglądarce.",
-      "Wpisz jednorazowy kod konfiguracji. Znajdziesz go w logu przy pierwszym uruchomieniu albo ustawisz z góry przez OBX_SETUP_CODE.",
+      "Wpisz jednorazowy kod instalacyjny. Znajdziesz go w logu przy pierwszym uruchomieniu (Portal na hosting WWW: w data/SETUP-CODE.txt, a instalator wpisuje go za Ciebie) albo ustawisz z góry przez OBX_SETUP_CODE.",
       "Podaj swoją firmę i pierwszą markę i wybierz własne hasło. Nigdy nie ma hasła domyślnego."
     ],
     "firstWhy": "Kod konfiguracji sprawia, że nikt inny nie przejmie świeżo zainstalowanego portalu.",

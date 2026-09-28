@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (shortened)",
     "namesLabel": "Photo file names",
     "keyTitle": "What you need",
-    "keyP": "In your admin, go to Automatic upload and create a new key. You then have two values: the address of your portal (OBX_URL) and the key itself (OBX_TOKEN). The key is shown only once.",
+    "keyP": "In your admin, go to Automatic upload → Access keys and create a new key. You then have two values: the address of your portal (OBX_URL) and the key itself (OBX_TOKEN). The key is shown only once.",
     "keyTip": "Give every system its own key. Then you can revoke one without breaking the others.",
     "scheduledTitle": "1. Scheduled import (no code)",
-    "scheduledP": "In your admin: Imports → Scheduled imports → Add. Choose the source and how often it runs.",
+    "scheduledP": "In your admin: Automatic upload → Scheduled imports → Add scheduled import. Choose the source and how often it runs.",
     "scheduled": [
       {
         "k": "Web address (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "A script that puts your portal on Google Cloud Run. You need a Google Cloud account and the gcloud tool.",
     "phpP": "For the web hosting package you may already have, with PHP and a database. No commands needed:",
     "phpSteps": [
-      "Download obx-node-php.zip from the latest release.",
+      "Download obx-portal-php-<version>.zip from the latest release.",
       "Unzip it and upload the folder to your hosting with (S)FTP.",
       "Point your (sub)domain, for example brands.yourbrand.com, at the folder called public.",
-      "Open that address and follow the setup wizard."
+      "Make the folders data and config writable (permissions 775; if the installer still says they are not, 777).",
+      "Open that address. The installer checks your server and asks for the setup code from the file data/SETUP-CODE.txt, which you open with your FTP program. Then click “Open the setup wizard”.",
+      "Add the cron address the installer shows as a cron job in your hosting control panel, every 5 minutes. Without it the portal still works."
     ],
     "phpDownload": "Download the latest release",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "After installing: the first start",
     "first": [
       "Open the address of your portal in your browser.",
-      "Enter the one-time setup code. It is in the log on the first start, or you set it in advance with OBX_SETUP_CODE.",
+      "Enter the one-time setup code. It is in the log on the first start (Portal for web hosting: in data/SETUP-CODE.txt, and the installer fills it in for you), or you set it in advance with OBX_SETUP_CODE.",
       "Fill in your company and your first brand, and choose your own password. There is never a default password."
     ],
     "firstWhy": "The setup code makes sure nobody else can claim a freshly installed portal.",

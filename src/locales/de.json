@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (gekürzt)",
     "namesLabel": "Dateinamen der Fotos",
     "keyTitle": "Was Sie brauchen",
-    "keyP": "Öffnen Sie in Ihrer Verwaltung „Automatischer Upload“ und erstellen Sie einen neuen Schlüssel. Dann haben Sie zwei Werte: die Adresse Ihres Portals (OBX_URL) und den Schlüssel selbst (OBX_TOKEN). Der Schlüssel wird nur einmal angezeigt.",
+    "keyP": "Öffnen Sie in Ihrer Verwaltung „Automatischer Upload → Zugangsschlüssel“ und erstellen Sie einen neuen Schlüssel. Dann haben Sie zwei Werte: die Adresse Ihres Portals (OBX_URL) und den Schlüssel selbst (OBX_TOKEN). Der Schlüssel wird nur einmal angezeigt.",
     "keyTip": "Geben Sie jedem System einen eigenen Schlüssel. Dann können Sie einen widerrufen, ohne die anderen zu stören.",
     "scheduledTitle": "1. Geplanter Import (ohne Code)",
-    "scheduledP": "In Ihrer Verwaltung: Importe → Geplante Importe → Hinzufügen. Wählen Sie die Quelle und wie oft er laufen soll.",
+    "scheduledP": "In Ihrer Verwaltung: Automatischer Upload → Geplante Importe → Geplanten Import hinzufügen. Wählen Sie die Quelle und wie oft er laufen soll.",
     "scheduled": [
       {
         "k": "Webadresse (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Ein Skript, das Ihr Portal auf Google Cloud Run bringt. Sie brauchen ein Google-Cloud-Konto und das gcloud-Tool.",
     "phpP": "Für das Webhosting-Paket, das Sie vielleicht schon haben, mit PHP und einer Datenbank. Keine Befehle nötig:",
     "phpSteps": [
-      "Laden Sie obx-node-php.zip aus dem neuesten Release herunter.",
+      "Laden Sie obx-portal-php-<version>.zip aus dem neuesten Release herunter.",
       "Entpacken Sie es und laden Sie den Ordner per (S)FTP auf Ihr Hosting.",
       "Richten Sie Ihre (Sub-)Domain, zum Beispiel haendler.ihremarke.de, auf den Ordner public aus.",
-      "Öffnen Sie diese Adresse und folgen Sie dem Einrichtungsassistenten."
+      "Machen Sie die Ordner data und config beschreibbar (Rechte 775; meldet der Installer weiterhin, dass sie es nicht sind, 777).",
+      "Öffnen Sie diese Adresse. Der Installer prüft Ihren Server und fragt nach dem Einrichtungscode aus der Datei data/SETUP-CODE.txt, die Sie mit Ihrem FTP-Programm öffnen. Klicken Sie danach auf „Einrichtungsassistent öffnen“.",
+      "Tragen Sie die Cron-Adresse, die der Installer anzeigt, als Cronjob in der Verwaltung Ihres Hostings ein, alle 5 Minuten. Auch ohne funktioniert das Portal."
     ],
     "phpDownload": "Neuestes Release herunterladen",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Nach der Installation: der erste Start",
     "first": [
       "Öffnen Sie die Adresse Ihres Portals im Browser.",
-      "Geben Sie den einmaligen Einrichtungscode ein. Er steht beim ersten Start im Log, oder Sie legen ihn vorab mit OBX_SETUP_CODE fest.",
+      "Geben Sie den einmaligen Einrichtungscode ein. Er steht beim ersten Start im Log (Portal für Webhosting: in data/SETUP-CODE.txt, und der Installer trägt ihn für Sie ein), oder Sie legen ihn vorab mit OBX_SETUP_CODE fest.",
       "Geben Sie Ihr Unternehmen und Ihre erste Marke an und wählen Sie Ihr eigenes Passwort. Ein Standardpasswort gibt es nie."
     ],
     "firstWhy": "Der Einrichtungscode sorgt dafür, dass niemand sonst ein frisch installiertes Portal übernehmen kann.",

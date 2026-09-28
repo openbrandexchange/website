@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (imqassar)",
     "namesLabel": "Ismijiet tal-fajls tar-ritratti",
     "keyTitle": "X'għandek bżonn",
-    "keyP": "Fl-amministrazzjoni tiegħek, mur fuq Tlugħ awtomatiku u oħloq ċavetta ġdida. Imbagħad ikollok żewġ valuri: l-indirizz tal-portal tiegħek (OBX_URL) u ċ-ċavetta nnifisha (OBX_TOKEN). Iċ-ċavetta tintwera darba biss.",
+    "keyP": "Fl-amministrazzjoni tiegħek, mur fuq Tlugħ awtomatiku → Ċwievet tal-aċċess u oħloq ċavetta ġdida. Imbagħad ikollok żewġ valuri: l-indirizz tal-portal tiegħek (OBX_URL) u ċ-ċavetta nnifisha (OBX_TOKEN). Iċ-ċavetta tintwera darba biss.",
     "keyTip": "Agħti lil kull sistema ċ-ċavetta tagħha. Imbagħad tista' tirrevoka waħda mingħajr ma tkisser l-oħrajn.",
     "scheduledTitle": "1. Importazzjoni skedata (mingħajr kodiċi)",
-    "scheduledP": "Fl-amministrazzjoni tiegħek: Importazzjonijiet → Importazzjonijiet skedati → Żid. Agħżel is-sors u kemm-il darba jaħdem.",
+    "scheduledP": "Fl-amministrazzjoni tiegħek: Tlugħ awtomatiku → Importazzjonijiet skedati → Żid importazzjoni skedata. Agħżel is-sors u kemm-il darba jaħdem.",
     "scheduled": [
       {
         "k": "Indirizz web (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Script li jpoġġi l-portal tiegħek fuq Google Cloud Run. Għandek bżonn kont Google Cloud u l-għodda gcloud.",
     "phpP": "Għall-pakkett tal-web hosting li forsi diġà għandek, b'PHP u database. L-ebda kmand meħtieġ:",
     "phpSteps": [
-      "Niżżel obx-node-php.zip mill-aħħar ħarġa.",
+      "Niżżel obx-portal-php-<version>.zip mill-aħħar ħarġa.",
       "Iftħu u tella' l-folder fuq il-hosting tiegħek b'(S)FTP.",
       "Ipponta d-dominju jew is-sottodominju tiegħek, pereżempju retailers.yourbrand.mt, lejn il-folder public.",
-      "Iftaħ dak l-indirizz u segwi l-wizard tal-installazzjoni."
+      "Agħmel il-folders data u config jistgħu jinkitbu (permessi 775; jekk l-installatur għadu jgħid li ma jistgħux, 777).",
+      "Iftaħ dak l-indirizz. L-installatur jiċċekkja s-server u jitlob il-kodiċi tal-installazzjoni mill-fajl data/SETUP-CODE.txt, li tiftaħ bil-programm FTP tiegħek. Imbagħad ikklikkja “Iftaħ il-wizard tas-setup”.",
+      "Żid l-indirizz cron li juri l-installatur bħala cron job fil-pannell tal-kontroll tal-hosting tiegħek, kull 5 minuti. Anki mingħajru l-portal jaħdem."
     ],
     "phpDownload": "Niżżel l-aħħar ħarġa",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Wara l-installazzjoni: l-ewwel bidu",
     "first": [
       "Iftaħ l-indirizz tal-portal tiegħek fil-browser.",
-      "Daħħal il-kodiċi tas-setup ta' darba. Jinsab fil-log fl-ewwel bidu, jew issettjah minn qabel b'OBX_SETUP_CODE.",
+      "Daħħal il-kodiċi tal-installazzjoni ta' darba. Jinsab fil-log fl-ewwel bidu (Portal għal web hosting: f'data/SETUP-CODE.txt, u l-installatur jimlieh għalik), jew issettjah minn qabel b'OBX_SETUP_CODE.",
       "Imla l-kumpanija u l-ewwel marka tiegħek, u agħżel il-password tiegħek. Qatt ma jkun hemm password awtomatika."
     ],
     "firstWhy": "Il-kodiċi tas-setup jiżgura li ħadd ieħor ma jista' jieħu portal li għadu kif ġie installat.",

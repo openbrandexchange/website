@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (abreviado)",
     "namesLabel": "Nombres de archivo de las fotos",
     "keyTitle": "Lo que necesitas",
-    "keyP": "En tu administración, ve a Subida automática y crea una clave nueva. Tendrás dos valores: la dirección de tu portal (OBX_URL) y la propia clave (OBX_TOKEN). La clave solo se muestra una vez.",
+    "keyP": "En tu administración, ve a Subida automática → Claves de acceso y crea una clave nueva. Tendrás dos valores: la dirección de tu portal (OBX_URL) y la propia clave (OBX_TOKEN). La clave solo se muestra una vez.",
     "keyTip": "Da a cada sistema su propia clave. Así puedes revocar una sin romper las demás.",
     "scheduledTitle": "1. Importación programada (sin código)",
-    "scheduledP": "En tu administración: Importaciones → Importaciones programadas → Añadir. Elige el origen y la frecuencia.",
+    "scheduledP": "En tu administración: Subida automática → Importaciones programadas → Añadir importación programada. Elige el origen y la frecuencia.",
     "scheduled": [
       {
         "k": "Dirección web (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Un script que pone tu portal en Google Cloud Run. Necesitas una cuenta de Google Cloud y la herramienta gcloud.",
     "phpP": "Para el alojamiento web que quizá ya tienes, con PHP y una base de datos. Sin comandos:",
     "phpSteps": [
-      "Descarga obx-node-php.zip de la última versión.",
+      "Descarga obx-portal-php-<version>.zip de la última versión.",
       "Descomprímelo y sube la carpeta a tu alojamiento por (S)FTP.",
       "Apunta tu (sub)dominio, por ejemplo distribuidores.tumarca.es, a la carpeta public.",
-      "Abre esa dirección y sigue el asistente de instalación."
+      "Permite la escritura en las carpetas data y config (permisos 775; si el instalador sigue diciendo que no se puede, 777).",
+      "Abre esa dirección. El instalador comprueba tu servidor y pide el código de instalación del archivo data/SETUP-CODE.txt, que abres con tu programa FTP. Después haz clic en “Abrir el asistente de configuración”.",
+      "Añade la dirección cron que muestra el instalador como tarea cron en el panel de tu alojamiento, cada 5 minutos. Sin ella el portal también funciona."
     ],
     "phpDownload": "Descargar la última versión",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Tras la instalación: el primer arranque",
     "first": [
       "Abre la dirección de tu portal en el navegador.",
-      "Introduce el código de instalación de un solo uso. Aparece en el registro en el primer arranque, o lo defines de antemano con OBX_SETUP_CODE.",
+      "Introduce el código de instalación de un solo uso. Aparece en el registro en el primer arranque (Portal para alojamiento web: en data/SETUP-CODE.txt, y el instalador lo rellena por ti), o lo defines de antemano con OBX_SETUP_CODE.",
       "Rellena tu empresa y tu primera marca y elige tu propia contraseña. Nunca hay una contraseña por defecto."
     ],
     "firstWhy": "El código de instalación garantiza que nadie más pueda apropiarse de un portal recién instalado.",

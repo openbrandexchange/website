@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (rövidítve)",
     "namesLabel": "A fotók fájlnevei",
     "keyTitle": "Amire szüksége van",
-    "keyP": "Az adminisztrációban nyissa meg az Automatikus feltöltést, és hozzon létre új kulcsot. Két értéket kap: a portál címét (OBX_URL) és magát a kulcsot (OBX_TOKEN). A kulcs csak egyszer jelenik meg.",
+    "keyP": "Az adminisztrációban nyissa meg az Automatikus feltöltés → Hozzáférési kulcsokt, és hozzon létre új kulcsot. Két értéket kap: a portál címét (OBX_URL) és magát a kulcsot (OBX_TOKEN). A kulcs csak egyszer jelenik meg.",
     "keyTip": "Minden rendszer kapjon saját kulcsot. Így egyet visszavonhat anélkül, hogy a többit elrontaná.",
     "scheduledTitle": "1. Ütemezett import (kód nélkül)",
-    "scheduledP": "Az adminisztrációban: Importok → Ütemezett importok → Hozzáadás. Válassza ki a forrást és a gyakoriságot.",
+    "scheduledP": "Az adminisztrációban: Automatikus feltöltés → Ütemezett importálások → Ütemezett importálás hozzáadása. Válassza ki a forrást és a gyakoriságot.",
     "scheduled": [
       {
         "k": "Webcím (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Egy szkript, amely a portált a Google Cloud Runra telepíti. Google Cloud-fiókra és a gcloud eszközre van szüksége.",
     "phpP": "Ahhoz a webtárhelyhez, amely talán már megvan, PHP-val és adatbázissal. Nincs szükség parancsokra:",
     "phpSteps": [
-      "Töltse le az obx-node-php.zip fájlt a legújabb kiadásból.",
+      "Töltse le az obx-portal-php-<version>.zip fájlt a legújabb kiadásból.",
       "Csomagolja ki, és töltse fel a mappát (S)FTP-n a tárhelyére.",
       "Irányítsa (al)domainjét, például viszontelado.markaja.hu, a public mappára.",
-      "Nyissa meg a címet, és kövesse a telepítővarázslót."
+      "Tegye írhatóvá a data és a config mappát (jogosultság 775; ha a telepítő továbbra is nem írhatót jelez, 777).",
+      "Nyissa meg a címet. A telepítő ellenőrzi a szervert, és elkéri a telepítési kódot a data/SETUP-CODE.txt fájlból, amelyet FTP-programmal nyit meg. Ezután kattintson erre: „A beállítási varázsló megnyitása“.",
+      "A telepítő által mutatott cron-címet vegye fel cron-feladatként a tárhely vezérlőpultján, 5 percenként. Enélkül is működik a portál."
     ],
     "phpDownload": "A legújabb kiadás letöltése",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Telepítés után: az első indítás",
     "first": [
       "Nyissa meg a portál címét a böngészőben.",
-      "Adja meg az egyszer használatos telepítési kódot. Az első indításkor a naplóban találja, vagy előre beállíthatja az OBX_SETUP_CODE értékkel.",
+      "Adja meg az egyszer használatos telepítési kódot. Az első indításkor a naplóban találja (Portál webtárhelyre: a data/SETUP-CODE.txt fájlban, és a telepítő kitölti Ön helyett), vagy előre beállíthatja az OBX_SETUP_CODE értékkel.",
       "Adja meg cégét és első márkáját, és válasszon saját jelszót. Alapértelmezett jelszó soha nincs."
     ],
     "firstWhy": "A telepítési kód biztosítja, hogy senki más ne vehesse át a frissen telepített portált.",

@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (skrajšano)",
     "namesLabel": "Imena datotek fotografij",
     "keyTitle": "Kaj potrebujete",
-    "keyP": "V skrbništvu odprite Samodejno nalaganje in ustvarite nov ključ. Dobite dve vrednosti: naslov portala (OBX_URL) in sam ključ (OBX_TOKEN). Ključ se prikaže samo enkrat.",
+    "keyP": "V skrbništvu odprite Samodejno nalaganje → Dostopni ključi in ustvarite nov ključ. Dobite dve vrednosti: naslov portala (OBX_URL) in sam ključ (OBX_TOKEN). Ključ se prikaže samo enkrat.",
     "keyTip": "Vsakemu sistemu dajte svoj ključ. Tako lahko enega prekličete, ne da bi pokvarili ostale.",
     "scheduledTitle": "1. Načrtovani uvoz (brez kode)",
-    "scheduledP": "V skrbništvu: Uvozi → Načrtovani uvozi → Dodaj. Izberite vir in kako pogosto naj se izvaja.",
+    "scheduledP": "V skrbništvu: Samodejno nalaganje → Načrtovani uvozi → Dodaj načrtovani uvoz. Izberite vir in kako pogosto naj se izvaja.",
     "scheduled": [
       {
         "k": "Spletni naslov (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Skript, ki vaš portal postavi na Google Cloud Run. Potrebujete račun Google Cloud in orodje gcloud.",
     "phpP": "Za spletno gostovanje, ki ga morda že imate, s PHP in bazo podatkov. Brez ukazov:",
     "phpSteps": [
-      "Prenesite obx-node-php.zip iz najnovejše izdaje.",
+      "Prenesite obx-portal-php-<version>.zip iz najnovejše izdaje.",
       "Razširite ga in mapo prek (S)FTP naložite na gostovanje.",
       "Svojo (pod)domeno, na primer trgovci.vasaznamka.si, usmerite na mapo public.",
-      "Odprite ta naslov in sledite čarovniku za namestitev."
+      "Omogočite pisanje v mapi data in config (dovoljenja 775; če namestitveni program še vedno pravi, da ni mogoče, 777).",
+      "Odprite ta naslov. Namestitveni program preveri strežnik in vpraša za namestitveno kodo iz datoteke data/SETUP-CODE.txt, ki jo odprete s programom FTP. Nato kliknite „Odpri čarovnika za nastavitev“.",
+      "Naslov cron, ki ga pokaže namestitveni program, dodajte kot opravilo cron v nadzorni plošči gostovanja, vsakih 5 minut. Portal deluje tudi brez njega."
     ],
     "phpDownload": "Prenesi najnovejšo izdajo",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Po namestitvi: prvi zagon",
     "first": [
       "V brskalniku odprite naslov svojega portala.",
-      "Vnesite enkratno namestitveno kodo. Najdete jo v dnevniku ob prvem zagonu ali jo vnaprej nastavite z OBX_SETUP_CODE.",
+      "Vnesite enkratno namestitveno kodo. Najdete jo v dnevniku ob prvem zagonu (Portal za spletno gostovanje: v data/SETUP-CODE.txt, namestitveni program pa jo vpiše namesto vas) ali jo vnaprej nastavite z OBX_SETUP_CODE.",
       "Vnesite svoje podjetje in prvo znamko ter izberite lastno geslo. Privzetega gesla ni nikoli."
     ],
     "firstWhy": "Namestitvena koda zagotavlja, da nihče drug ne more prevzeti sveže nameščenega portala.",

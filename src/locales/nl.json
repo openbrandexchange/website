@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (ingekort)",
     "namesLabel": "Bestandsnamen van foto's",
     "keyTitle": "Wat je nodig hebt",
-    "keyP": "Ga in je beheeromgeving naar Automatisch uploaden en maak een nieuwe sleutel aan. Je hebt dan twee waarden: het adres van je portaal (OBX_URL) en de sleutel zelf (OBX_TOKEN). De sleutel wordt maar één keer getoond.",
+    "keyP": "Ga in je beheeromgeving naar Automatisch uploaden → Toegangssleutels en maak een nieuwe sleutel aan. Je hebt dan twee waarden: het adres van je portaal (OBX_URL) en de sleutel zelf (OBX_TOKEN). De sleutel wordt maar één keer getoond.",
     "keyTip": "Geef elk systeem een eigen sleutel. Dan kun je er één intrekken zonder de rest te breken.",
     "scheduledTitle": "1. Geplande import (zonder code)",
-    "scheduledP": "In je beheeromgeving: Imports → Geplande imports → Toevoegen. Kies de bron en hoe vaak hij moet draaien.",
+    "scheduledP": "In je beheeromgeving: Automatisch uploaden → Geplande imports → Geplande import toevoegen. Kies de bron en hoe vaak hij moet draaien.",
     "scheduled": [
       {
         "k": "Webadres (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Een script dat je portaal op Google Cloud Run zet. Je hebt een Google Cloud-account en de gcloud-tool nodig.",
     "phpP": "Voor het webhostingpakket dat je misschien al hebt, met PHP en een database. Geen commando's nodig:",
     "phpSteps": [
-      "Download obx-node-php.zip bij de nieuwste release.",
+      "Download obx-portal-php-<version>.zip bij de nieuwste release.",
       "Pak het uit en upload de map met (S)FTP naar je hosting.",
       "Laat je (sub)domein, bijvoorbeeld beeldbank.jouwmerk.nl, naar de map public wijzen.",
-      "Open dat adres en volg de installatiewizard."
+      "Maak de mappen data en config schrijfbaar (rechten 775; zegt de installatie dat ze het nog niet zijn, dan 777).",
+      "Open dat adres. De installatie controleert je server en vraagt om de installatiecode uit het bestand data/SETUP-CODE.txt, dat je met je FTP-programma opent. Klik daarna op “Open de installatiewizard”.",
+      "Zet het cron-adres dat de installatie toont als cronjob in het beheerpaneel van je hosting, elke 5 minuten. Zonder werkt het portaal ook."
     ],
     "phpDownload": "Download de nieuwste release",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Na het installeren: de eerste start",
     "first": [
       "Open het adres van je portaal in je browser.",
-      "Vul de eenmalige setupcode in. Die staat in het log bij de eerste start, of je stelt hem vooraf in met OBX_SETUP_CODE.",
+      "Vul de eenmalige installatiecode in. Die staat in het log bij de eerste start (Portaal voor webhosting: in data/SETUP-CODE.txt, en de installatie vult hem voor je in), of je stelt hem vooraf in met OBX_SETUP_CODE.",
       "Vul je bedrijf en je eerste merk in en kies je eigen wachtwoord. Er is nooit een standaardwachtwoord."
     ],
     "firstWhy": "De setupcode zorgt ervoor dat niemand anders een net geïnstalleerd portaal kan claimen.",

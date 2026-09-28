@@ -275,10 +275,10 @@
     "csvLabel": "products.csv (abrégé)",
     "namesLabel": "Noms des fichiers photo",
     "keyTitle": "Ce qu'il vous faut",
-    "keyP": "Dans votre administration, ouvrez Envoi automatique et créez une nouvelle clé. Vous avez alors deux valeurs : l'adresse de votre portail (OBX_URL) et la clé elle-même (OBX_TOKEN). La clé n'est affichée qu'une seule fois.",
+    "keyP": "Dans votre administration, ouvrez Envoi automatique → Clés d'accès et créez une nouvelle clé. Vous avez alors deux valeurs : l'adresse de votre portail (OBX_URL) et la clé elle-même (OBX_TOKEN). La clé n'est affichée qu'une seule fois.",
     "keyTip": "Donnez à chaque système sa propre clé. Vous pourrez ainsi en révoquer une sans casser les autres.",
     "scheduledTitle": "1. Import planifié (sans code)",
-    "scheduledP": "Dans votre administration : Imports → Imports planifiés → Ajouter. Choisissez la source et la fréquence.",
+    "scheduledP": "Dans votre administration : Envoi automatique → Imports planifiés → Ajouter un import planifié. Choisissez la source et la fréquence.",
     "scheduled": [
       {
         "k": "Adresse web (HTTPS)",
@@ -347,10 +347,12 @@
     "runP": "Un script qui installe votre portail sur Google Cloud Run. Il vous faut un compte Google Cloud et l'outil gcloud.",
     "phpP": "Pour l'hébergement web que vous avez peut-être déjà, avec PHP et une base de données. Aucune commande nécessaire :",
     "phpSteps": [
-      "Téléchargez obx-node-php.zip depuis la dernière version.",
+      "Téléchargez obx-portal-php-<version>.zip depuis la dernière version.",
       "Décompressez-le et envoyez le dossier sur votre hébergement par (S)FTP.",
       "Faites pointer votre (sous-)domaine, par exemple revendeurs.votremarque.fr, vers le dossier public.",
-      "Ouvrez cette adresse et suivez l'assistant d'installation."
+      "Rendez les dossiers data et config accessibles en écriture (droits 775 ; si l'installateur dit encore qu'ils ne le sont pas, 777).",
+      "Ouvrez cette adresse. L'installateur vérifie votre serveur et demande le code d'installation du fichier data/SETUP-CODE.txt, que vous ouvrez avec votre logiciel FTP. Cliquez ensuite sur « Ouvrir l'assistant de configuration ».",
+      "Ajoutez l'adresse cron affichée par l'installateur comme tâche cron dans le panneau de votre hébergement, toutes les 5 minutes. Sans elle, le portail fonctionne aussi."
     ],
     "phpDownload": "Télécharger la dernière version",
     "p3Title": "3. Docker",
@@ -364,7 +366,7 @@
     "firstTitle": "Après l'installation : le premier démarrage",
     "first": [
       "Ouvrez l'adresse de votre portail dans votre navigateur.",
-      "Saisissez le code d'installation à usage unique. Il figure dans le journal au premier démarrage, ou vous le définissez à l'avance avec OBX_SETUP_CODE.",
+      "Saisissez le code d'installation à usage unique. Il figure dans le journal au premier démarrage (Portail pour hébergement web: dans data/SETUP-CODE.txt, et l'installateur le remplit pour vous), ou vous le définissez à l'avance avec OBX_SETUP_CODE.",
       "Renseignez votre entreprise et votre première marque, puis choisissez votre propre mot de passe. Il n'y a jamais de mot de passe par défaut."
     ],
     "firstWhy": "Le code d'installation garantit que personne d'autre ne peut s'approprier un portail fraîchement installé.",
