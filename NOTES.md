@@ -1,6 +1,6 @@
 # Notes and decisions
 
-Choices made where the brief or the spec left room, and the open points that are tracked here
+Choices made where the project requirements or the spec left room, and the open points that are tracked here
 instead of as TODOs in the code. Report changes to the spec repository if they matter there.
 
 ## Decisions
