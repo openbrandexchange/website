@@ -1,5 +1,8 @@
 ---
 import Code from '../components/Code.astro';
+import PageHero from '../components/PageHero.astro';
+import Screenshot from '../components/Screenshot.astro';
+import Icon from '../components/Icon.astro';
 import { format, messages, nativeNames, url, type Lang } from '../i18n';
 import { retailerCurl } from '../data/snippets';
 import { switchKit, switchKitPath } from '../lib/switch-kit';
@@ -14,64 +17,89 @@ const kits: { lang: Lang; label: string }[] = [{ lang, label: nativeNames[lang] 
 if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });
 ---
 
-<section class="hero">
-  <div class="wrap">
-    <h1>{c.h1}</h1>
-    <p class="lead">{c.lead}</p>
-  </div>
-</section>
+<PageHero eyebrow={t.nav.retailers} title={t.brochure.retailersH1} lead={c.lead}>
+  <Fragment slot="actions">
+    <a class="button primary lg" href={url(lang, 'directory')}>{c.findLink} <Icon name="arrow" class="arrow" /></a>
+    <a class="button secondary lg" href="#api">{c.apiTitle}</a>
+  </Fragment>
+  <Screenshot slot="visual" name="portal-article" lang={lang} alt={t.site.shots.portalArticle} sizes="(min-width: 1024px) 820px, calc(100vw - 32px)" eager />
+</PageHero>
 
-<section class="section" aria-labelledby="portal">
+<section class="band" aria-labelledby="portal">
   <div class="wrap">
-    <h2 id="portal">{c.portalTitle}</h2>
-    <p class="prose">{format(c.portalP, { portal: t.portalWord })}</p>
-    <div class="cards">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">{t.portalWord}</p>
+      <h2 id="portal">{c.portalTitle}</h2>
+      <p class="lead">{format(c.portalP, { portal: t.portalWord })}</p>
+    </header>
+    <ul class="features three" data-reveal="2">
       {
         c.portal.map((p) => (
-          <div class="card">
+          <li>
             <h3>{p.h}</h3>
             <p>{p.p}</p>
-          </div>
+          </li>
         ))
       }
+    </ul>
+    <div class="wide-shot" data-reveal>
+      <Screenshot name="portal-ean" lang={lang} alt={t.site.shots.portalEan} sizes="(min-width: 1304px) 1240px, calc(100vw - 32px)" />
     </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="api">
-  <div class="wrap prose">
-    <h2 id="api">{c.apiTitle}</h2>
-    <p>{c.apiP}</p>
-    <p class="muted">{c.apiDev}</p>
-    <Code code={retailerCurl} />
-
-    <h2 id="software">{c.toolsTitle}</h2>
-    <p>{c.toolsP} <a href={url(lang, 'developers')}>{c.toolsLink}</a>.</p>
-
-    <h2 id="find">{c.findTitle}</h2>
-    <p>{c.findP} <a href={url(lang, 'directory')}>{c.findLink}</a>.</p>
+<section class="band band-ink" aria-labelledby="api">
+  <div class="wrap split">
+    <div class="split-copy" data-reveal>
+      <p class="eyebrow">{t.site.pages.retailersSoftware}</p>
+      <h2 id="api">{c.apiTitle}</h2>
+      <p>{c.apiP}</p>
+      <p class="muted">{c.apiDev}</p>
+    </div>
+    <div class="split-visual" data-reveal="2">
+      <Code code={retailerCurl} />
+    </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="switch-kit">
-  <div class="wrap prose">
-    <h2 id="switch-kit">{c.kitTitle}</h2>
-    <p>{c.kitP}</p>
-    {
-      kits.map((k) => {
-        const kit = switchKit(k.lang);
-        return (
-          <div class="email-template" lang={k.lang}>
-            <Code label={k.label} code={kit.text} />
-            <p class="small">
-              <a href={switchKitPath(k.lang)} download>
-                {c.kitDownload} ({k.label})
-              </a>
-            </p>
-          </div>
-        );
-      })
-    }
-    <p class="muted">{c.kitMore} <a href={url(lang, 'downloads')}>{t.nav.downloads}</a>.</p>
+<section class="band" aria-label={`${c.toolsTitle}, ${c.findTitle}`}>
+  <div class="wrap">
+    <ul class="features">
+      <li>
+        <h2 id="software" class="card-title">{c.toolsTitle}</h2>
+        <p>{c.toolsP} <a href={url(lang, 'developers')}>{c.toolsLink}</a>.</p>
+      </li>
+      <li>
+        <h2 id="find" class="card-title">{c.findTitle}</h2>
+        <p>{c.findP} <a href={url(lang, 'directory')}>{c.findLink}</a>.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="band band-alt" aria-labelledby="switch-kit">
+  <div class="wrap split">
+    <div class="split-copy">
+      <h2 id="switch-kit">{c.kitTitle}</h2>
+      <p>{c.kitP}</p>
+      <p class="muted">{c.kitMore} <a href={url(lang, 'downloads')}>{t.nav.downloads}</a>.</p>
+    </div>
+    <div class="split-visual">
+      {
+        kits.map((k) => {
+          const kit = switchKit(k.lang);
+          return (
+            <div class="email-template" lang={k.lang}>
+              <Code label={k.label} code={kit.text} />
+              <p class="small">
+                <a href={switchKitPath(k.lang)} download>
+                  {c.kitDownload} ({k.label})
+                </a>
+              </p>
+            </div>
+          );
+        })
+      }
+    </div>
   </div>
 </section>

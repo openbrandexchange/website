@@ -5,13 +5,15 @@ import {
   messages,
   nativeNames,
   ogLocales,
-  repo,
   url,
   xDefaultLang,
   type Lang,
   type PageKey,
 } from '../i18n';
-import { HELLO_EMAIL, initiativeLine } from '../lib/org';
+import Logo from '../components/Logo.astro';
+import Icon from '../components/Icon.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
 
 interface Props {
   lang: Lang;
@@ -28,8 +30,8 @@ const canonical = site + url(lang, page);
 // Optional, cookieless Cloudflare Web Analytics. Off unless the token is set at build time.
 const analyticsToken = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
 
-const nav: PageKey[] = ['brands', 'automation', 'hosting', 'retailers', 'developers', 'directory'];
-const footer: PageKey[] = ['downloads', 'faq', 'governance', 'imprint', 'privacy', 'cookies'];
+const s = t.site;
+const nav: PageKey[] = ['brands', 'retailers', 'automation', 'hosting'];
 ---
 
 <!doctype html>
@@ -57,6 +59,7 @@ const footer: PageKey[] = ['downloads', 'faq', 'governance', 'imprint', 'privacy
     <meta name="twitter:card" content="summary_large_image" />
     {langs.filter((l) => l !== lang).map((l) => <meta property="og:locale:alternate" content={ogLocales[l]} />)}
     <meta name="color-scheme" content="light dark" />
+    <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap.xml" />
     <script src="/js/site.js" defer is:inline></script>
@@ -76,12 +79,10 @@ const footer: PageKey[] = ['downloads', 'faq', 'governance', 'imprint', 'privacy
     <header class="site-header">
       <div class="wrap header-row">
         <a class="logo" href={url(lang, 'home')} aria-label={t.common.home}>
-          <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
-            <rect x="2" y="2" width="28" height="28" rx="7" fill="var(--accent)"></rect>
-            <path d="M10 16h12M16 10v12" stroke="var(--on-accent)" stroke-width="3" stroke-linecap="round"></path>
-          </svg>
+          <Logo />
           <span>Open Brand Exchange</span>
         </a>
+        <span class="pill" title={t.common.draft}><span class="pill-short" aria-hidden="true">v0.1</span><span class="pill-long">{s.nav.preview}</span><span class="sr-only">. {t.common.draft}</span></span>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>{t.common.menu}</button>
         <nav id="site-nav" class="site-nav" aria-label={t.common.mainMenu}>
           <ul>
@@ -95,57 +96,40 @@ const footer: PageKey[] = ['downloads', 'faq', 'governance', 'imprint', 'privacy
               ))
             }
           </ul>
-          <details class="lang-switch">
-            <summary>
-              <span aria-hidden="true">{lang.toUpperCase()}</span>
-              <span class="lang-current">{nativeNames[lang]}</span>
-              <span class="sr-only">, {t.common.languageLabel}</span>
-            </summary>
-            <ul class="lang-list" aria-label={t.common.languageLabel}>
-              {
-                langs.map((l) => (
-                  <li>
-                    <a
-                      href={url(l, page)}
-                      hreflang={l}
-                      lang={l}
-                      data-lang-choice={l}
-                      aria-current={l === lang ? 'true' : undefined}
-                    >
-                      {nativeNames[l]}
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
-          </details>
+          <div class="nav-end">
+            <details class="lang-switch">
+              <summary>
+                <Icon name="globe" />
+                <span class="lang-code" aria-hidden="true">{lang.toUpperCase()}</span>
+                <span class="sr-only">{nativeNames[lang]}, {t.common.languageLabel}</span>
+              </summary>
+              <ul class="lang-list" aria-label={t.common.languageLabel}>
+                {
+                  langs.map((l) => (
+                    <li>
+                      <a
+                        href={url(l, page)}
+                        hreflang={l}
+                        lang={l}
+                        data-lang-choice={l}
+                        aria-current={l === lang ? 'true' : undefined}
+                      >
+                        {nativeNames[l]}
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </details>
+            <a class="button secondary" href={url(lang, 'developers')} aria-current={page === 'developers' ? 'page' : undefined}>{s.nav.docs}</a>
+            <a class="button primary" href={url(lang, 'brands')}>{s.nav.start}</a>
+          </div>
         </nav>
       </div>
-      <p class="draft-banner"><span class="wrap">{t.common.draft}</span></p>
     </header>
     <main id="main" tabindex="-1">
       <slot />
     </main>
-    <footer class="site-footer">
-      <div class="wrap footer-grid">
-        <div>
-          <p class="footer-name">Open Brand Exchange</p>
-          <p>{t.common.footerAbout}</p>
-          <p class="small footer-org">
-            <a href={url(lang, 'imprint')}>{initiativeLine(lang)}</a>
-          </p>
-          <p class="small">
-            {t.common.footerContact}: <a href={`mailto:${HELLO_EMAIL}`}>{HELLO_EMAIL}</a>
-          </p>
-        </div>
-        <nav aria-label={t.common.footerMore}>
-          <ul class="plain">
-            {footer.map((p) => <li><a href={url(lang, p)}>{t.nav[p as keyof typeof t.nav]}</a></li>)}
-            <li><a href={repo('')}>{t.common.footerSource}</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="wrap"><p class="muted small">{t.common.footerLicence}</p></div>
-    </footer>
+    <SiteFooter lang={lang} />
   </body>
 </html>

@@ -130,3 +130,19 @@ test('security headers are served on pages, and CORS only on the public director
   expect(dir.headers()['access-control-allow-origin']).toBe('*');
   expect((await dir.json()).entries.length).toBeGreaterThan(0);
 });
+
+test('the desktop header stays on one row in every language', async ({ page, isMobile }) => {
+  test.skip(isMobile, 'the full navigation only shows on wide screens');
+  test.setTimeout(120_000);
+  const wrapped: string[] = [];
+  for (const width of [1280, 1920]) {
+    await page.setViewportSize({ width, height: 800 });
+    for (const lang of langs) {
+      await page.goto(`/${lang}/`);
+      await page.evaluate(() => document.fonts.ready);
+      const height = await page.locator('.header-row').evaluate((el) => el.getBoundingClientRect().height);
+      if (height > 72) wrapped.push(`/${lang}/ at ${width}px (${Math.round(height)}px high)`);
+    }
+  }
+  expect(wrapped).toEqual([]);
+});

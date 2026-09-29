@@ -1,5 +1,9 @@
 ---
 import Code from '../components/Code.astro';
+import PageHero from '../components/PageHero.astro';
+import DocSection from '../components/DocSection.astro';
+import CodeWindow from '../components/CodeWindow.astro';
+import Icon from '../components/Icon.astro';
 import { messages, repo, specDoc, url, type Lang } from '../i18n';
 import * as s from '../data/snippets';
 
@@ -12,16 +16,22 @@ const c = t.automation;
 const rowIds = ['scheduled', 'watch', 'cron', 'github', 'http', 'api'];
 ---
 
-<section class="hero">
-  <div class="wrap">
-    <h1>{c.h1}</h1>
-    <p class="lead">{c.lead}</p>
+<PageHero eyebrow={t.nav.automation} title={t.site.home.pillars[2].h} lead={c.lead}>
+  <Fragment slot="actions">
+    <a class="button primary lg" href="#choose">{c.chooseTitle} <Icon name="arrow" class="arrow" /></a>
+    <a class="button secondary lg" href={repo('obx-go', '/releases/latest')}>{c.cliGet}</a>
+  </Fragment>
+  <div slot="visual" class="stack">
+    <CodeWindow code={s.pushTerminal} lang="shell" title="Terminal" />
+    <CodeWindow code={s.pushAction} lang="yaml" title="publish.yml" label="GitHub Action" />
   </div>
-</section>
+</PageHero>
 
-<section class="section" aria-labelledby="choose">
+<section class="band" aria-labelledby="choose">
   <div class="wrap">
-    <h2 id="choose">{c.chooseTitle}</h2>
+    <header class="section-head">
+      <h2 id="choose">{c.chooseTitle}</h2>
+    </header>
     <div class="table-scroll">
       <table>
         <thead>
@@ -42,73 +52,86 @@ const rowIds = ['scheduled', 'watch', 'cron', 'github', 'http', 'api'];
         </tbody>
       </table>
     </div>
-
-    <h2 id="format">{c.formatTitle}</h2>
-    <p class="prose">{c.formatP}</p>
-    <Code label={c.csvLabel} code={s.csvExample} />
-    <Code label={c.namesLabel} code={s.fileNames} />
-    <p><a href={specDoc('docs/import-format.md')}>{c.formatLink}</a></p>
-
-    <h2 id="key">{c.keyTitle}</h2>
-    <p class="prose">{c.keyP}</p>
-    <Code code={s.env} />
-    <p class="prose muted">{c.keyTip}</p>
   </div>
 </section>
 
-<section class="section">
-  <div class="wrap prose">
-    <h2 id="scheduled">{c.scheduledTitle}</h2>
-    <p>{c.scheduledP}</p>
-    <ul>
-      {
-        c.scheduled.map((row) => (
-          <li>
-            <strong>{row.k}</strong>: {row.v}
-          </li>
-        ))
-      }
-    </ul>
-    <p>{c.scheduledMode}</p>
+<section class="band band-alt">
+  <div class="wrap">
+    <DocSection id="format" title={c.formatTitle}>
+      <p>{c.formatP}</p>
+      <Code label={c.csvLabel} code={s.csvExample} />
+      <Code label={c.namesLabel} code={s.fileNames} />
+      <p><a href={specDoc('docs/import-format.md')}>{c.formatLink}</a></p>
+    </DocSection>
 
-    <h2 id="cli">{c.cliTitle}</h2>
-    <p>{c.cliP}</p>
-    <Code code={s.cliBasics} />
-    <p class="muted">{c.cliExit}</p>
-    <p><a href={repo('obx-go', '/releases/latest')}>{c.cliGet}</a> · <a href={repo('obx-go')}>obx-go</a></p>
+    <DocSection id="key" title={c.keyTitle}>
+      <p>{c.keyP}</p>
+      <Code code={s.env} />
+      <p class="muted">{c.keyTip}</p>
+    </DocSection>
+  </div>
+</section>
 
-    <h2 id="watch">{c.watchTitle}</h2>
-    <p>{c.watchP}</p>
-    <Code code={'obx watch /data/outbox'} />
-    <Code label="Docker" code={s.watchDocker} />
+<section class="band">
+  <div class="wrap">
+    <DocSection id="scheduled" title={c.scheduledTitle}>
+      <p>{c.scheduledP}</p>
+      <ul>
+        {
+          c.scheduled.map((row) => (
+            <li>
+              <strong>{row.k}</strong>: {row.v}
+            </li>
+          ))
+        }
+      </ul>
+      <p>{c.scheduledMode}</p>
+    </DocSection>
 
-    <h2 id="cron">{c.cronTitle}</h2>
-    <Code label={c.cronLinux} code={s.cron} />
-    <Code label={c.cronWindows} code={s.windowsTask} />
+    <DocSection id="cli" title={c.cliTitle}>
+      <p>{c.cliP}</p>
+      <Code code={s.cliBasics} />
+      <p class="muted">{c.cliExit}</p>
+      <p><a href={repo('obx-go', '/releases/latest')}>{c.cliGet}</a> · <a href={repo('obx-go')}>obx-go</a></p>
+    </DocSection>
 
-    <h2 id="github">{c.githubTitle}</h2>
-    <p>{c.githubP}</p>
-    <Code code={s.githubAction} />
+    <DocSection id="watch" title={c.watchTitle}>
+      <p>{c.watchP}</p>
+      <Code code={'obx watch /data/outbox'} />
+      <Code label="Docker" code={s.watchDocker} />
+    </DocSection>
 
-    <h2 id="http">{c.httpTitle}</h2>
-    <p>{c.httpP}</p>
-    <Code label={c.httpProduct} code={s.httpProduct} />
-    <Code label={c.httpVariant} code={s.httpVariant} />
-    <Code label={c.httpImage} code={s.httpImage} />
-    <p class="muted">{c.httpImageNote}</p>
-    <Code label={c.httpOffline} code={s.httpUnpublish} />
-    <p>{c.httpHooks}</p>
+    <DocSection id="cron" title={c.cronTitle}>
+      <Code label={c.cronLinux} code={s.cron} />
+      <Code label={c.cronWindows} code={s.windowsTask} />
+    </DocSection>
 
-    <h2 id="api">{c.apiTitle}</h2>
-    <p>{c.apiP}</p>
-    <Code label={c.apiBatch} code={s.curlBatch} />
-    <Code label={c.apiImport} code={s.curlImport} />
-    <p>
-      {c.apiMore}
-      <a href={specDoc('openapi/obx-ingest.yaml')}>{c.apiSpec}</a> ·
-      <a href={specDoc('docs/automation.md')}>{c.apiAuto}</a> ·
-      <a href={repo('obx-go')}>{c.apiSdk}</a> ·
-      <a href={url(lang, 'developers')}>{t.nav.developers}</a>
-    </p>
+    <DocSection id="github" title={c.githubTitle}>
+      <p>{c.githubP}</p>
+      <Code code={s.githubAction} />
+    </DocSection>
+
+    <DocSection id="http" title={c.httpTitle}>
+      <p>{c.httpP}</p>
+      <Code label={c.httpProduct} code={s.httpProduct} />
+      <Code label={c.httpVariant} code={s.httpVariant} />
+      <Code label={c.httpImage} code={s.httpImage} />
+      <p class="muted">{c.httpImageNote}</p>
+      <Code label={c.httpOffline} code={s.httpUnpublish} />
+      <p>{c.httpHooks}</p>
+    </DocSection>
+
+    <DocSection id="api" title={c.apiTitle}>
+      <p>{c.apiP}</p>
+      <Code label={c.apiBatch} code={s.curlBatch} />
+      <Code label={c.apiImport} code={s.curlImport} />
+      <p>
+        {c.apiMore}
+        <a href={specDoc('openapi/obx-ingest.yaml')}>{c.apiSpec}</a> ·
+        <a href={specDoc('docs/automation.md')}>{c.apiAuto}</a> ·
+        <a href={repo('obx-go')}>{c.apiSdk}</a> ·
+        <a href={url(lang, 'developers')}>{t.nav.developers}</a>
+      </p>
+    </DocSection>
   </div>
 </section>

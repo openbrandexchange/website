@@ -1,76 +1,219 @@
 ---
-import { messages, url, type Lang, type PageKey } from '../i18n';
+import Screenshot from '../components/Screenshot.astro';
+import CodeWindow from '../components/CodeWindow.astro';
+import Flow from '../components/Flow.astro';
+import Editions from '../components/Editions.astro';
+import CtaBand from '../components/CtaBand.astro';
+import Icon from '../components/Icon.astro';
+import { format, messages, repo, url, type Lang, type PageKey } from '../i18n';
+import { orgVars, HELLO_EMAIL, SECURITY_EMAIL } from '../lib/org';
+import { assetChange, discovery, discoveryResponse, heroChanges, pushAction, pushTerminal } from '../data/snippets';
 
 interface Props {
   lang: Lang;
 }
 const { lang } = Astro.props;
-const c = messages[lang].home;
-const stepPages: PageKey[] = ['hosting', 'automation', 'retailers'];
+const t = messages[lang];
+const h = t.site.home;
+const vars = { ...orgVars(lang), email: SECURITY_EMAIL, portal: t.portalWord };
+const pillarLinks = [url(lang, 'retailers'), '/reference/', url(lang, 'automation')];
+const devLinks = ['/reference/', repo('spec'), repo('obx-go'), '/errors/'];
+const faq = t.faq.items.slice(0, 4);
+// "Publish once. Every retailer gets it.": the second sentence in a softer tone, on its own line.
+const split = h.h1.search(/[.!?]\s/);
+const h1 = split > 0 ? [h.h1.slice(0, split + 1) + ' ', h.h1.slice(split + 2)] : [h.h1, ''];
+const pages: PageKey[] = ['brands', 'retailers'];
 ---
 
-<section class="hero">
-  <div class="wrap">
-    <p class="eyebrow">{c.eyebrow}</p>
-    <h1>{c.h1}</h1>
-    <p class="lead">{c.lead}</p>
-    <div class="actions">
-      <a class="button primary" href={url(lang, 'brands')}>{c.ctaBrands}</a>
-      <a class="button secondary" href={url(lang, 'retailers')}>{c.ctaRetailers}</a>
+<section class="band band-ink grid-bg home-hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{h.eyebrow}</p>
+      <h1 id="hero-title">{h1[0]}{h1[1] && <span class="h1-soft">{h1[1]}</span>}</h1>
+      <p class="lead">{h.lead}</p>
+      <div class="actions">
+        <a class="button primary lg" href={url(lang, 'brands')}>{t.site.nav.start} <Icon name="arrow" class="arrow" /></a>
+        <a class="button secondary lg" href={url(lang, 'retailers')}>{h.ctaRetailer}</a>
+      </div>
+      <dl class="proof" aria-label={h.proofLabel}>
+        {
+          h.proof.map((p) => (
+            <div>
+              <dt>{p.v}</dt>
+              <dd>{p.l}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+    <div class="hero-product">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <Screenshot name="portal-catalog" lang={lang} alt={t.site.shots.portalCatalog} sizes="(min-width: 1024px) 860px, calc(100vw - 32px)" eager />
+      <CodeWindow class="hero-code" code={heroChanges} lang="json" title="GET /obx/v1/changes" label={h.codeCaption} />
     </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="how">
+<section class="band" aria-labelledby="flow-title">
   <div class="wrap">
-    <h2 id="how">{c.howTitle}</h2>
-    <ol class="steps">
-      {
-        c.steps.map((s, i) => (
-          <li>
-            <h3>{s.h}</h3>
-            <p>{s.p}</p>
-            <p>
-              <a href={url(lang, stepPages[i])}>{s.link}</a>
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">{h.flowEyebrow}</p>
+      <h2 id="flow-title">{h.flowTitle}</h2>
+      <p class="lead">{h.flowLead}</p>
+    </header>
+    <div data-reveal="2"><Flow lang={lang} /></div>
+  </div>
+</section>
+
+<section class="band band-alt" aria-label={h.pillars.map((p) => p.eyebrow).join(', ')}>
+  <div class="wrap">
+    {
+      h.pillars.map((p, i) => (
+        <article class:list={['split pillar', i === 1 && 'flip', 'wide']} aria-labelledby={`pillar-${i}`}>
+          <div class="split-copy" data-reveal>
+            <p class="eyebrow">
+              <span class="pillar-index">0{i + 1}</span> {p.eyebrow}
             </p>
+            <h2 id={`pillar-${i}`}>{p.h}</h2>
+            <p>{p.p}</p>
+            <ul class="checks">
+              {p.items.map((item) => (
+                <li>{format(item, vars)}</li>
+              ))}
+            </ul>
+            <a class="link-arrow" href={pillarLinks[i]}>
+              {p.link} <Icon name="arrow" class="arrow" />
+            </a>
+          </div>
+          <div class="split-visual" data-reveal="2">
+            {i === 0 && <Screenshot name="portal-ean" lang={lang} alt={t.site.shots.portalEan} sizes="(min-width: 1024px) 700px, calc(100vw - 32px)" />}
+            {i === 1 && <CodeWindow code={assetChange} lang="json" title="GET /obx/v1/changes" label="Asset" />}
+            {i === 2 && (
+              <div class="stack">
+                <CodeWindow code={pushTerminal} lang="shell" title="Terminal" />
+                <CodeWindow code={pushAction} lang="yaml" title="publish.yml" label="GitHub Action" />
+              </div>
+            )}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<section class="band" aria-labelledby="audience-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">{h.audienceEyebrow}</p>
+      <h2 id="audience-title">{h.audienceTitle}</h2>
+    </header>
+    <div class="audience">
+      {
+        [h.brands, h.retailers].map((a, i) => (
+          <article class:list={['audience-card', i === 0 && 'dark']} aria-labelledby={`aud-${i}`} data-reveal={String(i + 1)}>
+            <h3 id={`aud-${i}`}>{a.h}</h3>
+            <p>{a.p}</p>
+            <ul class="checks">
+              {a.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <div class="actions">
+              <a class:list={['button', i === 0 ? 'primary' : 'secondary']} href={url(lang, pages[i])}>
+                {a.cta} <Icon name="arrow" class="arrow" />
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt" aria-labelledby="editions-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">{h.editionsEyebrow}</p>
+      <h2 id="editions-title">{h.editionsTitle}</h2>
+      <p class="lead">{h.editionsLead}</p>
+    </header>
+    <div data-reveal="2"><Editions lang={lang} /></div>
+  </div>
+</section>
+
+<section class="band band-ink" aria-labelledby="trust-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">{h.trustEyebrow}</p>
+      <h2 id="trust-title">{h.trustTitle}</h2>
+      <p class="lead">{h.trustLead}</p>
+    </header>
+    <ul class="facts-grid" data-reveal="2">
+      {
+        h.trust.map((item) => (
+          <li>
+            <h3>{item.h}</h3>
+            <p>{format(item.p, vars)}</p>
           </li>
         ))
       }
-    </ol>
+    </ul>
+    <p class="actions">
+      <a class="link-arrow" href={url(lang, 'governance')}>{h.trustLink} <Icon name="arrow" class="arrow" /></a>
+    </p>
   </div>
 </section>
 
-<section class="section" aria-labelledby="what">
-  <div class="wrap">
-    <h2 id="what">{c.whatTitle}</h2>
-    <div class="cards">
+<section class="band" aria-labelledby="dev-title">
+  <div class="wrap split">
+    <div class="split-copy" data-reveal>
+      <p class="eyebrow">{h.devEyebrow}</p>
+      <h2 id="dev-title">{h.devTitle}</h2>
+      <p>{h.devP}</p>
+      <ul class="link-list">
+        {
+          h.devLinks.map((label, i) => (
+            <li>
+              <a href={devLinks[i]}>
+                {label} <Icon name="arrow" class="arrow" />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="split-visual stack" data-reveal="2">
+      <CodeWindow code={discovery} lang="shell" title="Terminal" />
+      <CodeWindow code={discoveryResponse} lang="json" title="200 OK · application/json" />
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt" aria-labelledby="faq-title">
+  <div class="wrap split">
+    <header class="split-copy" data-reveal>
+      <p class="eyebrow">{t.nav.faq}</p>
+      <h2 id="faq-title">{h.faqTitle}</h2>
+      <a class="link-arrow" href={url(lang, 'faq')}>{h.faqLink} <Icon name="arrow" class="arrow" /></a>
+    </header>
+    <div class="split-visual faq-list" data-reveal="2">
       {
-        c.what.map((w) => (
-          <div class="card">
-            <h3>{w.h}</h3>
-            <p>{w.p}</p>
-          </div>
+        faq.map((item) => (
+          <details>
+            <summary>{item.q}</summary>
+            <p>{format(item.a, vars)}</p>
+          </details>
         ))
       }
     </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="why">
-  <div class="wrap">
-    <h2 id="why">{c.whyTitle}</h2>
-    <div class="cards">
-      {
-        c.why.map((w) => (
-          <div class="card">
-            <h3>{w.h}</h3>
-            <p>{w.p}</p>
-          </div>
-        ))
-      }
-    </div>
-    <div class="callout">
-      <p>{c.status} <a href={url(lang, 'governance')}>{c.statusLink}</a>.</p>
-    </div>
-  </div>
-</section>
+<CtaBand
+  lang={lang}
+  id="closing-title"
+  title={h.closingTitle}
+  text={h.closingP}
+  primary={{ href: url(lang, 'brands'), label: t.site.nav.start }}
+  secondary={{ href: `mailto:${HELLO_EMAIL}`, label: h.closingMail }}
+/>

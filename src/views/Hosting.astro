@@ -1,5 +1,9 @@
 ---
 import Code from '../components/Code.astro';
+import PageHero from '../components/PageHero.astro';
+import DocSection from '../components/DocSection.astro';
+import Editions from '../components/Editions.astro';
+import Icon from '../components/Icon.astro';
 import { localized, messages, repo, url, type Lang } from '../i18n';
 import { countryName, languageName, list } from '../lib/names';
 import * as s from '../data/snippets';
@@ -24,17 +28,29 @@ const env: [string, string][] = [
 const providers = providerData.providers;
 ---
 
-<section class="hero">
+<PageHero eyebrow={t.nav.hosting} title={t.site.home.editionsTitle} lead={c.lead}>
+  <Fragment slot="actions">
+    <a class="button primary lg" href="#providers">{c.p1Title.replace(/^\d+\.\s*/, '')} <Icon name="arrow" class="arrow" /></a>
+    <a class="button secondary lg" href="#one-click">{c.p2Title.replace(/^\d+\.\s*/, '')}</a>
+  </Fragment>
+</PageHero>
+
+<section class="band band-alt" aria-labelledby="editions-overview">
   <div class="wrap">
-    <h1>{c.h1}</h1>
-    <p class="lead">{c.lead}</p>
+    <header class="section-head">
+      <h2 id="editions-overview">{t.site.pages.hostingEditions}</h2>
+      <p class="lead">{t.site.home.editionsLead}</p>
+    </header>
+    <Editions lang={lang} />
   </div>
 </section>
 
-<section class="section" aria-labelledby="providers">
+<section class="band" aria-labelledby="providers">
   <div class="wrap">
-    <h2 id="providers">{c.p1Title}</h2>
-    <p class="prose">{c.p1P}</p>
+    <header class="section-head">
+      <h2 id="providers">{c.p1Title}</h2>
+      <p class="lead">{c.p1P}</p>
+    </header>
     <div class="cards">
       {
         providers.map((p) => (
@@ -73,48 +89,38 @@ const providers = providerData.providers;
   </div>
 </section>
 
-<section class="section" aria-labelledby="one-click">
+<section class="band band-alt" aria-labelledby="one-click">
   <div class="wrap">
-    <h2 id="one-click">{c.p2Title}</h2>
-    <p class="prose">{c.p2P}</p>
+    <header class="section-head">
+      <h2 id="one-click">{c.p2Title}</h2>
+      <p class="lead">{c.p2P}</p>
+    </header>
 
-    <div class="option" id="cloudflare">
-      <h3>{t.common.editionCloudflare}</h3>
-      <div class="prose">
-        <p>{c.cfP}</p>
-        <p>
-          <a class="button primary" href="https://deploy.workers.cloudflare.com/?url=https://github.com/openbrandexchange/node-ts"
-            >{c.cfButton}</a
-          >
-        </p>
-        <p class="small"><a href={repo('node-ts')}>openbrandexchange/node-ts</a></p>
-      </div>
-    </div>
+    <DocSection id="cloudflare" title={t.common.editionCloudflare}>
+      <p>{c.cfP}</p>
+      <p>
+        <a class="button primary" href="https://deploy.workers.cloudflare.com/?url=https://github.com/openbrandexchange/node-ts">{c.cfButton}</a>
+      </p>
+      <p class="small"><a href={repo('node-ts')}>openbrandexchange/node-ts</a></p>
+    </DocSection>
 
-    <div class="option" id="cloud-run">
-      <h3>{t.common.editionGoogle}</h3>
-      <div class="prose">
-        <p>{c.runP}</p>
-        <Code code={s.cloudRun} />
-        <p class="small"><a href={repo('node-go')}>openbrandexchange/node-go</a> · <a href="#docker">Docker</a></p>
-      </div>
-    </div>
+    <DocSection id="cloud-run" title={t.common.editionGoogle}>
+      <p>{c.runP}</p>
+      <Code code={s.cloudRun} />
+      <p class="small"><a href={repo('node-go')}>openbrandexchange/node-go</a> · <a href="#docker">Docker</a></p>
+    </DocSection>
 
-    <div class="option" id="web-hosting">
-      <h3>{t.common.editionHosting}</h3>
-      <div class="prose">
-        <p>{c.phpP}</p>
-        <ol>{c.phpSteps.map((st) => <li>{st}</li>)}</ol>
-        <p class="small"><a href={repo('node-php', '/releases/latest')}>{c.phpDownload}</a> · <a href={repo('node-php')}>openbrandexchange/node-php</a></p>
-      </div>
-    </div>
+    <DocSection id="web-hosting" title={t.common.editionHosting}>
+      <p>{c.phpP}</p>
+      <ol>{c.phpSteps.map((st) => <li>{st}</li>)}</ol>
+      <p class="small"><a href={repo('node-php', '/releases/latest')}>{c.phpDownload}</a> · <a href={repo('node-php')}>openbrandexchange/node-php</a></p>
+    </DocSection>
   </div>
 </section>
 
-<section class="section" aria-labelledby="docker">
+<section class="band">
   <div class="wrap">
-    <h2 id="docker">{c.p3Title}</h2>
-    <div class="prose">
+    <DocSection id="docker" title={c.p3Title}>
       <p>{c.p3P}</p>
       <Code code={s.dockerRun} />
       <p>{c.composeP}</p>
@@ -136,18 +142,19 @@ const providers = providerData.providers;
           </tbody>
         </table>
       </div>
-    </div>
+    </DocSection>
 
-    <h2 id="first-start">{c.firstTitle}</h2>
-    <div class="prose">
+    <DocSection id="first-start" title={c.firstTitle}>
       <ol>{c.first.map((f) => <li>{f}</li>)}</ol>
       <p class="muted">{c.firstWhy}</p>
-    </div>
+    </DocSection>
 
-    <h2 id="domain">{c.domainTitle}</h2>
-    <p class="prose">{c.domainP}</p>
+    <DocSection id="domain" title={c.domainTitle}>
+      <p>{c.domainP}</p>
+    </DocSection>
 
-    <h2 id="editions">{c.compareTitle}</h2>
-    <p class="prose">{c.compareP} <a href={url(lang, 'developers', '#implementations')}>{c.compareLink}</a>.</p>
+    <DocSection id="editions" title={c.compareTitle}>
+      <p>{c.compareP} <a href={url(lang, 'developers', '#implementations')}>{c.compareLink}</a>.</p>
+    </DocSection>
   </div>
 </section>

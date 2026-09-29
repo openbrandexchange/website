@@ -1,4 +1,6 @@
 ---
+import PageHero from '../components/PageHero.astro';
+import DocSection from '../components/DocSection.astro';
 import { format, messages, specDoc, url, type Lang } from '../i18n';
 import { orgVars } from '../lib/org';
 
@@ -9,29 +11,25 @@ const { lang } = Astro.props;
 const c = messages[lang].governance;
 ---
 
-<section class="hero">
-  <div class="wrap">
-    <h1>{c.h1}</h1>
-    <p class="lead">{c.lead}</p>
-  </div>
-</section>
+<PageHero eyebrow={messages[lang].site.home.trustEyebrow} title={c.h1} lead={c.lead} />
 
-<section class="section">
-  <div class="wrap prose">
-    <h2 id="foundation">{c.foundationTitle}</h2>
-    <p>{format(c.foundationP, orgVars(lang))} <a href={url(lang, 'imprint')}>{messages[lang].nav.imprint}</a>.</p>
+<section class="band">
+  <div class="wrap">
+    <DocSection id="foundation" title={c.foundationTitle}>
+      <p>{format(c.foundationP, orgVars(lang))} <a href={url(lang, 'imprint')}>{messages[lang].nav.imprint}</a>.</p>
+    </DocSection>
     {
-      c.sections.map((s) => (
-        <>
-          <h2>{s.h}</h2>
+      c.sections.map((s, i) => (
+        <DocSection id={`section-${i + 1}`} title={s.h}>
           <p>{s.p}</p>
-        </>
+        </DocSection>
       ))
     }
-    <h2 id="name">{c.nameTitle}</h2>
-    <div class="callout">
-      <p>{c.nameP}</p>
-    </div>
-    <p><a href={specDoc('docs/governance.md')}>{c.specLink}</a></p>
+    <DocSection id="name" title={c.nameTitle}>
+      <div class="callout">
+        <p>{c.nameP}</p>
+      </div>
+      <p><a href={specDoc('docs/governance.md')}>{c.specLink}</a></p>
+    </DocSection>
   </div>
 </section>

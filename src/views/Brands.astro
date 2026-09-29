@@ -1,5 +1,11 @@
 ---
+import PageHero from '../components/PageHero.astro';
+import Screenshot from '../components/Screenshot.astro';
+import CodeWindow from '../components/CodeWindow.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
 import { format, messages, url, type Lang } from '../i18n';
+import { assetChange } from '../data/snippets';
 
 interface Props {
   lang: Lang;
@@ -7,49 +13,72 @@ interface Props {
 const { lang } = Astro.props;
 const t = messages[lang];
 const c = t.brands;
+const shots = t.site.shots;
 const ids = ['portal', 'api', 'automate', 'own'];
 ---
 
-<section class="hero">
-  <div class="wrap">
-    <h1>{c.h1}</h1>
-    <p class="lead">{c.lead}</p>
-  </div>
-</section>
+<PageHero eyebrow={t.nav.brands} title={t.site.pages.brandsH1} lead={c.lead}>
+  <Fragment slot="actions">
+    <a class="button primary lg" href={url(lang, 'hosting')}>{c.nextHosting} <Icon name="arrow" class="arrow" /></a>
+    <a class="button secondary lg" href={url(lang, 'automation')}>{c.nextAutomation}</a>
+  </Fragment>
+  <Screenshot slot="visual" name="admin-overview" lang={lang} alt={shots.adminOverview} sizes="(min-width: 1024px) 820px, calc(100vw - 32px)" eager />
+</PageHero>
 
-<section class="section">
+<section class="band">
   <div class="wrap">
-    <div class="cards two">
-      {
-        c.blocks.map((b, i) => (
-          <article class="card" aria-labelledby={ids[i]}>
-            <h2 id={ids[i]} class="card-title">{b.h}</h2>
+    {
+      c.blocks.map((b, i) => (
+        <article class:list={['split pillar wide', i % 2 === 1 && 'flip']} aria-labelledby={ids[i]}>
+          <div class="split-copy" data-reveal>
+            <p class="eyebrow">
+              <span class="pillar-index">0{i + 1}</span>
+            </p>
+            <h2 id={ids[i]}>{b.h}</h2>
             <p>{format(b.p, { portal: t.portalWord })}</p>
-            <ul>{b.items.map((item) => <li>{item}</li>)}</ul>
-          </article>
-        ))
-      }
+            <ul class="checks">
+              {b.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div class="split-visual" data-reveal="2">
+            {i === 0 && <Screenshot name="portal-article" lang={lang} alt={shots.portalArticle} sizes="(min-width: 1024px) 700px, calc(100vw - 32px)" />}
+            {i === 1 && <CodeWindow code={assetChange} lang="json" title="GET /obx/v1/changes" label="Asset" />}
+            {i === 2 && <Screenshot name="admin-automation" lang={lang} alt={shots.adminAutomation} sizes="(min-width: 1024px) 700px, calc(100vw - 32px)" />}
+            {i === 3 && <Screenshot name="admin-stats" lang={lang} alt={shots.adminStats} sizes="(min-width: 1024px) 700px, calc(100vw - 32px)" />}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<section class="band band-alt" aria-labelledby="admin">
+  <div class="wrap split even">
+    <div class="split-copy" data-reveal>
+      <h2 id="admin">{c.adminTitle}</h2>
+      <dl class="definition-list">
+        {
+          c.admin.map((row) => (
+            <div>
+              <dt>{row.k}</dt>
+              <dd>{row.v}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+    <div class="split-visual" data-reveal="2">
+      <Screenshot name="admin-catalog" lang={lang} alt={shots.adminCatalog} sizes="(min-width: 1024px) 620px, calc(100vw - 32px)" />
     </div>
   </div>
 </section>
 
-<section class="section" aria-labelledby="admin">
-  <div class="wrap prose">
-    <h2 id="admin">{c.adminTitle}</h2>
-    <dl class="definition-list">
-      {
-        c.admin.map((row) => (
-          <>
-            <dt>{row.k}</dt>
-            <dd>{row.v}</dd>
-          </>
-        ))
-      }
-    </dl>
-    <h2 id="next">{c.nextTitle}</h2>
-    <div class="actions">
-      <a class="button primary" href={url(lang, 'hosting')}>{c.nextHosting}</a>
-      <a class="button secondary" href={url(lang, 'automation')}>{c.nextAutomation}</a>
-    </div>
-  </div>
-</section>
+<CtaBand
+  lang={lang}
+  id="next"
+  title={c.nextTitle}
+  primary={{ href: url(lang, 'hosting'), label: c.nextHosting }}
+  secondary={{ href: url(lang, 'automation'), label: c.nextAutomation }}
+/>

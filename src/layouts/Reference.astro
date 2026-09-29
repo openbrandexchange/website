@@ -4,7 +4,8 @@
 // and footer as the site; the API reference itself is the spec's rendered site at /reference/.
 import '../styles/global.css';
 import { messages, url } from '../i18n';
-import { HELLO_EMAIL, initiativeLine } from '../lib/org';
+import Logo from '../components/Logo.astro';
+import SiteFooter from '../components/SiteFooter.astro';
 
 interface Props {
   title: string;
@@ -34,10 +35,7 @@ const site = Astro.site!.toString().replace(/\/$/, '');
     <header class="site-header">
       <div class="wrap header-row">
         <a class="logo" href={url('en', 'home')} aria-label={t.common.home}>
-          <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
-            <rect x="2" y="2" width="28" height="28" rx="7" fill="var(--accent)"></rect>
-            <path d="M10 16h12M16 10v12" stroke="var(--on-accent)" stroke-width="3" stroke-linecap="round"></path>
-          </svg>
+          <Logo />
           <span>Open Brand Exchange</span>
         </a>
         <nav id="site-nav" class="site-nav" aria-label={t.common.mainMenu}>
@@ -52,19 +50,6 @@ const site = Astro.site!.toString().replace(/\/$/, '');
     <main id="main" tabindex="-1">
       <slot />
     </main>
-    <footer class="site-footer">
-      <div class="wrap footer-grid">
-        <div>
-          <p class="footer-name">Open Brand Exchange</p>
-          <p class="small footer-org">
-            <a href={url('en', 'imprint')}>{initiativeLine('en')}</a>
-          </p>
-          <p class="small">
-            {t.common.footerContact}: <a href={`mailto:${HELLO_EMAIL}`}>{HELLO_EMAIL}</a>
-          </p>
-        </div>
-      </div>
-      <div class="wrap"><p class="muted small">{t.common.footerLicence}</p></div>
-    </footer>
+    <SiteFooter lang="en" />
   </body>
 </html>

@@ -1,0 +1,36 @@
+---
+// The four ways to run a portal, side by side with the same rows (subgrid).
+import Icon from './Icon.astro';
+import { messages, url, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = messages[lang];
+const h = t.site.home;
+const names = [h.editions[0].name, t.common.editionCloudflare, t.common.editionGoogle, t.common.editionHosting];
+const links = [url(lang, 'hosting', '#providers'), url(lang, 'hosting', '#cloudflare'), url(lang, 'hosting', '#cloud-run'), url(lang, 'hosting', '#web-hosting')];
+---
+
+<ul class="editions">
+  {
+    h.editions.map((e, i) => (
+      <li class:list={['edition', i === 0 && 'featured']}>
+        <span class="edition-tag">{e.tag}</span>
+        <h3>{names[i]}</h3>
+        <dl>
+          {[e.runs, e.need, e.setup, e.cost].map((v, j) => (
+            <div>
+              <dt>{h.editionFields[j]}</dt>
+              <dd>{v}</dd>
+            </div>
+          ))}
+        </dl>
+        <a class="link-arrow" href={links[i]}>
+          {e.cta} <Icon name="arrow" class="arrow" />
+        </a>
+      </li>
+    ))
+  }
+</ul>

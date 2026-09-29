@@ -1,0 +1,61 @@
+---
+import Logo from './Logo.astro';
+import { messages, repo, url, type Lang, type PageKey } from '../i18n';
+import { HELLO_EMAIL, initiativeLine } from '../lib/org';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = messages[lang];
+const f = t.site.footer;
+const page = (p: PageKey) => ({ href: url(lang, p), label: t.nav[p as keyof typeof t.nav] });
+const columns = [
+  { title: f.product, links: [page('brands'), page('retailers'), page('automation'), page('hosting'), page('directory')] },
+  {
+    title: f.developers,
+    links: [
+      page('developers'),
+      { href: '/reference/', label: f.reference },
+      { href: '/errors/', label: f.errors },
+      { href: repo('spec'), label: f.spec },
+      { href: repo('obx-go'), label: f.sdk },
+    ],
+  },
+  { title: f.project, links: [page('governance'), page('faq'), page('downloads'), { href: repo(''), label: t.common.footerSource }] },
+  { title: f.legal, links: [page('imprint'), page('privacy'), page('cookies')] },
+];
+---
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="logo" href={url(lang, 'home')} aria-label={t.common.home}><Logo /><span>Open Brand Exchange</span></a>
+        <p>{f.tagline}</p>
+        <p class="small">
+          {t.common.footerContact}: <a href={`mailto:${HELLO_EMAIL}`}>{HELLO_EMAIL}</a>
+        </p>
+      </div>
+      {
+        columns.map((col, i) => (
+          <nav class="footer-col" aria-labelledby={`footer-${i}`}>
+            <h2 id={`footer-${i}`}>{col.title}</h2>
+            <ul>
+              {col.links.map((l) => (
+                <li>
+                  <a href={l.href}>{l.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ))
+      }
+    </div>
+    <div class="footer-bottom">
+      <p><a href={url(lang, 'imprint')}>{initiativeLine(lang)}</a></p>
+      <p>{f.status}</p>
+      <p>{t.common.footerLicence}</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,19 @@
+---
+// A section of a long page: the heading stays in view at the left, the content runs at the right.
+interface Props {
+  id: string;
+  title: string;
+  intro?: string;
+}
+const { id, title, intro } = Astro.props;
+---
+
+<section class="doc-section" aria-labelledby={id}>
+  <div class="doc-head">
+    <div>
+      <h2 id={id}>{title}</h2>
+      {intro && <p>{intro}</p>}
+    </div>
+  </div>
+  <div class="doc-body"><slot /></div>
+</section>

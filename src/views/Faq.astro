@@ -1,29 +1,39 @@
 ---
-import { format, messages, type Lang } from '../i18n';
-import { orgVars } from '../lib/org';
+import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
+import { format, messages, url, type Lang } from '../i18n';
+import { HELLO_EMAIL, orgVars } from '../lib/org';
 
 interface Props {
   lang: Lang;
 }
 const { lang } = Astro.props;
-const c = messages[lang].faq;
+const t = messages[lang];
+const c = t.faq;
 ---
 
-<section class="hero">
-  <div class="wrap">
-    <h1>{c.h1}</h1>
-  </div>
-</section>
+<PageHero eyebrow={t.nav.faq} title={c.h1} />
 
-<section class="section faq">
-  <div class="wrap">
-    {
-      c.items.map((item, i) => (
-        <details id={`q${i + 1}`}>
-          <summary>{item.q}</summary>
-          <p>{format(item.a, orgVars(lang))}</p>
-        </details>
-      ))
-    }
+<section class="band">
+  <div class="wrap faq-page">
+    <div class="faq-list">
+      {
+        c.items.map((item, i) => (
+          <details id={`q${i + 1}`}>
+            <summary>{item.q}</summary>
+            <p>{format(item.a, orgVars(lang))}</p>
+          </details>
+        ))
+      }
+    </div>
+    <aside class="card faq-aside" aria-labelledby="faq-contact">
+      <h2 id="faq-contact" class="card-title">{t.site.home.closingMail}</h2>
+      <p><a href={`mailto:${HELLO_EMAIL}`}>{HELLO_EMAIL}</a></p>
+      <ul class="link-list">
+        <li><a href={url(lang, 'brands')}>{t.nav.brands} <Icon name="arrow" class="arrow" /></a></li>
+        <li><a href={url(lang, 'retailers')}>{t.nav.retailers} <Icon name="arrow" class="arrow" /></a></li>
+        <li><a href={url(lang, 'governance')}>{t.nav.governance} <Icon name="arrow" class="arrow" /></a></li>
+      </ul>
+    </aside>
   </div>
 </section>

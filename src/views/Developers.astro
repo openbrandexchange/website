@@ -1,7 +1,11 @@
 ---
 import Code from '../components/Code.astro';
+import PageHero from '../components/PageHero.astro';
+import DocSection from '../components/DocSection.astro';
+import CodeWindow from '../components/CodeWindow.astro';
+import Icon from '../components/Icon.astro';
 import { messages, repo, specDoc, url, type Lang } from '../i18n';
-import { retailerCurl, conformance } from '../data/snippets';
+import { retailerCurl, conformance, discovery, discoveryResponse } from '../data/snippets';
 
 interface Props {
   lang: Lang;
@@ -35,91 +39,110 @@ const docs = [
 ];
 ---
 
-<section class="hero">
+<PageHero eyebrow={t.nav.developers} title={t.site.home.devTitle} lead={c.lead}>
+  <Fragment slot="actions">
+    <a class="button primary lg" href="/reference/">{t.site.footer.reference} <Icon name="arrow" class="arrow" /></a>
+    <a class="button secondary lg" href={repo('spec')}>{t.site.footer.spec}</a>
+  </Fragment>
+  <div slot="visual" class="stack">
+    <CodeWindow code={discovery} lang="shell" title="Terminal" />
+    <CodeWindow code={discoveryResponse} lang="json" title="200 OK · application/json" />
+  </div>
+</PageHero>
+
+<section class="band">
   <div class="wrap">
-    <h1>{c.h1}</h1>
-    <p class="lead">{c.lead}</p>
+    <DocSection id="spec" title={c.specTitle}>
+      <p>{c.specP}</p>
+      <p><a href={repo('spec')}>openbrandexchange/spec</a> · <a href={specDoc('docs/protocol.md')}>{c.specStart}</a></p>
+    </DocSection>
+
+    <DocSection id="apis" title={c.apisTitle}>
+      <div class="table-scroll">
+        <table>
+          <thead><tr>{c.apisHead.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+          <tbody>
+            {
+              apis.map((api, i) => (
+                <tr>
+                  <th scope="row">{api.name}</th>
+                  <td>{c.apis[i].who}</td>
+                  <td>{c.apis[i].status}</td>
+                  <td>
+                    <a href={specDoc(api.file)}>
+                      <code>{api.file.replace('openapi/', '')}</code>
+                    </a>{' '}
+                    · <a href={api.page}>HTML</a>
+                  </td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+    </DocSection>
+
+    <DocSection id="read" title={c.readTitle}>
+      <Code code={retailerCurl} />
+    </DocSection>
+
+    <DocSection id="sdk" title={c.sdkTitle}>
+      <p>{c.sdkP}</p>
+      <p><a href={repo('obx-go')}>obx-go</a> · <a href={url(lang, 'automation', '#cli')}>obx</a></p>
+    </DocSection>
+
+    <DocSection id="conformance" title={c.confTitle}>
+      <p>{c.confP} <a href={specDoc('docs/conformance.md')}>conformance.md</a></p>
+      <Code code={conformance} />
+    </DocSection>
   </div>
 </section>
 
-<section class="section">
+<section class="band band-alt">
   <div class="wrap">
-    <h2 id="spec">{c.specTitle}</h2>
-    <p class="prose">{c.specP} <a href={repo('spec')}>openbrandexchange/spec</a> · <a href={specDoc('docs/protocol.md')}>{c.specStart}</a></p>
+    <DocSection id="implementations" title={c.implTitle}>
+      <div class="table-scroll">
+        <table>
+          <thead><tr>{c.implHead.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+          <tbody>
+            {
+              impl.map((row, i) => (
+                <tr>
+                  <th scope="row">
+                    <a href={repo(row.repo)}>{row.repo}</a>
+                  </th>
+                  <td>
+                    {row.edition && <strong>{row.edition}</strong>}
+                    {row.edition && <br />}
+                    {c.impl[i]}
+                  </td>
+                  <td>{row.licence}</td>
+                  <td>{i === 0 ? c.statusDraft : t.common.inDevelopment}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p>{c.implP}</p>
+    </DocSection>
 
-    <h2 id="apis">{c.apisTitle}</h2>
-    <div class="table-scroll">
-      <table>
-        <thead><tr>{c.apisHead.map((h) => <th scope="col">{h}</th>)}</tr></thead>
-        <tbody>
-          {
-            apis.map((api, i) => (
-              <tr>
-                <th scope="row">{api.name}</th>
-                <td>{c.apis[i].who}</td>
-                <td>{c.apis[i].status}</td>
-                <td>
-                  <a href={specDoc(api.file)}>
-                    <code>{api.file.replace('openapi/', '')}</code>
-                  </a>{' '}
-                  · <a href={api.page}>HTML</a>
-                </td>
-              </tr>
-            ))
-          }
-        </tbody>
-      </table>
-    </div>
-
-    <h2 id="read">{c.readTitle}</h2>
-    <div class="prose"><Code code={retailerCurl} /></div>
-
-    <h2 id="sdk">{c.sdkTitle}</h2>
-    <p class="prose">{c.sdkP} <a href={repo('obx-go')}>obx-go</a> · <a href={url(lang, 'automation', '#cli')}>obx</a></p>
-
-    <h2 id="conformance">{c.confTitle}</h2>
-    <p class="prose">{c.confP} <a href={specDoc('docs/conformance.md')}>conformance.md</a></p>
-    <div class="prose"><Code code={conformance} /></div>
-
-    <h2 id="implementations">{c.implTitle}</h2>
-    <div class="table-scroll">
-      <table>
-        <thead><tr>{c.implHead.map((h) => <th scope="col">{h}</th>)}</tr></thead>
-        <tbody>
-          {
-            impl.map((row, i) => (
-              <tr>
-                <th scope="row">
-                  <a href={repo(row.repo)}>{row.repo}</a>
-                </th>
-                <td>
-                  {row.edition && <strong>{row.edition}</strong>}
-                  {row.edition && <br />}
-                  {c.impl[i]}
-                </td>
-                <td>{row.licence}</td>
-                <td>{i === 0 ? c.statusDraft : t.common.inDevelopment}</td>
-              </tr>
-            ))
-          }
-        </tbody>
-      </table>
-    </div>
-    <p class="prose">{c.implP}</p>
-
-    <h2 id="docs">{c.docsTitle}</h2>
-    <ul class="prose">
-      {
-        docs.map((file, i) => (
-          <li>
-            <a href={specDoc(file)}>
-              <code>{file.replace('docs/', '')}</code>
-            </a>
-            : {c.docs[i]}
-          </li>
-        ))
-      }
-    </ul>
-    <p class="prose">{c.contribute} <a href={url(lang, 'governance')}>{c.governanceLink}</a>.</p>
+    <DocSection id="docs" title={c.docsTitle}>
+      <ul class="link-list">
+        {
+          docs.map((file, i) => (
+            <li>
+              <a href={specDoc(file)}>
+                <span>
+                  <code>{file.replace('docs/', '')}</code> <span class="muted">{c.docs[i]}</span>
+                </span>
+                <Icon name="arrow" class="arrow" />
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <p>{c.contribute} <a href={url(lang, 'governance')}>{c.governanceLink}</a>.</p>
+    </DocSection>
   </div>
 </section>

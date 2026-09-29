@@ -1,4 +1,5 @@
 ---
+import PageHero from '../components/PageHero.astro';
 import { format, messages, url, type Lang } from '../i18n';
 import { HELLO_EMAIL, SECURITY_EMAIL, imprintDetails, initiativeLine, orgVars } from '../lib/org';
 
@@ -11,14 +12,9 @@ const c = t.imprint;
 const { address, phone, registration } = imprintDetails;
 ---
 
-<section class="hero">
-  <div class="wrap">
-    <h1>{c.h1}</h1>
-    <p class="lead">{c.lead}</p>
-  </div>
-</section>
+<PageHero title={c.h1} lead={c.lead} dark={false} />
 
-<section class="section">
+<section class="band">
   <div class="wrap prose">
     <h2>{c.publisherTitle}</h2>
     <p class="imprint-name">{initiativeLine(lang)}</p>

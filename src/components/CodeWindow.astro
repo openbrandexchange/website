@@ -1,0 +1,30 @@
+---
+// A dark code window with a title bar, highlighted at build time (no inline styles).
+import { highlight, type CodeLang } from '../lib/highlight';
+
+interface Props {
+  code: string;
+  lang: CodeLang;
+  /** Mono text in the bar, e.g. a file name or "GET /obx/v1/changes". */
+  title?: string;
+  /** Plain-text label at the right of the bar. */
+  label?: string;
+  class?: string;
+}
+const { code, lang, title, label, class: cls } = Astro.props;
+const method = title?.match(/^(GET|POST|PUT|PATCH|DELETE) /)?.[1];
+const rest = method ? title!.slice(method.length + 1) : title;
+---
+
+<figure class:list={['codewin', cls]}>
+  {
+    (title || label) && (
+      <figcaption class="codewin-bar">
+        {method && <span class="method">{method}</span>}
+        {rest && <span>{rest}</span>}
+        {label && <span class="label">{label}</span>}
+      </figcaption>
+    )
+  }
+  <pre tabindex="0"><code set:html={highlight(code.trim(), lang)} /></pre>
+</figure>

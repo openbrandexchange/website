@@ -90,3 +90,28 @@ document.addEventListener('keydown', function (event) {
     open.querySelector('summary').focus();
   }
 });
+
+// Subtle reveal on scroll (CSS in global.css; nothing hides without JavaScript or with reduced motion).
+document.addEventListener('DOMContentLoaded', function () {
+  var items = document.querySelectorAll('[data-reveal]');
+  if (!items.length) return;
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    items.forEach(function (el) {
+      el.classList.add('is-in');
+    });
+    return;
+  }
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-in');
+        observer.unobserve(entry.target);
+      });
+    },
+    { rootMargin: '0px 0px -8% 0px' }
+  );
+  items.forEach(function (el) {
+    observer.observe(el);
+  });
+});

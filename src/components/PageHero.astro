@@ -1,0 +1,24 @@
+---
+// The top of every page: eyebrow, h1 and lead, optionally actions and a visual at the right.
+interface Props {
+  eyebrow?: string;
+  title: string;
+  lead?: string;
+  /** Dark band (main pages) or light (legal and reference pages). */
+  dark?: boolean;
+}
+const { eyebrow, title, lead, dark = true } = Astro.props;
+const visual = Astro.slots.has('visual');
+---
+
+<section class:list={['band hero', dark ? 'band-ink grid-bg' : 'hero-light']} aria-labelledby="page-title">
+  <div class:list={['wrap', visual && 'hero-split']}>
+    <div class="hero-copy">
+      {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+      <h1 id="page-title">{title}</h1>
+      {lead && <p class="lead">{lead}</p>}
+      {Astro.slots.has('actions') && <div class="actions"><slot name="actions" /></div>}
+    </div>
+    {visual && <div class="hero-visual"><slot name="visual" /></div>}
+  </div>
+</section>

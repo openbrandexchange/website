@@ -1,4 +1,5 @@
 ---
+import PageHero from '../components/PageHero.astro';
 import { messages, nativeNames, repo, url, type Lang } from '../i18n';
 import { switchKitPath } from '../lib/switch-kit';
 import { brochurePath, type BrochureKind } from '../lib/brochures';
@@ -17,14 +18,9 @@ const brochures: { kind: BrochureKind; title: string; p: string }[] = [
 ];
 ---
 
-<section class="hero">
-  <div class="wrap">
-    <h1>{c.h1}</h1>
-    <p class="lead">{c.lead}</p>
-  </div>
-</section>
+<PageHero eyebrow={t.nav.downloads} title={c.h1} lead={c.lead} />
 
-<section class="section">
+<section class="band">
   <div class="wrap">
     <div class="cards">
       {
