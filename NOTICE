@@ -16,9 +16,13 @@ Contributions by others remain the copyright of their authors and are licensed
 under the same licences (Developer Certificate of Origin).
 
 Third-party material:
-- The brochure PDFs and social images embed the Inter typeface by Rasmus
-  Andersson (https://rsms.me/inter/), licensed under the SIL Open Font License
-  1.1, via @fontsource/inter.
+- The website serves, and the brochure PDFs and social images embed, the Inter
+  typeface by Rasmus Andersson (https://rsms.me/inter/), licensed under the SIL
+  Open Font License 1.1, via @fontsource-variable/inter (site) and
+  @fontsource/inter (brochures). The font files are unmodified.
+- The product screenshots in src/assets/screens/ show the Open Brand Exchange
+  admin-ui (Apache-2.0) with the spec's fictional brand Kestrel Outfitters;
+  scripts/capture-screenshots.mjs regenerates them.
 - CODE_OF_CONDUCT.md is adapted from the Contributor Covenant 2.1
   (https://www.contributor-covenant.org), licensed under CC-BY-4.0.
 - public/schemas/ and public/reference/ contain the JSON Schemas and the
@@ -27,4 +31,4 @@ Third-party material:
   src/data/errors.json is its error table. The reference pages include the
   Redoc viewer (MIT, public/reference/assets/redoc.LICENSE).
 - The site is built with Astro (MIT). Nothing from its dependencies is shipped
-  except the generated pages and assets.
+  except the generated pages and assets, and the Inter font files.

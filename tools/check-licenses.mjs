@@ -3,7 +3,8 @@
 // The site ships only its own code and texts: dependencies are build tools. Permissive licences
 // are always fine; MPL-2.0 (lightningcss, axe-core) and LGPL-3.0 (sharp's prebuilt libvips) are
 // accepted because they are used unmodified at build time and never shipped in dist/.
-// Fonts (OFL-1.1) are embedded in the brochure PDFs, which the OFL allows. Anything else fails.
+// Fonts (OFL-1.1): Inter is served unmodified as the site's web font and embedded in the brochure
+// PDFs, both of which the OFL allows. Anything else fails.
 import { readFileSync } from 'node:fs';
 
 const permissive = ['MIT', 'ISC', 'Apache-2.0', 'BSD-2-Clause', 'BSD-3-Clause', '0BSD', 'BlueOak-1.0.0', 'CC0-1.0', 'Python-2.0', 'Unlicense', 'CC-BY-4.0'];
