@@ -753,5 +753,257 @@
     "ctaBrands": "Nous cherchons des marques qui veulent façonner la première version : quels systèmes utilisez-vous, et combien de revendeurs servez-vous ? Écrivez-nous.",
     "ctaRetailers": "Nous cherchons des revendeurs qui veulent façonner la première version : quelles marques voulez-vous connecter, et quel logiciel utilisez-vous ? Écrivez-nous.",
     "footer": "Les fonctions sous « À venir » sont en développement. Version 0.1, {date}."
+  },
+  "site": {
+    "nav": {
+      "start": "Je suis une marque",
+      "docs": "Documentation",
+      "preview": "Aperçu v0.1"
+    },
+    "footer": {
+      "tagline": "Le standard ouvert pour transmettre les visuels produits et les données articles des marques à leurs revendeurs.",
+      "product": "Produit",
+      "developers": "Développeurs",
+      "project": "Projet",
+      "legal": "Mentions légales",
+      "reference": "Référence de l'API",
+      "errors": "Codes d'erreur",
+      "spec": "Spécification",
+      "sdk": "SDK Go et outil obx",
+      "status": "La version 0.1 est en test. La première version publique est en préparation."
+    },
+    "shots": {
+      "portalCatalog": "Le portail de la marque fictive Kestrel, vu par un revendeur : huit articles, avec des filtres par marque, type de produit et couleur.",
+      "portalEan": "Un revendeur colle six EAN dans le portail de la marque : cinq sont trouvés, un est absent du catalogue.",
+      "portalArticle": "Un article dans le portail de la marque : les visuels par couleur, le choix de téléchargement entre original, web et carré, et l'EAN de chaque taille.",
+      "adminOverview": "La vue d'ensemble de l'administration de la marque : premiers pas, chiffres du catalogue, demandes d'accès et derniers téléchargements des revendeurs.",
+      "adminCatalog": "Le catalogue dans l'administration de la marque : huit articles publiés, avec leurs tailles et leurs visuels.",
+      "adminStats": "Les statistiques dans l'administration de la marque : téléchargements, visuels et revendeurs les plus actifs sur 30 jours.",
+      "adminAutomation": "L'envoi automatique dans l'administration de la marque : des recettes prêtes à l'emploi pour l'outil obx, cron, GitHub Actions et plus encore."
+    },
+    "home": {
+      "eyebrow": "Standard ouvert · Logiciel libre",
+      "h1": "Publiez une fois. Chaque revendeur est servi.",
+      "lead": "Open Brand Exchange donne à votre marque son propre portail pour les revendeurs, une API standard pour leurs logiciels et une publication automatique depuis votre PIM, votre ERP ou vos dossiers. Open source, gratuit à héberger, et il reste à vous.",
+      "ctaRetailer": "Je suis revendeur",
+      "proofLabel": "En bref",
+      "proof": [
+        {
+          "v": "Ouvert",
+          "l": "standard, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "éditions du portail"
+        },
+        {
+          "v": "61",
+          "l": "tests de conformité"
+        },
+        {
+          "v": "25",
+          "l": "langues"
+        },
+        {
+          "v": "0 €",
+          "l": "de licence"
+        }
+      ],
+      "codeCaption": "Ce que reçoit le logiciel d'un revendeur",
+      "flowEyebrow": "Comment ça marche",
+      "flowTitle": "Une publication. Toutes les façons de travailler de vos revendeurs.",
+      "flowLead": "Vos systèmes alimentent votre propre portail. Les acheteurs l'utilisent dans leur navigateur ; leurs logiciels lisent le même contenu via l'API standard.",
+      "flowCaption": "Comment le contenu circule des systèmes d'une marque, via son propre portail, jusqu'à ses revendeurs.",
+      "flow": {
+        "systems": "Vos systèmes",
+        "systemsItems": [
+          "PIM",
+          "ERP",
+          "DAM",
+          "Dossier d'export"
+        ],
+        "upload": "Envoi automatique",
+        "uploadItems": [
+          "Import planifié",
+          "Outil obx",
+          "GitHub Action",
+          "API d'envoi"
+        ],
+        "portal": "Votre portail",
+        "portalDomain": "brands.yourbrand.com",
+        "portalItems": [
+          "Catalogue et visuels",
+          "Accès par revendeur",
+          "Statistiques d'usage"
+        ],
+        "retailers": "Vos revendeurs",
+        "browser": "Les acheteurs, dans le navigateur",
+        "browserItems": [
+          "Recherche et liste d'EAN",
+          "Téléchargements zip et CSV"
+        ],
+        "software": "Leurs logiciels, via l'API",
+        "softwareItems": [
+          "Boutique en ligne et PIM",
+          "Caisse et outils de contenu"
+        ]
+      },
+      "pillars": [
+        {
+          "eyebrow": "Portail",
+          "h": "Un portail que vos revendeurs utilisent vraiment.",
+          "p": "Les acheteurs se connectent à votre portail, collent les EAN de leur commande et téléchargent exactement ce qu'il leur faut : une photo, un article ou le zip de toute une sélection.",
+          "items": [
+            "Recherche et filtres par marque, saison, type de produit et couleur",
+            "Collez une liste d'EAN et voyez tout de suite ce qui existe et ce qui manque",
+            "Original, web (2000 px) ou carré, et les données articles en tableur",
+            "Votre nom, votre logo et votre domaine : « Kestrel · {portal} »"
+          ],
+          "link": "Voir le portail côté revendeur"
+        },
+        {
+          "eyebrow": "API",
+          "h": "Une seule API pour toutes les marques du standard.",
+          "p": "Les logiciels des revendeurs récupèrent tout une fois, puis seulement les changements, y compris ce que vous retirez. Chaque visuel arrive avec ses droits d'utilisation, sa date d'embargo et son origine IA.",
+          "items": [
+            "D'abord une copie complète, ensuite uniquement les changements",
+            "Recherche par EAN, rattachée au bon article et à la bonne taille",
+            "Versions web, carrée et miniature ; les originaux si vous l'autorisez",
+            "Développée une fois par un éditeur, elle fonctionne avec toutes les marques"
+          ],
+          "link": "Lire la référence de l'API"
+        },
+        {
+          "eyebrow": "Automatisation",
+          "h": "Publiez depuis les systèmes que vous avez déjà.",
+          "p": "Votre PIM, votre ERP ou un dossier partagé contient déjà les données et les photos. Laissez votre portail les récupérer à intervalles réguliers, ou envoyez-les en une commande. Plus personne ne déplace de fichiers.",
+          "items": [
+            "Import planifié depuis une adresse web, SFTP ou S3, sans code",
+            "L'outil obx pour Windows, macOS et Linux n'envoie que ce qui a changé",
+            "Une GitHub Action prête à l'emploi, et des recettes pour cron, n8n, Make et Zapier",
+            "Un seul format CSV et une seule règle de nommage des photos"
+          ],
+          "link": "Voir les recettes d'automatisation"
+        }
+      ],
+      "audienceEyebrow": "Pour qui",
+      "audienceTitle": "Conçu pour les deux côtés de la relation.",
+      "brands": {
+        "h": "Pour les marques",
+        "p": "Fini les envois de fichiers. Publiez une fois, depuis vos propres systèmes, en gardant la main.",
+        "items": [
+          "Votre propre portail, sur votre propre domaine",
+          "Vous validez chaque revendeur et décidez de ce qu'il voit",
+          "Vous voyez qui télécharge quoi, par revendeur",
+          "Hébergez-le gratuitement, ou choisissez un prestataire et partez quand vous voulez"
+        ],
+        "cta": "Découvrir l'offre marques"
+      },
+      "retailers": {
+        "h": "Pour les revendeurs",
+        "p": "Toutes les marques dans un format unique, dans votre navigateur ou directement dans votre logiciel.",
+        "items": [
+          "Collez votre liste d'EAN et obtenez les bons visuels pour chaque taille",
+          "Téléchargez zips et données articles, prêts pour votre boutique",
+          "Une seule connexion pour toutes les marques du standard",
+          "Droits d'utilisation et dates d'embargo avec chaque visuel"
+        ],
+        "cta": "Découvrir l'offre revendeurs"
+      },
+      "editionsEyebrow": "Hébergement",
+      "editionsTitle": "Hébergez-le où vous voulez. Seul l'hébergement se paie.",
+      "editionsLead": "Trois éditions du même portail. Elles réussissent les mêmes tests de conformité et parlent la même API : vous pouvez passer de l'une à l'autre.",
+      "editionsLink": "Comparer les options d'hébergement",
+      "editionFields": [
+        "Fonctionne sur",
+        "Il vous faut",
+        "Mise en place",
+        "Coût"
+      ],
+      "editions": [
+        {
+          "tag": "Le plus simple",
+          "name": "Chez un prestataire",
+          "runs": "Un hébergeur ou une agence le fait tourner pour vous",
+          "need": "Aucune compétence technique",
+          "setup": "Le prestataire l'installe avec vous",
+          "cost": "Les tarifs du prestataire",
+          "cta": "Voir les prestataires"
+        },
+        {
+          "tag": "En un clic",
+          "runs": "Cloudflare Workers, avec D1 et R2",
+          "need": "Un compte Cloudflare",
+          "setup": "Un clic, puis l'assistant de configuration",
+          "cost": "Offre Workers Paid, environ 5 dollars par mois",
+          "cta": "Installer sur Cloudflare"
+        },
+        {
+          "tag": "Conteneurs",
+          "runs": "Google Cloud Run, ou tout serveur avec Docker",
+          "need": "Un compte Google Cloud ou un hôte Docker",
+          "setup": "Un script ou une commande Docker",
+          "cost": "À l'usage sur Cloud Run, ou votre propre serveur",
+          "cta": "Installer avec Docker"
+        },
+        {
+          "tag": "Sans commande",
+          "runs": "Un hébergement web classique avec PHP et une base de données",
+          "need": "Un logiciel FTP",
+          "setup": "Envoyez un zip, puis lancez l'installateur",
+          "cost": "L'hébergement que vous payez déjà",
+          "cta": "Installer sur un hébergement web"
+        }
+      ],
+      "trustEyebrow": "Gouvernance",
+      "trustTitle": "Un standard ouvert, pas une plateforme qui vous enferme.",
+      "trustLead": "Open Brand Exchange doit appartenir aux marques, aux revendeurs et aux éditeurs de logiciels qui l'utilisent, et non à une seule entreprise.",
+      "trust": [
+        {
+          "h": "Spécification ouverte",
+          "p": "Version 0.1, rédigée en OpenAPI 3.1 et JSON Schema sous CC-BY-4.0. Chacun peut l'implémenter, y compris à des fins commerciales."
+        },
+        {
+          "h": "Tests de conformité",
+          "p": "61 tests automatisés répartis en quatre profils. Aucune implémentation n'est favorisée, pas même celle de l'entreprise de l'initiateur."
+        },
+        {
+          "h": "Licences open source",
+          "p": "Le SDK, l'outil obx et l'interface web sont sous Apache-2.0. Les trois éditions du portail sont sous AGPL-3.0 : les améliorations restent ouvertes."
+        },
+        {
+          "h": "Une fondation en cours de constitution",
+          "p": "Une initiative de {person}. Le droit d'auteur, le nom et le domaine seront transférés à l'{foundation} dès sa création."
+        },
+        {
+          "h": "Sécurité",
+          "p": "Signalez les vulnérabilités en toute confidentialité à {email}. La sécurité est l'un des quatre profils de conformité."
+        },
+        {
+          "h": "Confidentialité d'abord",
+          "p": "Ce site ne dépose aucun cookie, n'utilise aucun traceur et ne charge rien depuis d'autres serveurs."
+        }
+      ],
+      "trustLink": "Découvrir la gouvernance",
+      "devEyebrow": "Développeurs",
+      "devTitle": "Une spécification sur laquelle bâtir.",
+      "devP": "Trois contrats OpenAPI, des schémas JSON, une marque de test fictive et une suite de tests de conformité. Le SDK Go et l'outil obx sont prêts à l'emploi, et n'importe quel client HTTP convient.",
+      "devLinks": [
+        "Référence de l'API",
+        "Spécification sur GitHub",
+        "SDK Go et outil obx",
+        "Codes d'erreur"
+      ],
+      "faqTitle": "Les premières questions des marques",
+      "faqLink": "Toutes les questions",
+      "closingTitle": "Un seul endroit où chaque revendeur trouve le bon contenu.",
+      "closingP": "Mettez en place votre propre portail, ou parlez-nous de vos systèmes et de vos revendeurs pour contribuer à la première version.",
+      "closingMail": "Écrivez-nous"
+    },
+    "pages": {
+      "brandsH1": "Une seule mise en place. Pour tous vos revendeurs à la fois.",
+      "retailersSoftware": "Pour votre logiciel",
+      "hostingEditions": "Les trois éditions"
+    }
   }
 }

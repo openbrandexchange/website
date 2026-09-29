@@ -753,5 +753,257 @@
     "ctaBrands": "Hledáme značky, které chtějí spoluutvářet první verzi: jaké systémy používáte a kolik prodejců obsluhujete? Napište nám.",
     "ctaRetailers": "Hledáme prodejce, kteří chtějí spoluutvářet první verzi: jaké značky chcete propojit a jaký software používáte? Napište nám.",
     "footer": "Funkce v části „Připravujeme“ jsou ve vývoji. Verze 0.1, {date}."
+  },
+  "site": {
+    "nav": {
+      "start": "Začít jako značka",
+      "docs": "Dokumentace",
+      "preview": "Náhled verze 0.1"
+    },
+    "footer": {
+      "tagline": "Otevřený standard pro předávání produktových fotografií a dat o zboží od značek jejich prodejcům.",
+      "product": "Produkt",
+      "developers": "Pro vývojáře",
+      "project": "Projekt",
+      "legal": "Právní informace",
+      "reference": "Reference API",
+      "errors": "Chybové kódy",
+      "spec": "Specifikace",
+      "sdk": "Go SDK a nástroj obx",
+      "status": "Verze 0.1 se testuje. Připravuje se první veřejné vydání."
+    },
+    "shots": {
+      "portalCatalog": "Portál fiktivní značky Kestrel očima prodejce: osm položek s filtry podle značky, typu produktu a barvy.",
+      "portalEan": "Prodejce vloží do portálu šest kódů EAN: pět se najde, jeden v katalogu není.",
+      "portalArticle": "Položka v portálu: fotografie pro každou barvu, volba stažení (originál, web nebo čtverec) a EAN každé velikosti.",
+      "adminOverview": "Přehled v administraci značky: první kroky, počty v katalogu, žádosti o přístup a poslední stahování prodejců.",
+      "adminCatalog": "Katalog v administraci značky: osm publikovaných položek s velikostmi a fotografiemi.",
+      "adminStats": "Statistiky v administraci značky: stahování, fotografie a nejaktivnější prodejci za 30 dní.",
+      "adminAutomation": "Automatické nahrávání v administraci značky: hotové návody pro nástroj obx, cron, GitHub Actions a další."
+    },
+    "home": {
+      "eyebrow": "Otevřený standard · Bezplatný software",
+      "h1": "Publikujte jednou. Dostane to každý prodejce.",
+      "lead": "Open Brand Exchange dává vaší značce vlastní portál pro prodejce, standardní API pro jejich software a automatické publikování z vašeho PIM, ERP nebo složek. Open source, hosting zdarma, vždy pod vaší kontrolou.",
+      "ctaRetailer": "Jsem prodejce",
+      "proofLabel": "Na první pohled",
+      "proof": [
+        {
+          "v": "Otevřený",
+          "l": "standard, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "edice portálu"
+        },
+        {
+          "v": "61",
+          "l": "testů shody"
+        },
+        {
+          "v": "25",
+          "l": "jazyků"
+        },
+        {
+          "v": "0 €",
+          "l": "licenční poplatky"
+        }
+      ],
+      "codeCaption": "Co dostane software prodejce",
+      "flowEyebrow": "Jak to funguje",
+      "flowTitle": "Jedna publikace. Pro každý způsob práce prodejců.",
+      "flowLead": "Vaše systémy dodávají do vašeho vlastního portálu. Nákupčí ho používají v prohlížeči, jejich software čte stejný obsah přes standardní API.",
+      "flowCaption": "Jak obsah proudí ze systémů značky přes její vlastní portál k prodejcům.",
+      "flow": {
+        "systems": "Vaše systémy",
+        "systemsItems": [
+          "PIM",
+          "ERP",
+          "DAM",
+          "Exportní složka"
+        ],
+        "upload": "Automatické nahrávání",
+        "uploadItems": [
+          "Plánovaný import",
+          "Nástroj obx",
+          "GitHub Action",
+          "API pro nahrávání"
+        ],
+        "portal": "Váš portál",
+        "portalDomain": "brands.yourbrand.com",
+        "portalItems": [
+          "Katalog a fotografie",
+          "Přístup pro každého prodejce",
+          "Statistiky používání"
+        ],
+        "retailers": "Vaši prodejci",
+        "browser": "Nákupčí, v prohlížeči",
+        "browserItems": [
+          "Hledání a seznam EAN",
+          "Stažení ZIP a CSV"
+        ],
+        "software": "Jejich software, přes API",
+        "softwareItems": [
+          "E-shop a PIM",
+          "POS a nástroje pro obsah"
+        ]
+      },
+      "pillars": [
+        {
+          "eyebrow": "Portál",
+          "h": "Portál, který prodejci opravdu používají.",
+          "p": "Nákupčí se přihlásí do vašeho portálu, vloží kódy EAN z objednávky a stáhnou přesně to, co potřebují: jednu fotku, jednu položku nebo ZIP s celým výběrem.",
+          "items": [
+            "Hledání a filtry podle značky, sezóny, typu produktu a barvy",
+            "Vložte seznam EAN a hned uvidíte, co je k dispozici a co chybí",
+            "Originál, web (2000 px) nebo čtverec, k tomu data o zboží jako tabulka",
+            "Vaše jméno, logo a doména: „Kestrel · {portal}“"
+          ],
+          "link": "Podívejte se očima prodejce"
+        },
+        {
+          "eyebrow": "API",
+          "h": "Jedno API pro každou značku ve standardu.",
+          "p": "Software prodejců stáhne vše jednou a pak už jen změny, včetně toho, co stáhnete z nabídky. Každá fotografie přichází s užívacími právy, datem embarga a původem AI.",
+          "items": [
+            "Nejdřív úplná kopie, pak jen změny",
+            "Vyhledání podle EAN, přiřazené ke správné položce a velikosti",
+            "Webová, čtvercová a náhledová verze; originály, pokud je povolíte",
+            "Dodavatel softwaru ho zapojí jednou a funguje s každou značkou"
+          ],
+          "link": "Přečtěte si referenci API"
+        },
+        {
+          "eyebrow": "Automatizace",
+          "h": "Publikujte ze systémů, které už máte.",
+          "p": "Váš PIM, ERP nebo sdílená složka už data i fotografie obsahuje. Nechte portál, ať si je pravidelně stahuje, nebo je pošlete jedním příkazem. Nikdo nemusí přetahovat soubory.",
+          "items": [
+            "Plánovaný import z webové adresy, SFTP nebo S3, bez kódu",
+            "Nástroj obx pro Windows, macOS a Linux nahraje jen změny",
+            "Hotová GitHub Action a návody pro cron, n8n, Make a Zapier",
+            "Jeden formát CSV a jedno pravidlo pro názvy fotografií"
+          ],
+          "link": "Prohlédněte si návody na automatizaci"
+        }
+      ],
+      "audienceEyebrow": "Pro koho",
+      "audienceTitle": "Pro obě strany obchodního vztahu.",
+      "brands": {
+        "h": "Pro značky",
+        "p": "Přestaňte rozesílat soubory. Publikujte jednou, ze svých systémů, a mějte vše pod kontrolou.",
+        "items": [
+          "Vlastní portál na vlastní doméně",
+          "Každého prodejce schvalujete a určujete, co uvidí",
+          "Vidíte, kdo co stahuje, u každého prodejce",
+          "Provozujte ho sami zdarma, nebo zvolte poskytovatele a kdykoli odejděte"
+        ],
+        "cta": "Více pro značky"
+      },
+      "retailers": {
+        "h": "Pro prodejce",
+        "p": "Každá značka v jednom jednotném formátu, v prohlížeči nebo přímo ve vašem softwaru.",
+        "items": [
+          "Vložte seznam EAN a získejte správné fotografie pro každou velikost",
+          "Stahujte ZIP a data o zboží připravená pro váš obchod",
+          "Jedno napojení pro každou značku ve standardu",
+          "Užívací práva a data embarga u každé fotografie"
+        ],
+        "cta": "Více pro prodejce"
+      },
+      "editionsEyebrow": "Hosting",
+      "editionsTitle": "Provozujte, kde chcete. Plaťte jen hosting.",
+      "editionsLead": "Tři edice stejného portálu. Procházejí stejnými testy shody a mluví stejným API, takže můžete přejít z jedné na druhou.",
+      "editionsLink": "Porovnat možnosti hostingu",
+      "editionFields": [
+        "Běží na",
+        "Potřebujete",
+        "Nastavení",
+        "Cena"
+      ],
+      "editions": [
+        {
+          "tag": "Nejjednodušší",
+          "name": "Přes poskytovatele",
+          "runs": "Hostingová firma nebo agentura ho provozuje za vás",
+          "need": "Nic technického",
+          "setup": "Nastaví ho spolu s vámi",
+          "cost": "Ceník poskytovatele",
+          "cta": "Zobrazit poskytovatele"
+        },
+        {
+          "tag": "Jedno kliknutí",
+          "runs": "Cloudflare Workers s D1 a R2",
+          "need": "Účet Cloudflare",
+          "setup": "Jedno kliknutí, pak průvodce nastavením",
+          "cost": "Tarif Workers Paid, asi 5 dolarů měsíčně",
+          "cta": "Nainstalovat na Cloudflare"
+        },
+        {
+          "tag": "Kontejnery",
+          "runs": "Google Cloud Run nebo jakýkoli server s Dockerem",
+          "need": "Účet Google Cloud nebo server s Dockerem",
+          "setup": "Jeden skript nebo jeden příkaz Dockeru",
+          "cost": "Platba za použití na Cloud Run, nebo vlastní server",
+          "cta": "Spustit s Dockerem"
+        },
+        {
+          "tag": "Bez příkazů",
+          "runs": "Běžný webhosting s PHP a databází",
+          "need": "Program pro FTP",
+          "setup": "Nahrajte ZIP, pak spusťte instalátor",
+          "cost": "Hosting, který už platíte",
+          "cta": "Nainstalovat na webhosting"
+        }
+      ],
+      "trustEyebrow": "Správa",
+      "trustTitle": "Otevřený standard, ne platforma, která vás svazuje.",
+      "trustLead": "Open Brand Exchange má patřit značkám, prodejcům a dodavatelům softwaru, kteří ho používají, ne jedné firmě.",
+      "trust": [
+        {
+          "h": "Otevřená specifikace",
+          "p": "Verze 0.1, zapsaná jako OpenAPI 3.1 a JSON Schema pod licencí CC-BY-4.0. Implementovat ji smí kdokoli, i komerčně."
+        },
+        {
+          "h": "Testy shody",
+          "p": "61 automatických testů ve čtyřech profilech. Žádná implementace nemá výjimku, ani ta od firmy iniciátora."
+        },
+        {
+          "h": "Open-source licence",
+          "p": "SDK, nástroj obx a webové rozhraní jsou pod Apache-2.0. Tři edice portálu jsou pod AGPL-3.0, takže vylepšení zůstávají otevřená."
+        },
+        {
+          "h": "Nadace v založení",
+          "p": "Iniciativa, kterou založil {person}. Autorská práva, název a doména přejdou na {foundation}, jakmile vznikne."
+        },
+        {
+          "h": "Bezpečnost",
+          "p": "Zranitelnosti hlaste důvěrně na {email}. Bezpečnost je jedním ze čtyř profilů shody."
+        },
+        {
+          "h": "Soukromí na prvním místě",
+          "p": "Tento web nenastavuje cookies, nepoužívá sledovací nástroje a nic nenačítá z jiných serverů."
+        }
+      ],
+      "trustLink": "Jak je projekt spravován",
+      "devEyebrow": "Pro vývojáře",
+      "devTitle": "Specifikace, na které můžete stavět.",
+      "devP": "Tři kontrakty OpenAPI, JSON Schema, fiktivní testovací značka a sada testů shody. Go SDK a nástroj obx jsou připravené k použití a funguje jakýkoli HTTP klient.",
+      "devLinks": [
+        "Reference API",
+        "Specifikace na GitHubu",
+        "Go SDK a nástroj obx",
+        "Chybové kódy"
+      ],
+      "faqTitle": "Na co se značky ptají nejdřív",
+      "faqLink": "Všechny dotazy",
+      "closingTitle": "Jedno místo pro všechny vaše prodejce.",
+      "closingP": "Spusťte vlastní portál, nebo nám napište o svých systémech a prodejcích a pomozte utvářet první vydání.",
+      "closingMail": "Napište nám"
+    },
+    "pages": {
+      "brandsH1": "Nastavte jednou. Pro všechny prodejce najednou.",
+      "retailersSoftware": "Pro váš software",
+      "hostingEditions": "Tři edice"
+    }
   }
 }

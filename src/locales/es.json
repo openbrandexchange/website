@@ -753,5 +753,257 @@
     "ctaBrands": "Buscamos marcas que quieran ayudar a dar forma a la primera versión: ¿qué sistemas usas y a cuántos distribuidores sirves? Escríbenos.",
     "ctaRetailers": "Buscamos distribuidores que quieran ayudar a dar forma a la primera versión: ¿qué marcas quieres conectar y qué software usas? Escríbenos.",
     "footer": "Las funciones de «Próximamente» están en desarrollo. Versión 0.1, {date}."
+  },
+  "site": {
+    "nav": {
+      "start": "Empieza como marca",
+      "docs": "Documentación",
+      "preview": "Versión preliminar v0.1"
+    },
+    "footer": {
+      "tagline": "El estándar abierto para que las marcas entreguen imágenes de producto y datos de artículos a sus distribuidores.",
+      "product": "Producto",
+      "developers": "Desarrolladores",
+      "project": "Proyecto",
+      "legal": "Legal",
+      "reference": "Referencia de la API",
+      "errors": "Códigos de error",
+      "spec": "Especificación",
+      "sdk": "Go SDK y herramienta obx",
+      "status": "La versión 0.1 está en pruebas. Se está preparando la primera versión pública."
+    },
+    "shots": {
+      "portalCatalog": "El portal de Kestrel, una marca ficticia, visto por un distribuidor: ocho artículos con filtros por marca, tipo de producto y color.",
+      "portalEan": "Un distribuidor pega seis EAN en el portal de la marca: encuentra cinco y uno no está en el catálogo.",
+      "portalArticle": "Un artículo en el portal de la marca: imágenes por color, descarga en original, web o cuadrada, y el EAN de cada talla.",
+      "adminOverview": "La vista general de la administración de la marca: primeros pasos, cifras del catálogo, solicitudes de acceso y descargas recientes de distribuidores.",
+      "adminCatalog": "El catálogo en la administración de la marca: ocho artículos publicados con sus tallas e imágenes.",
+      "adminStats": "Estadísticas en la administración de la marca: descargas, imágenes y los distribuidores más activos en 30 días.",
+      "adminAutomation": "Subida automática en la administración de la marca: recetas listas para la herramienta obx, cron, GitHub Actions y más."
+    },
+    "home": {
+      "eyebrow": "Estándar abierto · Software libre",
+      "h1": "Publica una vez. Llega a todos tus distribuidores.",
+      "lead": "Open Brand Exchange da a tu marca su propio portal para distribuidores, una API estándar para su software y publicación automática desde tu PIM, tu ERP o tus carpetas. Código abierto, alojamiento gratuito y siempre tuyo.",
+      "ctaRetailer": "Soy distribuidor",
+      "proofLabel": "En cifras",
+      "proof": [
+        {
+          "v": "Abierto",
+          "l": "estándar, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "ediciones del portal"
+        },
+        {
+          "v": "61",
+          "l": "pruebas de conformidad"
+        },
+        {
+          "v": "25",
+          "l": "idiomas"
+        },
+        {
+          "v": "0 €",
+          "l": "en licencias"
+        }
+      ],
+      "codeCaption": "Lo que recibe el software de un distribuidor",
+      "flowEyebrow": "Cómo funciona",
+      "flowTitle": "Una publicación. Para cada forma de trabajar.",
+      "flowLead": "Tus sistemas entregan a tu propio portal. Los compradores lo usan en el navegador; su software lee el mismo contenido a través de la API estándar.",
+      "flowCaption": "Cómo fluye el contenido desde los sistemas de una marca, a través de su propio portal, hasta sus distribuidores.",
+      "flow": {
+        "systems": "Tus sistemas",
+        "systemsItems": [
+          "PIM",
+          "ERP",
+          "DAM",
+          "Carpeta de exportación"
+        ],
+        "upload": "Subida automática",
+        "uploadItems": [
+          "Importación programada",
+          "Herramienta obx",
+          "GitHub Action",
+          "API de subida"
+        ],
+        "portal": "Tu portal",
+        "portalDomain": "brands.yourbrand.com",
+        "portalItems": [
+          "Catálogo e imágenes",
+          "Acceso por distribuidor",
+          "Estadísticas de uso"
+        ],
+        "retailers": "Tus distribuidores",
+        "browser": "Compradores, en el navegador",
+        "browserItems": [
+          "Búsqueda y lista de EAN",
+          "Descargas en zip y CSV"
+        ],
+        "software": "Su software, a través de la API",
+        "softwareItems": [
+          "Tienda online y PIM",
+          "TPV y herramientas de contenido"
+        ]
+      },
+      "pillars": [
+        {
+          "eyebrow": "Portal",
+          "h": "Un portal que tus distribuidores sí usarán.",
+          "p": "Los compradores inician sesión, pegan los EAN de su pedido y descargan justo lo que necesitan: una foto, un artículo o un zip con toda una selección.",
+          "items": [
+            "Busca y filtra por marca, temporada, tipo de producto y color",
+            "Pega una lista de EAN y ve al instante qué hay y qué falta",
+            "Original, web (2000 px) o cuadrada, más los datos en una hoja de cálculo",
+            "Tu nombre, tu logotipo y tu dominio: «Kestrel · {portal}»"
+          ],
+          "link": "Míralo con los ojos de un distribuidor"
+        },
+        {
+          "eyebrow": "API",
+          "h": "Una API para todas las marcas del estándar.",
+          "p": "El software del distribuidor descarga todo una vez y después solo los cambios, también lo que retiras. Cada imagen llega con sus derechos de uso, su fecha de embargo y su origen de IA.",
+          "items": [
+            "Primero una copia completa, después solo los cambios",
+            "Búsqueda por EAN, vinculada al artículo y la talla correctos",
+            "Versiones web, cuadrada y miniatura; originales si lo permites",
+            "Un fabricante de software lo integra una vez y sirve para todas las marcas"
+          ],
+          "link": "Lee la referencia de la API"
+        },
+        {
+          "eyebrow": "Automatización",
+          "h": "Publica desde los sistemas que ya tienes.",
+          "p": "Tu PIM, tu ERP o una carpeta compartida ya contienen los datos y las fotos. Deja que tu portal los recoja con una programación, o envíalos con un solo comando. Nadie arrastra archivos.",
+          "items": [
+            "Importación programada desde una dirección web, SFTP o S3, sin código",
+            "La herramienta obx para Windows, macOS y Linux solo sube lo que cambió",
+            "Una GitHub Action lista para usar y recetas para cron, n8n, Make y Zapier",
+            "Un único formato CSV y una única regla de nombres para las fotos"
+          ],
+          "link": "Ver las recetas de automatización"
+        }
+      ],
+      "audienceEyebrow": "Para quién es",
+      "audienceTitle": "Pensado para ambos lados de la relación.",
+      "brands": {
+        "h": "Para marcas",
+        "p": "Deja de enviar archivos. Publica una vez, desde tus propios sistemas, y mantén el control.",
+        "items": [
+          "Tu propio portal, en tu propio dominio",
+          "Apruebas a cada distribuidor y decides qué ve",
+          "Consulta quién descarga qué, por distribuidor",
+          "Alójalo tú mismo gratis, o elige un proveedor y cámbiate cuando quieras"
+        ],
+        "cta": "Descubre la versión para marcas"
+      },
+      "retailers": {
+        "h": "Para distribuidores",
+        "p": "Todas las marcas en un formato coherente, en tu navegador o directamente en tu software.",
+        "items": [
+          "Pega tu lista de EAN y obtén las imágenes correctas para cada talla",
+          "Descarga zips y datos de artículos, listos para tu tienda",
+          "Una sola conexión para todas las marcas del estándar",
+          "Derechos de uso y fechas de embargo con cada imagen"
+        ],
+        "cta": "Descubre la versión para distribuidores"
+      },
+      "editionsEyebrow": "Alojamiento",
+      "editionsTitle": "Donde tú quieras. Solo pagas el alojamiento.",
+      "editionsLead": "Tres ediciones del mismo portal. Superan las mismas pruebas de conformidad y hablan la misma API, así que puedes pasar de una a otra.",
+      "editionsLink": "Compara las opciones de alojamiento",
+      "editionFields": [
+        "Funciona en",
+        "Necesitas",
+        "Instalación",
+        "Coste"
+      ],
+      "editions": [
+        {
+          "tag": "Lo más fácil",
+          "name": "Con un proveedor",
+          "runs": "Una empresa de alojamiento o una agencia lo gestiona por ti",
+          "need": "Nada técnico",
+          "setup": "Lo configuran contigo",
+          "cost": "Las tarifas del propio proveedor",
+          "cta": "Ver proveedores"
+        },
+        {
+          "tag": "Un clic",
+          "runs": "Cloudflare Workers, con D1 y R2",
+          "need": "Una cuenta de Cloudflare",
+          "setup": "Un clic y después el asistente",
+          "cost": "Plan Workers Paid, unos 5 dólares al mes",
+          "cta": "Instalar en Cloudflare"
+        },
+        {
+          "tag": "Contenedores",
+          "runs": "Google Cloud Run o cualquier servidor con Docker",
+          "need": "Una cuenta de Google Cloud o un servidor Docker",
+          "setup": "Un script o un comando de Docker",
+          "cost": "Pago por uso en Cloud Run, o tu propio servidor",
+          "cta": "Instalar con Docker"
+        },
+        {
+          "tag": "Sin comandos",
+          "runs": "Alojamiento web normal con PHP y una base de datos",
+          "need": "Un programa de FTP",
+          "setup": "Sube un zip y ejecuta el instalador",
+          "cost": "El alojamiento que ya pagas",
+          "cta": "Instalar en alojamiento web"
+        }
+      ],
+      "trustEyebrow": "Gobernanza",
+      "trustTitle": "Un estándar abierto, no una plataforma que te ata.",
+      "trustLead": "Open Brand Exchange debe pertenecer a las marcas, los distribuidores y los fabricantes de software que lo usan, no a una sola empresa.",
+      "trust": [
+        {
+          "h": "Especificación abierta",
+          "p": "Versión 0.1, escrita en OpenAPI 3.1 y JSON Schema bajo CC-BY-4.0. Cualquiera puede implementarla, también con fines comerciales."
+        },
+        {
+          "h": "Pruebas de conformidad",
+          "p": "61 comprobaciones automáticas en cuatro perfiles. Ninguna implementación recibe trato especial, tampoco la empresa del propio impulsor."
+        },
+        {
+          "h": "Licencias de código abierto",
+          "p": "El SDK, la herramienta obx y la interfaz web son Apache-2.0. Las tres ediciones del portal son AGPL-3.0, así que las mejoras siguen siendo abiertas."
+        },
+        {
+          "h": "Una fundación en constitución",
+          "p": "Una iniciativa de {person}. Los derechos de autor, el nombre y el dominio pasarán a la {foundation} en cuanto exista."
+        },
+        {
+          "h": "Seguridad",
+          "p": "Comunica las vulnerabilidades en privado a {email}. La seguridad es uno de los cuatro perfiles de conformidad."
+        },
+        {
+          "h": "Privacidad ante todo",
+          "p": "Este sitio web no usa cookies ni rastreadores y no carga nada de otros servidores."
+        }
+      ],
+      "trustLink": "Descubre cómo se gobierna",
+      "devEyebrow": "Desarrolladores",
+      "devTitle": "Una especificación sobre la que construir.",
+      "devP": "Tres contratos OpenAPI, JSON Schemas, una marca de prueba ficticia y pruebas de conformidad. El Go SDK y la herramienta obx están listos para usar, y sirve cualquier cliente HTTP.",
+      "devLinks": [
+        "Referencia de la API",
+        "Especificación en GitHub",
+        "Go SDK y herramienta obx",
+        "Códigos de error"
+      ],
+      "faqTitle": "Lo que las marcas preguntan primero",
+      "faqLink": "Todas las preguntas",
+      "closingTitle": "Un solo lugar donde cada distribuidor acierta.",
+      "closingP": "Pon en marcha tu propio portal, o cuéntanos cuáles son tus sistemas y tus distribuidores y ayúdanos a dar forma a la primera versión.",
+      "closingMail": "Escríbenos"
+    },
+    "pages": {
+      "brandsH1": "Configúralo una vez. Para todos tus distribuidores a la vez.",
+      "retailersSoftware": "Para tu software",
+      "hostingEditions": "Las tres ediciones"
+    }
   }
 }

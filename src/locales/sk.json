@@ -753,5 +753,257 @@
     "ctaBrands": "Hľadáme značky, ktoré chcú spolutvoriť prvú verziu: aké systémy používate a koľkým predajcom dodávate? Napíšte nám.",
     "ctaRetailers": "Hľadáme predajcov, ktorí chcú spolutvoriť prvú verziu: aké značky chcete prepojiť a aký softvér používate? Napíšte nám.",
     "footer": "Funkcie v časti „Pripravujeme“ sú vo vývoji. Verzia 0.1, {date}."
+  },
+  "site": {
+    "nav": {
+      "start": "Začať ako značka",
+      "docs": "Dokumentácia",
+      "preview": "Náhľad verzie 0.1"
+    },
+    "footer": {
+      "tagline": "Otvorený štandard na odovzdávanie produktových fotografií a údajov o tovare od značiek ich predajcom.",
+      "product": "Produkt",
+      "developers": "Pre vývojárov",
+      "project": "Projekt",
+      "legal": "Právne informácie",
+      "reference": "Referencia API",
+      "errors": "Chybové kódy",
+      "spec": "Špecifikácia",
+      "sdk": "Go SDK a nástroj obx",
+      "status": "Verzia 0.1 sa testuje. Pripravuje sa prvé verejné vydanie."
+    },
+    "shots": {
+      "portalCatalog": "Portál fiktívnej značky Kestrel očami predajcu: osem položiek s filtrami podľa značky, typu produktu a farby.",
+      "portalEan": "Predajca vloží do portálu šesť kódov EAN: päť sa nájde, jeden v katalógu nie je.",
+      "portalArticle": "Položka v portáli: fotografie pre každú farbu, voľba sťahovania (originál, web alebo štvorec) a EAN každej veľkosti.",
+      "adminOverview": "Prehľad v administrácii značky: prvé kroky, počty v katalógu, žiadosti o prístup a posledné sťahovania predajcov.",
+      "adminCatalog": "Katalóg v administrácii značky: osem publikovaných položiek s veľkosťami a fotografiami.",
+      "adminStats": "Štatistiky v administrácii značky: sťahovania, fotografie a najaktívnejší predajcovia za 30 dní.",
+      "adminAutomation": "Automatické nahrávanie v administrácii značky: hotové návody pre nástroj obx, cron, GitHub Actions a ďalšie."
+    },
+    "home": {
+      "eyebrow": "Otvorený štandard · Bezplatný softvér",
+      "h1": "Publikujte raz. Dostane to každý predajca.",
+      "lead": "Open Brand Exchange dáva vašej značke vlastný portál pre predajcov, štandardné API pre ich softvér a automatické publikovanie z vášho PIM, ERP alebo priečinkov. Open source, hosting zadarmo, vždy pod vašou kontrolou.",
+      "ctaRetailer": "Som predajca",
+      "proofLabel": "Na prvý pohľad",
+      "proof": [
+        {
+          "v": "Otvorený",
+          "l": "štandard, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "edície portálu"
+        },
+        {
+          "v": "61",
+          "l": "testov zhody"
+        },
+        {
+          "v": "25",
+          "l": "jazykov"
+        },
+        {
+          "v": "0 €",
+          "l": "licenčné poplatky"
+        }
+      ],
+      "codeCaption": "Čo dostane softvér predajcu",
+      "flowEyebrow": "Ako to funguje",
+      "flowTitle": "Jedna publikácia. Pre každý spôsob práce predajcov.",
+      "flowLead": "Vaše systémy dodávajú do vášho vlastného portálu. Nákupcovia ho používajú v prehliadači, ich softvér číta rovnaký obsah cez štandardné API.",
+      "flowCaption": "Ako obsah prúdi zo systémov značky cez jej vlastný portál k predajcom.",
+      "flow": {
+        "systems": "Vaše systémy",
+        "systemsItems": [
+          "PIM",
+          "ERP",
+          "DAM",
+          "Exportný priečinok"
+        ],
+        "upload": "Automatické nahrávanie",
+        "uploadItems": [
+          "Plánovaný import",
+          "Nástroj obx",
+          "GitHub Action",
+          "API na nahrávanie"
+        ],
+        "portal": "Váš portál",
+        "portalDomain": "brands.yourbrand.com",
+        "portalItems": [
+          "Katalóg a fotografie",
+          "Prístup pre každého predajcu",
+          "Štatistiky používania"
+        ],
+        "retailers": "Vaši predajcovia",
+        "browser": "Nákupcovia, v prehliadači",
+        "browserItems": [
+          "Vyhľadávanie a zoznam EAN",
+          "Sťahovanie ZIP a CSV"
+        ],
+        "software": "Ich softvér, cez API",
+        "softwareItems": [
+          "E-shop a PIM",
+          "POS a nástroje na obsah"
+        ]
+      },
+      "pillars": [
+        {
+          "eyebrow": "Portál",
+          "h": "Portál, ktorý predajcovia naozaj používajú.",
+          "p": "Nákupcovia sa prihlásia do vášho portálu, vložia kódy EAN z objednávky a stiahnu presne to, čo potrebujú: jednu fotku, jednu položku alebo ZIP s celým výberom.",
+          "items": [
+            "Vyhľadávanie a filtre podľa značky, sezóny, typu produktu a farby",
+            "Vložte zoznam EAN a hneď uvidíte, čo je k dispozícii a čo chýba",
+            "Originál, web (2000 px) alebo štvorec, k tomu údaje o tovare ako tabuľka",
+            "Vaše meno, logo a doména: „Kestrel · {portal}“"
+          ],
+          "link": "Pozrite sa očami predajcu"
+        },
+        {
+          "eyebrow": "API",
+          "h": "Jedno API pre každú značku v štandarde.",
+          "p": "Softvér predajcov stiahne všetko raz a potom už len zmeny, vrátane toho, čo stiahnete z ponuky. Každá fotografia prichádza s právami na použitie, dátumom embarga a pôvodom AI.",
+          "items": [
+            "Najprv úplná kópia, potom len zmeny",
+            "Vyhľadanie podľa EAN, priradené k správnej položke a veľkosti",
+            "Webová, štvorcová a náhľadová verzia; originály, ak ich povolíte",
+            "Dodávateľ softvéru ho zapojí raz a funguje s každou značkou"
+          ],
+          "link": "Prečítajte si referenciu API"
+        },
+        {
+          "eyebrow": "Automatizácia",
+          "h": "Publikujte zo systémov, ktoré už máte.",
+          "p": "Váš PIM, ERP alebo zdieľaný priečinok už údaje aj fotografie obsahuje. Nechajte portál, nech si ich pravidelne sťahuje, alebo ich pošlite jedným príkazom. Nikto nemusí presúvať súbory.",
+          "items": [
+            "Plánovaný import z webovej adresy, SFTP alebo S3, bez kódu",
+            "Nástroj obx pre Windows, macOS a Linux nahrá len zmeny",
+            "Hotová GitHub Action a návody pre cron, n8n, Make a Zapier",
+            "Jeden formát CSV a jedno pravidlo pre názvy fotografií"
+          ],
+          "link": "Pozrite si návody na automatizáciu"
+        }
+      ],
+      "audienceEyebrow": "Pre koho",
+      "audienceTitle": "Pre obe strany obchodného vzťahu.",
+      "brands": {
+        "h": "Pre značky",
+        "p": "Prestaňte rozosielať súbory. Publikujte raz, zo svojich systémov, a majte všetko pod kontrolou.",
+        "items": [
+          "Vlastný portál na vlastnej doméne",
+          "Každého predajcu schvaľujete a určujete, čo uvidí",
+          "Vidíte, kto čo sťahuje, pri každom predajcovi",
+          "Prevádzkujte ho sami zadarmo alebo zvoľte poskytovateľa a kedykoľvek odíďte"
+        ],
+        "cta": "Viac pre značky"
+      },
+      "retailers": {
+        "h": "Pre predajcov",
+        "p": "Každá značka v jednom jednotnom formáte, v prehliadači alebo priamo vo vašom softvéri.",
+        "items": [
+          "Vložte zoznam EAN a získajte správne fotografie pre každú veľkosť",
+          "Sťahujte ZIP a údaje o tovare pripravené pre váš obchod",
+          "Jedno napojenie pre každú značku v štandarde",
+          "Práva na použitie a dátumy embarga pri každej fotografii"
+        ],
+        "cta": "Viac pre predajcov"
+      },
+      "editionsEyebrow": "Hosting",
+      "editionsTitle": "Prevádzkujte, kde chcete. Plaťte len hosting.",
+      "editionsLead": "Tri edície toho istého portálu. Prechádzajú rovnakými testami zhody a hovoria rovnakým API, takže môžete prejsť z jednej na druhú.",
+      "editionsLink": "Porovnať možnosti hostingu",
+      "editionFields": [
+        "Beží na",
+        "Potrebujete",
+        "Nastavenie",
+        "Cena"
+      ],
+      "editions": [
+        {
+          "tag": "Najjednoduchšie",
+          "name": "Cez poskytovateľa",
+          "runs": "Hostingová firma alebo agentúra ho prevádzkuje za vás",
+          "need": "Nič technické",
+          "setup": "Nastaví ho spolu s vami",
+          "cost": "Cenník poskytovateľa",
+          "cta": "Zobraziť poskytovateľov"
+        },
+        {
+          "tag": "Jedno kliknutie",
+          "runs": "Cloudflare Workers s D1 a R2",
+          "need": "Účet Cloudflare",
+          "setup": "Jedno kliknutie, potom sprievodca nastavením",
+          "cost": "Plán Workers Paid, asi 5 dolárov mesačne",
+          "cta": "Nainštalovať na Cloudflare"
+        },
+        {
+          "tag": "Kontajnery",
+          "runs": "Google Cloud Run alebo akýkoľvek server s Dockerom",
+          "need": "Účet Google Cloud alebo server s Dockerom",
+          "setup": "Jeden skript alebo jeden príkaz Dockera",
+          "cost": "Platba za použitie na Cloud Run alebo vlastný server",
+          "cta": "Spustiť s Dockerom"
+        },
+        {
+          "tag": "Bez príkazov",
+          "runs": "Bežný webhosting s PHP a databázou",
+          "need": "Program na FTP",
+          "setup": "Nahrajte ZIP, potom spustite inštalátor",
+          "cost": "Hosting, ktorý už platíte",
+          "cta": "Nainštalovať na webhosting"
+        }
+      ],
+      "trustEyebrow": "Správa",
+      "trustTitle": "Otvorený štandard, nie platforma, ktorá vás zväzuje.",
+      "trustLead": "Open Brand Exchange má patriť značkám, predajcom a dodávateľom softvéru, ktorí ho používajú, nie jednej firme.",
+      "trust": [
+        {
+          "h": "Otvorená špecifikácia",
+          "p": "Verzia 0.1, zapísaná ako OpenAPI 3.1 a JSON Schema pod licenciou CC-BY-4.0. Implementovať ju smie ktokoľvek, aj komerčne."
+        },
+        {
+          "h": "Testy zhody",
+          "p": "61 automatických testov v štyroch profiloch. Žiadna implementácia nemá výnimku, ani tá od firmy iniciátora."
+        },
+        {
+          "h": "Open-source licencie",
+          "p": "SDK, nástroj obx a webové rozhranie sú pod Apache-2.0. Tri edície portálu sú pod AGPL-3.0, takže vylepšenia zostávajú otvorené."
+        },
+        {
+          "h": "Nadácia v založení",
+          "p": "Iniciatíva, ktorú založil {person}. Autorské práva, názov a doména prejdú na {foundation}, len čo vznikne."
+        },
+        {
+          "h": "Bezpečnosť",
+          "p": "Zraniteľnosti hláste dôverne na {email}. Bezpečnosť je jedným zo štyroch profilov zhody."
+        },
+        {
+          "h": "Súkromie na prvom mieste",
+          "p": "Tento web nenastavuje cookies, nepoužíva sledovacie nástroje a nič nenačítava z iných serverov."
+        }
+      ],
+      "trustLink": "Ako je projekt spravovaný",
+      "devEyebrow": "Pre vývojárov",
+      "devTitle": "Špecifikácia, na ktorej môžete stavať.",
+      "devP": "Tri kontrakty OpenAPI, JSON Schema, fiktívna testovacia značka a sada testov zhody. Go SDK a nástroj obx sú pripravené na použitie a funguje akýkoľvek HTTP klient.",
+      "devLinks": [
+        "Referencia API",
+        "Špecifikácia na GitHube",
+        "Go SDK a nástroj obx",
+        "Chybové kódy"
+      ],
+      "faqTitle": "Na čo sa značky pýtajú najskôr",
+      "faqLink": "Všetky otázky",
+      "closingTitle": "Jedno miesto pre všetkých vašich predajcov.",
+      "closingP": "Spustite vlastný portál alebo nám napíšte o svojich systémoch a predajcoch a pomôžte formovať prvé vydanie.",
+      "closingMail": "Napíšte nám"
+    },
+    "pages": {
+      "brandsH1": "Nastavte raz. Pre všetkých predajcov naraz.",
+      "retailersSoftware": "Pre váš softvér",
+      "hostingEditions": "Tri edície"
+    }
   }
 }

@@ -753,5 +753,257 @@
     "ctaBrands": "Qed infittxu marki li jridu jgħinu jsawru l-ewwel verżjoni: liema sistemi tuża, u kemm-il bejjiegħ taqdi? Iktbilna.",
     "ctaRetailers": "Qed infittxu bejjiegħa li jridu jgħinu jsawru l-ewwel verżjoni: liema marki tixtieq tqabbad, u liema software tuża? Iktbilna.",
     "footer": "Il-funzjonijiet taħt “Ġej” għadhom qed jiġu żviluppati. Verżjoni 0.1, {date}."
+  },
+  "site": {
+    "nav": {
+      "start": "Ibda bħala marka",
+      "docs": "Dokumentazzjoni",
+      "preview": "Verżjoni preliminari v0.1"
+    },
+    "footer": {
+      "tagline": "L-istandard miftuħ biex il-marki jwasslu ritratti tal-prodotti u data tal-oġġetti lill-bejjiegħa tagħhom.",
+      "product": "Prodott",
+      "developers": "Żviluppaturi",
+      "project": "Proġett",
+      "legal": "Legali",
+      "reference": "Referenza tal-API",
+      "errors": "Kodiċi tal-iżbalji",
+      "spec": "Speċifikazzjoni",
+      "sdk": "Go SDK u l-għodda obx",
+      "status": "Il-verżjoni 0.1 qed tiġi ttestjata. L-ewwel ħarġa pubblika qed titħejja."
+    },
+    "shots": {
+      "portalCatalog": "Il-portal tal-marka fittizja Kestrel kif jarah bejjiegħ: tmien oġġetti b'filtri għall-marka, it-tip ta' prodott u l-kulur.",
+      "portalEan": "Bejjiegħ iwaħħal sitt EANs fil-portal tal-marka: ħamsa jinstabu, wieħed mhux fil-katalgu.",
+      "portalArticle": "Oġġett fil-portal tal-marka: ritratti għal kull kulur, l-għażla tad-download bejn oriġinali, web u kwadru, u l-EAN ta' kull daqs.",
+      "adminOverview": "Il-ħarsa ġenerali tal-amministrazzjoni tal-marka: l-ewwel passi, l-għadd fil-katalgu, talbiet għall-aċċess u l-aħħar downloads mill-bejjiegħa.",
+      "adminCatalog": "Il-katalgu fl-amministrazzjoni tal-marka: tmien oġġetti ppubblikati bid-daqsijiet u r-ritratti tagħhom.",
+      "adminStats": "Statistika fl-amministrazzjoni tal-marka: downloads, ritratti u l-aktar bejjiegħa attivi fuq 30 jum.",
+      "adminAutomation": "Tlugħ awtomatiku fl-amministrazzjoni tal-marka: riċetti lesti għall-għodda obx, cron, GitHub Actions u aktar."
+    },
+    "home": {
+      "eyebrow": "Standard miftuħ · Software b'xejn",
+      "h1": "Ippubblika darba. Kull bejjiegħ jirċevih.",
+      "lead": "Open Brand Exchange jagħti lill-marka tiegħek il-portal tagħha għall-bejjiegħa, API standard għas-software tagħhom u pubblikazzjoni awtomatika mill-PIM, l-ERP jew il-folders tiegħek. Sors miftuħ, hosting b'xejn, u dejjem tiegħek.",
+      "ctaRetailer": "Jien bejjiegħ",
+      "proofLabel": "Fil-qosor",
+      "proof": [
+        {
+          "v": "Miftuħ",
+          "l": "standard, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "edizzjonijiet tal-portal"
+        },
+        {
+          "v": "61",
+          "l": "kontroll ta' konformità"
+        },
+        {
+          "v": "25",
+          "l": "lingwa"
+        },
+        {
+          "v": "€0",
+          "l": "miżata tal-liċenzja"
+        }
+      ],
+      "codeCaption": "X'jirċievi s-software ta' bejjiegħ",
+      "flowEyebrow": "Kif jaħdem",
+      "flowTitle": "Pubblikazzjoni waħda. Għal kull mod kif jaħdmu l-bejjiegħa tiegħek.",
+      "flowLead": "Is-sistemi tiegħek iwasslu lill-portal tiegħek stess. Ix-xerrejja jużawh fil-browser; is-software tagħhom jaqra l-istess kontenut permezz tal-API standard.",
+      "flowCaption": "Kif il-kontenut jgħaddi mis-sistemi ta' marka, permezz tal-portal tagħha stess, sal-bejjiegħa tagħha.",
+      "flow": {
+        "systems": "Is-sistemi tiegħek",
+        "systemsItems": [
+          "PIM",
+          "ERP",
+          "DAM",
+          "Folder tal-esportazzjoni"
+        ],
+        "upload": "Tlugħ awtomatiku",
+        "uploadItems": [
+          "Importazzjoni skedata",
+          "L-għodda obx",
+          "GitHub Action",
+          "API tat-tlugħ"
+        ],
+        "portal": "Il-portal tiegħek",
+        "portalDomain": "brands.yourbrand.com",
+        "portalItems": [
+          "Katalgu u ritratti",
+          "Aċċess għal kull bejjiegħ",
+          "Statistika tal-użu"
+        ],
+        "retailers": "Il-bejjiegħa tiegħek",
+        "browser": "Xerrejja, fil-browser",
+        "browserItems": [
+          "Tfittxija u lista tal-EAN",
+          "Downloads f'zip u CSV"
+        ],
+        "software": "Is-software tagħhom, permezz tal-API",
+        "softwareItems": [
+          "Ħanut online u PIM",
+          "POS u għodod tal-kontenut"
+        ]
+      },
+      "pillars": [
+        {
+          "eyebrow": "Portal",
+          "h": "Portal li l-bejjiegħa tiegħek se jużaw tassew.",
+          "p": "Ix-xerrejja jidħlu fil-portal tiegħek, iwaħħlu l-EANs mill-ordni tagħhom u jniżżlu eżatt dak li għandhom bżonn: ritratt wieħed, oġġett wieħed jew zip ta' għażla sħiħa.",
+          "items": [
+            "Fittex u ffiltra skont il-marka, l-istaġun, it-tip ta' prodott u l-kulur",
+            "Waħħal lista tal-EAN u ara mill-ewwel x'hemm u x'jonqos",
+            "Oriġinali, web (2000 px) jew kwadru, flimkien mad-data tal-oġġetti bħala spreadsheet",
+            "L-isem, il-logo u d-dominju tiegħek: “Kestrel · {portal}”"
+          ],
+          "link": "Arah minn għajnejn bejjiegħ"
+        },
+        {
+          "eyebrow": "API",
+          "h": "API wieħed għal kull marka fuq l-istandard.",
+          "p": "Is-software tal-bejjiegħa jġib kollox darba u mbagħad biss dak li nbidel, inkluż dak li tirtira. Kull ritratt jasal bid-drittijiet tal-użu, id-data tal-embargo u l-oriġini tal-IA tiegħu.",
+          "items": [
+            "L-ewwel kopja sħiħa, imbagħad il-bidliet biss",
+            "Tfittxija bl-EAN, marbuta mal-oġġett u d-daqs it-tajjeb",
+            "Verżjonijiet web, kwadri u żgħar; l-oriġinali meta tippermettihom",
+            "Fornitur tas-software jibnih darba u jaħdem ma' kull marka"
+          ],
+          "link": "Aqra r-referenza tal-API"
+        },
+        {
+          "eyebrow": "Awtomazzjoni",
+          "h": "Ippubblika mis-sistemi li diġà għandek.",
+          "p": "Il-PIM, l-ERP jew folder kondiviż tiegħek diġà fihom id-data u r-ritratti. Ħalli l-portal iġibhom skont skeda, jew ibgħathom b'kmand wieħed. Ħadd ma jibqa' jkaxkar fajls.",
+          "items": [
+            "Importazzjoni skedata minn indirizz web, SFTP jew S3, mingħajr kodiċi",
+            "L-għodda obx għal Windows, macOS u Linux ittella' biss dak li nbidel",
+            "GitHub Action lest, u riċetti għal cron, n8n, Make u Zapier",
+            "Format CSV wieħed u regola waħda għall-ismijiet tar-ritratti"
+          ],
+          "link": "Ara r-riċetti tal-awtomazzjoni"
+        }
+      ],
+      "audienceEyebrow": "Għal min hu",
+      "audienceTitle": "Mibni għaż-żewġ naħat tar-relazzjoni.",
+      "brands": {
+        "h": "Għall-marki",
+        "p": "Ieqaf ibgħat fajls. Ippubblika darba, mis-sistemi tiegħek stess, u żomm il-kontroll.",
+        "items": [
+          "Il-portal tiegħek, fuq id-dominju tiegħek",
+          "Tapprova kull bejjiegħ u tiddeċiedi x'jara",
+          "Ara min iniżżel xiex, għal kull bejjiegħ",
+          "Ospitah int stess b'xejn, jew agħżel fornitur u ħallih meta trid"
+        ],
+        "cta": "Skopri għall-marki"
+      },
+      "retailers": {
+        "h": "Għall-bejjiegħa",
+        "p": "Kull marka f'format wieħed konsistenti, fil-browser jew dritt fis-software tiegħek.",
+        "items": [
+          "Waħħal il-lista tal-EAN u ikseb ir-ritratti t-tajbin għal kull daqs",
+          "Niżżel zips u data tal-oġġetti, lesti għall-ħanut tiegħek",
+          "Konnessjoni waħda għal kull marka fuq l-istandard",
+          "Drittijiet tal-użu u dati tal-embargo ma' kull ritratt"
+        ],
+        "cta": "Skopri għall-bejjiegħa"
+      },
+      "editionsEyebrow": "Hosting",
+      "editionsTitle": "Ħaddmu fejn trid. Ħallas il-hosting biss.",
+      "editionsLead": "Tliet edizzjonijiet tal-istess portal. Jgħaddu mill-istess testijiet ta' konformità u jitkellmu l-istess API, għalhekk tista' tgħaddi minn waħda għall-oħra.",
+      "editionsLink": "Qabbel l-għażliet ta' hosting",
+      "editionFields": [
+        "Jaħdem fuq",
+        "Għandek bżonn",
+        "Installazzjoni",
+        "Spiża"
+      ],
+      "editions": [
+        {
+          "tag": "L-eħfef",
+          "name": "Ospitat minn fornitur",
+          "runs": "Kumpanija tal-hosting jew aġenzija tħaddmu għalik",
+          "need": "Xejn tekniku",
+          "setup": "Iwaqqfuh flimkien miegħek",
+          "cost": "Il-prezzijiet tal-fornitur",
+          "cta": "Ara l-fornituri"
+        },
+        {
+          "tag": "Klikk waħda",
+          "runs": "Cloudflare Workers, b'D1 u R2",
+          "need": "Kont ta' Cloudflare",
+          "setup": "Klikk waħda, imbagħad il-wizard tas-setup",
+          "cost": "Pjan Workers Paid, madwar 5 dollari fix-xahar",
+          "cta": "Installa fuq Cloudflare"
+        },
+        {
+          "tag": "Containers",
+          "runs": "Google Cloud Run, jew kwalunkwe server b'Docker",
+          "need": "Kont ta' Google Cloud jew server b'Docker",
+          "setup": "Script wieħed jew kmand Docker wieħed",
+          "cost": "Ħlas skont l-użu fuq Cloud Run, jew is-server tiegħek",
+          "cta": "Installa b'Docker"
+        },
+        {
+          "tag": "Mingħajr kmandi",
+          "runs": "Web hosting ordinarju b'PHP u database",
+          "need": "Programm FTP",
+          "setup": "Tella' zip, imbagħad l-installatur",
+          "cost": "Il-hosting li diġà tħallas għalih",
+          "cta": "Installa fuq web hosting"
+        }
+      ],
+      "trustEyebrow": "Governanza",
+      "trustTitle": "Standard miftuħ, mhux pjattaforma li tintrabat magħha.",
+      "trustLead": "Open Brand Exchange għandu jkun tal-marki, tal-bejjiegħa u tal-fornituri tas-software li jużawh, mhux ta' kumpanija waħda.",
+      "trust": [
+        {
+          "h": "Speċifikazzjoni miftuħa",
+          "p": "Verżjoni 0.1, miktuba f'OpenAPI 3.1 u JSON Schema taħt CC-BY-4.0. Kulħadd jista' jimplimentaha, anki b'mod kummerċjali."
+        },
+        {
+          "h": "Testijiet ta' konformità",
+          "p": "61 kontroll awtomatiku f'erba' profili. L-ebda implimentazzjoni ma tieħu trattament speċjali, lanqas dik tal-kumpanija tal-inizjatur."
+        },
+        {
+          "h": "Liċenzji open source",
+          "p": "L-SDK, l-għodda obx u l-interfaċċa web huma Apache-2.0. It-tliet edizzjonijiet tal-portal huma AGPL-3.0, biex it-titjib jibqa' miftuħ."
+        },
+        {
+          "h": "Fondazzjoni li qed titwaqqaf",
+          "p": "Inizjattiva ta' {person}. Id-drittijiet tal-awtur, l-isem u d-dominju jgħaddu lill-{foundation} hekk kif tibda teżisti."
+        },
+        {
+          "h": "Sigurtà",
+          "p": "Irrapporta l-vulnerabbiltajiet b'mod privat lil {email}. Is-sigurtà hija wieħed mill-erba' profili ta' konformità."
+        },
+        {
+          "h": "Il-privatezza l-ewwel",
+          "p": "Dan is-sit ma jpoġġi l-ebda cookie, ma juża l-ebda tracker u ma jtella' xejn minn servers oħra."
+        }
+      ],
+      "trustLink": "Aqra kif huwa ggvernat",
+      "devEyebrow": "Żviluppaturi",
+      "devTitle": "Speċifikazzjoni li tista' tibni fuqha.",
+      "devP": "Tliet kuntratti OpenAPI, JSON Schemas, marka fittizja għat-test u testijiet ta' konformità. Il-Go SDK u l-għodda obx huma lesti għall-użu, u kull klijent HTTP jaħdem.",
+      "devLinks": [
+        "Referenza tal-API",
+        "Speċifikazzjoni fuq GitHub",
+        "Go SDK u l-għodda obx",
+        "Kodiċi tal-iżbalji"
+      ],
+      "faqTitle": "L-ewwel mistoqsijiet tal-marki",
+      "faqLink": "Il-mistoqsijiet kollha",
+      "closingTitle": "Post wieħed fejn kull bejjiegħ isib dak it-tajjeb.",
+      "closingP": "Waqqaf il-portal tiegħek, jew għidilna dwar is-sistemi u l-bejjiegħa tiegħek u għin fit-tiswir tal-ewwel ħarġa.",
+      "closingMail": "Ibgħatilna email"
+    },
+    "pages": {
+      "brandsH1": "Waqqfu darba. Għall-bejjiegħa kollha f'daqqa.",
+      "retailersSoftware": "Għas-software tiegħek",
+      "hostingEditions": "It-tliet edizzjonijiet"
+    }
   }
 }

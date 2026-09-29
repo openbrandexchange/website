@@ -753,5 +753,257 @@
     "ctaBrands": "Vi søger brands, der vil være med til at forme den første version: hvilke systemer bruger du, og hvor mange forhandlere betjener du? Skriv til os.",
     "ctaRetailers": "Vi søger forhandlere, der vil være med til at forme den første version: hvilke brands vil du forbinde, og hvilken software bruger du? Skriv til os.",
     "footer": "Funktioner under »På vej« er under udvikling. Version 0.1, {date}."
+  },
+  "site": {
+    "nav": {
+      "start": "Kom i gang som brand",
+      "docs": "Dokumentation",
+      "preview": "v0.1-forhåndsvisning"
+    },
+    "footer": {
+      "tagline": "Den åbne standard for levering af produktbilleder og varedata fra brands til deres forhandlere.",
+      "product": "Produkt",
+      "developers": "Udviklere",
+      "project": "Projekt",
+      "legal": "Juridisk",
+      "reference": "API-reference",
+      "errors": "Fejlkoder",
+      "spec": "Specifikation",
+      "sdk": "Go SDK og obx-værktøjet",
+      "status": "Version 0.1 er i test. Den første offentlige udgivelse er ved at blive forberedt."
+    },
+    "shots": {
+      "portalCatalog": "Forhandlerportalen for det fiktive brand Kestrel, som en forhandler ser den: otte varer med filtre for brand, produkttype og farve.",
+      "portalEan": "En forhandler indsætter seks EAN-numre i portalen: fem findes, ét er ikke i kataloget.",
+      "portalArticle": "En vare i portalen: billeder pr. farve, valget mellem original, web og kvadratisk ved download, og EAN for hver størrelse.",
+      "adminOverview": "Oversigten i brandets administration: første skridt, katalogtal, adgangsanmodninger og forhandlernes seneste downloads.",
+      "adminCatalog": "Kataloget i brandets administration: otte udgivne varer med størrelser og billeder.",
+      "adminStats": "Statistik i brandets administration: downloads, billeder og de mest aktive forhandlere over 30 dage.",
+      "adminAutomation": "Automatisk upload i brandets administration: færdige opskrifter til obx-værktøjet, cron, GitHub Actions og mere."
+    },
+    "home": {
+      "eyebrow": "Åben standard · Gratis software",
+      "h1": "Udgiv én gang. Alle forhandlere får det.",
+      "lead": "Open Brand Exchange giver dit brand sin egen portal til forhandlere, et standard-API til deres software og automatisk udgivelse fra dit PIM, ERP eller dine mapper. Open source, gratis at hoste og helt dit eget.",
+      "ctaRetailer": "Jeg er forhandler",
+      "proofLabel": "Kort fortalt",
+      "proof": [
+        {
+          "v": "Åben",
+          "l": "standard, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "portaludgaver"
+        },
+        {
+          "v": "61",
+          "l": "konformitetstests"
+        },
+        {
+          "v": "25",
+          "l": "sprog"
+        },
+        {
+          "v": "0 €",
+          "l": "i licens"
+        }
+      ],
+      "codeCaption": "Det, en forhandlers software modtager",
+      "flowEyebrow": "Sådan virker det",
+      "flowTitle": "Én udgivelse. Til alle dine forhandlere.",
+      "flowLead": "Dine systemer leverer til din egen portal. Indkøbere bruger den i browseren, og deres software læser det samme indhold via standard-API'et.",
+      "flowCaption": "Sådan flyder indholdet fra et brands systemer via dets egen portal ud til forhandlerne.",
+      "flow": {
+        "systems": "Dine systemer",
+        "systemsItems": [
+          "PIM",
+          "ERP",
+          "DAM",
+          "Eksportmappe"
+        ],
+        "upload": "Automatisk upload",
+        "uploadItems": [
+          "Planlagt import",
+          "obx-værktøjet",
+          "GitHub Action",
+          "Upload-API"
+        ],
+        "portal": "Din portal",
+        "portalDomain": "brands.yourbrand.com",
+        "portalItems": [
+          "Katalog og billeder",
+          "Adgang pr. forhandler",
+          "Brugsstatistik"
+        ],
+        "retailers": "Dine forhandlere",
+        "browser": "Indkøbere, i browseren",
+        "browserItems": [
+          "Søgning og EAN-liste",
+          "Download som zip og CSV"
+        ],
+        "software": "Deres software, via API'et",
+        "softwareItems": [
+          "Webshop og PIM",
+          "Kassesystem og indholdsværktøjer"
+        ]
+      },
+      "pillars": [
+        {
+          "eyebrow": "Portal",
+          "h": "En portal, dine forhandlere faktisk bruger.",
+          "p": "Indkøbere logger ind på din portal, indsætter EAN-numrene fra deres ordre og downloader præcis det, de skal bruge: ét foto, én vare eller en zip med et helt udvalg.",
+          "items": [
+            "Søg og filtrér efter brand, sæson, produkttype og farve",
+            "Indsæt en EAN-liste, og se straks, hvad der findes, og hvad der mangler",
+            "Original, web (2000 px) eller kvadratisk, plus varedata som regneark",
+            "Dit navn, logo og domæne: »Kestrel · {portal}«"
+          ],
+          "link": "Se den med en forhandlers øjne"
+        },
+        {
+          "eyebrow": "API",
+          "h": "Ét API til alle brands på standarden.",
+          "p": "Forhandlernes software henter alt én gang og derefter kun ændringerne, også det, du trækker tilbage. Hvert billede kommer med brugsrettigheder, embargodato og AI-oprindelse.",
+          "items": [
+            "Først en fuld kopi, derefter kun ændringerne",
+            "Opslag på EAN, koblet til den rigtige vare og størrelse",
+            "Web-, kvadratiske og miniatureversioner; originaler, når du tillader det",
+            "Bygget én gang af en softwareleverandør, virker det med alle brands"
+          ],
+          "link": "Læs API-referencen"
+        },
+        {
+          "eyebrow": "Automatisering",
+          "h": "Udgiv fra de systemer, du allerede har.",
+          "p": "Dit PIM, ERP eller en delt mappe har allerede data og fotos. Lad portalen hente dem efter en tidsplan, eller send dem med én kommando. Ingen flytter filer rundt i hånden.",
+          "items": [
+            "Planlagt import fra en webadresse, SFTP eller S3, uden kode",
+            "obx-værktøjet til Windows, macOS og Linux uploader kun ændringer",
+            "En færdig GitHub Action og opskrifter til cron, n8n, Make og Zapier",
+            "Ét CSV-format og én navneregel for fotos"
+          ],
+          "link": "Se automatiseringsopskrifterne"
+        }
+      ],
+      "audienceEyebrow": "Hvem det er til",
+      "audienceTitle": "Bygget til begge sider af samarbejdet.",
+      "brands": {
+        "h": "Til brands",
+        "p": "Slut med at sende filer rundt. Udgiv én gang fra dine egne systemer, og bevar kontrollen.",
+        "items": [
+          "Din egen portal på dit eget domæne",
+          "Du godkender hver forhandler og bestemmer, hvad de ser",
+          "Se, hvem der downloader hvad, pr. forhandler",
+          "Host den selv gratis, eller vælg en udbyder, du altid kan forlade"
+        ],
+        "cta": "Se mere for brands"
+      },
+      "retailers": {
+        "h": "Til forhandlere",
+        "p": "Alle brands i ét ensartet format, i browseren eller direkte i din software.",
+        "items": [
+          "Indsæt din EAN-liste, og få de rigtige billeder til hver størrelse",
+          "Download zip-filer og varedata, klar til din shop",
+          "Én forbindelse til alle brands på standarden",
+          "Brugsrettigheder og embargodatoer ved hvert billede"
+        ],
+        "cta": "Se mere for forhandlere"
+      },
+      "editionsEyebrow": "Hosting",
+      "editionsTitle": "Kør den, hvor du vil. Betal kun for hosting.",
+      "editionsLead": "Tre udgaver af den samme portal. De består de samme konformitetstests og taler det samme API, så du kan skifte mellem dem.",
+      "editionsLink": "Sammenlign hostingmulighederne",
+      "editionFields": [
+        "Kører på",
+        "Du skal bruge",
+        "Opsætning",
+        "Pris"
+      ],
+      "editions": [
+        {
+          "tag": "Nemmest",
+          "name": "Hostet af en udbyder",
+          "runs": "Et hostingfirma eller bureau driver den for dig",
+          "need": "Intet teknisk",
+          "setup": "De sætter den op sammen med dig",
+          "cost": "Udbyderens egne priser",
+          "cta": "Se udbydere"
+        },
+        {
+          "tag": "Ét klik",
+          "runs": "Cloudflare Workers med D1 og R2",
+          "need": "En Cloudflare-konto",
+          "setup": "Ét klik, derefter opsætningsguiden",
+          "cost": "Abonnementet Workers Paid, ca. 5 dollar om måneden",
+          "cta": "Opsæt på Cloudflare"
+        },
+        {
+          "tag": "Containere",
+          "runs": "Google Cloud Run eller enhver server med Docker",
+          "need": "En Google Cloud-konto eller en Docker-vært",
+          "setup": "Ét script eller én Docker-kommando",
+          "cost": "Betal efter forbrug på Cloud Run, eller din egen server",
+          "cta": "Opsæt med Docker"
+        },
+        {
+          "tag": "Ingen kommandoer",
+          "runs": "Almindeligt webhotel med PHP og en database",
+          "need": "Et FTP-program",
+          "setup": "Upload en zip, derefter installationsprogrammet",
+          "cost": "Det webhotel, du allerede betaler for",
+          "cta": "Opsæt på webhotel"
+        }
+      ],
+      "trustEyebrow": "Styring",
+      "trustTitle": "En åben standard, ikke en platform, du er låst til.",
+      "trustLead": "Open Brand Exchange skal tilhøre de brands, forhandlere og softwareleverandører, der bruger den, ikke ét firma.",
+      "trust": [
+        {
+          "h": "Åben specifikation",
+          "p": "Version 0.1, skrevet i OpenAPI 3.1 og JSON Schema under CC-BY-4.0. Alle må implementere den, også kommercielt."
+        },
+        {
+          "h": "Konformitetstests",
+          "p": "61 automatiske tests i fire profiler. Ingen implementering får særbehandling, heller ikke initiativtagerens egen virksomhed."
+        },
+        {
+          "h": "Open source-licenser",
+          "p": "SDK'et, obx-værktøjet og webgrænsefladen er Apache-2.0. De tre portaludgaver er AGPL-3.0, så forbedringer forbliver åbne."
+        },
+        {
+          "h": "En fond under stiftelse",
+          "p": "Et initiativ af {person}. Ophavsretten, navnet og domænet overgår til {foundation}, når den er stiftet."
+        },
+        {
+          "h": "Sikkerhed",
+          "p": "Rapportér sårbarheder fortroligt til {email}. Sikkerhed er en af de fire konformitetsprofiler."
+        },
+        {
+          "h": "Privatliv først",
+          "p": "Dette websted sætter ingen cookies, bruger ingen trackere og henter intet fra andre servere."
+        }
+      ],
+      "trustLink": "Læs, hvordan det styres",
+      "devEyebrow": "Udviklere",
+      "devTitle": "En specifikation, du kan bygge på.",
+      "devP": "Tre OpenAPI-kontrakter, JSON Schemas, et fiktivt testbrand og konformitetstests. Go SDK og obx-værktøjet er klar til brug, og enhver HTTP-klient virker.",
+      "devLinks": [
+        "API-reference",
+        "Specifikationen på GitHub",
+        "Go SDK og obx-værktøjet",
+        "Fejlkoder"
+      ],
+      "faqTitle": "Det spørger brands først om",
+      "faqLink": "Alle spørgsmål",
+      "closingTitle": "Giv alle forhandlere ét sted, hvor det er rigtigt.",
+      "closingP": "Sæt din egen portal op, eller fortæl os om dine systemer og forhandlere, og vær med til at forme den første udgivelse.",
+      "closingMail": "Skriv til os"
+    },
+    "pages": {
+      "brandsH1": "Sæt det op én gang. For alle forhandlere på én gang.",
+      "retailersSoftware": "Til din software",
+      "hostingEditions": "De tre udgaver"
+    }
   }
 }

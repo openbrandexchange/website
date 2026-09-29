@@ -753,5 +753,257 @@
     "ctaBrands": "Căutăm mărci care vor să contribuie la prima versiune: ce sisteme folosiți și câți comercianți deserviți? Scrieți-ne.",
     "ctaRetailers": "Căutăm comercianți care vor să contribuie la prima versiune: ce mărci vreți să conectați și ce software folosiți? Scrieți-ne.",
     "footer": "Funcțiile de la „Urmează” sunt în dezvoltare. Versiunea 0.1, {date}."
+  },
+  "site": {
+    "nav": {
+      "start": "Începeți ca marcă",
+      "docs": "Documentație",
+      "preview": "Previzualizare v0.1"
+    },
+    "footer": {
+      "tagline": "Standardul deschis prin care mărcile le livrează comercianților fotografii de produs și date despre articole.",
+      "product": "Produs",
+      "developers": "Pentru dezvoltatori",
+      "project": "Proiect",
+      "legal": "Informații legale",
+      "reference": "Referință API",
+      "errors": "Coduri de eroare",
+      "spec": "Specificație",
+      "sdk": "Go SDK și instrumentul obx",
+      "status": "Versiunea 0.1 este în testare. Prima versiune publică este în pregătire."
+    },
+    "shots": {
+      "portalCatalog": "Portalul mărcii fictive Kestrel, așa cum îl vede un comerciant: opt articole cu filtre după marcă, tip de produs și culoare.",
+      "portalEan": "Un comerciant lipește șase coduri EAN în portalul mărcii: cinci sunt găsite, unul nu există în catalog.",
+      "portalArticle": "Un articol în portalul mărcii: fotografii pe culori, descărcare în varianta originală, web sau pătrată și codul EAN al fiecărei mărimi.",
+      "adminOverview": "Prezentarea generală din administrarea mărcii: primii pași, cifrele catalogului, cererile de acces și descărcările recente ale comercianților.",
+      "adminCatalog": "Catalogul din administrarea mărcii: opt articole publicate, cu mărimile și fotografiile lor.",
+      "adminStats": "Statistici în administrarea mărcii: descărcări, fotografii și cei mai activi comercianți din ultimele 30 de zile.",
+      "adminAutomation": "Încărcare automată în administrarea mărcii: rețete gata făcute pentru instrumentul obx, cron, GitHub Actions și altele."
+    },
+    "home": {
+      "eyebrow": "Standard deschis · Software gratuit",
+      "h1": "Publicați o dată. Ajunge la fiecare comerciant.",
+      "lead": "Open Brand Exchange îi oferă mărcii dvs. propriul portal pentru comercianți, un API standard pentru sistemele lor și publicare automată din PIM-ul, ERP-ul sau folderele dvs. Open source, găzduire gratuită, rămâne al dvs.",
+      "ctaRetailer": "Sunt comerciant",
+      "proofLabel": "Pe scurt",
+      "proof": [
+        {
+          "v": "Deschis",
+          "l": "standard, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "ediții ale portalului"
+        },
+        {
+          "v": "61",
+          "l": "teste de conformitate"
+        },
+        {
+          "v": "25",
+          "l": "de limbi"
+        },
+        {
+          "v": "0 €",
+          "l": "taxă de licență"
+        }
+      ],
+      "codeCaption": "Ce primește software-ul unui comerciant",
+      "flowEyebrow": "Cum funcționează",
+      "flowTitle": "O singură publicare. Pentru orice mod de lucru.",
+      "flowLead": "Sistemele dvs. livrează în propriul portal. Cumpărătorii îl folosesc în browser; sistemele lor citesc același conținut prin API-ul standard.",
+      "flowCaption": "Cum ajunge conținutul din sistemele unei mărci, prin propriul portal, la comercianții săi.",
+      "flow": {
+        "systems": "Sistemele dvs.",
+        "systemsItems": [
+          "PIM",
+          "ERP",
+          "DAM",
+          "Folder de export"
+        ],
+        "upload": "Încărcare automată",
+        "uploadItems": [
+          "Import programat",
+          "Instrumentul obx",
+          "GitHub Action",
+          "API de încărcare"
+        ],
+        "portal": "Portalul dvs.",
+        "portalDomain": "brands.yourbrand.com",
+        "portalItems": [
+          "Catalog și fotografii",
+          "Acces pe comerciant",
+          "Statistici de utilizare"
+        ],
+        "retailers": "Comercianții dvs.",
+        "browser": "Cumpărătorii, în browser",
+        "browserItems": [
+          "Căutare și listă de EAN",
+          "Descărcări zip și CSV"
+        ],
+        "software": "Sistemele lor, prin API",
+        "softwareItems": [
+          "Magazin online și PIM",
+          "POS și instrumente de conținut"
+        ]
+      },
+      "pillars": [
+        {
+          "eyebrow": "Portal",
+          "h": "Un portal pe care comercianții chiar îl folosesc.",
+          "p": "Cumpărătorii se conectează la portalul dvs., lipesc codurile EAN din comandă și descarcă exact ce le trebuie: o fotografie, un articol sau un zip cu o selecție întreagă.",
+          "items": [
+            "Căutare și filtre după marcă, sezon, tip de produs și culoare",
+            "Lipiți o listă de EAN și vedeți imediat ce există și ce lipsește",
+            "Originală, web (2000 px) sau pătrată, plus datele articolelor într-un tabel",
+            "Numele, logoul și domeniul dvs.: „Kestrel · {portal}”"
+          ],
+          "link": "Vedeți-l prin ochii unui comerciant"
+        },
+        {
+          "eyebrow": "API",
+          "h": "Un singur API pentru toate mărcile standardului.",
+          "p": "Software-ul comerciantului preia totul o dată, apoi doar ce s-a schimbat, inclusiv ce retrageți. Fiecare fotografie vine cu drepturile de utilizare, data de embargo și proveniența IA.",
+          "items": [
+            "Mai întâi o copie completă, apoi doar modificările",
+            "Căutare după EAN, legată de articolul și mărimea corecte",
+            "Variante web, pătrată și miniatură; originalele, dacă le permiteți",
+            "Un furnizor de software îl integrează o dată și funcționează cu orice marcă"
+          ],
+          "link": "Citiți referința API"
+        },
+        {
+          "eyebrow": "Automatizare",
+          "h": "Publicați din sistemele pe care le aveți deja.",
+          "p": "PIM-ul, ERP-ul sau un folder partajat conțin deja datele și fotografiile. Lăsați portalul să le preia după un program sau trimiteți-le cu o singură comandă. Nimeni nu mai mută fișiere de mână.",
+          "items": [
+            "Import programat de la o adresă web, prin SFTP sau S3, fără cod",
+            "Instrumentul obx pentru Windows, macOS și Linux încarcă doar ce s-a schimbat",
+            "Un GitHub Action gata făcut și rețete pentru cron, n8n, Make și Zapier",
+            "Un singur format CSV și o singură regulă de denumire pentru fotografii"
+          ],
+          "link": "Vedeți rețetele de automatizare"
+        }
+      ],
+      "audienceEyebrow": "Pentru cine",
+      "audienceTitle": "Creat pentru ambele părți ale relației.",
+      "brands": {
+        "h": "Pentru mărci",
+        "p": "Nu mai trimiteți fișiere în toate direcțiile. Publicați o dată, din propriile sisteme, și păstrați controlul.",
+        "items": [
+          "Propriul portal, pe propriul domeniu",
+          "Aprobați fiecare comerciant și decideți ce vede",
+          "Vedeți cine descarcă ce, pe fiecare comerciant",
+          "Găzduiți-l gratuit sau alegeți un furnizor și plecați oricând"
+        ],
+        "cta": "Aflați mai multe pentru mărci"
+      },
+      "retailers": {
+        "h": "Pentru comercianți",
+        "p": "Toate mărcile într-un format unitar, în browser sau direct în software-ul dvs.",
+        "items": [
+          "Lipiți lista de EAN și primiți fotografiile potrivite pentru fiecare mărime",
+          "Descărcați arhive zip și date despre articole, gata pentru magazin",
+          "O singură conexiune pentru toate mărcile standardului",
+          "Drepturi de utilizare și date de embargo la fiecare fotografie"
+        ],
+        "cta": "Aflați mai multe pentru comercianți"
+      },
+      "editionsEyebrow": "Găzduire",
+      "editionsTitle": "Unde doriți. Plătiți doar găzduirea.",
+      "editionsLead": "Trei ediții ale aceluiași portal. Trec aceleași teste de conformitate și vorbesc același API, deci puteți trece oricând de la una la alta.",
+      "editionsLink": "Comparați opțiunile de găzduire",
+      "editionFields": [
+        "Rulează pe",
+        "Aveți nevoie de",
+        "Configurare",
+        "Cost"
+      ],
+      "editions": [
+        {
+          "tag": "Cel mai simplu",
+          "name": "Prin furnizor",
+          "runs": "O firmă de găzduire sau o agenție îl administrează pentru dvs.",
+          "need": "Nimic tehnic",
+          "setup": "Îl configurează împreună cu dvs.",
+          "cost": "Prețurile furnizorului",
+          "cta": "Vedeți furnizorii"
+        },
+        {
+          "tag": "Un clic",
+          "runs": "Cloudflare Workers, cu D1 și R2",
+          "need": "Un cont Cloudflare",
+          "setup": "Un clic, apoi asistentul de configurare",
+          "cost": "Planul Workers Paid, circa 5 dolari pe lună",
+          "cta": "Configurați pe Cloudflare"
+        },
+        {
+          "tag": "Containere",
+          "runs": "Google Cloud Run sau orice server cu Docker",
+          "need": "Un cont Google Cloud sau un server Docker",
+          "setup": "Un script sau o comandă Docker",
+          "cost": "Plată la utilizare pe Cloud Run sau propriul server",
+          "cta": "Configurați cu Docker"
+        },
+        {
+          "tag": "Fără comenzi",
+          "runs": "Găzduire web obișnuită, cu PHP și o bază de date",
+          "need": "Un program FTP",
+          "setup": "Încărcați un zip, apoi rulați instalatorul",
+          "cost": "Găzduirea pe care o plătiți deja",
+          "cta": "Configurați pe găzduire web"
+        }
+      ],
+      "trustEyebrow": "Guvernanță",
+      "trustTitle": "Un standard deschis, nu o platformă care vă leagă.",
+      "trustLead": "Open Brand Exchange trebuie să aparțină mărcilor, comercianților și furnizorilor de software care îl folosesc, nu unei singure companii.",
+      "trust": [
+        {
+          "h": "Specificație deschisă",
+          "p": "Versiunea 0.1, scrisă în OpenAPI 3.1 și JSON Schema, sub licența CC-BY-4.0. Oricine o poate implementa, inclusiv în scop comercial."
+        },
+        {
+          "h": "Teste de conformitate",
+          "p": "61 de verificări automate în patru profiluri. Nicio implementare nu primește tratament preferențial, nici cea a companiei inițiatorului."
+        },
+        {
+          "h": "Licențe open source",
+          "p": "SDK-ul, instrumentul obx și interfața web sunt Apache-2.0. Cele trei ediții ale portalului sunt AGPL-3.0, astfel încât îmbunătățirile rămân deschise."
+        },
+        {
+          "h": "O fundație în curs de înființare",
+          "p": "O inițiativă a lui {person}. Drepturile de autor, numele și domeniul trec la {foundation} de îndată ce aceasta există."
+        },
+        {
+          "h": "Securitate",
+          "p": "Raportați vulnerabilitățile confidențial la {email}. Securitatea este unul dintre cele patru profiluri de conformitate."
+        },
+        {
+          "h": "Confidențialitate înainte de toate",
+          "p": "Acest site nu setează cookie-uri, nu folosește trackere și nu încarcă nimic de pe alte servere."
+        }
+      ],
+      "trustLink": "Aflați cum este guvernat",
+      "devEyebrow": "Pentru dezvoltatori",
+      "devTitle": "O specificație pe care puteți construi.",
+      "devP": "Trei contracte OpenAPI, JSON Schema, o marcă de test fictivă și o suită de teste de conformitate. Go SDK și instrumentul obx sunt gata de folosit, iar orice client HTTP funcționează.",
+      "devLinks": [
+        "Referință API",
+        "Specificația pe GitHub",
+        "Go SDK și instrumentul obx",
+        "Coduri de eroare"
+      ],
+      "faqTitle": "Primele întrebări ale mărcilor",
+      "faqLink": "Toate întrebările",
+      "closingTitle": "Un singur loc, corect pentru fiecare comerciant.",
+      "closingP": "Configurați-vă propriul portal sau povestiți-ne despre sistemele și comercianții dvs. și ajutați-ne să modelăm prima versiune.",
+      "closingMail": "Scrieți-ne"
+    },
+    "pages": {
+      "brandsH1": "Configurați o dată. Pentru toți comercianții deodată.",
+      "retailersSoftware": "Pentru software-ul dvs.",
+      "hostingEditions": "Cele trei ediții"
+    }
   }
 }

@@ -753,5 +753,257 @@
     "ctaBrands": "Otsime kaubamärke, kes tahavad esimest versiooni kujundada: milliseid süsteeme kasutate ja mitut edasimüüjat teenindate? Kirjutage meile.",
     "ctaRetailers": "Otsime edasimüüjaid, kes tahavad esimest versiooni kujundada: milliseid kaubamärke soovite ühendada ja millist tarkvara kasutate? Kirjutage meile.",
     "footer": "Jaotise „Tulemas” funktsioonid on arendamisel. Versioon 0.1, {date}."
+  },
+  "site": {
+    "nav": {
+      "start": "Alustage kaubamärgina",
+      "docs": "Dokumentatsioon",
+      "preview": "v0.1 eelvaade"
+    },
+    "footer": {
+      "tagline": "Avatud standard tootefotode ja tooteandmete edastamiseks kaubamärkidelt nende edasimüüjatele.",
+      "product": "Toode",
+      "developers": "Arendajatele",
+      "project": "Projekt",
+      "legal": "Õiguslik teave",
+      "reference": "API viide",
+      "errors": "Veakoodid",
+      "spec": "Spetsifikatsioon",
+      "sdk": "Go SDK ja tööriist obx",
+      "status": "Versioon 0.1 on testimisel. Esimest avalikku väljalaset valmistatakse ette."
+    },
+    "shots": {
+      "portalCatalog": "Väljamõeldud kaubamärgi Kestrel edasimüüjate portaal edasimüüja pilgu läbi: kaheksa toodet ning filtrid kaubamärgi, tootetüübi ja värvi järgi.",
+      "portalEan": "Edasimüüja kleebib portaali kuus EAN-koodi: viis leitakse, ühte kataloogis ei ole.",
+      "portalArticle": "Toode portaalis: fotod värvide kaupa, allalaadimisel valik originaali, veebi- ja ruutversiooni vahel ning iga suuruse EAN.",
+      "adminOverview": "Kaubamärgi halduse ülevaade: esimesed sammud, kataloogi numbrid, juurdepääsutaotlused ja edasimüüjate viimased allalaadimised.",
+      "adminCatalog": "Kataloog kaubamärgi halduses: kaheksa avaldatud toodet koos suuruste ja fotodega.",
+      "adminStats": "Statistika kaubamärgi halduses: allalaadimised, fotod ja kõige aktiivsemad edasimüüjad 30 päeva jooksul.",
+      "adminAutomation": "Automaatne üleslaadimine kaubamärgi halduses: valmis retseptid tööriistale obx, cronile, GitHub Actionsile ja muule."
+    },
+    "home": {
+      "eyebrow": "Avatud standard · Vaba tarkvara",
+      "h1": "Avaldage üks kord. Iga edasimüüja saab selle kätte.",
+      "lead": "Open Brand Exchange annab teie kaubamärgile oma portaali edasimüüjatele, standardse API nende tarkvarale ja automaatse avaldamise teie PIM-ist, ERP-st või kaustadest. Avatud lähtekood, tasuta majutada ja jääb teie omaks.",
+      "ctaRetailer": "Olen edasimüüja",
+      "proofLabel": "Lühidalt",
+      "proof": [
+        {
+          "v": "Avatud",
+          "l": "standard, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "portaali väljaannet"
+        },
+        {
+          "v": "61",
+          "l": "vastavustesti"
+        },
+        {
+          "v": "25",
+          "l": "keelt"
+        },
+        {
+          "v": "0 €",
+          "l": "litsentsitasu"
+        }
+      ],
+      "codeCaption": "Mida edasimüüja tarkvara saab",
+      "flowEyebrow": "Kuidas see toimib",
+      "flowTitle": "Üks avaldamine. Kõigile teie edasimüüjatele.",
+      "flowLead": "Teie süsteemid edastavad sisu teie enda portaali. Ostjad kasutavad seda brauseris, nende tarkvara loeb sama sisu standardse API kaudu.",
+      "flowCaption": "Kuidas sisu liigub kaubamärgi süsteemidest tema oma portaali kaudu edasimüüjateni.",
+      "flow": {
+        "systems": "Teie süsteemid",
+        "systemsItems": [
+          "PIM",
+          "ERP",
+          "DAM",
+          "Ekspordikaust"
+        ],
+        "upload": "Automaatne üleslaadimine",
+        "uploadItems": [
+          "Ajastatud import",
+          "Tööriist obx",
+          "GitHub Action",
+          "Üleslaadimise API"
+        ],
+        "portal": "Teie portaal",
+        "portalDomain": "brands.yourbrand.com",
+        "portalItems": [
+          "Kataloog ja fotod",
+          "Juurdepääs edasimüüja kaupa",
+          "Kasutusstatistika"
+        ],
+        "retailers": "Teie edasimüüjad",
+        "browser": "Ostjad, brauseris",
+        "browserItems": [
+          "Otsing ja EAN-loend",
+          "Allalaadimine zip- ja CSV-failina"
+        ],
+        "software": "Nende tarkvara, API kaudu",
+        "softwareItems": [
+          "E-pood ja PIM",
+          "Kassasüsteem ja sisutööriistad"
+        ]
+      },
+      "pillars": [
+        {
+          "eyebrow": "Portaal",
+          "h": "Portaal, mida edasimüüjad päriselt kasutavad.",
+          "p": "Ostjad logivad teie portaali sisse, kleebivad tellimuse EAN-koodid ja laadivad alla täpselt selle, mida vajavad: ühe foto, ühe toote või terve valiku zip-failina.",
+          "items": [
+            "Otsing ja filtreerimine kaubamärgi, hooaja, tootetüübi ja värvi järgi",
+            "Kleepige EAN-loend ja näete kohe, mis on olemas ja mis puudub",
+            "Originaal, veeb (2000 px) või ruut, lisaks tooteandmed tabelina",
+            "Teie nimi, logo ja domeen: „Kestrel · {portal}”"
+          ],
+          "link": "Vaadake edasimüüja pilguga"
+        },
+        {
+          "eyebrow": "API",
+          "h": "Üks API kõigile standardi kaubamärkidele.",
+          "p": "Edasimüüjate tarkvara toob kõik ühe korra ja seejärel ainult muudatused, ka selle, mille tagasi võtate. Iga fotoga tulevad kaasa kasutusõigused, embargo kuupäev ja tehisintellekti päritolu.",
+          "items": [
+            "Kõigepealt täielik koopia, seejärel ainult muudatused",
+            "Otsing EAN-i järgi, seotud õige toote ja suurusega",
+            "Veebi-, ruut- ja pisipildiversioonid; originaalid, kui lubate",
+            "Tarkvaratarnija ehitab selle ühe korra ja see töötab iga kaubamärgiga"
+          ],
+          "link": "Lugege API viidet"
+        },
+        {
+          "eyebrow": "Automatiseerimine",
+          "h": "Avaldage süsteemidest, mis teil juba on.",
+          "p": "Teie PIM, ERP või jagatud kaust sisaldab juba andmeid ja fotosid. Laske portaalil need ajakava järgi tuua või saatke need ühe käsuga. Keegi ei pea faile käsitsi tõstma.",
+          "items": [
+            "Ajastatud import veebiaadressilt, SFTP-st või S3-st, ilma koodita",
+            "Tööriist obx Windowsile, macOS-ile ja Linuxile laadib üles ainult muudatused",
+            "Valmis GitHub Action ning retseptid cronile, n8n-ile, Make'ile ja Zapierile",
+            "Üks CSV-vorming ja üks nimereegel fotodele"
+          ],
+          "link": "Vaadake automatiseerimise retsepte"
+        }
+      ],
+      "audienceEyebrow": "Kellele",
+      "audienceTitle": "Loodud koostöö mõlemale poolele.",
+      "brands": {
+        "h": "Kaubamärkidele",
+        "p": "Lõpetage failide saatmine. Avaldage üks kord oma süsteemidest ja hoidke kontroll enda käes.",
+        "items": [
+          "Teie oma portaal teie oma domeenil",
+          "Kinnitate iga edasimüüja ja otsustate, mida ta näeb",
+          "Näete, kes mida alla laadib, edasimüüja kaupa",
+          "Majutage ise tasuta või valige teenusepakkuja, kellest saate igal ajal lahkuda"
+        ],
+        "cta": "Lähemalt kaubamärkidele"
+      },
+      "retailers": {
+        "h": "Edasimüüjatele",
+        "p": "Kõik kaubamärgid ühes ühtses vormingus, brauseris või otse teie tarkvaras.",
+        "items": [
+          "Kleepige oma EAN-loend ja saate iga suuruse jaoks õiged fotod",
+          "Laadige alla zip-failid ja tooteandmed, valmis teie poe jaoks",
+          "Üks ühendus kõigi standardi kaubamärkidega",
+          "Kasutusõigused ja embargo kuupäevad iga foto juures"
+        ],
+        "cta": "Lähemalt edasimüüjatele"
+      },
+      "editionsEyebrow": "Majutus",
+      "editionsTitle": "Käitage seda, kus soovite. Maksate ainult majutuse eest.",
+      "editionsLead": "Sama portaali kolm väljaannet. Need läbivad samad vastavustestid ja räägivad sama API-t, nii et saate ühelt teisele üle minna.",
+      "editionsLink": "Võrrelge majutusvõimalusi",
+      "editionFields": [
+        "Töötab",
+        "Vajate",
+        "Seadistamine",
+        "Hind"
+      ],
+      "editions": [
+        {
+          "tag": "Kõige lihtsam",
+          "name": "Teenusepakkuja majutatud",
+          "runs": "Majutusettevõte või agentuur haldab seda teie eest",
+          "need": "Mitte midagi tehnilist",
+          "setup": "Nad seadistavad selle koos teiega",
+          "cost": "Teenusepakkuja enda hinnad",
+          "cta": "Vaadake teenusepakkujaid"
+        },
+        {
+          "tag": "Üks klõps",
+          "runs": "Cloudflare Workers koos D1 ja R2-ga",
+          "need": "Cloudflare'i konto",
+          "setup": "Üks klõps, seejärel seadistusviisard",
+          "cost": "Pakett Workers Paid, umbes 5 dollarit kuus",
+          "cta": "Seadistage Cloudflare'is"
+        },
+        {
+          "tag": "Konteinerid",
+          "runs": "Google Cloud Run või mis tahes server Dockeriga",
+          "need": "Google Cloudi konto või Dockeri host",
+          "setup": "Üks skript või üks Dockeri käsk",
+          "cost": "Tasu kasutuse järgi Cloud Runis või teie oma server",
+          "cta": "Seadistage Dockeriga"
+        },
+        {
+          "tag": "Ilma käskudeta",
+          "runs": "Tavaline veebimajutus PHP ja andmebaasiga",
+          "need": "FTP-programm",
+          "setup": "Laadige üles zip, seejärel paigaldaja",
+          "cost": "Majutus, mille eest juba maksate",
+          "cta": "Seadistage veebimajutuses"
+        }
+      ],
+      "trustEyebrow": "Juhtimine",
+      "trustTitle": "Avatud standard, mitte platvorm, mille külge jääte kinni.",
+      "trustLead": "Open Brand Exchange peaks kuuluma kaubamärkidele, edasimüüjatele ja tarkvaratarnijatele, kes seda kasutavad, mitte ühele ettevõttele.",
+      "trust": [
+        {
+          "h": "Avatud spetsifikatsioon",
+          "p": "Versioon 0.1, kirjutatud OpenAPI 3.1 ja JSON Schema vormingus litsentsiga CC-BY-4.0. Igaüks võib selle teostada, ka ärilistel eesmärkidel."
+        },
+        {
+          "h": "Vastavustestid",
+          "p": "61 automaatset testi neljas profiilis. Ükski teostus ei saa erikohtlemist, ka mitte algataja enda ettevõte."
+        },
+        {
+          "h": "Avatud lähtekoodi litsentsid",
+          "p": "SDK, tööriist obx ja veebiliides on Apache-2.0 all. Kolm portaali väljaannet on AGPL-3.0 all, nii et täiustused jäävad avatuks."
+        },
+        {
+          "h": "Sihtasutus asutamisel",
+          "p": "Algataja: {person}. Autoriõigus, nimi ja domeen lähevad üle sihtasutusele {foundation}, kui see on asutatud."
+        },
+        {
+          "h": "Turvalisus",
+          "p": "Teatage turvanõrkustest konfidentsiaalselt aadressil {email}. Turvalisus on üks neljast vastavusprofiilist."
+        },
+        {
+          "h": "Privaatsus ennekõike",
+          "p": "See veebisait ei sea küpsiseid, ei kasuta jälgijaid ega laadi midagi teistest serveritest."
+        }
+      ],
+      "trustLink": "Lugege, kuidas seda juhitakse",
+      "devEyebrow": "Arendajatele",
+      "devTitle": "Spetsifikatsioon, millele saab ehitada.",
+      "devP": "Kolm OpenAPI lepingut, JSON-skeemid, väljamõeldud testkaubamärk ja vastavustestid. Go SDK ja tööriist obx on kasutusvalmis ning sobib iga HTTP-klient.",
+      "devLinks": [
+        "API viide",
+        "Spetsifikatsioon GitHubis",
+        "Go SDK ja tööriist obx",
+        "Veakoodid"
+      ],
+      "faqTitle": "Mida kaubamärgid esimesena küsivad",
+      "faqLink": "Kõik küsimused",
+      "closingTitle": "Andke igale edasimüüjale üks usaldusväärne koht.",
+      "closingP": "Seadistage oma portaal või rääkige meile oma süsteemidest ja edasimüüjatest ning aidake kujundada esimest väljalaset.",
+      "closingMail": "Kirjutage meile"
+    },
+    "pages": {
+      "brandsH1": "Seadistage üks kord. Kõigile edasimüüjatele korraga.",
+      "retailersSoftware": "Teie tarkvarale",
+      "hostingEditions": "Kolm väljaannet"
+    }
   }
 }

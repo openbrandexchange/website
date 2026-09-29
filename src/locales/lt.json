@@ -753,5 +753,257 @@
     "ctaBrands": "Ieškome prekių ženklų, norinčių kurti pirmąją versiją kartu: kokias sistemas naudojate ir kiek pardavėjų aptarnaujate? Parašykite mums.",
     "ctaRetailers": "Ieškome pardavėjų, norinčių kurti pirmąją versiją kartu: kokius prekių ženklus norėtumėte prijungti ir kokią programinę įrangą naudojate? Parašykite mums.",
     "footer": "Skiltyje „Netrukus“ nurodytos funkcijos kuriamos. Versija 0.1, {date}."
+  },
+  "site": {
+    "nav": {
+      "start": "Esu prekės ženklas",
+      "docs": "Dokumentacija",
+      "preview": "v0.1 peržiūra"
+    },
+    "footer": {
+      "tagline": "Atviras standartas, pagal kurį prekių ženklai pateikia produktų nuotraukas ir prekių duomenis savo pardavėjams.",
+      "product": "Produktas",
+      "developers": "Kūrėjams",
+      "project": "Projektas",
+      "legal": "Teisinė informacija",
+      "reference": "API žinynas",
+      "errors": "Klaidų kodai",
+      "spec": "Specifikacija",
+      "sdk": "Go SDK ir įrankis obx",
+      "status": "Versija 0.1 bandoma. Ruošiamas pirmasis viešas leidimas."
+    },
+    "shots": {
+      "portalCatalog": "Išgalvoto prekės ženklo Kestrel portalas taip, kaip jį mato pardavėjas: aštuonios prekės su filtrais pagal prekės ženklą, produkto tipą ir spalvą.",
+      "portalEan": "Pardavėjas įklijuoja šešis EAN į prekės ženklo portalą: penki rasti, vieno kataloge nėra.",
+      "portalArticle": "Prekė prekės ženklo portale: nuotraukos pagal spalvą, atsisiuntimo pasirinkimas tarp originalo, žiniatinklio ir kvadrato bei kiekvieno dydžio EAN.",
+      "adminOverview": "Prekės ženklo administravimo apžvalga: pirmieji žingsniai, katalogo skaičiai, prieigos prašymai ir naujausi pardavėjų atsisiuntimai.",
+      "adminCatalog": "Katalogas prekės ženklo administravime: aštuonios paskelbtos prekės su dydžiais ir nuotraukomis.",
+      "adminStats": "Statistika prekės ženklo administravime: atsisiuntimai, nuotraukos ir aktyviausi pardavėjai per 30 dienų.",
+      "adminAutomation": "Automatinis įkėlimas prekės ženklo administravime: paruošti receptai įrankiui obx, cron, GitHub Actions ir kitiems."
+    },
+    "home": {
+      "eyebrow": "Atviras standartas · Nemokama programinė įranga",
+      "h1": "Paskelbkite kartą. Gaus kiekvienas pardavėjas.",
+      "lead": "Open Brand Exchange suteikia jūsų prekės ženklui nuosavą portalą pardavėjams, standartinį API jų programinei įrangai ir automatinį publikavimą iš jūsų PIM, ERP ar aplankų. Atviras kodas, nemokamas talpinimas, visada jūsų.",
+      "ctaRetailer": "Esu pardavėjas",
+      "proofLabel": "Trumpai",
+      "proof": [
+        {
+          "v": "Atviras",
+          "l": "standartas, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "portalo leidimai"
+        },
+        {
+          "v": "61",
+          "l": "atitikties patikra"
+        },
+        {
+          "v": "25",
+          "l": "kalbos"
+        },
+        {
+          "v": "0 €",
+          "l": "licencijos mokestis"
+        }
+      ],
+      "codeCaption": "Ką gauna pardavėjo programinė įranga",
+      "flowEyebrow": "Kaip tai veikia",
+      "flowTitle": "Vienas paskelbimas. Kad ir kaip dirbtų jūsų pardavėjai.",
+      "flowLead": "Jūsų sistemos pateikia turinį į jūsų nuosavą portalą. Pirkėjai jį naudoja naršyklėje, o jų programinė įranga tą patį turinį skaito per standartinį API.",
+      "flowCaption": "Kaip turinys keliauja iš prekės ženklo sistemų per jo nuosavą portalą iki jo pardavėjų.",
+      "flow": {
+        "systems": "Jūsų sistemos",
+        "systemsItems": [
+          "PIM",
+          "ERP",
+          "DAM",
+          "Eksporto aplankas"
+        ],
+        "upload": "Automatinis įkėlimas",
+        "uploadItems": [
+          "Suplanuotas importas",
+          "Įrankis obx",
+          "GitHub Action",
+          "Įkėlimo API"
+        ],
+        "portal": "Jūsų portalas",
+        "portalDomain": "brands.yourbrand.com",
+        "portalItems": [
+          "Katalogas ir nuotraukos",
+          "Prieiga kiekvienam pardavėjui",
+          "Naudojimo statistika"
+        ],
+        "retailers": "Jūsų pardavėjai",
+        "browser": "Pirkėjai naršyklėje",
+        "browserItems": [
+          "Paieška ir EAN sąrašas",
+          "Zip ir CSV atsisiuntimai"
+        ],
+        "software": "Jų programinė įranga per API",
+        "softwareItems": [
+          "Internetinė parduotuvė ir PIM",
+          "POS ir turinio įrankiai"
+        ]
+      },
+      "pillars": [
+        {
+          "eyebrow": "Portalas",
+          "h": "Portalas, kurį pardavėjai tikrai naudos.",
+          "p": "Pirkėjai prisijungia prie jūsų portalo, įklijuoja EAN iš savo užsakymo ir atsisiunčia tiksliai tai, ko reikia: vieną nuotrauką, vieną prekę arba visos atrankos zip archyvą.",
+          "items": [
+            "Paieška ir filtrai pagal prekės ženklą, sezoną, produkto tipą ir spalvą",
+            "Įklijuokite EAN sąrašą ir iškart matykite, kas yra ir ko trūksta",
+            "Originalas, žiniatinklio (2000 px) ar kvadratinė versija, taip pat prekių duomenys skaičiuoklėje",
+            "Jūsų pavadinimas, logotipas ir domenas: „Kestrel · {portal}“"
+          ],
+          "link": "Pažiūrėkite pardavėjo akimis"
+        },
+        {
+          "eyebrow": "API",
+          "h": "Vienas API visiems standarto prekių ženklams.",
+          "p": "Pardavėjų programinė įranga vieną kartą parsisiunčia viską, o vėliau tik pakeitimus, įskaitant tai, ką atšaukiate. Kiekviena nuotrauka ateina su naudojimo teisėmis, embargo data ir dirbtinio intelekto kilme.",
+          "items": [
+            "Pirmiausia visa kopija, paskui tik pakeitimai",
+            "Paieška pagal EAN, susieta su tinkama preke ir dydžiu",
+            "Žiniatinklio, kvadratinė ir miniatiūros versijos; originalai, kai juos leidžiate",
+            "Programinės įrangos tiekėjas sukuria kartą, ir tai veikia su kiekvienu prekės ženklu"
+          ],
+          "link": "Skaitykite API žinyną"
+        },
+        {
+          "eyebrow": "Automatizavimas",
+          "h": "Publikuokite iš sistemų, kurias jau turite.",
+          "p": "Jūsų PIM, ERP ar bendras aplankas jau turi duomenis ir nuotraukas. Leiskite portalui juos pasiimti pagal grafiką arba nusiųskite viena komanda. Niekam nereikia tampyti failų.",
+          "items": [
+            "Suplanuotas importas iš interneto adreso, SFTP ar S3, be kodo",
+            "Įrankis obx, skirtas Windows, macOS ir Linux, įkelia tik tai, kas pasikeitė",
+            "Paruoštas GitHub Action ir receptai cron, n8n, Make bei Zapier",
+            "Vienas CSV formatas ir viena nuotraukų pavadinimo taisyklė"
+          ],
+          "link": "Žiūrėkite automatizavimo receptus"
+        }
+      ],
+      "audienceEyebrow": "Kam tai skirta",
+      "audienceTitle": "Sukurta abiem santykio pusėms.",
+      "brands": {
+        "h": "Prekių ženklams",
+        "p": "Nebesiuntinėkite failų. Paskelbkite kartą iš savo sistemų ir išlaikykite kontrolę.",
+        "items": [
+          "Nuosavas portalas jūsų domene",
+          "Jūs patvirtinate kiekvieną pardavėją ir sprendžiate, ką jis mato",
+          "Matykite, kas ką atsisiunčia, pagal pardavėją",
+          "Talpinkite patys nemokamai arba pasirinkite teikėją ir palikite jį bet kada"
+        ],
+        "cta": "Plačiau prekių ženklams"
+      },
+      "retailers": {
+        "h": "Pardavėjams",
+        "p": "Visi prekių ženklai vienu nuosekliu formatu, naršyklėje arba tiesiai jūsų programinėje įrangoje.",
+        "items": [
+          "Įklijuokite EAN sąrašą ir gaukite tinkamas nuotraukas kiekvienam dydžiui",
+          "Atsisiųskite zip archyvus ir prekių duomenis, paruoštus jūsų parduotuvei",
+          "Vienas ryšys su visais standarto prekių ženklais",
+          "Naudojimo teisės ir embargo datos prie kiekvienos nuotraukos"
+        ],
+        "cta": "Plačiau pardavėjams"
+      },
+      "editionsEyebrow": "Talpinimas",
+      "editionsTitle": "Kur norite. Mokate tik už talpinimą.",
+      "editionsLead": "Trys to paties portalo leidimai. Jie išlaiko tuos pačius atitikties testus ir kalba tuo pačiu API, todėl galite pereiti nuo vieno prie kito.",
+      "editionsLink": "Palyginkite talpinimo galimybes",
+      "editionFields": [
+        "Veikia",
+        "Jums reikia",
+        "Įdiegimas",
+        "Kaina"
+      ],
+      "editions": [
+        {
+          "tag": "Paprasčiausia",
+          "name": "Pas paslaugų teikėją",
+          "runs": "Talpinimo įmonė ar agentūra jį prižiūri už jus",
+          "need": "Nieko techniško",
+          "setup": "Įdiegia kartu su jumis",
+          "cost": "Teikėjo kainos",
+          "cta": "Žiūrėti teikėjus"
+        },
+        {
+          "tag": "Vienu paspaudimu",
+          "runs": "Cloudflare Workers su D1 ir R2",
+          "need": "Cloudflare paskyros",
+          "setup": "Vienas paspaudimas, tada sąrankos vedlys",
+          "cost": "Planas Workers Paid, apie 5 dolerius per mėnesį",
+          "cta": "Įdiegti Cloudflare"
+        },
+        {
+          "tag": "Konteineriai",
+          "runs": "Google Cloud Run arba bet kuris serveris su Docker",
+          "need": "Google Cloud paskyros arba Docker serverio",
+          "setup": "Vienas scenarijus arba viena Docker komanda",
+          "cost": "Mokėjimas pagal naudojimą Cloud Run arba jūsų serveris",
+          "cta": "Įdiegti su Docker"
+        },
+        {
+          "tag": "Be komandų",
+          "runs": "Įprastas interneto talpinimas su PHP ir duomenų baze",
+          "need": "FTP programos",
+          "setup": "Įkelkite zip, tada diegimo programa",
+          "cost": "Talpinimas, už kurį jau mokate",
+          "cta": "Įdiegti interneto talpinime"
+        }
+      ],
+      "trustEyebrow": "Valdymas",
+      "trustTitle": "Atviras standartas, o ne platforma, prie kurios esate pririšti.",
+      "trustLead": "Open Brand Exchange turi priklausyti jį naudojantiems prekių ženklams, pardavėjams ir programinės įrangos tiekėjams, o ne vienai įmonei.",
+      "trust": [
+        {
+          "h": "Atvira specifikacija",
+          "p": "Versija 0.1, aprašyta OpenAPI 3.1 ir JSON Schema pagal CC-BY-4.0. Įgyvendinti ją gali bet kas, taip pat komerciškai."
+        },
+        {
+          "h": "Atitikties testai",
+          "p": "61 automatinė patikra keturiuose profiliuose. Jokiam įgyvendinimui nedaroma išimčių, net iniciatoriaus įmonei."
+        },
+        {
+          "h": "Atvirojo kodo licencijos",
+          "p": "SDK, įrankis obx ir žiniatinklio sąsaja yra Apache-2.0. Trys portalo leidimai yra AGPL-3.0, todėl patobulinimai lieka atviri."
+        },
+        {
+          "h": "Steigiamas fondas",
+          "p": "Iniciatorius: {person}. Autorių teisės, pavadinimas ir domenas bus perduoti organizacijai {foundation}, kai tik ji bus įsteigta."
+        },
+        {
+          "h": "Saugumas",
+          "p": "Apie pažeidžiamumus praneškite konfidencialiai adresu {email}. Saugumas yra vienas iš keturių atitikties profilių."
+        },
+        {
+          "h": "Privatumas pirmiausia",
+          "p": "Ši svetainė nenaudoja slapukų ir sekimo priemonių ir nieko neįkelia iš kitų serverių."
+        }
+      ],
+      "trustLink": "Skaitykite, kaip jis valdomas",
+      "devEyebrow": "Kūrėjams",
+      "devTitle": "Specifikacija, ant kurios galite statyti.",
+      "devP": "Trys OpenAPI sutartys, JSON Schemos, išgalvotas bandomasis prekės ženklas ir atitikties testai. Go SDK ir įrankis obx paruošti naudoti, tinka ir bet kuris HTTP klientas.",
+      "devLinks": [
+        "API žinynas",
+        "Specifikacija GitHub",
+        "Go SDK ir įrankis obx",
+        "Klaidų kodai"
+      ],
+      "faqTitle": "Ko prekių ženklai klausia pirmiausia",
+      "faqLink": "Visi klausimai",
+      "closingTitle": "Viena vieta, kur kiekvienas pardavėjas randa tai, ko reikia.",
+      "closingP": "Įsirenkite savo portalą arba papasakokite apie savo sistemas ir pardavėjus ir padėkite formuoti pirmąjį leidimą.",
+      "closingMail": "Parašykite mums"
+    },
+    "pages": {
+      "brandsH1": "Nustatykite kartą. Visiems pardavėjams iš karto.",
+      "retailersSoftware": "Jūsų programinei įrangai",
+      "hostingEditions": "Trys leidimai"
+    }
   }
 }

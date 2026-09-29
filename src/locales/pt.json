@@ -753,5 +753,257 @@
     "ctaBrands": "Procuramos marcas que queiram ajudar a moldar a primeira versão: que sistemas usa e quantos revendedores serve? Escreva-nos.",
     "ctaRetailers": "Procuramos revendedores que queiram ajudar a moldar a primeira versão: que marcas quer ligar e que software usa? Escreva-nos.",
     "footer": "As funções em «A seguir» estão em desenvolvimento. Versão 0.1, {date}."
+  },
+  "site": {
+    "nav": {
+      "start": "Comece como marca",
+      "docs": "Documentação",
+      "preview": "Pré-visualização v0.1"
+    },
+    "footer": {
+      "tagline": "A norma aberta para as marcas entregarem imagens de produto e dados de artigos aos seus revendedores.",
+      "product": "Produto",
+      "developers": "Programadores",
+      "project": "Projeto",
+      "legal": "Informação legal",
+      "reference": "Referência da API",
+      "errors": "Códigos de erro",
+      "spec": "Especificação",
+      "sdk": "Go SDK e ferramenta obx",
+      "status": "A versão 0.1 está em testes. A primeira versão pública está a ser preparada."
+    },
+    "shots": {
+      "portalCatalog": "O portal da marca fictícia Kestrel, tal como um revendedor o vê: oito artigos com filtros por marca, tipo de produto e cor.",
+      "portalEan": "Um revendedor cola seis EAN no portal da marca: cinco são encontrados e um não consta do catálogo.",
+      "portalArticle": "Um artigo no portal da marca: imagens por cor, transferência em original, web ou quadrada, e o EAN de cada tamanho.",
+      "adminOverview": "A vista geral da administração da marca: primeiros passos, números do catálogo, pedidos de acesso e transferências recentes dos revendedores.",
+      "adminCatalog": "O catálogo na administração da marca: oito artigos publicados com os respetivos tamanhos e imagens.",
+      "adminStats": "Estatísticas na administração da marca: transferências, imagens e os revendedores mais ativos nos últimos 30 dias.",
+      "adminAutomation": "Envio automático na administração da marca: receitas prontas para a ferramenta obx, cron, GitHub Actions e muito mais."
+    },
+    "home": {
+      "eyebrow": "Norma aberta · Software livre",
+      "h1": "Publique uma vez. Chega a todos os revendedores.",
+      "lead": "O Open Brand Exchange dá à sua marca um portal próprio para revendedores, uma API padrão para o software deles e publicação automática a partir do seu PIM, ERP ou pastas. Código aberto, alojamento gratuito e sempre seu.",
+      "ctaRetailer": "Sou revendedor",
+      "proofLabel": "Em resumo",
+      "proof": [
+        {
+          "v": "Aberta",
+          "l": "norma, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "edições do portal"
+        },
+        {
+          "v": "61",
+          "l": "testes de conformidade"
+        },
+        {
+          "v": "25",
+          "l": "idiomas"
+        },
+        {
+          "v": "0 €",
+          "l": "em licenças"
+        }
+      ],
+      "codeCaption": "O que o software de um revendedor recebe",
+      "flowEyebrow": "Como funciona",
+      "flowTitle": "Uma publicação. Para cada forma de trabalhar.",
+      "flowLead": "Os seus sistemas entregam ao seu próprio portal. Os compradores usam-no no navegador; o software deles lê o mesmo conteúdo através da API padrão.",
+      "flowCaption": "Como o conteúdo segue dos sistemas de uma marca, através do seu próprio portal, até aos seus revendedores.",
+      "flow": {
+        "systems": "Os seus sistemas",
+        "systemsItems": [
+          "PIM",
+          "ERP",
+          "DAM",
+          "Pasta de exportação"
+        ],
+        "upload": "Envio automático",
+        "uploadItems": [
+          "Importação agendada",
+          "Ferramenta obx",
+          "GitHub Action",
+          "API de envio"
+        ],
+        "portal": "O seu portal",
+        "portalDomain": "brands.yourbrand.com",
+        "portalItems": [
+          "Catálogo e imagens",
+          "Acesso por revendedor",
+          "Estatísticas de utilização"
+        ],
+        "retailers": "Os seus revendedores",
+        "browser": "Compradores, no navegador",
+        "browserItems": [
+          "Pesquisa e lista de EAN",
+          "Transferências em zip e CSV"
+        ],
+        "software": "O software deles, através da API",
+        "softwareItems": [
+          "Loja online e PIM",
+          "POS e ferramentas de conteúdo"
+        ]
+      },
+      "pillars": [
+        {
+          "eyebrow": "Portal",
+          "h": "Um portal que os revendedores vão mesmo usar.",
+          "p": "Os compradores iniciam sessão no seu portal, colam os EAN da encomenda e transferem exatamente o que precisam: uma fotografia, um artigo ou um zip de uma seleção inteira.",
+          "items": [
+            "Pesquisa e filtros por marca, estação, tipo de produto e cor",
+            "Cole uma lista de EAN e veja de imediato o que existe e o que falta",
+            "Original, web (2000 px) ou quadrada, mais os dados dos artigos numa folha de cálculo",
+            "O seu nome, logótipo e domínio: «Kestrel · {portal}»"
+          ],
+          "link": "Veja-o pelos olhos de um revendedor"
+        },
+        {
+          "eyebrow": "API",
+          "h": "Uma API para todas as marcas da norma.",
+          "p": "O software do revendedor obtém tudo uma vez e depois apenas o que mudou, incluindo o que retirar. Cada imagem chega com os direitos de utilização, a data de embargo e a origem de IA.",
+          "items": [
+            "Primeiro uma cópia completa, depois só as alterações",
+            "Pesquisa por EAN, associada ao artigo e ao tamanho certos",
+            "Versões web, quadrada e miniatura; originais se o permitir",
+            "Um fabricante de software integra-a uma vez e funciona com todas as marcas"
+          ],
+          "link": "Leia a referência da API"
+        },
+        {
+          "eyebrow": "Automatização",
+          "h": "Publique a partir dos sistemas que já tem.",
+          "p": "O seu PIM, ERP ou uma pasta partilhada já contém os dados e as fotografias. Deixe o portal ir buscá-los de forma agendada, ou envie-os com um só comando. Ninguém anda a arrastar ficheiros.",
+          "items": [
+            "Importação agendada a partir de um endereço web, SFTP ou S3, sem código",
+            "A ferramenta obx para Windows, macOS e Linux envia só o que mudou",
+            "Uma GitHub Action pronta a usar, e receitas para cron, n8n, Make e Zapier",
+            "Um único formato CSV e uma única regra de nomes para as fotografias"
+          ],
+          "link": "Veja as receitas de automatização"
+        }
+      ],
+      "audienceEyebrow": "Para quem é",
+      "audienceTitle": "Feito para os dois lados da relação.",
+      "brands": {
+        "h": "Para marcas",
+        "p": "Deixe de enviar ficheiros de um lado para o outro. Publique uma vez, a partir dos seus sistemas, e mantenha o controlo.",
+        "items": [
+          "O seu próprio portal, no seu próprio domínio",
+          "Aprova cada revendedor e decide o que ele vê",
+          "Veja quem transfere o quê, por revendedor",
+          "Aloje-o gratuitamente ou escolha um fornecedor e saia quando quiser"
+        ],
+        "cta": "Saiba mais para marcas"
+      },
+      "retailers": {
+        "h": "Para revendedores",
+        "p": "Todas as marcas num formato coerente, no seu navegador ou diretamente no seu software.",
+        "items": [
+          "Cole a sua lista de EAN e receba as imagens certas para cada tamanho",
+          "Transfira zips e dados de artigos, prontos para a sua loja",
+          "Uma só ligação para todas as marcas da norma",
+          "Direitos de utilização e datas de embargo em cada imagem"
+        ],
+        "cta": "Saiba mais para revendedores"
+      },
+      "editionsEyebrow": "Alojamento",
+      "editionsTitle": "Onde quiser. Paga só o alojamento.",
+      "editionsLead": "Três edições do mesmo portal. Passam nos mesmos testes de conformidade e falam a mesma API, por isso pode mudar de uma para outra.",
+      "editionsLink": "Compare as opções de alojamento",
+      "editionFields": [
+        "Funciona em",
+        "Precisa de",
+        "Instalação",
+        "Custo"
+      ],
+      "editions": [
+        {
+          "tag": "A mais fácil",
+          "name": "Com um fornecedor",
+          "runs": "Uma empresa de alojamento ou agência gere-o por si",
+          "need": "Nada técnico",
+          "setup": "Configuram-no consigo",
+          "cost": "Os preços do próprio fornecedor",
+          "cta": "Ver fornecedores"
+        },
+        {
+          "tag": "Um clique",
+          "runs": "Cloudflare Workers, com D1 e R2",
+          "need": "Uma conta Cloudflare",
+          "setup": "Um clique e depois o assistente",
+          "cost": "Plano Workers Paid, cerca de 5 dólares por mês",
+          "cta": "Instalar no Cloudflare"
+        },
+        {
+          "tag": "Contentores",
+          "runs": "Google Cloud Run ou qualquer servidor com Docker",
+          "need": "Uma conta Google Cloud ou um servidor Docker",
+          "setup": "Um script ou um comando Docker",
+          "cost": "Paga o que usa no Cloud Run, ou o seu servidor",
+          "cta": "Instalar com Docker"
+        },
+        {
+          "tag": "Sem comandos",
+          "runs": "Alojamento web comum com PHP e uma base de dados",
+          "need": "Um programa de FTP",
+          "setup": "Envie um zip e siga o instalador",
+          "cost": "O alojamento que já paga",
+          "cta": "Instalar em alojamento web"
+        }
+      ],
+      "trustEyebrow": "Governação",
+      "trustTitle": "Uma norma aberta, não uma plataforma que o prende.",
+      "trustLead": "O Open Brand Exchange deve pertencer às marcas, revendedores e fabricantes de software que o usam, não a uma única empresa.",
+      "trust": [
+        {
+          "h": "Especificação aberta",
+          "p": "Versão 0.1, escrita em OpenAPI 3.1 e JSON Schema sob CC-BY-4.0. Qualquer pessoa a pode implementar, também para fins comerciais."
+        },
+        {
+          "h": "Testes de conformidade",
+          "p": "61 verificações automáticas em quatro perfis. Nenhuma implementação tem tratamento especial, nem a da empresa do próprio promotor."
+        },
+        {
+          "h": "Licenças de código aberto",
+          "p": "O SDK, a ferramenta obx e a interface web são Apache-2.0. As três edições do portal são AGPL-3.0, para que as melhorias continuem abertas."
+        },
+        {
+          "h": "Uma fundação em constituição",
+          "p": "Uma iniciativa de {person}. Os direitos de autor, o nome e o domínio passam para a {foundation} assim que esta exista."
+        },
+        {
+          "h": "Segurança",
+          "p": "Comunique vulnerabilidades em privado para {email}. A segurança é um dos quatro perfis de conformidade."
+        },
+        {
+          "h": "Privacidade primeiro",
+          "p": "Este site não define cookies, não usa rastreadores e não carrega nada de outros servidores."
+        }
+      ],
+      "trustLink": "Saiba como é governado",
+      "devEyebrow": "Programadores",
+      "devTitle": "Uma especificação sobre a qual construir.",
+      "devP": "Três contratos OpenAPI, JSON Schemas, uma marca de teste fictícia e testes de conformidade. O Go SDK e a ferramenta obx estão prontos a usar, e qualquer cliente HTTP funciona.",
+      "devLinks": [
+        "Referência da API",
+        "Especificação no GitHub",
+        "Go SDK e ferramenta obx",
+        "Códigos de erro"
+      ],
+      "faqTitle": "O que as marcas perguntam primeiro",
+      "faqLink": "Todas as perguntas",
+      "closingTitle": "Um só lugar onde cada revendedor acerta.",
+      "closingP": "Crie o seu próprio portal, ou fale-nos dos seus sistemas e revendedores e ajude a moldar a primeira versão.",
+      "closingMail": "Envie-nos um e-mail"
+    },
+    "pages": {
+      "brandsH1": "Configure uma vez. Para todos os revendedores ao mesmo tempo.",
+      "retailersSoftware": "Para o seu software",
+      "hostingEditions": "As três edições"
+    }
   }
 }

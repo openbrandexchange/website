@@ -753,5 +753,257 @@
     "ctaBrands": "We are looking for brands that want to help shape the first version: which systems do you use, and how many retailers do you serve? Email us.",
     "ctaRetailers": "We are looking for retailers who want to help shape the first version: which brands would you like to connect, and which software do you use? Email us.",
     "footer": "Features under \"Coming next\" are in development. Version 0.1, {date}."
+  },
+  "site": {
+    "nav": {
+      "start": "Start as a brand",
+      "docs": "Documentation",
+      "preview": "v0.1 preview"
+    },
+    "footer": {
+      "tagline": "The open standard for delivering product images and article data from brands to their retailers.",
+      "product": "Product",
+      "developers": "Developers",
+      "project": "Project",
+      "legal": "Legal",
+      "reference": "API reference",
+      "errors": "Error codes",
+      "spec": "Specification",
+      "sdk": "Go SDK and obx tool",
+      "status": "Version 0.1 is in testing. The first public release is being prepared."
+    },
+    "shots": {
+      "portalCatalog": "The brand portal of the fictional brand Kestrel as a retailer sees it: eight articles with filters for brand, product type and colour.",
+      "portalEan": "A retailer pastes six EANs into the brand portal: five are found, one is not in the catalog.",
+      "portalArticle": "An article in the brand portal: images per colour, the download choice between original, web and square, and the EAN of every size.",
+      "adminOverview": "The overview of the brand admin: first steps, catalog counts, access requests and recent downloads by retailers.",
+      "adminCatalog": "The catalog in the brand admin: eight published articles with their sizes and images.",
+      "adminStats": "Statistics in the brand admin: downloads, images and the most active retailers over 30 days.",
+      "adminAutomation": "Automatic upload in the brand admin: ready-made recipes for the obx tool, cron, GitHub Actions and more."
+    },
+    "home": {
+      "eyebrow": "Open standard · Free software",
+      "h1": "Publish once. Every retailer gets it.",
+      "lead": "Open Brand Exchange gives your brand its own portal for retailers, a standard API for their software and automatic publishing from your PIM, ERP or folders. Open source, free to host, yours to keep.",
+      "ctaRetailer": "I am a retailer",
+      "proofLabel": "At a glance",
+      "proof": [
+        {
+          "v": "Open",
+          "l": "standard, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "portal editions"
+        },
+        {
+          "v": "61",
+          "l": "conformance checks"
+        },
+        {
+          "v": "25",
+          "l": "languages"
+        },
+        {
+          "v": "€0",
+          "l": "licence fee"
+        }
+      ],
+      "codeCaption": "What a retailer's software receives",
+      "flowEyebrow": "How it works",
+      "flowTitle": "One publication. Every way your retailers work.",
+      "flowLead": "Your systems deliver to your own portal. Buyers use it in the browser; their software reads the same content through the standard API.",
+      "flowCaption": "How content flows from a brand's systems through its own portal to its retailers.",
+      "flow": {
+        "systems": "Your systems",
+        "systemsItems": [
+          "PIM",
+          "ERP",
+          "DAM",
+          "Export folder"
+        ],
+        "upload": "Automatic upload",
+        "uploadItems": [
+          "Scheduled import",
+          "obx tool",
+          "GitHub Action",
+          "Upload API"
+        ],
+        "portal": "Your portal",
+        "portalDomain": "brands.yourbrand.com",
+        "portalItems": [
+          "Catalog and images",
+          "Access per retailer",
+          "Usage statistics"
+        ],
+        "retailers": "Your retailers",
+        "browser": "Buyers, in the browser",
+        "browserItems": [
+          "Search and EAN list",
+          "Zip and CSV downloads"
+        ],
+        "software": "Their software, through the API",
+        "softwareItems": [
+          "Webshop and PIM",
+          "POS and content tools"
+        ]
+      },
+      "pillars": [
+        {
+          "eyebrow": "Portal",
+          "h": "A portal your retailers will actually use.",
+          "p": "Buyers log in to your portal, paste the EANs from their order and download exactly what they need: one photo, one article or a zip of a whole selection.",
+          "items": [
+            "Search and filter by brand, season, product type and colour",
+            "Paste an EAN list and see at once what is there and what is missing",
+            "Original, web (2000 px) or square, plus article data as a spreadsheet",
+            "Your name, logo and domain: “Kestrel · {portal}”"
+          ],
+          "link": "See it through a retailer's eyes"
+        },
+        {
+          "eyebrow": "API",
+          "h": "One API for every brand on the standard.",
+          "p": "Retailers' software fetches everything once and then only what changed, including what you withdraw. Every image arrives with its usage rights, embargo date and AI provenance.",
+          "items": [
+            "A full copy first, then only the changes",
+            "Lookup by EAN, matched to the right article and size",
+            "Web, square and thumbnail versions; originals when you allow them",
+            "Built once by a software vendor, it works with every brand"
+          ],
+          "link": "Read the API reference"
+        },
+        {
+          "eyebrow": "Automation",
+          "h": "Publish from the systems you already have.",
+          "p": "Your PIM, ERP or a shared folder already holds the data and the photos. Let your portal fetch them on a schedule, or send them with one command. Nobody drags files around.",
+          "items": [
+            "Scheduled import from a web address, SFTP or S3, without code",
+            "The obx tool for Windows, macOS and Linux uploads only what changed",
+            "A ready-made GitHub Action, and recipes for cron, n8n, Make and Zapier",
+            "One CSV format and one naming rule for photos"
+          ],
+          "link": "See the automation recipes"
+        }
+      ],
+      "audienceEyebrow": "Who it is for",
+      "audienceTitle": "Built for both sides of the relationship.",
+      "brands": {
+        "h": "For brands",
+        "p": "Stop sending files around. Publish once, from your own systems, and stay in control.",
+        "items": [
+          "Your own portal, on your own domain",
+          "You approve every retailer and decide what they see",
+          "See who downloads what, per retailer",
+          "Host it yourself for free, or choose a provider and leave any time"
+        ],
+        "cta": "Explore for brands"
+      },
+      "retailers": {
+        "h": "For retailers",
+        "p": "Every brand in one consistent format, in your browser or straight into your software.",
+        "items": [
+          "Paste your EAN list and get the right images for every size",
+          "Download zips and article data, ready for your shop",
+          "One connection for every brand on the standard",
+          "Usage rights and embargo dates with every image"
+        ],
+        "cta": "Explore for retailers"
+      },
+      "editionsEyebrow": "Hosting",
+      "editionsTitle": "Run it where you want. Pay only for hosting.",
+      "editionsLead": "Three editions of the same portal. They pass the same conformance suite and speak the same API, so you can move from one to another.",
+      "editionsLink": "Compare the hosting options",
+      "editionFields": [
+        "Runs on",
+        "You need",
+        "Setup",
+        "Cost"
+      ],
+      "editions": [
+        {
+          "tag": "Easiest",
+          "name": "Hosted by a provider",
+          "runs": "A hosting company or agency runs it for you",
+          "need": "Nothing technical",
+          "setup": "They set it up with you",
+          "cost": "The provider's own prices",
+          "cta": "See providers"
+        },
+        {
+          "tag": "One click",
+          "runs": "Cloudflare Workers, with D1 and R2",
+          "need": "A Cloudflare account",
+          "setup": "One click, then the setup wizard",
+          "cost": "Workers Paid plan, about $5 a month",
+          "cta": "Set up on Cloudflare"
+        },
+        {
+          "tag": "Containers",
+          "runs": "Google Cloud Run, or any server with Docker",
+          "need": "A Google Cloud account or a Docker host",
+          "setup": "One script or one Docker command",
+          "cost": "Pay per use on Cloud Run, or your own server",
+          "cta": "Set up with Docker"
+        },
+        {
+          "tag": "No commands",
+          "runs": "Ordinary web hosting with PHP and a database",
+          "need": "An FTP program",
+          "setup": "Upload a zip, then the installer",
+          "cost": "The hosting you already pay for",
+          "cta": "Set up on web hosting"
+        }
+      ],
+      "trustEyebrow": "Governance",
+      "trustTitle": "An open standard, not a platform you are locked into.",
+      "trustLead": "Open Brand Exchange should belong to the brands, retailers and software vendors who use it, not to one company.",
+      "trust": [
+        {
+          "h": "Open specification",
+          "p": "Version 0.1, written as OpenAPI 3.1 and JSON Schema under CC-BY-4.0. Anyone may implement it, commercially too."
+        },
+        {
+          "h": "Conformance suite",
+          "p": "61 automated checks in four profiles. No implementation gets special treatment, including the initiator's own company."
+        },
+        {
+          "h": "Open-source licences",
+          "p": "The SDK, the obx tool and the web interface are Apache-2.0. The three portal editions are AGPL-3.0, so improvements stay open."
+        },
+        {
+          "h": "A foundation in formation",
+          "p": "An initiative of {person}. The copyright, the name and the domain move to the {foundation} once it exists."
+        },
+        {
+          "h": "Security",
+          "p": "Report vulnerabilities privately to {email}. Security is one of the four conformance profiles."
+        },
+        {
+          "h": "Privacy first",
+          "p": "This website sets no cookies, uses no trackers and loads nothing from other servers."
+        }
+      ],
+      "trustLink": "Read how it is governed",
+      "devEyebrow": "Developers",
+      "devTitle": "A specification you can build on.",
+      "devP": "Three OpenAPI contracts, JSON Schemas, a fictional test brand and a conformance suite. The Go SDK and the obx tool are ready to use, and any HTTP client works.",
+      "devLinks": [
+        "API reference",
+        "Specification on GitHub",
+        "Go SDK and obx tool",
+        "Error codes"
+      ],
+      "faqTitle": "Questions brands ask first",
+      "faqLink": "All questions",
+      "closingTitle": "Give every retailer one place to get it right.",
+      "closingP": "Set up your own portal, or tell us about your systems and retailers and help shape the first release.",
+      "closingMail": "Email us"
+    },
+    "pages": {
+      "brandsH1": "Set it up once. For every retailer at the same time.",
+      "retailersSoftware": "For your software",
+      "hostingEditions": "The three editions"
+    }
   }
 }

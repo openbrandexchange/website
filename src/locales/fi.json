@@ -753,5 +753,257 @@
     "ctaBrands": "Etsimme brändejä, jotka haluavat olla muokkaamassa ensimmäistä versiota: mitä järjestelmiä käytät, ja kuinka monta jälleenmyyjää palvelet? Kirjoita meille.",
     "ctaRetailers": "Etsimme jälleenmyyjiä, jotka haluavat olla muokkaamassa ensimmäistä versiota: mitkä brändit haluaisit yhdistää, ja mitä ohjelmistoa käytät? Kirjoita meille.",
     "footer": "Kohdan ”Tulossa” toiminnot ovat kehitteillä. Versio 0.1, {date}."
+  },
+  "site": {
+    "nav": {
+      "start": "Aloita brändinä",
+      "docs": "Dokumentaatio",
+      "preview": "v0.1-esiversio"
+    },
+    "footer": {
+      "tagline": "Avoin standardi tuotekuvien ja tuotetietojen toimittamiseen brändeiltä niiden jälleenmyyjille.",
+      "product": "Tuote",
+      "developers": "Kehittäjille",
+      "project": "Projekti",
+      "legal": "Oikeudelliset tiedot",
+      "reference": "API-dokumentaatio",
+      "errors": "Virhekoodit",
+      "spec": "Määrittely",
+      "sdk": "Go SDK ja obx-työkalu",
+      "status": "Versio 0.1 on testauksessa. Ensimmäistä julkista julkaisua valmistellaan."
+    },
+    "shots": {
+      "portalCatalog": "Kuvitteellisen Kestrel-brändin jälleenmyyjäportaali jälleenmyyjän näkökulmasta: kahdeksan tuotetta ja suodattimet brändin, tuotetyypin ja värin mukaan.",
+      "portalEan": "Jälleenmyyjä liittää portaaliin kuusi EAN-koodia: viisi löytyy, yhtä ei ole luettelossa.",
+      "portalArticle": "Tuote portaalissa: kuvat värin mukaan, latausvalinta alkuperäisen, verkko- ja neliöversion välillä sekä jokaisen koon EAN.",
+      "adminOverview": "Brändin hallinnan yleisnäkymä: ensimmäiset askeleet, luettelon luvut, pääsypyynnöt ja jälleenmyyjien viimeisimmät lataukset.",
+      "adminCatalog": "Luettelo brändin hallinnassa: kahdeksan julkaistua tuotetta kokoineen ja kuvineen.",
+      "adminStats": "Tilastot brändin hallinnassa: lataukset, kuvat ja aktiivisimmat jälleenmyyjät 30 päivän ajalta.",
+      "adminAutomation": "Automaattinen lataus brändin hallinnassa: valmiit ohjeet obx-työkalulle, cronille, GitHub Actionsille ja muille."
+    },
+    "home": {
+      "eyebrow": "Avoin standardi · Vapaa ohjelmisto",
+      "h1": "Julkaise kerran. Jokainen jälleenmyyjä saa sen.",
+      "lead": "Open Brand Exchange antaa brändillesi oman portaalin jälleenmyyjille, vakio-APIn heidän ohjelmistoilleen ja automaattisen julkaisun PIM-, ERP- tai kansiojärjestelmästäsi. Avointa lähdekoodia, maksutonta ylläpitää ja pysyvästi sinun.",
+      "ctaRetailer": "Olen jälleenmyyjä",
+      "proofLabel": "Lyhyesti",
+      "proof": [
+        {
+          "v": "Avoin",
+          "l": "standardi, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "portaaliversiota"
+        },
+        {
+          "v": "61",
+          "l": "yhdenmukaisuustestiä"
+        },
+        {
+          "v": "25",
+          "l": "kieltä"
+        },
+        {
+          "v": "0 €",
+          "l": "lisenssimaksu"
+        }
+      ],
+      "codeCaption": "Mitä jälleenmyyjän ohjelmisto saa",
+      "flowEyebrow": "Näin se toimii",
+      "flowTitle": "Yksi julkaisu. Kaikille jälleenmyyjillesi.",
+      "flowLead": "Järjestelmäsi toimittavat sisällön omaan portaaliisi. Ostajat käyttävät sitä selaimessa, ja heidän ohjelmistonsa lukevat saman sisällön vakio-APIn kautta.",
+      "flowCaption": "Näin sisältö kulkee brändin järjestelmistä sen oman portaalin kautta jälleenmyyjille.",
+      "flow": {
+        "systems": "Järjestelmäsi",
+        "systemsItems": [
+          "PIM",
+          "ERP",
+          "DAM",
+          "Vientikansio"
+        ],
+        "upload": "Automaattinen lataus",
+        "uploadItems": [
+          "Ajastettu tuonti",
+          "obx-työkalu",
+          "GitHub Action",
+          "Lataus-API"
+        ],
+        "portal": "Portaalisi",
+        "portalDomain": "brands.yourbrand.com",
+        "portalItems": [
+          "Luettelo ja kuvat",
+          "Pääsy jälleenmyyjäkohtaisesti",
+          "Käyttötilastot"
+        ],
+        "retailers": "Jälleenmyyjäsi",
+        "browser": "Ostajat selaimessa",
+        "browserItems": [
+          "Haku ja EAN-luettelo",
+          "Lataukset zip- ja CSV-muodossa"
+        ],
+        "software": "Heidän ohjelmistonsa APIn kautta",
+        "softwareItems": [
+          "Verkkokauppa ja PIM",
+          "Kassa ja sisältötyökalut"
+        ]
+      },
+      "pillars": [
+        {
+          "eyebrow": "Portaali",
+          "h": "Portaali, jota jälleenmyyjät oikeasti käyttävät.",
+          "p": "Ostajat kirjautuvat portaaliisi, liittävät tilauksensa EAN-koodit ja lataavat juuri sen, mitä tarvitsevat: yhden kuvan, yhden tuotteen tai kokonaisen valikoiman zip-tiedostona.",
+          "items": [
+            "Haku ja suodatus brändin, sesongin, tuotetyypin ja värin mukaan",
+            "Liitä EAN-luettelo ja näe heti, mitä löytyy ja mitä puuttuu",
+            "Alkuperäinen, verkko (2000 px) tai neliö sekä tuotetiedot taulukkona",
+            "Oma nimesi, logosi ja verkkotunnuksesi: ”Kestrel · {portal}”"
+          ],
+          "link": "Katso jälleenmyyjän silmin"
+        },
+        {
+          "eyebrow": "API",
+          "h": "Yksi API kaikille standardia käyttäville brändeille.",
+          "p": "Jälleenmyyjien ohjelmistot hakevat kaiken kerran ja sen jälkeen vain muutokset, myös sen, mitä poistat. Jokaisen kuvan mukana tulevat käyttöoikeudet, julkaisuvapautuksen päivä ja tekoälyalkuperä.",
+          "items": [
+            "Ensin täysi kopio, sitten vain muutokset",
+            "Haku EAN-koodilla, oikeaan tuotteeseen ja kokoon yhdistettynä",
+            "Verkko-, neliö- ja pikkukuvaversiot; alkuperäiset, kun sallit sen",
+            "Ohjelmistotoimittaja rakentaa sen kerran, ja se toimii kaikkien brändien kanssa"
+          ],
+          "link": "Lue API-dokumentaatio"
+        },
+        {
+          "eyebrow": "Automaatio",
+          "h": "Julkaise järjestelmistä, jotka sinulla jo on.",
+          "p": "PIM, ERP tai jaettu kansio sisältää jo tiedot ja kuvat. Anna portaalin hakea ne aikataulun mukaan tai lähetä ne yhdellä komennolla. Kenenkään ei tarvitse siirrellä tiedostoja käsin.",
+          "items": [
+            "Ajastettu tuonti verkko-osoitteesta, SFTP:stä tai S3:sta ilman koodia",
+            "obx-työkalu Windowsille, macOSille ja Linuxille lataa vain muutokset",
+            "Valmis GitHub Action sekä ohjeet cronille, n8n:lle, Makelle ja Zapierille",
+            "Yksi CSV-muoto ja yksi nimeämissääntö kuville"
+          ],
+          "link": "Katso automaatio-ohjeet"
+        }
+      ],
+      "audienceEyebrow": "Kenelle",
+      "audienceTitle": "Tehty yhteistyön molemmille osapuolille.",
+      "brands": {
+        "h": "Brändeille",
+        "p": "Lopeta tiedostojen lähettely. Julkaise kerran omista järjestelmistäsi ja pidä ohjat käsissäsi.",
+        "items": [
+          "Oma portaali omassa verkkotunnuksessasi",
+          "Hyväksyt jokaisen jälleenmyyjän ja päätät, mitä he näkevät",
+          "Näet, kuka lataa mitä, jälleenmyyjäkohtaisesti",
+          "Ylläpidä itse maksutta tai valitse palveluntarjoaja, jonka voit vaihtaa milloin vain"
+        ],
+        "cta": "Lisää brändeille"
+      },
+      "retailers": {
+        "h": "Jälleenmyyjille",
+        "p": "Kaikki brändit yhdessä yhtenäisessä muodossa, selaimessa tai suoraan ohjelmistossasi.",
+        "items": [
+          "Liitä EAN-luettelosi ja saat oikeat kuvat jokaiselle koolle",
+          "Lataa zip-tiedostot ja tuotetiedot valmiina kauppaasi",
+          "Yksi yhteys kaikkiin standardia käyttäviin brändeihin",
+          "Käyttöoikeudet ja julkaisuvapautuksen päivät jokaisen kuvan mukana"
+        ],
+        "cta": "Lisää jälleenmyyjille"
+      },
+      "editionsEyebrow": "Ylläpito",
+      "editionsTitle": "Aja missä haluat. Maksat vain ylläpidosta.",
+      "editionsLead": "Saman portaalin kolme versiota. Ne läpäisevät samat yhdenmukaisuustestit ja puhuvat samaa APIa, joten voit siirtyä versiosta toiseen.",
+      "editionsLink": "Vertaa ylläpitovaihtoehtoja",
+      "editionFields": [
+        "Alusta",
+        "Tarvitset",
+        "Käyttöönotto",
+        "Hinta"
+      ],
+      "editions": [
+        {
+          "tag": "Helpoin",
+          "name": "Palveluntarjoajan ylläpitämä",
+          "runs": "Ylläpitoyritys tai toimisto hoitaa sen puolestasi",
+          "need": "Ei mitään teknistä",
+          "setup": "He ottavat sen käyttöön kanssasi",
+          "cost": "Palveluntarjoajan omat hinnat",
+          "cta": "Katso palveluntarjoajat"
+        },
+        {
+          "tag": "Yksi klikkaus",
+          "runs": "Cloudflare Workers, D1 ja R2",
+          "need": "Cloudflare-tili",
+          "setup": "Yksi klikkaus, sitten ohjattu käyttöönotto",
+          "cost": "Workers Paid -tilaus, noin 5 dollaria kuukaudessa",
+          "cta": "Ota käyttöön Cloudflaressa"
+        },
+        {
+          "tag": "Kontit",
+          "runs": "Google Cloud Run tai mikä tahansa palvelin, jossa on Docker",
+          "need": "Google Cloud -tili tai Docker-palvelin",
+          "setup": "Yksi skripti tai yksi Docker-komento",
+          "cost": "Käytön mukaan Cloud Runissa tai oma palvelimesi",
+          "cta": "Ota käyttöön Dockerilla"
+        },
+        {
+          "tag": "Ei komentoja",
+          "runs": "Tavallinen webhotelli, jossa on PHP ja tietokanta",
+          "need": "FTP-ohjelma",
+          "setup": "Lataa zip, sitten asennusohjelma",
+          "cost": "Webhotelli, josta jo maksat",
+          "cta": "Ota käyttöön webhotellissa"
+        }
+      ],
+      "trustEyebrow": "Hallinto",
+      "trustTitle": "Avoin standardi, ei alusta, johon jäät lukkoon.",
+      "trustLead": "Open Brand Exchangen pitäisi kuulua sitä käyttäville brändeille, jälleenmyyjille ja ohjelmistotoimittajille, ei yhdelle yritykselle.",
+      "trust": [
+        {
+          "h": "Avoin määrittely",
+          "p": "Versio 0.1, kirjoitettu OpenAPI 3.1- ja JSON Schema -muodossa CC-BY-4.0-lisenssillä. Kuka tahansa saa toteuttaa sen, myös kaupallisesti."
+        },
+        {
+          "h": "Yhdenmukaisuustestit",
+          "p": "61 automaattista testiä neljässä profiilissa. Mikään toteutus ei saa erityiskohtelua, ei edes aloitteentekijän oma yritys."
+        },
+        {
+          "h": "Avoimen lähdekoodin lisenssit",
+          "p": "SDK, obx-työkalu ja verkkokäyttöliittymä ovat Apache-2.0-lisensoituja. Kolme portaaliversiota ovat AGPL-3.0, joten parannukset pysyvät avoimina."
+        },
+        {
+          "h": "Säätiö perusteilla",
+          "p": "Aloitteentekijä: {person}. Tekijänoikeus, nimi ja verkkotunnus siirtyvät organisaatiolle {foundation}, kun se on perustettu."
+        },
+        {
+          "h": "Tietoturva",
+          "p": "Ilmoita haavoittuvuuksista luottamuksellisesti osoitteeseen {email}. Tietoturva on yksi neljästä yhdenmukaisuusprofiilista."
+        },
+        {
+          "h": "Yksityisyys ensin",
+          "p": "Tämä sivusto ei aseta evästeitä, ei käytä seurantaa eikä lataa mitään muilta palvelimilta."
+        }
+      ],
+      "trustLink": "Lue, miten sitä hallinnoidaan",
+      "devEyebrow": "Kehittäjille",
+      "devTitle": "Määrittely, jonka varaan voit rakentaa.",
+      "devP": "Kolme OpenAPI-sopimusta, JSON Schemat, kuvitteellinen testibrändi ja yhdenmukaisuustestit. Go SDK ja obx-työkalu ovat käyttövalmiita, ja mikä tahansa HTTP-asiakas toimii.",
+      "devLinks": [
+        "API-dokumentaatio",
+        "Määrittely GitHubissa",
+        "Go SDK ja obx-työkalu",
+        "Virhekoodit"
+      ],
+      "faqTitle": "Brändien ensimmäiset kysymykset",
+      "faqLink": "Kaikki kysymykset",
+      "closingTitle": "Anna jokaiselle jälleenmyyjälle yksi luotettava lähde.",
+      "closingP": "Ota oma portaali käyttöön tai kerro meille järjestelmistäsi ja jälleenmyyjistäsi, ja ole mukana muovaamassa ensimmäistä julkaisua.",
+      "closingMail": "Lähetä sähköpostia"
+    },
+    "pages": {
+      "brandsH1": "Ota käyttöön kerran. Kaikille jälleenmyyjille kerralla.",
+      "retailersSoftware": "Ohjelmistollesi",
+      "hostingEditions": "Kolme versiota"
+    }
   }
 }

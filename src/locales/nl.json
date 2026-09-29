@@ -753,5 +753,257 @@
     "ctaBrands": "We zoeken merken die de eerste versie mee willen vormgeven: welke systemen gebruik je, en hoeveel retailers bedien je? Mail ons.",
     "ctaRetailers": "We zoeken retailers die de eerste versie mee willen vormgeven: welke merken wil je koppelen, en welke software gebruik je? Mail ons.",
     "footer": "Functies onder „Komt hierna” zijn in ontwikkeling. Versie 0.1, {date}."
+  },
+  "site": {
+    "nav": {
+      "start": "Start als merk",
+      "docs": "Documentatie",
+      "preview": "v0.1 preview"
+    },
+    "footer": {
+      "tagline": "De open standaard waarmee merken productbeelden en artikeldata aan hun retailers leveren.",
+      "product": "Product",
+      "developers": "Ontwikkelaars",
+      "project": "Project",
+      "legal": "Juridisch",
+      "reference": "API-referentie",
+      "errors": "Foutcodes",
+      "spec": "Specificatie",
+      "sdk": "Go-SDK en obx-tool",
+      "status": "Versie 0.1 wordt getest. De eerste openbare release wordt voorbereid."
+    },
+    "shots": {
+      "portalCatalog": "De beeldbank van het fictieve merk Kestrel zoals een retailer hem ziet: acht artikelen met filters op merk, producttype en kleur.",
+      "portalEan": "Een retailer plakt zes EAN's in de beeldbank: vijf worden gevonden, één staat niet in de catalogus.",
+      "portalArticle": "Een artikel in de beeldbank: beelden per kleur, de keuze tussen origineel, web en vierkant, en de EAN van elke maat.",
+      "adminOverview": "Het overzicht in het merkbeheer: eerste stappen, aantallen in de catalogus, toegangsaanvragen en recente downloads door retailers.",
+      "adminCatalog": "De catalogus in het merkbeheer: acht gepubliceerde artikelen met hun maten en beelden.",
+      "adminStats": "Statistieken in het merkbeheer: downloads, beelden en de actiefste retailers over 30 dagen.",
+      "adminAutomation": "Automatisch uploaden in het merkbeheer: kant-en-klare recepten voor de obx-tool, cron, GitHub Actions en meer."
+    },
+    "home": {
+      "eyebrow": "Open standaard · Gratis software",
+      "h1": "Eén keer publiceren. Elke retailer heeft het.",
+      "lead": "Open Brand Exchange geeft je merk een eigen portaal voor retailers, een standaard-API voor hun software en automatisch publiceren vanuit je PIM, ERP of mappen. Open source, gratis te hosten en van jou.",
+      "ctaRetailer": "Ik ben retailer",
+      "proofLabel": "In het kort",
+      "proof": [
+        {
+          "v": "Open",
+          "l": "standaard, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "portaaledities"
+        },
+        {
+          "v": "61",
+          "l": "conformiteitstests"
+        },
+        {
+          "v": "25",
+          "l": "talen"
+        },
+        {
+          "v": "€ 0",
+          "l": "licentiekosten"
+        }
+      ],
+      "codeCaption": "Wat de software van een retailer ontvangt",
+      "flowEyebrow": "Zo werkt het",
+      "flowTitle": "Eén publicatie. Voor elke manier waarop je retailers werken.",
+      "flowLead": "Je systemen leveren aan je eigen portaal. Inkopers gebruiken het in de browser; hun software leest dezelfde content via de standaard-API.",
+      "flowCaption": "Hoe content van de systemen van een merk via het eigen portaal bij de retailers komt.",
+      "flow": {
+        "systems": "Je systemen",
+        "systemsItems": [
+          "PIM",
+          "ERP",
+          "DAM",
+          "Exportmap"
+        ],
+        "upload": "Automatisch uploaden",
+        "uploadItems": [
+          "Geplande import",
+          "obx-tool",
+          "GitHub Action",
+          "Upload-API"
+        ],
+        "portal": "Je portaal",
+        "portalDomain": "brands.jouwmerk.nl",
+        "portalItems": [
+          "Catalogus en beelden",
+          "Toegang per retailer",
+          "Gebruiksstatistieken"
+        ],
+        "retailers": "Je retailers",
+        "browser": "Inkopers, in de browser",
+        "browserItems": [
+          "Zoeken en EAN-lijst",
+          "Zips en CSV downloaden"
+        ],
+        "software": "Hun software, via de API",
+        "softwareItems": [
+          "Webshop en PIM",
+          "Kassa en contenttools"
+        ]
+      },
+      "pillars": [
+        {
+          "eyebrow": "Portaal",
+          "h": "Een portaal dat je retailers echt gebruiken.",
+          "p": "Inkopers loggen in op je portaal, plakken de EAN's uit hun order en downloaden precies wat ze nodig hebben: één foto, één artikel of een zip van een hele selectie.",
+          "items": [
+            "Zoeken en filteren op merk, seizoen, producttype en kleur",
+            "Plak een EAN-lijst en zie meteen wat er is en wat ontbreekt",
+            "Origineel, web (2000 px) of vierkant, plus artikeldata als spreadsheet",
+            "Jouw naam, logo en domein: „Kestrel · {portal}”"
+          ],
+          "link": "Bekijk het door de ogen van een retailer"
+        },
+        {
+          "eyebrow": "API",
+          "h": "Eén API voor elk merk op de standaard.",
+          "p": "De software van je retailers haalt alles één keer op en daarna alleen wat veranderde, ook wat je intrekt. Elk beeld komt met zijn gebruiksrechten, embargodatum en AI-herkomst.",
+          "items": [
+            "Eerst een volledige kopie, daarna alleen de wijzigingen",
+            "Opzoeken op EAN, gekoppeld aan het juiste artikel en de juiste maat",
+            "Web-, vierkante en miniatuurversies; originelen als jij dat toestaat",
+            "Eén keer gebouwd door een softwareleverancier, werkt het met elk merk"
+          ],
+          "link": "Lees de API-referentie"
+        },
+        {
+          "eyebrow": "Automatiseren",
+          "h": "Publiceer vanuit de systemen die je al hebt.",
+          "p": "Je PIM, ERP of een gedeelde map heeft de data en de foto's al. Laat je portaal ze op een schema ophalen, of stuur ze met één commando. Niemand hoeft nog bestanden te slepen.",
+          "items": [
+            "Geplande import vanaf een webadres, SFTP of S3, zonder code",
+            "De obx-tool voor Windows, macOS en Linux uploadt alleen wat veranderde",
+            "Een kant-en-klare GitHub Action, en recepten voor cron, n8n, Make en Zapier",
+            "Eén CSV-formaat en één naamregel voor foto's"
+          ],
+          "link": "Bekijk de automatiseringsrecepten"
+        }
+      ],
+      "audienceEyebrow": "Voor wie",
+      "audienceTitle": "Gebouwd voor beide kanten van de samenwerking.",
+      "brands": {
+        "h": "Voor merken",
+        "p": "Stop met bestanden rondsturen. Publiceer één keer, vanuit je eigen systemen, en houd de regie.",
+        "items": [
+          "Je eigen portaal, op je eigen domein",
+          "Jij keurt elke retailer goed en bepaalt wat hij ziet",
+          "Zie wie wat downloadt, per retailer",
+          "Host het zelf gratis, of kies een provider en vertrek wanneer je wilt"
+        ],
+        "cta": "Bekijk voor merken"
+      },
+      "retailers": {
+        "h": "Voor retailers",
+        "p": "Elk merk in één vast formaat, in je browser of rechtstreeks in je software.",
+        "items": [
+          "Plak je EAN-lijst en krijg de juiste beelden voor elke maat",
+          "Download zips en artikeldata, klaar voor je webshop",
+          "Eén koppeling voor elk merk op de standaard",
+          "Gebruiksrechten en embargodata bij elk beeld"
+        ],
+        "cta": "Bekijk voor retailers"
+      },
+      "editionsEyebrow": "Hosting",
+      "editionsTitle": "Draai het waar je wilt. Betaal alleen voor hosting.",
+      "editionsLead": "Drie edities van hetzelfde portaal. Ze doorstaan dezelfde conformiteitstests en spreken dezelfde API, dus je kunt van de een naar de ander overstappen.",
+      "editionsLink": "Vergelijk de hostingopties",
+      "editionFields": [
+        "Draait op",
+        "Wat je nodig hebt",
+        "Installatie",
+        "Kosten"
+      ],
+      "editions": [
+        {
+          "tag": "Het makkelijkst",
+          "name": "Gehost door een provider",
+          "runs": "Een hostingbedrijf of bureau draait het voor je",
+          "need": "Niets technisch",
+          "setup": "Zij richten het samen met jou in",
+          "cost": "De eigen prijzen van de provider",
+          "cta": "Bekijk providers"
+        },
+        {
+          "tag": "Eén klik",
+          "runs": "Cloudflare Workers, met D1 en R2",
+          "need": "Een Cloudflare-account",
+          "setup": "Eén klik, daarna de installatiewizard",
+          "cost": "Workers Paid-abonnement, ongeveer 5 dollar per maand",
+          "cta": "Installeer op Cloudflare"
+        },
+        {
+          "tag": "Containers",
+          "runs": "Google Cloud Run, of elke server met Docker",
+          "need": "Een Google Cloud-account of een Docker-host",
+          "setup": "Eén script of één Docker-commando",
+          "cost": "Betalen naar gebruik op Cloud Run, of je eigen server",
+          "cta": "Installeer met Docker"
+        },
+        {
+          "tag": "Geen commando's",
+          "runs": "Gewone webhosting met PHP en een database",
+          "need": "Een FTP-programma",
+          "setup": "Zip uploaden, daarna de installer",
+          "cost": "De hosting die je al betaalt",
+          "cta": "Installeer op webhosting"
+        }
+      ],
+      "trustEyebrow": "Governance",
+      "trustTitle": "Een open standaard, geen platform waar je aan vastzit.",
+      "trustLead": "Open Brand Exchange hoort toe aan de merken, retailers en softwareleveranciers die het gebruiken, niet aan één bedrijf.",
+      "trust": [
+        {
+          "h": "Open specificatie",
+          "p": "Versie 0.1, vastgelegd als OpenAPI 3.1 en JSON Schema onder CC-BY-4.0. Iedereen mag het implementeren, ook commercieel."
+        },
+        {
+          "h": "Conformiteitstests",
+          "p": "61 geautomatiseerde tests in vier profielen. Geen enkele implementatie krijgt een voorkeursbehandeling, ook die van het bedrijf van de initiatiefnemer niet."
+        },
+        {
+          "h": "Opensourcelicenties",
+          "p": "De SDK, de obx-tool en de webinterface zijn Apache-2.0. De drie portaaledities zijn AGPL-3.0, zodat verbeteringen open blijven."
+        },
+        {
+          "h": "Een stichting in oprichting",
+          "p": "Een initiatief van {person}. Het auteursrecht, de naam en het domein gaan naar de {foundation} zodra die bestaat."
+        },
+        {
+          "h": "Beveiliging",
+          "p": "Meld kwetsbaarheden vertrouwelijk aan {email}. Beveiliging is een van de vier conformiteitsprofielen."
+        },
+        {
+          "h": "Privacy voorop",
+          "p": "Deze website plaatst geen cookies, gebruikt geen trackers en laadt niets van andere servers."
+        }
+      ],
+      "trustLink": "Lees hoe het wordt bestuurd",
+      "devEyebrow": "Ontwikkelaars",
+      "devTitle": "Een specificatie waarop je kunt bouwen.",
+      "devP": "Drie OpenAPI-contracten, JSON Schema's, een fictief testmerk en conformiteitstests. De Go-SDK en de obx-tool zijn klaar voor gebruik, en elke HTTP-client werkt.",
+      "devLinks": [
+        "API-referentie",
+        "Specificatie op GitHub",
+        "Go-SDK en obx-tool",
+        "Foutcodes"
+      ],
+      "faqTitle": "Wat merken als eerste vragen",
+      "faqLink": "Alle vragen",
+      "closingTitle": "Geef elke retailer één plek waar het klopt.",
+      "closingP": "Zet je eigen portaal neer, of vertel ons over je systemen en retailers en denk mee over de eerste release.",
+      "closingMail": "Mail ons"
+    },
+    "pages": {
+      "brandsH1": "Eén keer inrichten. Voor al je retailers tegelijk.",
+      "retailersSoftware": "Voor je software",
+      "hostingEditions": "De drie edities"
+    }
   }
 }
