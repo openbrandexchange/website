@@ -25,6 +25,7 @@ Node 22.18 or newer. For the end-to-end tests, once: `npx playwright install chr
 | `npm run test:e2e` | Playwright against `dist/` served with the real headers: axe on every page type (light and dark, Latin/Greek/Cyrillic), keyboard use, phone layout on all 325 pages, CSP |
 | `npm run lighthouse` | Lighthouse with budgets on four pages (needs Chrome) |
 | `npm run check:licenses` | licence policy for every dependency |
+| `npm run capture:screenshots` | regenerate the product screenshots in `src/assets/screens/` from `../admin-ui` in mock mode (en, nl, de, fr; other languages use English) |
 | `npm run build:brochures` | regenerate the 50 brochure PDFs and 25 social images (needs Chrome) |
 | `npm run sync:glossary` | copy the glossary from `../admin-ui` and `../spec` |
 | `npm run sync:spec` | copy the rendered API reference, the schemas and the error codes from `../spec` |
@@ -36,6 +37,8 @@ Node 22.18 or newer. For the end-to-end tests, once: `npx playwright install chr
 |---|---|
 | `src/locales/<lang>.json` | **All page and brochure text**, one file per language. `en.json` is the source; the tests keep the other 24 complete and on-glossary. |
 | `src/views/*.astro` | One view per page; they only read from the locale files. |
+| `src/components/`, `src/styles/global.css` | The design system: page hero, sections, screenshots in a browser frame, code windows, the architecture diagram; tokens, 12-column grid and type scale in one stylesheet. |
+| `src/assets/screens/<lang>/` | Product screenshots (2× WebP), turned into AVIF/WebP at several widths at build time. |
 | `src/lib/org-core.ts`, `src/data/imprint.json` | Who publishes the site and how to reach them; optional postal address, phone and registration number for the imprint (empty until the owner fills them in). |
 | `src/data/snippets.ts` | Copy-paste code on the automation, hosting and developer pages. |
 | `src/data/providers.json` | Hosted providers on /hosting. |

@@ -33,7 +33,8 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
    choice in localStorage; Cloudflare may set a strictly necessary security cookie only when it
    challenges a visitor) and an imprint. They are written for the site as it is: no forms,
    accounts or tracking. They are not legal advice: have them reviewed before the launch.
-7. **Status wording.** The banner, the home status and the FAQ say that version 0.1 is in testing
+7. **Status wording.** The header pill (`site.nav.preview`, with `common.draft` as its full text),
+   the footer (`site.footer.status`) and the FAQ say that version 0.1 is in testing
    and the first public release is being prepared, and the brochures split "ready in version 0.1"
    from "coming next". Change these texts (all languages, then rebuild the brochures) on the day
    the repositories and releases become public.
@@ -50,8 +51,27 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
 11. **Switch-kit e-mails.** Written for every language; the retailers page shows the page language
     plus English; downloads are generated at build time (`/downloads/switch-kit-<lang>.txt`).
 12. **Provider texts** use the LocalizedText fallback (reader's language → en → first).
-13. **Fonts.** The site uses system fonts (no font files, no third-party requests). The brochures
-    and social images embed Inter (OFL-1.1) so Greek and Cyrillic render the same everywhere.
+13. **Fonts.** The site serves Inter (variable, OFL-1.1) from its own origin via
+    `@fontsource-variable/inter`, with `unicode-range` subsets so a page only loads the scripts it
+    uses; the Latin file is preloaded. No third-party requests. The brochures and social images
+    embed Inter too, so Greek and Cyrillic render the same everywhere.
+
+14. **Design system (2026-09-29 redesign).** One stylesheet (`src/styles/global.css`): tokens for
+    colour, a 4 px spacing scale, a 12-column grid in a 1240 px container, Inter with tight display
+    tracking. Colour: deep ink for dark bands, white and a cool near-white for light bands, and one
+    accent, cobalt blue `#2450e8`, for actions, links and key highlights only. Blue was chosen over
+    the earlier green because it reads as infrastructure, stays clearly apart from the admin-ui's
+    own teal in the screenshots, and keeps AA contrast as a button fill and as link text on white.
+    Pages alternate dark and light full-bleed bands. No icons in circles, no gradient blobs.
+15. **Product screenshots** come from the real admin-ui in mock mode
+    (`npm run capture:screenshots`, en, nl, de and fr; other languages show English). For the
+    screenshots only, the spec's fixture swatches are redrawn as simple garment illustrations
+    (`scripts/screenshots/garments.mjs`); admin-ui and its data are not changed. The recipes
+    screen shows the fictional portal address instead of the local server.
+16. **Header fits on one row** from 1280 px in every language; below that the menu button takes
+    over. The status pill shows "v0.1" and, on very wide screens, its full label, except in the
+    languages where the label would not fit (listed in `global.css`). An end-to-end test measures
+    the header in all 25 languages; shorten a label rather than loosening the test.
 
 ## Open points (tracked here, not in the code)
 
@@ -67,10 +87,12 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
 - **Trademark.** The site says the name is not a registered trademark yet; the spec's governance
   describes the planned Benelux application. Update the governance page when it is filed.
 
-## Performance and accessibility (measured 2026-09-28)
+## Performance and accessibility (measured 2026-09-29, after the redesign)
 
 - Lighthouse (mobile preset, local build): `/en/`, `/el/for-brands/`, `/bg/hosting/`,
-  `/de/for-retailers/` all 100 / 100 / 100 / 100; LCP 0.9–1.1 s; CLS 0.
+  `/de/for-retailers/` performance 99, accessibility, best practices and SEO 100; LCP 1.8–2.1 s
+  (the web font and the hero screenshot; before the redesign, with system fonts and no images,
+  0.9–1.1 s); CLS 0.
 - axe (WCAG 2.2 A/AA + best practices): no violations on all 13 page types in en, el and bg, light
   and dark, desktop and phone; none on the language chooser. No horizontal scrolling on any of the
   325 pages at phone width. Fixed on the way: a code block widened the hosting page on phones, the

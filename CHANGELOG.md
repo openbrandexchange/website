@@ -3,6 +3,17 @@
 All notable changes to openbrandexchange.com. The site follows the specification's version in
 its texts; the repository itself is versioned with [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+- Redesign: one design system (tokens, 12-column grid, Inter served from the site itself, one
+  cobalt accent), dark and light bands, a sticky header with a "v0.1" status pill instead of the
+  yellow banner, and a multi-column footer. The home page now shows the product: real screenshots
+  of the brand portal and the admin, an architecture diagram, the change feed and the `obx` tool,
+  the hosting options side by side, and the governance facts. All main pages use the same system.
+- Product screenshots are generated from admin-ui in mock mode (`npm run capture:screenshots`)
+  and served as AVIF and WebP at several widths.
+
 ## [0.1.0] - 2026-09-28
 
 First complete version of the site, not yet deployed.
