@@ -58,3 +58,15 @@ Upload `dist/` to any static host. Two things are Cloudflare-specific:
   applied.
 - The home address `/` chooses a language in the browser (`/js/lang.js`), so no server logic is
   needed.
+
+## Preview lock (until launch)
+
+`functions/_middleware.js` puts the whole site behind a password until launch. It fails
+closed: without the secret `PREVIEW_PASSWORD` every page answers 503.
+
+```sh
+npx wrangler pages secret put PREVIEW_PASSWORD --project-name openbrandexchange
+```
+
+Log in with any user name and that password. On launch day set the plain variable
+`PUBLIC_LAUNCH=true` on the Pages project (or delete the middleware) and redeploy.
