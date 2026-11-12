@@ -5,7 +5,6 @@ import Flow from '../components/Flow.astro';
 import Editions from '../components/Editions.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Icon from '../components/Icon.astro';
-import EuBadge from '../components/EuBadge.astro';
 import { format, messages, repo, specDoc, url, type Lang } from '../i18n';
 import Code from '../components/Code.astro';
 import { prompts } from '../data/prompts';
@@ -26,9 +25,8 @@ const faq = t.faq.items.slice(0, 4);
 const split = h.h1.search(/[.!?]\s/);
 const h1 = split > 0 ? [h.h1.slice(0, split + 1) + ' ', h.h1.slice(split + 2)] : [h.h1, ''];
 const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'developers')];
-// The explainer video (video/, rendered with Remotion): Dutch for Dutch, English for every other
-// language. Captions are burned in; nothing loads until the visitor presses play (preload="none").
-const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
+// The explainer video (public/video/, website/video/) is off the home page until a new version is
+// ready; the three-block diagram takes its place in the hero.
 ---
 
 <section class="band home-hero" aria-labelledby="hero-title">
@@ -48,7 +46,6 @@ const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
         <span class="sr-only">{h.scopeLabel}: </span><span class="scope-now">{h.scopeNow}</span>
         <span class="scope-next">{h.scopeNext}</span>
       </p>
-      <EuBadge lang={lang} />
       <dl class="proof" aria-label={h.proofLabel}>
         {
           h.proof.map((p) => (
@@ -60,15 +57,8 @@ const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
         }
       </dl>
     </div>
-    <div class="hero-product hero-video">
-      <div class="hero-glow" aria-hidden="true"></div>
-      <figure class="video-frame">
-        <video controls preload="none" playsinline poster={`${video}.jpg`} width="1280" height="720" aria-label={h.videoTitle}>
-          <source src={`${video}.webm`} type="video/webm" />
-          <source src={`${video}.mp4`} type="video/mp4" />
-        </video>
-        <figcaption>{h.videoTitle} · {h.videoNote}</figcaption>
-      </figure>
+    <div class="hero-product hero-flow" data-reveal="2">
+      <Flow lang={lang} stack />
     </div>
   </div>
 </section>
@@ -80,7 +70,6 @@ const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
       <h2 id="flow-title">{h.flowTitle}</h2>
       <p class="lead">{h.flowLead}</p>
     </header>
-    <div data-reveal="2"><Flow lang={lang} /></div>
   </div>
 </section>
 

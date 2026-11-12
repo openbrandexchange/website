@@ -2472,7 +2472,7 @@ input[type='search'] {
   font-size: 0.9375rem;
 }
 
-/* "Made in the EU · Built in the Netherlands", under the home hero and in the footer. */
+/* "Made in the EU", in the footer. */
 .eu-badge {
   display: inline-flex;
   align-items: center;
@@ -2744,4 +2744,24 @@ input[type='search'] {
 }
 .check-messages {
   padding-left: 1.2rem;
+}
+
+/* The three blocks in the narrow hero column: always one under the other. */
+.flow-stack .flow-cols {
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--s-5);
+}
+.flow-stack .flow-col:not(:last-child)::after {
+  left: 50%;
+  top: auto;
+  bottom: calc(-1 * var(--s-5));
+  width: 2px;
+  height: var(--s-5);
+  margin: 0 0 0 -1px;
+}
+@media (min-width: 64rem) {
+  .hero-product.hero-flow {
+    width: auto;
+    padding-left: 0;
+  }
 }

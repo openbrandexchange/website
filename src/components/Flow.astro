@@ -8,15 +8,17 @@ import { messages, type Lang } from '../i18n';
 
 interface Props {
   lang: Lang;
+  /** Always one block under the other (the narrow hero column). */
+  stack?: boolean;
 }
-const { lang } = Astro.props;
+const { lang, stack = false } = Astro.props;
 const h = messages[lang].site.home;
 const f = h.flow;
 const inIcons = ['database', 'image'] as const;
 const outIcons = ['browser', 'layers', 'barcode', 'download'] as const;
 ---
 
-<figure class="flow" aria-labelledby="flow-caption">
+<figure class:list={['flow', stack && 'flow-stack']} aria-labelledby="flow-caption">
   <ol class="flow-cols">
     <li class="flow-col">
       <h3>{f.inTitle}</h3>
