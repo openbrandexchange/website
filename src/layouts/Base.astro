@@ -16,6 +16,8 @@ import SiteFooter from '../components/SiteFooter.astro';
 import { format } from '../i18n';
 import { HELLO_EMAIL, orgVars } from '../lib/org';
 import interLatin from '@fontsource-variable/inter-tight/files/inter-tight-latin-wght-normal.woff2?url';
+import interCyrillic from '@fontsource-variable/inter-tight/files/inter-tight-cyrillic-wght-normal.woff2?url';
+import interGreek from '@fontsource-variable/inter-tight/files/inter-tight-greek-wght-normal.woff2?url';
 
 interface Props {
   lang: Lang;
@@ -121,6 +123,8 @@ const nav: PageKey[] = ['brands', 'retailers', 'hosting', 'partners'];
     {langs.filter((l) => l !== lang).map((l) => <meta property="og:locale:alternate" content={ogLocales[l]} />)}
     <meta name="color-scheme" content="light dark" />
     <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
+    {lang === 'bg' && <link rel="preload" href={interCyrillic} as="font" type="font/woff2" crossorigin />}
+    {lang === 'el' && <link rel="preload" href={interGreek} as="font" type="font/woff2" crossorigin />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap.xml" />
     <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
