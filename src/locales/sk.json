@@ -339,7 +339,7 @@
       "značka môže exportovať všetky údaje a fotografie a odísť",
       "vlastné ceny a podmienky zverejňujete na svojom webe"
     ],
-    "listHow": "Otvorte pull request v repozitári webu so svojimi údajmi v src/data/providers.json. Firma iniciátora je uvedená prvá, ostatní abecedne.",
+    "listHow": "Otvorte pull request v repozitári webu so svojimi údajmi v src/data/providers.json. Poskytovatelia sú uvedení v abecednom poradí.",
     "p2Title": "2. Jedným kliknutím",
     "p2P": "Vlastný portál na vlastnom účte, bez správy servera.",
     "cfP": "Beží na Cloudflare Workers, s D1 ako databázou a R2 pre obrázky. Kliknite na tlačidlo, prihláste sa do Cloudflare a postupujte podľa krokov. Portál v každodennom používaní potrebuje plán Workers Paid (5 dolárov mesačne); bezplatný plán stačí len na vyskúšanie. Webové verzie vašich fotografií vytvorí váš prehliadač a nástroj obx.",
@@ -411,7 +411,7 @@
     "apiP": "Sťahuje váš PIM, pokladničný systém alebo e-shop fotky sám? Potom požiadajte o API kľúč pre svoj systém. Najprv stiahne všetko a potom iba zmeny, vrátane toho, čo značka stiahne. Fotky sa k vašim položkám priraďujú podľa EAN.",
     "apiDev": "Pre vášho vývojára: takto to vyzerá.",
     "toolsTitle": "Aký softvér s tým funguje",
-    "toolsP": "Open Brand Exchange je otvorený štandard: podporovať ho môže akýkoľvek softvér. Photopilot, firma iniciátora, ho zabudováva do svojho softvéru pre predajcov a ostatní dodávatelia môžu urobiť to isté. Nepotrebujete žiadny konkrétny softvér: stačí prehliadač.",
+    "toolsP": "Open Brand Exchange je otvorený štandard: podporovať ho môže akýkoľvek softvér. Photopilot ho zabudováva do svojho softvéru pre predajcov a ostatní dodávatelia môžu urobiť to isté. Nepotrebujete žiadny konkrétny softvér: stačí prehliadač.",
     "toolsLink": "Špecifikácia pre vývojárov",
     "findTitle": "Ako nájsť značku",
     "findP": "Značky, ktoré chcú byť viditeľné, sú v zozname značiek. Ak vám značka jednoducho dá adresu svojho portálu, funguje to tiež.",
@@ -420,7 +420,40 @@
     "kitP": "Najrýchlejšie sa značka zapojí, keď o to požiadajú obchody. Skopírujte tento e-mail, doplňte hranaté zátvorky a pošlite ho svojmu kontaktu alebo obchodnému zástupcovi značky.",
     "kitEnglish": "Angličtina (pre medzinárodné značky)",
     "kitDownload": "Stiahnuť ako textový súbor",
-    "kitMore": "Ďalšie materiály, napríklad brožúru pre predajcov, nájdete v sekcii na stiahnutie."
+    "kitMore": "Ďalšie materiály, napríklad brožúru pre predajcov, nájdete v sekcii na stiahnutie.",
+    "label": {
+      "eyebrow": "Údaje o tovare",
+      "title": "Čo je na štítku s ošetrovaním, príde s každým tovarom.",
+      "p": "Materiálové zloženie podľa častí, symboly ošetrovania v poradí ako na štítku a krajina pôvodu sú súčasťou každého tovaru, spolu s EAN každej veľkosti. Váš e-shop ich zobrazí ako text alebo ako symboly ošetrovania vo vlastnom štýle. Polia vychádzajú z pravidiel EÚ pre označovanie textilných výrobkov a z kódov ošetrovania podľa ISO 3758, takže neskôr môžu slúžiť aj pre digitálny pas výrobku.",
+      "points": [
+        "Materiálové zloženie podľa častí (vrchný materiál, podšívka, výplň, podrážka) s percentami",
+        "Pokyny na ošetrovanie ako štandardné kódy, v poradí ako na štítku",
+        "Krajina pôvodu a EAN každej veľkosti a farby"
+      ],
+      "example": "Príklad z testovacej značky",
+      "product": "Šortky na trailový beh",
+      "colour": "Čierna",
+      "composition": "Materiálové zloženie",
+      "outer": "Vrchný materiál",
+      "lining": "Podšívka",
+      "care": "Ošetrovanie",
+      "origin": "Vyrobené v",
+      "sizes": "Veľkosti a EAN",
+      "size": "Veľkosť",
+      "codeLabel": "Ten istý tovar v API",
+      "fibres": {
+        "recycled_polyester": "recyklovaný polyester",
+        "polyamide": "polyamid",
+        "elastane": "elastan"
+      },
+      "careText": {
+        "wash_30": "Prať v práčke pri 30 °C",
+        "do_not_bleach": "Nebieliť",
+        "do_not_tumble_dry": "Nesušiť v bubnovej sušičke",
+        "do_not_iron": "Nežehliť",
+        "do_not_dry_clean": "Chemicky nečistiť"
+      }
+    }
   },
   "switchKit": {
     "subject": "Vaše produktové fotografie a údaje o tovare cez Open Brand Exchange?",
@@ -580,7 +613,7 @@
       },
       {
         "q": "Kto za tým stojí?",
-        "a": "Za Open Brand Exchange stojí {person}, ktorý založil aj Photopilot, firmu vyvíjajúcu softvér na produktovú fotografiu. Všetko sa prevedie na {foundation}, aby štandard patril značkám, predajcom a dodávateľom softvéru, ktorí ho používajú, a nie jednej firme."
+        "a": "Open Brand Exchange sa odovzdáva nadácii {foundation}, holandskej neziskovej nadácii (stichting), aby štandard patril značkám, predajcom a dodávateľom softvéru, ktorí ho používajú, a nie jednej firme. Otázky posielajte na {email}."
       }
     ]
   },
@@ -590,7 +623,7 @@
     "sections": [
       {
         "h": "Kto rozhoduje",
-        "p": "Kým neexistujú tri nezávislé implementácie, ktoré prejdú testami zhody, o zmenách po verejnej diskusii rozhoduje iniciátor. Potom prevezme riadenie riadiaca skupina s jedným miestom pre každého implementátora a aspoň jednou značkou a jedným predajcom."
+        "p": "Kým neexistujú tri nezávislé implementácie, ktoré prejdú testami zhody, o zmenách po verejnej diskusii rozhoduje zakladateľ. Potom rozhodovanie prevezme riadiaca skupina s jedným miestom pre každého implementátora a aspoň jednou značkou a jedným predajcom."
       },
       {
         "h": "Ako prebiehajú zmeny",
@@ -609,7 +642,7 @@
     "nameP": "Názov „Open Brand Exchange“ je vo všetkých jazykoch rovnaký a nikdy sa neprekladá. Zatiaľ nie je registrovanou ochrannou známkou. Softvér, ktorý prejde testami zhody, môže uvádzať, že „funguje s Open Brand Exchange“.",
     "specLink": "Úplný dokument o správe",
     "foundationTitle": "Kto za tým stojí",
-    "foundationP": "Za Open Brand Exchange stojí {person}. Zakladá {foundation}, ktorá bude holandskou nadáciou (stichting). Hneď ako vznikne, prevedú sa na ňu autorské práva, názov, doména a organizácia na GitHube. Dovtedy sú vedené na meno: {person}."
+    "foundationP": "{foundation} vzniká ako holandská nadácia (stichting). Hneď ako bude existovať, prevedú sa na ňu autorské práva, názov, doména a organizácia na GitHube."
   },
   "privacy": {
     "h1": "Súkromie",
@@ -648,7 +681,6 @@
     "updated": "Naposledy aktualizované: {date}"
   },
   "org": {
-    "initiative": "Iniciatíva, ktorú založil {person}",
     "inFormation": "v založení"
   },
   "imprint": {
@@ -783,8 +815,8 @@
     },
     "home": {
       "eyebrow": "Otvorený štandard · Bezplatný softvér",
-      "h1": "Publikujte raz. Dostane to každý predajca.",
-      "lead": "Open Brand Exchange dáva vašej značke vlastný portál pre predajcov, štandardné API pre ich softvér a automatické publikovanie z vášho PIM, ERP alebo priečinkov. Open source, hosting zadarmo, vždy pod vašou kontrolou.",
+      "h1": "Obsah o vašich produktoch, pripravený pre každého predajcu.",
+      "lead": "Open Brand Exchange je otvorený štandard pre to, ako predajcovia získavajú od značky produktové fotografie a údaje o tovare: na portáli v prehliadači, ako ZIP alebo tabuľku, alebo priamo vo vlastnom softvéri cez jedno API. Ako sa obsah dostane do vášho portálu, je na vás.",
       "ctaRetailer": "Som predajca",
       "proofLabel": "Na prvý pohľad",
       "proof": [
@@ -811,8 +843,8 @@
       ],
       "codeCaption": "Čo dostane softvér predajcu",
       "flowEyebrow": "Ako to funguje",
-      "flowTitle": "Jedna publikácia. Pre každý spôsob práce predajcov.",
-      "flowLead": "Vaše systémy dodávajú do vášho vlastného portálu. Nákupcovia ho používajú v prehliadači, ich softvér číta rovnaký obsah cez štandardné API.",
+      "flowTitle": "Jeden zdroj. Predajcovia si vezmú, čo potrebujú.",
+      "flowLead": "Váš obsah je vo vašom vlastnom portáli. Nákupcovia v ňom vyhľadávajú a sťahujú súbory v prehliadači, ich softvér číta rovnaký obsah cez API.",
       "flowCaption": "Ako obsah prúdi zo systémov značky cez jej vlastný portál k predajcom.",
       "flow": {
         "systems": "Vaše systémy",
@@ -822,7 +854,7 @@
           "DAM",
           "Exportný priečinok"
         ],
-        "upload": "Automatické nahrávanie",
+        "upload": "Ako sa obsah dostane dnu",
         "uploadItems": [
           "Plánovaný import",
           "Nástroj obx",
@@ -851,7 +883,7 @@
       "pillars": [
         {
           "eyebrow": "Portál",
-          "h": "Portál, ktorý predajcovia naozaj používajú.",
+          "h": "Portál pre nákupcov vašich predajcov.",
           "p": "Nákupcovia sa prihlásia do vášho portálu, vložia kódy EAN z objednávky a stiahnu presne to, čo potrebujú: jednu fotku, jednu položku alebo ZIP s celým výberom.",
           "items": [
             "Vyhľadávanie a filtre podľa značky, sezóny, typu produktu a farby",
@@ -863,7 +895,7 @@
         },
         {
           "eyebrow": "API",
-          "h": "Jedno API pre každú značku v štandarde.",
+          "h": "Jedno API, rovnaké pre každú značku.",
           "p": "Softvér predajcov stiahne všetko raz a potom už len zmeny, vrátane toho, čo stiahnete z ponuky. Každá fotografia prichádza s právami na použitie, dátumom embarga a pôvodom AI.",
           "items": [
             "Najprv úplná kópia, potom len zmeny",
@@ -874,23 +906,23 @@
           "link": "Prečítajte si referenciu API"
         },
         {
-          "eyebrow": "Automatizácia",
-          "h": "Publikujte zo systémov, ktoré už máte.",
-          "p": "Váš PIM, ERP alebo zdieľaný priečinok už údaje aj fotografie obsahuje. Nechajte portál, nech si ich pravidelne sťahuje, alebo ich pošlite jedným príkazom. Nikto nemusí presúvať súbory.",
+          "eyebrow": "Vaše systémy",
+          "h": "Pracujte ďalej tak, ako teraz.",
+          "p": "Štandard sa týka toho, ako si predajcovia obsah sťahujú. Ako sa váš obsah dostane do portálu, si vyberiete sami: nočný import z webovej adresy, SFTP alebo S3, exportný priečinok alebo nástroj obx pre príkazový riadok.",
           "items": [
-            "Plánovaný import z webovej adresy, SFTP alebo S3, bez kódu",
-            "Nástroj obx pre Windows, macOS a Linux nahrá len zmeny",
-            "Hotová GitHub Action a návody pre cron, n8n, Make a Zapier",
+            "Nočný import z webovej adresy, SFTP alebo S3, bez kódu",
+            "Nástroj obx pre Windows, macOS a Linux posiela len zmeny",
+            "Návody pre cron, GitHub Actions, n8n, Make a Zapier",
             "Jeden formát CSV a jedno pravidlo pre názvy fotografií"
           ],
           "link": "Pozrite si návody na automatizáciu"
         }
       ],
       "audienceEyebrow": "Pre koho",
-      "audienceTitle": "Pre obe strany obchodného vzťahu.",
+      "audienceTitle": "Pre značky aj pre predajcov.",
       "brands": {
         "h": "Pre značky",
-        "p": "Prestaňte rozosielať súbory. Publikujte raz, zo svojich systémov, a majte všetko pod kontrolou.",
+        "p": "Už žiadne rozosielanie súborov. Predajcovia si vezmú, čo potrebujú, a vy rozhodujete, kto čo dostane.",
         "items": [
           "Vlastný portál na vlastnej doméne",
           "Každého predajcu schvaľujete a určujete, čo uvidí",
@@ -956,7 +988,7 @@
         }
       ],
       "trustEyebrow": "Správa",
-      "trustTitle": "Otvorený štandard, nie platforma, ktorá vás zväzuje.",
+      "trustTitle": "Otvorený štandard, nie platforma.",
       "trustLead": "Open Brand Exchange má patriť značkám, predajcom a dodávateľom softvéru, ktorí ho používajú, nie jednej firme.",
       "trust": [
         {
@@ -965,7 +997,7 @@
         },
         {
           "h": "Testy zhody",
-          "p": "61 automatických testov v štyroch profiloch. Žiadna implementácia nemá výnimku, ani tá od firmy iniciátora."
+          "p": "61 automatických testov v štyroch profiloch. Každá implementácia sa testuje rovnako."
         },
         {
           "h": "Open-source licencie",
@@ -973,7 +1005,7 @@
         },
         {
           "h": "Nadácia v založení",
-          "p": "Iniciatíva, ktorú založil {person}. Autorské práva, názov a doména prejdú na {foundation}, len čo vznikne."
+          "p": "Autorské práva, názov a doména prejdú na {foundation}, hneď ako bude zaregistrovaná."
         },
         {
           "h": "Bezpečnosť",
@@ -996,7 +1028,7 @@
       ],
       "faqTitle": "Na čo sa značky pýtajú najskôr",
       "faqLink": "Všetky otázky",
-      "closingTitle": "Jedno miesto pre všetkých vašich predajcov.",
+      "closingTitle": "Nechajte predajcov, nech si to stiahnu sami.",
       "closingP": "Spustite vlastný portál alebo nám napíšte o svojich systémoch a predajcoch a pomôžte formovať prvé vydanie.",
       "closingMail": "Napíšte nám"
     },

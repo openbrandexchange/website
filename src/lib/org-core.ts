@@ -1,4 +1,5 @@
-// Who is behind the project and how to reach them, without any build-tool imports, so the
+// Who is behind the project and how to reach them. PERSON is used only where the law asks for a
+// responsible natural person (the imprint and the privacy statement) until the foundation is registered, without any build-tool imports, so the
 // brochure script and the tests can use the same values as the pages (src/lib/org.ts).
 export const PERSON = 'Richard Lindhout';
 export const FOUNDATION = 'Open Brand Exchange Foundation';
@@ -9,7 +10,7 @@ export const SECURITY_EMAIL = 'security@openbrandexchange.com';
 export const PRIVACY_UPDATED = '2026-09-28';
 
 interface OrgMessages {
-  org: { initiative: string; inFormation: string };
+  org: { inFormation: string };
 }
 
 const fill = (template: string, vars: Record<string, string>) =>
@@ -20,9 +21,9 @@ export function foundationName(m: OrgMessages): string {
   return `${FOUNDATION} (${m.org.inFormation})`;
 }
 
-/** "An initiative of Richard Lindhout · Open Brand Exchange Foundation (in formation)". */
+/** The publisher line in the footer, the imprint and the brochures: only the foundation, no personal name. */
 export function initiativeText(m: OrgMessages): string {
-  return `${fill(m.org.initiative, { person: PERSON })} · ${foundationName(m)}`;
+  return foundationName(m);
 }
 
 /** Placeholder values for texts that name the people or addresses behind the site. */

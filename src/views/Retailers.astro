@@ -6,6 +6,8 @@ import Icon from '../components/Icon.astro';
 import { format, messages, nativeNames, url, type Lang } from '../i18n';
 import { retailerCurl } from '../data/snippets';
 import { switchKit, switchKitPath } from '../lib/switch-kit';
+import { countryName } from '../lib/names';
+import { labelExample, labelJson } from '../data/label-example';
 
 interface Props {
   lang: Lang;
@@ -13,6 +15,10 @@ interface Props {
 const { lang } = Astro.props;
 const t = messages[lang];
 const c = t.retailers;
+const lb = c.label;
+const parts: Record<string, string> = { outer: lb.outer, lining: lb.lining };
+const fibre = (f: string) => (lb.fibres as Record<string, string>)[f] ?? f;
+const care = (code: string) => (lb.careText as Record<string, string>)[code] ?? code;
 const kits: { lang: Lang; label: string }[] = [{ lang, label: nativeNames[lang] }];
 if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });
 ---
@@ -44,6 +50,50 @@ if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });
     </ul>
     <div class="wide-shot" data-reveal>
       <Screenshot name="portal-ean" lang={lang} alt={t.site.shots.portalEan} sizes="(min-width: 1304px) 1240px, calc(100vw - 32px)" />
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt" aria-labelledby="label">
+  <div class="wrap split">
+    <div class="split-copy" data-reveal>
+      <p class="eyebrow">{lb.eyebrow}</p>
+      <h2 id="label">{lb.title}</h2>
+      <p>{lb.p}</p>
+      <ul class="checks">
+        {lb.points.map((x) => <li>{x}</li>)}
+      </ul>
+    </div>
+    <div class="split-visual" data-reveal="2">
+      <figure class="care-label">
+        <figcaption class="small muted">{lb.example}</figcaption>
+        <div class="care-label-card">
+          <p class="care-label-title"><strong>Kestrel Trail · {lb.product}</strong> <span class="muted">{labelExample.styleNumber} · {lb.colour}</span></p>
+          <dl>
+            <dt>{lb.composition}</dt>
+            <dd>
+              {labelExample.materials.map((m) => (
+                <span class="care-line">{parts[m.part] ?? m.part}: {m.fibers.map((f) => `${f.percentage}% ${fibre(f.fiber)}`).join(', ')}</span>
+              ))}
+            </dd>
+            <dt>{lb.care}</dt>
+            <dd>
+              <ol class="care-steps">
+                {labelExample.care.map((code) => <li>{care(code)} <code>{code}</code></li>)}
+              </ol>
+            </dd>
+            <dt>{lb.origin}</dt>
+            <dd>{countryName(lang, labelExample.countryOfOrigin)}</dd>
+            <dt>{lb.sizes}</dt>
+            <dd>
+              {labelExample.variants.map((v) => (
+                <span class="care-line">{lb.size} {v.size}: <code>{v.gtin}</code></span>
+              ))}
+            </dd>
+          </dl>
+        </div>
+      </figure>
+      <Code label={lb.codeLabel} code={labelJson} />
     </div>
   </div>
 </section>

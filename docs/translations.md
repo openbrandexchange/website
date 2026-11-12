@@ -12,9 +12,8 @@ pt, ro, sk, sl, sv. English is the source. Every text is in `src/locales/<lang>.
   tombstone, client credentials).
 - The portal word, "API key for your software" and "automatic upload" follow the glossary
   (`src/data/glossary.json`, copied from admin-ui), and the publisher line follows the spec
-  glossary (`src/data/glossary-publisher.json`): *An initiative of Richard Lindhout · Open Brand
-  Exchange Foundation (in formation)*, with "(in formation)" translated and the names never
-  translated.
+  glossary (`src/data/glossary-publisher.json`): *Open Brand Exchange Foundation (in formation)*,
+  with "(in formation)" translated and the name never translated.
 
 To change a glossary word, change it in admin-ui (terms) or the spec (publisher line), then run
 `npm run sync:glossary` here and fix what `npm test` reports.

@@ -61,7 +61,24 @@ test('the publisher line uses the glossary wording in every language', () => {
   for (const lang of langs) {
     const { org } = load(lang);
     assert.equal(org.inFormation, publisher[lang].inFormation, `${lang} org.inFormation`);
-    assert.equal(org.initiative, `${publisher[lang].initiative} {person}`, `${lang} org.initiative`);
+  }
+});
+
+// The founder's name appears only where the law asks for a responsible person until the
+// foundation is registered: the imprint and the privacy statement.
+test('no text names a person outside the imprint and the privacy statement', () => {
+  const allowed = new Set(['imprint.foundationP', 'privacy.sections.0.p']);
+  for (const lang of langs) {
+    const found = [];
+    const walk = (o, path) => {
+      if (typeof o === 'string') {
+        if (o.includes('{person}') && !allowed.has(path)) found.push(path);
+      } else if (o && typeof o === 'object') {
+        for (const [k, v] of Object.entries(o)) walk(v, path ? `${path}.${k}` : k);
+      }
+    };
+    walk(load(lang), '');
+    assert.deepEqual(found, [], `${lang}: {person} used in ${found.join(', ')}`);
   }
 });
 

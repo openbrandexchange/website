@@ -2091,6 +2091,12 @@ input[type='search'] {
   gap: 0.5rem;
   align-items: center;
 }
+.provider-logo img {
+  display: block;
+  width: auto;
+  height: 2rem;
+  margin-bottom: var(--s-3);
+}
 .dir-entry dl {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -2227,4 +2233,56 @@ input[type='search'] {
 }
 .faq-aside .link-list a {
   font-size: 0.9375rem;
+}
+
+/* The care-label example on the retailers page: the label as data, next to its API form. */
+.care-label {
+  margin: 0 0 var(--s-5);
+}
+.care-label figcaption {
+  margin-bottom: var(--s-2);
+}
+.care-label-card {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  padding: var(--s-5);
+}
+.care-label-title {
+  margin: 0 0 var(--s-4);
+}
+.care-label-card dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--s-3) var(--s-4);
+  margin: 0;
+}
+.care-label-card dt {
+  font-weight: 600;
+}
+.care-label-card dd {
+  margin: 0;
+  min-width: 0;
+}
+.care-line {
+  display: block;
+}
+.care-steps {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.care-label-card code {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+@media (max-width: 30rem) {
+  .care-label-card dl {
+    grid-template-columns: 1fr;
+    gap: var(--s-1) 0;
+  }
+  .care-label-card dd {
+    margin-bottom: var(--s-3);
+  }
 }

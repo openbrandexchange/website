@@ -339,7 +339,7 @@
       "ett varumärke kan exportera all sin data och alla bilder och lämna",
       "du anger egna priser och villkor på din egen webbplats"
     ],
-    "listHow": "Öppna en pull request i webbplatsens repository med dina uppgifter i src/data/providers.json. Initiativtagarens företag står först, alla andra i bokstavsordning.",
+    "listHow": "Öppna en pull request i webbplatsens repository med dina uppgifter i src/data/providers.json. Leverantörerna listas i bokstavsordning.",
     "p2Title": "2. Med ett klick",
     "p2P": "Din egen portal på ditt eget konto, utan att sköta en server.",
     "cfP": "Körs på Cloudflare Workers, med D1 som databas och R2 för bilderna. Klicka på knappen, logga in hos Cloudflare och följ stegen. En portal som används dagligen behöver abonnemanget Workers Paid (5 dollar i månaden); gratisabonnemanget räcker bara för att titta runt. Webbversioner av era foton görs av webbläsaren och verktyget obx.",
@@ -411,7 +411,7 @@
     "apiP": "Hämtar ditt PIM, kassasystem eller din e-handel bilder själv? Ansök då om en API-nyckel för ditt system. Det hämtar först allt och sedan bara ändringarna, även det som varumärket drar tillbaka. Bilderna kopplas till dina artiklar via EAN.",
     "apiDev": "För din utvecklare: så här ser det ut.",
     "toolsTitle": "Vilken programvara som fungerar med det",
-    "toolsP": "Open Brand Exchange är en öppen standard: all programvara kan stödja den. Photopilot, initiativtagarens företag, bygger in den i sin programvara för återförsäljare, och andra leverantörer kan göra samma sak. Du behöver ingen särskild programvara: en webbläsare räcker.",
+    "toolsP": "Open Brand Exchange är en öppen standard: alla system kan stödja den. Photopilot bygger in den i sin programvara för återförsäljare, och andra leverantörer kan göra detsamma. Du behöver inget särskilt system: det räcker med en webbläsare.",
     "toolsLink": "Specifikation för utvecklare",
     "findTitle": "Hitta ett varumärke",
     "findP": "Varumärken som vill synas finns i varumärkeskatalogen. Ger ett varumärke dig bara adressen till sin portal fungerar det också.",
@@ -420,7 +420,40 @@
     "kitP": "Det snabbaste sättet att få med ett varumärke är att butikerna frågar efter det. Kopiera mejlet, fyll i hakparenteserna och skicka det till din kontaktperson eller säljare hos varumärket.",
     "kitEnglish": "Engelska (för internationella varumärken)",
     "kitDownload": "Ladda ner som textfil",
-    "kitMore": "Mer material, till exempel broschyren för återförsäljare, finns under nedladdningar."
+    "kitMore": "Mer material, till exempel broschyren för återförsäljare, finns under nedladdningar.",
+    "label": {
+      "eyebrow": "Artikeldata",
+      "title": "Det som står på tvättlappen följer med varje artikel.",
+      "p": "Materialsammansättning per del, tvättråd i samma ordning som på lappen och tillverkningsland ingår i varje artikel, tillsammans med EAN för varje storlek. Din butik visar dem som text eller som tvättsymboler i sin egen stil. Fälten följer EU:s regler för textilmärkning och skötselkoderna i ISO 3758, så de kan även användas i ett digitalt produktpass längre fram.",
+      "points": [
+        "Materialsammansättning per del (yttertyg, foder, fyllning, sula) med procent",
+        "Tvättråd som standardkoder, i samma ordning som på lappen",
+        "Tillverkningsland och EAN för varje storlek och färg"
+      ],
+      "example": "Exempel från testvarumärket",
+      "product": "Traillöparshorts",
+      "colour": "Svart",
+      "composition": "Material",
+      "outer": "Yttertyg",
+      "lining": "Foder",
+      "care": "Tvättråd",
+      "origin": "Tillverkad i",
+      "sizes": "Storlekar och EAN",
+      "size": "Storlek",
+      "codeLabel": "Samma artikel i API:et",
+      "fibres": {
+        "recycled_polyester": "återvunnen polyester",
+        "polyamide": "polyamid",
+        "elastane": "elastan"
+      },
+      "careText": {
+        "wash_30": "Maskintvätt 30 °C",
+        "do_not_bleach": "Får ej blekas",
+        "do_not_tumble_dry": "Får ej torktumlas",
+        "do_not_iron": "Får ej strykas",
+        "do_not_dry_clean": "Får ej kemtvättas"
+      }
+    }
   },
   "switchKit": {
     "subject": "Era produktbilder och er artikeldata via Open Brand Exchange?",
@@ -580,7 +613,7 @@
       },
       {
         "q": "Vem ligger bakom?",
-        "a": "Open Brand Exchange är ett initiativ av {person}, som också grundade Photopilot, ett företag som gör programvara för produktfotografering. Allt kommer att överlåtas till {foundation}, så att standarden tillhör de varumärken, återförsäljare och programvaruleverantörer som använder den, och inte ett enda företag."
+        "a": "Open Brand Exchange överlämnas till {foundation}, en nederländsk ideell stiftelse (stichting), så att standarden tillhör de varumärken, återförsäljare och programvaruleverantörer som använder den, och inte ett enda företag. Frågor skickar du till {email}."
       }
     ]
   },
@@ -590,7 +623,7 @@
     "sections": [
       {
         "h": "Vem bestämmer",
-        "p": "Tills det finns tre oberoende implementationer som klarar överensstämmelsetesterna beslutar initiativtagaren om ändringar, efter offentlig diskussion. Därefter tar en styrgrupp över, med en plats per implementatör och minst ett varumärke och en återförsäljare."
+        "p": "Tills det finns tre oberoende implementationer som klarar överensstämmelsetesterna beslutar grundaren om ändringar, efter offentlig diskussion. Därefter tar en styrgrupp över, med en plats per implementatör och minst ett varumärke och en återförsäljare."
       },
       {
         "h": "Hur ändringar görs",
@@ -609,7 +642,7 @@
     "nameP": "Namnet ”Open Brand Exchange” är detsamma på alla språk och översätts aldrig. Det är ännu inte ett registrerat varumärke. Programvara som klarar överensstämmelsetesterna får säga att den ”fungerar med Open Brand Exchange”.",
     "specLink": "Hela styrningsdokumentet",
     "foundationTitle": "Vem står bakom",
-    "foundationP": "Open Brand Exchange är ett initiativ av {person}. Han bildar {foundation}, som blir en nederländsk stiftelse (stichting). Så snart den finns överlåts upphovsrätten, namnet, domänen och GitHub-organisationen till den. Fram till dess står de i namnet {person}."
+    "foundationP": "{foundation} bildas som en nederländsk stiftelse (stichting). När den finns överlåts upphovsrätten, namnet, domänen och GitHub-organisationen till den."
   },
   "privacy": {
     "h1": "Integritet",
@@ -648,7 +681,6 @@
     "updated": "Senast uppdaterad: {date}"
   },
   "org": {
-    "initiative": "Ett initiativ av {person}",
     "inFormation": "under bildande"
   },
   "imprint": {
@@ -783,8 +815,8 @@
     },
     "home": {
       "eyebrow": "Öppen standard · Fri programvara",
-      "h1": "Publicera en gång. Alla återförsäljare får det.",
-      "lead": "Open Brand Exchange ger ditt varumärke en egen portal för återförsäljare, ett standard-API för deras system och automatisk publicering från ditt PIM, ERP eller dina mappar. Öppen källkod, gratis att köra och helt ditt.",
+      "h1": "Ditt produktinnehåll, klart för alla återförsäljare.",
+      "lead": "Open Brand Exchange är en öppen standard för hur återförsäljare hämtar produktbilder och artikeldata från ett varumärke: i en portal i webbläsaren, som zip eller kalkylblad, eller direkt in i sitt eget system via ett API. Hur innehållet kommer in i din portal bestämmer du själv.",
       "ctaRetailer": "Jag är återförsäljare",
       "proofLabel": "I korthet",
       "proof": [
@@ -811,8 +843,8 @@
       ],
       "codeCaption": "Det här får en återförsäljares system",
       "flowEyebrow": "Så fungerar det",
-      "flowTitle": "En publicering. Till alla dina återförsäljare.",
-      "flowLead": "Dina system levererar till din egen portal. Inköpare använder den i webbläsaren, och deras system läser samma innehåll via standard-API:et.",
+      "flowTitle": "En källa. Återförsäljarna hämtar det de behöver.",
+      "flowLead": "Ditt innehåll finns i din egen portal. Inköpare söker och laddar ner filer i webbläsaren, och deras system läser samma innehåll via API:et.",
       "flowCaption": "Så flödar innehållet från ett varumärkes system via dess egen portal till återförsäljarna.",
       "flow": {
         "systems": "Dina system",
@@ -822,7 +854,7 @@
           "DAM",
           "Exportmapp"
         ],
-        "upload": "Automatisk uppladdning",
+        "upload": "Få in innehållet",
         "uploadItems": [
           "Schemalagd import",
           "Verktyget obx",
@@ -851,7 +883,7 @@
       "pillars": [
         {
           "eyebrow": "Portal",
-          "h": "En portal som återförsäljarna faktiskt använder.",
+          "h": "En portal för inköparna hos dina återförsäljare.",
           "p": "Inköpare loggar in i din portal, klistrar in EAN-koderna från sin order och laddar ner exakt det de behöver: en bild, en artikel eller en zip med ett helt urval.",
           "items": [
             "Sök och filtrera på varumärke, säsong, produkttyp och färg",
@@ -863,7 +895,7 @@
         },
         {
           "eyebrow": "API",
-          "h": "Ett API för alla varumärken på standarden.",
+          "h": "Ett API, samma för alla varumärken.",
           "p": "Återförsäljarnas system hämtar allt en gång och sedan bara det som ändrats, även det du drar tillbaka. Varje bild kommer med användningsrättigheter, embargodatum och AI-ursprung.",
           "items": [
             "Först en fullständig kopia, sedan bara ändringarna",
@@ -874,23 +906,23 @@
           "link": "Läs API-referensen"
         },
         {
-          "eyebrow": "Automatisering",
-          "h": "Publicera från de system du redan har.",
-          "p": "Ditt PIM, ERP eller en delad mapp har redan data och bilder. Låt portalen hämta dem enligt schema, eller skicka dem med ett kommando. Ingen flyttar filer för hand.",
+          "eyebrow": "Dina system",
+          "h": "Fortsätt arbeta som du gör i dag.",
+          "p": "Standarden handlar om hur återförsäljare hämtar. Hur ditt innehåll kommer in i portalen väljer du själv: en nattlig import från en webbadress, SFTP eller S3, en exportmapp eller kommandoradsverktyget obx.",
           "items": [
-            "Schemalagd import från en webbadress, SFTP eller S3, utan kod",
-            "Verktyget obx för Windows, macOS och Linux laddar bara upp ändringar",
-            "En färdig GitHub Action och recept för cron, n8n, Make och Zapier",
+            "Nattlig import från en webbadress, SFTP eller S3, utan kod",
+            "Verktyget obx för Windows, macOS och Linux skickar bara det som ändrats",
+            "Recept för cron, GitHub Actions, n8n, Make och Zapier",
             "Ett CSV-format och en namnregel för bilder"
           ],
           "link": "Se automatiseringsrecepten"
         }
       ],
       "audienceEyebrow": "Vem det är för",
-      "audienceTitle": "Byggt för båda sidor av samarbetet.",
+      "audienceTitle": "För varumärken och för återförsäljare.",
       "brands": {
         "h": "För varumärken",
-        "p": "Sluta skicka runt filer. Publicera en gång, från dina egna system, och behåll kontrollen.",
+        "p": "Inga fler filer att skicka runt. Återförsäljarna hämtar det de behöver, och du bestämmer vem som får vad.",
         "items": [
           "Din egen portal, på din egen domän",
           "Du godkänner varje återförsäljare och bestämmer vad de ser",
@@ -956,7 +988,7 @@
         }
       ],
       "trustEyebrow": "Styrning",
-      "trustTitle": "En öppen standard, inte en plattform du låses in i.",
+      "trustTitle": "En öppen standard, inte en plattform.",
       "trustLead": "Open Brand Exchange ska tillhöra de varumärken, återförsäljare och programvaruleverantörer som använder den, inte ett enskilt företag.",
       "trust": [
         {
@@ -965,7 +997,7 @@
         },
         {
           "h": "Konformitetstester",
-          "p": "61 automatiska tester i fyra profiler. Ingen implementation får särbehandling, inte ens initiativtagarens eget företag."
+          "p": "61 automatiska tester i fyra profiler. Alla implementationer testas på samma sätt."
         },
         {
           "h": "Öppna licenser",
@@ -973,7 +1005,7 @@
         },
         {
           "h": "En stiftelse under bildande",
-          "p": "Ett initiativ av {person}. Upphovsrätten, namnet och domänen går över till {foundation} när den finns."
+          "p": "Upphovsrätten, namnet och domänen går över till {foundation} när den är registrerad."
         },
         {
           "h": "Säkerhet",
@@ -996,7 +1028,7 @@
       ],
       "faqTitle": "Det varumärken frågar först",
       "faqLink": "Alla frågor",
-      "closingTitle": "Ge alla återförsäljare ett ställe där allt stämmer.",
+      "closingTitle": "Låt dina återförsäljare hämta det själva.",
       "closingP": "Sätt upp din egen portal, eller berätta om dina system och återförsäljare och var med och forma den första versionen.",
       "closingMail": "Mejla oss"
     },

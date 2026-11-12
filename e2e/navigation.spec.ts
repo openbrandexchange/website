@@ -87,9 +87,9 @@ test('brochures download as PDF in the reader language', async ({ page, request 
   expect((await res.body()).subarray(0, 5).toString()).toBe('%PDF-');
 });
 
-test('the imprint shows the initiator, the foundation in formation and both addresses', async ({ page }) => {
+test('the imprint shows the foundation in formation and both addresses', async ({ page }) => {
   await page.goto('/nl/imprint/');
-  await expect(page.getByText('Een initiatief van Richard Lindhout · Open Brand Exchange Foundation (in oprichting)').first()).toBeVisible();
+  await expect(page.getByText('Open Brand Exchange Foundation (in oprichting)').first()).toBeVisible();
   await expect(page.getByRole('link', { name: 'hello@openbrandexchange.com' }).first()).toHaveAttribute('href', 'mailto:hello@openbrandexchange.com');
   await expect(page.getByRole('link', { name: 'security@openbrandexchange.com' })).toHaveAttribute('href', 'mailto:security@openbrandexchange.com');
 });

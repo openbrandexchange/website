@@ -339,7 +339,7 @@
       "brändi voi viedä kaikki tietonsa ja kuvansa ja lähteä",
       "julkaiset omat hintasi ja ehtosi omalla sivustollasi"
     ],
-    "listHow": "Avaa pull request sivuston repositoriossa ja lisää tietosi tiedostoon src/data/providers.json. Aloitteentekijän yritys on listalla ensimmäisenä, muut aakkosjärjestyksessä.",
+    "listHow": "Avaa pull request sivuston repositoriossa ja lisää tietosi tiedostoon src/data/providers.json. Palveluntarjoajat ovat aakkosjärjestyksessä.",
     "p2Title": "2. Yhdellä klikkauksella",
     "p2P": "Oma portaali omalla tililläsi ilman palvelimen ylläpitoa.",
     "cfP": "Toimii Cloudflare Workersissa, tietokantana D1 ja kuville R2. Napsauta painiketta, kirjaudu Cloudflareen ja seuraa vaiheita. Päivittäiseen käyttöön portaali tarvitsee Workers Paid -tilauksen (5 dollaria kuukaudessa); ilmaistilaus riittää vain tutustumiseen. Kuviesi verkkoversiot tekevät selaimesi ja obx-työkalu.",
@@ -411,7 +411,7 @@
     "apiP": "Hakeeko PIM-, kassa- tai verkkokauppajärjestelmäsi kuvat itse? Pyydä silloin API-avain järjestelmällesi. Se hakee ensin kaiken ja sen jälkeen vain muutokset, myös sen, mitä brändi poistaa. Kuvat liitetään tuotteisiisi EAN-koodilla.",
     "apiDev": "Kehittäjällesi: tältä se näyttää.",
     "toolsTitle": "Mitkä ohjelmistot toimivat sen kanssa",
-    "toolsP": "Open Brand Exchange on avoin standardi: mikä tahansa ohjelmisto voi tukea sitä. Photopilot, aloitteentekijän yritys, rakentaa sen jälleenmyyjille tarkoitettuun ohjelmistoonsa, ja muut toimittajat voivat tehdä samoin. Et tarvitse mitään tiettyä ohjelmistoa: selain riittää.",
+    "toolsP": "Open Brand Exchange on avoin standardi: mikä tahansa ohjelmisto voi tukea sitä. Photopilot rakentaa sen jälleenmyyjille tarkoitettuun ohjelmistoonsa, ja muut toimittajat voivat tehdä samoin. Et tarvitse mitään tiettyä ohjelmistoa: selain riittää.",
     "toolsLink": "Määrittely kehittäjille",
     "findTitle": "Löydä brändi",
     "findP": "Brändit, jotka haluavat näkyä, ovat brändihakemistossa. Jos brändi antaa sinulle vain portaalinsa osoitteen, sekin toimii.",
@@ -420,7 +420,40 @@
     "kitP": "Nopein tapa saada brändi mukaan on, että kaupat pyytävät sitä. Kopioi tämä sähköposti, täytä hakasulkeet ja lähetä se yhteyshenkilöllesi tai myyjällesi brändillä.",
     "kitEnglish": "Englanti (kansainvälisille brändeille)",
     "kitDownload": "Lataa tekstitiedostona",
-    "kitMore": "Lisää materiaalia, kuten esite jälleenmyyjille, löytyy latauksista."
+    "kitMore": "Lisää materiaalia, kuten esite jälleenmyyjille, löytyy latauksista.",
+    "label": {
+      "eyebrow": "Tuotetiedot",
+      "title": "Pesulapun tiedot kulkevat jokaisen tuotteen mukana.",
+      "p": "Materiaalit osittain, hoito-ohjeet pesulapun järjestyksessä ja valmistusmaa kuuluvat jokaiseen tuotteeseen, samoin kuin jokaisen koon EAN. Verkkokauppasi näyttää ne tekstinä tai hoito-ohjemerkkeinä omalla tyylillään. Kentät noudattavat EU:n tekstiilimerkintäsääntöjä ja ISO 3758 -hoito-ohjekoodeja, joten niillä voi myöhemmin täyttää myös digitaalisen tuotepassin.",
+      "points": [
+        "Materiaalit osittain (päällinen, vuori, täyte, pohja) prosentteina",
+        "Hoito-ohjeet vakiokoodeina pesulapun järjestyksessä",
+        "Valmistusmaa sekä jokaisen koon ja värin EAN"
+      ],
+      "example": "Esimerkki testibrändiltä",
+      "product": "Polkujuoksushortsit",
+      "colour": "Musta",
+      "composition": "Materiaalit",
+      "outer": "Päällinen",
+      "lining": "Vuori",
+      "care": "Hoito",
+      "origin": "Valmistusmaa",
+      "sizes": "Koot ja EAN",
+      "size": "Koko",
+      "codeLabel": "Sama tuote APIssa",
+      "fibres": {
+        "recycled_polyester": "kierrätetty polyesteri",
+        "polyamide": "polyamidi",
+        "elastane": "elastaani"
+      },
+      "careText": {
+        "wash_30": "Konepesu 30 °C",
+        "do_not_bleach": "Ei valkaisua",
+        "do_not_tumble_dry": "Ei rumpukuivausta",
+        "do_not_iron": "Ei silitystä",
+        "do_not_dry_clean": "Ei kemiallista pesua"
+      }
+    }
   },
   "switchKit": {
     "subject": "Tuotekuvanne ja tuotetietonne Open Brand Exchangen kautta?",
@@ -580,7 +613,7 @@
       },
       {
         "q": "Kuka sen takana on?",
-        "a": "Open Brand Exchangen aloitteentekijä on {person}, joka on perustanut myös tuotekuvausohjelmistoja tekevän Photopilot-yrityksen. Kaikki siirretään organisaatiolle {foundation}, jotta standardi kuuluu sitä käyttäville brändeille, jälleenmyyjille ja ohjelmistotoimittajille eikä yhdelle yritykselle."
+        "a": "Open Brand Exchange siirretään organisaatiolle {foundation}, joka on alankomaalainen voittoa tavoittelematon säätiö (stichting). Näin standardi kuuluu sitä käyttäville brändeille, jälleenmyyjille ja ohjelmistotoimittajille eikä yhdelle yritykselle. Kysymykset voi lähettää osoitteeseen {email}."
       }
     ]
   },
@@ -590,7 +623,7 @@
     "sections": [
       {
         "h": "Kuka päättää",
-        "p": "Kunnes on kolme riippumatonta toteutusta, jotka läpäisevät yhteensopivuustestit, muutoksista päättää aloitteentekijä julkisen keskustelun jälkeen. Sen jälkeen päätösvallan ottaa ohjausryhmä, jossa on yksi paikka kutakin toteuttajaa kohden sekä vähintään yksi brändi ja yksi jälleenmyyjä."
+        "p": "Kunnes on kolme riippumatonta toteutusta, jotka läpäisevät yhteensopivuustestit, muutoksista päättää perustaja julkisen keskustelun jälkeen. Sen jälkeen päätösvallan ottaa ohjausryhmä, jossa on yksi paikka kutakin toteuttajaa kohden sekä vähintään yksi brändi ja yksi jälleenmyyjä."
       },
       {
         "h": "Miten muutokset tehdään",
@@ -609,7 +642,7 @@
     "nameP": "Nimi ”Open Brand Exchange” on sama kaikilla kielillä, eikä sitä koskaan käännetä. Se ei ole vielä rekisteröity tavaramerkki. Ohjelmisto, joka läpäisee yhteensopivuustestit, saa kertoa ”toimivansa Open Brand Exchangen kanssa”.",
     "specLink": "Koko hallintodokumentti",
     "foundationTitle": "Kuka on taustalla",
-    "foundationP": "Open Brand Exchangen aloitteentekijä on {person}. Hän perustaa organisaation {foundation}, josta tulee alankomaalainen säätiö (stichting). Heti kun se on olemassa, sille siirretään tekijänoikeus, nimi, verkkotunnus ja GitHub-organisaatio. Siihen asti ne ovat nimellä {person}."
+    "foundationP": "Organisaatio {foundation} perustetaan alankomaalaiseksi säätiöksi (stichting). Kun se on olemassa, sille siirretään tekijänoikeus, nimi, verkkotunnus ja GitHub-organisaatio."
   },
   "privacy": {
     "h1": "Tietosuoja",
@@ -648,7 +681,6 @@
     "updated": "Päivitetty viimeksi: {date}"
   },
   "org": {
-    "initiative": "Aloitteentekijä: {person}",
     "inFormation": "perusteilla"
   },
   "imprint": {
@@ -783,8 +815,8 @@
     },
     "home": {
       "eyebrow": "Avoin standardi · Vapaa ohjelmisto",
-      "h1": "Julkaise kerran. Jokainen jälleenmyyjä saa sen.",
-      "lead": "Open Brand Exchange antaa brändillesi oman portaalin jälleenmyyjille, vakio-APIn heidän ohjelmistoilleen ja automaattisen julkaisun PIM-, ERP- tai kansiojärjestelmästäsi. Avointa lähdekoodia, maksutonta ylläpitää ja pysyvästi sinun.",
+      "h1": "Tuotesisältösi valmiina jokaiselle jälleenmyyjälle.",
+      "lead": "Open Brand Exchange on avoin standardi sille, miten jälleenmyyjät hakevat brändin tuotekuvat ja tuotetiedot: selaimessa toimivasta portaalista, zip-tiedostona tai taulukkona tai suoraan omaan ohjelmistoonsa yhden APIn kautta. Sinä päätät, miten sisältö tulee portaaliisi.",
       "ctaRetailer": "Olen jälleenmyyjä",
       "proofLabel": "Lyhyesti",
       "proof": [
@@ -811,8 +843,8 @@
       ],
       "codeCaption": "Mitä jälleenmyyjän ohjelmisto saa",
       "flowEyebrow": "Näin se toimii",
-      "flowTitle": "Yksi julkaisu. Kaikille jälleenmyyjillesi.",
-      "flowLead": "Järjestelmäsi toimittavat sisällön omaan portaaliisi. Ostajat käyttävät sitä selaimessa, ja heidän ohjelmistonsa lukevat saman sisällön vakio-APIn kautta.",
+      "flowTitle": "Yksi lähde. Jälleenmyyjät hakevat, mitä tarvitsevat.",
+      "flowLead": "Sisältösi on omassa portaalissasi. Ostajat hakevat ja lataavat tiedostoja selaimessa, ja heidän ohjelmistonsa lukevat saman sisällön APIn kautta.",
       "flowCaption": "Näin sisältö kulkee brändin järjestelmistä sen oman portaalin kautta jälleenmyyjille.",
       "flow": {
         "systems": "Järjestelmäsi",
@@ -822,7 +854,7 @@
           "DAM",
           "Vientikansio"
         ],
-        "upload": "Automaattinen lataus",
+        "upload": "Sisällön tuonti",
         "uploadItems": [
           "Ajastettu tuonti",
           "obx-työkalu",
@@ -851,7 +883,7 @@
       "pillars": [
         {
           "eyebrow": "Portaali",
-          "h": "Portaali, jota jälleenmyyjät oikeasti käyttävät.",
+          "h": "Portaali jälleenmyyjiesi ostajille.",
           "p": "Ostajat kirjautuvat portaaliisi, liittävät tilauksensa EAN-koodit ja lataavat juuri sen, mitä tarvitsevat: yhden kuvan, yhden tuotteen tai kokonaisen valikoiman zip-tiedostona.",
           "items": [
             "Haku ja suodatus brändin, sesongin, tuotetyypin ja värin mukaan",
@@ -863,7 +895,7 @@
         },
         {
           "eyebrow": "API",
-          "h": "Yksi API kaikille standardia käyttäville brändeille.",
+          "h": "Yksi API, sama jokaiselle brändille.",
           "p": "Jälleenmyyjien ohjelmistot hakevat kaiken kerran ja sen jälkeen vain muutokset, myös sen, mitä poistat. Jokaisen kuvan mukana tulevat käyttöoikeudet, julkaisuvapautuksen päivä ja tekoälyalkuperä.",
           "items": [
             "Ensin täysi kopio, sitten vain muutokset",
@@ -874,23 +906,23 @@
           "link": "Lue API-dokumentaatio"
         },
         {
-          "eyebrow": "Automaatio",
-          "h": "Julkaise järjestelmistä, jotka sinulla jo on.",
-          "p": "PIM, ERP tai jaettu kansio sisältää jo tiedot ja kuvat. Anna portaalin hakea ne aikataulun mukaan tai lähetä ne yhdellä komennolla. Kenenkään ei tarvitse siirrellä tiedostoja käsin.",
+          "eyebrow": "Omat järjestelmäsi",
+          "h": "Jatka töitä kuten nytkin.",
+          "p": "Standardi koskee sitä, miten jälleenmyyjät hakevat sisältöä. Sen, miten sisältösi päätyy portaaliin, valitset itse: yöllinen tuonti verkko-osoitteesta, SFTP:stä tai S3:sta, vientikansio tai komentorivityökalu obx.",
           "items": [
-            "Ajastettu tuonti verkko-osoitteesta, SFTP:stä tai S3:sta ilman koodia",
-            "obx-työkalu Windowsille, macOSille ja Linuxille lataa vain muutokset",
-            "Valmis GitHub Action sekä ohjeet cronille, n8n:lle, Makelle ja Zapierille",
+            "Yöllinen tuonti verkko-osoitteesta, SFTP:stä tai S3:sta ilman koodia",
+            "obx-työkalu Windowsille, macOSille ja Linuxille lähettää vain muutokset",
+            "Ohjeet cronille, GitHub Actionsille, n8n:lle, Makelle ja Zapierille",
             "Yksi CSV-muoto ja yksi nimeämissääntö kuville"
           ],
           "link": "Katso automaatio-ohjeet"
         }
       ],
       "audienceEyebrow": "Kenelle",
-      "audienceTitle": "Tehty yhteistyön molemmille osapuolille.",
+      "audienceTitle": "Brändeille ja jälleenmyyjille.",
       "brands": {
         "h": "Brändeille",
-        "p": "Lopeta tiedostojen lähettely. Julkaise kerran omista järjestelmistäsi ja pidä ohjat käsissäsi.",
+        "p": "Tiedostoja ei tarvitse enää lähetellä. Jälleenmyyjät hakevat itse, mitä tarvitsevat, ja sinä päätät, kuka saa mitäkin.",
         "items": [
           "Oma portaali omassa verkkotunnuksessasi",
           "Hyväksyt jokaisen jälleenmyyjän ja päätät, mitä he näkevät",
@@ -956,7 +988,7 @@
         }
       ],
       "trustEyebrow": "Hallinto",
-      "trustTitle": "Avoin standardi, ei alusta, johon jäät lukkoon.",
+      "trustTitle": "Avoin standardi, ei alusta.",
       "trustLead": "Open Brand Exchangen pitäisi kuulua sitä käyttäville brändeille, jälleenmyyjille ja ohjelmistotoimittajille, ei yhdelle yritykselle.",
       "trust": [
         {
@@ -965,7 +997,7 @@
         },
         {
           "h": "Yhdenmukaisuustestit",
-          "p": "61 automaattista testiä neljässä profiilissa. Mikään toteutus ei saa erityiskohtelua, ei edes aloitteentekijän oma yritys."
+          "p": "61 automaattista testiä neljässä profiilissa. Jokainen toteutus testataan samalla tavalla."
         },
         {
           "h": "Avoimen lähdekoodin lisenssit",
@@ -973,7 +1005,7 @@
         },
         {
           "h": "Säätiö perusteilla",
-          "p": "Aloitteentekijä: {person}. Tekijänoikeus, nimi ja verkkotunnus siirtyvät organisaatiolle {foundation}, kun se on perustettu."
+          "p": "Tekijänoikeus, nimi ja verkkotunnus siirtyvät organisaatiolle {foundation}, kun se on rekisteröity."
         },
         {
           "h": "Tietoturva",
@@ -996,7 +1028,7 @@
       ],
       "faqTitle": "Brändien ensimmäiset kysymykset",
       "faqLink": "Kaikki kysymykset",
-      "closingTitle": "Anna jokaiselle jälleenmyyjälle yksi luotettava lähde.",
+      "closingTitle": "Anna jälleenmyyjiesi hakea sisältö itse.",
       "closingP": "Ota oma portaali käyttöön tai kerro meille järjestelmistäsi ja jälleenmyyjistäsi, ja ole mukana muovaamassa ensimmäistä julkaisua.",
       "closingMail": "Lähetä sähköpostia"
     },

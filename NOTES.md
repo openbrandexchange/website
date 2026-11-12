@@ -22,12 +22,13 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
    and enforced by the locale tests for all 25 languages. Aligning with the glossary changed the
    Lithuanian portal word (Prekybininkų portalas), the Croatian "automatic upload" (Automatsko
    učitavanje) and the heading "API key for your software" in most languages.
-5. **Publisher and contact.** "An initiative of Richard Lindhout · Open Brand Exchange Foundation
-   (in formation)" in the footer, on the imprint, on the brochures and in NOTICE; the imprint and
-   the governance page say once that the foundation will be a Dutch stichting. Contact is only
-   hello@ and security@openbrandexchange.com (a test fails on any other e-mail address in the
-   built pages). The imprint shows a postal address, phone and registration number only when they
-   are filled in `src/data/imprint.json`; nothing is invented.
+5. **Publisher and contact.** Since 2026-11-12 the footer, the brochures and NOTICE say only
+   "Open Brand Exchange Foundation (in formation)". The founder's name appears only where the law
+   asks for a responsible person until the foundation is registered: the imprint and the privacy
+   statement (`imprint.foundationP`, `privacy.sections[0].p`; a test keeps `{person}` out of every
+   other text). Contact is only hello@ and security@openbrandexchange.com (a test fails on any
+   other e-mail address in the built pages). The imprint shows a postal address, phone and
+   registration number only when they are filled in `src/data/imprint.json`; nothing is invented.
 6. **Legal pages.** Privacy (controller, what is processed, Cloudflare hosting, optional cookieless
    statistics, e-mail, GDPR rights, Dutch DPA), a separate cookie statement (no cookies; language
    choice in localStorage; Cloudflare may set a strictly necessary security cookie only when it
@@ -42,9 +43,10 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
    texts (see docs/brochures.md). The retailer brochure includes the switch-kit e-mail. Contact
    is hello@openbrandexchange.com; Photopilot is mentioned only as the initiator's company and as
    one vendor building support, never as the way to get the service.
-9. **Photopilot on /hosting.** Listed as a provider, first, labelled "Company of the initiator of
-   Open Brand Exchange" so the relation is visible. Everyone else is listed alphabetically on the
-   same conditions.
+9. **Providers on /hosting** are listed alphabetically, all on the same conditions, each with an
+   optional logo (light and dark version in `src/assets/providers/`). Since 2026-11-12 Photopilot
+   is listed without a label; its relation to the founder is disclosed on the governance page
+   (conflict-of-interest rule).
 10. **Edition names.** "Portal for Cloudflare" (node-ts), "Portal for Google Cloud & Docker"
     (node-go), "Portal for web hosting" (node-php), translated per language. Repo names appear only
     as links.

@@ -339,7 +339,7 @@
       "prekės ženklas gali eksportuoti visus savo duomenis ir nuotraukas ir išeiti",
       "savo kainas ir sąlygas skelbiate savo svetainėje"
     ],
-    "listHow": "Atidarykite pull request svetainės saugykloje su savo duomenimis faile src/data/providers.json. Iniciatoriaus įmonė nurodoma pirma, visi kiti abėcėlės tvarka.",
+    "listHow": "Atidarykite pull request svetainės saugykloje ir įrašykite savo duomenis į src/data/providers.json. Teikėjai pateikiami abėcėlės tvarka.",
     "p2Title": "2. Vienu paspaudimu",
     "p2P": "Nuosavas portalas jūsų paskyroje, nevaldant serverio.",
     "cfP": "Veikia Cloudflare Workers, su D1 kaip duomenų baze ir R2 vaizdams. Spustelėkite mygtuką, prisijunkite prie Cloudflare ir sekite žingsnius. Kasdien naudojamam portalui reikia plano Workers Paid (5 doleriai per mėnesį); nemokamo plano užtenka tik apsidairyti. Jūsų nuotraukų žiniatinklio versijas kuria jūsų naršyklė ir įrankis obx.",
@@ -411,7 +411,7 @@
     "apiP": "Ar jūsų PIM, kasos sistema ar internetinė parduotuvė pati gauna nuotraukas? Tada paprašykite API rakto savo sistemai. Ji pirmiausia gauna viską, o vėliau tik pakeitimus, taip pat tai, ką prekės ženklas atšaukia. Nuotraukos susiejamos su jūsų prekėmis pagal EAN.",
     "apiDev": "Jūsų kūrėjui: štai kaip tai atrodo.",
     "toolsTitle": "Kokia programinė įranga su tuo veikia",
-    "toolsP": "Open Brand Exchange yra atviras standartas: jį gali palaikyti bet kokia programinė įranga. Photopilot, iniciatoriaus įmonė, jį diegia į savo programinę įrangą pardavėjams, o kiti tiekėjai gali padaryti tą patį. Jums nereikia jokios konkrečios programinės įrangos: pakanka naršyklės.",
+    "toolsP": "Open Brand Exchange yra atviras standartas: jį gali palaikyti bet kokia programinė įranga. Photopilot jį diegia į savo programinę įrangą pardavėjams, o kiti tiekėjai gali padaryti tą patį. Jums nereikia jokios konkrečios programinės įrangos: pakanka naršyklės.",
     "toolsLink": "Specifikacija kūrėjams",
     "findTitle": "Kaip rasti prekės ženklą",
     "findP": "Prekių ženklai, norintys būti matomi, yra prekių ženklų sąraše. Jei prekės ženklas tiesiog duoda jums savo portalo adresą, tai irgi veikia.",
@@ -420,7 +420,40 @@
     "kitP": "Greičiausiai prekės ženklas prisijungia, kai to prašo parduotuvės. Nukopijuokite šį laišką, užpildykite laužtinius skliaustus ir nusiųskite jį savo kontaktiniam asmeniui ar prekės ženklo atstovui.",
     "kitEnglish": "Anglų kalba (tarptautiniams prekių ženklams)",
     "kitDownload": "Atsisiųsti kaip tekstinį failą",
-    "kitMore": "Daugiau medžiagos, pavyzdžiui, brošiūrą pardavėjams, rasite atsisiuntimuose."
+    "kitMore": "Daugiau medžiagos, pavyzdžiui, brošiūrą pardavėjams, rasite atsisiuntimuose.",
+    "label": {
+      "eyebrow": "Prekių duomenys",
+      "title": "Tai, kas parašyta priežiūros etiketėje, pateikiama su kiekviena preke.",
+      "p": "Sudėtis pagal dalis, priežiūros nurodymai etiketės tvarka ir kilmės šalis yra kiekvienos prekės dalis, kartu su kiekvieno dydžio EAN. Jūsų parduotuvė juos rodo tekstu arba priežiūros simboliais savo stiliumi. Laukai atitinka ES tekstilės gaminių ženklinimo taisykles ir ISO 3758 priežiūros kodus, todėl vėliau gali būti naudojami ir skaitmeniniam gaminio pasui.",
+      "points": [
+        "Sudėtis pagal dalis (pagrindinis audinys, pamušalas, užpildas, padas) su procentais",
+        "Priežiūros nurodymai standartiniais kodais, etiketės tvarka",
+        "Kilmės šalis ir kiekvieno dydžio bei spalvos EAN"
+      ],
+      "example": "Pavyzdys iš bandomojo prekės ženklo",
+      "product": "Bėgimo bekele šortai",
+      "colour": "Juoda",
+      "composition": "Sudėtis",
+      "outer": "Pagrindinis audinys",
+      "lining": "Pamušalas",
+      "care": "Priežiūra",
+      "origin": "Pagaminta",
+      "sizes": "Dydžiai ir EAN",
+      "size": "Dydis",
+      "codeLabel": "Ta pati prekė API",
+      "fibres": {
+        "recycled_polyester": "perdirbtas poliesteris",
+        "polyamide": "poliamidas",
+        "elastane": "elastanas"
+      },
+      "careText": {
+        "wash_30": "Skalbti skalbimo mašinoje 30 °C",
+        "do_not_bleach": "Nebalinti",
+        "do_not_tumble_dry": "Nedžiovinti būgninėje džiovyklėje",
+        "do_not_iron": "Nelyginti",
+        "do_not_dry_clean": "Nevalyti cheminiu būdu"
+      }
+    }
   },
   "switchKit": {
     "subject": "Jūsų produktų nuotraukos ir prekių duomenys per Open Brand Exchange?",
@@ -580,7 +613,7 @@
       },
       {
         "q": "Kas už to stovi?",
-        "a": "Open Brand Exchange iniciatorius yra {person}, kuris taip pat įkūrė produktų fotografijos programinės įrangos įmonę Photopilot. Viskas bus perduota organizacijai {foundation}, kad standartas priklausytų jį naudojantiems prekių ženklams, pardavėjams ir programinės įrangos tiekėjams, o ne vienai įmonei."
+        "a": "Open Brand Exchange perduodamas organizacijai {foundation}, ne pelno siekiančiam Nyderlandų fondui (stichting), kad standartas priklausytų jį naudojantiems prekių ženklams, pardavėjams ir programinės įrangos tiekėjams, o ne vienai įmonei. Klausimus siųskite adresu {email}."
       }
     ]
   },
@@ -590,7 +623,7 @@
     "sections": [
       {
         "h": "Kas sprendžia",
-        "p": "Kol nėra trijų nepriklausomų įgyvendinimų, kurie išlaiko atitikties testus, dėl pakeitimų po viešos diskusijos sprendžia iniciatorius. Vėliau valdymą perima valdymo grupė, turinti po vieną vietą kiekvienam įgyvendintojui ir bent vieną prekės ženklą bei vieną pardavėją."
+        "p": "Kol nėra trijų nepriklausomų įgyvendinimų, kurie išlaiko atitikties testus, dėl pakeitimų po viešos diskusijos sprendžia steigėjas. Vėliau sprendimus perima valdymo grupė, turinti po vieną vietą kiekvienam įgyvendintojui ir bent vieną prekės ženklą bei vieną pardavėją."
       },
       {
         "h": "Kaip daromi pakeitimai",
@@ -609,7 +642,7 @@
     "nameP": "Pavadinimas „Open Brand Exchange“ visomis kalbomis tas pats ir niekada neverčiamas. Tai dar nėra registruotas prekių ženklas. Programinė įranga, išlaikiusi atitikties testus, gali teigti, kad ji „veikia su Open Brand Exchange“.",
     "specLink": "Visas valdymo dokumentas",
     "foundationTitle": "Kas už to stovi",
-    "foundationP": "Open Brand Exchange iniciatorius yra {person}. Jis steigia organizaciją {foundation}, kuri bus Nyderlandų fondas (stichting). Kai tik ji bus įsteigta, jai bus perduotos autorių teisės, pavadinimas, domenas ir GitHub organizacija. Iki tol jie įregistruoti šiuo vardu: {person}."
+    "foundationP": "{foundation} steigiama kaip Nyderlandų fondas (stichting). Kai tik ji bus įsteigta, jai bus perduotos autorių teisės, pavadinimas, domenas ir GitHub organizacija."
   },
   "privacy": {
     "h1": "Privatumas",
@@ -648,7 +681,6 @@
     "updated": "Paskutinį kartą atnaujinta: {date}"
   },
   "org": {
-    "initiative": "Iniciatorius: {person}",
     "inFormation": "steigiama"
   },
   "imprint": {
@@ -783,8 +815,8 @@
     },
     "home": {
       "eyebrow": "Atviras standartas · Nemokama programinė įranga",
-      "h1": "Paskelbkite kartą. Gaus kiekvienas pardavėjas.",
-      "lead": "Open Brand Exchange suteikia jūsų prekės ženklui nuosavą portalą pardavėjams, standartinį API jų programinei įrangai ir automatinį publikavimą iš jūsų PIM, ERP ar aplankų. Atviras kodas, nemokamas talpinimas, visada jūsų.",
+      "h1": "Jūsų prekių turinys, paruoštas kiekvienam pardavėjui.",
+      "lead": "Open Brand Exchange yra atviras standartas, nustatantis, kaip pardavėjai gauna prekės ženklo nuotraukas ir prekių duomenis: portale naršyklėje, kaip zip archyvą ar skaičiuoklę arba tiesiai į savo programinę įrangą per vieną API. Kaip turinys patenka į jūsų portalą, sprendžiate jūs.",
       "ctaRetailer": "Esu pardavėjas",
       "proofLabel": "Trumpai",
       "proof": [
@@ -811,8 +843,8 @@
       ],
       "codeCaption": "Ką gauna pardavėjo programinė įranga",
       "flowEyebrow": "Kaip tai veikia",
-      "flowTitle": "Vienas paskelbimas. Kad ir kaip dirbtų jūsų pardavėjai.",
-      "flowLead": "Jūsų sistemos pateikia turinį į jūsų nuosavą portalą. Pirkėjai jį naudoja naršyklėje, o jų programinė įranga tą patį turinį skaito per standartinį API.",
+      "flowTitle": "Vienas šaltinis. Pardavėjai pasiima tai, ko reikia.",
+      "flowLead": "Jūsų turinys yra jūsų portale. Pirkėjai jo ieško ir atsisiunčia failus naršyklėje, o jų programinė įranga tą patį turinį skaito per API.",
       "flowCaption": "Kaip turinys keliauja iš prekės ženklo sistemų per jo nuosavą portalą iki jo pardavėjų.",
       "flow": {
         "systems": "Jūsų sistemos",
@@ -822,7 +854,7 @@
           "DAM",
           "Eksporto aplankas"
         ],
-        "upload": "Automatinis įkėlimas",
+        "upload": "Turinio įkėlimas",
         "uploadItems": [
           "Suplanuotas importas",
           "Įrankis obx",
@@ -851,7 +883,7 @@
       "pillars": [
         {
           "eyebrow": "Portalas",
-          "h": "Portalas, kurį pardavėjai tikrai naudos.",
+          "h": "Portalas jūsų pardavėjų pirkėjams.",
           "p": "Pirkėjai prisijungia prie jūsų portalo, įklijuoja EAN iš savo užsakymo ir atsisiunčia tiksliai tai, ko reikia: vieną nuotrauką, vieną prekę arba visos atrankos zip archyvą.",
           "items": [
             "Paieška ir filtrai pagal prekės ženklą, sezoną, produkto tipą ir spalvą",
@@ -863,7 +895,7 @@
         },
         {
           "eyebrow": "API",
-          "h": "Vienas API visiems standarto prekių ženklams.",
+          "h": "Vienas API, toks pat kiekvienam prekės ženklui.",
           "p": "Pardavėjų programinė įranga vieną kartą parsisiunčia viską, o vėliau tik pakeitimus, įskaitant tai, ką atšaukiate. Kiekviena nuotrauka ateina su naudojimo teisėmis, embargo data ir dirbtinio intelekto kilme.",
           "items": [
             "Pirmiausia visa kopija, paskui tik pakeitimai",
@@ -874,23 +906,23 @@
           "link": "Skaitykite API žinyną"
         },
         {
-          "eyebrow": "Automatizavimas",
-          "h": "Publikuokite iš sistemų, kurias jau turite.",
-          "p": "Jūsų PIM, ERP ar bendras aplankas jau turi duomenis ir nuotraukas. Leiskite portalui juos pasiimti pagal grafiką arba nusiųskite viena komanda. Niekam nereikia tampyti failų.",
+          "eyebrow": "Jūsų sistemos",
+          "h": "Dirbkite taip, kaip dirbate dabar.",
+          "p": "Standartas apibrėžia, kaip pardavėjai pasiima turinį. Kaip jūsų turinys patenka į portalą, renkatės patys: naktinis importas iš interneto adreso, SFTP ar S3, eksporto aplankas arba komandinės eilutės įrankis obx.",
           "items": [
-            "Suplanuotas importas iš interneto adreso, SFTP ar S3, be kodo",
-            "Įrankis obx, skirtas Windows, macOS ir Linux, įkelia tik tai, kas pasikeitė",
-            "Paruoštas GitHub Action ir receptai cron, n8n, Make bei Zapier",
+            "Naktinis importas iš interneto adreso, SFTP ar S3, be kodo",
+            "Įrankis obx, skirtas Windows, macOS ir Linux, siunčia tik tai, kas pasikeitė",
+            "Receptai cron, GitHub Actions, n8n, Make ir Zapier",
             "Vienas CSV formatas ir viena nuotraukų pavadinimo taisyklė"
           ],
           "link": "Žiūrėkite automatizavimo receptus"
         }
       ],
       "audienceEyebrow": "Kam tai skirta",
-      "audienceTitle": "Sukurta abiem santykio pusėms.",
+      "audienceTitle": "Prekių ženklams ir pardavėjams.",
       "brands": {
         "h": "Prekių ženklams",
-        "p": "Nebesiuntinėkite failų. Paskelbkite kartą iš savo sistemų ir išlaikykite kontrolę.",
+        "p": "Nebereikia siuntinėti failų. Pardavėjai pasiima tai, ko reikia, o jūs sprendžiate, kas ką gauna.",
         "items": [
           "Nuosavas portalas jūsų domene",
           "Jūs patvirtinate kiekvieną pardavėją ir sprendžiate, ką jis mato",
@@ -956,7 +988,7 @@
         }
       ],
       "trustEyebrow": "Valdymas",
-      "trustTitle": "Atviras standartas, o ne platforma, prie kurios esate pririšti.",
+      "trustTitle": "Atviras standartas, o ne platforma.",
       "trustLead": "Open Brand Exchange turi priklausyti jį naudojantiems prekių ženklams, pardavėjams ir programinės įrangos tiekėjams, o ne vienai įmonei.",
       "trust": [
         {
@@ -965,7 +997,7 @@
         },
         {
           "h": "Atitikties testai",
-          "p": "61 automatinė patikra keturiuose profiliuose. Jokiam įgyvendinimui nedaroma išimčių, net iniciatoriaus įmonei."
+          "p": "61 automatinė patikra keturiuose profiliuose. Kiekvienas įgyvendinimas tikrinamas vienodai."
         },
         {
           "h": "Atvirojo kodo licencijos",
@@ -973,7 +1005,7 @@
         },
         {
           "h": "Steigiamas fondas",
-          "p": "Iniciatorius: {person}. Autorių teisės, pavadinimas ir domenas bus perduoti organizacijai {foundation}, kai tik ji bus įsteigta."
+          "p": "Autorių teisės, pavadinimas ir domenas bus perduoti organizacijai {foundation}, kai tik ji bus įregistruota."
         },
         {
           "h": "Saugumas",
@@ -996,7 +1028,7 @@
       ],
       "faqTitle": "Ko prekių ženklai klausia pirmiausia",
       "faqLink": "Visi klausimai",
-      "closingTitle": "Viena vieta, kur kiekvienas pardavėjas randa tai, ko reikia.",
+      "closingTitle": "Leiskite pardavėjams patiems pasiimti turinį.",
       "closingP": "Įsirenkite savo portalą arba papasakokite apie savo sistemas ir pardavėjus ir padėkite formuoti pirmąjį leidimą.",
       "closingMail": "Parašykite mums"
     },

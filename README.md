@@ -5,7 +5,7 @@ article data to their retailers. This repository is the whole site: a static
 [Astro](https://astro.build) build in 25 languages, the brand directory, and the brochures for
 brands and retailers. It is deployed to Cloudflare Pages.
 
-An initiative of Richard Lindhout · Open Brand Exchange Foundation (in formation).
+Published by the Open Brand Exchange Foundation (in formation).
 Contact: hello@openbrandexchange.com · security reports: security@openbrandexchange.com.
 
 ## Quickstart

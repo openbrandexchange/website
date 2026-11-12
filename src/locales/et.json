@@ -339,7 +339,7 @@
       "kaubamärk saab kõik oma andmed ja fotod eksportida ning lahkuda",
       "avaldate oma hinnad ja tingimused oma veebisaidil"
     ],
-    "listHow": "Avage veebisaidi hoidlas pull request oma andmetega failis src/data/providers.json. Algataja ettevõte on loetelus esimene, kõik teised tähestiku järjekorras.",
+    "listHow": "Avage veebisaidi hoidlas pull request oma andmetega failis src/data/providers.json. Teenusepakkujad on tähestiku järjekorras.",
     "p2Title": "2. Ühe klõpsuga",
     "p2P": "Oma portaal oma kontol, ilma serverit haldamata.",
     "cfP": "Töötab Cloudflare Workersil, andmebaasiks D1 ja piltide jaoks R2. Klõpsake nuppu, logige Cloudflare'i sisse ja järgige samme. Igapäevaseks kasutamiseks vajab portaal paketti Workers Paid (5 dollarit kuus); tasuta paketist piisab ainult proovimiseks. Teie fotode veebiversioonid teeb teie brauser ja tööriist obx.",
@@ -411,7 +411,7 @@
     "apiP": "Kas teie PIM, kassasüsteem või e-pood toob fotod ise? Siis taotlege oma süsteemile API-võtit. See toob kõigepealt kõik ja seejärel ainult muudatused, ka selle, mille kaubamärk tagasi võtab. Fotod seotakse teie toodetega EAN-i kaudu.",
     "apiDev": "Teie arendajale: see näeb välja nii.",
     "toolsTitle": "Milline tarkvara sellega töötab",
-    "toolsP": "Open Brand Exchange on avatud standard: iga tarkvara võib seda toetada. Photopilot, algataja ettevõte, ehitab selle oma edasimüüjate tarkvarasse, ja teised tarnijad võivad teha sama. Teil pole vaja mingit kindlat tarkvara: piisab brauserist.",
+    "toolsP": "Open Brand Exchange on avatud standard: iga tarkvara võib seda toetada. Photopilot ehitab selle oma edasimüüjate tarkvarasse ja teised tarnijad võivad teha sama. Teil pole vaja mingit kindlat tarkvara: piisab brauserist.",
     "toolsLink": "Spetsifikatsioon arendajatele",
     "findTitle": "Kaubamärgi leidmine",
     "findP": "Nähtavaks jääda soovivad kaubamärgid on kaubamärkide loendis. Kui kaubamärk annab teile lihtsalt oma portaali aadressi, töötab ka see.",
@@ -420,7 +420,40 @@
     "kitP": "Kõige kiiremini liitub kaubamärk siis, kui poed seda küsivad. Kopeerige see e-kiri, täitke nurksulud ja saatke see oma kontaktisikule või müügiesindajale kaubamärgi juures.",
     "kitEnglish": "Inglise keeles (rahvusvahelistele kaubamärkidele)",
     "kitDownload": "Laadi alla tekstifailina",
-    "kitMore": "Rohkem materjale, näiteks edasimüüjate brošüüri, leiate allalaadimiste alt."
+    "kitMore": "Rohkem materjale, näiteks edasimüüjate brošüüri, leiate allalaadimiste alt.",
+    "label": {
+      "eyebrow": "Tooteandmed",
+      "title": "Hooldusetiketi andmed tulevad iga tootega kaasa.",
+      "p": "Koostis osade kaupa, hooldusjuhised etiketi järjekorras ja päritoluriik on iga toote juures, koos iga suuruse EAN-iga. Teie e-pood näitab neid tekstina või hooldussümbolitena oma stiilis. Väljad järgivad ELi tekstiilitoodete märgistamise reegleid ja ISO 3758 hooldustähiseid, nii et hiljem saab nendega täita ka digitaalse tootepassi.",
+      "points": [
+        "Koostis osade kaupa (pealismaterjal, vooder, täidis, tald) protsentidega",
+        "Hooldusjuhised standardkoodidena, etiketi järjekorras",
+        "Päritoluriik ning iga suuruse ja värvi EAN"
+      ],
+      "example": "Näide testkaubamärgilt",
+      "product": "Maastikujooksu lühipüksid",
+      "colour": "Must",
+      "composition": "Koostis",
+      "outer": "Pealismaterjal",
+      "lining": "Vooder",
+      "care": "Hooldus",
+      "origin": "Päritoluriik",
+      "sizes": "Suurused ja EAN",
+      "size": "Suurus",
+      "codeLabel": "Sama toode API-s",
+      "fibres": {
+        "recycled_polyester": "taaskasutatud polüester",
+        "polyamide": "polüamiid",
+        "elastane": "elastaan"
+      },
+      "careText": {
+        "wash_30": "Masinpesu 30 °C",
+        "do_not_bleach": "Mitte valgendada",
+        "do_not_tumble_dry": "Mitte kuivatada trummelkuivatis",
+        "do_not_iron": "Mitte triikida",
+        "do_not_dry_clean": "Mitte keemiliselt puhastada"
+      }
+    }
   },
   "switchKit": {
     "subject": "Teie tootefotod ja tooteandmed Open Brand Exchange'i kaudu?",
@@ -580,7 +613,7 @@
       },
       {
         "q": "Kes on selle taga?",
-        "a": "Open Brand Exchange'i algataja on {person}, kes asutas ka tootefotograafia tarkvara ettevõtte Photopilot. Kõik antakse üle organisatsioonile {foundation}, et standard kuuluks seda kasutavatele kaubamärkidele, edasimüüjatele ja tarkvaratarnijatele, mitte ühele ettevõttele."
+        "a": "Open Brand Exchange antakse üle organisatsioonile {foundation}, mis on Hollandi mittetulunduslik sihtasutus (stichting), et standard kuuluks seda kasutavatele kaubamärkidele, edasimüüjatele ja tarkvaratarnijatele, mitte ühele ettevõttele. Küsimused saatke aadressile {email}."
       }
     ]
   },
@@ -590,7 +623,7 @@
     "sections": [
       {
         "h": "Kes otsustab",
-        "p": "Kuni pole kolme sõltumatut teostust, mis läbivad vastavustestid, otsustab muudatuste üle pärast avalikku arutelu algataja. Seejärel võtab juhtimise üle juhtrühm, kus on üks koht iga teostaja kohta ning vähemalt üks kaubamärk ja üks edasimüüja."
+        "p": "Kuni pole kolme sõltumatut teostust, mis läbivad vastavustestid, otsustab muudatuste üle pärast avalikku arutelu asutaja. Seejärel võtab juhtimise üle juhtrühm, kus on üks koht iga teostaja kohta ning vähemalt üks kaubamärk ja üks edasimüüja."
       },
       {
         "h": "Kuidas muudatusi tehakse",
@@ -609,7 +642,7 @@
     "nameP": "Nimi „Open Brand Exchange” on kõigis keeltes sama ja seda ei tõlgita kunagi. See ei ole veel registreeritud kaubamärk. Tarkvara, mis läbib vastavustestid, võib öelda, et see „töötab Open Brand Exchange'iga”.",
     "specLink": "Täielik juhtimisdokument",
     "foundationTitle": "Kes on selle taga",
-    "foundationP": "Open Brand Exchange'i algataja on {person}. Ta asutab organisatsiooni {foundation}, millest saab Hollandi sihtasutus (stichting). Niipea kui see on olemas, antakse sellele üle autoriõigus, nimi, domeen ja GitHubi organisatsioon. Seni on need registreeritud nimele {person}."
+    "foundationP": "Organisatsioon {foundation} asutatakse Hollandi sihtasutusena (stichting). Kui see on olemas, antakse sellele üle autoriõigus, nimi, domeen ja GitHubi organisatsioon."
   },
   "privacy": {
     "h1": "Privaatsus",
@@ -648,7 +681,6 @@
     "updated": "Viimati uuendatud: {date}"
   },
   "org": {
-    "initiative": "Algataja: {person}",
     "inFormation": "asutamisel"
   },
   "imprint": {
@@ -783,8 +815,8 @@
     },
     "home": {
       "eyebrow": "Avatud standard · Vaba tarkvara",
-      "h1": "Avaldage üks kord. Iga edasimüüja saab selle kätte.",
-      "lead": "Open Brand Exchange annab teie kaubamärgile oma portaali edasimüüjatele, standardse API nende tarkvarale ja automaatse avaldamise teie PIM-ist, ERP-st või kaustadest. Avatud lähtekood, tasuta majutada ja jääb teie omaks.",
+      "h1": "Teie tootesisu, valmis igale edasimüüjale.",
+      "lead": "Open Brand Exchange on avatud standard selle kohta, kuidas edasimüüjad kaubamärgilt tootefotod ja tooteandmed kätte saavad: brauseris avatavast portaalist, zip-faili või tabelina või ühe API kaudu otse oma tarkvarasse. Kuidas sisu teie portaali jõuab, otsustate ise.",
       "ctaRetailer": "Olen edasimüüja",
       "proofLabel": "Lühidalt",
       "proof": [
@@ -811,8 +843,8 @@
       ],
       "codeCaption": "Mida edasimüüja tarkvara saab",
       "flowEyebrow": "Kuidas see toimib",
-      "flowTitle": "Üks avaldamine. Kõigile teie edasimüüjatele.",
-      "flowLead": "Teie süsteemid edastavad sisu teie enda portaali. Ostjad kasutavad seda brauseris, nende tarkvara loeb sama sisu standardse API kaudu.",
+      "flowTitle": "Üks allikas. Edasimüüjad võtavad, mida vajavad.",
+      "flowLead": "Teie sisu on teie enda portaalis. Ostjad otsivad ja laadivad faile brauseris alla, nende tarkvara loeb sama sisu API kaudu.",
       "flowCaption": "Kuidas sisu liigub kaubamärgi süsteemidest tema oma portaali kaudu edasimüüjateni.",
       "flow": {
         "systems": "Teie süsteemid",
@@ -822,7 +854,7 @@
           "DAM",
           "Ekspordikaust"
         ],
-        "upload": "Automaatne üleslaadimine",
+        "upload": "Sisu lisamine",
         "uploadItems": [
           "Ajastatud import",
           "Tööriist obx",
@@ -851,7 +883,7 @@
       "pillars": [
         {
           "eyebrow": "Portaal",
-          "h": "Portaal, mida edasimüüjad päriselt kasutavad.",
+          "h": "Portaal teie edasimüüjate ostjatele.",
           "p": "Ostjad logivad teie portaali sisse, kleebivad tellimuse EAN-koodid ja laadivad alla täpselt selle, mida vajavad: ühe foto, ühe toote või terve valiku zip-failina.",
           "items": [
             "Otsing ja filtreerimine kaubamärgi, hooaja, tootetüübi ja värvi järgi",
@@ -863,7 +895,7 @@
         },
         {
           "eyebrow": "API",
-          "h": "Üks API kõigile standardi kaubamärkidele.",
+          "h": "Üks API, kõigil kaubamärkidel sama.",
           "p": "Edasimüüjate tarkvara toob kõik ühe korra ja seejärel ainult muudatused, ka selle, mille tagasi võtate. Iga fotoga tulevad kaasa kasutusõigused, embargo kuupäev ja tehisintellekti päritolu.",
           "items": [
             "Kõigepealt täielik koopia, seejärel ainult muudatused",
@@ -874,23 +906,23 @@
           "link": "Lugege API viidet"
         },
         {
-          "eyebrow": "Automatiseerimine",
-          "h": "Avaldage süsteemidest, mis teil juba on.",
-          "p": "Teie PIM, ERP või jagatud kaust sisaldab juba andmeid ja fotosid. Laske portaalil need ajakava järgi tuua või saatke need ühe käsuga. Keegi ei pea faile käsitsi tõstma.",
+          "eyebrow": "Teie süsteemid",
+          "h": "Jätkake tööd nii nagu praegu.",
+          "p": "Standard määrab, kuidas edasimüüjad sisu kätte saavad. Kuidas teie sisu portaali jõuab, valite ise: öine import veebiaadressilt, SFTP-st või S3-st, ekspordikaust või käsurea tööriist obx.",
           "items": [
-            "Ajastatud import veebiaadressilt, SFTP-st või S3-st, ilma koodita",
-            "Tööriist obx Windowsile, macOS-ile ja Linuxile laadib üles ainult muudatused",
-            "Valmis GitHub Action ning retseptid cronile, n8n-ile, Make'ile ja Zapierile",
+            "Öine import veebiaadressilt, SFTP-st või S3-st, ilma koodita",
+            "Tööriist obx Windowsile, macOS-ile ja Linuxile saadab ainult muudatused",
+            "Retseptid cronile, GitHub Actionsile, n8n-ile, Make'ile ja Zapierile",
             "Üks CSV-vorming ja üks nimereegel fotodele"
           ],
           "link": "Vaadake automatiseerimise retsepte"
         }
       ],
       "audienceEyebrow": "Kellele",
-      "audienceTitle": "Loodud koostöö mõlemale poolele.",
+      "audienceTitle": "Kaubamärkidele ja edasimüüjatele.",
       "brands": {
         "h": "Kaubamärkidele",
-        "p": "Lõpetage failide saatmine. Avaldage üks kord oma süsteemidest ja hoidke kontroll enda käes.",
+        "p": "Failide saatmine jääb ära. Edasimüüjad võtavad ise, mida vajavad, ja teie otsustate, kes mida saab.",
         "items": [
           "Teie oma portaal teie oma domeenil",
           "Kinnitate iga edasimüüja ja otsustate, mida ta näeb",
@@ -956,7 +988,7 @@
         }
       ],
       "trustEyebrow": "Juhtimine",
-      "trustTitle": "Avatud standard, mitte platvorm, mille külge jääte kinni.",
+      "trustTitle": "Avatud standard, mitte platvorm.",
       "trustLead": "Open Brand Exchange peaks kuuluma kaubamärkidele, edasimüüjatele ja tarkvaratarnijatele, kes seda kasutavad, mitte ühele ettevõttele.",
       "trust": [
         {
@@ -965,7 +997,7 @@
         },
         {
           "h": "Vastavustestid",
-          "p": "61 automaatset testi neljas profiilis. Ükski teostus ei saa erikohtlemist, ka mitte algataja enda ettevõte."
+          "p": "61 automaatset testi neljas profiilis. Iga teostust testitakse ühtemoodi."
         },
         {
           "h": "Avatud lähtekoodi litsentsid",
@@ -973,7 +1005,7 @@
         },
         {
           "h": "Sihtasutus asutamisel",
-          "p": "Algataja: {person}. Autoriõigus, nimi ja domeen lähevad üle sihtasutusele {foundation}, kui see on asutatud."
+          "p": "Autoriõigus, nimi ja domeen lähevad üle sihtasutusele {foundation}, kui see on registreeritud."
         },
         {
           "h": "Turvalisus",
@@ -996,7 +1028,7 @@
       ],
       "faqTitle": "Mida kaubamärgid esimesena küsivad",
       "faqLink": "Kõik küsimused",
-      "closingTitle": "Andke igale edasimüüjale üks usaldusväärne koht.",
+      "closingTitle": "Laske edasimüüjatel sisu ise võtta.",
       "closingP": "Seadistage oma portaal või rääkige meile oma süsteemidest ja edasimüüjatest ning aidake kujundada esimest väljalaset.",
       "closingMail": "Kirjutage meile"
     },

@@ -339,7 +339,7 @@
       "a brand can export all its data and images and leave",
       "you publish your own prices and terms on your own site"
     ],
-    "listHow": "Open a pull request on the website repository with your details in src/data/providers.json. The initiator's company is listed first, everyone else alphabetically.",
+    "listHow": "Open a pull request on the website repository with your details in src/data/providers.json. Providers are listed alphabetically.",
     "p2Title": "2. With one click",
     "p2P": "Your own portal on your own account, without managing a server.",
     "cfP": "Runs on Cloudflare Workers, with D1 as the database and R2 for the images. Click the button, sign in to Cloudflare and follow the steps. A portal in daily use needs the Workers Paid plan (5 dollars a month); the free plan is only enough to look around. Web versions of your photos are made by your browser and the obx tool.",
@@ -411,7 +411,7 @@
     "apiP": "Does your PIM, POS or shop software fetch images by itself? Then request an API key for your software. It first fetches everything and after that only the changes, including what the brand withdraws. Images are matched to your articles by EAN.",
     "apiDev": "For your developer: this is what it looks like.",
     "toolsTitle": "Which software works with it",
-    "toolsP": "Open Brand Exchange is an open standard: any software can support it. Photopilot, the initiator's company, is building it into its software for retailers, and other vendors can do the same. You do not need any particular software: a browser is enough.",
+    "toolsP": "Open Brand Exchange is an open standard: any software can support it. Photopilot is building it into its software for retailers, and other vendors can do the same. You do not need any particular software: a browser is enough.",
     "toolsLink": "Specification for developers",
     "findTitle": "Finding a brand",
     "findP": "Brands that choose to be listed are in the directory. If a brand simply gives you the address of its portal, that works too.",
@@ -420,7 +420,40 @@
     "kitP": "The fastest way to get a brand on board is for stores to ask for it. Copy this email, fill in the brackets and send it to your contact or sales rep at the brand.",
     "kitEnglish": "English (for international brands)",
     "kitDownload": "Download as a text file",
-    "kitMore": "More material, such as the brochure for retailers, is on the downloads page."
+    "kitMore": "More material, such as the brochure for retailers, is on the downloads page.",
+    "label": {
+      "eyebrow": "Article data",
+      "title": "What is on the care label comes with every article.",
+      "p": "Composition per part, care instructions in label order and the country of origin are part of every article, next to the EAN of each size. Your shop shows them as text or as care symbols in its own style. The fields follow the EU textile labelling rules and the ISO 3758 care codes, so they can also feed a digital product passport later.",
+      "points": [
+        "Composition per part (outer, lining, filling, sole) with percentages",
+        "Care instructions as standard codes, in the order of the label",
+        "Country of origin and the EAN of every size and colour"
+      ],
+      "example": "Example from the test brand",
+      "product": "Trail Running Shorts",
+      "colour": "Black",
+      "composition": "Composition",
+      "outer": "Outer",
+      "lining": "Lining",
+      "care": "Care",
+      "origin": "Made in",
+      "sizes": "Sizes and EAN",
+      "size": "Size",
+      "codeLabel": "The same article in the API",
+      "fibres": {
+        "recycled_polyester": "recycled polyester",
+        "polyamide": "polyamide",
+        "elastane": "elastane"
+      },
+      "careText": {
+        "wash_30": "Machine wash at 30 °C",
+        "do_not_bleach": "Do not bleach",
+        "do_not_tumble_dry": "Do not tumble dry",
+        "do_not_iron": "Do not iron",
+        "do_not_dry_clean": "Do not dry clean"
+      }
+    }
   },
   "switchKit": {
     "subject": "Your product images and article data through Open Brand Exchange?",
@@ -580,7 +613,7 @@
       },
       {
         "q": "Who is behind it?",
-        "a": "Open Brand Exchange is an initiative of {person}, who also founded the product photo software company Photopilot. Everything will be transferred to the {foundation}, so that the standard belongs to the brands, retailers and software vendors who use it, not to one company."
+        "a": "Open Brand Exchange is being handed over to the {foundation}, a Dutch non-profit foundation (stichting), so that the standard belongs to the brands, retailers and software vendors who use it, not to one company. Questions go to {email}."
       }
     ]
   },
@@ -590,7 +623,7 @@
     "sections": [
       {
         "h": "Who decides",
-        "p": "Until there are three independent implementations that pass the conformance suite, the initiator decides on changes, after public discussion. After that, a steering group takes over, with one seat per implementer and at least one brand and one retailer."
+        "p": "Until there are three independent implementations that pass the conformance suite, the founder decides on changes, after public discussion. After that, a steering group takes over, with one seat per implementer and at least one brand and one retailer."
       },
       {
         "h": "How changes are made",
@@ -609,7 +642,7 @@
     "nameP": "The name \"Open Brand Exchange\" is the same in every language and is never translated. It is not a registered trademark yet. Software that passes the conformance suite may say it \"works with Open Brand Exchange\".",
     "specLink": "Full governance document",
     "foundationTitle": "Who is behind it",
-    "foundationP": "Open Brand Exchange is an initiative of {person}. He is setting up the {foundation}, which will be a Dutch foundation (stichting). Once it exists, the copyright, the name, the domain and the GitHub organisation will be transferred to it. Until then they are in the name of {person}."
+    "foundationP": "The {foundation} is being set up as a Dutch foundation (stichting). Once it exists, the copyright, the name, the domain and the GitHub organisation will be transferred to it."
   },
   "privacy": {
     "h1": "Privacy",
@@ -648,7 +681,6 @@
     "updated": "Last updated: {date}"
   },
   "org": {
-    "initiative": "An initiative of {person}",
     "inFormation": "in formation"
   },
   "imprint": {
@@ -783,8 +815,8 @@
     },
     "home": {
       "eyebrow": "Open standard · Free software",
-      "h1": "Publish once. Every retailer gets it.",
-      "lead": "Open Brand Exchange gives your brand its own portal for retailers, a standard API for their software and automatic publishing from your PIM, ERP or folders. Open source, free to host, yours to keep.",
+      "h1": "Your product content, ready for every retailer.",
+      "lead": "Open Brand Exchange is an open standard for how retailers get product photos and article data from a brand: in a portal in the browser, as a zip or spreadsheet, or straight into their own software through one API. How the content gets into your portal is up to you.",
       "ctaRetailer": "I am a retailer",
       "proofLabel": "At a glance",
       "proof": [
@@ -811,8 +843,8 @@
       ],
       "codeCaption": "What a retailer's software receives",
       "flowEyebrow": "How it works",
-      "flowTitle": "One publication. Every way your retailers work.",
-      "flowLead": "Your systems deliver to your own portal. Buyers use it in the browser; their software reads the same content through the standard API.",
+      "flowTitle": "One source. Retailers fetch what they need.",
+      "flowLead": "Your content sits in your own portal. Buyers search it and download files in the browser; their software reads the same content through the API.",
       "flowCaption": "How content flows from a brand's systems through its own portal to its retailers.",
       "flow": {
         "systems": "Your systems",
@@ -822,7 +854,7 @@
           "DAM",
           "Export folder"
         ],
-        "upload": "Automatic upload",
+        "upload": "Getting content in",
         "uploadItems": [
           "Scheduled import",
           "obx tool",
@@ -851,7 +883,7 @@
       "pillars": [
         {
           "eyebrow": "Portal",
-          "h": "A portal your retailers will actually use.",
+          "h": "A portal for your retailers' buyers.",
           "p": "Buyers log in to your portal, paste the EANs from their order and download exactly what they need: one photo, one article or a zip of a whole selection.",
           "items": [
             "Search and filter by brand, season, product type and colour",
@@ -863,7 +895,7 @@
         },
         {
           "eyebrow": "API",
-          "h": "One API for every brand on the standard.",
+          "h": "One API, the same for every brand.",
           "p": "Retailers' software fetches everything once and then only what changed, including what you withdraw. Every image arrives with its usage rights, embargo date and AI provenance.",
           "items": [
             "A full copy first, then only the changes",
@@ -874,23 +906,23 @@
           "link": "Read the API reference"
         },
         {
-          "eyebrow": "Automation",
-          "h": "Publish from the systems you already have.",
-          "p": "Your PIM, ERP or a shared folder already holds the data and the photos. Let your portal fetch them on a schedule, or send them with one command. Nobody drags files around.",
+          "eyebrow": "Your systems",
+          "h": "Keep working the way you do now.",
+          "p": "The standard is about how retailers fetch. How your content gets into the portal is your choice: a nightly import from a web address, SFTP or S3, an export folder, or the obx command-line tool.",
           "items": [
-            "Scheduled import from a web address, SFTP or S3, without code",
-            "The obx tool for Windows, macOS and Linux uploads only what changed",
-            "A ready-made GitHub Action, and recipes for cron, n8n, Make and Zapier",
-            "One CSV format and one naming rule for photos"
+            "Nightly import from a web address, SFTP or S3, no code needed",
+            "The obx tool for Windows, macOS and Linux sends only what changed",
+            "Recipes for cron, GitHub Actions, n8n, Make and Zapier",
+            "One CSV layout and one naming rule for photos"
           ],
           "link": "See the automation recipes"
         }
       ],
       "audienceEyebrow": "Who it is for",
-      "audienceTitle": "Built for both sides of the relationship.",
+      "audienceTitle": "For brands and for retailers.",
       "brands": {
         "h": "For brands",
-        "p": "Stop sending files around. Publish once, from your own systems, and stay in control.",
+        "p": "No more sending files around. Retailers fetch what they need, and you decide who gets what.",
         "items": [
           "Your own portal, on your own domain",
           "You approve every retailer and decide what they see",
@@ -956,7 +988,7 @@
         }
       ],
       "trustEyebrow": "Governance",
-      "trustTitle": "An open standard, not a platform you are locked into.",
+      "trustTitle": "An open standard, not a platform.",
       "trustLead": "Open Brand Exchange should belong to the brands, retailers and software vendors who use it, not to one company.",
       "trust": [
         {
@@ -965,7 +997,7 @@
         },
         {
           "h": "Conformance suite",
-          "p": "61 automated checks in four profiles. No implementation gets special treatment, including the initiator's own company."
+          "p": "61 automated checks in four profiles. Every implementation is tested the same way."
         },
         {
           "h": "Open-source licences",
@@ -973,7 +1005,7 @@
         },
         {
           "h": "A foundation in formation",
-          "p": "An initiative of {person}. The copyright, the name and the domain move to the {foundation} once it exists."
+          "p": "The copyright, the name and the domain go to the {foundation} once it is registered."
         },
         {
           "h": "Security",
@@ -996,7 +1028,7 @@
       ],
       "faqTitle": "Questions brands ask first",
       "faqLink": "All questions",
-      "closingTitle": "Give every retailer one place to get it right.",
+      "closingTitle": "Let your retailers fetch it themselves.",
       "closingP": "Set up your own portal, or tell us about your systems and retailers and help shape the first release.",
       "closingMail": "Email us"
     },

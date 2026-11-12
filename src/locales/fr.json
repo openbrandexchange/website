@@ -339,7 +339,7 @@
       "une marque peut exporter toutes ses données et tous ses visuels, et partir",
       "vous publiez vos propres tarifs et conditions sur votre propre site"
     ],
-    "listHow": "Ouvrez une pull request sur le dépôt du site avec vos informations dans src/data/providers.json. L'entreprise de l'initiateur figure en premier, tous les autres par ordre alphabétique.",
+    "listHow": "Ouvrez une pull request sur le dépôt du site avec vos informations dans src/data/providers.json. Les prestataires sont classés par ordre alphabétique.",
     "p2Title": "2. En un clic",
     "p2P": "Votre propre portail sur votre propre compte, sans serveur à gérer.",
     "cfP": "Fonctionne sur Cloudflare Workers, avec D1 comme base de données et R2 pour les images. Cliquez sur le bouton, connectez-vous à Cloudflare et suivez les étapes. Un portail utilisé au quotidien demande l'offre Workers Paid (5 dollars par mois) ; l'offre gratuite suffit seulement pour découvrir. Les versions web de vos photos sont créées par votre navigateur et l'outil obx.",
@@ -411,7 +411,7 @@
     "apiP": "Votre PIM, votre caisse ou votre boutique en ligne récupère-t-il les visuels tout seul ? Demandez alors une clé API pour votre logiciel. Il récupère d'abord tout, puis seulement les changements, y compris ce que la marque retire. Les visuels sont rattachés à vos articles par EAN.",
     "apiDev": "Pour votre développeur : voici à quoi cela ressemble.",
     "toolsTitle": "Quels logiciels le prennent en charge",
-    "toolsP": "Open Brand Exchange est un standard ouvert : n'importe quel logiciel peut le prendre en charge. Photopilot, l'entreprise de l'initiateur, l'intègre à son logiciel pour les revendeurs, et d'autres éditeurs peuvent faire de même. Aucun logiciel particulier n'est nécessaire : un navigateur suffit.",
+    "toolsP": "Open Brand Exchange est un standard ouvert : n'importe quel logiciel peut le prendre en charge. Photopilot l'intègre à son logiciel pour les revendeurs, et d'autres éditeurs peuvent faire de même. Aucun logiciel particulier n'est nécessaire : un navigateur suffit.",
     "toolsLink": "Spécification pour les développeurs",
     "findTitle": "Trouver une marque",
     "findP": "Les marques qui choisissent d'être listées figurent dans l'annuaire. Si une marque vous donne simplement l'adresse de son portail, cela fonctionne aussi.",
@@ -420,7 +420,40 @@
     "kitP": "Le moyen le plus rapide de convaincre une marque, c'est que les magasins le demandent. Copiez cet e-mail, remplissez les crochets et envoyez-le à votre contact ou à votre commercial chez la marque.",
     "kitEnglish": "Anglais (pour les marques internationales)",
     "kitDownload": "Télécharger en fichier texte",
-    "kitMore": "D'autres documents, comme la brochure pour les revendeurs, se trouvent dans les téléchargements."
+    "kitMore": "D'autres documents, comme la brochure pour les revendeurs, se trouvent dans les téléchargements.",
+    "label": {
+      "eyebrow": "Données articles",
+      "title": "Ce qui figure sur l'étiquette accompagne chaque article.",
+      "p": "La composition par partie, les consignes d'entretien dans l'ordre de l'étiquette et le pays de fabrication font partie de chaque article, avec l'EAN de chaque taille. Votre boutique les affiche en texte ou sous forme de symboles d'entretien, dans son propre style. Les champs suivent les règles européennes d'étiquetage des textiles et les codes d'entretien de la norme ISO 3758 ; ils pourront donc aussi alimenter plus tard un passeport numérique des produits.",
+      "points": [
+        "Composition par partie (tissu principal, doublure, garnissage, semelle) avec pourcentages",
+        "Consignes d'entretien sous forme de codes standard, dans l'ordre de l'étiquette",
+        "Pays de fabrication et EAN de chaque taille et couleur"
+      ],
+      "example": "Exemple de la marque de test",
+      "product": "Short de trail",
+      "colour": "Noir",
+      "composition": "Composition",
+      "outer": "Tissu principal",
+      "lining": "Doublure",
+      "care": "Entretien",
+      "origin": "Pays de fabrication",
+      "sizes": "Tailles et EAN",
+      "size": "Taille",
+      "codeLabel": "Le même article dans l'API",
+      "fibres": {
+        "recycled_polyester": "polyester recyclé",
+        "polyamide": "polyamide",
+        "elastane": "élasthanne"
+      },
+      "careText": {
+        "wash_30": "Lavage en machine à 30 °C",
+        "do_not_bleach": "Ne pas blanchir",
+        "do_not_tumble_dry": "Ne pas sécher en tambour",
+        "do_not_iron": "Ne pas repasser",
+        "do_not_dry_clean": "Ne pas nettoyer à sec"
+      }
+    }
   },
   "switchKit": {
     "subject": "Vos visuels produits et données articles via Open Brand Exchange ?",
@@ -580,7 +613,7 @@
       },
       {
         "q": "Qui est derrière ?",
-        "a": "Open Brand Exchange est une initiative de {person}, qui a aussi fondé Photopilot, une entreprise de logiciels de photographie produit. Tout sera transféré à l'{foundation}, afin que le standard appartienne aux marques, aux revendeurs et aux éditeurs de logiciels qui l'utilisent, et non à une seule entreprise."
+        "a": "Open Brand Exchange est en cours de transfert à l'{foundation}, une fondation néerlandaise à but non lucratif (stichting), afin que le standard appartienne aux marques, aux revendeurs et aux éditeurs de logiciels qui l'utilisent, et non à une seule entreprise. Pour toute question : {email}."
       }
     ]
   },
@@ -590,7 +623,7 @@
     "sections": [
       {
         "h": "Qui décide",
-        "p": "Tant qu'il n'existe pas trois implémentations indépendantes qui réussissent la suite de conformité, l'initiateur décide des changements, après discussion publique. Ensuite, un comité de pilotage prend le relais, avec un siège par implémenteur et au moins une marque et un revendeur."
+        "p": "Tant qu'il n'existe pas trois implémentations indépendantes qui réussissent la suite de conformité, le fondateur décide des changements, après discussion publique. Ensuite, un comité de pilotage prend le relais, avec un siège par implémenteur et au moins une marque et un revendeur."
       },
       {
         "h": "Comment les changements se font",
@@ -609,7 +642,7 @@
     "nameP": "Le nom « Open Brand Exchange » est le même dans toutes les langues et n'est jamais traduit. Ce n'est pas encore une marque déposée. Un logiciel qui réussit la suite de conformité peut dire qu'il « fonctionne avec Open Brand Exchange ».",
     "specLink": "Document de gouvernance complet",
     "foundationTitle": "Qui est derrière",
-    "foundationP": "Open Brand Exchange est une initiative de {person}. Il crée l'{foundation}, qui sera une fondation de droit néerlandais (stichting). Dès qu'elle existera, le droit d'auteur, le nom, le domaine et l'organisation GitHub lui seront transférés. D'ici là, ils sont au nom de {person}."
+    "foundationP": "L'{foundation} est en cours de création sous la forme d'une fondation de droit néerlandais (stichting). Dès qu'elle existera, le droit d'auteur, le nom, le domaine et l'organisation GitHub lui seront transférés."
   },
   "privacy": {
     "h1": "Confidentialité",
@@ -648,7 +681,6 @@
     "updated": "Dernière mise à jour : {date}"
   },
   "org": {
-    "initiative": "Une initiative de {person}",
     "inFormation": "en cours de constitution"
   },
   "imprint": {
@@ -783,8 +815,8 @@
     },
     "home": {
       "eyebrow": "Standard ouvert · Logiciel libre",
-      "h1": "Publiez une fois. Chaque revendeur est servi.",
-      "lead": "Open Brand Exchange donne à votre marque son propre portail pour les revendeurs, une API standard pour leurs logiciels et une publication automatique depuis votre PIM, votre ERP ou vos dossiers. Open source, gratuit à héberger, et il reste à vous.",
+      "h1": "Vos contenus produits, prêts pour chaque revendeur.",
+      "lead": "Open Brand Exchange est un standard ouvert qui définit comment les revendeurs récupèrent les photos produits et les données articles d'une marque : dans un portail depuis leur navigateur, en zip ou en tableur, ou directement dans leur propre logiciel via une API. C'est vous qui choisissez comment les contenus arrivent dans votre portail.",
       "ctaRetailer": "Je suis revendeur",
       "proofLabel": "En bref",
       "proof": [
@@ -811,8 +843,8 @@
       ],
       "codeCaption": "Ce que reçoit le logiciel d'un revendeur",
       "flowEyebrow": "Comment ça marche",
-      "flowTitle": "Une publication. Toutes les façons de travailler de vos revendeurs.",
-      "flowLead": "Vos systèmes alimentent votre propre portail. Les acheteurs l'utilisent dans leur navigateur ; leurs logiciels lisent le même contenu via l'API standard.",
+      "flowTitle": "Une seule source. Les revendeurs récupèrent ce dont ils ont besoin.",
+      "flowLead": "Vos contenus se trouvent dans votre propre portail. Les acheteurs y font leurs recherches et téléchargent les fichiers dans leur navigateur ; leurs logiciels lisent les mêmes contenus via l'API.",
       "flowCaption": "Comment le contenu circule des systèmes d'une marque, via son propre portail, jusqu'à ses revendeurs.",
       "flow": {
         "systems": "Vos systèmes",
@@ -822,7 +854,7 @@
           "DAM",
           "Dossier d'export"
         ],
-        "upload": "Envoi automatique",
+        "upload": "Alimenter le portail",
         "uploadItems": [
           "Import planifié",
           "Outil obx",
@@ -851,7 +883,7 @@
       "pillars": [
         {
           "eyebrow": "Portail",
-          "h": "Un portail que vos revendeurs utilisent vraiment.",
+          "h": "Un portail pour les acheteurs de vos revendeurs.",
           "p": "Les acheteurs se connectent à votre portail, collent les EAN de leur commande et téléchargent exactement ce qu'il leur faut : une photo, un article ou le zip de toute une sélection.",
           "items": [
             "Recherche et filtres par marque, saison, type de produit et couleur",
@@ -863,7 +895,7 @@
         },
         {
           "eyebrow": "API",
-          "h": "Une seule API pour toutes les marques du standard.",
+          "h": "Une seule API, la même pour chaque marque.",
           "p": "Les logiciels des revendeurs récupèrent tout une fois, puis seulement les changements, y compris ce que vous retirez. Chaque visuel arrive avec ses droits d'utilisation, sa date d'embargo et son origine IA.",
           "items": [
             "D'abord une copie complète, ensuite uniquement les changements",
@@ -874,23 +906,23 @@
           "link": "Lire la référence de l'API"
         },
         {
-          "eyebrow": "Automatisation",
-          "h": "Publiez depuis les systèmes que vous avez déjà.",
-          "p": "Votre PIM, votre ERP ou un dossier partagé contient déjà les données et les photos. Laissez votre portail les récupérer à intervalles réguliers, ou envoyez-les en une commande. Plus personne ne déplace de fichiers.",
+          "eyebrow": "Vos systèmes",
+          "h": "Continuez à travailler comme aujourd'hui.",
+          "p": "Le standard porte sur la façon dont les revendeurs récupèrent les contenus. Pour alimenter le portail, c'est vous qui choisissez : un import chaque nuit depuis une adresse web, SFTP ou S3, un dossier d'export ou l'outil en ligne de commande obx.",
           "items": [
-            "Import planifié depuis une adresse web, SFTP ou S3, sans code",
+            "Import chaque nuit depuis une adresse web, SFTP ou S3, sans code",
             "L'outil obx pour Windows, macOS et Linux n'envoie que ce qui a changé",
-            "Une GitHub Action prête à l'emploi, et des recettes pour cron, n8n, Make et Zapier",
+            "Des recettes pour cron, GitHub Actions, n8n, Make et Zapier",
             "Un seul format CSV et une seule règle de nommage des photos"
           ],
           "link": "Voir les recettes d'automatisation"
         }
       ],
       "audienceEyebrow": "Pour qui",
-      "audienceTitle": "Conçu pour les deux côtés de la relation.",
+      "audienceTitle": "Pour les marques et pour les revendeurs.",
       "brands": {
         "h": "Pour les marques",
-        "p": "Fini les envois de fichiers. Publiez une fois, depuis vos propres systèmes, en gardant la main.",
+        "p": "Fini les envois de fichiers. Les revendeurs récupèrent ce dont ils ont besoin, et vous décidez qui reçoit quoi.",
         "items": [
           "Votre propre portail, sur votre propre domaine",
           "Vous validez chaque revendeur et décidez de ce qu'il voit",
@@ -956,7 +988,7 @@
         }
       ],
       "trustEyebrow": "Gouvernance",
-      "trustTitle": "Un standard ouvert, pas une plateforme qui vous enferme.",
+      "trustTitle": "Un standard ouvert, pas une plateforme.",
       "trustLead": "Open Brand Exchange doit appartenir aux marques, aux revendeurs et aux éditeurs de logiciels qui l'utilisent, et non à une seule entreprise.",
       "trust": [
         {
@@ -965,7 +997,7 @@
         },
         {
           "h": "Tests de conformité",
-          "p": "61 tests automatisés répartis en quatre profils. Aucune implémentation n'est favorisée, pas même celle de l'entreprise de l'initiateur."
+          "p": "61 tests automatisés répartis en quatre profils. Chaque implémentation est testée de la même manière."
         },
         {
           "h": "Licences open source",
@@ -973,7 +1005,7 @@
         },
         {
           "h": "Une fondation en cours de constitution",
-          "p": "Une initiative de {person}. Le droit d'auteur, le nom et le domaine seront transférés à l'{foundation} dès sa création."
+          "p": "Le droit d'auteur, le nom et le domaine seront transférés à l'{foundation} dès son enregistrement."
         },
         {
           "h": "Sécurité",
@@ -996,7 +1028,7 @@
       ],
       "faqTitle": "Les premières questions des marques",
       "faqLink": "Toutes les questions",
-      "closingTitle": "Un seul endroit où chaque revendeur trouve le bon contenu.",
+      "closingTitle": "Laissez vos revendeurs se servir eux-mêmes.",
       "closingP": "Mettez en place votre propre portail, ou parlez-nous de vos systèmes et de vos revendeurs pour contribuer à la première version.",
       "closingMail": "Écrivez-nous"
     },

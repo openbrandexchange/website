@@ -339,7 +339,7 @@
       "marka tista' tesporta d-data u r-ritratti kollha tagħha u titlaq",
       "tippubblika l-prezzijiet u t-termini tiegħek fuq is-sit tiegħek"
     ],
-    "listHow": "Iftaħ pull request fir-repożitorju tas-sit bid-dettalji tiegħek f'src/data/providers.json. Il-kumpanija tal-inizjatur tidher l-ewwel, u l-oħrajn f'ordni alfabetiku.",
+    "listHow": "Iftaħ pull request fir-repożitorju tas-sit bid-dettalji tiegħek f'src/data/providers.json. Il-fornituri huma mniżżla f'ordni alfabetiku.",
     "p2Title": "2. Bi klikk waħda",
     "p2P": "Il-portal tiegħek fuq il-kont tiegħek, mingħajr ma timmaniġġja server.",
     "cfP": "Jaħdem fuq Cloudflare Workers, b'D1 bħala database u R2 għall-immaġini. Ikklikkja l-buttuna, idħol f'Cloudflare u segwi l-passi. Portal li tuża kuljum jeħtieġ il-pjan Workers Paid (5 dollari fix-xahar); il-pjan b'xejn huwa biss biżżejjed biex tħares madwarek. Il-verżjonijiet tal-web tar-ritratti tiegħek jagħmluhom il-browser tiegħek u l-għodda obx.",
@@ -411,7 +411,7 @@
     "apiP": "Il-PIM, is-sistema tal-kaxxa jew il-ħanut online tiegħek jiġbed ir-ritratti waħdu? Mela itlob ċavetta API għas-sistema tiegħek. L-ewwel jiġbed kollox u wara l-bidliet biss, inkluż dak li l-marka tirtira. Ir-ritratti jitqabblu mal-oġġetti tiegħek bl-EAN.",
     "apiDev": "Għall-iżviluppatur tiegħek: hekk jidher.",
     "toolsTitle": "Liema software jaħdem miegħu",
-    "toolsP": "Open Brand Exchange huwa standard miftuħ: kwalunkwe software jista' jappoġġjah. Photopilot, il-kumpanija tal-inizjatur, qed tibnih fis-software tagħha għall-bejjiegħa, u fornituri oħra jistgħu jagħmlu l-istess. M'għandek bżonn l-ebda software partikolari: browser huwa biżżejjed.",
+    "toolsP": "Open Brand Exchange huwa standard miftuħ: kwalunkwe software jista' jappoġġjah. Photopilot qed tibnih fis-software tagħha għall-bejjiegħa, u fornituri oħra jistgħu jagħmlu l-istess. M'għandek bżonn l-ebda software partikolari: browser huwa biżżejjed.",
     "toolsLink": "Speċifikazzjoni għall-iżviluppaturi",
     "findTitle": "Kif issib marka",
     "findP": "Il-marki li jagħżlu li jidhru jinsabu fid-direttorju. Jekk marka sempliċement tagħtik l-indirizz tal-portal tagħha, dak ukoll jaħdem.",
@@ -420,7 +420,40 @@
     "kitP": "L-aktar mod mgħaġġel biex marka tingħaqad huwa li l-ħwienet jitolbu. Ikkopja din l-email, imla l-parentesi kwadri u ibgħatha lill-kuntatt jew lir-rappreżentant tal-bejgħ tiegħek fil-marka.",
     "kitEnglish": "Bl-Ingliż (għal marki internazzjonali)",
     "kitDownload": "Niżżel bħala fajl tat-test",
-    "kitMore": "Aktar materjal, bħall-brochure għall-bejjiegħa, jinsab fil-paġna tad-downloads."
+    "kitMore": "Aktar materjal, bħall-brochure għall-bejjiegħa, jinsab fil-paġna tad-downloads.",
+    "label": {
+      "eyebrow": "Data tal-oġġetti",
+      "title": "Dak li hemm fuq it-tikketta tal-ħasil jiġi ma' kull oġġett.",
+      "p": "Il-kompożizzjoni għal kull parti, l-istruzzjonijiet tal-ħasil fl-ordni tat-tikketta u l-pajjiż tal-oriġini huma parti minn kull oġġett, flimkien mal-EAN ta' kull daqs. Il-ħanut tiegħek jurihom bħala test jew bħala simboli tal-ħasil fl-istil tiegħu. Il-kampi jsegwu r-regoli tal-UE dwar it-tikkettar tat-tessuti u l-kodiċijiet tal-kura ISO 3758, għalhekk aktar 'il quddiem jistgħu jintużaw ukoll għal passaport diġitali tal-prodott.",
+      "points": [
+        "Kompożizzjoni għal kull parti (barra, bitana, mili, qiegħ) b'perċentwali",
+        "Struzzjonijiet tal-ħasil bħala kodiċijiet standard, fl-ordni tat-tikketta",
+        "Pajjiż tal-oriġini u l-EAN ta' kull daqs u kulur"
+      ],
+      "example": "Eżempju mill-marka tat-test",
+      "product": "Xorts tal-ġiri fit-trails",
+      "colour": "Iswed",
+      "composition": "Kompożizzjoni",
+      "outer": "Barra",
+      "lining": "Bitana",
+      "care": "Kura",
+      "origin": "Magħmul f'",
+      "sizes": "Daqsijiet u EAN",
+      "size": "Daqs",
+      "codeLabel": "L-istess oġġett fl-API",
+      "fibres": {
+        "recycled_polyester": "poliester riċiklat",
+        "polyamide": "poliammid",
+        "elastane": "elastan"
+      },
+      "careText": {
+        "wash_30": "Aħsel fil-magna f'30 °C",
+        "do_not_bleach": "Tużax il-bliċ",
+        "do_not_tumble_dry": "Tnixxifx fid-dryer",
+        "do_not_iron": "Tgħaddix il-ħadid",
+        "do_not_dry_clean": "Tagħmilx dry cleaning"
+      }
+    }
   },
   "switchKit": {
     "subject": "Ir-ritratti tal-prodotti u d-data tal-oġġetti tagħkom permezz ta' Open Brand Exchange?",
@@ -580,7 +613,7 @@
       },
       {
         "q": "Min hemm warajh?",
-        "a": "Open Brand Exchange hija inizjattiva ta' {person}, li waqqaf ukoll Photopilot, kumpanija li tagħmel software għall-fotografija tal-prodotti. Kollox se jiġi ttrasferit lill-{foundation}, biex l-istandard ikun tal-marki, tal-bejjiegħa u tal-fornituri tas-software li jużawh, u mhux ta' kumpanija waħda."
+        "a": "Open Brand Exchange qed jingħadda lill-{foundation}, fondazzjoni Olandiża mingħajr skop ta' qligħ (stichting), biex l-istandard ikun tal-marki, tal-bejjiegħa u tal-fornituri tas-software li jużawh, u mhux ta' kumpanija waħda. Għall-mistoqsijiet ikteb lil {email}."
       }
     ]
   },
@@ -590,7 +623,7 @@
     "sections": [
       {
         "h": "Min jiddeċiedi",
-        "p": "Sakemm ikun hemm tliet implimentazzjonijiet indipendenti li jgħaddu mis-sett ta' testijiet ta' konformità, l-inizjatur jiddeċiedi dwar il-bidliet, wara diskussjoni pubblika. Wara dan jieħu f'idejh grupp ta' tmexxija, b'siġġu wieħed għal kull min jimplimenta u mill-inqas marka waħda u bejjiegħ wieħed."
+        "p": "Sakemm ikun hemm tliet implimentazzjonijiet indipendenti li jgħaddu mis-sett ta' testijiet ta' konformità, il-fundatur jiddeċiedi dwar il-bidliet, wara diskussjoni pubblika. Wara dan jieħu f'idejh grupp ta' tmexxija, b'siġġu wieħed għal kull min jimplimenta u mill-inqas marka waħda u bejjiegħ wieħed."
       },
       {
         "h": "Kif isiru l-bidliet",
@@ -609,7 +642,7 @@
     "nameP": "L-isem “Open Brand Exchange” huwa l-istess f'kull lingwa u qatt ma jiġi tradott. Għadu mhuwiex trademark reġistrata. Software li jgħaddi mit-testijiet ta' konformità jista' jgħid li “jaħdem ma' Open Brand Exchange”.",
     "specLink": "Id-dokument sħiħ tal-governanza",
     "foundationTitle": "Min hemm warajh",
-    "foundationP": "Open Brand Exchange hija inizjattiva ta' {person}. Qed iwaqqaf il-{foundation}, li se tkun fondazzjoni Olandiża (stichting). Hekk kif tibda teżisti, id-drittijiet tal-awtur, l-isem, id-dominju u l-organizzazzjoni fuq GitHub se jiġu ttrasferiti lilha. Sa dakinhar huma f'isem {person}."
+    "foundationP": "Il-{foundation} qed titwaqqaf bħala fondazzjoni Olandiża (stichting). Hekk kif tibda teżisti, id-drittijiet tal-awtur, l-isem, id-dominju u l-organizzazzjoni fuq GitHub jiġu ttrasferiti lilha."
   },
   "privacy": {
     "h1": "Privatezza",
@@ -648,7 +681,6 @@
     "updated": "L-aħħar aġġornament: {date}"
   },
   "org": {
-    "initiative": "Inizjattiva ta' {person}",
     "inFormation": "qed titwaqqaf"
   },
   "imprint": {
@@ -783,8 +815,8 @@
     },
     "home": {
       "eyebrow": "Standard miftuħ · Software b'xejn",
-      "h1": "Ippubblika darba. Kull bejjiegħ jirċevih.",
-      "lead": "Open Brand Exchange jagħti lill-marka tiegħek il-portal tagħha għall-bejjiegħa, API standard għas-software tagħhom u pubblikazzjoni awtomatika mill-PIM, l-ERP jew il-folders tiegħek. Sors miftuħ, hosting b'xejn, u dejjem tiegħek.",
+      "h1": "Il-kontenut tal-prodotti tiegħek, lest għal kull bejjiegħ.",
+      "lead": "Open Brand Exchange huwa standard miftuħ għal kif il-bejjiegħa jieħdu r-ritratti tal-prodotti u d-data tal-oġġetti mingħand marka: f'portal fil-browser, bħala zip jew spreadsheet, jew dritt fis-software tagħhom permezz ta' API wieħed. Kif il-kontenut jasal fil-portal tiegħek tiddeċiedi int.",
       "ctaRetailer": "Jien bejjiegħ",
       "proofLabel": "Fil-qosor",
       "proof": [
@@ -811,8 +843,8 @@
       ],
       "codeCaption": "X'jirċievi s-software ta' bejjiegħ",
       "flowEyebrow": "Kif jaħdem",
-      "flowTitle": "Pubblikazzjoni waħda. Għal kull mod kif jaħdmu l-bejjiegħa tiegħek.",
-      "flowLead": "Is-sistemi tiegħek iwasslu lill-portal tiegħek stess. Ix-xerrejja jużawh fil-browser; is-software tagħhom jaqra l-istess kontenut permezz tal-API standard.",
+      "flowTitle": "Sors wieħed. Il-bejjiegħa jieħdu dak li għandhom bżonn.",
+      "flowLead": "Il-kontenut tiegħek jinsab fil-portal tiegħek stess. Ix-xerrejja jfittxu u jniżżlu l-fajls fil-browser; is-software tagħhom jaqra l-istess kontenut permezz tal-API.",
       "flowCaption": "Kif il-kontenut jgħaddi mis-sistemi ta' marka, permezz tal-portal tagħha stess, sal-bejjiegħa tagħha.",
       "flow": {
         "systems": "Is-sistemi tiegħek",
@@ -822,7 +854,7 @@
           "DAM",
           "Folder tal-esportazzjoni"
         ],
-        "upload": "Tlugħ awtomatiku",
+        "upload": "Kif jidħol il-kontenut",
         "uploadItems": [
           "Importazzjoni skedata",
           "L-għodda obx",
@@ -851,7 +883,7 @@
       "pillars": [
         {
           "eyebrow": "Portal",
-          "h": "Portal li l-bejjiegħa tiegħek se jużaw tassew.",
+          "h": "Portal għax-xerrejja tal-bejjiegħa tiegħek.",
           "p": "Ix-xerrejja jidħlu fil-portal tiegħek, iwaħħlu l-EANs mill-ordni tagħhom u jniżżlu eżatt dak li għandhom bżonn: ritratt wieħed, oġġett wieħed jew zip ta' għażla sħiħa.",
           "items": [
             "Fittex u ffiltra skont il-marka, l-istaġun, it-tip ta' prodott u l-kulur",
@@ -863,7 +895,7 @@
         },
         {
           "eyebrow": "API",
-          "h": "API wieħed għal kull marka fuq l-istandard.",
+          "h": "API wieħed, l-istess għal kull marka.",
           "p": "Is-software tal-bejjiegħa jġib kollox darba u mbagħad biss dak li nbidel, inkluż dak li tirtira. Kull ritratt jasal bid-drittijiet tal-użu, id-data tal-embargo u l-oriġini tal-IA tiegħu.",
           "items": [
             "L-ewwel kopja sħiħa, imbagħad il-bidliet biss",
@@ -874,23 +906,23 @@
           "link": "Aqra r-referenza tal-API"
         },
         {
-          "eyebrow": "Awtomazzjoni",
-          "h": "Ippubblika mis-sistemi li diġà għandek.",
-          "p": "Il-PIM, l-ERP jew folder kondiviż tiegħek diġà fihom id-data u r-ritratti. Ħalli l-portal iġibhom skont skeda, jew ibgħathom b'kmand wieħed. Ħadd ma jibqa' jkaxkar fajls.",
+          "eyebrow": "Is-sistemi tiegħek",
+          "h": "Kompli aħdem kif taħdem issa.",
+          "p": "L-istandard jirrigwarda kif il-bejjiegħa jieħdu l-kontenut. Kif il-kontenut tiegħek jasal fil-portal tagħżel int: importazzjoni bil-lejl minn indirizz web, SFTP jew S3, folder tal-esportazzjoni, jew l-għodda obx mill-linja tal-kmand.",
           "items": [
-            "Importazzjoni skedata minn indirizz web, SFTP jew S3, mingħajr kodiċi",
-            "L-għodda obx għal Windows, macOS u Linux ittella' biss dak li nbidel",
-            "GitHub Action lest, u riċetti għal cron, n8n, Make u Zapier",
+            "Importazzjoni bil-lejl minn indirizz web, SFTP jew S3, mingħajr kodiċi",
+            "L-għodda obx għal Windows, macOS u Linux tibgħat biss dak li nbidel",
+            "Riċetti għal cron, GitHub Actions, n8n, Make u Zapier",
             "Format CSV wieħed u regola waħda għall-ismijiet tar-ritratti"
           ],
           "link": "Ara r-riċetti tal-awtomazzjoni"
         }
       ],
       "audienceEyebrow": "Għal min hu",
-      "audienceTitle": "Mibni għaż-żewġ naħat tar-relazzjoni.",
+      "audienceTitle": "Għall-marki u għall-bejjiegħa.",
       "brands": {
         "h": "Għall-marki",
-        "p": "Ieqaf ibgħat fajls. Ippubblika darba, mis-sistemi tiegħek stess, u żomm il-kontroll.",
+        "p": "M'hemmx għalfejn tibqa' tibgħat fajls. Il-bejjiegħa jieħdu dak li għandhom bżonn, u int tiddeċiedi min jieħu xiex.",
         "items": [
           "Il-portal tiegħek, fuq id-dominju tiegħek",
           "Tapprova kull bejjiegħ u tiddeċiedi x'jara",
@@ -956,7 +988,7 @@
         }
       ],
       "trustEyebrow": "Governanza",
-      "trustTitle": "Standard miftuħ, mhux pjattaforma li tintrabat magħha.",
+      "trustTitle": "Standard miftuħ, mhux pjattaforma.",
       "trustLead": "Open Brand Exchange għandu jkun tal-marki, tal-bejjiegħa u tal-fornituri tas-software li jużawh, mhux ta' kumpanija waħda.",
       "trust": [
         {
@@ -965,7 +997,7 @@
         },
         {
           "h": "Testijiet ta' konformità",
-          "p": "61 kontroll awtomatiku f'erba' profili. L-ebda implimentazzjoni ma tieħu trattament speċjali, lanqas dik tal-kumpanija tal-inizjatur."
+          "p": "61 kontroll awtomatiku f'erba' profili. Kull implimentazzjoni tiġi ttestjata bl-istess mod."
         },
         {
           "h": "Liċenzji open source",
@@ -973,7 +1005,7 @@
         },
         {
           "h": "Fondazzjoni li qed titwaqqaf",
-          "p": "Inizjattiva ta' {person}. Id-drittijiet tal-awtur, l-isem u d-dominju jgħaddu lill-{foundation} hekk kif tibda teżisti."
+          "p": "Id-drittijiet tal-awtur, l-isem u d-dominju jgħaddu lill-{foundation} hekk kif tiġi rreġistrata."
         },
         {
           "h": "Sigurtà",
@@ -996,7 +1028,7 @@
       ],
       "faqTitle": "L-ewwel mistoqsijiet tal-marki",
       "faqLink": "Il-mistoqsijiet kollha",
-      "closingTitle": "Post wieħed fejn kull bejjiegħ isib dak it-tajjeb.",
+      "closingTitle": "Ħalli l-bejjiegħa tiegħek jieħdu l-kontenut huma stess.",
       "closingP": "Waqqaf il-portal tiegħek, jew għidilna dwar is-sistemi u l-bejjiegħa tiegħek u għin fit-tiswir tal-ewwel ħarġa.",
       "closingMail": "Ibgħatilna email"
     },

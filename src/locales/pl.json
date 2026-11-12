@@ -339,7 +339,7 @@
       "marka może wyeksportować wszystkie dane i zdjęcia i odejść",
       "własne ceny i warunki publikujesz na własnej stronie"
     ],
-    "listHow": "Otwórz pull request w repozytorium strony ze swoimi danymi w src/data/providers.json. Firma inicjatora jest na pierwszym miejscu, pozostali alfabetycznie.",
+    "listHow": "Otwórz pull request w repozytorium strony ze swoimi danymi w src/data/providers.json. Dostawcy są wymienieni alfabetycznie.",
     "p2Title": "2. Jednym kliknięciem",
     "p2P": "Własny portal na własnym koncie, bez zarządzania serwerem.",
     "cfP": "Działa na Cloudflare Workers, z D1 jako bazą danych i R2 na obrazy. Kliknij przycisk, zaloguj się do Cloudflare i wykonaj kolejne kroki. Portal używany na co dzień wymaga planu Workers Paid (5 dolarów miesięcznie); plan darmowy wystarczy tylko, żeby się rozejrzeć. Wersje internetowe Twoich zdjęć tworzą przeglądarka i narzędzie obx.",
@@ -411,7 +411,7 @@
     "apiP": "Twój PIM, system kasowy lub sklep internetowy sam pobiera zdjęcia? Poproś więc o klucz API dla swojego systemu. Najpierw pobierze wszystko, a potem tylko zmiany, także to, co marka wycofuje. Zdjęcia są przypisywane do Twoich artykułów po kodzie EAN.",
     "apiDev": "Dla Twojego programisty: tak to wygląda.",
     "toolsTitle": "Jakie oprogramowanie z tym działa",
-    "toolsP": "Open Brand Exchange to otwarty standard: każde oprogramowanie może go obsługiwać. Photopilot, firma inicjatora, wbudowuje go w swoje oprogramowanie dla sprzedawców, a inni dostawcy mogą zrobić to samo. Nie potrzebujesz żadnego konkretnego oprogramowania: wystarczy przeglądarka.",
+    "toolsP": "Open Brand Exchange to otwarty standard: każde oprogramowanie może go obsługiwać. Photopilot wbudowuje go w swoje oprogramowanie dla sprzedawców, a inni dostawcy mogą zrobić to samo. Nie potrzebujesz żadnego konkretnego oprogramowania: wystarczy przeglądarka.",
     "toolsLink": "Specyfikacja dla programistów",
     "findTitle": "Jak znaleźć markę",
     "findP": "Marki, które chcą być widoczne, są w katalogu marek. Jeśli marka po prostu poda Ci adres swojego portalu, to też działa.",
@@ -420,7 +420,40 @@
     "kitP": "Najszybciej marka dołącza, gdy proszą o to sklepy. Skopiuj ten e-mail, uzupełnij nawiasy i wyślij go do swojego opiekuna lub przedstawiciela marki.",
     "kitEnglish": "Angielski (dla marek międzynarodowych)",
     "kitDownload": "Pobierz jako plik tekstowy",
-    "kitMore": "Więcej materiałów, np. broszura dla sprzedawców, znajdziesz w sekcji do pobrania."
+    "kitMore": "Więcej materiałów, np. broszura dla sprzedawców, znajdziesz w sekcji do pobrania.",
+    "label": {
+      "eyebrow": "Dane artykułu",
+      "title": "To, co jest na metce, trafia do sprzedawcy razem z każdym artykułem.",
+      "p": "Skład według części, zalecenia konserwacji w kolejności z metki i kraj pochodzenia są częścią każdego artykułu, obok kodu EAN każdego rozmiaru. Twój sklep pokazuje je jako tekst albo jako symbole konserwacji we własnym stylu. Pola są zgodne z unijnymi przepisami o etykietowaniu wyrobów włókienniczych i kodami konserwacji ISO 3758, więc w przyszłości mogą zasilić także cyfrowy paszport produktu.",
+      "points": [
+        "Skład według części (wierzch, podszewka, wypełnienie, podeszwa) z procentami",
+        "Zalecenia konserwacji jako standardowe kody, w kolejności z metki",
+        "Kraj pochodzenia i EAN każdego rozmiaru i koloru"
+      ],
+      "example": "Przykład marki testowej",
+      "product": "Spodenki do biegania w terenie",
+      "colour": "Czarny",
+      "composition": "Skład",
+      "outer": "Wierzch",
+      "lining": "Podszewka",
+      "care": "Konserwacja",
+      "origin": "Wyprodukowano w",
+      "sizes": "Rozmiary i EAN",
+      "size": "Rozmiar",
+      "codeLabel": "Ten sam artykuł w API",
+      "fibres": {
+        "recycled_polyester": "poliester z recyklingu",
+        "polyamide": "poliamid",
+        "elastane": "elastan"
+      },
+      "careText": {
+        "wash_30": "Prać w pralce w temp. 30 °C",
+        "do_not_bleach": "Nie wybielać",
+        "do_not_tumble_dry": "Nie suszyć w suszarce bębnowej",
+        "do_not_iron": "Nie prasować",
+        "do_not_dry_clean": "Nie czyścić chemicznie"
+      }
+    }
   },
   "switchKit": {
     "subject": "Wasze zdjęcia produktów i dane artykułów przez Open Brand Exchange?",
@@ -580,7 +613,7 @@
       },
       {
         "q": "Kto za tym stoi?",
-        "a": "Open Brand Exchange zapoczątkował {person}, który założył też Photopilot, firmę tworzącą oprogramowanie do fotografii produktowej. Wszystko zostanie przekazane na rzecz {foundation}, aby standard należał do marek, sprzedawców i dostawców oprogramowania, którzy z niego korzystają, a nie do jednej firmy."
+        "a": "Open Brand Exchange jest przekazywany na rzecz {foundation}, niderlandzkiej fundacji non-profit (stichting), aby standard należał do marek, sprzedawców i dostawców oprogramowania, którzy z niego korzystają, a nie do jednej firmy. Pytania można kierować na adres {email}."
       }
     ]
   },
@@ -590,7 +623,7 @@
     "sections": [
       {
         "h": "Kto decyduje",
-        "p": "Dopóki nie ma trzech niezależnych implementacji, które przechodzą testy zgodności, o zmianach decyduje inicjator, po publicznej dyskusji. Potem przejmuje to grupa sterująca, z jednym miejscem na każdego implementatora oraz co najmniej jedną marką i jednym sprzedawcą."
+        "p": "Dopóki nie ma trzech niezależnych implementacji, które przechodzą testy zgodności, o zmianach decyduje założyciel, po publicznej dyskusji. Potem decyzje przejmuje grupa sterująca, z jednym miejscem dla każdego implementatora oraz co najmniej jedną marką i jednym sprzedawcą."
       },
       {
         "h": "Jak wprowadza się zmiany",
@@ -609,7 +642,7 @@
     "nameP": "Nazwa „Open Brand Exchange” jest taka sama w każdym języku i nigdy nie jest tłumaczona. Nie jest jeszcze zarejestrowanym znakiem towarowym. Oprogramowanie, które przechodzi testy zgodności, może mówić, że „działa z Open Brand Exchange”.",
     "specLink": "Pełny dokument o zarządzaniu",
     "foundationTitle": "Kto za tym stoi",
-    "foundationP": "Open Brand Exchange zapoczątkował {person}. Zakłada on {foundation}, która będzie niderlandzką fundacją (stichting). Gdy tylko powstanie, zostaną na nią przeniesione prawa autorskie, nazwa, domena i organizacja na GitHubie. Do tego czasu ich właścicielem jest {person}."
+    "foundationP": "{foundation} powstaje jako niderlandzka fundacja (stichting). Gdy tylko zostanie założona, zostaną na nią przeniesione prawa autorskie, nazwa, domena i organizacja na GitHubie."
   },
   "privacy": {
     "h1": "Prywatność",
@@ -648,7 +681,6 @@
     "updated": "Ostatnia aktualizacja: {date}"
   },
   "org": {
-    "initiative": "Inicjatywa, którą założył {person}",
     "inFormation": "w organizacji"
   },
   "imprint": {
@@ -783,8 +815,8 @@
     },
     "home": {
       "eyebrow": "Otwarty standard · Bezpłatne oprogramowanie",
-      "h1": "Opublikuj raz. Trafi do każdego sprzedawcy.",
-      "lead": "Open Brand Exchange daje Twojej marce własny portal dla sprzedawców, standardowe API dla ich oprogramowania i automatyczną publikację z PIM, ERP lub folderów. Otwarty kod, hosting za darmo, zawsze pod Twoją kontrolą.",
+      "h1": "Treści o Twoich produktach, gotowe dla każdego sprzedawcy.",
+      "lead": "Open Brand Exchange to otwarty standard określający, jak sprzedawcy pobierają od marki zdjęcia produktów i dane artykułów: w portalu w przeglądarce, jako ZIP lub arkusz kalkulacyjny albo bezpośrednio do własnego oprogramowania przez jedno API. To, jak treści trafiają do Twojego portalu, zależy od Ciebie.",
       "ctaRetailer": "Jestem sprzedawcą",
       "proofLabel": "W skrócie",
       "proof": [
@@ -811,8 +843,8 @@
       ],
       "codeCaption": "Co otrzymuje oprogramowanie sprzedawcy",
       "flowEyebrow": "Jak to działa",
-      "flowTitle": "Jedna publikacja. Każdy sposób pracy sprzedawców.",
-      "flowLead": "Twoje systemy dostarczają treści do Twojego portalu. Zakupowcy korzystają z niego w przeglądarce, a ich oprogramowanie czyta te same treści przez standardowe API.",
+      "flowTitle": "Jedno źródło. Sprzedawcy pobierają to, czego potrzebują.",
+      "flowLead": "Twoje treści są w Twoim portalu. Zakupowcy wyszukują je i pobierają pliki w przeglądarce, a ich oprogramowanie czyta te same treści przez API.",
       "flowCaption": "Jak treści płyną z systemów marki przez jej własny portal do sprzedawców.",
       "flow": {
         "systems": "Twoje systemy",
@@ -822,7 +854,7 @@
           "DAM",
           "Folder eksportu"
         ],
-        "upload": "Automatyczne przesyłanie",
+        "upload": "Wprowadzanie treści",
         "uploadItems": [
           "Import według harmonogramu",
           "Narzędzie obx",
@@ -851,7 +883,7 @@
       "pillars": [
         {
           "eyebrow": "Portal",
-          "h": "Portal, z którego sprzedawcy naprawdę korzystają.",
+          "h": "Portal dla zakupowców Twoich sprzedawców.",
           "p": "Zakupowcy logują się do Twojego portalu, wklejają kody EAN z zamówienia i pobierają dokładnie to, czego potrzebują: jedno zdjęcie, jeden artykuł albo ZIP z całym wyborem.",
           "items": [
             "Szukaj i filtruj według marki, sezonu, typu produktu i koloru",
@@ -863,7 +895,7 @@
         },
         {
           "eyebrow": "API",
-          "h": "Jedno API dla każdej marki w standardzie.",
+          "h": "Jedno API, takie samo dla każdej marki.",
           "p": "Oprogramowanie sprzedawców pobiera wszystko raz, a potem tylko zmiany, także to, co wycofasz. Każde zdjęcie ma prawa do użycia, datę embarga i informację o pochodzeniu AI.",
           "items": [
             "Najpierw pełna kopia, potem tylko zmiany",
@@ -874,23 +906,23 @@
           "link": "Przeczytaj dokumentację API"
         },
         {
-          "eyebrow": "Automatyzacja",
-          "h": "Publikuj z systemów, które już masz.",
-          "p": "Twój PIM, ERP lub wspólny folder zawiera już dane i zdjęcia. Portal może pobierać je według harmonogramu albo wysyłasz je jednym poleceniem. Nikt nie przerzuca plików ręcznie.",
+          "eyebrow": "Twoje systemy",
+          "h": "Pracuj dalej tak jak teraz.",
+          "p": "Standard dotyczy tego, jak sprzedawcy pobierają treści. To, jak Twoje treści trafiają do portalu, wybierasz sam: nocny import z adresu WWW, SFTP lub S3, folder eksportu albo narzędzie wiersza poleceń obx.",
           "items": [
-            "Import według harmonogramu z adresu WWW, SFTP lub S3, bez kodu",
-            "Narzędzie obx na Windows, macOS i Linux przesyła tylko zmiany",
-            "Gotowa GitHub Action oraz przepisy dla crona, n8n, Make i Zapier",
+            "Nocny import z adresu WWW, SFTP lub S3, bez kodu",
+            "Narzędzie obx na Windows, macOS i Linux wysyła tylko zmiany",
+            "Przepisy dla crona, GitHub Actions, n8n, Make i Zapier",
             "Jeden format CSV i jedna reguła nazywania zdjęć"
           ],
           "link": "Zobacz przepisy automatyzacji"
         }
       ],
       "audienceEyebrow": "Dla kogo",
-      "audienceTitle": "Dla obu stron współpracy.",
+      "audienceTitle": "Dla marek i dla sprzedawców.",
       "brands": {
         "h": "Dla marek",
-        "p": "Koniec z rozsyłaniem plików. Publikujesz raz, z własnych systemów, i zachowujesz kontrolę.",
+        "p": "Koniec z rozsyłaniem plików. Sprzedawcy pobierają to, czego potrzebują, a Ty decydujesz, kto co dostaje.",
         "items": [
           "Własny portal we własnej domenie",
           "Akceptujesz każdego sprzedawcę i decydujesz, co widzi",
@@ -956,7 +988,7 @@
         }
       ],
       "trustEyebrow": "Zarządzanie",
-      "trustTitle": "Otwarty standard, nie platforma, która Cię wiąże.",
+      "trustTitle": "Otwarty standard, nie platforma.",
       "trustLead": "Open Brand Exchange ma należeć do marek, sprzedawców i producentów oprogramowania, którzy z niego korzystają, a nie do jednej firmy.",
       "trust": [
         {
@@ -965,7 +997,7 @@
         },
         {
           "h": "Testy zgodności",
-          "p": "61 automatycznych testów w czterech profilach. Żadna implementacja nie jest traktowana wyjątkowo, także ta z firmy inicjatora."
+          "p": "61 automatycznych testów w czterech profilach. Każda implementacja jest testowana w ten sam sposób."
         },
         {
           "h": "Licencje open source",
@@ -973,7 +1005,7 @@
         },
         {
           "h": "Fundacja w organizacji",
-          "p": "Inicjatywa, którą założył {person}. Prawa autorskie, nazwa i domena przejdą na {foundation}, gdy tylko powstanie."
+          "p": "Prawa autorskie, nazwa i domena przejdą na {foundation}, gdy tylko zostanie zarejestrowana."
         },
         {
           "h": "Bezpieczeństwo",
@@ -996,7 +1028,7 @@
       ],
       "faqTitle": "Pytania, które marki zadają najpierw",
       "faqLink": "Wszystkie pytania",
-      "closingTitle": "Jedno miejsce dla wszystkich Twoich sprzedawców.",
+      "closingTitle": "Niech sprzedawcy pobierają treści sami.",
       "closingP": "Uruchom własny portal albo opowiedz nam o swoich systemach i sprzedawcach i współtwórz pierwsze wydanie.",
       "closingMail": "Napisz do nas"
     },

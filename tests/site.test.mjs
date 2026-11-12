@@ -118,9 +118,11 @@ test('the downloads page offers both brochures in every language, and the files 
   }
 });
 
-test('the imprint names the initiator and the foundation in formation, with the contact addresses', { skip: !built && 'dist/ not built' }, () => {
+test('the imprint names the foundation in formation and the responsible person, with the contact addresses', { skip: !built && 'dist/ not built' }, () => {
   const en = read('en/imprint/index.html');
-  assert.match(en, /An initiative of Richard Lindhout · Open Brand Exchange Foundation \(in formation\)/);
+  assert.match(en, /Open Brand Exchange Foundation \(in formation\)/);
+  assert.match(en, /Richard Lindhout is responsible for this website/);
+  assert.doesNotMatch(read('en/index.html'), /Richard Lindhout/);
   assert.match(en, /Dutch foundation \(stichting\)/);
   assert.match(en, /href="mailto:hello@openbrandexchange.com"/);
   assert.match(en, /href="mailto:security@openbrandexchange.com"/);

@@ -5,7 +5,19 @@ its texts; the repository itself is versioned with [Semantic Versioning](https:/
 
 ## [Unreleased]
 
+### Added
+- For retailers: what is on the care label (composition per part, care instructions in label
+  order, country of origin, EAN per size) shown on the test brand's trail shorts, next to the
+  same article as the API returns it.
+- Provider logos on /hosting (light and dark version).
+
 ### Changed
+- The site leads with the fetching side: retailers get content in the portal, as file downloads
+  or through the API; how a brand gets content into its portal is its own choice. Plainer copy
+  on the home page.
+- The publisher line is "Open Brand Exchange Foundation (in formation)"; the founder's name is
+  only on the imprint and in the privacy statement. Providers are listed alphabetically, without
+  labels.
 - Launch (2026-11-12): the status pill, footer, home page, developers page and FAQ say that
   version 0.1 is out and free to use, in all 25 languages; brochures and social images rebuilt.
   The preview password lock (`functions/_middleware.js`) is removed.

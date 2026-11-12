@@ -18,11 +18,11 @@ for (const f of [json, md]) {
 }
 copyFileSync(json, here('../src/data/glossary.json'));
 
-// Rows like: | Deutsch (`de`) | (in Gründung) | Eine Initiative von |
+// Rows like: | Deutsch (`de`) | (in Gründung) |
 const section = readFileSync(md, 'utf8').split('## The project and its publisher')[1]?.split('\n## ')[0] ?? '';
 const publisher = {};
-for (const m of section.matchAll(/^\|[^|]*\(`([a-z]{2})`\)\s*\|\s*\(([^)]+)\)\s*\|\s*([^|]+?)\s*\|$/gm)) {
-  publisher[m[1]] = { inFormation: m[2].trim(), initiative: m[3].trim() };
+for (const m of section.matchAll(/^\|[^|]*\(`([a-z]{2})`\)\s*\|\s*\(([^)]+)\)\s*\|$/gm)) {
+  publisher[m[1]] = { inFormation: m[2].trim() };
 }
 if (Object.keys(publisher).length !== 25) {
   console.error(`Expected 25 languages in the publisher table of ${md}, found ${Object.keys(publisher).length}.`);

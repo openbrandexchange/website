@@ -339,7 +339,7 @@
       "een merk kan al zijn data en beelden exporteren en vertrekken",
       "je vermeldt je eigen prijzen en voorwaarden op je eigen site"
     ],
-    "listHow": "Open een pull request op de website-repository met je gegevens in src/data/providers.json. Het bedrijf van de initiatiefnemer staat bovenaan, de rest alfabetisch.",
+    "listHow": "Open een pull request op de website-repository met je gegevens in src/data/providers.json. Aanbieders staan op alfabetische volgorde.",
     "p2Title": "2. Met één klik",
     "p2P": "Je eigen portaal op je eigen account, zonder een server te beheren.",
     "cfP": "Draait op Cloudflare Workers, met D1 als database en R2 voor de beelden. Klik op de knop, log in bij Cloudflare en volg de stappen. Voor een portal die je dagelijks gebruikt heb je het Workers Paid-abonnement nodig (5 dollar per maand); het gratis abonnement is alleen genoeg om rond te kijken. Webversies van je foto's maken je browser en de obx-tool.",
@@ -411,7 +411,7 @@
     "apiP": "Haalt je PIM, kassasysteem of webshopsoftware zelf beelden op? Vraag dan een API-sleutel voor je software aan. Die haalt eerst alles op en daarna alleen nog de wijzigingen, ook wat het merk intrekt. Beelden worden op EAN aan je artikelen gekoppeld.",
     "apiDev": "Voor je ontwikkelaar: zo ziet het eruit.",
     "toolsTitle": "Welke software ermee werkt",
-    "toolsP": "Open Brand Exchange is een open standaard: elke software kan hem ondersteunen. Photopilot, het bedrijf van de initiatiefnemer, bouwt hem in zijn software voor retailers, en andere leveranciers kunnen hetzelfde doen. Je hebt geen bepaalde software nodig: een browser is genoeg.",
+    "toolsP": "Open Brand Exchange is een open standaard: elke software kan hem ondersteunen. Photopilot bouwt hem in zijn software voor retailers, en andere leveranciers kunnen hetzelfde doen. Je hebt geen bepaalde software nodig: een browser is genoeg.",
     "toolsLink": "Specificatie voor ontwikkelaars",
     "findTitle": "Een merk vinden",
     "findP": "Merken die zich laten vermelden, staan in de merkenlijst. Geeft een merk je gewoon het adres van zijn portaal, dan werkt dat ook.",
@@ -420,7 +420,40 @@
     "kitP": "De snelste manier om een merk mee te krijgen, is dat winkels erom vragen. Kopieer deze mail, vul de haakjes in en stuur hem naar je contactpersoon of vertegenwoordiger bij het merk.",
     "kitEnglish": "Engels (voor internationale merken)",
     "kitDownload": "Download als tekstbestand",
-    "kitMore": "Meer materiaal, zoals de brochure voor retailers, staat bij de downloads."
+    "kitMore": "Meer materiaal, zoals de brochure voor retailers, staat bij de downloads.",
+    "label": {
+      "eyebrow": "Artikeldata",
+      "title": "Wat op het waslabel staat, gaat mee met elk artikel.",
+      "p": "Samenstelling per onderdeel, wasvoorschriften in de volgorde van het label en het land van herkomst horen bij elk artikel, naast de EAN van elke maat. Je webshop toont ze als tekst of als wassymbolen in je eigen stijl. De velden volgen de Europese regels voor textieletikettering en de ISO 3758-wascodes, zodat ze later ook een digitaal productpaspoort kunnen vullen.",
+      "points": [
+        "Samenstelling per onderdeel (buitenstof, voering, vulling, zool) met percentages",
+        "Wasvoorschriften als standaardcodes, in de volgorde van het label",
+        "Land van herkomst en de EAN van elke maat en kleur"
+      ],
+      "example": "Voorbeeld uit het testmerk",
+      "product": "Trailrunning short",
+      "colour": "Zwart",
+      "composition": "Samenstelling",
+      "outer": "Buitenstof",
+      "lining": "Voering",
+      "care": "Wasvoorschrift",
+      "origin": "Gemaakt in",
+      "sizes": "Maten en EAN",
+      "size": "Maat",
+      "codeLabel": "Hetzelfde artikel in de API",
+      "fibres": {
+        "recycled_polyester": "gerecycled polyester",
+        "polyamide": "polyamide",
+        "elastane": "elastaan"
+      },
+      "careText": {
+        "wash_30": "Machinewas op 30 °C",
+        "do_not_bleach": "Niet bleken",
+        "do_not_tumble_dry": "Niet in de droogtrommel",
+        "do_not_iron": "Niet strijken",
+        "do_not_dry_clean": "Niet chemisch reinigen"
+      }
+    }
   },
   "switchKit": {
     "subject": "Jullie productbeelden en artikeldata via Open Brand Exchange?",
@@ -580,7 +613,7 @@
       },
       {
         "q": "Wie zit erachter?",
-        "a": "Open Brand Exchange is een initiatief van {person}, die ook het productfotografiesoftwarebedrijf Photopilot heeft opgericht. Alles wordt overgedragen aan de {foundation}, zodat de standaard van de merken, retailers en softwareleveranciers is die hem gebruiken, niet van één bedrijf."
+        "a": "Open Brand Exchange wordt overgedragen aan de {foundation}, een Nederlandse stichting zonder winstoogmerk, zodat de standaard van de merken, retailers en softwareleveranciers is die hem gebruiken, niet van één bedrijf. Vragen kunnen naar {email}."
       }
     ]
   },
@@ -590,7 +623,7 @@
     "sections": [
       {
         "h": "Wie beslist",
-        "p": "Tot er drie onafhankelijke implementaties zijn die de conformiteitstests doorstaan, beslist de initiatiefnemer over wijzigingen, na openbare discussie. Daarna neemt een stuurgroep het over, met één zetel per implementator en ten minste één merk en één retailer."
+        "p": "Tot er drie onafhankelijke implementaties zijn die de conformiteitstests doorstaan, beslist de oprichter over wijzigingen, na openbare discussie. Daarna neemt een stuurgroep het over, met één zetel per implementator en ten minste één merk en één retailer."
       },
       {
         "h": "Hoe wijzigingen gaan",
@@ -609,7 +642,7 @@
     "nameP": "De naam „Open Brand Exchange” is in elke taal hetzelfde en wordt nooit vertaald. Het is nog geen geregistreerd merk. Software die de conformiteitstests doorstaat, mag zeggen dat hij „werkt met Open Brand Exchange”.",
     "specLink": "Volledig governancedocument",
     "foundationTitle": "Wie erachter zit",
-    "foundationP": "Open Brand Exchange is een initiatief van {person}. Hij richt de {foundation} op, die een Nederlandse stichting wordt. Zodra die bestaat, worden het auteursrecht, de naam, het domein en de GitHub-organisatie aan haar overgedragen. Tot die tijd staan ze op naam van {person}."
+    "foundationP": "De {foundation} wordt opgericht als Nederlandse stichting. Zodra die bestaat, worden het auteursrecht, de naam, het domein en de GitHub-organisatie aan haar overgedragen."
   },
   "privacy": {
     "h1": "Privacy",
@@ -648,7 +681,6 @@
     "updated": "Laatst bijgewerkt: {date}"
   },
   "org": {
-    "initiative": "Een initiatief van {person}",
     "inFormation": "in oprichting"
   },
   "imprint": {
@@ -783,8 +815,8 @@
     },
     "home": {
       "eyebrow": "Open standaard · Gratis software",
-      "h1": "Eén keer publiceren. Elke retailer heeft het.",
-      "lead": "Open Brand Exchange geeft je merk een eigen portaal voor retailers, een standaard-API voor hun software en automatisch publiceren vanuit je PIM, ERP of mappen. Open source, gratis te hosten en van jou.",
+      "h1": "Je productcontent, klaar voor elke retailer.",
+      "lead": "Open Brand Exchange is een open standaard voor hoe retailers productfoto's en artikeldata van een merk ophalen: in een portaal in de browser, als zip of spreadsheet, of rechtstreeks in hun eigen software via één API. Hoe de content in je portaal komt, bepaal je zelf.",
       "ctaRetailer": "Ik ben retailer",
       "proofLabel": "In het kort",
       "proof": [
@@ -811,8 +843,8 @@
       ],
       "codeCaption": "Wat de software van een retailer ontvangt",
       "flowEyebrow": "Zo werkt het",
-      "flowTitle": "Eén publicatie. Voor elke manier waarop je retailers werken.",
-      "flowLead": "Je systemen leveren aan je eigen portaal. Inkopers gebruiken het in de browser; hun software leest dezelfde content via de standaard-API.",
+      "flowTitle": "Eén bron. Retailers halen op wat ze nodig hebben.",
+      "flowLead": "Je content staat in je eigen portaal. Inkopers zoeken en downloaden in de browser; hun software leest dezelfde content via de API.",
       "flowCaption": "Hoe content van de systemen van een merk via het eigen portaal bij de retailers komt.",
       "flow": {
         "systems": "Je systemen",
@@ -822,7 +854,7 @@
           "DAM",
           "Exportmap"
         ],
-        "upload": "Automatisch uploaden",
+        "upload": "Content erin krijgen",
         "uploadItems": [
           "Geplande import",
           "obx-tool",
@@ -851,7 +883,7 @@
       "pillars": [
         {
           "eyebrow": "Portaal",
-          "h": "Een portaal dat je retailers echt gebruiken.",
+          "h": "Een portaal voor de inkopers van je retailers.",
           "p": "Inkopers loggen in op je portaal, plakken de EAN's uit hun order en downloaden precies wat ze nodig hebben: één foto, één artikel of een zip van een hele selectie.",
           "items": [
             "Zoeken en filteren op merk, seizoen, producttype en kleur",
@@ -863,7 +895,7 @@
         },
         {
           "eyebrow": "API",
-          "h": "Eén API voor elk merk op de standaard.",
+          "h": "Eén API, voor elk merk dezelfde.",
           "p": "De software van je retailers haalt alles één keer op en daarna alleen wat veranderde, ook wat je intrekt. Elk beeld komt met zijn gebruiksrechten, embargodatum en AI-herkomst.",
           "items": [
             "Eerst een volledige kopie, daarna alleen de wijzigingen",
@@ -874,23 +906,23 @@
           "link": "Lees de API-referentie"
         },
         {
-          "eyebrow": "Automatiseren",
-          "h": "Publiceer vanuit de systemen die je al hebt.",
-          "p": "Je PIM, ERP of een gedeelde map heeft de data en de foto's al. Laat je portaal ze op een schema ophalen, of stuur ze met één commando. Niemand hoeft nog bestanden te slepen.",
+          "eyebrow": "Je eigen systemen",
+          "h": "Werk gewoon door zoals je nu werkt.",
+          "p": "De standaard gaat over hoe retailers ophalen. Hoe je content in het portaal komt, kies je zelf: een nachtelijke import vanaf een webadres, SFTP of S3, een exportmap, of de obx-tool op de opdrachtregel.",
           "items": [
-            "Geplande import vanaf een webadres, SFTP of S3, zonder code",
-            "De obx-tool voor Windows, macOS en Linux uploadt alleen wat veranderde",
-            "Een kant-en-klare GitHub Action, en recepten voor cron, n8n, Make en Zapier",
-            "Eén CSV-formaat en één naamregel voor foto's"
+            "Nachtelijke import vanaf een webadres, SFTP of S3, zonder code",
+            "De obx-tool voor Windows, macOS en Linux stuurt alleen wat veranderde",
+            "Recepten voor cron, GitHub Actions, n8n, Make en Zapier",
+            "Eén CSV-indeling en één naamregel voor foto's"
           ],
           "link": "Bekijk de automatiseringsrecepten"
         }
       ],
       "audienceEyebrow": "Voor wie",
-      "audienceTitle": "Gebouwd voor beide kanten van de samenwerking.",
+      "audienceTitle": "Voor merken en voor retailers.",
       "brands": {
         "h": "Voor merken",
-        "p": "Stop met bestanden rondsturen. Publiceer één keer, vanuit je eigen systemen, en houd de regie.",
+        "p": "Geen bestanden meer rondsturen. Retailers halen zelf op wat ze nodig hebben, en jij bepaalt wie wat krijgt.",
         "items": [
           "Je eigen portaal, op je eigen domein",
           "Jij keurt elke retailer goed en bepaalt wat hij ziet",
@@ -956,7 +988,7 @@
         }
       ],
       "trustEyebrow": "Governance",
-      "trustTitle": "Een open standaard, geen platform waar je aan vastzit.",
+      "trustTitle": "Een open standaard, geen platform.",
       "trustLead": "Open Brand Exchange hoort toe aan de merken, retailers en softwareleveranciers die het gebruiken, niet aan één bedrijf.",
       "trust": [
         {
@@ -965,7 +997,7 @@
         },
         {
           "h": "Conformiteitstests",
-          "p": "61 geautomatiseerde tests in vier profielen. Geen enkele implementatie krijgt een voorkeursbehandeling, ook die van het bedrijf van de initiatiefnemer niet."
+          "p": "61 geautomatiseerde tests in vier profielen. Elke implementatie wordt op dezelfde manier getest."
         },
         {
           "h": "Opensourcelicenties",
@@ -973,7 +1005,7 @@
         },
         {
           "h": "Een stichting in oprichting",
-          "p": "Een initiatief van {person}. Het auteursrecht, de naam en het domein gaan naar de {foundation} zodra die bestaat."
+          "p": "Het auteursrecht, de naam en het domein gaan naar de {foundation} zodra die is ingeschreven."
         },
         {
           "h": "Beveiliging",
@@ -996,7 +1028,7 @@
       ],
       "faqTitle": "Wat merken als eerste vragen",
       "faqLink": "Alle vragen",
-      "closingTitle": "Geef elke retailer één plek waar het klopt.",
+      "closingTitle": "Laat je retailers het zelf ophalen.",
       "closingP": "Zet je eigen portaal neer, of vertel ons over je systemen en retailers en denk mee over de eerste release.",
       "closingMail": "Mail ons"
     },
