@@ -2,6 +2,7 @@
 // How it works, in three blocks: what a brand puts in → the open standard (framed) → what
 // retailers get out. Real HTML lists, readable without the picture and wrapping in every language.
 // The technical detail (upload tools, the portal itself) lives on the automation and developer pages.
+// Block titles are h2: the diagram sits right under the hero h1.
 import Icon from './Icon.astro';
 import Logo from './Logo.astro';
 import { messages, type Lang } from '../i18n';
@@ -21,17 +22,17 @@ const outIcons = ['browser', 'layers', 'barcode', 'download'] as const;
 <figure class:list={['flow', stack && 'flow-stack']} aria-labelledby="flow-caption">
   <ol class="flow-cols">
     <li class="flow-col">
-      <h3>{f.inTitle}</h3>
+      <h2>{f.inTitle}</h2>
       <p class="flow-lead">{f.inLead}</p>
       <ul>{f.inItems.map((item, i) => <li><Icon name={inIcons[i] ?? 'check'} />{item}</li>)}</ul>
     </li>
     <li class="flow-col flow-std">
-      <h3><Logo size={22} /> {f.stdTitle}</h3>
+      <h2><Logo size={22} /> {f.stdTitle}</h2>
       <p class="flow-lead">{f.stdLead}</p>
       <ul>{f.stdItems.map((item) => <li><Icon name="check" />{item}</li>)}</ul>
     </li>
     <li class="flow-col">
-      <h3>{f.outTitle}</h3>
+      <h2>{f.outTitle}</h2>
       <p class="flow-lead">{f.outLead}</p>
       <ul>{f.outItems.map((item, i) => <li><Icon name={outIcons[i] ?? 'check'} />{item}</li>)}</ul>
     </li>

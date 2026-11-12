@@ -5,7 +5,7 @@ import DocSection from '../components/DocSection.astro';
 import CodeWindow from '../components/CodeWindow.astro';
 import Icon from '../components/Icon.astro';
 import { messages, repo, specDoc, url, type Lang } from '../i18n';
-import { retailerCurl, conformance, discovery, discoveryResponse } from '../data/snippets';
+import { retailerCurl, conformance, discovery, discoveryResponse, demoCurl, DEMO_URL, DEMO_CLIENT_ID, DEMO_CLIENT_SECRET } from '../data/snippets';
 
 interface Props {
   lang: Lang;
@@ -83,6 +83,15 @@ const docs = [
           </tbody>
         </table>
       </div>
+    </DocSection>
+
+    <DocSection id="demo" title={t.demo.devTitle}>
+      <p>{t.demo.devP}</p>
+      <dl class="demo-key">
+        <div><dt>{t.demo.devKey}</dt><dd><code>{DEMO_CLIENT_ID}</code> · <code>{DEMO_CLIENT_SECRET}</code></dd></div>
+      </dl>
+      <Code code={demoCurl} />
+      <p><a href={DEMO_URL}>{t.demo.devOpen} <Icon name="arrow" class="arrow" /></a></p>
     </DocSection>
 
     <DocSection id="read" title={c.readTitle}>

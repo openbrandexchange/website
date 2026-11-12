@@ -9,7 +9,7 @@ import { format, messages, repo, specDoc, url, type Lang } from '../i18n';
 import Code from '../components/Code.astro';
 import { prompts } from '../data/prompts';
 import { orgVars, HELLO_EMAIL, SECURITY_EMAIL } from '../lib/org';
-import { assetChange, pushAction, pushTerminal } from '../data/snippets';
+import { assetChange, pushAction, pushTerminal, DEMO_URL } from '../data/snippets';
 
 interface Props {
   lang: Lang;
@@ -42,6 +42,10 @@ const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'devel
         <a class="button primary lg" href={url(lang, 'brands')}>{t.site.nav.start} <Icon name="arrow" class="arrow" /></a>
         <a class="button secondary lg" href={url(lang, 'retailers')}>{h.ctaRetailer}</a>
       </div>
+      <p class="hero-demo">
+        <a href={DEMO_URL}>{t.demo.link} <Icon name="arrow" class="arrow" /></a>
+        <span class="muted">{t.demo.linkNote}</span>
+      </p>
       <p class="scope">
         <span class="sr-only">{h.scopeLabel}: </span><span class="scope-now">{h.scopeNow}</span>
         <span class="scope-next">{h.scopeNext}</span>

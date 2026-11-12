@@ -234,3 +234,17 @@ export const discoveryResponse = `{
   "capabilities": ["changes", "products", "by_gtin",
                    "renditions", "exports", "webhooks"]
 }`;
+
+// The public demo portal (node-ts in demo mode, docs/demo.md there): fictional data, reset every hour.
+// Its test key is published on purpose and can only read.
+export const DEMO_URL = 'https://obx-portal-demo.richardlindhout96.workers.dev';
+export const DEMO_CLIENT_ID = 'obxc_demo-portal-read-only';
+export const DEMO_CLIENT_SECRET = 'obxs_demo-portal-read-only-public';
+export const demoCurl = `HOST=${DEMO_URL}
+CLIENT_ID=${DEMO_CLIENT_ID}
+CLIENT_SECRET=${DEMO_CLIENT_SECRET}
+TOKEN=$(curl -s -u "$CLIENT_ID:$CLIENT_SECRET" -d grant_type=client_credentials \\
+  $HOST/obx/v1/oauth/token | jq -r .access_token)
+curl -s -H "Authorization: Bearer $TOKEN" "$HOST/obx/v1/changes?limit=500" | jq '{phase, has_more, n: (.changes | length)}'
+curl -s -H "Authorization: Bearer $TOKEN" -H 'Content-Type: application/json' \\
+  -d '{"gtins": ["2000100801017", "2000100101025"]}' "$HOST/obx/v1/products:by-gtin"`;

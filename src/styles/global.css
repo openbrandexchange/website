@@ -1174,7 +1174,7 @@ main:focus {
   border: 1px solid var(--line-strong);
   background: var(--surface);
 }
-.flow-col h3 {
+.flow-col h2 {
   margin: 0;
   font-family: var(--mono);
   font-size: 0.8125rem;
@@ -1209,13 +1209,13 @@ main:focus {
   border: 2px solid var(--fg);
   box-shadow: 6px 6px 0 var(--fg);
 }
-.flow-std h3 {
+.flow-std h2 {
   display: flex;
   align-items: center;
   gap: var(--s-3);
   font-size: 0.875rem;
 }
-.flow-std h3 .mark {
+.flow-std h2 .mark {
   flex: none;
 }
 /* Connectors: an arrow between the blocks, sideways on wide screens, down on phones. */
@@ -2394,6 +2394,29 @@ input[type='search'] {
 /* Home hero: the short benefits and the categories of this version. */
 .hero-checks {
   margin-top: var(--s-5);
+}
+.hero-demo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-1) var(--s-3);
+  margin: var(--s-4) 0 0;
+}
+.hero-demo a {
+  font-weight: 600;
+  color: var(--accent-fg);
+}
+.demo-key div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-1) var(--s-3);
+}
+.demo-key dt {
+  font-weight: 600;
+}
+.demo-key dd {
+  margin: 0;
+  overflow-wrap: anywhere;
 }
 .scope {
   display: flex;
