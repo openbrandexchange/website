@@ -10,7 +10,7 @@
     "copy": "Kopier",
     "copied": "Kopiert",
     "draft": "Versjon 0.2 er utgitt. Spesifikasjonen og programvaren er fri å bruke.",
-    "footerAbout": "En gratis, åpen måte for merkevarer å levere produktbilder og artikkeldata til forhandlerne sine.",
+    "footerAbout": "En gratis, åpen måte for motemerker å levere produktbilder og artikkeldata til forhandlerne sine.",
     "footerMore": "Mer",
     "footerSource": "Kildekode og spesifikasjon",
     "footerLicence": "Dette nettstedet: innhold CC-BY-4.0, kode MIT.",
@@ -34,12 +34,13 @@
     "governance": "Styring og navn",
     "privacy": "Personvern",
     "imprint": "Om nettstedet",
-    "cookies": "Informasjonskapsler"
+    "cookies": "Informasjonskapsler",
+    "partners": "Partnere"
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: ett sted og ett API for alle forhandlerne dine",
-      "description": "En gratis, åpen standard med programvare for merkevarer: en portal for forhandlerne dine, et standard-API for systemene deres og automatisk publisering fra dine egne systemer."
+      "title": "Open Brand Exchange: den åpne standarden for produktinnhold i mote",
+      "description": "En gratis, åpen standard med programvare for motemerker og forhandlere: produktbilder, fibersammensetning og vaskeråd i ett format, i en portal eller rett inn i forhandlerens programvare."
     },
     "brands": {
       "title": "For merkevarer",
@@ -88,6 +89,10 @@
     "cookies": {
       "title": "Informasjonskapsler",
       "description": "Dette nettstedet bruker ingen informasjonskapsler."
+    },
+    "partners": {
+      "title": "Bli partner",
+      "description": "En gratis samsvarstest og merket «Kompatibel med Open Brand Exchange», eller en oppføring som offisiell partner fra 500 € i året."
     }
   },
   "home": {
@@ -228,7 +233,31 @@
     "nextHosting": "Velg hosting",
     "nextAutomation": "Se automatiseringsoppskriftene",
     "labelNote": "Mangler noe loven krever på etiketten, for eksempel fibersammensetningen eller materialene i en sko, varsler Open Brand Exchange deg ved opplasting. Et varsel stopper aldri publiseringen.",
-    "bagsNote": "Kofferter og vesker har nå mål (H × B × D, vekt, volum) og egenskaper (hjul, lås, avtakbar reim …), målt på samme måte av hver merkevare."
+    "bagsNote": "Kofferter og vesker har nå mål (H × B × D, vekt, volum) og egenskaper (hjul, lås, avtakbar reim …), målt på samme måte av hver merkevare.",
+    "startEyebrow": "Start her",
+    "startTitle": "Fra regnearket ditt til alle forhandlere, i fire trinn.",
+    "startSteps": [
+      {
+        "h": "Last ned malen",
+        "p": "En Excel-fil med kolonnene i standarden, nedtrekkslister for alle faste verdier og et utfylt eksempel."
+      },
+      {
+        "h": "Fyll den ut",
+        "p": "Én rad per størrelse, for hånd eller eksportert fra ditt eget system. Gi bildene navn etter modell_farge_posisjon, for eksempel KO-1001_NVY_1.jpg."
+      },
+      {
+        "h": "Last opp eller automatiser",
+        "p": "Lagre som CSV UTF-8 og last den opp i portalen din sammen med bildene, eller la portalen hente eksporten din hver natt."
+      },
+      {
+        "h": "Ferdig",
+        "p": "Forhandlerne dine finner alt i portalen din, og programvaren deres plukker opp hver endring av seg selv. Gratis."
+      }
+    ],
+    "startTemplate": "Last ned Excel-malen",
+    "partnersTitle": "Eller la en partner gjøre alt",
+    "partnersP": "Vil du helst slippe å gjøre det selv? En leverandør kan ta over hele prosessen. Photopilot tilbyr for eksempel en gratis portal med OBX-tilkoblingen, full automatisering av prosessen og en skreddersydd integrasjon med ERP-en din.",
+    "partnersCta": "Se leverandørene"
   },
   "automation": {
     "h1": "Automatisering",
@@ -334,14 +363,14 @@
     "fieldStatus": "Open Brand Exchange",
     "fieldExport": "Eksporter alt innholdet ditt",
     "fieldWebsite": "Nettsted",
-    "listTitle": "Vil du bli leverandør?",
-    "listP": "Alle hostingselskaper, byråer og programvareleverandører kan stå her. Vilkårene er like for alle:",
+    "listTitle": "Vil du stå her som leverandør?",
+    "listP": "Leverandørene på denne siden er offisielle partnere. Kriteriene er like for alle:",
     "listItems": [
-      "portalen din består samsvarstestene",
+      "portalen din består samsvarstesten for gjeldende versjon",
       "en merkevare kan eksportere alle data og bilder og forlate deg",
       "du oppgir dine egne priser og vilkår på ditt eget nettsted"
     ],
-    "listHow": "Åpne en pull request i nettstedets repository med opplysningene dine i src/data/providers.json. Leverandørene står i alfabetisk rekkefølge.",
+    "listHow": "Å være kompatibel er gratis; en oppføring her er en del av det offisielle partnerskapet.",
     "p2Title": "2. Med ett klikk",
     "p2P": "Din egen portal på din egen konto, uten å drifte en server.",
     "cfP": "Kjører på Cloudflare Workers, med D1 som database og R2 for bildene. Klikk på knappen, logg inn hos Cloudflare og følg trinnene. En portal i daglig bruk trenger abonnementet Workers Paid (5 dollar i måneden); gratisabonnementet holder bare til å se seg om. Nettversjoner av bildene deres lages av nettleseren og verktøyet obx.",
@@ -380,7 +409,7 @@
   },
   "retailers": {
     "h1": "For forhandlere",
-    "lead": "Merkevarer som bruker Open Brand Exchange, leverer bilder og artikkeldata på én enhetlig måte, enten du laster ned for hånd eller bruker programvare.",
+    "lead": "Merkevarer som bruker Open Brand Exchange, leverer bilder og artikkeldata på én enhetlig måte. Du mottar dem bare, og gratis: i hver merkevares portal i nettleseren din eller via én API direkte inn i programvaren din.",
     "portalTitle": "Hva en merkevareportal gir deg",
     "portalP": "Hver merkevare driver sin egen portal med sitt eget navn, for eksempel «Kestrel · {portal}».",
     "portal": [
@@ -617,7 +646,10 @@
     "templateP": "En tom CSV-mal finnes også i administrasjonen for hver portal, under Importer.",
     "brandsTitle": "Brosjyre for merkevarer",
     "brandsP": "Din egen portal for forhandlere, API-et, automatisk opplasting og hosting, og hva som allerede er klart. Til å dele med teamet ditt.",
-    "allLanguages": "Alle språk"
+    "allLanguages": "Alle språk",
+    "templateTitle": "Excel-mal for merkevarer",
+    "templateP2": "products.xlsx: kolonnene i standardimporten, nedtrekkslister for alle faste verdier, en forklaring per kolonne på engelsk og nederlandsk, og et eksempel fra Kestrel. Lagre den som CSV UTF-8 for å laste den opp.",
+    "templateButton": "Last ned products.xlsx"
   },
   "faq": {
     "h1": "Vanlige spørsmål",
@@ -661,6 +693,14 @@
       {
         "q": "Hvem står bak?",
         "a": "Open Brand Exchange overføres til {foundation}, en nederlandsk ideell stiftelse (stichting), slik at standarden tilhører merkevarene, forhandlerne og programvareleverandørene som bruker den, og ikke ett selskap. Spørsmål kan sendes til {email}."
+      },
+      {
+        "q": "Hva skiller dette fra lukkede innholdsplattformer?",
+        "a": "Lukkede plattformer holder merkevarenes innhold i ett selskaps system og tar betalt av merkevarer eller forhandlere for tilgang. Open Brand Exchange er en åpen standard: hver merkevare driver sin egen portal eller velger en leverandør, og kan eksportere alt og gå. All programvare kan implementere den uten lisensavgift."
+      },
+      {
+        "q": "Kan bildeportalen eller DAM-en vår koble seg til?",
+        "a": "Ja. En bildeportal, bildebank eller DAM som tilbyr lesesiden av protokollen og består samsvarstesten, er kompatibel. Forhandlernes programvare henter da produktbildene, per vare og EAN, på samme måte som fra en hvilken som helst merkevareportal."
       }
     ]
   },
@@ -840,7 +880,7 @@
       "preview": "Versjon 0.2"
     },
     "footer": {
-      "tagline": "Den åpne standarden for å levere produktbilder og artikkeldata fra merkevarer til forhandlerne deres.",
+      "tagline": "Den åpne standarden for å levere produktbilder og artikkeldata fra motemerker til forhandlerne deres.",
       "product": "Produkt",
       "developers": "Utviklere",
       "project": "Prosjekt",
@@ -861,9 +901,9 @@
       "adminAutomation": "Automatisk opplasting i merkevarens administrasjon: ferdige oppskrifter for obx-verktøyet, cron, GitHub Actions og mer."
     },
     "home": {
-      "eyebrow": "Åpen standard · Fri programvare",
-      "h1": "Produktinnholdet ditt, klart for alle forhandlere.",
-      "lead": "Open Brand Exchange er en åpen standard for hvordan forhandlere henter produktbilder og varedata fra en merkevare: i en portal i nettleseren, som zip eller regneark, eller rett inn i sin egen programvare via ett API. Hvordan innholdet kommer inn i portalen din, bestemmer du selv.",
+      "eyebrow": "Åpen standard for mote · Gratis programvare",
+      "h1": "Produktinnhold for mote, klart for alle forhandlere.",
+      "lead": "Open Brand Exchange er den åpne standarden for hvordan merkevarer innen klær, sko, vesker og bagasje leverer produktbilder og artikkeldata til forhandlerne sine: i en portal, som zip eller regneark, eller rett inn i forhandlerens programvare via ett API. Et åpent alternativ til lukkede plattformer: ingen avgift per forhandler, ingen innlåsing, og dataene dine forblir dine.",
       "ctaRetailer": "Jeg er forhandler",
       "proofLabel": "Kort fortalt",
       "proof": [
@@ -967,30 +1007,6 @@
           "link": "Se automatiseringsoppskriftene"
         }
       ],
-      "audienceEyebrow": "Hvem det er for",
-      "audienceTitle": "For merkevarer og for forhandlere.",
-      "brands": {
-        "h": "For merkevarer",
-        "p": "Ikke mer filsending. Forhandlerne henter det de trenger, og du bestemmer hvem som får hva.",
-        "items": [
-          "Din egen portal, på ditt eget domene",
-          "Du godkjenner hver forhandler og bestemmer hva de ser",
-          "Se hvem som laster ned hva, per forhandler",
-          "Driv den selv gratis, eller velg en leverandør du kan forlate når som helst"
-        ],
-        "cta": "Les mer for merkevarer"
-      },
-      "retailers": {
-        "h": "For forhandlere",
-        "p": "Alle merkevarer i ett enhetlig format, i nettleseren eller rett inn i systemet ditt.",
-        "items": [
-          "Lim inn EAN-listen din og få riktige bilder for hver størrelse",
-          "Last ned zip-filer og artikkeldata, klare for butikken din",
-          "Én tilkobling for alle merkevarer på standarden",
-          "Bruksrettigheter og embargodatoer ved hvert bilde"
-        ],
-        "cta": "Les mer for forhandlere"
-      },
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Kjør den der du vil. Betal bare for hosting.",
       "editionsLead": "Tre utgaver av den samme portalen. De består de samme samsvarstestene og snakker det samme API-et, så du kan bytte mellom dem.",
@@ -1079,12 +1095,148 @@
       "faqLink": "Alle spørsmål",
       "closingTitle": "La forhandlerne hente det selv.",
       "closingP": "Sett opp din egen portal, eller fortell oss om systemene og forhandlerne dine og vær med på å forme den første utgivelsen.",
-      "closingMail": "Send oss en e-post"
+      "closingMail": "Send oss en e-post",
+      "rolesEyebrow": "Hvem gjør hva",
+      "rolesTitle": "Merkevarer publiserer. Forhandlere mottar. Programvare kobler sammen.",
+      "rolesLead": "Standarden fastsetter hvordan produktinnhold går fra merkevare til forhandler. Hver part gjør sin del, og ingen trenger å vente på noen andre.",
+      "roles": [
+        {
+          "h": "Merkevarer publiserer",
+          "p": "En merkevare legger ut innholdet sitt én gang, i standardformatet, i sin egen portal. Den automatiserer utgående data selv, eller en leverandør ordner det.",
+          "items": [
+            "Bildene og artikkeldataene dine i ett standardformat",
+            "Automatiser selv med de gratis verktøyene, eller la en leverandør gjøre det",
+            "Du godkjenner hver forhandler og bestemmer hva de ser"
+          ],
+          "cta": "Les mer for merkevarer"
+        },
+        {
+          "h": "Forhandlere mottar",
+          "p": "En forhandler henter det den trenger fra hver merkevare på standarden, alltid på samme måte. Ikke noe nytt arbeid for hver ny merkevare.",
+          "items": [
+            "Søk, lim inn EAN-er og last ned i nettleseren",
+            "Bilder og fibersammensetning klare for nettbutikken",
+            "Bruksrettigheter og embargodatoer ved hvert bilde"
+          ],
+          "cta": "Les mer for forhandlere"
+        },
+        {
+          "h": "ERP- og programvareleverandører kobler til",
+          "p": "En leverandør av ERP-, PIM-, nettbutikk- eller kassasystemer bygger én tilkobling og leser deretter alle merkevareportaler på samme måte. Innkommende data automatiseres som enhver annen leverandørfeed.",
+          "items": [
+            "Ett API, dokumentert i OpenAPI 3.1",
+            "Først en full kopi, deretter bare endringene",
+            "Test tilkoblingen din med den gratis samsvarstesten"
+          ],
+          "cta": "Les utviklerveiledningen"
+        }
+      ],
+      "portalsEyebrow": "Åpen for alle portaler",
+      "portalsTitle": "Har du allerede en portal? Koble den til standarden.",
+      "portalsLead": "Open Brand Exchange er ikke ett enkelt program. Alle portaler som snakker protokollen og består samsvarstesten, er kompatible, og forhandlernes programvare leser dem som alle andre.",
+      "portalTypes": [
+        {
+          "h": "Merkevare- og B2B-portaler",
+          "p": "En merkevareportal, B2B-butikk eller grossistplattform legger til OBX-API-et ved siden av det den allerede gjør. Merkevarene der når da alle forhandlersystemer som snakker standarden."
+        },
+        {
+          "h": "Bildeportaler og DAM-er",
+          "p": "Fotoportaler, bildebanker og DAM-er for produktbilder publiserer bildene per vare: hvert bilde koblet til produkt, farge og EAN, med webversjoner, bruksrettigheter og embargodatoer. De implementerer lesesiden av protokollen, og forhandlernes programvare henter bildene som fra enhver annen portal."
+        },
+        {
+          "h": "PIM- og ERP-systemer",
+          "p": "Et PIM eller ERP som har artikkeldataene til en merkevare, kan publisere dem direkte: fibersammensetning, vaskeråd, størrelser og EAN-er i standardformatet, uten egen portal."
+        }
+      ],
+      "portalsSteps": [
+        "Les spesifikasjonen og last inn den fiktive testmerkevaren Kestrel",
+        "Tilby discovery, endringsfeeden, produkter og bilder via API-et",
+        "Kjør den gratis samsvarstesten: består du, er du kompatibel"
+      ],
+      "portalsCta": "Kompatibel eller partner"
     },
     "pages": {
       "brandsH1": "Sett det opp én gang. For alle forhandlere samtidig.",
       "retailersSoftware": "For systemet ditt",
       "hostingEditions": "De tre utgavene"
     }
+  },
+  "partners": {
+    "eyebrow": "Partnere",
+    "h1": "Kompatibel gratis. Oppført som offisiell partner.",
+    "lead": "Alle portaler, bildeportaler, PIM, ERP og leverandører kan jobbe med Open Brand Exchange. Testen og merket «Kompatibel med Open Brand Exchange» er gratis. En oppføring som offisiell partner er et betalt medlemskap, med de samme kriteriene for alle.",
+    "compareTitle": "Kompatibel eller offisiell partner",
+    "colWhat": "Hva du får",
+    "colCompatible": "Kompatibel",
+    "colPartner": "Offisiell partner",
+    "rows": [
+      {
+        "l": "Pris",
+        "c": "Gratis",
+        "p": "Årsavgift etter bedriftens størrelse"
+      },
+      {
+        "l": "Bestått samsvarstest",
+        "c": "Påkrevd",
+        "p": "Påkrevd"
+      },
+      {
+        "l": "Si «Kompatibel med Open Brand Exchange»",
+        "c": "✓",
+        "p": "✓"
+      },
+      {
+        "l": "Oppført med logoen din på partner- og hostingsidene",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Merket «Offisiell partner»",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Anbefalt til merkevarer som spør oss om en leverandør",
+        "c": "–",
+        "p": "✓"
+      }
+    ],
+    "testTitle": "1. Test selv, gratis",
+    "testP": "Samsvarstesten er åpen kildekode. Kjør den mot din egen portal så ofte du vil. Den sjekker discovery, endringsfeeden, produkter, bilder og sikkerhet, og forteller i klart språk hva som fortsatt mangler.",
+    "testSteps": [
+      "Last inn den fiktive testmerkevaren Kestrel i en testkonto i portalen din.",
+      "Kjør obx-conformance mot portalen din, som beskrevet i utviklerveiledningen.",
+      "Rett opp det som feiler, til resultatet sier CONFORMANT."
+    ],
+    "testLink": "Slik kjører du testen",
+    "certTitle": "2. Få det bekreftet, gratis",
+    "certP": "Send oss JSON-rapporten og adressen til testportalen din. Vi kjører den samme testen og bekrefter resultatet. Fra da av kan du si at produktet ditt er «Kompatibel med Open Brand Exchange», for versjonen du testet.",
+    "certMail": "Send rapporten din",
+    "partnerTitle": "3. Bli offisiell partner",
+    "partnerP": "Kompatibel! Vil du bli funnet av merkevarer som leter etter en leverandør? Offisielle partnere står med logoen sin på partner- og hostingsidene, bærer merket «Offisiell partner» og blir anbefalt til merkevarer som spør oss om en leverandør.",
+    "reqTitle": "Kriteriene, like for alle",
+    "tiersTitle": "Årsavgift",
+    "tiers": [
+      {
+        "name": "Liten",
+        "who": "opptil 49 ansatte",
+        "price": "500 €"
+      },
+      {
+        "name": "Mellomstor",
+        "who": "50 til 249 ansatte",
+        "price": "2 500 €"
+      },
+      {
+        "name": "Stor",
+        "who": "250 ansatte eller flere",
+        "price": "10 000 €"
+      }
+    ],
+    "perYear": "per år, eks. mva.",
+    "tiersNote": "Foreslåtte avgifter for 2027, endelige når stiftelsen er opprettet. Avgiften dekker bare oppføringen. Standarden, testen og programvaren forblir gratis for alle, og partnere har ikke mer å si om standarden enn noen andre.",
+    "partnerCta": "Bli partner",
+    "mailSubject": "Offisiell partner",
+    "listTitle": "Offisielle partnere"
   }
 }

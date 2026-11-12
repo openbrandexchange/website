@@ -1,0 +1,123 @@
+---
+// Partners: the free conformance test and "Compatible with Open Brand Exchange", and the paid
+// listing as an official partner. Same criteria for everyone; the fee pays for the listing only.
+import PageHero from '../components/PageHero.astro';
+import Providers from '../components/Providers.astro';
+import Icon from '../components/Icon.astro';
+import { messages, url, type Lang } from '../i18n';
+import { HELLO_EMAIL } from '../lib/org';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = messages[lang];
+const c = t.partners;
+const mail = (subject: string) => `mailto:${HELLO_EMAIL}?subject=${encodeURIComponent(subject)}`;
+const conformance = `${url(lang, 'developers')}#conformance`;
+---
+
+<PageHero eyebrow={c.eyebrow} title={c.h1} lead={c.lead}>
+  <Fragment slot="actions">
+    <a class="button primary lg" href="#test">{c.testTitle.replace(/^\d+\.\s*/, '')} <Icon name="arrow" class="arrow" /></a>
+    <a class="button secondary lg" href="#partner">{c.partnerCta}</a>
+  </Fragment>
+</PageHero>
+
+<section class="band" aria-labelledby="compare">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 id="compare">{c.compareTitle}</h2>
+    </header>
+    <div class="table-scroll compare">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">{c.colWhat}</th>
+            <th scope="col">{c.colCompatible}</th>
+            <th scope="col">{c.colPartner}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            c.rows.map((row) => (
+              <tr>
+                <th scope="row">{row.l}</th>
+                <td data-label={c.colCompatible}>{row.c}</td>
+                <td data-label={c.colPartner}>{row.p}</td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt" aria-labelledby="test">
+  <div class="wrap split even top">
+    <div class="split-copy">
+      <h2 id="test">{c.testTitle}</h2>
+      <p>{c.testP}</p>
+      <ol class="steps">
+        {c.testSteps.map((step) => <li>{step}</li>)}
+      </ol>
+      <p class="actions">
+        <a class="link-arrow" href={conformance}>{c.testLink} <Icon name="arrow" class="arrow" /></a>
+      </p>
+    </div>
+    <div class="split-visual">
+      <h2 id="confirm">{c.certTitle}</h2>
+      <p>{c.certP}</p>
+      <p class="actions">
+        <a class="button secondary" href={mail(c.colCompatible)}>{c.certMail}</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="partner">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 id="partner">{c.partnerTitle}</h2>
+      <p class="lead">{c.partnerP}</p>
+    </header>
+    <div class="split even top">
+      <div class="split-copy">
+        <h3>{c.reqTitle}</h3>
+        <ul class="checks">
+          {t.hosting.listItems.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <div class="split-visual">
+        <h3>{c.tiersTitle}</h3>
+        <ul class="tiers">
+          {
+            c.tiers.map((tier) => (
+              <li>
+                <span class="tier-name">{tier.name}</span>
+                <span class="tier-who">{tier.who}</span>
+                <span class="tier-price">{tier.price}</span>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="small muted">{c.perYear}. {c.tiersNote}</p>
+        <p class="actions">
+          <a class="button primary" href={mail(c.mailSubject)}>{c.partnerCta} <Icon name="arrow" class="arrow" /></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band band-alt" aria-labelledby="listed">
+  <div class="wrap">
+    <header class="section-head">
+      <h2 id="listed">{c.listTitle}</h2>
+    </header>
+    <div class="cards">
+      <Providers lang={lang} />
+    </div>
+  </div>
+</section>

@@ -6,6 +6,7 @@ import Icon from '../components/Icon.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { format, messages, url, type Lang } from '../i18n';
 import { assetChange } from '../data/snippets';
+import { TEMPLATE } from '../lib/template';
 
 interface Props {
   lang: Lang;
@@ -24,6 +25,41 @@ const ids = ['portal', 'api', 'automate', 'own'];
   </Fragment>
   <Screenshot slot="visual" name="admin-overview" lang={lang} alt={shots.adminOverview} sizes="(min-width: 1024px) 820px, calc(100vw - 32px)" eager />
 </PageHero>
+
+<section class="band" aria-labelledby="start">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="eyebrow">{c.startEyebrow}</p>
+      <h2 id="start">{c.startTitle}</h2>
+    </header>
+    <ol class="steps steps-row steps-four">
+      {
+        c.startSteps.map((st) => (
+          <li>
+            <h3>{st.h}</h3>
+            <p>{st.p}</p>
+          </li>
+        ))
+      }
+    </ol>
+    <p class="actions">
+      <a class="button primary" href={TEMPLATE} download>{c.startTemplate} <Icon name="arrow" class="arrow" /></a>
+      <a class="button secondary" href={url(lang, 'automation')}>{c.nextAutomation}</a>
+    </p>
+  </div>
+</section>
+
+<section class="band band-alt" aria-labelledby="partner-help">
+  <div class="wrap split even top">
+    <div class="split-copy">
+      <h2 id="partner-help">{c.partnersTitle}</h2>
+    </div>
+    <div class="split-visual">
+      <p>{c.partnersP}</p>
+      <p class="actions"><a class="link-arrow" href={url(lang, 'hosting', '#providers')}>{c.partnersCta} <Icon name="arrow" class="arrow" /></a></p>
+    </div>
+  </div>
+</section>
 
 <section class="band">
   <div class="wrap">

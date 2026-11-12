@@ -469,7 +469,8 @@ main:focus {
   color: var(--fg);
   box-shadow: inset 0 0 0 1px var(--fg-2);
 }
-.band-ink .button.secondary {
+.band-ink .button.secondary,
+.site-header .button.secondary {
   background: rgb(255 255 255 / 0.06);
 }
 .button.lg {
@@ -500,19 +501,25 @@ main:focus {
 
 /* ---------- Header ---------- */
 
+/* Always the dark ink of the hero, in light and dark mode, so the header never changes colour
+   while scrolling over light and dark bands. */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgb(255 255 255 / 0.82);
-  backdrop-filter: saturate(1.8) blur(14px);
-  -webkit-backdrop-filter: saturate(1.8) blur(14px);
-  box-shadow: 0 1px 0 var(--line);
-}
-@media (prefers-color-scheme: dark) {
-  .site-header {
-    background: rgb(11 16 32 / 0.82);
-  }
+  background: var(--ink);
+  color: var(--ink-fg);
+  --fg: var(--ink-fg);
+  --fg-2: var(--ink-fg-2);
+  --muted: var(--ink-muted);
+  --line: var(--ink-line);
+  --line-strong: rgb(255 255 255 / 0.2);
+  --accent-fg: var(--ink-accent);
+  --accent-strong: #b8c9ff;
+  --surface: var(--ink-3);
+  --surface-2: #1b2540;
+  color-scheme: dark;
+  box-shadow: 0 1px 0 var(--ink-line);
 }
 .header-row {
   display: flex;
@@ -2361,4 +2368,94 @@ input[type='search'] {
   .care-label-card dd {
     margin-bottom: var(--s-3);
   }
+}
+
+/* ---------- Home: video in the hero, three roles, portals that connect ---------- */
+
+/* The video replaces the product screenshot in the hero; it stays inside its column. */
+@media (min-width: 64rem) {
+  .hero-product.hero-video {
+    width: auto;
+    padding-left: 0;
+  }
+}
+.hero-video .video-frame {
+  position: relative;
+  z-index: 1;
+  max-width: none;
+  margin: 0;
+  box-shadow: 0 0 0 1px var(--ink-line), var(--shadow-lg);
+}
+.video-frame figcaption {
+  padding: 0.6rem 0.9rem;
+  font-size: 0.8125rem;
+  color: var(--ink-muted);
+  background: var(--ink-2);
+}
+@media (min-width: 64rem) {
+  .audience.roles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.portal-types {
+  margin-bottom: var(--s-6);
+}
+@media (min-width: 64rem) {
+  .steps-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 var(--col-gap);
+    border-top: 0;
+  }
+  .steps-row li {
+    border-top: 1px solid var(--line);
+  }
+}
+
+/* ---------- Partners ---------- */
+
+.compare td {
+  text-align: center;
+}
+.compare tbody th {
+  font-weight: 520;
+}
+.tiers {
+  list-style: none;
+  margin: 0 0 var(--s-3);
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+.tiers li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0 var(--s-3);
+  padding: var(--s-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+.tier-name {
+  font-weight: 600;
+}
+.tier-who {
+  grid-row: 2;
+  font-size: 0.875rem;
+  color: var(--fg-2);
+}
+.tier-price {
+  grid-row: span 2;
+  align-self: center;
+  font-size: 1.25rem;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+.split.top {
+  align-items: start;
+}
+@media (min-width: 64rem) {
+  .steps-row.steps-four {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.split.top > .split-visual > h2 {
+  margin-bottom: var(--s-3);
 }

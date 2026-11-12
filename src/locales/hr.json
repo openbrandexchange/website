@@ -10,7 +10,7 @@
     "copy": "Kopiraj",
     "copied": "Kopirano",
     "draft": "Verzija 0.2 je objavljena. Specifikacija i softver slobodni su za korištenje.",
-    "footerAbout": "Besplatan i otvoren način na koji robne marke svojim trgovcima isporučuju fotografije proizvoda i podatke o artiklima.",
+    "footerAbout": "Besplatan i otvoren način na koji modne marke svojim trgovcima isporučuju fotografije proizvoda i podatke o artiklima.",
     "footerMore": "Više",
     "footerSource": "Izvorni kod i specifikacija",
     "footerLicence": "Ova web-stranica: sadržaj CC-BY-4.0, kod MIT.",
@@ -34,12 +34,13 @@
     "governance": "Upravljanje i naziv",
     "privacy": "Privatnost",
     "imprint": "Impresum",
-    "cookies": "Kolačići"
+    "cookies": "Kolačići",
+    "partners": "Partneri"
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: jedno mjesto i jedan API za sve vaše trgovce",
-      "description": "Besplatan, otvoren standard sa softverom za robne marke: portal za vaše trgovce, standardni API za njihove sustave i automatska objava iz vaših vlastitih sustava."
+      "title": "Open Brand Exchange: otvoreni standard za sadržaj o modnim proizvodima",
+      "description": "Besplatan otvoreni standard i softver za modne marke i trgovce: fotografije proizvoda, sastav vlakana i upute za održavanje u jednom formatu, na portalu ili izravno u softveru trgovca."
     },
     "brands": {
       "title": "Za robne marke",
@@ -88,6 +89,10 @@
     "cookies": {
       "title": "Kolačići",
       "description": "Ova stranica ne postavlja kolačiće."
+    },
+    "partners": {
+      "title": "Postanite partner",
+      "description": "Besplatan test sukladnosti i oznaka „Kompatibilno s Open Brand Exchangeom” ili navođenje kao službeni partner od 500 € godišnje."
     }
   },
   "home": {
@@ -228,7 +233,31 @@
     "nextHosting": "Odaberite hosting",
     "nextAutomation": "Pogledajte recepte za automatizaciju",
     "labelNote": "Ako nedostaje nešto što zakon propisuje na etiketi, primjerice sastav vlakana ili materijali cipele, Open Brand Exchange upozorit će vas pri prijenosu. Upozorenje nikad ne sprječava objavu.",
-    "bagsNote": "Kovčezi i torbe sada imaju mjere (V × Š × D, težina, zapremina) i značajke (kotačići, brava, odvojivi remen …), koje svaka robna marka mjeri na isti način."
+    "bagsNote": "Kovčezi i torbe sada imaju mjere (V × Š × D, težina, zapremina) i značajke (kotačići, brava, odvojivi remen …), koje svaka robna marka mjeri na isti način.",
+    "startEyebrow": "Počnite ovdje",
+    "startTitle": "Od vaše tablice do svakog trgovca, u četiri koraka.",
+    "startSteps": [
+      {
+        "h": "Preuzmite predložak",
+        "p": "Excel datoteka sa stupcima standarda, padajućim popisima za svaku fiksnu vrijednost i ispunjenim primjerom."
+      },
+      {
+        "h": "Ispunite ga",
+        "p": "Jedan redak po veličini, ručno ili kao izvoz iz vlastitog sustava. Nazovite fotografije model_boja_pozicija, na primjer KO-1001_NVY_1.jpg."
+      },
+      {
+        "h": "Učitajte ili automatizirajte",
+        "p": "Spremite kao CSV UTF-8 i učitajte ga s fotografijama na svoj portal ili neka portal svake noći sam preuzme vaš izvoz."
+      },
+      {
+        "h": "Gotovo",
+        "p": "Vaši trgovci sve pronalaze na vašem portalu, a njihov softver sam preuzima svaku promjenu. Besplatno."
+      }
+    ],
+    "startTemplate": "Preuzmite Excel predložak",
+    "partnersTitle": "Ili neka partner sve odradi",
+    "partnersP": "Ne želite to raditi sami? Pružatelj usluge može preuzeti cijeli postupak. Photopilot, na primjer, nudi besplatan portal s OBX vezom, potpunu automatizaciju postupka i prilagođenu integraciju s vašim ERP-om.",
+    "partnersCta": "Pogledajte pružatelje usluge"
   },
   "automation": {
     "h1": "Automatizacija",
@@ -334,14 +363,14 @@
     "fieldStatus": "Open Brand Exchange",
     "fieldExport": "Izvoz cijelog sadržaja",
     "fieldWebsite": "Web stranica",
-    "listTitle": "Želite postati pružatelj usluge?",
-    "listP": "Ovdje može biti navedena svaka hosting tvrtka, agencija ili dobavljač softvera. Uvjeti su jednaki za sve:",
+    "listTitle": "Želite biti navedeni ovdje kao pružatelj usluge?",
+    "listP": "Pružatelji usluge na ovoj stranici službeni su partneri. Uvjeti su jednaki za sve:",
     "listItems": [
-      "vaš portal prolazi testove sukladnosti",
-      "marka može izvesti sve podatke i fotografije i otići",
-      "vlastite cijene i uvjete objavljujete na svojoj stranici"
+      "vaš portal prolazi test sukladnosti za trenutačnu verziju",
+      "marka može izvesti sve svoje podatke i fotografije i otići",
+      "svoje cijene i uvjete objavljujete na vlastitoj stranici"
     ],
-    "listHow": "Otvorite pull request u repozitoriju stranice sa svojim podacima u src/data/providers.json. Pružatelji usluga navedeni su abecednim redom.",
+    "listHow": "Kompatibilnost je besplatna; navođenje ovdje dio je službenog partnerstva.",
     "p2Title": "2. Jednim klikom",
     "p2P": "Vlastiti portal na vlastitom računu, bez upravljanja poslužiteljem.",
     "cfP": "Radi na Cloudflare Workers, s D1 kao bazom podataka i R2 za slike. Kliknite gumb, prijavite se u Cloudflare i slijedite korake. Za portal u svakodnevnoj upotrebi trebate paket Workers Paid (5 dolara mjesečno); besplatni paket dovoljan je samo za razgledavanje. Web-verzije vaših fotografija izrađuju vaš preglednik i alat obx.",
@@ -380,7 +409,7 @@
   },
   "retailers": {
     "h1": "Za trgovce",
-    "lead": "Marke koje koriste Open Brand Exchange isporučuju fotografije i podatke o artiklima na jedan ujednačen način, bez obzira preuzimate li ručno ili koristite softver.",
+    "lead": "Marke koje koriste Open Brand Exchange isporučuju svoje fotografije i podatke o artiklima na jedan ujednačen način. Vi ih samo primate, besplatno: u portalu svake marke u svom pregledniku ili putem jednog API-ja izravno u svoj softver.",
     "portalTitle": "Što vam daje portal marke",
     "portalP": "Svaka marka vodi vlastiti portal sa svojim imenom, na primjer „Kestrel · {portal}”.",
     "portal": [
@@ -617,7 +646,10 @@
     "templateP": "Prazan CSV predložak nalazi se i u administraciji svakog portala, pod Uvozi.",
     "brandsTitle": "Brošura za marke",
     "brandsP": "Vlastiti portal za trgovce, API, automatsko učitavanje i hosting te što je već spremno. Za dijeljenje s timom.",
-    "allLanguages": "Svi jezici"
+    "allLanguages": "Svi jezici",
+    "templateTitle": "Excel predložak za marke",
+    "templateP2": "products.xlsx: stupci standardnog uvoza, padajući popisi za svaku fiksnu vrijednost, objašnjenje svakog stupca na engleskom i nizozemskom te primjer marke Kestrel. Spremite ga kao CSV UTF-8 za učitavanje.",
+    "templateButton": "Preuzmite products.xlsx"
   },
   "faq": {
     "h1": "Česta pitanja",
@@ -661,6 +693,14 @@
       {
         "q": "Tko stoji iza toga?",
         "a": "Open Brand Exchange prenosi se na {foundation}, nizozemsku neprofitnu zakladu (stichting), kako bi standard pripadao markama, trgovcima i dobavljačima softvera koji ga koriste, a ne jednoj tvrtki. Pitanja šaljite na {email}."
+      },
+      {
+        "q": "Po čemu se ovo razlikuje od zatvorenih platformi za sadržaj?",
+        "a": "Zatvorene platforme drže sadržaj marki u sustavu jedne tvrtke i naplaćuju markama ili trgovcima pristup. Open Brand Exchange je otvoreni standard: svaka marka vodi vlastiti portal ili bira pružatelja usluge te može sve izvesti i otići. Svaki softver može ga implementirati bez licencne naknade."
+      },
+      {
+        "q": "Može li se naš portal fotografija ili DAM povezati?",
+        "a": "Da. Portal fotografija, banka fotografija ili DAM koji nudi stranu protokola za čitanje i prođe test sukladnosti kompatibilan je. Softver trgovaca tada preuzima njegove fotografije proizvoda, po artiklu i EAN-u, na isti način kao s bilo kojeg portala marke."
       }
     ]
   },
@@ -840,7 +880,7 @@
       "preview": "Verzija 0.2"
     },
     "footer": {
-      "tagline": "Otvoreni standard za isporuku fotografija proizvoda i podataka o artiklima od robnih marki njihovim trgovcima.",
+      "tagline": "Otvoreni standard za isporuku fotografija proizvoda i podataka o artiklima od modnih marki njihovim trgovcima.",
       "product": "Proizvod",
       "developers": "Za programere",
       "project": "Projekt",
@@ -861,9 +901,9 @@
       "adminAutomation": "Automatsko učitavanje u administraciji marke: gotovi recepti za alat obx, cron, GitHub Actions i više."
     },
     "home": {
-      "eyebrow": "Otvoreni standard · Besplatan softver",
-      "h1": "Vaš sadržaj o proizvodima, spreman za svakog trgovca.",
-      "lead": "Open Brand Exchange je otvoreni standard za to kako trgovci preuzimaju fotografije proizvoda i podatke o artiklima od marke: na portalu u pregledniku, kao ZIP ili tablicu, ili izravno u vlastiti softver putem jednog API-ja. Kako sadržaj dolazi na vaš portal, odlučujete sami.",
+      "eyebrow": "Otvoreni standard za modu · Besplatan softver",
+      "h1": "Sadržaj o modnim proizvodima, spreman za svakog trgovca.",
+      "lead": "Open Brand Exchange je otvoreni standard za to kako marke odjeće, obuće, torbi i prtljage isporučuju fotografije proizvoda i podatke o artiklima svojim trgovcima: na portalu, kao ZIP ili tablicu, ili izravno u softver trgovca putem jednog API-ja. Otvorena alternativa zatvorenim platformama: bez naknade po trgovcu, bez vezivanja uz jednog dobavljača, a vaši podaci ostaju vaši.",
       "ctaRetailer": "Ja sam trgovac",
       "proofLabel": "Ukratko",
       "proof": [
@@ -967,30 +1007,6 @@
           "link": "Pogledajte recepte za automatizaciju"
         }
       ],
-      "audienceEyebrow": "Za koga",
-      "audienceTitle": "Za marke i za trgovce.",
-      "brands": {
-        "h": "Za robne marke",
-        "p": "Nema više slanja datoteka. Trgovci sami preuzimaju ono što im treba, a vi odlučujete tko što dobiva.",
-        "items": [
-          "Vlastiti portal na vlastitoj domeni",
-          "Odobravate svakog trgovca i odlučujete što vidi",
-          "Vidite tko što preuzima, po trgovcu",
-          "Hostajte ga sami besplatno ili odaberite pružatelja usluge i otiđite kad god želite"
-        ],
-        "cta": "Više za marke"
-      },
-      "retailers": {
-        "h": "Za trgovce",
-        "p": "Svaka marka u jednom dosljednom formatu, u pregledniku ili izravno u vašem softveru.",
-        "items": [
-          "Zalijepite popis EAN-ova i dobijte prave fotografije za svaku veličinu",
-          "Preuzmite ZIP-ove i podatke o artiklima spremne za vašu trgovinu",
-          "Jedna veza za svaku marku u standardu",
-          "Prava korištenja i datumi embarga uz svaku fotografiju"
-        ],
-        "cta": "Više za trgovce"
-      },
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Pokrenite gdje želite. Plaćate samo hosting.",
       "editionsLead": "Tri izdanja istog portala. Prolaze iste provjere sukladnosti i govore isti API, pa možete prijeći s jednog na drugo.",
@@ -1079,12 +1095,148 @@
       "faqLink": "Sva pitanja",
       "closingTitle": "Neka trgovci sami preuzmu sadržaj.",
       "closingP": "Postavite vlastiti portal ili nam recite nešto o svojim sustavima i trgovcima i pomozite oblikovati prvo izdanje.",
-      "closingMail": "Pišite nam"
+      "closingMail": "Pišite nam",
+      "rolesEyebrow": "Tko što radi",
+      "rolesTitle": "Marke objavljuju. Trgovci primaju. Softver povezuje.",
+      "rolesLead": "Standard određuje kako sadržaj o proizvodima putuje od marke do trgovca. Svaka strana radi svoj dio i nitko ne mora čekati drugoga.",
+      "roles": [
+        {
+          "h": "Marke objavljuju",
+          "p": "Marka jednom pripremi svoj sadržaj, u standardnom formatu, na vlastitom portalu. Odlazne podatke automatizira sama ili to za nju uredi pružatelj usluge.",
+          "items": [
+            "Vaše fotografije i podaci o artiklima u jednom standardnom formatu",
+            "Automatizirajte sami besplatnim alatima ili to prepustite pružatelju usluge",
+            "Odobravate svakog trgovca i odlučujete što vidi"
+          ],
+          "cta": "Više za marke"
+        },
+        {
+          "h": "Trgovci primaju",
+          "p": "Trgovac od svake marke u standardu preuzima ono što mu treba, uvijek na isti način. Nova marka ne donosi novi posao.",
+          "items": [
+            "Pretraživanje, lijepljenje EAN-ova i preuzimanje u pregledniku",
+            "Fotografije i sastav vlakana spremni za web-trgovinu",
+            "Prava korištenja i datumi embarga uz svaku fotografiju"
+          ],
+          "cta": "Više za trgovce"
+        },
+        {
+          "h": "Dobavljači ERP-a i softvera povezuju",
+          "p": "Dobavljač ERP, PIM, softvera za web-trgovinu ili blagajnu izradi jednu vezu i zatim svaki portal marke čita na isti način. Dolazni podaci automatiziraju se kao i feed bilo kojeg drugog dobavljača.",
+          "items": [
+            "Jedan API, opisan u OpenAPI 3.1",
+            "Najprije potpuna kopija, zatim samo promjene",
+            "Testirajte svoju vezu besplatnim testovima sukladnosti"
+          ],
+          "cta": "Pročitajte vodič za programere"
+        }
+      ],
+      "portalsEyebrow": "Otvoreno za svaki portal",
+      "portalsTitle": "Već imate portal? Povežite ga sa standardom.",
+      "portalsLead": "Open Brand Exchange nije jedan određeni softver. Svaki portal koji govori protokolom i prođe test sukladnosti kompatibilan je, a softver trgovaca čita ga kao i svaki drugi.",
+      "portalTypes": [
+        {
+          "h": "Portali marki i B2B portali",
+          "p": "Portal marke, B2B trgovina ili veleprodajna platforma dodaje OBX API uz ono što već radi. Njezine marke tada dopiru do svakog sustava trgovca koji govori standardom."
+        },
+        {
+          "h": "Portali fotografija i DAM sustavi",
+          "p": "Foto portali, banke fotografija i DAM sustavi za fotografije proizvoda objavljuju fotografije po artiklu: svaka fotografija povezana je sa svojim proizvodom, bojom i EAN-om, uz web verzije, prava korištenja i datume embarga. Oni implementiraju stranu protokola za čitanje, a softver trgovaca preuzima fotografije kao s bilo kojeg drugog portala."
+        },
+        {
+          "h": "PIM i ERP sustavi",
+          "p": "PIM ili ERP u kojem su podaci o artiklima marke može ih izravno objaviti: sastav vlakana, upute za održavanje, veličine i EAN-ove u standardnom formatu, bez zasebnog portala."
+        }
+      ],
+      "portalsSteps": [
+        "Pročitajte specifikaciju i učitajte izmišljenu testnu marku Kestrel",
+        "Ponudite discovery, tok promjena, proizvode i fotografije putem API-ja",
+        "Pokrenite besplatan test sukladnosti: ako prođe, kompatibilni ste"
+      ],
+      "portalsCta": "Kompatibilno ili partner"
     },
     "pages": {
       "brandsH1": "Postavite jednom. Za sve trgovce odjednom.",
       "retailersSoftware": "Za vaš softver",
       "hostingEditions": "Tri izdanja"
     }
+  },
+  "partners": {
+    "eyebrow": "Partneri",
+    "h1": "Kompatibilno besplatno. Navedeno kao službeni partner.",
+    "lead": "Svaki portal, portal fotografija, PIM, ERP ili pružatelj usluge može raditi s Open Brand Exchangeom. Test i oznaka „Kompatibilno s Open Brand Exchangeom” besplatni su. Navođenje kao službeni partner plaćeno je članstvo, s istim uvjetima za sve.",
+    "compareTitle": "Kompatibilno ili službeni partner",
+    "colWhat": "Što dobivate",
+    "colCompatible": "Kompatibilno",
+    "colPartner": "Službeni partner",
+    "rows": [
+      {
+        "l": "Cijena",
+        "c": "Besplatno",
+        "p": "Godišnja članarina prema veličini tvrtke"
+      },
+      {
+        "l": "Položen test sukladnosti",
+        "c": "Obavezno",
+        "p": "Obavezno"
+      },
+      {
+        "l": "Smijete reći „Kompatibilno s Open Brand Exchangeom”",
+        "c": "✓",
+        "p": "✓"
+      },
+      {
+        "l": "Navedeni s logotipom na stranicama partnera i hostinga",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Značka „Službeni partner”",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Preporučujemo vas markama koje od nas traže pružatelja usluge",
+        "c": "–",
+        "p": "✓"
+      }
+    ],
+    "testTitle": "1. Testirajte sami, besplatno",
+    "testP": "Test sukladnosti je otvorenog koda. Pokrećite ga na vlastitom portalu koliko god često želite. Provjerava discovery, tok promjena, proizvode, fotografije i sigurnost te jednostavnim jezikom kaže što još nedostaje.",
+    "testSteps": [
+      "Učitajte izmišljenu testnu marku Kestrel u testni račun svog portala.",
+      "Pokrenite obx-conformance na svom portalu, kako je opisano u vodiču za programere.",
+      "Ispravite ono što ne prolazi, dok rezultat ne bude CONFORMANT."
+    ],
+    "testLink": "Kako pokrenuti test",
+    "certTitle": "2. Zatražite potvrdu, besplatno",
+    "certP": "Pošaljite nam JSON izvještaj i adresu svog testnog portala. Pokrećemo isti test i potvrđujemo rezultat. Od tada za svoj proizvod smijete reći „Kompatibilno s Open Brand Exchangeom”, za verziju koju ste testirali.",
+    "certMail": "Pošaljite izvještaj",
+    "partnerTitle": "3. Postanite službeni partner",
+    "partnerP": "Kompatibilni ste! Želite li da vas pronađu marke koje traže pružatelja usluge? Službeni partneri navedeni su s logotipom na stranicama partnera i hostinga, nose značku „Službeni partner” i preporučujemo ih markama koje od nas traže pružatelja usluge.",
+    "reqTitle": "Uvjeti, jednaki za sve",
+    "tiersTitle": "Godišnja članarina",
+    "tiers": [
+      {
+        "name": "Mala",
+        "who": "do 49 zaposlenika",
+        "price": "500 €"
+      },
+      {
+        "name": "Srednja",
+        "who": "od 50 do 249 zaposlenika",
+        "price": "2.500 €"
+      },
+      {
+        "name": "Velika",
+        "who": "250 ili više zaposlenika",
+        "price": "10.000 €"
+      }
+    ],
+    "perYear": "godišnje, bez PDV-a",
+    "tiersNote": "Predloženi iznosi za 2027., konačni nakon osnivanja zaklade. Članarina plaća samo navođenje. Standard, test i softver ostaju besplatni za sve, a partneri nemaju veći utjecaj na standard od bilo koga drugog.",
+    "partnerCta": "Postanite partner",
+    "mailSubject": "Službeni partner",
+    "listTitle": "Službeni partneri"
   }
 }

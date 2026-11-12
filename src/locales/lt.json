@@ -10,7 +10,7 @@
     "copy": "Kopijuoti",
     "copied": "Nukopijuota",
     "draft": "Išleista versija 0.2. Specifikacija ir programinė įranga naudojamos laisvai.",
-    "footerAbout": "Nemokamas ir atviras būdas prekių ženklams pateikti produktų nuotraukas ir prekių duomenis savo pardavėjams.",
+    "footerAbout": "Nemokamas ir atviras būdas mados prekių ženklams pateikti produktų nuotraukas ir prekių duomenis savo pardavėjams.",
     "footerMore": "Daugiau",
     "footerSource": "Išeities kodas ir specifikacija",
     "footerLicence": "Ši svetainė: turinys CC-BY-4.0, kodas MIT.",
@@ -34,12 +34,13 @@
     "governance": "Valdymas ir pavadinimas",
     "privacy": "Privatumas",
     "imprint": "Leidėjo informacija",
-    "cookies": "Slapukai"
+    "cookies": "Slapukai",
+    "partners": "Partneriai"
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: viena vieta ir vienas API visiems jūsų pardavėjams",
-      "description": "Nemokamas atviras standartas ir programinė įranga prekių ženklams: portalas jūsų pardavėjams, standartinis API jų sistemoms ir automatinis publikavimas iš jūsų pačių sistemų."
+      "title": "Open Brand Exchange: atviras mados produktų turinio standartas",
+      "description": "Nemokamas atviras standartas ir programinė įranga mados prekių ženklams ir pardavėjams: produktų nuotraukos, pluoštinė sudėtis ir priežiūros nurodymai vienu formatu, portale arba tiesiai pardavėjo programinėje įrangoje."
     },
     "brands": {
       "title": "Prekių ženklams",
@@ -88,6 +89,10 @@
     "cookies": {
       "title": "Slapukai",
       "description": "Ši svetainė nenaudoja slapukų."
+    },
+    "partners": {
+      "title": "Tapkite partneriu",
+      "description": "Nemokamas atitikties testas ir ženklas „Suderinama su Open Brand Exchange“ arba vieta oficialių partnerių sąraše nuo 500 € per metus."
     }
   },
   "home": {
@@ -228,7 +233,31 @@
     "nextHosting": "Pasirinkite talpinimą",
     "nextAutomation": "Peržiūrėkite automatizavimo receptus",
     "labelNote": "Jei trūksta ko nors, ko įstatymai reikalauja etiketėje, pavyzdžiui, pluoštinės sudėties ar batų medžiagų, Open Brand Exchange jus įspėja įkeliant. Įspėjimas niekada neblokuoja paskelbimo.",
-    "bagsNote": "Lagaminai ir krepšiai dabar turi matmenis (A × P × G, svoris, tūris) ir savybes (ratukai, užraktas, nuimamas dirželis …), kuriuos kiekvienas prekės ženklas matuoja vienodai."
+    "bagsNote": "Lagaminai ir krepšiai dabar turi matmenis (A × P × G, svoris, tūris) ir savybes (ratukai, užraktas, nuimamas dirželis …), kuriuos kiekvienas prekės ženklas matuoja vienodai.",
+    "startEyebrow": "Pradėkite čia",
+    "startTitle": "Nuo jūsų skaičiuoklės iki kiekvieno pardavėjo per keturis žingsnius.",
+    "startSteps": [
+      {
+        "h": "Atsisiųskite šabloną",
+        "p": "Excel failas su standarto stulpeliais, išskleidžiamaisiais sąrašais kiekvienai fiksuotai vertei ir užpildytu pavyzdžiu."
+      },
+      {
+        "h": "Užpildykite",
+        "p": "Viena eilutė kiekvienam dydžiui, ranka arba eksportuota iš jūsų sistemos. Nuotraukas pavadinkite modelis_spalva_pozicija, pavyzdžiui, KO-1001_NVY_1.jpg."
+      },
+      {
+        "h": "Įkelkite arba automatizuokite",
+        "p": "Išsaugokite kaip CSV UTF-8 ir įkelkite į portalą kartu su nuotraukomis arba leiskite portalui kas naktį paimti jūsų eksportą."
+      },
+      {
+        "h": "Atlikta",
+        "p": "Jūsų pardavėjai viską randa jūsų portale, o jų programinė įranga kiekvieną pakeitimą gauna pati. Nemokamai."
+      }
+    ],
+    "startTemplate": "Atsisiųsti Excel šabloną",
+    "partnersTitle": "Arba leiskite viską padaryti partneriui",
+    "partnersP": "Nenorite to daryti patys? Paslaugų teikėjas gali perimti visą procesą. Pavyzdžiui, Photopilot siūlo nemokamą portalą su OBX jungtimi, visišką proceso automatizavimą ir individualią integraciją su jūsų ERP.",
+    "partnersCta": "Peržiūrėti paslaugų teikėjus"
   },
   "automation": {
     "h1": "Automatizavimas",
@@ -334,14 +363,14 @@
     "fieldStatus": "Open Brand Exchange",
     "fieldExport": "Viso turinio eksportas",
     "fieldWebsite": "Svetainė",
-    "listTitle": "Norite tapti paslaugų teikėju?",
-    "listP": "Čia gali būti nurodyta bet kuri talpinimo įmonė, agentūra ar programinės įrangos tiekėjas. Sąlygos visiems vienodos:",
+    "listTitle": "Norite būti čia kaip paslaugų teikėjas?",
+    "listP": "Šiame puslapyje nurodyti paslaugų teikėjai yra oficialūs partneriai. Kriterijai visiems vienodi:",
     "listItems": [
-      "jūsų portalas išlaiko atitikties testus",
+      "jūsų portalas išlaiko dabartinės versijos atitikties testą",
       "prekės ženklas gali eksportuoti visus savo duomenis ir nuotraukas ir išeiti",
       "savo kainas ir sąlygas skelbiate savo svetainėje"
     ],
-    "listHow": "Atidarykite pull request svetainės saugykloje ir įrašykite savo duomenis į src/data/providers.json. Teikėjai pateikiami abėcėlės tvarka.",
+    "listHow": "Būti suderinamam nemokama; vieta šiame sąraše yra oficialios partnerystės dalis.",
     "p2Title": "2. Vienu paspaudimu",
     "p2P": "Nuosavas portalas jūsų paskyroje, nevaldant serverio.",
     "cfP": "Veikia Cloudflare Workers, su D1 kaip duomenų baze ir R2 vaizdams. Spustelėkite mygtuką, prisijunkite prie Cloudflare ir sekite žingsnius. Kasdien naudojamam portalui reikia plano Workers Paid (5 doleriai per mėnesį); nemokamo plano užtenka tik apsidairyti. Jūsų nuotraukų žiniatinklio versijas kuria jūsų naršyklė ir įrankis obx.",
@@ -380,7 +409,7 @@
   },
   "retailers": {
     "h1": "Pardavėjams",
-    "lead": "Prekių ženklai, naudojantys Open Brand Exchange, pateikia nuotraukas ir prekių duomenis vienodu būdu, nesvarbu, ar atsisiunčiate rankiniu būdu, ar naudojate programinę įrangą.",
+    "lead": "Prekių ženklai, naudojantys Open Brand Exchange, pateikia nuotraukas ir prekių duomenis vienodu būdu. Jūs juos tik gaunate, nemokamai: kiekvieno prekių ženklo portale naršyklėje arba per vieną API tiesiai į savo programinę įrangą.",
     "portalTitle": "Ką jums suteikia prekės ženklo portalas",
     "portalP": "Kiekvienas prekės ženklas turi savo portalą su savo pavadinimu, pavyzdžiui, „Kestrel · {portal}“.",
     "portal": [
@@ -617,7 +646,10 @@
     "templateP": "Tuščias CSV šablonas taip pat yra kiekvieno portalo administravime, skiltyje Importai.",
     "brandsTitle": "Brošiūra prekių ženklams",
     "brandsP": "Savas portalas pardavėjams, API, automatinis įkėlimas ir talpinimas bei kas jau paruošta. Pasidalyti su komanda.",
-    "allLanguages": "Visos kalbos"
+    "allLanguages": "Visos kalbos",
+    "templateTitle": "Excel šablonas prekių ženklams",
+    "templateP2": "products.xlsx: standartinio importo stulpeliai, išskleidžiamieji sąrašai kiekvienai fiksuotai vertei, kiekvieno stulpelio paaiškinimas anglų ir nyderlandų kalbomis bei Kestrel pavyzdys. Norėdami įkelti, išsaugokite kaip CSV UTF-8.",
+    "templateButton": "Atsisiųsti products.xlsx"
   },
   "faq": {
     "h1": "Dažnai užduodami klausimai",
@@ -661,6 +693,14 @@
       {
         "q": "Kas už to stovi?",
         "a": "Open Brand Exchange perduodamas organizacijai {foundation}, ne pelno siekiančiam Nyderlandų fondui (stichting), kad standartas priklausytų jį naudojantiems prekių ženklams, pardavėjams ir programinės įrangos tiekėjams, o ne vienai įmonei. Klausimus siųskite adresu {email}."
+      },
+      {
+        "q": "Kuo tai skiriasi nuo uždarų turinio platformų?",
+        "a": "Uždaros platformos laiko prekių ženklų turinį vienos įmonės sistemoje ir ima mokestį iš prekių ženklų ar pardavėjų už prieigą. Open Brand Exchange yra atviras standartas: kiekvienas prekės ženklas valdo savo portalą arba pasirenka paslaugų teikėją ir gali viską eksportuoti ir išeiti. Bet kuri programinė įranga gali jį įgyvendinti be licencijos mokesčio."
+      },
+      {
+        "q": "Ar mūsų nuotraukų portalas ar DAM gali prisijungti?",
+        "a": "Taip. Nuotraukų portalas, nuotraukų bankas ar DAM, kuris siūlo protokolo skaitymo pusę ir išlaiko atitikties testą, yra suderinamas. Tada pardavėjų programinė įranga paima jo produktų nuotraukas pagal prekę ir EAN taip pat, kaip iš bet kurio prekės ženklo portalo."
       }
     ]
   },
@@ -840,7 +880,7 @@
       "preview": "Versija 0.2"
     },
     "footer": {
-      "tagline": "Atviras standartas, pagal kurį prekių ženklai pateikia produktų nuotraukas ir prekių duomenis savo pardavėjams.",
+      "tagline": "Atviras standartas, pagal kurį mados prekių ženklai pateikia produktų nuotraukas ir prekių duomenis savo pardavėjams.",
       "product": "Produktas",
       "developers": "Kūrėjams",
       "project": "Projektas",
@@ -861,9 +901,9 @@
       "adminAutomation": "Automatinis įkėlimas prekės ženklo administravime: paruošti receptai įrankiui obx, cron, GitHub Actions ir kitiems."
     },
     "home": {
-      "eyebrow": "Atviras standartas · Nemokama programinė įranga",
-      "h1": "Jūsų prekių turinys, paruoštas kiekvienam pardavėjui.",
-      "lead": "Open Brand Exchange yra atviras standartas, nustatantis, kaip pardavėjai gauna prekės ženklo nuotraukas ir prekių duomenis: portale naršyklėje, kaip zip archyvą ar skaičiuoklę arba tiesiai į savo programinę įrangą per vieną API. Kaip turinys patenka į jūsų portalą, sprendžiate jūs.",
+      "eyebrow": "Atviras mados standartas · Nemokama programinė įranga",
+      "h1": "Mados produktų turinys, paruoštas kiekvienam pardavėjui.",
+      "lead": "Open Brand Exchange yra atviras standartas, nustatantis, kaip drabužių, avalynės, rankinių ir lagaminų prekių ženklai pateikia produktų nuotraukas ir prekių duomenis savo pardavėjams: portale, kaip zip archyvą ar skaičiuoklę arba tiesiai į pardavėjo programinę įrangą per vieną API. Atvira alternatyva uždaroms platformoms: jokio mokesčio už pardavėją, jokio susiejimo, o jūsų duomenys lieka jūsų.",
       "ctaRetailer": "Esu pardavėjas",
       "proofLabel": "Trumpai",
       "proof": [
@@ -967,30 +1007,6 @@
           "link": "Žiūrėkite automatizavimo receptus"
         }
       ],
-      "audienceEyebrow": "Kam tai skirta",
-      "audienceTitle": "Prekių ženklams ir pardavėjams.",
-      "brands": {
-        "h": "Prekių ženklams",
-        "p": "Nebereikia siuntinėti failų. Pardavėjai pasiima tai, ko reikia, o jūs sprendžiate, kas ką gauna.",
-        "items": [
-          "Nuosavas portalas jūsų domene",
-          "Jūs patvirtinate kiekvieną pardavėją ir sprendžiate, ką jis mato",
-          "Matykite, kas ką atsisiunčia, pagal pardavėją",
-          "Talpinkite patys nemokamai arba pasirinkite teikėją ir palikite jį bet kada"
-        ],
-        "cta": "Plačiau prekių ženklams"
-      },
-      "retailers": {
-        "h": "Pardavėjams",
-        "p": "Visi prekių ženklai vienu nuosekliu formatu, naršyklėje arba tiesiai jūsų programinėje įrangoje.",
-        "items": [
-          "Įklijuokite EAN sąrašą ir gaukite tinkamas nuotraukas kiekvienam dydžiui",
-          "Atsisiųskite zip archyvus ir prekių duomenis, paruoštus jūsų parduotuvei",
-          "Vienas ryšys su visais standarto prekių ženklais",
-          "Naudojimo teisės ir embargo datos prie kiekvienos nuotraukos"
-        ],
-        "cta": "Plačiau pardavėjams"
-      },
       "editionsEyebrow": "Talpinimas",
       "editionsTitle": "Kur norite. Mokate tik už talpinimą.",
       "editionsLead": "Trys to paties portalo leidimai. Jie išlaiko tuos pačius atitikties testus ir kalba tuo pačiu API, todėl galite pereiti nuo vieno prie kito.",
@@ -1079,12 +1095,148 @@
       "faqLink": "Visi klausimai",
       "closingTitle": "Leiskite pardavėjams patiems pasiimti turinį.",
       "closingP": "Įsirenkite savo portalą arba papasakokite apie savo sistemas ir pardavėjus ir padėkite formuoti pirmąjį leidimą.",
-      "closingMail": "Parašykite mums"
+      "closingMail": "Parašykite mums",
+      "rolesEyebrow": "Kas ką daro",
+      "rolesTitle": "Prekių ženklai skelbia. Pardavėjai gauna. Programinė įranga sujungia.",
+      "rolesLead": "Standartas nustato, kaip produktų turinys keliauja nuo prekės ženklo iki pardavėjo. Kiekviena šalis atlieka savo dalį, ir niekam nereikia laukti kitų.",
+      "roles": [
+        {
+          "h": "Prekių ženklai skelbia",
+          "p": "Prekės ženklas vieną kartą paruošia savo turinį standartiniu formatu savo portale. Siunčiamus duomenis jis automatizuoja pats arba tai padaro paslaugų teikėjas.",
+          "items": [
+            "Jūsų nuotraukos ir prekių duomenys vienu standartiniu formatu",
+            "Automatizuokite patys nemokamais įrankiais arba patikėkite tai paslaugų teikėjui",
+            "Jūs patvirtinate kiekvieną pardavėją ir sprendžiate, ką jis mato"
+          ],
+          "cta": "Plačiau prekių ženklams"
+        },
+        {
+          "h": "Pardavėjai gauna",
+          "p": "Pardavėjas iš kiekvieno standarto prekės ženklo pasiima tai, ko reikia, visada tuo pačiu būdu. Joks naujas prekės ženklas neprideda naujo darbo.",
+          "items": [
+            "Ieškokite, įklijuokite EAN ir atsisiųskite naršyklėje",
+            "Nuotraukos ir pluoštinė sudėtis, paruoštos internetinei parduotuvei",
+            "Naudojimo teisės ir embargo datos prie kiekvienos nuotraukos"
+          ],
+          "cta": "Plačiau pardavėjams"
+        },
+        {
+          "h": "ERP ir programinės įrangos tiekėjai sujungia",
+          "p": "ERP, PIM, internetinės parduotuvės ar kasos programinės įrangos tiekėjas sukuria vieną jungtį ir tada visus prekių ženklų portalus skaito vienodai. Gaunami duomenys automatizuojami kaip ir bet kurio kito tiekėjo duomenų srautas.",
+          "items": [
+            "Vienas API, aprašytas OpenAPI 3.1",
+            "Pirmiausia visa kopija, paskui tik pakeitimai",
+            "Išbandykite savo jungtį nemokamu atitikties testu"
+          ],
+          "cta": "Skaitykite kūrėjų vadovą"
+        }
+      ],
+      "portalsEyebrow": "Atvira kiekvienam portalui",
+      "portalsTitle": "Jau turite portalą? Prijunkite jį prie standarto.",
+      "portalsLead": "Open Brand Exchange nėra viena programa. Kiekvienas portalas, kuris palaiko protokolą ir išlaiko atitikties testą, yra suderinamas, o pardavėjų programinė įranga jį skaito kaip bet kurį kitą.",
+      "portalTypes": [
+        {
+          "h": "Prekių ženklų ir B2B portalai",
+          "p": "Prekės ženklo portalas, B2B parduotuvė ar didmeninės prekybos platforma prie to, ką jau daro, prideda OBX API. Tada jos prekių ženklai pasiekia kiekvieną pardavėjo sistemą, kuri palaiko standartą."
+        },
+        {
+          "h": "Nuotraukų portalai ir DAM",
+          "p": "Nuotraukų portalai, nuotraukų bankai ir produktų nuotraukų DAM skelbia nuotraukas pagal prekę: kiekviena nuotrauka susieta su produktu, spalva ir EAN, su interneto versijomis, naudojimo teisėmis ir embargo datomis. Jie įgyvendina protokolo skaitymo pusę, o pardavėjų programinė įranga paima nuotraukas kaip iš bet kurio kito portalo."
+        },
+        {
+          "h": "PIM ir ERP sistemos",
+          "p": "PIM ar ERP, kuriame yra prekės ženklo prekių duomenys, gali juos skelbti tiesiogiai: pluoštinę sudėtį, priežiūros nurodymus, dydžius ir EAN standartiniu formatu, be atskiro portalo."
+        }
+      ],
+      "portalsSteps": [
+        "Perskaitykite specifikaciją ir įkelkite išgalvotą bandomąjį prekės ženklą Kestrel",
+        "Per API pateikite discovery, pakeitimų srautą, produktus ir nuotraukas",
+        "Paleiskite nemokamą atitikties testą: jei jis praeina, esate suderinami"
+      ],
+      "portalsCta": "Suderinamumas ar partnerystė"
     },
     "pages": {
       "brandsH1": "Nustatykite kartą. Visiems pardavėjams iš karto.",
       "retailersSoftware": "Jūsų programinei įrangai",
       "hostingEditions": "Trys leidimai"
     }
+  },
+  "partners": {
+    "eyebrow": "Partneriai",
+    "h1": "Suderinamumas nemokamai. Vieta sąraše oficialiems partneriams.",
+    "lead": "Su Open Brand Exchange gali veikti bet kuris portalas, nuotraukų portalas, PIM, ERP ar paslaugų teikėjas. Testas ir ženklas „Suderinama su Open Brand Exchange“ yra nemokami. Vieta oficialių partnerių sąraše yra mokama narystė su vienodais kriterijais visiems.",
+    "compareTitle": "Suderinamas ar oficialus partneris",
+    "colWhat": "Ką gaunate",
+    "colCompatible": "Suderinamas",
+    "colPartner": "Oficialus partneris",
+    "rows": [
+      {
+        "l": "Kaina",
+        "c": "Nemokamai",
+        "p": "Metinis mokestis pagal įmonės dydį"
+      },
+      {
+        "l": "Išlaikytas atitikties testas",
+        "c": "Būtina",
+        "p": "Būtina"
+      },
+      {
+        "l": "Galite sakyti „Suderinama su Open Brand Exchange“",
+        "c": "✓",
+        "p": "✓"
+      },
+      {
+        "l": "Jūsų logotipas partnerių ir talpinimo puslapiuose",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Ženkliukas „Oficialus partneris“",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Rekomenduojami prekių ženklams, kurie prašo mūsų paslaugų teikėjo",
+        "c": "–",
+        "p": "✓"
+      }
+    ],
+    "testTitle": "1. Išbandykite patys, nemokamai",
+    "testP": "Atitikties testas yra atvirojo kodo. Paleiskite jį savo portalui kiek tik norite kartų. Jis tikrina discovery, pakeitimų srautą, produktus, nuotraukas ir saugumą, ir paprastai pasako, ko dar trūksta.",
+    "testSteps": [
+      "Įkelkite išgalvotą bandomąjį prekės ženklą Kestrel į savo portalo bandomąją paskyrą.",
+      "Paleiskite obx-conformance savo portalui, kaip aprašyta kūrėjų vadove.",
+      "Ištaisykite, kas neveikia, kol rezultatas parodys CONFORMANT."
+    ],
+    "testLink": "Kaip paleisti testą",
+    "certTitle": "2. Gaukite patvirtinimą, nemokamai",
+    "certP": "Atsiųskite mums JSON ataskaitą ir savo bandomojo portalo adresą. Mes paleisime tą patį testą ir patvirtinsime rezultatą. Nuo tada savo produktui galite naudoti ženklą „Suderinama su Open Brand Exchange“ tai versijai, kurią išbandėte.",
+    "certMail": "Siųsti ataskaitą",
+    "partnerTitle": "3. Tapkite oficialiu partneriu",
+    "partnerP": "Esate suderinami! Norite, kad jus rastų prekių ženklai, ieškantys paslaugų teikėjo? Oficialūs partneriai su logotipu pateikiami partnerių ir talpinimo puslapiuose, turi ženkliuką „Oficialus partneris“ ir yra rekomenduojami prekių ženklams, kurie prašo mūsų paslaugų teikėjo.",
+    "reqTitle": "Kriterijai, vienodi visiems",
+    "tiersTitle": "Metinis mokestis",
+    "tiers": [
+      {
+        "name": "Maža",
+        "who": "iki 49 darbuotojų",
+        "price": "500 €"
+      },
+      {
+        "name": "Vidutinė",
+        "who": "nuo 50 iki 249 darbuotojų",
+        "price": "2 500 €"
+      },
+      {
+        "name": "Didelė",
+        "who": "250 ir daugiau darbuotojų",
+        "price": "10 000 €"
+      }
+    ],
+    "perYear": "per metus, be PVM",
+    "tiersNote": "Siūlomi 2027 m. mokesčiai, galutiniai, kai bus įsteigtas fondas. Mokestis apmoka tik vietą sąraše. Standartas, testas ir programinė įranga lieka nemokami visiems, o partneriai dėl standarto neturi daugiau balso nei bet kas kitas.",
+    "partnerCta": "Tapkite partneriu",
+    "mailSubject": "Oficialus partneris",
+    "listTitle": "Oficialūs partneriai"
   }
 }

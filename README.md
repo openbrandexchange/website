@@ -41,7 +41,7 @@ Node 22.18 or newer. For the end-to-end tests, once: `npx playwright install chr
 | `src/assets/screens/<lang>/` | Product screenshots (2× WebP), turned into AVIF/WebP at several widths at build time. |
 | `src/lib/org-core.ts`, `src/data/imprint.json` | Who publishes the site and how to reach them; optional postal address, phone and registration number for the imprint (empty until the owner fills them in). |
 | `src/data/snippets.ts` | Copy-paste code on the automation, hosting and developer pages. |
-| `src/data/providers.json` | Hosted providers on /hosting. |
+| `src/data/providers.json` | Official partners on /hosting and /partners. |
 | `src/data/glossary*.json` | Copies of the project glossary (admin-ui terms, spec publisher line). |
 | `public/directory.json` | The public brand directory, served as `/directory.json` and rendered on /directory. |
 | `public/downloads/` | Brochures `brands-<lang>.pdf` and `retailers-<lang>.pdf` (generated), their manifest. Switch-kit e-mails are generated at build time. |
@@ -76,10 +76,12 @@ checks the listing rules and, on pull requests, fetches the entry's `/.well-know
 workflow re-checks every listed portal. Format:
 [spec docs/directory.md](https://github.com/openbrandexchange/spec/blob/main/docs/directory.md).
 
-## Becoming a listed provider
+## Compatible and official partners
 
-Add yourself to `src/data/providers.json` (same fields as the existing entry, texts per
-language; readers see their language, else English). Conditions are on the hosting page.
+Passing the conformance test and saying "Compatible with Open Brand Exchange" is free. Official
+partners (a paid listing, the same criteria for everyone; see /partners) are added to
+`src/data/providers.json` by the maintainers: same fields as the existing entry, texts per
+language; readers see their language, else English. They appear on /hosting and /partners.
 
 ## Documentation
 

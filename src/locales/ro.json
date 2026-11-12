@@ -10,7 +10,7 @@
     "copy": "Copiază",
     "copied": "Copiat",
     "draft": "Versiunea 0.2 a fost lansată. Specificația și software-ul sunt libere de folosit.",
-    "footerAbout": "O modalitate gratuită și deschisă prin care mărcile le livrează comercianților fotografii de produs și date despre articole.",
+    "footerAbout": "O modalitate gratuită și deschisă prin care mărcile de modă le livrează comercianților fotografii de produs și date despre articole.",
     "footerMore": "Mai mult",
     "footerSource": "Cod sursă și specificație",
     "footerLicence": "Acest site: conținut CC-BY-4.0, cod MIT.",
@@ -34,12 +34,13 @@
     "governance": "Guvernanță și nume",
     "privacy": "Confidențialitate",
     "imprint": "Informații legale",
-    "cookies": "Cookie-uri"
+    "cookies": "Cookie-uri",
+    "partners": "Parteneri"
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: un singur loc și un singur API pentru toți comercianții dvs.",
-      "description": "Un standard deschis și gratuit, cu software, pentru mărci: un portal pentru comercianții dvs., un API standard pentru sistemele lor și publicare automată din propriile sisteme."
+      "title": "Open Brand Exchange: standardul deschis pentru conținutul de produs din modă",
+      "description": "Un standard deschis și software gratuite pentru mărcile de modă și comercianți: fotografii de produs, compoziție fibroasă și instrucțiuni de îngrijire într-un singur format, într-un portal sau direct în software-ul comerciantului."
     },
     "brands": {
       "title": "Pentru mărci",
@@ -88,6 +89,10 @@
     "cookies": {
       "title": "Cookie-uri",
       "description": "Acest site nu setează cookie-uri."
+    },
+    "partners": {
+      "title": "Deveniți partener",
+      "description": "Un test de conformitate gratuit și eticheta „Compatibil cu Open Brand Exchange”, sau listarea ca partener oficial de la 500 € pe an."
     }
   },
   "home": {
@@ -228,7 +233,31 @@
     "nextHosting": "Alegeți găzduirea",
     "nextAutomation": "Vedeți rețetele de automatizare",
     "labelNote": "Dacă lipsește ceva ce legea impune pe etichetă, de exemplu compoziția fibroasă sau materialele unui pantof, Open Brand Exchange vă avertizează la încărcare. Un avertisment nu blochează niciodată publicarea.",
-    "bagsNote": "Valizele și gențile au acum dimensiuni (Î × L × A, greutate, volum) și caracteristici (roți, încuietoare, curea detașabilă …), măsurate la fel de fiecare marcă."
+    "bagsNote": "Valizele și gențile au acum dimensiuni (Î × L × A, greutate, volum) și caracteristici (roți, încuietoare, curea detașabilă …), măsurate la fel de fiecare marcă.",
+    "startEyebrow": "Începeți aici",
+    "startTitle": "De la foaia de calcul la fiecare comerciant, în patru pași.",
+    "startSteps": [
+      {
+        "h": "Descărcați șablonul",
+        "p": "Un fișier Excel cu coloanele standardului, liste derulante pentru fiecare valoare fixă și un exemplu completat."
+      },
+      {
+        "h": "Completați-l",
+        "p": "Un rând pe mărime, manual sau exportat din propriul sistem. Denumiți fotografiile model_culoare_poziție, de exemplu KO-1001_NVY_1.jpg."
+      },
+      {
+        "h": "Încărcați sau automatizați",
+        "p": "Salvați ca CSV UTF-8 și încărcați-l în portal împreună cu fotografiile, sau lăsați portalul să vă preia exportul în fiecare noapte."
+      },
+      {
+        "h": "Gata",
+        "p": "Comercianții găsesc totul în portalul dvs., iar software-ul lor preia singur fiecare modificare. Gratuit."
+      }
+    ],
+    "startTemplate": "Descărcați șablonul Excel",
+    "partnersTitle": "Sau lăsați un partener să facă totul",
+    "partnersP": "Preferați să nu vă ocupați singuri? Un furnizor poate prelua întregul proces. Photopilot, de exemplu, oferă un portal gratuit cu conexiunea OBX, automatizarea completă a procesului și o integrare personalizată cu ERP-ul dvs.",
+    "partnersCta": "Vedeți furnizorii"
   },
   "automation": {
     "h1": "Automatizare",
@@ -334,14 +363,14 @@
     "fieldStatus": "Open Brand Exchange",
     "fieldExport": "Exportul întregului conținut",
     "fieldWebsite": "Site web",
-    "listTitle": "Doriți să deveniți furnizor?",
-    "listP": "Aici poate apărea orice firmă de găzduire, agenție sau furnizor de software. Condițiile sunt aceleași pentru toți:",
+    "listTitle": "Doriți să apăreți aici ca furnizor?",
+    "listP": "Furnizorii de pe această pagină sunt parteneri oficiali. Condițiile sunt aceleași pentru toți:",
     "listItems": [
-      "portalul dvs. trece testele de conformitate",
+      "portalul dvs. trece testul de conformitate pentru versiunea curentă",
       "o marcă își poate exporta toate datele și fotografiile și poate pleca",
       "vă publicați prețurile și condițiile pe propriul site"
     ],
-    "listHow": "Deschideți un pull request în repository-ul site-ului cu datele dvs. în src/data/providers.json. Furnizorii sunt listați în ordine alfabetică.",
+    "listHow": "Compatibilitatea este gratuită; listarea aici face parte din parteneriatul oficial.",
     "p2Title": "2. Cu un clic",
     "p2P": "Propriul portal în propriul cont, fără să administrați un server.",
     "cfP": "Rulează pe Cloudflare Workers, cu D1 ca bază de date și R2 pentru imagini. Apăsați butonul, conectați-vă la Cloudflare și urmați pașii. Un portal folosit zilnic are nevoie de planul Workers Paid (5 dolari pe lună); planul gratuit ajunge doar pentru o privire de ansamblu. Versiunile web ale fotografiilor le creează browserul dvs. și instrumentul obx.",
@@ -380,7 +409,7 @@
   },
   "retailers": {
     "h1": "Pentru comercianți",
-    "lead": "Mărcile care folosesc Open Brand Exchange își livrează fotografiile și datele articolelor într-un mod unitar, fie că descărcați manual, fie că folosiți software.",
+    "lead": "Mărcile care folosesc Open Brand Exchange își livrează fotografiile și datele articolelor într-un mod unitar. Dumneavoastră doar le primiți, gratuit: în portalul fiecărei mărci din browser sau printr-un singur API direct în software-ul dumneavoastră.",
     "portalTitle": "Ce vă oferă portalul unei mărci",
     "portalP": "Fiecare marcă își administrează propriul portal, cu propriul nume, de exemplu „Kestrel · {portal}”.",
     "portal": [
@@ -617,7 +646,10 @@
     "templateP": "Un șablon CSV gol există și în administrarea fiecărui portal, la Importuri.",
     "brandsTitle": "Broșură pentru mărci",
     "brandsP": "Propriul portal pentru comercianți, API-ul, încărcarea automată și găzduirea, plus ce este deja gata. De împărtășit cu echipa dvs.",
-    "allLanguages": "Toate limbile"
+    "allLanguages": "Toate limbile",
+    "templateTitle": "Șablon Excel pentru mărci",
+    "templateP2": "products.xlsx: coloanele importului standard, liste derulante pentru fiecare valoare fixă, o explicație pentru fiecare coloană în engleză și neerlandeză și un exemplu de la Kestrel. Salvați-l ca CSV UTF-8 pentru a-l încărca.",
+    "templateButton": "Descărcați products.xlsx"
   },
   "faq": {
     "h1": "Întrebări frecvente",
@@ -661,6 +693,14 @@
       {
         "q": "Cine se află în spate?",
         "a": "Open Brand Exchange este transferat către {foundation}, o fundație olandeză non-profit (stichting), astfel încât standardul să aparțină mărcilor, comercianților și furnizorilor de software care îl folosesc, nu unei singure companii. Întrebările le puteți trimite la {email}."
+      },
+      {
+        "q": "Prin ce diferă de platformele de conținut închise?",
+        "a": "Platformele închise țin conținutul mărcilor în sistemul unei singure firme și le cer mărcilor sau comercianților bani pentru acces. Open Brand Exchange este un standard deschis: fiecare marcă își administrează propriul portal sau alege un furnizor și poate exporta totul și pleca. Orice software îl poate implementa fără taxă de licență."
+      },
+      {
+        "q": "Se poate conecta portalul nostru de imagini sau DAM-ul nostru?",
+        "a": "Da. Un portal de imagini, o bancă de imagini sau un DAM care oferă partea de citire a protocolului și trece testul de conformitate este compatibil. Software-ul comercianților preia atunci fotografiile de produs, pe articol și EAN, la fel ca de la orice portal de marcă."
       }
     ]
   },
@@ -840,7 +880,7 @@
       "preview": "Versiunea 0.2"
     },
     "footer": {
-      "tagline": "Standardul deschis prin care mărcile le livrează comercianților fotografii de produs și date despre articole.",
+      "tagline": "Standardul deschis pentru livrarea fotografiilor de produs și a datelor despre articole de la mărcile de modă către comercianții lor.",
       "product": "Produs",
       "developers": "Pentru dezvoltatori",
       "project": "Proiect",
@@ -861,9 +901,9 @@
       "adminAutomation": "Încărcare automată în administrarea mărcii: rețete gata făcute pentru instrumentul obx, cron, GitHub Actions și altele."
     },
     "home": {
-      "eyebrow": "Standard deschis · Software gratuit",
-      "h1": "Conținutul produselor dvs., gata pentru fiecare comerciant.",
-      "lead": "Open Brand Exchange este un standard deschis pentru felul în care comercianții preiau fotografiile produselor și datele articolelor de la o marcă: într-un portal în browser, ca arhivă zip sau foaie de calcul, ori direct în propriul software, printr-un singur API. Cum ajunge conținutul în portalul dvs. hotărâți dvs.",
+      "eyebrow": "Standard deschis pentru modă · Software gratuit",
+      "h1": "Conținutul produselor de modă, gata pentru fiecare comerciant.",
+      "lead": "Open Brand Exchange este standardul deschis pentru felul în care mărcile de modă, încălțăminte, genți și bagaje le livrează comercianților fotografii de produs și date despre articole: într-un portal, ca arhivă zip sau foaie de calcul, ori direct în software-ul comerciantului, printr-un singur API. O alternativă deschisă la platformele închise: fără taxă pe comerciant, fără dependență de un furnizor, iar datele rămân ale dvs.",
       "ctaRetailer": "Sunt comerciant",
       "proofLabel": "Pe scurt",
       "proof": [
@@ -967,30 +1007,6 @@
           "link": "Vedeți rețetele de automatizare"
         }
       ],
-      "audienceEyebrow": "Pentru cine",
-      "audienceTitle": "Pentru mărci și pentru comercianți.",
-      "brands": {
-        "h": "Pentru mărci",
-        "p": "Nu mai trimiteți fișiere. Comercianții preiau ce le trebuie, iar dvs. decideți cine ce primește.",
-        "items": [
-          "Propriul portal, pe propriul domeniu",
-          "Aprobați fiecare comerciant și decideți ce vede",
-          "Vedeți cine descarcă ce, pe fiecare comerciant",
-          "Găzduiți-l gratuit sau alegeți un furnizor și plecați oricând"
-        ],
-        "cta": "Aflați mai multe pentru mărci"
-      },
-      "retailers": {
-        "h": "Pentru comercianți",
-        "p": "Toate mărcile într-un format unitar, în browser sau direct în software-ul dvs.",
-        "items": [
-          "Lipiți lista de EAN și primiți fotografiile potrivite pentru fiecare mărime",
-          "Descărcați arhive zip și date despre articole, gata pentru magazin",
-          "O singură conexiune pentru toate mărcile standardului",
-          "Drepturi de utilizare și date de embargo la fiecare fotografie"
-        ],
-        "cta": "Aflați mai multe pentru comercianți"
-      },
       "editionsEyebrow": "Găzduire",
       "editionsTitle": "Unde doriți. Plătiți doar găzduirea.",
       "editionsLead": "Trei ediții ale aceluiași portal. Trec aceleași teste de conformitate și vorbesc același API, deci puteți trece oricând de la una la alta.",
@@ -1079,12 +1095,148 @@
       "faqLink": "Toate întrebările",
       "closingTitle": "Lăsați comercianții să preia singuri conținutul.",
       "closingP": "Configurați-vă propriul portal sau povestiți-ne despre sistemele și comercianții dvs. și ajutați-ne să modelăm prima versiune.",
-      "closingMail": "Scrieți-ne"
+      "closingMail": "Scrieți-ne",
+      "rolesEyebrow": "Cine ce face",
+      "rolesTitle": "Mărcile publică. Comercianții primesc. Software-ul conectează.",
+      "rolesLead": "Standardul stabilește cum ajunge conținutul de produs de la marcă la comerciant. Fiecare parte își face partea, și nimeni nu trebuie să aștepte după altcineva.",
+      "roles": [
+        {
+          "h": "Mărcile publică",
+          "p": "O marcă își pregătește conținutul o singură dată, în formatul standard, în propriul portal. Automatizează singură datele care pleacă, sau se ocupă un furnizor.",
+          "items": [
+            "Fotografiile și datele articolelor într-un singur format standard",
+            "Automatizați singuri cu instrumentele gratuite sau lăsați un furnizor să o facă",
+            "Aprobați fiecare comerciant și decideți ce vede"
+          ],
+          "cta": "Aflați mai multe pentru mărci"
+        },
+        {
+          "h": "Comercianții primesc",
+          "p": "Un comerciant preia ce îi trebuie de la fiecare marcă din standard, mereu în același fel. Nicio muncă nouă pentru fiecare marcă nouă.",
+          "items": [
+            "Căutați, lipiți coduri EAN și descărcați în browser",
+            "Fotografii și compoziție fibroasă gata pentru magazinul online",
+            "Drepturi de utilizare și date de embargo la fiecare fotografie"
+          ],
+          "cta": "Aflați mai multe pentru comercianți"
+        },
+        {
+          "h": "Furnizorii de ERP și software se conectează",
+          "p": "Un furnizor de software ERP, PIM, de magazin online sau de casă de marcat construiește o singură conexiune și apoi citește fiecare portal de marcă în același fel. Datele care intră se automatizează ca la orice alt flux de la furnizori.",
+          "items": [
+            "Un singur API, documentat în OpenAPI 3.1",
+            "Mai întâi o copie completă, apoi doar modificările",
+            "Testați conexiunea cu testul de conformitate gratuit"
+          ],
+          "cta": "Citiți ghidul pentru dezvoltatori"
+        }
+      ],
+      "portalsEyebrow": "Deschis oricărui portal",
+      "portalsTitle": "Aveți deja un portal? Conectați-l la standard.",
+      "portalsLead": "Open Brand Exchange nu este un singur software. Orice portal care vorbește protocolul și trece testul de conformitate este compatibil, iar software-ul comercianților îl citește ca pe oricare altul.",
+      "portalTypes": [
+        {
+          "h": "Portaluri de marcă și B2B",
+          "p": "Un portal de marcă, un magazin B2B sau o platformă en-gros adaugă API-ul OBX pe lângă ce face deja. Mărcile sale ajung astfel la fiecare sistem de comerciant care vorbește standardul."
+        },
+        {
+          "h": "Portaluri de imagini și DAM-uri",
+          "p": "Portalurile foto, băncile de imagini și DAM-urile pentru fotografii de produs publică fotografiile pe articol: fiecare fotografie legată de produs, culoare și EAN, cu versiuni web, drepturi de utilizare și date de embargo. Ele implementează partea de citire a protocolului, iar software-ul comercianților preia fotografiile ca de la orice alt portal."
+        },
+        {
+          "h": "Sisteme PIM și ERP",
+          "p": "Un PIM sau ERP care conține datele articolelor unei mărci le poate publica direct: compoziție fibroasă, instrucțiuni de îngrijire, mărimi și coduri EAN în formatul standard, fără un portal separat."
+        }
+      ],
+      "portalsSteps": [
+        "Citiți specificația și încărcați marca de test fictivă Kestrel",
+        "Oferiți descoperirea, fluxul de modificări, produsele și fotografiile prin API",
+        "Rulați testul de conformitate gratuit: dacă trece, sunteți compatibil"
+      ],
+      "portalsCta": "Compatibil sau partener"
     },
     "pages": {
       "brandsH1": "Configurați o dată. Pentru toți comercianții deodată.",
       "retailersSoftware": "Pentru software-ul dvs.",
       "hostingEditions": "Cele trei ediții"
     }
+  },
+  "partners": {
+    "eyebrow": "Parteneri",
+    "h1": "Compatibil gratuit. Listat ca partener oficial.",
+    "lead": "Orice portal, portal de imagini, PIM, ERP sau furnizor poate lucra cu Open Brand Exchange. Testul și eticheta „Compatibil cu Open Brand Exchange” sunt gratuite. Listarea ca partener oficial este o calitate de membru plătită, cu aceleași condiții pentru toți.",
+    "compareTitle": "Compatibil sau partener oficial",
+    "colWhat": "Ce primiți",
+    "colCompatible": "Compatibil",
+    "colPartner": "Partener oficial",
+    "rows": [
+      {
+        "l": "Preț",
+        "c": "Gratuit",
+        "p": "Taxă anuală după mărimea firmei"
+      },
+      {
+        "l": "Test de conformitate trecut",
+        "c": "Obligatoriu",
+        "p": "Obligatoriu"
+      },
+      {
+        "l": "Puteți spune „Compatibil cu Open Brand Exchange”",
+        "c": "✓",
+        "p": "✓"
+      },
+      {
+        "l": "Listat cu logo pe paginile de parteneri și de găzduire",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Insigna „Partener oficial”",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Recomandat mărcilor care ne cer un furnizor",
+        "c": "–",
+        "p": "✓"
+      }
+    ],
+    "testTitle": "1. Testați singuri, gratuit",
+    "testP": "Testul de conformitate este open source. Rulați-l pe propriul portal ori de câte ori doriți. Verifică descoperirea, fluxul de modificări, produsele, fotografiile și securitatea și vă spune pe înțeles ce mai lipsește.",
+    "testSteps": [
+      "Încărcați marca de test fictivă Kestrel într-un cont de test al portalului dvs.",
+      "Rulați obx-conformance pe portalul dvs., cum este descris în ghidul pentru dezvoltatori.",
+      "Corectați ce nu trece, până când rezultatul arată CONFORMANT."
+    ],
+    "testLink": "Cum rulați testul",
+    "certTitle": "2. Obțineți confirmarea, gratuit",
+    "certP": "Trimiteți-ne raportul JSON și adresa portalului dvs. de test. Rulăm același test și confirmăm rezultatul. De atunci puteți spune că produsul dvs. este „Compatibil cu Open Brand Exchange”, pentru versiunea testată.",
+    "certMail": "Trimiteți raportul",
+    "partnerTitle": "3. Deveniți partener oficial",
+    "partnerP": "Sunteți compatibil? Vreți să vă găsească mărcile care caută un furnizor? Partenerii oficiali apar cu logo pe paginile de parteneri și de găzduire, poartă insigna „Partener oficial” și sunt recomandați mărcilor care ne cer un furnizor.",
+    "reqTitle": "Condițiile, aceleași pentru toți",
+    "tiersTitle": "Taxă anuală",
+    "tiers": [
+      {
+        "name": "Mică",
+        "who": "până la 49 de angajați",
+        "price": "500 €"
+      },
+      {
+        "name": "Medie",
+        "who": "între 50 și 249 de angajați",
+        "price": "2.500 €"
+      },
+      {
+        "name": "Mare",
+        "who": "250 de angajați sau mai mulți",
+        "price": "10.000 €"
+      }
+    ],
+    "perYear": "pe an, fără TVA",
+    "tiersNote": "Taxe propuse pentru 2027, definitive după înființarea fundației. Taxa acoperă doar listarea. Standardul, testul și software-ul rămân gratuite pentru toți, iar partenerii nu au mai mult cuvânt de spus asupra standardului decât oricine altcineva.",
+    "partnerCta": "Deveniți partener",
+    "mailSubject": "Partener oficial",
+    "listTitle": "Parteneri oficiali"
   }
 }

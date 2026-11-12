@@ -10,7 +10,7 @@
     "copy": "Copiar",
     "copied": "Copiado",
     "draft": "A versão 0.2 foi publicada. A especificação e o software são de utilização livre.",
-    "footerAbout": "Uma forma gratuita e aberta de as marcas entregarem imagens de produto e dados de artigos aos seus revendedores.",
+    "footerAbout": "Uma forma gratuita e aberta de as marcas de moda entregarem imagens de produto e dados de artigos aos seus revendedores.",
     "footerMore": "Mais",
     "footerSource": "Código-fonte e especificação",
     "footerLicence": "Este site: conteúdo CC-BY-4.0, código MIT.",
@@ -34,12 +34,13 @@
     "governance": "Governação e nome",
     "privacy": "Privacidade",
     "imprint": "Informação legal",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "partners": "Parceiros"
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: um só lugar e uma só API para todos os seus revendedores",
-      "description": "Uma norma aberta e gratuita, com software, para marcas: um portal para os seus revendedores, uma API padrão para o software deles e publicação automática a partir dos seus sistemas."
+      "title": "Open Brand Exchange: a norma aberta para conteúdo de produto na moda",
+      "description": "Uma norma aberta e software gratuitos para marcas de moda e revendedores: fotografias de produto, composição em fibras e instruções de cuidados num só formato, num portal ou diretamente no software do revendedor."
     },
     "brands": {
       "title": "Para marcas",
@@ -88,6 +89,10 @@
     "cookies": {
       "title": "Cookies",
       "description": "Este site não utiliza cookies."
+    },
+    "partners": {
+      "title": "Tornar-se parceiro",
+      "description": "Um teste de conformidade gratuito e o selo «Compatível com Open Brand Exchange», ou uma presença como parceiro oficial a partir de 500 € por ano."
     }
   },
   "home": {
@@ -228,7 +233,31 @@
     "nextHosting": "Escolher o alojamento",
     "nextAutomation": "Ver as receitas de automatização",
     "labelNote": "Se faltar algo que a lei exige na etiqueta, como a composição em fibras ou os materiais de um sapato, o Open Brand Exchange avisa-o no carregamento. Um aviso nunca impede a publicação.",
-    "bagsNote": "As malas de viagem e as bolsas incluem agora medidas (A × L × P, peso, capacidade) e características (rodas, fechadura, alça amovível…), que todas as marcas medem da mesma forma."
+    "bagsNote": "As malas de viagem e as bolsas incluem agora medidas (A × L × P, peso, capacidade) e características (rodas, fechadura, alça amovível…), que todas as marcas medem da mesma forma.",
+    "startEyebrow": "Comece aqui",
+    "startTitle": "Da sua folha de cálculo a todos os revendedores, em quatro passos.",
+    "startSteps": [
+      {
+        "h": "Transfira o modelo",
+        "p": "Um ficheiro Excel com as colunas da norma, listas pendentes para cada valor fixo e um exemplo preenchido."
+      },
+      {
+        "h": "Preencha-o",
+        "p": "Uma linha por tamanho, à mão ou exportada do seu próprio sistema. Dê às fotografias o nome modelo_cor_posição, por exemplo KO-1001_NVY_1.jpg."
+      },
+      {
+        "h": "Carregue ou automatize",
+        "p": "Guarde como CSV UTF-8 e carregue-o no seu portal com as fotografias, ou deixe o portal ir buscar a sua exportação todas as noites."
+      },
+      {
+        "h": "Pronto",
+        "p": "Os seus revendedores encontram tudo no seu portal, e o software deles recebe cada alteração automaticamente. Gratuito."
+      }
+    ],
+    "startTemplate": "Transferir o modelo Excel",
+    "partnersTitle": "Ou deixe um parceiro tratar de tudo",
+    "partnersP": "Prefere não ser a sua equipa a fazê-lo? Um fornecedor pode assumir todo o processo. A Photopilot, por exemplo, oferece um portal gratuito com a ligação OBX, a automatização completa do processo e uma integração à medida com o seu ERP.",
+    "partnersCta": "Ver os fornecedores"
   },
   "automation": {
     "h1": "Automatização",
@@ -334,14 +363,14 @@
     "fieldStatus": "Open Brand Exchange",
     "fieldExport": "Exportar todo o seu conteúdo",
     "fieldWebsite": "Site",
-    "listTitle": "Quer ser fornecedor?",
-    "listP": "Qualquer empresa de alojamento, agência ou fabricante de software pode constar aqui. As condições são iguais para todos:",
+    "listTitle": "Quer constar aqui como fornecedor?",
+    "listP": "Os fornecedores nesta página são parceiros oficiais. As condições são iguais para todos:",
     "listItems": [
-      "o seu portal passa nos testes de conformidade",
+      "o seu portal passa no teste de conformidade da versão atual",
       "uma marca pode exportar todos os dados e imagens e sair",
-      "publica os seus preços e condições no seu próprio site"
+      "publica os seus próprios preços e condições no seu site"
     ],
-    "listHow": "Abra um pull request no repositório do site com os seus dados em src/data/providers.json. Os fornecedores aparecem por ordem alfabética.",
+    "listHow": "Ser compatível é gratuito; constar aqui faz parte da parceria oficial.",
     "p2Title": "2. Com um clique",
     "p2P": "O seu próprio portal na sua própria conta, sem gerir um servidor.",
     "cfP": "Funciona no Cloudflare Workers, com D1 como base de dados e R2 para as imagens. Clique no botão, inicie sessão no Cloudflare e siga os passos. Um portal de uso diário precisa do plano Workers Paid (5 dólares por mês); o plano gratuito só chega para dar uma vista de olhos. As versões web das suas fotos são criadas pelo seu navegador e pela ferramenta obx.",
@@ -380,7 +409,7 @@
   },
   "retailers": {
     "h1": "Para revendedores",
-    "lead": "As marcas que usam o Open Brand Exchange entregam imagens e dados de artigos de uma única forma, quer transfira à mão quer use software.",
+    "lead": "As marcas que usam o Open Brand Exchange entregam as suas imagens e dados de artigos de uma única forma. Você apenas recebe, gratuitamente: no portal de cada marca no seu navegador ou através de uma única API diretamente no seu software.",
     "portalTitle": "O que o portal de uma marca lhe oferece",
     "portalP": "Cada marca gere o seu próprio portal, com o seu nome: por exemplo «Kestrel · {portal}».",
     "portal": [
@@ -617,7 +646,10 @@
     "templateP": "Também existe um modelo CSV vazio na administração de cada portal, em Importações.",
     "brandsTitle": "Brochura para marcas",
     "brandsP": "O seu próprio portal para revendedores, a API, o envio automático e o alojamento, e o que já está pronto. Para partilhar com a sua equipa.",
-    "allLanguages": "Todos os idiomas"
+    "allLanguages": "Todos os idiomas",
+    "templateTitle": "Modelo Excel para marcas",
+    "templateP2": "products.xlsx: as colunas da importação padrão, listas pendentes para cada valor fixo, uma explicação por coluna em inglês e neerlandês, e um exemplo da Kestrel. Guarde-o como CSV UTF-8 para o carregar.",
+    "templateButton": "Transferir products.xlsx"
   },
   "faq": {
     "h1": "Perguntas frequentes",
@@ -661,6 +693,14 @@
       {
         "q": "Quem está por trás?",
         "a": "O Open Brand Exchange está a ser entregue à {foundation}, uma fundação neerlandesa sem fins lucrativos (stichting), para que a norma pertença às marcas, revendedores e fornecedores de software que a usam, e não a uma só empresa. Pode enviar perguntas para {email}."
+      },
+      {
+        "q": "Em que difere das plataformas de conteúdo fechadas?",
+        "a": "As plataformas fechadas guardam o conteúdo das marcas no sistema de uma única empresa e cobram às marcas ou aos revendedores pelo acesso. O Open Brand Exchange é uma norma aberta: cada marca gere o seu próprio portal ou escolhe um fornecedor, e pode exportar tudo e sair. Qualquer software a pode implementar sem pagar licença."
+      },
+      {
+        "q": "O nosso portal de imagens ou DAM pode ligar-se?",
+        "a": "Sim. Um portal de imagens, banco de imagens ou DAM que ofereça o lado de leitura do protocolo e passe no teste de conformidade é compatível. O software dos revendedores obtém então as imagens de produto, por artigo e EAN, da mesma forma que de qualquer portal de marca."
       }
     ]
   },
@@ -840,7 +880,7 @@
       "preview": "Versão 0.2"
     },
     "footer": {
-      "tagline": "A norma aberta para as marcas entregarem imagens de produto e dados de artigos aos seus revendedores.",
+      "tagline": "A norma aberta para a entrega de imagens de produto e dados de artigos das marcas de moda aos seus revendedores.",
       "product": "Produto",
       "developers": "Programadores",
       "project": "Projeto",
@@ -861,9 +901,9 @@
       "adminAutomation": "Envio automático na administração da marca: receitas prontas para a ferramenta obx, cron, GitHub Actions e muito mais."
     },
     "home": {
-      "eyebrow": "Norma aberta · Software livre",
-      "h1": "O conteúdo dos seus produtos, pronto para todos os revendedores.",
-      "lead": "O Open Brand Exchange é uma norma aberta para a forma como os revendedores obtêm as fotografias e os dados de artigo de uma marca: num portal no navegador, em zip ou folha de cálculo, ou diretamente no seu próprio software através de uma única API. A forma como o conteúdo chega ao seu portal fica ao seu critério.",
+      "eyebrow": "Norma aberta para a moda · Software gratuito",
+      "h1": "Conteúdo de produto de moda, pronto para todos os revendedores.",
+      "lead": "O Open Brand Exchange é a norma aberta para a forma como as marcas de moda, calçado, malas e artigos de viagem entregam fotografias de produto e dados de artigos aos seus revendedores: num portal, em zip ou folha de cálculo, ou diretamente no software do revendedor através de uma única API. Uma alternativa aberta às plataformas fechadas: sem custos por revendedor, sem dependência de um fornecedor, e os seus dados continuam a ser seus.",
       "ctaRetailer": "Sou revendedor",
       "proofLabel": "Em resumo",
       "proof": [
@@ -967,30 +1007,6 @@
           "link": "Veja as receitas de automatização"
         }
       ],
-      "audienceEyebrow": "Para quem é",
-      "audienceTitle": "Para marcas e para revendedores.",
-      "brands": {
-        "h": "Para marcas",
-        "p": "Acabou o envio de ficheiros. Os revendedores vão buscar o que precisam e é a sua marca que decide quem recebe o quê.",
-        "items": [
-          "O seu próprio portal, no seu próprio domínio",
-          "Aprova cada revendedor e decide o que ele vê",
-          "Veja quem transfere o quê, por revendedor",
-          "Aloje-o gratuitamente ou escolha um fornecedor e saia quando quiser"
-        ],
-        "cta": "Saiba mais para marcas"
-      },
-      "retailers": {
-        "h": "Para revendedores",
-        "p": "Todas as marcas num formato coerente, no seu navegador ou diretamente no seu software.",
-        "items": [
-          "Cole a sua lista de EAN e receba as imagens certas para cada tamanho",
-          "Transfira zips e dados de artigos, prontos para a sua loja",
-          "Uma só ligação para todas as marcas da norma",
-          "Direitos de utilização e datas de embargo em cada imagem"
-        ],
-        "cta": "Saiba mais para revendedores"
-      },
       "editionsEyebrow": "Alojamento",
       "editionsTitle": "Onde quiser. Paga só o alojamento.",
       "editionsLead": "Três edições do mesmo portal. Passam nos mesmos testes de conformidade e falam a mesma API, por isso pode mudar de uma para outra.",
@@ -1079,12 +1095,148 @@
       "faqLink": "Todas as perguntas",
       "closingTitle": "Deixe os seus revendedores irem buscá-lo sozinhos.",
       "closingP": "Crie o seu próprio portal, ou fale-nos dos seus sistemas e revendedores e ajude a moldar a primeira versão.",
-      "closingMail": "Envie-nos um e-mail"
+      "closingMail": "Envie-nos um e-mail",
+      "rolesEyebrow": "Quem faz o quê",
+      "rolesTitle": "As marcas publicam. Os revendedores recebem. O software liga tudo.",
+      "rolesLead": "A norma define como o conteúdo de produto passa da marca para o revendedor. Cada parte faz o que lhe cabe, e ninguém tem de esperar pelos outros.",
+      "roles": [
+        {
+          "h": "As marcas publicam",
+          "p": "Uma marca prepara o seu conteúdo uma vez, no formato da norma, no seu próprio portal. Automatiza ela própria os dados que saem, ou um fornecedor trata disso.",
+          "items": [
+            "As suas fotografias e dados de artigos num único formato padrão",
+            "Automatize com as ferramentas gratuitas, ou deixe um fornecedor fazê-lo",
+            "Aprova cada revendedor e decide o que ele vê"
+          ],
+          "cta": "Saiba mais para marcas"
+        },
+        {
+          "h": "Os revendedores recebem",
+          "p": "Um revendedor obtém o que precisa de cada marca da norma, sempre da mesma forma. Nenhum trabalho novo por cada nova marca.",
+          "items": [
+            "Pesquise, cole EAN e transfira no navegador",
+            "Imagens e composição em fibras prontas para a loja online",
+            "Direitos de utilização e datas de embargo em cada imagem"
+          ],
+          "cta": "Saiba mais para revendedores"
+        },
+        {
+          "h": "Os fabricantes de ERP e software ligam-se",
+          "p": "Um fabricante de software de ERP, PIM, loja online ou ponto de venda constrói uma única ligação e passa a ler todos os portais de marca da mesma forma. Os dados que entram são automatizados como os de qualquer outro fornecedor.",
+          "items": [
+            "Uma API, documentada em OpenAPI 3.1",
+            "Primeiro uma cópia completa, depois só as alterações",
+            "Teste a sua ligação com os testes de conformidade gratuitos"
+          ],
+          "cta": "Ler o guia para programadores"
+        }
+      ],
+      "portalsEyebrow": "Aberto a todos os portais",
+      "portalsTitle": "Já tem um portal? Ligue-o à norma.",
+      "portalsLead": "O Open Brand Exchange não é um único software. Qualquer portal que fale o protocolo e passe no teste de conformidade é compatível, e o software dos revendedores lê-o como qualquer outro.",
+      "portalTypes": [
+        {
+          "h": "Portais de marca e B2B",
+          "p": "Um portal de marca, loja B2B ou plataforma grossista acrescenta a API OBX ao que já faz. As suas marcas chegam então a todos os sistemas de revendedores que falam a norma."
+        },
+        {
+          "h": "Portais de imagens e DAM",
+          "p": "Portais de fotografias, bancos de imagens e DAM para imagens de produto publicam as imagens por artigo: cada fotografia ligada ao seu produto, cor e EAN, com versões para a web, direitos de utilização e datas de embargo. Implementam o lado de leitura do protocolo, e o software dos revendedores obtém as imagens como de qualquer outro portal."
+        },
+        {
+          "h": "Sistemas PIM e ERP",
+          "p": "Um PIM ou ERP que contém os dados de artigos de uma marca pode publicá-los diretamente: composição em fibras, instruções de cuidados, tamanhos e EAN no formato da norma, sem um portal à parte."
+        }
+      ],
+      "portalsSteps": [
+        "Leia a especificação e carregue a marca de teste fictícia Kestrel",
+        "Disponibilize a descoberta, o feed de alterações, os produtos e as imagens através da API",
+        "Execute o teste de conformidade gratuito: se passar, é compatível"
+      ],
+      "portalsCta": "Compatível ou parceiro"
     },
     "pages": {
       "brandsH1": "Configure uma vez. Para todos os revendedores ao mesmo tempo.",
       "retailersSoftware": "Para o seu software",
       "hostingEditions": "As três edições"
     }
+  },
+  "partners": {
+    "eyebrow": "Parceiros",
+    "h1": "Compatível, gratuitamente. Listado como parceiro oficial.",
+    "lead": "Qualquer portal, portal de imagens, PIM, ERP ou fornecedor pode trabalhar com o Open Brand Exchange. O teste e o selo «Compatível com Open Brand Exchange» são gratuitos. Constar como parceiro oficial é uma adesão paga, com as mesmas condições para todos.",
+    "compareTitle": "Compatível ou parceiro oficial",
+    "colWhat": "O que recebe",
+    "colCompatible": "Compatível",
+    "colPartner": "Parceiro oficial",
+    "rows": [
+      {
+        "l": "Preço",
+        "c": "Gratuito",
+        "p": "Quota anual conforme a dimensão da empresa"
+      },
+      {
+        "l": "Aprovado no teste de conformidade",
+        "c": "Obrigatório",
+        "p": "Obrigatório"
+      },
+      {
+        "l": "Pode dizer «Compatível com Open Brand Exchange»",
+        "c": "✓",
+        "p": "✓"
+      },
+      {
+        "l": "Listado com o seu logótipo nas páginas de parceiros e de alojamento",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "O selo «Parceiro oficial»",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Indicado às marcas que nos pedem um fornecedor",
+        "c": "–",
+        "p": "✓"
+      }
+    ],
+    "testTitle": "1. Teste por conta própria, gratuitamente",
+    "testP": "O teste de conformidade é open source. Execute-o contra o seu próprio portal sempre que quiser. Verifica a descoberta, o feed de alterações, os produtos, as imagens e a segurança, e diz em linguagem simples o que ainda falta.",
+    "testSteps": [
+      "Carregue a marca de teste fictícia Kestrel numa conta de teste do seu portal.",
+      "Execute o obx-conformance contra o seu portal, como descrito no guia para programadores.",
+      "Corrija o que falha, até o resultado indicar CONFORMANT."
+    ],
+    "testLink": "Como executar o teste",
+    "certTitle": "2. Peça a confirmação, gratuitamente",
+    "certP": "Envie-nos o relatório JSON e o endereço do seu portal de teste. Executamos o mesmo teste e confirmamos o resultado. A partir daí pode dizer que o seu produto é «Compatível com Open Brand Exchange», para a versão que testou.",
+    "certMail": "Enviar o seu relatório",
+    "partnerTitle": "3. Torne-se parceiro oficial",
+    "partnerP": "Já é compatível? Quer que as marcas que procuram um fornecedor o encontrem? Os parceiros oficiais aparecem com o seu logótipo nas páginas de parceiros e de alojamento, têm o selo «Parceiro oficial» e são indicados às marcas que nos pedem um fornecedor.",
+    "reqTitle": "As condições, iguais para todos",
+    "tiersTitle": "Quota anual",
+    "tiers": [
+      {
+        "name": "Pequena",
+        "who": "até 49 colaboradores",
+        "price": "500 €"
+      },
+      {
+        "name": "Média",
+        "who": "50 a 249 colaboradores",
+        "price": "2500 €"
+      },
+      {
+        "name": "Grande",
+        "who": "250 colaboradores ou mais",
+        "price": "10 000 €"
+      }
+    ],
+    "perYear": "por ano, sem IVA",
+    "tiersNote": "Valores propostos para 2027, definitivos quando a fundação estiver constituída. A quota paga apenas a presença na lista. A norma, o teste e o software continuam gratuitos para todos, e os parceiros não têm mais voz na norma do que qualquer outra pessoa.",
+    "partnerCta": "Tornar-se parceiro",
+    "mailSubject": "Parceiro oficial",
+    "listTitle": "Parceiros oficiais"
   }
 }

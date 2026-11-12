@@ -11,7 +11,7 @@ const t = messages[lang];
 const f = t.site.footer;
 const page = (p: PageKey) => ({ href: url(lang, p), label: t.nav[p as keyof typeof t.nav] });
 const columns = [
-  { title: f.product, links: [page('brands'), page('retailers'), page('automation'), page('hosting'), page('directory')] },
+  { title: f.product, links: [page('brands'), page('retailers'), page('automation'), page('hosting'), page('partners'), page('directory')] },
   {
     title: f.developers,
     links: [

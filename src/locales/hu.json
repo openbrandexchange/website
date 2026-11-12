@@ -10,7 +10,7 @@
     "copy": "Másolás",
     "copied": "Másolva",
     "draft": "Megjelent a 0.2-es verzió. A specifikáció és a szoftver szabadon használható.",
-    "footerAbout": "Ingyenes, nyílt módszer, amellyel a márkák termékfotókat és cikkadatokat juttathatnak el viszonteladóiknak.",
+    "footerAbout": "Ingyenes, nyílt módszer, amellyel a divatmárkák termékfotókat és cikkadatokat juttathatnak el viszonteladóiknak.",
     "footerMore": "Továbbiak",
     "footerSource": "Forráskód és specifikáció",
     "footerLicence": "Ez a weboldal: tartalom CC-BY-4.0, kód MIT.",
@@ -34,12 +34,13 @@
     "governance": "Irányítás és név",
     "privacy": "Adatvédelem",
     "imprint": "Impresszum",
-    "cookies": "Sütik"
+    "cookies": "Sütik",
+    "partners": "Partnerek"
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: egy hely és egy API minden viszonteladójának",
-      "description": "Ingyenes, nyílt szabvány és szoftver márkáknak: portál a viszonteladóinak, szabványos API a rendszereiknek és automatikus közzététel a saját rendszereiből."
+      "title": "Open Brand Exchange: nyílt szabvány divattermékek tartalmához",
+      "description": "Ingyenes, nyílt szabvány és szoftver divatmárkáknak és viszonteladóknak: termékfotók, szálösszetétel és kezelési útmutató egyetlen formátumban, portálon vagy közvetlenül a viszonteladó szoftverében."
     },
     "brands": {
       "title": "Márkáknak",
@@ -88,6 +89,10 @@
     "cookies": {
       "title": "Sütik",
       "description": "Ez a weboldal nem használ sütiket."
+    },
+    "partners": {
+      "title": "Legyen partnerünk",
+      "description": "Ingyenes megfelelőségi teszt és a „Kompatibilis az Open Brand Exchange-dzsel” címke, vagy hivatalos partnerként való megjelenés évi 500 €-tól."
     }
   },
   "home": {
@@ -228,7 +233,31 @@
     "nextHosting": "Válasszon üzemeltetést",
     "nextAutomation": "Nézze meg az automatizálási recepteket",
     "labelNote": "Ha hiányzik valami, amit a jogszabály a címkén előír, például a szálösszetétel vagy egy cipő anyagai, az Open Brand Exchange feltöltéskor figyelmezteti Önt. A figyelmeztetés soha nem akadályozza a közzétételt.",
-    "bagsNote": "A bőröndök és táskák mostantól méreteket (Ma × Sz × Mé, súly, térfogat) és jellemzőket (kerekek, zár, levehető pánt …) is tartalmaznak, amelyeket minden márka ugyanúgy mér."
+    "bagsNote": "A bőröndök és táskák mostantól méreteket (Ma × Sz × Mé, súly, térfogat) és jellemzőket (kerekek, zár, levehető pánt …) is tartalmaznak, amelyeket minden márka ugyanúgy mér.",
+    "startEyebrow": "Kezdje itt",
+    "startTitle": "A táblázatától minden viszonteladóig, négy lépésben.",
+    "startSteps": [
+      {
+        "h": "Töltse le a sablont",
+        "p": "Excel-fájl a szabvány oszlopaival, legördülő listákkal minden rögzített értékhez és egy kitöltött példával."
+      },
+      {
+        "h": "Töltse ki",
+        "p": "Méretenként egy sor, kézzel vagy a saját rendszeréből exportálva. A fotókat így nevezze el: modell_szín_pozíció, például KO-1001_NVY_1.jpg."
+      },
+      {
+        "h": "Töltse fel vagy automatizálja",
+        "p": "Mentse CSV UTF-8 formátumban, és töltse fel a fotókkal együtt a portáljára, vagy hagyja, hogy a portál minden éjjel letöltse az exportját."
+      },
+      {
+        "h": "Kész",
+        "p": "Viszonteladói mindent megtalálnak a portálján, és szoftvereik maguktól átveszik az összes változást. Ingyen."
+      }
+    ],
+    "startTemplate": "Az Excel-sablon letöltése",
+    "partnersTitle": "Vagy bízzon mindent egy partnerre",
+    "partnersP": "Nem szeretné maga csinálni? Egy szolgáltató átveheti a teljes folyamatot. A Photopilot például ingyenes portált kínál OBX-kapcsolattal, a folyamat teljes automatizálásával és egyedi integrációval az Ön ERP-rendszeréhez.",
+    "partnersCta": "Szolgáltatók megtekintése"
   },
   "automation": {
     "h1": "Automatizálás",
@@ -334,14 +363,14 @@
     "fieldStatus": "Open Brand Exchange",
     "fieldExport": "Minden tartalom exportálása",
     "fieldWebsite": "Weboldal",
-    "listTitle": "Szolgáltató szeretne lenni?",
-    "listP": "Bármely tárhelycég, ügynökség vagy szoftverszállító szerepelhet itt. A feltételek mindenkire ugyanazok:",
+    "listTitle": "Szeretne itt szolgáltatóként szerepelni?",
+    "listP": "Az oldalon szereplő szolgáltatók hivatalos partnerek. A feltételek mindenkire ugyanazok:",
     "listItems": [
-      "a portálja átmegy a megfelelőségi teszteken",
-      "egy márka minden adatát és fotóját exportálhatja és távozhat",
-      "saját árait és feltételeit a saját weboldalán teszi közzé"
+      "portálja átmegy a jelenlegi verzió megfelelőségi tesztjén",
+      "a márka minden adatát és képét exportálhatja, és távozhat",
+      "árait és feltételeit a saját webhelyén teszi közzé"
     ],
-    "listHow": "Nyisson egy pull requestet a weboldal tárolójában, és adja hozzá adatait az src/data/providers.json fájlhoz. A szolgáltatók ábécérendben szerepelnek.",
+    "listHow": "A kompatibilitás ingyenes; az itteni megjelenés a hivatalos partnerség része.",
     "p2Title": "2. Egy kattintással",
     "p2P": "Saját portál a saját fiókjában, szerverkezelés nélkül.",
     "cfP": "Cloudflare Workers-en fut, adatbázisként D1-gyel, a képekhez R2-vel. Kattintson a gombra, jelentkezzen be a Cloudflare-be, és kövesse a lépéseket. A napi használatú portálhoz a Workers Paid csomag kell (havi 5 dollár); az ingyenes csomag csak körülnézésre elég. A fotói webes változatait a böngészője és az obx eszköz készíti el.",
@@ -380,7 +409,7 @@
   },
   "retailers": {
     "h1": "Viszonteladóknak",
-    "lead": "Az Open Brand Exchange-et használó márkák egységes módon szállítják fotóikat és cikkadataikat, akár kézzel tölt le, akár szoftvert használ.",
+    "lead": "Az Open Brand Exchange-et használó márkák egységes módon szállítják fotóikat és cikkadataikat. Ön csak megkapja őket, ingyenesen: az egyes márkák portálján a böngészőjében, vagy egyetlen API-n keresztül közvetlenül a szoftverébe.",
     "portalTitle": "Mit ad egy márkaportál",
     "portalP": "Minden márka saját portált üzemeltet a saját nevével, például „Kestrel · {portal}”.",
     "portal": [
@@ -617,7 +646,10 @@
     "templateP": "Üres CSV-sablon minden portál adminisztrációjában is található, az Importok alatt.",
     "brandsTitle": "Tájékoztató márkáknak",
     "brandsP": "Saját portál a viszonteladóknak, az API, az automatikus feltöltés és a tárhely, valamint ami már ma kész. Megosztható a csapatával.",
-    "allLanguages": "Minden nyelv"
+    "allLanguages": "Minden nyelv",
+    "templateTitle": "Excel-sablon márkáknak",
+    "templateP2": "products.xlsx: a szabványos import oszlopai, legördülő listák minden rögzített értékhez, oszloponkénti magyarázat angolul és hollandul, valamint egy példa a Kestreltől. A feltöltéshez mentse CSV UTF-8 formátumban.",
+    "templateButton": "A products.xlsx letöltése"
   },
   "faq": {
     "h1": "Gyakori kérdések",
@@ -661,6 +693,14 @@
       {
         "q": "Ki áll mögötte?",
         "a": "Az Open Brand Exchange a(z) {foundation} kezébe kerül, amely holland nonprofit alapítvány (stichting) lesz. Így a szabvány az azt használó márkáké, viszonteladóké és szoftverszállítóké lesz, nem egyetlen cégé. Kérdéseit a(z) {email} címre küldheti."
+      },
+      {
+        "q": "Miben különbözik ez a zárt tartalomplatformoktól?",
+        "a": "A zárt platformok egyetlen cég rendszerében tartják a márkák tartalmát, és a márkáktól vagy a viszonteladóktól díjat kérnek a hozzáférésért. Az Open Brand Exchange nyílt szabvány: minden márka saját portált üzemeltet vagy szolgáltatót választ, és mindent exportálhat, majd távozhat. Bármely szoftver licencdíj nélkül megvalósíthatja."
+      },
+      {
+        "q": "Csatlakozhat a képportálunk vagy DAM-rendszerünk?",
+        "a": "Igen. Az a képportál, képbank vagy DAM, amely kínálja a protokoll olvasási oldalát és átmegy a megfelelőségi teszten, kompatibilis. A viszonteladók szoftverei ekkor cikkenként és EAN-onként ugyanúgy töltik le a termékfotóit, mint bármely márkaportálról."
       }
     ]
   },
@@ -840,7 +880,7 @@
       "preview": "0.2-es verzió"
     },
     "footer": {
-      "tagline": "Nyílt szabvány termékfotók és cikkadatok eljuttatására a márkáktól a viszonteladóikhoz.",
+      "tagline": "Nyílt szabvány termékfotók és cikkadatok eljuttatására a divatmárkáktól a viszonteladóikhoz.",
       "product": "Termék",
       "developers": "Fejlesztőknek",
       "project": "Projekt",
@@ -861,9 +901,9 @@
       "adminAutomation": "Automatikus feltöltés a márka adminisztrációjában: kész receptek az obx eszközhöz, cronhoz, GitHub Actionshöz és máshoz."
     },
     "home": {
-      "eyebrow": "Nyílt szabvány · Ingyenes szoftver",
-      "h1": "Termékadatai készen állnak minden viszonteladónak.",
-      "lead": "Az Open Brand Exchange nyílt szabvány arra, hogyan kapják meg a viszonteladók egy márka termékfotóit és termékadatait: böngészőben egy portálon, ZIP-ként vagy táblázatként, vagy egyetlen API-n keresztül közvetlenül a saját szoftverükbe. Hogy a tartalom hogyan kerül a portáljára, azt Ön dönti el.",
+      "eyebrow": "Nyílt szabvány a divatnak · Ingyenes szoftver",
+      "h1": "Divattermékek tartalma, készen minden viszonteladónak.",
+      "lead": "Az Open Brand Exchange nyílt szabvány arra, hogyan juttatják el a ruházati, cipő-, táska- és bőröndmárkák a termékfotókat és cikkadatokat viszonteladóiknak: portálon, ZIP-ként vagy táblázatként, vagy egyetlen API-n keresztül közvetlenül a viszonteladó szoftverébe. Nyílt alternatíva a zárt platformokkal szemben: nincs viszonteladónkénti díj, nincs bezártság, és az adatai az Önéi maradnak.",
       "ctaRetailer": "Viszonteladó vagyok",
       "proofLabel": "Röviden",
       "proof": [
@@ -967,30 +1007,6 @@
           "link": "Nézze meg az automatizálási recepteket"
         }
       ],
-      "audienceEyebrow": "Kinek szól",
-      "audienceTitle": "Márkáknak és viszonteladóknak.",
-      "brands": {
-        "h": "Márkáknak",
-        "p": "Nem kell többé fájlokat küldözgetnie. A viszonteladók letöltik, amire szükségük van, és Ön dönti el, ki mit kap.",
-        "items": [
-          "Saját portál, saját domainen",
-          "Minden viszonteladót Ön hagy jóvá, és Ön dönti el, mit lát",
-          "Láthatja, ki mit tölt le, viszonteladónként",
-          "Üzemeltesse ingyen maga, vagy válasszon szolgáltatót, és váltson bármikor"
-        ],
-        "cta": "Részletek márkáknak"
-      },
-      "retailers": {
-        "h": "Viszonteladóknak",
-        "p": "Minden márka egyetlen egységes formátumban, böngészőben vagy közvetlenül a szoftverében.",
-        "items": [
-          "Illessze be EAN-listáját, és kapja meg minden mérethez a megfelelő fotókat",
-          "Töltsön le ZIP-eket és cikkadatokat, készen a webáruházához",
-          "Egy kapcsolat minden márkához, amely a szabványt követi",
-          "Felhasználási jogok és embargódátumok minden fotóhoz"
-        ],
-        "cta": "Részletek viszonteladóknak"
-      },
       "editionsEyebrow": "Üzemeltetés",
       "editionsTitle": "Futtassa, ahol akarja. Csak az üzemeltetést fizeti.",
       "editionsLead": "Ugyanannak a portálnak három kiadása. Ugyanazokon a megfelelőségi ellenőrzéseken mennek át, és ugyanazt az API-t beszélik, így bármikor válthat közöttük.",
@@ -1079,12 +1095,148 @@
       "faqLink": "Összes kérdés",
       "closingTitle": "Hagyja, hogy a viszonteladói maguk töltsék le.",
       "closingP": "Állítsa be saját portálját, vagy meséljen nekünk rendszereiről és viszonteladóiról, és formálja velünk az első kiadást.",
-      "closingMail": "Írjon nekünk"
+      "closingMail": "Írjon nekünk",
+      "rolesEyebrow": "Ki mit csinál",
+      "rolesTitle": "A márkák közzéteszik. A viszonteladók megkapják. A szoftverek összekötik.",
+      "rolesLead": "A szabvány rögzíti, hogyan jut el a terméktartalom a márkától a viszonteladóig. Mindenki a saját részét végzi, és senkinek sem kell másra várnia.",
+      "roles": [
+        {
+          "h": "A márkák közzéteszik",
+          "p": "A márka egyszer, szabványos formátumban készíti elő a tartalmát, a saját portálján. A kimenő adatokat maga automatizálja, vagy egy szolgáltató intézi.",
+          "items": [
+            "Fotói és cikkadatai egyetlen szabványos formátumban",
+            "Automatizálja maga az ingyenes eszközökkel, vagy bízza szolgáltatóra",
+            "Minden viszonteladót Ön hagy jóvá, és Ön dönti el, mit lát"
+          ],
+          "cta": "Részletek márkáknak"
+        },
+        {
+          "h": "A viszonteladók megkapják",
+          "p": "A viszonteladó minden, a szabványt követő márkától ugyanúgy szerzi be, amire szüksége van. Egy új márka nem jelent új munkát.",
+          "items": [
+            "Keresés, EAN-ok beillesztése és letöltés a böngészőben",
+            "Fotók és szálösszetétel készen a webáruházhoz",
+            "Felhasználási jogok és embargódátumok minden fotóhoz"
+          ],
+          "cta": "Részletek viszonteladóknak"
+        },
+        {
+          "h": "Az ERP- és szoftverszállítók összekötik",
+          "p": "Az ERP-, PIM-, webáruház- vagy pénztárszoftver szállítója egyetlen kapcsolatot épít ki, majd minden márkaportált ugyanúgy olvas. A beérkező adatok automatizálása ugyanúgy történik, mint bármely más beszállítói adatfolyamnál.",
+          "items": [
+            "Egyetlen API, OpenAPI 3.1 formátumban dokumentálva",
+            "Először egy teljes másolat, utána csak a változások",
+            "Tesztelje a kapcsolatát az ingyenes megfelelőségi tesztcsomaggal"
+          ],
+          "cta": "Fejlesztői útmutató"
+        }
+      ],
+      "portalsEyebrow": "Nyitott minden portál előtt",
+      "portalsTitle": "Már van portálja? Kösse össze a szabvánnyal.",
+      "portalsLead": "Az Open Brand Exchange nem egyetlen szoftver. Minden portál kompatibilis, amely beszéli a protokollt és átmegy a megfelelőségi teszten, és a viszonteladók szoftverei ugyanúgy olvassák, mint bármely másikat.",
+      "portalTypes": [
+        {
+          "h": "Márka- és B2B-portálok",
+          "p": "A márkaportál, B2B-webáruház vagy nagykereskedelmi platform a meglévő funkciói mellé teszi az OBX API-t. Márkái így minden olyan viszonteladói rendszert elérnek, amely beszéli a szabványt."
+        },
+        {
+          "h": "Képportálok és DAM-rendszerek",
+          "p": "A fotóportálok, képbankok és termékfotókhoz használt DAM-rendszerek cikkenként teszik közzé a képeket: minden fotó a termékéhez, színéhez és EAN-jához kapcsolódik, webes változatokkal, felhasználási jogokkal és embargódátumokkal. Ezek a protokoll olvasási oldalát valósítják meg, és a viszonteladók szoftverei ugyanúgy töltik le a képeket, mint bármely más portálról."
+        },
+        {
+          "h": "PIM- és ERP-rendszerek",
+          "p": "Az a PIM vagy ERP, amelyben egy márka cikkadatai vannak, közvetlenül közzéteheti azokat: szálösszetételt, kezelési útmutatót, méreteket és EAN-okat szabványos formátumban, külön portál nélkül."
+        }
+      ],
+      "portalsSteps": [
+        "Olvassa el a specifikációt, és töltse be a kitalált Kestrel tesztmárkát",
+        "Kínálja az API-n keresztül a discoveryt, a változásfolyamot, a termékeket és a képeket",
+        "Futtassa az ingyenes megfelelőségi tesztet: ha átmegy, kompatibilis"
+      ],
+      "portalsCta": "Kompatibilis vagy partner"
     },
     "pages": {
       "brandsH1": "Egyszer beállítja. Minden viszonteladónak egyszerre.",
       "retailersSoftware": "A szoftveréhez",
       "hostingEditions": "A három kiadás"
     }
+  },
+  "partners": {
+    "eyebrow": "Partnerek",
+    "h1": "Kompatibilis ingyen. Hivatalos partnerként a listán.",
+    "lead": "Bármely portál, képportál, PIM, ERP vagy szolgáltató együttműködhet az Open Brand Exchange-dzsel. A teszt és a „Kompatibilis az Open Brand Exchange-dzsel” címke ingyenes. A hivatalos partnerként való megjelenés fizetős tagság, mindenkire azonos feltételekkel.",
+    "compareTitle": "Kompatibilis vagy hivatalos partner",
+    "colWhat": "Mit kap",
+    "colCompatible": "Kompatibilis",
+    "colPartner": "Hivatalos partner",
+    "rows": [
+      {
+        "l": "Ár",
+        "c": "Ingyenes",
+        "p": "Éves díj a cégmérettől függően"
+      },
+      {
+        "l": "Sikeres megfelelőségi teszt",
+        "c": "Kötelező",
+        "p": "Kötelező"
+      },
+      {
+        "l": "Használhatja a „Kompatibilis az Open Brand Exchange-dzsel” megjelölést",
+        "c": "✓",
+        "p": "✓"
+      },
+      {
+        "l": "Logójával szerepel a partner- és üzemeltetési oldalon",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "„Hivatalos partner” jelvény",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Ajánljuk azoknak a márkáknak, akik szolgáltatót kérnek tőlünk",
+        "c": "–",
+        "p": "✓"
+      }
+    ],
+    "testTitle": "1. Tesztelje maga, ingyen",
+    "testP": "A megfelelőségi teszt nyílt forráskódú. Futtassa a saját portálján, ahányszor csak akarja. Ellenőrzi a discoveryt, a változásfolyamot, a termékeket, a képeket és a biztonságot, és érthető nyelven megmondja, mi hiányzik még.",
+    "testSteps": [
+      "Töltse be a kitalált Kestrel tesztmárkát a portálja egy tesztfiókjába.",
+      "Futtassa az obx-conformance eszközt a portálján, a fejlesztői útmutató leírása szerint.",
+      "Javítsa ki a hibákat, amíg az eredmény CONFORMANT nem lesz."
+    ],
+    "testLink": "Így futtathatja a tesztet",
+    "certTitle": "2. Erősíttesse meg, ingyen",
+    "certP": "Küldje el nekünk a JSON-jelentést és a tesztportálja címét. Lefuttatjuk ugyanazt a tesztet, és megerősítjük az eredményt. Ettől kezdve a tesztelt verzióra elmondhatja, hogy terméke „Kompatibilis az Open Brand Exchange-dzsel”.",
+    "certMail": "Jelentés küldése",
+    "partnerTitle": "3. Legyen hivatalos partner",
+    "partnerP": "Kompatibilis! Szeretné, hogy a szolgáltatót kereső márkák megtalálják? A hivatalos partnerek logójukkal szerepelnek a partner- és üzemeltetési oldalon, viselik a „Hivatalos partner” jelvényt, és ajánljuk őket azoknak a márkáknak, akik szolgáltatót kérnek tőlünk.",
+    "reqTitle": "A feltételek, mindenkire ugyanazok",
+    "tiersTitle": "Éves díj",
+    "tiers": [
+      {
+        "name": "Kis",
+        "who": "legfeljebb 49 munkavállaló",
+        "price": "500 €"
+      },
+      {
+        "name": "Közepes",
+        "who": "50–249 munkavállaló",
+        "price": "2500 €"
+      },
+      {
+        "name": "Nagy",
+        "who": "250 vagy több munkavállaló",
+        "price": "10 000 €"
+      }
+    ],
+    "perYear": "évente, áfa nélkül",
+    "tiersNote": "Javasolt díjak 2027-re, az alapítvány létrejöttével válnak véglegessé. A díj csak a megjelenésért fizetendő. A szabvány, a teszt és a szoftver mindenki számára ingyenes marad, és a partnereknek nincs nagyobb beleszólásuk a szabványba, mint bárki másnak.",
+    "partnerCta": "Legyen partnerünk",
+    "mailSubject": "Hivatalos partner",
+    "listTitle": "Hivatalos partnerek"
   }
 }

@@ -1,0 +1,58 @@
+---
+// The provider cards (src/data/providers.json), on the hosting and the partners page.
+import { getImage } from 'astro:assets';
+import { localized, messages, type Lang } from '../i18n';
+import { countryName, languageName, list } from '../lib/names';
+import providerData from '../data/providers.json';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = messages[lang];
+const c = t.hosting;
+const statusLabel: Record<string, string> = {
+  in_development: t.common.inDevelopment,
+  available: t.common.available,
+};
+const logoFiles = import.meta.glob<{ default: ImageMetadata }>('../assets/providers/*', { eager: true });
+const logoSrc = async (file: string) => {
+  const mod = logoFiles[`../assets/providers/${file}`];
+  if (!mod) throw new Error(`providers.json: logo ${file} is not in src/assets/providers/`);
+  return (await getImage({ src: mod.default, width: 320, format: 'webp' })).src;
+};
+const providers = await Promise.all(
+  [...providerData.providers]
+    .sort((a, b) => a.name.localeCompare(b.name, 'en'))
+    .map(async (p) => ({ ...p, logoLight: p.logo ? await logoSrc(p.logo.light) : null, logoDark: p.logo ? await logoSrc(p.logo.dark) : null })),
+);
+---
+
+{
+        providers.map((p) => (
+          <article class="card dir-entry" aria-labelledby={`provider-${p.id}`}>
+            {p.logoLight && (
+              <picture class="provider-logo">
+                <source srcset={p.logoDark} media="(prefers-color-scheme: dark)" />
+                <img src={p.logoLight} alt="" width="160" height="32" loading="lazy" decoding="async" />
+              </picture>
+            )}
+            <h3 id={`provider-${p.id}`}>{p.name}</h3>
+            <p>{localized(p.offers, lang)}</p>
+            <dl>
+              <dt>{c.fieldBased}</dt>
+              <dd>{countryName(lang, p.based_in)}</dd>
+              <dt>{c.fieldLanguages}</dt>
+              <dd>{list(lang, p.languages.map((l) => languageName(lang, l)))}</dd>
+              <dt>{c.fieldStatus}</dt>
+              <dd>{statusLabel[p.obx_status] ?? p.obx_status}</dd>
+              <dt>{c.fieldExport}</dt>
+              <dd>{p.data_export ? t.common.yes : '–'}</dd>
+              <dt>{c.fieldWebsite}</dt>
+              <dd>
+                <a href={p.website}>{p.website.replace(/^https:\/\//, '')}</a>
+              </dd>
+            </dl>
+          </article>
+        ))
+}

@@ -66,7 +66,7 @@ test('the mobile menu toggles and reports its state', async ({ page, isMobile })
 test('no page in any language scrolls sideways on a phone', async ({ page, isMobile }) => {
   test.skip(!isMobile, 'phone only');
   test.setTimeout(180_000);
-  const slugs = ['', 'for-brands/', 'automation/', 'hosting/', 'for-retailers/', 'developers/', 'directory/', 'downloads/', 'faq/', 'governance/', 'privacy/', 'cookies/', 'imprint/'];
+  const slugs = ['', 'for-brands/', 'automation/', 'hosting/', 'partners/', 'for-retailers/', 'developers/', 'directory/', 'downloads/', 'faq/', 'governance/', 'privacy/', 'cookies/', 'imprint/'];
   const wide: string[] = [];
   for (const lang of langs) {
     for (const slug of slugs) {
@@ -135,7 +135,7 @@ test('the desktop header stays on one row in every language', async ({ page, isM
   test.skip(isMobile, 'the full navigation only shows on wide screens');
   test.setTimeout(120_000);
   const wrapped: string[] = [];
-  for (const width of [1280, 1920]) {
+  for (const width of [1280, 1440, 1920]) {
     await page.setViewportSize({ width, height: 800 });
     for (const lang of langs) {
       await page.goto(`/${lang}/`);
@@ -160,7 +160,7 @@ test('the home video loads nothing until it is played, and plays under the CSP',
   });
   for (const [path, file] of [['/nl/', '/video/obx-nl'], ['/de/', '/video/obx-en']] as const) {
     await page.goto(path);
-    const video = page.locator('.home-video video');
+    const video = page.locator('.hero-video video');
     await expect(video).toHaveAttribute('preload', 'none');
     await expect(video).toHaveAttribute('poster', `${file}.jpg`);
     await expect(video.locator('source[type="video/mp4"]')).toHaveAttribute('src', `${file}.mp4`);
@@ -169,11 +169,11 @@ test('the home video loads nothing until it is played, and plays under the CSP',
     expect(media, `${path}: no video bytes before play`).toEqual([]);
   }
   test.skip(browserName !== 'chromium', 'playback is checked once');
-  await page.locator('.home-video video').evaluate((v: HTMLVideoElement) => {
+  await page.locator('.hero-video video').evaluate((v: HTMLVideoElement) => {
     v.muted = true;
     return v.play();
   });
-  await expect.poll(() => page.locator('.home-video video').evaluate((v: HTMLVideoElement) => v.currentTime)).toBeGreaterThan(0);
+  await expect.poll(() => page.locator('.hero-video video').evaluate((v: HTMLVideoElement) => v.currentTime)).toBeGreaterThan(0);
   expect(media.length).toBeGreaterThan(0);
   expect(await page.evaluate(() => (window as unknown as { cspViolations: string[] }).cspViolations)).toEqual([]);
 });

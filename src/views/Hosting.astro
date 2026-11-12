@@ -4,11 +4,9 @@ import PageHero from '../components/PageHero.astro';
 import DocSection from '../components/DocSection.astro';
 import Editions from '../components/Editions.astro';
 import Icon from '../components/Icon.astro';
-import { localized, messages, repo, url, type Lang } from '../i18n';
-import { countryName, languageName, list } from '../lib/names';
+import { messages, repo, url, type Lang } from '../i18n';
 import * as s from '../data/snippets';
-import providerData from '../data/providers.json';
-import { getImage } from 'astro:assets';
+import Providers from '../components/Providers.astro';
 
 interface Props {
   lang: Lang;
@@ -16,27 +14,12 @@ interface Props {
 const { lang } = Astro.props;
 const t = messages[lang];
 const c = t.hosting;
-const statusLabel: Record<string, string> = {
-  in_development: t.common.inDevelopment,
-  available: t.common.available,
-};
 const env: [string, string][] = [
   ['OBX_PUBLIC_URL', c.envPublicUrl],
   ['OBX_SECRET_KEY', c.envSecretKey],
   ['OBX_SETUP_CODE', c.envSetupCode],
   ['PORT', c.envPort],
 ];
-const logoFiles = import.meta.glob<{ default: ImageMetadata }>('../assets/providers/*', { eager: true });
-const logoSrc = async (file: string) => {
-  const mod = logoFiles[`../assets/providers/${file}`];
-  if (!mod) throw new Error(`providers.json: logo ${file} is not in src/assets/providers/`);
-  return (await getImage({ src: mod.default, width: 320, format: 'webp' })).src;
-};
-const providers = await Promise.all(
-  [...providerData.providers]
-    .sort((a, b) => a.name.localeCompare(b.name, 'en'))
-    .map(async (p) => ({ ...p, logoLight: p.logo ? await logoSrc(p.logo.light) : null, logoDark: p.logo ? await logoSrc(p.logo.dark) : null })),
-);
 ---
 
 <PageHero eyebrow={t.nav.hosting} title={t.site.home.editionsTitle} lead={c.lead}>
@@ -63,40 +46,13 @@ const providers = await Promise.all(
       <p class="lead">{c.p1P}</p>
     </header>
     <div class="cards">
-      {
-        providers.map((p) => (
-          <article class="card dir-entry" aria-labelledby={`provider-${p.id}`}>
-            {p.logoLight && (
-              <picture class="provider-logo">
-                <source srcset={p.logoDark} media="(prefers-color-scheme: dark)" />
-                <img src={p.logoLight} alt="" width="160" height="32" loading="lazy" decoding="async" />
-              </picture>
-            )}
-            <h3 id={`provider-${p.id}`}>{p.name}</h3>
-            <p>{localized(p.offers, lang)}</p>
-            <dl>
-              <dt>{c.fieldBased}</dt>
-              <dd>{countryName(lang, p.based_in)}</dd>
-              <dt>{c.fieldLanguages}</dt>
-              <dd>{list(lang, p.languages.map((l) => languageName(lang, l)))}</dd>
-              <dt>{c.fieldStatus}</dt>
-              <dd>{statusLabel[p.obx_status] ?? p.obx_status}</dd>
-              <dt>{c.fieldExport}</dt>
-              <dd>{p.data_export ? t.common.yes : '–'}</dd>
-              <dt>{c.fieldWebsite}</dt>
-              <dd>
-                <a href={p.website}>{p.website.replace(/^https:\/\//, '')}</a>
-              </dd>
-            </dl>
-          </article>
-        ))
-      }
+      <Providers lang={lang} />
       <article class="card accent" aria-labelledby="become-provider">
         <h3 id="become-provider">{c.listTitle}</h3>
         <p>{c.listP}</p>
         <ul>{c.listItems.map((i) => <li>{i}</li>)}</ul>
         <p class="small">
-          {c.listHow} <a href={repo('website')}>openbrandexchange/website</a>
+          {c.listHow} <a href={url(lang, 'partners')}>{t.partners.partnerCta}</a>
         </p>
       </article>
     </div>

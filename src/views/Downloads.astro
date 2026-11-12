@@ -4,6 +4,7 @@ import { messages, nativeNames, repo, url, type Lang } from '../i18n';
 import { switchKitPath } from '../lib/switch-kit';
 import { brochurePath, type BrochureKind } from '../lib/brochures';
 import { langs } from '../i18n';
+import { TEMPLATE } from '../lib/template';
 
 interface Props {
   lang: Lang;
@@ -23,6 +24,11 @@ const brochures: { kind: BrochureKind; title: string; p: string }[] = [
 <section class="band">
   <div class="wrap">
     <div class="cards">
+      <article class="card accent" aria-labelledby="template">
+        <h2 id="template" class="card-title">{c.templateTitle}</h2>
+        <p>{c.templateP2}</p>
+        <p><a class="button primary" href={TEMPLATE} download>{c.templateButton}</a></p>
+      </article>
       {
         brochures.map((b) => (
           <article class="card" aria-labelledby={`brochure-${b.kind}`}>

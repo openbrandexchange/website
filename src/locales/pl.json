@@ -10,7 +10,7 @@
     "copy": "Kopiuj",
     "copied": "Skopiowano",
     "draft": "Wersja 0.2 jest już wydana. Specyfikacja i oprogramowanie są do swobodnego użytku.",
-    "footerAbout": "Bezpłatny, otwarty sposób, w jaki marki mogą dostarczać zdjęcia produktów i dane artykułów swoim sprzedawcom.",
+    "footerAbout": "Bezpłatny, otwarty sposób, w jaki marki modowe mogą dostarczać zdjęcia produktów i dane artykułów swoim sprzedawcom.",
     "footerMore": "Więcej",
     "footerSource": "Kod źródłowy i specyfikacja",
     "footerLicence": "Ta strona: treść CC-BY-4.0, kod MIT.",
@@ -34,12 +34,13 @@
     "governance": "Zarządzanie i nazwa",
     "privacy": "Prywatność",
     "imprint": "Informacje prawne",
-    "cookies": "Pliki cookie"
+    "cookies": "Pliki cookie",
+    "partners": "Partnerzy"
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: jedno miejsce i jedno API dla wszystkich Twoich sprzedawców",
-      "description": "Bezpłatny, otwarty standard wraz z oprogramowaniem dla marek: portal dla Twoich sprzedawców, standardowe API dla ich systemów i automatyczna publikacja z Twoich własnych systemów."
+      "title": "Open Brand Exchange: otwarty standard treści produktowych w modzie",
+      "description": "Bezpłatny, otwarty standard wraz z oprogramowaniem dla marek modowych i sprzedawców: zdjęcia produktów, skład surowcowy i zalecenia pielęgnacji w jednym formacie, w portalu lub bezpośrednio w oprogramowaniu sprzedawcy."
     },
     "brands": {
       "title": "Dla marek",
@@ -88,6 +89,10 @@
     "cookies": {
       "title": "Pliki cookie",
       "description": "Ta strona nie używa plików cookie."
+    },
+    "partners": {
+      "title": "Zostań partnerem",
+      "description": "Bezpłatny test zgodności i oznaczenie „Zgodne z Open Brand Exchange” albo miejsce na liście oficjalnych partnerów od 500 € rocznie."
     }
   },
   "home": {
@@ -228,7 +233,31 @@
     "nextHosting": "Wybierz hosting",
     "nextAutomation": "Zobacz przepisy automatyzacji",
     "labelNote": "Jeśli brakuje czegoś, co prawo nakazuje podać na metce, na przykład składu surowcowego albo materiałów buta, Open Brand Exchange ostrzeże Cię przy przesyłaniu. Ostrzeżenie nigdy nie blokuje publikacji.",
-    "bagsNote": "Walizki i torby mają teraz wymiary (W × S × G, waga, pojemność) i cechy (kółka, zamek, odpinany pasek…), mierzone tak samo przez każdą markę."
+    "bagsNote": "Walizki i torby mają teraz wymiary (W × S × G, waga, pojemność) i cechy (kółka, zamek, odpinany pasek…), mierzone tak samo przez każdą markę.",
+    "startEyebrow": "Zacznij tutaj",
+    "startTitle": "Od Twojego arkusza do każdego sprzedawcy, w czterech krokach.",
+    "startSteps": [
+      {
+        "h": "Pobierz szablon",
+        "p": "Plik Excel z kolumnami standardu, listami rozwijanymi dla każdej stałej wartości i wypełnionym przykładem."
+      },
+      {
+        "h": "Wypełnij go",
+        "p": "Jeden wiersz na rozmiar, ręcznie albo jako eksport z własnego systemu. Nazwij zdjęcia model_kolor_pozycja, na przykład KO-1001_NVY_1.jpg."
+      },
+      {
+        "h": "Prześlij lub zautomatyzuj",
+        "p": "Zapisz jako CSV UTF-8 i prześlij do portalu razem ze zdjęciami albo pozwól portalowi co noc pobierać Twój eksport."
+      },
+      {
+        "h": "Gotowe",
+        "p": "Twoi sprzedawcy znajdą wszystko w Twoim portalu, a ich oprogramowanie samo pobierze każdą zmianę. Bezpłatnie."
+      }
+    ],
+    "startTemplate": "Pobierz szablon Excel",
+    "partnersTitle": "Albo zleć wszystko partnerowi",
+    "partnersP": "Wolisz nie robić tego sam? Dostawca może przejąć cały proces. Photopilot oferuje na przykład bezpłatny portal z połączeniem OBX, pełną automatyzację procesu i integrację z Twoim ERP na miarę.",
+    "partnersCta": "Zobacz dostawców"
   },
   "automation": {
     "h1": "Automatyzacja",
@@ -334,14 +363,14 @@
     "fieldStatus": "Open Brand Exchange",
     "fieldExport": "Eksport wszystkich treści",
     "fieldWebsite": "Strona internetowa",
-    "listTitle": "Chcesz zostać dostawcą?",
-    "listP": "Tu może znaleźć się każda firma hostingowa, agencja czy producent oprogramowania. Warunki są takie same dla wszystkich:",
+    "listTitle": "Chcesz być tu wymieniony jako dostawca?",
+    "listP": "Dostawcy na tej stronie to oficjalni partnerzy. Kryteria są takie same dla wszystkich:",
     "listItems": [
-      "Twój portal przechodzi testy zgodności",
+      "Twój portal przechodzi test zgodności dla bieżącej wersji",
       "marka może wyeksportować wszystkie dane i zdjęcia i odejść",
       "własne ceny i warunki publikujesz na własnej stronie"
     ],
-    "listHow": "Otwórz pull request w repozytorium strony ze swoimi danymi w src/data/providers.json. Dostawcy są wymienieni alfabetycznie.",
+    "listHow": "Zgodność jest bezpłatna; miejsce na tej liście jest częścią oficjalnego partnerstwa.",
     "p2Title": "2. Jednym kliknięciem",
     "p2P": "Własny portal na własnym koncie, bez zarządzania serwerem.",
     "cfP": "Działa na Cloudflare Workers, z D1 jako bazą danych i R2 na obrazy. Kliknij przycisk, zaloguj się do Cloudflare i wykonaj kolejne kroki. Portal używany na co dzień wymaga planu Workers Paid (5 dolarów miesięcznie); plan darmowy wystarczy tylko, żeby się rozejrzeć. Wersje internetowe Twoich zdjęć tworzą przeglądarka i narzędzie obx.",
@@ -380,7 +409,7 @@
   },
   "retailers": {
     "h1": "Dla sprzedawców",
-    "lead": "Marki korzystające z Open Brand Exchange dostarczają zdjęcia i dane artykułów w jeden spójny sposób, niezależnie od tego, czy pobierasz ręcznie, czy używasz oprogramowania.",
+    "lead": "Marki korzystające z Open Brand Exchange dostarczają zdjęcia i dane artykułów w jeden spójny sposób. Ty tylko je odbierasz, bezpłatnie: w portalu każdej marki w przeglądarce lub przez jedno API bezpośrednio do swojego oprogramowania.",
     "portalTitle": "Co daje Ci portal marki",
     "portalP": "Każda marka prowadzi własny portal pod własną nazwą, na przykład „Kestrel · {portal}”.",
     "portal": [
@@ -617,7 +646,10 @@
     "templateP": "Pusty szablon CSV jest też w panelu administracyjnym każdego portalu, w sekcji Importy.",
     "brandsTitle": "Broszura dla marek",
     "brandsP": "Własny portal dla sprzedawców, API, automatyczne przesyłanie i hosting oraz to, co jest już gotowe. Do udostępnienia zespołowi.",
-    "allLanguages": "Wszystkie języki"
+    "allLanguages": "Wszystkie języki",
+    "templateTitle": "Szablon Excel dla marek",
+    "templateP2": "products.xlsx: kolumny standardowego importu, listy rozwijane dla każdej stałej wartości, objaśnienie każdej kolumny po angielsku i niderlandzku oraz przykład od Kestrel. Zapisz go jako CSV UTF-8, aby go przesłać.",
+    "templateButton": "Pobierz products.xlsx"
   },
   "faq": {
     "h1": "Najczęstsze pytania",
@@ -661,6 +693,14 @@
       {
         "q": "Kto za tym stoi?",
         "a": "Open Brand Exchange jest przekazywany na rzecz {foundation}, niderlandzkiej fundacji non-profit (stichting), aby standard należał do marek, sprzedawców i dostawców oprogramowania, którzy z niego korzystają, a nie do jednej firmy. Pytania można kierować na adres {email}."
+      },
+      {
+        "q": "Czym to się różni od zamkniętych platform z treściami?",
+        "a": "Zamknięte platformy trzymają treści marek w systemie jednej firmy i pobierają od marek lub sprzedawców opłaty za dostęp. Open Brand Exchange to otwarty standard: każda marka prowadzi własny portal lub wybiera dostawcę i może wszystko wyeksportować i odejść. Każde oprogramowanie może go wdrożyć bez opłat licencyjnych."
+      },
+      {
+        "q": "Czy nasz portal zdjęć lub DAM może się podłączyć?",
+        "a": "Tak. Portal zdjęć, bank zdjęć lub DAM, który udostępnia stronę odczytu protokołu i przechodzi test zgodności, jest zgodny. Oprogramowanie sprzedawców pobiera wtedy jego zdjęcia produktów, według artykułu i EAN, tak samo jak z każdego portalu marki."
       }
     ]
   },
@@ -840,7 +880,7 @@
       "preview": "Wersja 0.2"
     },
     "footer": {
-      "tagline": "Otwarty standard dostarczania zdjęć produktów i danych artykułów od marek do ich sprzedawców.",
+      "tagline": "Otwarty standard dostarczania zdjęć produktów i danych artykułów od marek modowych do ich sprzedawców.",
       "product": "Produkt",
       "developers": "Dla programistów",
       "project": "Projekt",
@@ -861,9 +901,9 @@
       "adminAutomation": "Automatyczne przesyłanie w panelu administracyjnym marki: gotowe przepisy dla narzędzia obx, crona, GitHub Actions i innych."
     },
     "home": {
-      "eyebrow": "Otwarty standard · Bezpłatne oprogramowanie",
-      "h1": "Treści o Twoich produktach, gotowe dla każdego sprzedawcy.",
-      "lead": "Open Brand Exchange to otwarty standard określający, jak sprzedawcy pobierają od marki zdjęcia produktów i dane artykułów: w portalu w przeglądarce, jako ZIP lub arkusz kalkulacyjny albo bezpośrednio do własnego oprogramowania przez jedno API. To, jak treści trafiają do Twojego portalu, zależy od Ciebie.",
+      "eyebrow": "Otwarty standard dla mody · Bezpłatne oprogramowanie",
+      "h1": "Treści o produktach modowych, gotowe dla każdego sprzedawcy.",
+      "lead": "Open Brand Exchange to otwarty standard określający, jak marki odzieżowe, obuwnicze, torebkowe i bagażowe dostarczają zdjęcia produktów i dane artykułów swoim sprzedawcom: w portalu, jako ZIP lub arkusz kalkulacyjny albo bezpośrednio do oprogramowania sprzedawcy przez jedno API. Otwarta alternatywa dla zamkniętych platform: bez opłat za każdego sprzedawcę, bez uzależnienia od dostawcy, a Twoje dane pozostają Twoje.",
       "ctaRetailer": "Jestem sprzedawcą",
       "proofLabel": "W skrócie",
       "proof": [
@@ -967,30 +1007,6 @@
           "link": "Zobacz przepisy automatyzacji"
         }
       ],
-      "audienceEyebrow": "Dla kogo",
-      "audienceTitle": "Dla marek i dla sprzedawców.",
-      "brands": {
-        "h": "Dla marek",
-        "p": "Koniec z rozsyłaniem plików. Sprzedawcy pobierają to, czego potrzebują, a Ty decydujesz, kto co dostaje.",
-        "items": [
-          "Własny portal we własnej domenie",
-          "Akceptujesz każdego sprzedawcę i decydujesz, co widzi",
-          "Widzisz, kto co pobiera, u każdego sprzedawcy",
-          "Hostuj samodzielnie za darmo albo wybierz dostawcę i odejdź, kiedy chcesz"
-        ],
-        "cta": "Poznaj ofertę dla marek"
-      },
-      "retailers": {
-        "h": "Dla sprzedawców",
-        "p": "Każda marka w jednym spójnym formacie, w przeglądarce lub prosto w Twoim oprogramowaniu.",
-        "items": [
-          "Wklej listę EAN i otrzymaj właściwe zdjęcia dla każdego rozmiaru",
-          "Pobieraj pliki ZIP i dane artykułów gotowe dla Twojego sklepu",
-          "Jedno połączenie dla każdej marki w standardzie",
-          "Prawa do użycia i daty embarga przy każdym zdjęciu"
-        ],
-        "cta": "Poznaj ofertę dla sprzedawców"
-      },
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Uruchom, gdzie chcesz. Płać tylko za hosting.",
       "editionsLead": "Trzy edycje tego samego portalu. Przechodzą te same testy zgodności i mówią tym samym API, więc możesz przejść z jednej na drugą.",
@@ -1079,12 +1095,148 @@
       "faqLink": "Wszystkie pytania",
       "closingTitle": "Niech sprzedawcy pobierają treści sami.",
       "closingP": "Uruchom własny portal albo opowiedz nam o swoich systemach i sprzedawcach i współtwórz pierwsze wydanie.",
-      "closingMail": "Napisz do nas"
+      "closingMail": "Napisz do nas",
+      "rolesEyebrow": "Kto co robi",
+      "rolesTitle": "Marki publikują. Sprzedawcy odbierają. Oprogramowanie łączy.",
+      "rolesLead": "Standard określa, jak treści produktowe trafiają od marki do sprzedawcy. Każda strona robi swoją część i nikt nie musi czekać na innych.",
+      "roles": [
+        {
+          "h": "Marki publikują",
+          "p": "Marka przygotowuje swoje treści raz, w standardowym formacie, we własnym portalu. Dane wychodzące automatyzuje sama albo zajmuje się tym dostawca.",
+          "items": [
+            "Twoje zdjęcia i dane artykułów w jednym standardowym formacie",
+            "Zautomatyzuj to sam za pomocą bezpłatnych narzędzi albo zleć to dostawcy",
+            "Akceptujesz każdego sprzedawcę i decydujesz, co widzi"
+          ],
+          "cta": "Poznaj ofertę dla marek"
+        },
+        {
+          "h": "Sprzedawcy odbierają",
+          "p": "Sprzedawca pobiera to, czego potrzebuje, od każdej marki w standardzie, zawsze w ten sam sposób. Żadnej nowej pracy przy każdej nowej marce.",
+          "items": [
+            "Wyszukuj, wklejaj EAN i pobieraj w przeglądarce",
+            "Zdjęcia i skład surowcowy gotowe dla sklepu internetowego",
+            "Prawa do użycia i daty embarga przy każdym zdjęciu"
+          ],
+          "cta": "Poznaj ofertę dla sprzedawców"
+        },
+        {
+          "h": "Producenci ERP i oprogramowania łączą",
+          "p": "Producent oprogramowania ERP, PIM, sklepu internetowego lub kasowego buduje jedno połączenie, a potem czyta każdy portal marki w ten sam sposób. Dane przychodzące automatyzuje się jak każdy inny kanał danych od dostawców.",
+          "items": [
+            "Jedno API, opisane w OpenAPI 3.1",
+            "Najpierw pełna kopia, potem tylko zmiany",
+            "Sprawdź swoje połączenie bezpłatnym testem zgodności"
+          ],
+          "cta": "Przeczytaj przewodnik dla programistów"
+        }
+      ],
+      "portalsEyebrow": "Otwarty dla każdego portalu",
+      "portalsTitle": "Masz już portal? Podłącz go do standardu.",
+      "portalsLead": "Open Brand Exchange to nie jeden program. Każdy portal, który obsługuje protokół i przechodzi test zgodności, jest zgodny, a oprogramowanie sprzedawców czyta go jak każdy inny.",
+      "portalTypes": [
+        {
+          "h": "Portale marek i B2B",
+          "p": "Portal marki, sklep B2B lub platforma hurtowa dodaje API OBX do tego, co już robi. Jej marki docierają wtedy do każdego systemu sprzedawcy, który obsługuje standard."
+        },
+        {
+          "h": "Portale zdjęć i systemy DAM",
+          "p": "Portale fotograficzne, banki zdjęć i systemy DAM ze zdjęciami produktów publikują zdjęcia według artykułu: każde zdjęcie powiązane z produktem, kolorem i EAN, z wersjami webowymi, prawami do użycia i datami embarga. Wdrażają stronę odczytu protokołu, a oprogramowanie sprzedawców pobiera zdjęcia jak z każdego innego portalu."
+        },
+        {
+          "h": "Systemy PIM i ERP",
+          "p": "PIM lub ERP, w którym są dane artykułów marki, może je publikować bezpośrednio: skład surowcowy, zalecenia pielęgnacji, rozmiary i EAN w standardowym formacie, bez osobnego portalu."
+        }
+      ],
+      "portalsSteps": [
+        "Przeczytaj specyfikację i wczytaj fikcyjną markę testową Kestrel",
+        "Udostępnij discovery, kanał zmian, produkty i zdjęcia przez API",
+        "Uruchom bezpłatny test zgodności: jeśli przejdzie, jesteś zgodny"
+      ],
+      "portalsCta": "Zgodność czy partnerstwo"
     },
     "pages": {
       "brandsH1": "Ustaw raz. Dla wszystkich sprzedawców naraz.",
       "retailersSoftware": "Dla Twojego oprogramowania",
       "hostingEditions": "Trzy edycje"
     }
+  },
+  "partners": {
+    "eyebrow": "Partnerzy",
+    "h1": "Zgodność za darmo. Miejsce na liście dla oficjalnych partnerów.",
+    "lead": "Każdy portal, portal zdjęć, PIM, ERP czy dostawca może współpracować z Open Brand Exchange. Test i oznaczenie „Zgodne z Open Brand Exchange” są bezpłatne. Miejsce na liście oficjalnych partnerów to płatne członkostwo, z tymi samymi kryteriami dla wszystkich.",
+    "compareTitle": "Zgodność czy oficjalne partnerstwo",
+    "colWhat": "Co otrzymujesz",
+    "colCompatible": "Zgodny",
+    "colPartner": "Oficjalny partner",
+    "rows": [
+      {
+        "l": "Cena",
+        "c": "Bezpłatnie",
+        "p": "Opłata roczna zależna od wielkości firmy"
+      },
+      {
+        "l": "Zaliczony test zgodności",
+        "c": "Wymagany",
+        "p": "Wymagany"
+      },
+      {
+        "l": "Możesz mówić „Zgodne z Open Brand Exchange”",
+        "c": "✓",
+        "p": "✓"
+      },
+      {
+        "l": "Twoje logo na stronach partnerów i hostingu",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Odznaka „Oficjalny partner”",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Polecany markom, które pytają nas o dostawcę",
+        "c": "–",
+        "p": "✓"
+      }
+    ],
+    "testTitle": "1. Przetestuj sam, bezpłatnie",
+    "testP": "Test zgodności jest open source. Uruchamiaj go na własnym portalu tak często, jak chcesz. Sprawdza discovery, kanał zmian, produkty, zdjęcia i bezpieczeństwo, a prostym językiem mówi, czego jeszcze brakuje.",
+    "testSteps": [
+      "Wczytaj fikcyjną markę testową Kestrel na konto testowe w swoim portalu.",
+      "Uruchom obx-conformance na swoim portalu, jak opisano w przewodniku dla programistów.",
+      "Popraw to, co nie przechodzi, aż wynik pokaże CONFORMANT."
+    ],
+    "testLink": "Jak uruchomić test",
+    "certTitle": "2. Uzyskaj potwierdzenie, bezpłatnie",
+    "certP": "Wyślij nam raport JSON i adres swojego portalu testowego. Uruchomimy ten sam test i potwierdzimy wynik. Od tej chwili możesz mówić, że Twój produkt ma oznaczenie „Zgodne z Open Brand Exchange”, dla przetestowanej wersji.",
+    "certMail": "Wyślij raport",
+    "partnerTitle": "3. Zostań oficjalnym partnerem",
+    "partnerP": "Jesteś zgodny! Chcesz, żeby znalazły Cię marki szukające dostawcy? Oficjalni partnerzy są wymienieni ze swoim logo na stronach partnerów i hostingu, noszą odznakę „Oficjalny partner” i są polecani markom, które pytają nas o dostawcę.",
+    "reqTitle": "Kryteria, takie same dla wszystkich",
+    "tiersTitle": "Opłata roczna",
+    "tiers": [
+      {
+        "name": "Mała",
+        "who": "do 49 pracowników",
+        "price": "500 €"
+      },
+      {
+        "name": "Średnia",
+        "who": "od 50 do 249 pracowników",
+        "price": "2500 €"
+      },
+      {
+        "name": "Duża",
+        "who": "250 pracowników lub więcej",
+        "price": "10 000 €"
+      }
+    ],
+    "perYear": "rocznie, bez VAT",
+    "tiersNote": "Proponowane opłaty na 2027 rok, ostateczne po utworzeniu fundacji. Opłata obejmuje wyłącznie miejsce na liście. Standard, test i oprogramowanie pozostają bezpłatne dla wszystkich, a partnerzy nie mają w sprawie standardu więcej do powiedzenia niż ktokolwiek inny.",
+    "partnerCta": "Zostań partnerem",
+    "mailSubject": "Oficjalny partner",
+    "listTitle": "Oficjalni partnerzy"
   }
 }

@@ -10,7 +10,7 @@
     "copy": "Kopiera",
     "copied": "Kopierat",
     "draft": "Version 0.2 är släppt. Specifikationen och programvaran är fria att använda.",
-    "footerAbout": "Ett kostnadsfritt, öppet sätt för varumärken att leverera produktbilder och artikeldata till sina återförsäljare.",
+    "footerAbout": "Ett kostnadsfritt, öppet sätt för modevarumärken att leverera produktbilder och artikeldata till sina återförsäljare.",
     "footerMore": "Mer",
     "footerSource": "Källkod och specifikation",
     "footerLicence": "Den här webbplatsen: innehåll CC-BY-4.0, kod MIT.",
@@ -34,12 +34,13 @@
     "governance": "Styrning och namn",
     "privacy": "Integritet",
     "imprint": "Om webbplatsen",
-    "cookies": "Kakor"
+    "cookies": "Kakor",
+    "partners": "Partner"
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: ett ställe och ett API för alla dina återförsäljare",
-      "description": "En kostnadsfri, öppen standard med programvara för varumärken: en portal för dina återförsäljare, ett standard-API för deras system och automatisk publicering från dina egna system."
+      "title": "Open Brand Exchange: den öppna standarden för produktinnehåll inom mode",
+      "description": "En kostnadsfri, öppen standard och programvara för modevarumärken och återförsäljare: produktbilder, fibersammansättning och tvättråd i ett format, i en portal eller direkt in i återförsäljarens system."
     },
     "brands": {
       "title": "För varumärken",
@@ -88,6 +89,10 @@
     "cookies": {
       "title": "Kakor",
       "description": "Den här webbplatsen använder inga kakor."
+    },
+    "partners": {
+      "title": "Bli partner",
+      "description": "Ett kostnadsfritt konformitetstest och märkningen ”Kompatibel med Open Brand Exchange”, eller en plats som officiell partner från 500 € per år."
     }
   },
   "home": {
@@ -228,7 +233,31 @@
     "nextHosting": "Välj hosting",
     "nextAutomation": "Se automatiseringsrecepten",
     "labelNote": "Saknas något som lagen kräver på etiketten, till exempel fibersammansättningen eller materialen i en sko, varnar Open Brand Exchange dig vid uppladdningen. En varning stoppar aldrig publiceringen.",
-    "bagsNote": "Resväskor och väskor har nu mått (H × B × D, vikt, volym) och egenskaper (hjul, lås, avtagbar rem …), som varje varumärke mäter på samma sätt."
+    "bagsNote": "Resväskor och väskor har nu mått (H × B × D, vikt, volym) och egenskaper (hjul, lås, avtagbar rem …), som varje varumärke mäter på samma sätt.",
+    "startEyebrow": "Börja här",
+    "startTitle": "Från ditt kalkylblad till alla återförsäljare, i fyra steg.",
+    "startSteps": [
+      {
+        "h": "Ladda ner mallen",
+        "p": "En Excel-fil med standardens kolumner, rullgardinslistor för varje fast värde och ett ifyllt exempel."
+      },
+      {
+        "h": "Fyll i den",
+        "p": "En rad per storlek, för hand eller exporterad från ditt eget system. Döp dina bilder till modell_färg_position, till exempel KO-1001_NVY_1.jpg."
+      },
+      {
+        "h": "Ladda upp eller automatisera",
+        "p": "Spara som CSV UTF-8 och ladda upp den med bilderna i din portal, eller låt portalen hämta din export varje natt."
+      },
+      {
+        "h": "Klart",
+        "p": "Dina återförsäljare hittar allt i din portal, och deras system plockar upp varje ändring av sig självt. Gratis."
+      }
+    ],
+    "startTemplate": "Ladda ner Excel-mallen",
+    "partnersTitle": "Eller låt en partner sköta allt",
+    "partnersP": "Vill du hellre slippa göra det själv? En leverantör kan ta över hela processen. Photopilot erbjuder till exempel en gratis portal med OBX-kopplingen, full automatisering av processen och en skräddarsydd integration med ditt ERP.",
+    "partnersCta": "Se leverantörerna"
   },
   "automation": {
     "h1": "Automatisering",
@@ -334,14 +363,14 @@
     "fieldStatus": "Open Brand Exchange",
     "fieldExport": "Exportera allt ditt innehåll",
     "fieldWebsite": "Webbplats",
-    "listTitle": "Vill du bli leverantör?",
-    "listP": "Alla hostingföretag, byråer och programvaruleverantörer kan stå här. Villkoren är desamma för alla:",
+    "listTitle": "Vill du stå här som leverantör?",
+    "listP": "Leverantörerna på den här sidan är officiella partner. Villkoren är desamma för alla:",
     "listItems": [
-      "din portal klarar konformitetstesterna",
+      "din portal klarar konformitetstestet för den aktuella versionen",
       "ett varumärke kan exportera all sin data och alla bilder och lämna",
       "du anger egna priser och villkor på din egen webbplats"
     ],
-    "listHow": "Öppna en pull request i webbplatsens repository med dina uppgifter i src/data/providers.json. Leverantörerna listas i bokstavsordning.",
+    "listHow": "Att vara kompatibel är gratis; en plats här ingår i det officiella partnerskapet.",
     "p2Title": "2. Med ett klick",
     "p2P": "Din egen portal på ditt eget konto, utan att sköta en server.",
     "cfP": "Körs på Cloudflare Workers, med D1 som databas och R2 för bilderna. Klicka på knappen, logga in hos Cloudflare och följ stegen. En portal som används dagligen behöver abonnemanget Workers Paid (5 dollar i månaden); gratisabonnemanget räcker bara för att titta runt. Webbversioner av era foton görs av webbläsaren och verktyget obx.",
@@ -380,7 +409,7 @@
   },
   "retailers": {
     "h1": "För återförsäljare",
-    "lead": "Varumärken som använder Open Brand Exchange levererar sina bilder och sin artikeldata på ett enhetligt sätt, oavsett om du laddar ner för hand eller använder programvara.",
+    "lead": "Varumärken som använder Open Brand Exchange levererar sina bilder och sin artikeldata på ett enhetligt sätt. Du tar bara emot, och gratis: i varje varumärkes portal i din webbläsare eller via ett enda API direkt in i din programvara.",
     "portalTitle": "Vad en varumärkesportal ger dig",
     "portalP": "Varje varumärke har sin egen portal med sitt eget namn, till exempel ”Kestrel · {portal}”.",
     "portal": [
@@ -617,7 +646,10 @@
     "templateP": "En tom CSV-mall finns också i administrationen för varje portal, under Importer.",
     "brandsTitle": "Broschyr för varumärken",
     "brandsP": "Din egen portal för återförsäljare, API:t, automatisk uppladdning och hosting, och vad som redan är klart. Att dela med ditt team.",
-    "allLanguages": "Alla språk"
+    "allLanguages": "Alla språk",
+    "templateTitle": "Excel-mall för varumärken",
+    "templateP2": "products.xlsx: kolumnerna i standardimporten, rullgardinslistor för varje fast värde, en förklaring per kolumn på engelska och nederländska, och ett exempel från Kestrel. Spara den som CSV UTF-8 för att ladda upp den.",
+    "templateButton": "Ladda ner products.xlsx"
   },
   "faq": {
     "h1": "Vanliga frågor",
@@ -661,6 +693,14 @@
       {
         "q": "Vem ligger bakom?",
         "a": "Open Brand Exchange överlämnas till {foundation}, en nederländsk ideell stiftelse (stichting), så att standarden tillhör de varumärken, återförsäljare och programvaruleverantörer som använder den, och inte ett enda företag. Frågor skickar du till {email}."
+      },
+      {
+        "q": "Hur skiljer sig detta från slutna innehållsplattformar?",
+        "a": "Slutna plattformar håller varumärkenas innehåll i ett enda företags system och tar betalt av varumärken eller återförsäljare för åtkomst. Open Brand Exchange är en öppen standard: varje varumärke kör sin egen portal eller väljer en leverantör, och kan exportera allt och lämna. Alla system kan implementera den utan licensavgift."
+      },
+      {
+        "q": "Kan vår bildportal eller vårt DAM-system ansluta?",
+        "a": "Ja. En bildportal, bildbank eller ett DAM-system som erbjuder läsdelen av protokollet och klarar konformitetstestet är kompatibel. Återförsäljarnas system hämtar då produktbilderna, per artikel och EAN, på samma sätt som från vilken varumärkesportal som helst."
       }
     ]
   },
@@ -840,7 +880,7 @@
       "preview": "Version 0.2"
     },
     "footer": {
-      "tagline": "Den öppna standarden för att leverera produktbilder och artikeldata från varumärken till deras återförsäljare.",
+      "tagline": "Den öppna standarden för att leverera produktbilder och artikeldata från modevarumärken till deras återförsäljare.",
       "product": "Produkt",
       "developers": "Utvecklare",
       "project": "Projekt",
@@ -861,9 +901,9 @@
       "adminAutomation": "Automatisk uppladdning i varumärkets administration: färdiga recept för verktyget obx, cron, GitHub Actions med mera."
     },
     "home": {
-      "eyebrow": "Öppen standard · Fri programvara",
-      "h1": "Ditt produktinnehåll, klart för alla återförsäljare.",
-      "lead": "Open Brand Exchange är en öppen standard för hur återförsäljare hämtar produktbilder och artikeldata från ett varumärke: i en portal i webbläsaren, som zip eller kalkylblad, eller direkt in i sitt eget system via ett API. Hur innehållet kommer in i din portal bestämmer du själv.",
+      "eyebrow": "Öppen standard för mode · Gratis programvara",
+      "h1": "Produktinnehåll för mode, klart för alla återförsäljare.",
+      "lead": "Open Brand Exchange är den öppna standarden för hur varumärken inom kläder, skor, väskor och resväskor levererar produktbilder och artikeldata till sina återförsäljare: i en portal, som zip eller kalkylblad, eller direkt in i återförsäljarens system via ett API. Ett öppet alternativ till slutna plattformar: ingen avgift per återförsäljare, ingen inlåsning, och din data förblir din.",
       "ctaRetailer": "Jag är återförsäljare",
       "proofLabel": "I korthet",
       "proof": [
@@ -967,30 +1007,6 @@
           "link": "Se automatiseringsrecepten"
         }
       ],
-      "audienceEyebrow": "Vem det är för",
-      "audienceTitle": "För varumärken och för återförsäljare.",
-      "brands": {
-        "h": "För varumärken",
-        "p": "Inga fler filer att skicka runt. Återförsäljarna hämtar det de behöver, och du bestämmer vem som får vad.",
-        "items": [
-          "Din egen portal, på din egen domän",
-          "Du godkänner varje återförsäljare och bestämmer vad de ser",
-          "Se vem som laddar ner vad, per återförsäljare",
-          "Kör den själv gratis, eller välj en leverantör du kan lämna när som helst"
-        ],
-        "cta": "Läs mer för varumärken"
-      },
-      "retailers": {
-        "h": "För återförsäljare",
-        "p": "Alla varumärken i ett enhetligt format, i webbläsaren eller direkt i ditt system.",
-        "items": [
-          "Klistra in din EAN-lista och få rätt bilder för varje storlek",
-          "Ladda ner zip-filer och artikeldata, klara för din butik",
-          "En anslutning för alla varumärken på standarden",
-          "Användningsrättigheter och embargodatum vid varje bild"
-        ],
-        "cta": "Läs mer för återförsäljare"
-      },
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Kör den där du vill. Betala bara för hosting.",
       "editionsLead": "Tre utgåvor av samma portal. De klarar samma konformitetstester och talar samma API, så du kan byta mellan dem.",
@@ -1079,12 +1095,148 @@
       "faqLink": "Alla frågor",
       "closingTitle": "Låt dina återförsäljare hämta det själva.",
       "closingP": "Sätt upp din egen portal, eller berätta om dina system och återförsäljare och var med och forma den första versionen.",
-      "closingMail": "Mejla oss"
+      "closingMail": "Mejla oss",
+      "rolesEyebrow": "Vem gör vad",
+      "rolesTitle": "Varumärken publicerar. Återförsäljare tar emot. Programvaran kopplar ihop.",
+      "rolesLead": "Standarden bestämmer hur produktinnehåll går från varumärke till återförsäljare. Varje part gör sin del, och ingen behöver vänta på någon annan.",
+      "roles": [
+        {
+          "h": "Varumärken publicerar",
+          "p": "Ett varumärke lägger upp sitt innehåll en gång, i standardformatet, i sin egen portal. Det automatiserar den utgående datan själv, eller så sköter en leverantör det.",
+          "items": [
+            "Dina bilder och din artikeldata i ett standardformat",
+            "Automatisera själv med de kostnadsfria verktygen, eller låt en leverantör göra det",
+            "Du godkänner varje återförsäljare och bestämmer vad de ser"
+          ],
+          "cta": "Läs mer för varumärken"
+        },
+        {
+          "h": "Återförsäljare tar emot",
+          "p": "En återförsäljare hämtar det den behöver från alla varumärken på standarden, alltid på samma sätt. Inget nytt arbete för varje nytt varumärke.",
+          "items": [
+            "Sök, klistra in EAN och ladda ner i webbläsaren",
+            "Bilder och fibersammansättning klara för webbutiken",
+            "Användningsrättigheter och embargodatum vid varje bild"
+          ],
+          "cta": "Läs mer för återförsäljare"
+        },
+        {
+          "h": "ERP- och programvaruleverantörer kopplar upp sig",
+          "p": "En leverantör av ERP-, PIM-, webbutiks- eller kassasystem bygger en enda koppling och läser sedan varje varumärkesportal på samma sätt. Inkommande data automatiseras som vid vilket annat leverantörsflöde som helst.",
+          "items": [
+            "Ett API, dokumenterat i OpenAPI 3.1",
+            "Först en fullständig kopia, sedan bara ändringarna",
+            "Testa din koppling med det kostnadsfria konformitetstestet"
+          ],
+          "cta": "Läs utvecklarguiden"
+        }
+      ],
+      "portalsEyebrow": "Öppen för alla portaler",
+      "portalsTitle": "Har du redan en portal? Anslut den till standarden.",
+      "portalsLead": "Open Brand Exchange är inte ett enskilt program. Varje portal som talar protokollet och klarar konformitetstestet är kompatibel, och återförsäljarnas system läser den som vilken annan portal som helst.",
+      "portalTypes": [
+        {
+          "h": "Varumärkes- och B2B-portaler",
+          "p": "En varumärkesportal, B2B-butik eller grossistplattform lägger till OBX-API:et bredvid det den redan gör. Dess varumärken når då alla återförsäljarsystem som talar standarden."
+        },
+        {
+          "h": "Bildportaler och DAM-system",
+          "p": "Fotoportaler, bildbanker och DAM-system för produktbilder publicerar bilderna per artikel: varje bild kopplad till sin produkt, färg och EAN, med webbversioner, användningsrättigheter och embargodatum. De implementerar läsdelen av protokollet, och återförsäljarnas system hämtar bilderna som från vilken annan portal som helst."
+        },
+        {
+          "h": "PIM- och ERP-system",
+          "p": "Ett PIM- eller ERP-system som har ett varumärkes artikeldata kan publicera den direkt: fibersammansättning, tvättråd, storlekar och EAN i standardformatet, utan en separat portal."
+        }
+      ],
+      "portalsSteps": [
+        "Läs specifikationen och ladda in det fiktiva testvarumärket Kestrel",
+        "Erbjud discovery, ändringsflödet, produkter och bilder via API:et",
+        "Kör det kostnadsfria konformitetstestet: klarar du det är du kompatibel"
+      ],
+      "portalsCta": "Kompatibel eller partner"
     },
     "pages": {
       "brandsH1": "Sätt upp det en gång. För alla återförsäljare samtidigt.",
       "retailersSoftware": "För ditt system",
       "hostingEditions": "De tre utgåvorna"
     }
+  },
+  "partners": {
+    "eyebrow": "Partner",
+    "h1": "Kompatibel utan kostnad. Listad som officiell partner.",
+    "lead": "Alla portaler, bildportaler, PIM- och ERP-system och leverantörer kan arbeta med Open Brand Exchange. Testet och märkningen ”Kompatibel med Open Brand Exchange” är gratis. En plats som officiell partner är ett betalt medlemskap, med samma villkor för alla.",
+    "compareTitle": "Kompatibel eller officiell partner",
+    "colWhat": "Vad du får",
+    "colCompatible": "Kompatibel",
+    "colPartner": "Officiell partner",
+    "rows": [
+      {
+        "l": "Pris",
+        "c": "Gratis",
+        "p": "Årsavgift efter företagets storlek"
+      },
+      {
+        "l": "Godkänd i konformitetstestet",
+        "c": "Krävs",
+        "p": "Krävs"
+      },
+      {
+        "l": "Får säga ”Kompatibel med Open Brand Exchange”",
+        "c": "✓",
+        "p": "✓"
+      },
+      {
+        "l": "Listad med logotyp på partner- och hostingsidorna",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Märket ”Officiell partner”",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Rekommenderad till varumärken som ber oss om en leverantör",
+        "c": "–",
+        "p": "✓"
+      }
+    ],
+    "testTitle": "1. Testa själv, gratis",
+    "testP": "Konformitetstestet är öppen källkod. Kör det mot din egen portal så ofta du vill. Det kontrollerar discovery, ändringsflödet, produkter, bilder och säkerhet, och säger på vanlig svenska vad som fortfarande saknas.",
+    "testSteps": [
+      "Ladda in det fiktiva testvarumärket Kestrel i ett testkonto i din portal.",
+      "Kör obx-conformance mot din portal enligt utvecklarguiden.",
+      "Åtgärda det som inte går igenom, tills resultatet visar CONFORMANT."
+    ],
+    "testLink": "Så kör du testet",
+    "certTitle": "2. Få det bekräftat, gratis",
+    "certP": "Skicka oss JSON-rapporten och adressen till din testportal. Vi kör samma test och bekräftar resultatet. Därefter får du säga att din produkt är ”Kompatibel med Open Brand Exchange”, för den version du testade.",
+    "certMail": "Skicka din rapport",
+    "partnerTitle": "3. Bli officiell partner",
+    "partnerP": "Är du kompatibel? Vill du att varumärken som letar efter en leverantör ska hitta dig? Officiella partner listas med logotyp på partner- och hostingsidorna, bär märket ”Officiell partner” och rekommenderas till varumärken som ber oss om en leverantör.",
+    "reqTitle": "Villkoren, desamma för alla",
+    "tiersTitle": "Årsavgift",
+    "tiers": [
+      {
+        "name": "Litet",
+        "who": "upp till 49 anställda",
+        "price": "500 €"
+      },
+      {
+        "name": "Medelstort",
+        "who": "50 till 249 anställda",
+        "price": "2 500 €"
+      },
+      {
+        "name": "Stort",
+        "who": "250 anställda eller fler",
+        "price": "10 000 €"
+      }
+    ],
+    "perYear": "per år, exkl. moms",
+    "tiersNote": "Föreslagna avgifter för 2027, slutgiltiga när stiftelsen har bildats. Avgiften betalar bara för platsen i listan. Standarden, testet och programvaran förblir gratis för alla, och partner har inte mer att säga till om när det gäller standarden än någon annan.",
+    "partnerCta": "Bli partner",
+    "mailSubject": "Officiell partner",
+    "listTitle": "Officiella partner"
   }
 }

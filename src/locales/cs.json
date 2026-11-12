@@ -10,7 +10,7 @@
     "copy": "Kopírovat",
     "copied": "Zkopírováno",
     "draft": "Verze 0.2 je venku. Specifikace i software jsou volně k použití.",
-    "footerAbout": "Bezplatný a otevřený způsob, jak mohou značky předávat produktové fotografie a data o zboží svým prodejcům.",
+    "footerAbout": "Bezplatný a otevřený způsob, jak módní značky dodávají produktové obrázky a data o zboží svým prodejcům.",
     "footerMore": "Další",
     "footerSource": "Zdrojový kód a specifikace",
     "footerLicence": "Tento web: obsah CC-BY-4.0, kód MIT.",
@@ -34,12 +34,13 @@
     "governance": "Správa a název",
     "privacy": "Soukromí",
     "imprint": "Tiráž",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "partners": "Partneři"
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: jedno místo a jedno API pro všechny vaše prodejce",
-      "description": "Bezplatný otevřený standard se softwarem pro značky: portál pro vaše prodejce, standardní API pro jejich systémy a automatické publikování z vašich vlastních systémů."
+      "title": "Open Brand Exchange: otevřený standard pro produktový obsah v módě",
+      "description": "Bezplatný otevřený standard se softwarem pro módní značky a prodejce: produktové fotky, vlákenné složení a pokyny k údržbě v jednom formátu, na portálu nebo přímo v softwaru prodejce."
     },
     "brands": {
       "title": "Pro značky",
@@ -88,6 +89,10 @@
     "cookies": {
       "title": "Cookies",
       "description": "Tento web nepoužívá cookies."
+    },
+    "partners": {
+      "title": "Staňte se partnerem",
+      "description": "Bezplatný test shody a označení „Kompatibilní s Open Brand Exchange“, nebo zápis jako oficiální partner od 500 € ročně."
     }
   },
   "home": {
@@ -228,7 +233,31 @@
     "nextHosting": "Vyberte hosting",
     "nextAutomation": "Prohlédněte si návody na automatizaci",
     "labelNote": "Pokud chybí něco, co zákon na etiketě vyžaduje, třeba vlákenné složení nebo materiály boty, Open Brand Exchange vás při nahrání upozorní. Upozornění nikdy nebrání zveřejnění.",
-    "bagsNote": "Kufry a tašky mají nyní rozměry (V × Š × H, hmotnost, objem) a vlastnosti (kolečka, zámek, odnímatelný popruh…), které každá značka měří stejně."
+    "bagsNote": "Kufry a tašky mají nyní rozměry (V × Š × H, hmotnost, objem) a vlastnosti (kolečka, zámek, odnímatelný popruh…), které každá značka měří stejně.",
+    "startEyebrow": "Začněte zde",
+    "startTitle": "Z vaší tabulky ke každému prodejci, ve čtyřech krocích.",
+    "startSteps": [
+      {
+        "h": "Stáhněte si šablonu",
+        "p": "Soubor Excel se sloupci standardu, rozbalovacími seznamy pro každou pevnou hodnotu a vyplněným příkladem."
+      },
+      {
+        "h": "Vyplňte ji",
+        "p": "Jeden řádek na velikost, ručně nebo jako export z vlastního systému. Fotky pojmenujte model_barva_pozice, například KO-1001_NVY_1.jpg."
+      },
+      {
+        "h": "Nahrajte nebo automatizujte",
+        "p": "Uložte jako CSV UTF-8 a nahrajte soubor s fotkami na svůj portál, nebo nechte portál každou noc stáhnout váš export."
+      },
+      {
+        "h": "Hotovo",
+        "p": "Vaši prodejci najdou vše na vašem portálu a jejich software si každou změnu převezme sám. Zdarma."
+      }
+    ],
+    "startTemplate": "Stáhnout šablonu pro Excel",
+    "partnersTitle": "Nebo vše svěřte partnerovi",
+    "partnersP": "Nechcete to dělat sami? Celý proces může převzít poskytovatel. Například Photopilot nabízí bezplatný portál s propojením na OBX, plnou automatizaci procesu a propojení s vaším ERP na míru.",
+    "partnersCta": "Zobrazit poskytovatele"
   },
   "automation": {
     "h1": "Automatizace",
@@ -334,14 +363,14 @@
     "fieldStatus": "Open Brand Exchange",
     "fieldExport": "Export veškerého obsahu",
     "fieldWebsite": "Web",
-    "listTitle": "Chcete se stát poskytovatelem?",
-    "listP": "Uvedena tu může být jakákoli hostingová firma, agentura nebo dodavatel softwaru. Podmínky jsou pro všechny stejné:",
+    "listTitle": "Chcete být uvedeni jako poskytovatel?",
+    "listP": "Poskytovatelé na této stránce jsou oficiální partneři. Podmínky jsou pro všechny stejné:",
     "listItems": [
-      "váš portál projde testy shody",
-      "značka může exportovat všechna data a fotografie a odejít",
-      "vlastní ceny a podmínky zveřejňujete na svém webu"
+      "váš portál projde testem shody pro aktuální verzi",
+      "značka může exportovat všechna svá data a obrázky a odejít",
+      "své ceny a podmínky zveřejňujete na vlastním webu"
     ],
-    "listHow": "Otevřete pull request v repozitáři webu se svými údaji v src/data/providers.json. Poskytovatelé jsou seřazeni abecedně.",
+    "listHow": "Kompatibilita je zdarma; uvedení zde je součástí oficiálního partnerství.",
     "p2Title": "2. Jedním kliknutím",
     "p2P": "Vlastní portál na vlastním účtu, bez správy serveru.",
     "cfP": "Běží na Cloudflare Workers, s D1 jako databází a R2 pro obrázky. Klikněte na tlačítko, přihlaste se do Cloudflare a postupujte podle kroků. Pro portál v každodenním provozu potřebujete tarif Workers Paid (5 dolarů měsíčně); bezplatný tarif stačí jen na vyzkoušení. Webové verze vašich fotografií vytvoří váš prohlížeč a nástroj obx.",
@@ -380,7 +409,7 @@
   },
   "retailers": {
     "h1": "Pro prodejce",
-    "lead": "Značky, které používají Open Brand Exchange, dodávají fotografie a data o zboží jedním jednotným způsobem, ať už stahujete ručně, nebo používáte software.",
+    "lead": "Značky, které používají Open Brand Exchange, dodávají své fotografie a data o zboží jednotným způsobem. Dostáváte je jen vy a zdarma: v portálu každé značky ve svém prohlížeči, nebo přes jedno API přímo do svého softwaru.",
     "portalTitle": "Co vám dá portál značky",
     "portalP": "Každá značka provozuje vlastní portál pod svým jménem, například „Kestrel · {portal}“.",
     "portal": [
@@ -617,7 +646,10 @@
     "templateP": "Prázdnou šablonu CSV najdete také v administraci každého portálu v sekci Importy.",
     "brandsTitle": "Brožura pro značky",
     "brandsP": "Vlastní portál pro prodejce, API, automatické nahrávání a hosting a co je už hotové. Ke sdílení s týmem.",
-    "allLanguages": "Všechny jazyky"
+    "allLanguages": "Všechny jazyky",
+    "templateTitle": "Šablona pro Excel pro značky",
+    "templateP2": "products.xlsx: sloupce standardního importu, rozbalovací seznamy pro každou pevnou hodnotu, vysvětlení ke každému sloupci v angličtině a nizozemštině a příklad od značky Kestrel. Pro nahrání ji uložte jako CSV UTF-8.",
+    "templateButton": "Stáhnout products.xlsx"
   },
   "faq": {
     "h1": "Časté dotazy",
@@ -661,6 +693,14 @@
       {
         "q": "Kdo za tím stojí?",
         "a": "Open Brand Exchange přechází na {foundation}, nizozemskou neziskovou nadaci (stichting), aby standard patřil značkám, prodejcům a dodavatelům softwaru, kteří ho používají, a ne jedné firmě. Dotazy posílejte na {email}."
+      },
+      {
+        "q": "Čím se to liší od uzavřených obsahových platforem?",
+        "a": "Uzavřené platformy drží obsah značek v systému jedné firmy a za přístup si nechávají platit od značek nebo prodejců. Open Brand Exchange je otevřený standard: každá značka provozuje vlastní portál nebo si vybere poskytovatele a může vše exportovat a odejít. Jakýkoli software ho může implementovat bez licenčních poplatků."
+      },
+      {
+        "q": "Může se připojit náš obrazový portál nebo DAM?",
+        "a": "Ano. Obrazový portál, fotobanka nebo DAM, který nabízí čtecí část protokolu a projde testem shody, je kompatibilní. Software prodejců si pak jeho produktové obrázky stahuje po artiklech a EAN stejně jako z kteréhokoli portálu značky."
       }
     ]
   },
@@ -840,7 +880,7 @@
       "preview": "Verze 0.2"
     },
     "footer": {
-      "tagline": "Otevřený standard pro předávání produktových fotografií a dat o zboží od značek jejich prodejcům.",
+      "tagline": "Otevřený standard pro dodávání produktových obrázků a dat o zboží od módních značek jejich prodejcům.",
       "product": "Produkt",
       "developers": "Pro vývojáře",
       "project": "Projekt",
@@ -861,9 +901,9 @@
       "adminAutomation": "Automatické nahrávání v administraci značky: hotové návody pro nástroj obx, cron, GitHub Actions a další."
     },
     "home": {
-      "eyebrow": "Otevřený standard · Bezplatný software",
-      "h1": "Váš produktový obsah, připravený pro každého prodejce.",
-      "lead": "Open Brand Exchange je otevřený standard pro to, jak si prodejci od značky berou produktové fotografie a data o zboží: v portálu v prohlížeči, jako ZIP nebo tabulku, nebo přímo do svého softwaru přes jedno API. Jak se obsah do vašeho portálu dostane, je na vás.",
+      "eyebrow": "Otevřený standard pro módu · Software zdarma",
+      "h1": "Váš módní obsah, připravený pro každého prodejce.",
+      "lead": "Open Brand Exchange je otevřený standard pro to, jak značky oblečení, obuvi, tašek a zavazadel dodávají produktové fotky a data o zboží svým prodejcům: na portálu, jako zip nebo tabulku, nebo přímo do softwaru prodejce přes jedno API. Otevřená alternativa k uzavřeným platformám: žádný poplatek za prodejce, žádná závislost na dodavateli a vaše data zůstávají vaše.",
       "ctaRetailer": "Jsem prodejce",
       "proofLabel": "Na první pohled",
       "proof": [
@@ -967,30 +1007,6 @@
           "link": "Prohlédněte si návody na automatizaci"
         }
       ],
-      "audienceEyebrow": "Pro koho",
-      "audienceTitle": "Pro značky i pro prodejce.",
-      "brands": {
-        "h": "Pro značky",
-        "p": "Už žádné rozesílání souborů. Prodejci si sami vezmou, co potřebují, a vy rozhodujete, kdo co dostane.",
-        "items": [
-          "Vlastní portál na vlastní doméně",
-          "Každého prodejce schvalujete a určujete, co uvidí",
-          "Vidíte, kdo co stahuje, u každého prodejce",
-          "Provozujte ho sami zdarma, nebo zvolte poskytovatele a kdykoli odejděte"
-        ],
-        "cta": "Více pro značky"
-      },
-      "retailers": {
-        "h": "Pro prodejce",
-        "p": "Každá značka v jednom jednotném formátu, v prohlížeči nebo přímo ve vašem softwaru.",
-        "items": [
-          "Vložte seznam EAN a získejte správné fotografie pro každou velikost",
-          "Stahujte ZIP a data o zboží připravená pro váš obchod",
-          "Jedno napojení pro každou značku ve standardu",
-          "Užívací práva a data embarga u každé fotografie"
-        ],
-        "cta": "Více pro prodejce"
-      },
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Provozujte, kde chcete. Plaťte jen hosting.",
       "editionsLead": "Tři edice stejného portálu. Procházejí stejnými testy shody a mluví stejným API, takže můžete přejít z jedné na druhou.",
@@ -1079,12 +1095,148 @@
       "faqLink": "Všechny dotazy",
       "closingTitle": "Nechte prodejce, ať si obsah vezmou sami.",
       "closingP": "Spusťte vlastní portál, nebo nám napište o svých systémech a prodejcích a pomozte utvářet první vydání.",
-      "closingMail": "Napište nám"
+      "closingMail": "Napište nám",
+      "rolesEyebrow": "Kdo co dělá",
+      "rolesTitle": "Značky publikují. Prodejci přijímají. Software propojuje.",
+      "rolesLead": "Standard určuje, jak se produktový obsah dostane od značky k prodejci. Každá strana dělá svou část a nikdo nemusí čekat na ostatní.",
+      "roles": [
+        {
+          "h": "Značky publikují",
+          "p": "Značka připraví svůj obsah jednou, ve standardním formátu, na vlastním portálu. Odchozí data si automatizuje sama, nebo to zařídí poskytovatel.",
+          "items": [
+            "Vaše fotky a data o zboží v jednom standardním formátu",
+            "Automatizujte to sami pomocí bezplatných nástrojů, nebo to svěřte poskytovateli",
+            "Každého prodejce schvalujete vy a určujete, co uvidí"
+          ],
+          "cta": "Pro značky"
+        },
+        {
+          "h": "Prodejci přijímají",
+          "p": "Prodejce si od každé značky, která standard používá, stáhne, co potřebuje, vždy stejným způsobem. Žádná nová práce s každou novou značkou.",
+          "items": [
+            "Hledání, vložení EAN a stažení v prohlížeči",
+            "Obrázky a vlákenné složení připravené pro e-shop",
+            "Užívací práva a data embarga u každého obrázku"
+          ],
+          "cta": "Pro prodejce"
+        },
+        {
+          "h": "Dodavatelé ERP a softwaru propojují",
+          "p": "Dodavatel ERP, PIM, e-shopu nebo pokladního softwaru vytvoří jedno propojení a pak čte každý portál značky stejným způsobem. Příchozí data se automatizují jako u každého jiného feedu od dodavatele.",
+          "items": [
+            "Jedno API, popsané v OpenAPI 3.1",
+            "Nejdřív úplná kopie, potom jen změny",
+            "Otestujte své propojení bezplatnými testy shody"
+          ],
+          "cta": "Přečíst příručku pro vývojáře"
+        }
+      ],
+      "portalsEyebrow": "Otevřené každému portálu",
+      "portalsTitle": "Už máte portál? Připojte ho ke standardu.",
+      "portalsLead": "Open Brand Exchange není jeden konkrétní software. Každý portál, který mluví protokolem a projde testem shody, je kompatibilní a software prodejců ho čte jako kterýkoli jiný.",
+      "portalTypes": [
+        {
+          "h": "Portály značek a B2B portály",
+          "p": "Portál značky, B2B obchod nebo velkoobchodní platforma přidá k tomu, co už dělá, API OBX. Značky na něm pak dosáhnou na každý systém prodejce, který standard podporuje."
+        },
+        {
+          "h": "Obrazové portály a DAM",
+          "p": "Fotoportály, fotobanky a DAM pro produktové obrázky publikují obrázky po jednotlivých artiklech: každá fotka propojená s produktem, barvou a EAN, s webovými verzemi, užívacími právy a daty embarga. Implementují čtecí část protokolu a software prodejců si obrázky stahuje jako z kteréhokoli jiného portálu."
+        },
+        {
+          "h": "Systémy PIM a ERP",
+          "p": "PIM nebo ERP, ve kterém jsou data o zboží značky, je může publikovat přímo: vlákenné složení, pokyny k údržbě, velikosti a EAN ve standardním formátu, bez samostatného portálu."
+        }
+      ],
+      "portalsSteps": [
+        "Přečtěte si specifikaci a nahrajte fiktivní testovací značku Kestrel",
+        "Nabídněte přes API discovery, kanál změn, produkty a obrázky",
+        "Spusťte bezplatný test shody: když projde, jste kompatibilní"
+      ],
+      "portalsCta": "Kompatibilita nebo partnerství"
     },
     "pages": {
       "brandsH1": "Nastavte jednou. Pro všechny prodejce najednou.",
       "retailersSoftware": "Pro váš software",
       "hostingEditions": "Tři edice"
     }
+  },
+  "partners": {
+    "eyebrow": "Partneři",
+    "h1": "Kompatibilita zdarma. Zápis jako oficiální partner.",
+    "lead": "S Open Brand Exchange může pracovat každý portál, obrazový portál, PIM, ERP i poskytovatel. Test a označení „Kompatibilní s Open Brand Exchange“ jsou zdarma. Zápis jako oficiální partner je placené členství se stejnými podmínkami pro všechny.",
+    "compareTitle": "Kompatibilní, nebo oficiální partner",
+    "colWhat": "Co získáte",
+    "colCompatible": "Kompatibilní",
+    "colPartner": "Oficiální partner",
+    "rows": [
+      {
+        "l": "Cena",
+        "c": "Zdarma",
+        "p": "Roční poplatek podle velikosti firmy"
+      },
+      {
+        "l": "Úspěšný test shody",
+        "c": "Povinný",
+        "p": "Povinný"
+      },
+      {
+        "l": "Uvádět „Kompatibilní s Open Brand Exchange“",
+        "c": "✓",
+        "p": "✓"
+      },
+      {
+        "l": "Uvedení s logem na stránkách partnerů a hostingu",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Odznak „Oficiální partner“",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Doporučení značkám, které nás žádají o poskytovatele",
+        "c": "–",
+        "p": "✓"
+      }
+    ],
+    "testTitle": "1. Otestujte si to sami, zdarma",
+    "testP": "Test shody je open source. Spouštějte ho proti svému portálu, jak často chcete. Kontroluje discovery, kanál změn, produkty, obrázky a zabezpečení a srozumitelně řekne, co ještě chybí.",
+    "testSteps": [
+      "Nahrajte fiktivní testovací značku Kestrel do testovacího účtu svého portálu.",
+      "Spusťte obx-conformance proti svému portálu podle příručky pro vývojáře.",
+      "Opravte, co selhává, dokud výsledek nebude CONFORMANT."
+    ],
+    "testLink": "Jak spustit test",
+    "certTitle": "2. Nechte si to potvrdit, zdarma",
+    "certP": "Pošlete nám zprávu ve formátu JSON a adresu svého testovacího portálu. Spustíme stejný test a výsledek potvrdíme. Od té chvíle můžete o svém produktu uvádět, že je „Kompatibilní s Open Brand Exchange“, a to pro testovanou verzi.",
+    "certMail": "Poslat zprávu",
+    "partnerTitle": "3. Staňte se oficiálním partnerem",
+    "partnerP": "Jste kompatibilní! Chcete, aby vás našly značky, které hledají poskytovatele? Oficiální partneři jsou uvedeni s logem na stránkách partnerů a hostingu, nesou odznak „Oficiální partner“ a doporučujeme je značkám, které nás o poskytovatele požádají.",
+    "reqTitle": "Podmínky, pro všechny stejné",
+    "tiersTitle": "Roční poplatek",
+    "tiers": [
+      {
+        "name": "Malá firma",
+        "who": "do 49 zaměstnanců",
+        "price": "500 €"
+      },
+      {
+        "name": "Střední firma",
+        "who": "50 až 249 zaměstnanců",
+        "price": "2 500 €"
+      },
+      {
+        "name": "Velká firma",
+        "who": "250 a více zaměstnanců",
+        "price": "10 000 €"
+      }
+    ],
+    "perYear": "ročně, bez DPH",
+    "tiersNote": "Navrhované poplatky pro rok 2027, platné po založení nadace. Poplatek je jen za uvedení v seznamu. Standard, test i software zůstávají pro všechny zdarma a partneři nemají do standardu co mluvit víc než kdokoli jiný.",
+    "partnerCta": "Staňte se partnerem",
+    "mailSubject": "Oficiální partner",
+    "listTitle": "Oficiální partneři"
   }
 }

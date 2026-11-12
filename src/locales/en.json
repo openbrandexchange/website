@@ -10,7 +10,7 @@
     "copy": "Copy",
     "copied": "Copied",
     "draft": "Version 0.2 is out. The specification and the software are free to use.",
-    "footerAbout": "A free, open way for brands to deliver product images and article data to their retailers.",
+    "footerAbout": "A free, open way for fashion brands to deliver product images and article data to their retailers.",
     "footerMore": "More",
     "footerSource": "Source code and specification",
     "footerLicence": "This website: content CC-BY-4.0, code MIT.",
@@ -34,12 +34,13 @@
     "governance": "Governance and name",
     "privacy": "Privacy",
     "imprint": "Imprint",
-    "cookies": "Cookies"
+    "cookies": "Cookies",
+    "partners": "Partners"
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: one place and one API for all your retailers",
-      "description": "A free, open standard and software for brands: a portal for your retailers, a standard API for their software, and automatic publishing from your own systems."
+      "title": "Open Brand Exchange: the open standard for fashion product content",
+      "description": "A free, open standard and software for fashion brands and retailers: product photos, fibre composition and care labels in one format, in a portal or straight into the retailer's software."
     },
     "brands": {
       "title": "For brands",
@@ -88,6 +89,10 @@
     "cookies": {
       "title": "Cookies",
       "description": "This website sets no cookies."
+    },
+    "partners": {
+      "title": "Become a partner",
+      "description": "A free conformance test and the label “Compatible with Open Brand Exchange”, or a listing as official partner from €500 a year."
     }
   },
   "home": {
@@ -228,7 +233,31 @@
     "nextHosting": "Choose how to host it",
     "nextAutomation": "See the automation recipes",
     "labelNote": "When something the law requires on the label is missing, such as the fibre composition or the materials of a shoe, Open Brand Exchange warns you at upload. A warning never blocks publishing.",
-    "bagsNote": "Luggage and bags now carry measurements (H × W × D, weight, volume) and features (wheels, lock, detachable strap …), measured the same way by every brand."
+    "bagsNote": "Luggage and bags now carry measurements (H × W × D, weight, volume) and features (wheels, lock, detachable strap …), measured the same way by every brand.",
+    "startEyebrow": "Start here",
+    "startTitle": "From your spreadsheet to every retailer, in four steps.",
+    "startSteps": [
+      {
+        "h": "Download the template",
+        "p": "An Excel file with the columns of the standard, drop-down lists for every fixed value and a filled-in example."
+      },
+      {
+        "h": "Fill it in",
+        "p": "One row per size, by hand or exported from your own system. Name your photos style_colour_position, for example KO-1001_NVY_1.jpg."
+      },
+      {
+        "h": "Upload or automate",
+        "p": "Save as CSV UTF-8 and upload it in your portal with the photos, or let the portal fetch your export every night."
+      },
+      {
+        "h": "Done",
+        "p": "Your retailers find everything in your portal, and their software picks up every change by itself. Free."
+      }
+    ],
+    "startTemplate": "Download the Excel template",
+    "partnersTitle": "Or let a partner do it all",
+    "partnersP": "Prefer not to do it yourself? A provider can take over the whole process. Photopilot, for example, offers a free portal with the OBX connection, full automation of the process and a custom integration with your ERP.",
+    "partnersCta": "See the providers"
   },
   "automation": {
     "h1": "Automation",
@@ -334,14 +363,14 @@
     "fieldStatus": "Open Brand Exchange",
     "fieldExport": "Export all your content",
     "fieldWebsite": "Website",
-    "listTitle": "Become a provider?",
-    "listP": "Any hosting company, agency or software vendor can be listed here. The conditions are the same for everyone:",
+    "listTitle": "Listed here as a provider?",
+    "listP": "The providers on this page are official partners. The criteria are the same for everyone:",
     "listItems": [
-      "your portal passes the conformance suite",
+      "your portal passes the conformance test for the current version",
       "a brand can export all its data and images and leave",
       "you publish your own prices and terms on your own site"
     ],
-    "listHow": "Open a pull request on the website repository with your details in src/data/providers.json. Providers are listed alphabetically.",
+    "listHow": "Being compatible is free; a listing here is part of the official partnership.",
     "p2Title": "2. With one click",
     "p2P": "Your own portal on your own account, without managing a server.",
     "cfP": "Runs on Cloudflare Workers, with D1 as the database and R2 for the images. Click the button, sign in to Cloudflare and follow the steps. A portal in daily use needs the Workers Paid plan (5 dollars a month); the free plan is only enough to look around. Web versions of your photos are made by your browser and the obx tool.",
@@ -380,7 +409,7 @@
   },
   "retailers": {
     "h1": "For retailers",
-    "lead": "Brands that use Open Brand Exchange deliver their images and article data in one consistent way, whether you download by hand or use software.",
+    "lead": "Brands that use Open Brand Exchange deliver their images and article data in one consistent way. You only receive, free of charge: in each brand's portal in your browser, or through one API straight into your software.",
     "portalTitle": "What a brand portal gives you",
     "portalP": "Every brand runs its own portal, with its own name on it: for example \"Kestrel · {portal}\".",
     "portal": [
@@ -617,7 +646,10 @@
     "templateP": "An empty CSV template is also available in the admin of every portal, under Imports.",
     "brandsTitle": "Brochure for brands",
     "brandsP": "Your own portal for retailers, the API, automatic upload and hosting, and what is ready today. To share with your team.",
-    "allLanguages": "All languages"
+    "allLanguages": "All languages",
+    "templateTitle": "Excel template for brands",
+    "templateP2": "products.xlsx: the columns of the standard import, drop-down lists for every fixed value, an explanation per column in English and Dutch, and an example from Kestrel. Save it as CSV UTF-8 to upload it.",
+    "templateButton": "Download products.xlsx"
   },
   "faq": {
     "h1": "Frequently asked questions",
@@ -661,6 +693,14 @@
       {
         "q": "Who is behind it?",
         "a": "Open Brand Exchange is being handed over to the {foundation}, a Dutch non-profit foundation (stichting), so that the standard belongs to the brands, retailers and software vendors who use it, not to one company. Questions go to {email}."
+      },
+      {
+        "q": "How is this different from closed content platforms?",
+        "a": "Closed platforms keep the brands' content in one company's system and charge brands or retailers for access. Open Brand Exchange is an open standard: each brand runs its own portal or chooses a provider, and can export everything and leave. Any software can implement it without a licence fee."
+      },
+      {
+        "q": "Can our image portal or DAM connect?",
+        "a": "Yes. An image portal, image bank or DAM that offers the read side of the protocol and passes the conformance test is compatible. Retailers' software then fetches its product images, per article and EAN, the same way as from any brand portal."
       }
     ]
   },
@@ -840,7 +880,7 @@
       "preview": "Version 0.2"
     },
     "footer": {
-      "tagline": "The open standard for delivering product images and article data from brands to their retailers.",
+      "tagline": "The open standard for delivering product images and article data from fashion brands to their retailers.",
       "product": "Product",
       "developers": "Developers",
       "project": "Project",
@@ -861,9 +901,9 @@
       "adminAutomation": "Automatic upload in the brand admin: ready-made recipes for the obx tool, cron, GitHub Actions and more."
     },
     "home": {
-      "eyebrow": "Open standard · Free software",
-      "h1": "Your product content, ready for every retailer.",
-      "lead": "Open Brand Exchange is an open standard for how retailers get product photos and article data from a brand: in a portal in the browser, as a zip or spreadsheet, or straight into their own software through one API. How the content gets into your portal is up to you.",
+      "eyebrow": "Open standard for fashion · Free software",
+      "h1": "Fashion product content, ready for every retailer.",
+      "lead": "Open Brand Exchange is the open standard for how fashion, shoe, bag and luggage brands deliver product photos and article data to their retailers: in a portal, as a zip or spreadsheet, or straight into the retailer's software through one API. An open alternative to closed platforms: no fee per retailer, no lock-in, and your data stays yours.",
       "ctaRetailer": "I am a retailer",
       "proofLabel": "At a glance",
       "proof": [
@@ -967,30 +1007,6 @@
           "link": "See the automation recipes"
         }
       ],
-      "audienceEyebrow": "Who it is for",
-      "audienceTitle": "For brands and for retailers.",
-      "brands": {
-        "h": "For brands",
-        "p": "No more sending files around. Retailers fetch what they need, and you decide who gets what.",
-        "items": [
-          "Your own portal, on your own domain",
-          "You approve every retailer and decide what they see",
-          "See who downloads what, per retailer",
-          "Host it yourself for free, or choose a provider and leave any time"
-        ],
-        "cta": "Explore for brands"
-      },
-      "retailers": {
-        "h": "For retailers",
-        "p": "Every brand in one consistent format, in your browser or straight into your software.",
-        "items": [
-          "Paste your EAN list and get the right images for every size",
-          "Download zips and article data, ready for your shop",
-          "One connection for every brand on the standard",
-          "Usage rights and embargo dates with every image"
-        ],
-        "cta": "Explore for retailers"
-      },
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Run it where you want. Pay only for hosting.",
       "editionsLead": "Three editions of the same portal. They pass the same conformance suite and speak the same API, so you can move from one to another.",
@@ -1079,12 +1095,148 @@
       "faqLink": "All questions",
       "closingTitle": "Let your retailers fetch it themselves.",
       "closingP": "Set up your own portal, or tell us about your systems and retailers and help shape the first release.",
-      "closingMail": "Email us"
+      "closingMail": "Email us",
+      "rolesEyebrow": "Who does what",
+      "rolesTitle": "Brands publish. Retailers receive. Software connects.",
+      "rolesLead": "The standard sets how product content travels from brand to retailer. Each party does its own part, and nobody has to wait for anyone else.",
+      "roles": [
+        {
+          "h": "Brands publish",
+          "p": "A brand sets out its content once, in the standard format, in its own portal. It automates the outgoing data itself, or a provider arranges it.",
+          "items": [
+            "Your photos and article data in one standard format",
+            "Automate it yourself with the free tools, or let a provider do it",
+            "You approve every retailer and decide what they see"
+          ],
+          "cta": "Explore for brands"
+        },
+        {
+          "h": "Retailers receive",
+          "p": "A retailer fetches what it needs from every brand on the standard, in the same way. No new work for each new brand.",
+          "items": [
+            "Search, paste EANs and download in the browser",
+            "Images and fibre composition ready for the webshop",
+            "Usage rights and embargo dates with every image"
+          ],
+          "cta": "Explore for retailers"
+        },
+        {
+          "h": "ERP and software vendors connect",
+          "p": "A vendor of ERP, PIM, webshop or POS software builds one connection and then reads every brand portal the same way. Incoming data is automated as with any other supplier feed.",
+          "items": [
+            "One API, documented in OpenAPI 3.1",
+            "A full copy first, then only the changes",
+            "Test your connection with the free conformance suite"
+          ],
+          "cta": "Read the developer guide"
+        }
+      ],
+      "portalsEyebrow": "Open to every portal",
+      "portalsTitle": "Already have a portal? Connect it to the standard.",
+      "portalsLead": "Open Brand Exchange is not one piece of software. Any portal that speaks the protocol and passes the conformance test is compatible, and retailers' software reads it like any other.",
+      "portalTypes": [
+        {
+          "h": "Brand and B2B portals",
+          "p": "A brand portal, B2B shop or wholesale platform adds the OBX API next to what it already does. Its brands then reach every retailer system that speaks the standard."
+        },
+        {
+          "h": "Image portals and DAMs",
+          "p": "Photo portals, image banks and DAMs for product images publish the images per article: every photo linked to its product, colour and EAN, with web versions, usage rights and embargo dates. They implement the read side of the protocol, and retailers' software fetches the images as from any other portal."
+        },
+        {
+          "h": "PIM and ERP systems",
+          "p": "A PIM or ERP that holds a brand's article data can publish it directly: fibre composition, care instructions, sizes and EANs in the standard format, without a separate portal."
+        }
+      ],
+      "portalsSteps": [
+        "Read the specification and load the fictional test brand Kestrel",
+        "Offer discovery, the change feed, products and images over the API",
+        "Run the free conformance test: when it passes, you are compatible"
+      ],
+      "portalsCta": "Compatible or partner"
     },
     "pages": {
       "brandsH1": "Set it up once. For every retailer at the same time.",
       "retailersSoftware": "For your software",
       "hostingEditions": "The three editions"
     }
+  },
+  "partners": {
+    "eyebrow": "Partners",
+    "h1": "Compatible for free. Listed as an official partner.",
+    "lead": "Any portal, image portal, PIM, ERP or provider can work with Open Brand Exchange. The test and the label “Compatible with Open Brand Exchange” are free. A listing as official partner is a paid membership, with the same criteria for everyone.",
+    "compareTitle": "Compatible or official partner",
+    "colWhat": "What you get",
+    "colCompatible": "Compatible",
+    "colPartner": "Official partner",
+    "rows": [
+      {
+        "l": "Price",
+        "c": "Free",
+        "p": "Annual fee by company size"
+      },
+      {
+        "l": "Passed the conformance test",
+        "c": "Required",
+        "p": "Required"
+      },
+      {
+        "l": "Say “Compatible with Open Brand Exchange”",
+        "c": "✓",
+        "p": "✓"
+      },
+      {
+        "l": "Listed with your logo on the partner and hosting pages",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "The “Official partner” badge",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Shown to brands that ask us for a provider",
+        "c": "–",
+        "p": "✓"
+      }
+    ],
+    "testTitle": "1. Test it yourself, free",
+    "testP": "The conformance test is open source. Run it against your own portal as often as you like. It checks discovery, the change feed, products, images and security, and says in plain language what is still missing.",
+    "testSteps": [
+      "Load the fictional test brand Kestrel into a test account of your portal.",
+      "Run obx-conformance against your portal, as described in the developer guide.",
+      "Fix what fails, until the result says CONFORMANT."
+    ],
+    "testLink": "How to run the test",
+    "certTitle": "2. Get it confirmed, free",
+    "certP": "Send us the JSON report and the address of your test portal. We run the same test and confirm the result. From then on you may say your product is “Compatible with Open Brand Exchange”, for the version you tested.",
+    "certMail": "Send your report",
+    "partnerTitle": "3. Become an official partner",
+    "partnerP": "Compatible! Want brands that look for a provider to find you? Official partners are listed with their logo on the partner and hosting pages, carry the “Official partner” badge and are named to brands that ask us for a provider.",
+    "reqTitle": "The criteria, the same for everyone",
+    "tiersTitle": "Annual fee",
+    "tiers": [
+      {
+        "name": "Small",
+        "who": "up to 49 employees",
+        "price": "€500"
+      },
+      {
+        "name": "Medium",
+        "who": "50 to 249 employees",
+        "price": "€2,500"
+      },
+      {
+        "name": "Large",
+        "who": "250 employees or more",
+        "price": "€10,000"
+      }
+    ],
+    "perYear": "per year, excl. VAT",
+    "tiersNote": "Proposed fees for 2027, final once the foundation is set up. The fee pays for the listing only. The standard, the test and the software stay free for everyone, and partners have no more say in the standard than anyone else.",
+    "partnerCta": "Become a partner",
+    "mailSubject": "Official partner",
+    "listTitle": "Official partners"
   }
 }

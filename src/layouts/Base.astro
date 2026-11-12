@@ -13,6 +13,8 @@ import {
 import Logo from '../components/Logo.astro';
 import Icon from '../components/Icon.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import { format } from '../i18n';
+import { HELLO_EMAIL, orgVars } from '../lib/org';
 import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
 
 interface Props {
@@ -31,7 +33,66 @@ const canonical = site + url(lang, page);
 const analyticsToken = import.meta.env.PUBLIC_CF_ANALYTICS_TOKEN;
 
 const s = t.site;
-const nav: PageKey[] = ['brands', 'retailers', 'automation', 'hosting'];
+
+// schema.org data, so search engines and AI assistants can describe and cite the project correctly.
+const orgId = `${site}/#organization`;
+const graph: Record<string, unknown>[] = [
+  {
+    '@type': 'Organization',
+    '@id': orgId,
+    name: 'Open Brand Exchange',
+    alternateName: 'OBX',
+    url: `${site}/`,
+    logo: `${site}/favicon.svg`,
+    email: HELLO_EMAIL,
+    description: t.site.footer.tagline,
+    sameAs: ['https://github.com/openbrandexchange'],
+  },
+  {
+    '@type': 'WebSite',
+    '@id': `${site}/#website`,
+    url: `${site}/`,
+    name: 'Open Brand Exchange',
+    inLanguage: lang,
+    publisher: { '@id': orgId },
+  },
+  {
+    '@type': 'WebPage',
+    '@id': `${canonical}#webpage`,
+    url: canonical,
+    name: title,
+    description: m.description,
+    inLanguage: lang,
+    isPartOf: { '@id': `${site}/#website` },
+    about: { '@id': `${site}/#standard` },
+  },
+  {
+    '@type': 'CreativeWork',
+    '@id': `${site}/#standard`,
+    name: 'Open Brand Exchange specification',
+    alternateName: 'OBX',
+    description: t.site.footer.tagline,
+    version: '0.2',
+    license: 'https://creativecommons.org/licenses/by/4.0/',
+    url: 'https://github.com/openbrandexchange/spec',
+    publisher: { '@id': orgId },
+    keywords: 'fashion, product content, product images, article data, fibre composition, care label, open standard, API, retailers, brands',
+  },
+];
+if (page === 'faq') {
+  graph.push({
+    '@type': 'FAQPage',
+    '@id': `${canonical}#faq`,
+    mainEntity: t.faq.items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: format(item.a, orgVars(lang)) },
+    })),
+  });
+}
+// Escape "<" so no text can close the script element.
+const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
+const nav: PageKey[] = ['brands', 'retailers', 'hosting', 'partners'];
 ---
 
 <!doctype html>
@@ -62,6 +123,8 @@ const nav: PageKey[] = ['brands', 'retailers', 'automation', 'hosting'];
     <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="sitemap" href="/sitemap.xml" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+    <script is:inline type="application/ld+json" set:html={jsonLd} />
     <script src="/js/site.js" defer is:inline></script>
     {
       analyticsToken && (

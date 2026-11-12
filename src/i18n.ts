@@ -22,6 +22,7 @@ export type PageKey =
   | 'brands'
   | 'automation'
   | 'hosting'
+  | 'partners'
   | 'retailers'
   | 'developers'
   | 'directory'
@@ -38,6 +39,7 @@ export const slugs: Record<PageKey, string> = {
   brands: 'for-brands',
   automation: 'automation',
   hosting: 'hosting',
+  partners: 'partners',
   retailers: 'for-retailers',
   developers: 'developers',
   directory: 'directory',

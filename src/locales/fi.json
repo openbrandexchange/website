@@ -10,7 +10,7 @@
     "copy": "Kopioi",
     "copied": "Kopioitu",
     "draft": "Versio 0.2 on julkaistu. Määrittely ja ohjelmisto ovat vapaasti käytettävissä.",
-    "footerAbout": "Maksuton ja avoin tapa brändeille toimittaa tuotekuvat ja tuotetiedot jälleenmyyjilleen.",
+    "footerAbout": "Maksuton ja avoin tapa muotibrändeille toimittaa tuotekuvat ja tuotetiedot jälleenmyyjilleen.",
     "footerMore": "Lisää",
     "footerSource": "Lähdekoodi ja määrittely",
     "footerLicence": "Tämä sivusto: sisältö CC-BY-4.0, koodi MIT.",
@@ -34,12 +34,13 @@
     "governance": "Hallinto ja nimi",
     "privacy": "Tietosuoja",
     "imprint": "Julkaisijatiedot",
-    "cookies": "Evästeet"
+    "cookies": "Evästeet",
+    "partners": "Kumppanit"
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: yksi paikka ja yksi API kaikille jälleenmyyjillesi",
-      "description": "Maksuton, avoin standardi ja ohjelmisto brändeille: portaali jälleenmyyjillesi, vakio-API heidän järjestelmilleen ja automaattinen julkaisu omista järjestelmistäsi."
+      "title": "Open Brand Exchange: avoin standardi muodin tuotesisällölle",
+      "description": "Maksuton avoin standardi ja ohjelmisto muotibrändeille ja jälleenmyyjille: tuotekuvat, kuitukoostumus ja hoito-ohjeet yhdessä muodossa, portaalissa tai suoraan jälleenmyyjän ohjelmistossa."
     },
     "brands": {
       "title": "Brändeille",
@@ -88,6 +89,10 @@
     "cookies": {
       "title": "Evästeet",
       "description": "Tämä sivusto ei käytä evästeitä."
+    },
+    "partners": {
+      "title": "Ryhdy kumppaniksi",
+      "description": "Maksuton yhdenmukaisuustesti ja merkintä ”Yhteensopiva Open Brand Exchangen kanssa” tai paikka virallisena kumppanina alkaen 500 € vuodessa."
     }
   },
   "home": {
@@ -228,7 +233,31 @@
     "nextHosting": "Valitse ylläpito",
     "nextAutomation": "Katso automaatio-ohjeet",
     "labelNote": "Jos pesulapusta puuttuu jotain lain vaatimaa, kuten kuitukoostumus tai kengän materiaalit, Open Brand Exchange varoittaa sinua latausvaiheessa. Varoitus ei koskaan estä julkaisua.",
-    "bagsNote": "Matkalaukuilla ja laukuilla on nyt mitat (K × L × S, paino, tilavuus) ja ominaisuudet (pyörät, lukko, irrotettava hihna …), jotka jokainen brändi mittaa samalla tavalla."
+    "bagsNote": "Matkalaukuilla ja laukuilla on nyt mitat (K × L × S, paino, tilavuus) ja ominaisuudet (pyörät, lukko, irrotettava hihna …), jotka jokainen brändi mittaa samalla tavalla.",
+    "startEyebrow": "Aloita tästä",
+    "startTitle": "Taulukostasi jokaiselle jälleenmyyjälle neljässä vaiheessa.",
+    "startSteps": [
+      {
+        "h": "Lataa pohja",
+        "p": "Excel-tiedosto, jossa on standardin sarakkeet, pudotusvalikot jokaiselle kiinteälle arvolle ja täytetty esimerkki."
+      },
+      {
+        "h": "Täytä se",
+        "p": "Yksi rivi kokoa kohden, käsin tai omasta järjestelmästäsi vietynä. Nimeä kuvat malli_väri_sijainti, esimerkiksi KO-1001_NVY_1.jpg."
+      },
+      {
+        "h": "Lataa tai automatisoi",
+        "p": "Tallenna CSV UTF-8 -muodossa ja lataa se kuvien kanssa portaaliisi, tai anna portaalin hakea vientisi joka yö."
+      },
+      {
+        "h": "Valmis",
+        "p": "Jälleenmyyjäsi löytävät kaiken portaalistasi, ja heidän ohjelmistonsa poimivat jokaisen muutoksen itsestään. Maksutta."
+      }
+    ],
+    "startTemplate": "Lataa Excel-pohja",
+    "partnersTitle": "Tai anna kumppanin hoitaa kaikki",
+    "partnersP": "Etkö halua tehdä sitä itse? Palveluntarjoaja voi ottaa koko prosessin hoitaakseen. Esimerkiksi Photopilot tarjoaa maksuttoman portaalin OBX-integraatiolla, koko prosessin täyden automaation ja räätälöidyn integraation ERP-järjestelmääsi.",
+    "partnersCta": "Katso palveluntarjoajat"
   },
   "automation": {
     "h1": "Automaatio",
@@ -334,14 +363,14 @@
     "fieldStatus": "Open Brand Exchange",
     "fieldExport": "Vie kaikki sisältösi",
     "fieldWebsite": "Verkkosivusto",
-    "listTitle": "Haluatko palveluntarjoajaksi?",
-    "listP": "Mikä tahansa ylläpitoyritys, toimisto tai ohjelmistotoimittaja voi olla listalla. Ehdot ovat kaikille samat:",
+    "listTitle": "Haluatko listalle palveluntarjoajana?",
+    "listP": "Tämän sivun palveluntarjoajat ovat virallisia kumppaneita. Ehdot ovat kaikille samat:",
     "listItems": [
-      "portaalisi läpäisee yhdenmukaisuustestit",
+      "portaalisi läpäisee nykyisen version yhdenmukaisuustestin",
       "brändi voi viedä kaikki tietonsa ja kuvansa ja lähteä",
       "julkaiset omat hintasi ja ehtosi omalla sivustollasi"
     ],
-    "listHow": "Avaa pull request sivuston repositoriossa ja lisää tietosi tiedostoon src/data/providers.json. Palveluntarjoajat ovat aakkosjärjestyksessä.",
+    "listHow": "Yhteensopivuus on maksutonta; paikka tällä listalla kuuluu viralliseen kumppanuuteen.",
     "p2Title": "2. Yhdellä klikkauksella",
     "p2P": "Oma portaali omalla tililläsi ilman palvelimen ylläpitoa.",
     "cfP": "Toimii Cloudflare Workersissa, tietokantana D1 ja kuville R2. Napsauta painiketta, kirjaudu Cloudflareen ja seuraa vaiheita. Päivittäiseen käyttöön portaali tarvitsee Workers Paid -tilauksen (5 dollaria kuukaudessa); ilmaistilaus riittää vain tutustumiseen. Kuviesi verkkoversiot tekevät selaimesi ja obx-työkalu.",
@@ -380,7 +409,7 @@
   },
   "retailers": {
     "h1": "Jälleenmyyjille",
-    "lead": "Open Brand Exchangea käyttävät brändit toimittavat kuvansa ja tuotetietonsa yhdellä yhtenäisellä tavalla, latasitpa käsin tai ohjelmistolla.",
+    "lead": "Open Brand Exchangea käyttävät brändit toimittavat kuvansa ja tuotetietonsa yhdellä yhtenäisellä tavalla. Sinä vain vastaanotat ne, maksutta: kunkin brändin portaalissa selaimessasi tai yhden API:n kautta suoraan ohjelmistoosi.",
     "portalTitle": "Mitä brändin portaali tarjoaa",
     "portalP": "Jokaisella brändillä on oma portaalinsa omalla nimellään, esimerkiksi ”Kestrel · {portal}”.",
     "portal": [
@@ -617,7 +646,10 @@
     "templateP": "Tyhjä CSV-pohja löytyy myös jokaisen portaalin hallinnasta kohdasta Tuonnit.",
     "brandsTitle": "Esite brändeille",
     "brandsP": "Oma portaali jälleenmyyjille, API, automaattinen lataus ja ylläpito sekä mikä on jo valmista. Jaettavaksi tiimisi kanssa.",
-    "allLanguages": "Kaikki kielet"
+    "allLanguages": "Kaikki kielet",
+    "templateTitle": "Excel-pohja brändeille",
+    "templateP2": "products.xlsx: vakiotuonnin sarakkeet, pudotusvalikot jokaiselle kiinteälle arvolle, sarakekohtainen selitys englanniksi ja hollanniksi sekä esimerkki Kestreliltä. Tallenna se CSV UTF-8 -muodossa ladataksesi sen.",
+    "templateButton": "Lataa products.xlsx"
   },
   "faq": {
     "h1": "Usein kysyttyä",
@@ -661,6 +693,14 @@
       {
         "q": "Kuka sen takana on?",
         "a": "Open Brand Exchange siirretään organisaatiolle {foundation}, joka on alankomaalainen voittoa tavoittelematon säätiö (stichting). Näin standardi kuuluu sitä käyttäville brändeille, jälleenmyyjille ja ohjelmistotoimittajille eikä yhdelle yritykselle. Kysymykset voi lähettää osoitteeseen {email}."
+      },
+      {
+        "q": "Miten tämä eroaa suljetuista sisältöalustoista?",
+        "a": "Suljetut alustat pitävät brändien sisällön yhden yrityksen järjestelmässä ja perivät brändeiltä tai jälleenmyyjiltä maksun pääsystä. Open Brand Exchange on avoin standardi: jokainen brändi pyörittää omaa portaaliaan tai valitsee palveluntarjoajan, ja voi viedä kaiken ja lähteä. Mikä tahansa ohjelmisto voi toteuttaa sen ilman lisenssimaksua."
+      },
+      {
+        "q": "Voiko kuvaportaalimme tai DAM-järjestelmämme liittyä?",
+        "a": "Kyllä. Kuvaportaali, kuvapankki tai DAM, joka tarjoaa protokollan lukupuolen ja läpäisee yhdenmukaisuustestin, on yhteensopiva. Jälleenmyyjien ohjelmistot hakevat silloin sen tuotekuvat tuotteittain ja EAN-koodeittain samalla tavalla kuin mistä tahansa brändin portaalista."
       }
     ]
   },
@@ -840,7 +880,7 @@
       "preview": "Versio 0.2"
     },
     "footer": {
-      "tagline": "Avoin standardi tuotekuvien ja tuotetietojen toimittamiseen brändeiltä niiden jälleenmyyjille.",
+      "tagline": "Avoin standardi tuotekuvien ja tuotetietojen toimittamiseen muotibrändeiltä niiden jälleenmyyjille.",
       "product": "Tuote",
       "developers": "Kehittäjille",
       "project": "Projekti",
@@ -861,9 +901,9 @@
       "adminAutomation": "Automaattinen lataus brändin hallinnassa: valmiit ohjeet obx-työkalulle, cronille, GitHub Actionsille ja muille."
     },
     "home": {
-      "eyebrow": "Avoin standardi · Vapaa ohjelmisto",
-      "h1": "Tuotesisältösi valmiina jokaiselle jälleenmyyjälle.",
-      "lead": "Open Brand Exchange on avoin standardi sille, miten jälleenmyyjät hakevat brändin tuotekuvat ja tuotetiedot: selaimessa toimivasta portaalista, zip-tiedostona tai taulukkona tai suoraan omaan ohjelmistoonsa yhden APIn kautta. Sinä päätät, miten sisältö tulee portaaliisi.",
+      "eyebrow": "Avoin standardi muodille · Maksuton ohjelmisto",
+      "h1": "Muodin tuotesisältö valmiina jokaiselle jälleenmyyjälle.",
+      "lead": "Open Brand Exchange on avoin standardi sille, miten vaate-, kenkä-, laukku- ja matkalaukkubrändit toimittavat tuotekuvat ja tuotetiedot jälleenmyyjilleen: portaalissa, zip-tiedostona tai taulukkona tai suoraan jälleenmyyjän ohjelmistoon yhden APIn kautta. Avoin vaihtoehto suljetuille alustoille: ei maksua jälleenmyyjää kohden, ei sitoutumista, ja tietosi pysyvät sinun.",
       "ctaRetailer": "Olen jälleenmyyjä",
       "proofLabel": "Lyhyesti",
       "proof": [
@@ -967,30 +1007,6 @@
           "link": "Katso automaatio-ohjeet"
         }
       ],
-      "audienceEyebrow": "Kenelle",
-      "audienceTitle": "Brändeille ja jälleenmyyjille.",
-      "brands": {
-        "h": "Brändeille",
-        "p": "Tiedostoja ei tarvitse enää lähetellä. Jälleenmyyjät hakevat itse, mitä tarvitsevat, ja sinä päätät, kuka saa mitäkin.",
-        "items": [
-          "Oma portaali omassa verkkotunnuksessasi",
-          "Hyväksyt jokaisen jälleenmyyjän ja päätät, mitä he näkevät",
-          "Näet, kuka lataa mitä, jälleenmyyjäkohtaisesti",
-          "Ylläpidä itse maksutta tai valitse palveluntarjoaja, jonka voit vaihtaa milloin vain"
-        ],
-        "cta": "Lisää brändeille"
-      },
-      "retailers": {
-        "h": "Jälleenmyyjille",
-        "p": "Kaikki brändit yhdessä yhtenäisessä muodossa, selaimessa tai suoraan ohjelmistossasi.",
-        "items": [
-          "Liitä EAN-luettelosi ja saat oikeat kuvat jokaiselle koolle",
-          "Lataa zip-tiedostot ja tuotetiedot valmiina kauppaasi",
-          "Yksi yhteys kaikkiin standardia käyttäviin brändeihin",
-          "Käyttöoikeudet ja julkaisuvapautuksen päivät jokaisen kuvan mukana"
-        ],
-        "cta": "Lisää jälleenmyyjille"
-      },
       "editionsEyebrow": "Ylläpito",
       "editionsTitle": "Aja missä haluat. Maksat vain ylläpidosta.",
       "editionsLead": "Saman portaalin kolme versiota. Ne läpäisevät samat yhdenmukaisuustestit ja puhuvat samaa APIa, joten voit siirtyä versiosta toiseen.",
@@ -1079,12 +1095,148 @@
       "faqLink": "Kaikki kysymykset",
       "closingTitle": "Anna jälleenmyyjiesi hakea sisältö itse.",
       "closingP": "Ota oma portaali käyttöön tai kerro meille järjestelmistäsi ja jälleenmyyjistäsi, ja ole mukana muovaamassa ensimmäistä julkaisua.",
-      "closingMail": "Lähetä sähköpostia"
+      "closingMail": "Lähetä sähköpostia",
+      "rolesEyebrow": "Kuka tekee mitä",
+      "rolesTitle": "Brändit julkaisevat. Jälleenmyyjät vastaanottavat. Ohjelmistot yhdistävät.",
+      "rolesLead": "Standardi määrää, miten tuotesisältö kulkee brändiltä jälleenmyyjälle. Jokainen osapuoli hoitaa oman osansa, eikä kenenkään tarvitse odottaa muita.",
+      "roles": [
+        {
+          "h": "Brändit julkaisevat",
+          "p": "Brändi laittaa sisältönsä valmiiksi kerran, vakiomuodossa, omaan portaaliinsa. Se automatisoi lähtevät tiedot itse, tai palveluntarjoaja hoitaa sen.",
+          "items": [
+            "Kuvasi ja tuotetietosi yhdessä vakiomuodossa",
+            "Automatisoi itse maksuttomilla työkaluilla tai anna palveluntarjoajan hoitaa se",
+            "Hyväksyt jokaisen jälleenmyyjän ja päätät, mitä he näkevät"
+          ],
+          "cta": "Lisää brändeille"
+        },
+        {
+          "h": "Jälleenmyyjät vastaanottavat",
+          "p": "Jälleenmyyjä hakee tarvitsemansa jokaiselta standardia käyttävältä brändiltä samalla tavalla. Uusi brändi ei tuo uutta työtä.",
+          "items": [
+            "Hae, liitä EAN-koodit ja lataa selaimessa",
+            "Kuvat ja kuitukoostumus valmiina verkkokauppaan",
+            "Käyttöoikeudet ja julkaisuvapautuksen päivät jokaisen kuvan mukana"
+          ],
+          "cta": "Lisää jälleenmyyjille"
+        },
+        {
+          "h": "ERP- ja ohjelmistotoimittajat yhdistävät",
+          "p": "ERP-, PIM-, verkkokauppa- tai kassaohjelmiston toimittaja rakentaa yhden integraation ja lukee sen jälkeen jokaista brändin portaalia samalla tavalla. Saapuvat tiedot automatisoidaan kuten minkä tahansa muun toimittajan syöte.",
+          "items": [
+            "Yksi API, kuvattu OpenAPI 3.1 -muodossa",
+            "Ensin täydellinen kopio, sitten vain muutokset",
+            "Testaa integraatiosi maksuttomilla yhdenmukaisuustesteillä"
+          ],
+          "cta": "Lue kehittäjän opas"
+        }
+      ],
+      "portalsEyebrow": "Avoin jokaiselle portaalille",
+      "portalsTitle": "Onko sinulla jo portaali? Liitä se standardiin.",
+      "portalsLead": "Open Brand Exchange ei ole yksi ohjelmisto. Jokainen portaali, joka puhuu protokollaa ja läpäisee yhdenmukaisuustestin, on yhteensopiva, ja jälleenmyyjien ohjelmistot lukevat sitä kuten mitä tahansa muuta.",
+      "portalTypes": [
+        {
+          "h": "Brändi- ja B2B-portaalit",
+          "p": "Brändin portaali, B2B-kauppa tai tukkukauppa-alusta lisää OBX APIn nykyisten toimintojensa rinnalle. Sen brändit tavoittavat silloin jokaisen standardia puhuvan jälleenmyyjäjärjestelmän."
+        },
+        {
+          "h": "Kuvaportaalit ja DAM-järjestelmät",
+          "p": "Kuvaportaalit, kuvapankit ja tuotekuvien DAM-järjestelmät julkaisevat kuvat tuotekohtaisesti: jokainen kuva on liitetty tuotteeseensa, väriinsä ja EAN-koodiinsa, ja mukana ovat verkkoversiot, käyttöoikeudet ja julkaisuvapautuksen päivät. Ne toteuttavat protokollan lukupuolen, ja jälleenmyyjien ohjelmistot hakevat kuvat kuten mistä tahansa muusta portaalista."
+        },
+        {
+          "h": "PIM- ja ERP-järjestelmät",
+          "p": "PIM tai ERP, jossa brändin tuotetiedot ovat, voi julkaista ne suoraan: kuitukoostumus, hoito-ohjeet, koot ja EAN-koodit vakiomuodossa, ilman erillistä portaalia."
+        }
+      ],
+      "portalsSteps": [
+        "Lue määrittely ja lataa kuvitteellinen testibrändi Kestrel",
+        "Tarjoa discovery, muutossyöte, tuotteet ja kuvat APIn kautta",
+        "Aja maksuton yhdenmukaisuustesti: kun se menee läpi, olet yhteensopiva"
+      ],
+      "portalsCta": "Yhteensopiva vai kumppani"
     },
     "pages": {
       "brandsH1": "Ota käyttöön kerran. Kaikille jälleenmyyjille kerralla.",
       "retailersSoftware": "Ohjelmistollesi",
       "hostingEditions": "Kolme versiota"
     }
+  },
+  "partners": {
+    "eyebrow": "Kumppanit",
+    "h1": "Yhteensopiva maksutta. Listalla virallisena kumppanina.",
+    "lead": "Mikä tahansa portaali, kuvaportaali, PIM, ERP tai palveluntarjoaja voi toimia Open Brand Exchangen kanssa. Testi ja merkintä ”Yhteensopiva Open Brand Exchangen kanssa” ovat maksuttomia. Paikka virallisena kumppanina on maksullinen jäsenyys, samoin ehdoin kaikille.",
+    "compareTitle": "Yhteensopiva vai virallinen kumppani",
+    "colWhat": "Mitä saat",
+    "colCompatible": "Yhteensopiva",
+    "colPartner": "Virallinen kumppani",
+    "rows": [
+      {
+        "l": "Hinta",
+        "c": "Maksuton",
+        "p": "Vuosimaksu yrityksen koon mukaan"
+      },
+      {
+        "l": "Yhdenmukaisuustesti läpäisty",
+        "c": "Vaaditaan",
+        "p": "Vaaditaan"
+      },
+      {
+        "l": "Saat sanoa ”Yhteensopiva Open Brand Exchangen kanssa”",
+        "c": "✓",
+        "p": "✓"
+      },
+      {
+        "l": "Logosi kumppani- ja ylläpitosivuilla",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "”Virallinen kumppani” -merkki",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Suosittelemme sinua brändeille, jotka kysyvät meiltä palveluntarjoajaa",
+        "c": "–",
+        "p": "✓"
+      }
+    ],
+    "testTitle": "1. Testaa itse, maksutta",
+    "testP": "Yhdenmukaisuustesti on avointa lähdekoodia. Aja sitä omaa portaaliasi vastaan niin usein kuin haluat. Se tarkistaa discoveryn, muutossyötteen, tuotteet, kuvat ja tietoturvan ja kertoo selkokielellä, mitä vielä puuttuu.",
+    "testSteps": [
+      "Lataa kuvitteellinen testibrändi Kestrel portaalisi testitilille.",
+      "Aja obx-conformance portaaliasi vastaan kehittäjän oppaan ohjeiden mukaan.",
+      "Korjaa epäonnistuneet kohdat, kunnes tulos on CONFORMANT."
+    ],
+    "testLink": "Näin ajat testin",
+    "certTitle": "2. Pyydä vahvistus, maksutta",
+    "certP": "Lähetä meille JSON-raportti ja testiportaalisi osoite. Ajamme saman testin ja vahvistamme tuloksen. Sen jälkeen saat sanoa, että tuotteesi on ”Yhteensopiva Open Brand Exchangen kanssa” testaamasi version osalta.",
+    "certMail": "Lähetä raporttisi",
+    "partnerTitle": "3. Ryhdy viralliseksi kumppaniksi",
+    "partnerP": "Olet yhteensopiva! Haluatko, että palveluntarjoajaa etsivät brändit löytävät sinut? Viralliset kumppanit näkyvät logollaan kumppani- ja ylläpitosivuilla, käyttävät ”Virallinen kumppani” -merkkiä, ja suosittelemme heitä brändeille, jotka kysyvät meiltä palveluntarjoajaa.",
+    "reqTitle": "Ehdot, samat kaikille",
+    "tiersTitle": "Vuosimaksu",
+    "tiers": [
+      {
+        "name": "Pieni",
+        "who": "enintään 49 työntekijää",
+        "price": "500 €"
+      },
+      {
+        "name": "Keskikokoinen",
+        "who": "50–249 työntekijää",
+        "price": "2 500 €"
+      },
+      {
+        "name": "Suuri",
+        "who": "250 työntekijää tai enemmän",
+        "price": "10 000 €"
+      }
+    ],
+    "perYear": "vuodessa, alv 0 %",
+    "tiersNote": "Ehdotetut maksut vuodelle 2027, lopulliset kun säätiö on perustettu. Maksu kattaa vain listalla näkymisen. Standardi, testi ja ohjelmisto pysyvät maksuttomina kaikille, eikä kumppaneilla ole standardista enempää sananvaltaa kuin kenelläkään muulla.",
+    "partnerCta": "Ryhdy kumppaniksi",
+    "mailSubject": "Virallinen kumppani",
+    "listTitle": "Viralliset kumppanit"
   }
 }

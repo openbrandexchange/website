@@ -10,7 +10,7 @@
     "copy": "Kopeeri",
     "copied": "Kopeeritud",
     "draft": "Versioon 0.2 on avaldatud. Spetsifikatsioon ja tarkvara on vabalt kasutatavad.",
-    "footerAbout": "Tasuta ja avatud viis, kuidas kaubamärgid saavad edasimüüjatele tootefotosid ja tooteandmeid edastada.",
+    "footerAbout": "Tasuta ja avatud viis, kuidas moekaubamärgid saavad edasimüüjatele tootefotosid ja tooteandmeid edastada.",
     "footerMore": "Veel",
     "footerSource": "Lähtekood ja spetsifikatsioon",
     "footerLicence": "See veebisait: sisu CC-BY-4.0, kood MIT.",
@@ -34,12 +34,13 @@
     "governance": "Juhtimine ja nimi",
     "privacy": "Privaatsus",
     "imprint": "Impressum",
-    "cookies": "Küpsised"
+    "cookies": "Küpsised",
+    "partners": "Partnerid"
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: üks koht ja üks API kõigile teie edasimüüjatele",
-      "description": "Tasuta avatud standard ja tarkvara kaubamärkidele: portaal teie edasimüüjatele, standardne API nende süsteemidele ja automaatne avaldamine teie enda süsteemidest."
+      "title": "Open Brand Exchange: avatud standard moe tootesisu jaoks",
+      "description": "Tasuta avatud standard ja tarkvara moekaubamärkidele ja edasimüüjatele: tootefotod, kiukoostis ja hooldusjuhised ühes vormingus, portaalis või otse edasimüüja tarkvaras."
     },
     "brands": {
       "title": "Kaubamärkidele",
@@ -88,6 +89,10 @@
     "cookies": {
       "title": "Küpsised",
       "description": "See veebisait ei kasuta küpsiseid."
+    },
+    "partners": {
+      "title": "Hakake partneriks",
+      "description": "Tasuta vastavustest ja märgis „Ühilduv Open Brand Exchange'iga” või ametliku partnerina loetelus alates 500 € aastas."
     }
   },
   "home": {
@@ -228,7 +233,31 @@
     "nextHosting": "Valige majutus",
     "nextAutomation": "Vaadake automatiseerimise retsepte",
     "labelNote": "Kui puudub midagi, mida seadus etiketil nõuab, näiteks kiukoostis või jalanõu materjalid, hoiatab Open Brand Exchange teid üleslaadimisel. Hoiatus ei takista kunagi avaldamist.",
-    "bagsNote": "Kohvritel ja kottidel on nüüd mõõdud (K × L × S, kaal, maht) ja omadused (rattad, lukk, eemaldatav rihm …), mida iga kaubamärk mõõdab ühtemoodi."
+    "bagsNote": "Kohvritel ja kottidel on nüüd mõõdud (K × L × S, kaal, maht) ja omadused (rattad, lukk, eemaldatav rihm …), mida iga kaubamärk mõõdab ühtemoodi.",
+    "startEyebrow": "Alustage siit",
+    "startTitle": "Teie tabelist iga edasimüüjani nelja sammuga.",
+    "startSteps": [
+      {
+        "h": "Laadige mall alla",
+        "p": "Exceli fail standardi veergudega, rippmenüüdega iga fikseeritud väärtuse jaoks ja täidetud näitega."
+      },
+      {
+        "h": "Täitke see",
+        "p": "Üks rida suuruse kohta, käsitsi või eksportituna oma süsteemist. Nimetage fotod mudel_värv_positsioon, näiteks KO-1001_NVY_1.jpg."
+      },
+      {
+        "h": "Laadige üles või automatiseerige",
+        "p": "Salvestage CSV UTF-8 vormingus ja laadige see koos fotodega oma portaali üles või laske portaalil teie eksport igal ööl ise alla laadida."
+      },
+      {
+        "h": "Valmis",
+        "p": "Teie edasimüüjad leiavad kõik teie portaalist ja nende tarkvara võtab iga muudatuse ise üle. Tasuta."
+      }
+    ],
+    "startTemplate": "Laadige alla Exceli mall",
+    "partnersTitle": "Või laske partneril kõik ära teha",
+    "partnersP": "Ei soovi ise teha? Teenusepakkuja saab kogu protsessi üle võtta. Näiteks Photopilot pakub tasuta portaali koos OBX-liidesega, kogu protsessi täielikku automatiseerimist ja eritellimusel liidest teie ERP-ga.",
+    "partnersCta": "Vaadake teenusepakkujaid"
   },
   "automation": {
     "h1": "Automatiseerimine",
@@ -334,14 +363,14 @@
     "fieldStatus": "Open Brand Exchange",
     "fieldExport": "Kogu sisu eksport",
     "fieldWebsite": "Veebisait",
-    "listTitle": "Kas soovite saada teenusepakkujaks?",
-    "listP": "Siin võib olla iga majutusettevõte, agentuur või tarkvaratarnija. Tingimused on kõigile samad:",
+    "listTitle": "Kas soovite olla siin teenusepakkujana?",
+    "listP": "Sellel lehel olevad teenusepakkujad on ametlikud partnerid. Tingimused on kõigile samad:",
     "listItems": [
-      "teie portaal läbib vastavustestid",
+      "teie portaal läbib kehtiva versiooni vastavustesti",
       "kaubamärk saab kõik oma andmed ja fotod eksportida ning lahkuda",
       "avaldate oma hinnad ja tingimused oma veebisaidil"
     ],
-    "listHow": "Avage veebisaidi hoidlas pull request oma andmetega failis src/data/providers.json. Teenusepakkujad on tähestiku järjekorras.",
+    "listHow": "Ühilduv olla on tasuta; siin loetelus olemine kuulub ametliku partnerluse juurde.",
     "p2Title": "2. Ühe klõpsuga",
     "p2P": "Oma portaal oma kontol, ilma serverit haldamata.",
     "cfP": "Töötab Cloudflare Workersil, andmebaasiks D1 ja piltide jaoks R2. Klõpsake nuppu, logige Cloudflare'i sisse ja järgige samme. Igapäevaseks kasutamiseks vajab portaal paketti Workers Paid (5 dollarit kuus); tasuta paketist piisab ainult proovimiseks. Teie fotode veebiversioonid teeb teie brauser ja tööriist obx.",
@@ -380,7 +409,7 @@
   },
   "retailers": {
     "h1": "Edasimüüjatele",
-    "lead": "Open Brand Exchange'i kasutavad kaubamärgid edastavad fotod ja tooteandmed ühtsel viisil, olenemata sellest, kas laadite käsitsi alla või kasutate tarkvara.",
+    "lead": "Open Brand Exchange'i kasutavad kaubamärgid edastavad oma fotod ja tooteandmed ühtsel viisil. Teie ainult võtate need vastu, tasuta: iga kaubamärgi portaalis oma brauseris või ühe API kaudu otse oma tarkvarasse.",
     "portalTitle": "Mida kaubamärgi portaal teile annab",
     "portalP": "Igal kaubamärgil on oma portaal oma nimega, näiteks „Kestrel · {portal}”.",
     "portal": [
@@ -617,7 +646,10 @@
     "templateP": "Tühi CSV-mall on olemas ka iga portaali halduses jaotises Impordid.",
     "brandsTitle": "Brošüür kaubamärkidele",
     "brandsP": "Oma portaal edasimüüjatele, API, automaatne üleslaadimine ja majutus ning mis on juba valmis. Jagamiseks oma meeskonnaga.",
-    "allLanguages": "Kõik keeled"
+    "allLanguages": "Kõik keeled",
+    "templateTitle": "Exceli mall kaubamärkidele",
+    "templateP2": "products.xlsx: standardimpordi veerud, rippmenüüd iga fikseeritud väärtuse jaoks, iga veeru selgitus inglise ja hollandi keeles ning näide Kestrelilt. Üleslaadimiseks salvestage see CSV UTF-8 vormingus.",
+    "templateButton": "Laadige alla products.xlsx"
   },
   "faq": {
     "h1": "Korduma kippuvad küsimused",
@@ -661,6 +693,14 @@
       {
         "q": "Kes on selle taga?",
         "a": "Open Brand Exchange antakse üle organisatsioonile {foundation}, mis on Hollandi mittetulunduslik sihtasutus (stichting), et standard kuuluks seda kasutavatele kaubamärkidele, edasimüüjatele ja tarkvaratarnijatele, mitte ühele ettevõttele. Küsimused saatke aadressile {email}."
+      },
+      {
+        "q": "Mille poolest see erineb suletud sisuplatvormidest?",
+        "a": "Suletud platvormid hoiavad kaubamärkide sisu ühe ettevõtte süsteemis ja võtavad kaubamärkidelt või edasimüüjatelt juurdepääsu eest tasu. Open Brand Exchange on avatud standard: iga kaubamärk käitab oma portaali või valib teenusepakkuja ning saab kõik eksportida ja lahkuda. Iga tarkvara võib seda kasutada ilma litsentsitasuta."
+      },
+      {
+        "q": "Kas meie pildiportaal või DAM saab ühenduda?",
+        "a": "Jah. Pildiportaal, pildipank või DAM, mis pakub protokolli lugemispoolt ja läbib vastavustesti, on ühilduv. Edasimüüjate tarkvara laadib siis selle tootefotod alla toote ja EAN-i kaupa samal viisil nagu igast kaubamärgi portaalist."
       }
     ]
   },
@@ -840,7 +880,7 @@
       "preview": "Versioon 0.2"
     },
     "footer": {
-      "tagline": "Avatud standard tootefotode ja tooteandmete edastamiseks kaubamärkidelt nende edasimüüjatele.",
+      "tagline": "Avatud standard tootefotode ja tooteandmete edastamiseks moekaubamärkidelt nende edasimüüjatele.",
       "product": "Toode",
       "developers": "Arendajatele",
       "project": "Projekt",
@@ -861,9 +901,9 @@
       "adminAutomation": "Automaatne üleslaadimine kaubamärgi halduses: valmis retseptid tööriistale obx, cronile, GitHub Actionsile ja muule."
     },
     "home": {
-      "eyebrow": "Avatud standard · Vaba tarkvara",
-      "h1": "Teie tootesisu, valmis igale edasimüüjale.",
-      "lead": "Open Brand Exchange on avatud standard selle kohta, kuidas edasimüüjad kaubamärgilt tootefotod ja tooteandmed kätte saavad: brauseris avatavast portaalist, zip-faili või tabelina või ühe API kaudu otse oma tarkvarasse. Kuidas sisu teie portaali jõuab, otsustate ise.",
+      "eyebrow": "Avatud standard moele · Tasuta tarkvara",
+      "h1": "Moe tootesisu, valmis igale edasimüüjale.",
+      "lead": "Open Brand Exchange on avatud standard selle kohta, kuidas rõiva-, jalatsi-, koti- ja reisikohvrikaubamärgid edastavad tootefotod ja tooteandmed oma edasimüüjatele: portaalis, zip-faili või tabelina või ühe API kaudu otse edasimüüja tarkvarasse. Avatud alternatiiv suletud platvormidele: tasu edasimüüja kohta puudub, te ei ole kellegagi seotud ja teie andmed jäävad teile.",
       "ctaRetailer": "Olen edasimüüja",
       "proofLabel": "Lühidalt",
       "proof": [
@@ -967,30 +1007,6 @@
           "link": "Vaadake automatiseerimise retsepte"
         }
       ],
-      "audienceEyebrow": "Kellele",
-      "audienceTitle": "Kaubamärkidele ja edasimüüjatele.",
-      "brands": {
-        "h": "Kaubamärkidele",
-        "p": "Failide saatmine jääb ära. Edasimüüjad võtavad ise, mida vajavad, ja teie otsustate, kes mida saab.",
-        "items": [
-          "Teie oma portaal teie oma domeenil",
-          "Kinnitate iga edasimüüja ja otsustate, mida ta näeb",
-          "Näete, kes mida alla laadib, edasimüüja kaupa",
-          "Majutage ise tasuta või valige teenusepakkuja, kellest saate igal ajal lahkuda"
-        ],
-        "cta": "Lähemalt kaubamärkidele"
-      },
-      "retailers": {
-        "h": "Edasimüüjatele",
-        "p": "Kõik kaubamärgid ühes ühtses vormingus, brauseris või otse teie tarkvaras.",
-        "items": [
-          "Kleepige oma EAN-loend ja saate iga suuruse jaoks õiged fotod",
-          "Laadige alla zip-failid ja tooteandmed, valmis teie poe jaoks",
-          "Üks ühendus kõigi standardi kaubamärkidega",
-          "Kasutusõigused ja embargo kuupäevad iga foto juures"
-        ],
-        "cta": "Lähemalt edasimüüjatele"
-      },
       "editionsEyebrow": "Majutus",
       "editionsTitle": "Käitage seda, kus soovite. Maksate ainult majutuse eest.",
       "editionsLead": "Sama portaali kolm väljaannet. Need läbivad samad vastavustestid ja räägivad sama API-t, nii et saate ühelt teisele üle minna.",
@@ -1079,12 +1095,148 @@
       "faqLink": "Kõik küsimused",
       "closingTitle": "Laske edasimüüjatel sisu ise võtta.",
       "closingP": "Seadistage oma portaal või rääkige meile oma süsteemidest ja edasimüüjatest ning aidake kujundada esimest väljalaset.",
-      "closingMail": "Kirjutage meile"
+      "closingMail": "Kirjutage meile",
+      "rolesEyebrow": "Kes mida teeb",
+      "rolesTitle": "Kaubamärgid avaldavad. Edasimüüjad võtavad vastu. Tarkvara ühendab.",
+      "rolesLead": "Standard määrab, kuidas tootesisu kaubamärgilt edasimüüjani liigub. Iga osapool teeb oma osa ja keegi ei pea teist ootama.",
+      "roles": [
+        {
+          "h": "Kaubamärgid avaldavad",
+          "p": "Kaubamärk paneb oma sisu üks kord standardvormingus valmis, oma portaali. Väljaminevad andmed automatiseerib ta ise või teeb seda teenusepakkuja.",
+          "items": [
+            "Teie fotod ja tooteandmed ühes standardvormingus",
+            "Automatiseerige ise tasuta tööriistadega või laske seda teha teenusepakkujal",
+            "Kinnitate iga edasimüüja ja otsustate, mida ta näeb"
+          ],
+          "cta": "Lähemalt kaubamärkidele"
+        },
+        {
+          "h": "Edasimüüjad võtavad vastu",
+          "p": "Edasimüüja võtab iga standardit kasutava kaubamärgi juurest vajaliku alati samal viisil. Iga uus kaubamärk ei too lisatööd.",
+          "items": [
+            "Otsige, kleepige EAN-id ja laadige alla brauseris",
+            "Fotod ja kiukoostis valmis e-poe jaoks",
+            "Kasutusõigused ja embargo kuupäevad iga foto juures"
+          ],
+          "cta": "Lähemalt edasimüüjatele"
+        },
+        {
+          "h": "ERP- ja tarkvaratarnijad ühendavad",
+          "p": "ERP-, PIM-, e-poe- või kassatarkvara tarnija ehitab ühe liidese ja loeb seejärel iga kaubamärgi portaali samal viisil. Sissetulevad andmed automatiseeritakse nagu iga teise tarnija andmevoog.",
+          "items": [
+            "Üks API, kirjeldatud OpenAPI 3.1 vormingus",
+            "Kõigepealt täielik koopia, seejärel ainult muudatused",
+            "Testige oma liidest tasuta vastavustestidega"
+          ],
+          "cta": "Lugege arendaja juhendit"
+        }
+      ],
+      "portalsEyebrow": "Avatud igale portaalile",
+      "portalsTitle": "Teil on juba portaal? Ühendage see standardiga.",
+      "portalsLead": "Open Brand Exchange ei ole üks konkreetne tarkvara. Iga portaal, mis räägib protokolli ja läbib vastavustesti, on ühilduv, ning edasimüüjate tarkvara loeb seda nagu iga teist.",
+      "portalTypes": [
+        {
+          "h": "Kaubamärgi- ja B2B-portaalid",
+          "p": "Kaubamärgi portaal, B2B-pood või hulgimüügiplatvorm lisab OBX API olemasoleva kõrvale. Selle kaubamärgid jõuavad siis iga edasimüüja süsteemini, mis standardit räägib."
+        },
+        {
+          "h": "Pildiportaalid ja DAM-id",
+          "p": "Fotoportaalid, pildipangad ja tootefotode DAM-id avaldavad fotod toote kaupa: iga foto on seotud toote, värvi ja EAN-iga ning sellel on veebiversioonid, kasutusõigused ja embargo kuupäevad. Need teostavad protokolli lugemispoole ning edasimüüjate tarkvara laadib fotod alla nagu igast teisest portaalist."
+        },
+        {
+          "h": "PIM- ja ERP-süsteemid",
+          "p": "PIM või ERP, kus on kaubamärgi tooteandmed, saab need otse avaldada: kiukoostis, hooldusjuhised, suurused ja EAN-id standardvormingus, ilma eraldi portaalita."
+        }
+      ],
+      "portalsSteps": [
+        "Lugege spetsifikatsiooni ja laadige väljamõeldud testkaubamärk Kestrel",
+        "Pakkuge API kaudu discovery't, muudatuste voogu, tooteid ja fotosid",
+        "Käivitage tasuta vastavustest: kui see läbib, olete ühilduv"
+      ],
+      "portalsCta": "Ühilduv või partner"
     },
     "pages": {
       "brandsH1": "Seadistage üks kord. Kõigile edasimüüjatele korraga.",
       "retailersSoftware": "Teie tarkvarale",
       "hostingEditions": "Kolm väljaannet"
     }
+  },
+  "partners": {
+    "eyebrow": "Partnerid",
+    "h1": "Ühilduv tasuta. Loetelus ametliku partnerina.",
+    "lead": "Iga portaal, pildiportaal, PIM, ERP või teenusepakkuja saab Open Brand Exchange'iga töötada. Test ja märgis „Ühilduv Open Brand Exchange'iga” on tasuta. Ametliku partnerina loetelus olemine on tasuline liikmesus, kõigile samade tingimustega.",
+    "compareTitle": "Ühilduv või ametlik partner",
+    "colWhat": "Mida saate",
+    "colCompatible": "Ühilduv",
+    "colPartner": "Ametlik partner",
+    "rows": [
+      {
+        "l": "Hind",
+        "c": "Tasuta",
+        "p": "Aastatasu ettevõtte suuruse järgi"
+      },
+      {
+        "l": "Vastavustest läbitud",
+        "c": "Nõutud",
+        "p": "Nõutud"
+      },
+      {
+        "l": "Võite öelda „Ühilduv Open Brand Exchange'iga”",
+        "c": "✓",
+        "p": "✓"
+      },
+      {
+        "l": "Teie logo partnerite ja majutuse lehel",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Märk „Ametlik partner”",
+        "c": "–",
+        "p": "✓"
+      },
+      {
+        "l": "Soovitame teid kaubamärkidele, kes küsivad meilt teenusepakkujat",
+        "c": "–",
+        "p": "✓"
+      }
+    ],
+    "testTitle": "1. Testige ise, tasuta",
+    "testP": "Vastavustest on avatud lähtekoodiga. Käivitage seda oma portaali vastu nii tihti, kui soovite. See kontrollib discovery't, muudatuste voogu, tooteid, fotosid ja turvalisust ning ütleb lihtsas keeles, mis veel puudu on.",
+    "testSteps": [
+      "Laadige väljamõeldud testkaubamärk Kestrel oma portaali testkontole.",
+      "Käivitage obx-conformance oma portaali vastu, nagu on kirjeldatud arendaja juhendis.",
+      "Parandage, mis ebaõnnestub, kuni tulemus on CONFORMANT."
+    ],
+    "testLink": "Kuidas testi käivitada",
+    "certTitle": "2. Laske kinnitada, tasuta",
+    "certP": "Saatke meile JSON-aruanne ja oma testportaali aadress. Käivitame sama testi ja kinnitame tulemuse. Sellest hetkest võite öelda, et teie toode on „Ühilduv Open Brand Exchange'iga”, testitud versiooni puhul.",
+    "certMail": "Saatke oma aruanne",
+    "partnerTitle": "3. Hakake ametlikuks partneriks",
+    "partnerP": "Olete ühilduv! Soovite, et teenusepakkujat otsivad kaubamärgid teid leiaksid? Ametlikud partnerid on oma logoga partnerite ja majutuse lehel, kannavad märki „Ametlik partner” ja neid soovitatakse kaubamärkidele, kes küsivad meilt teenusepakkujat.",
+    "reqTitle": "Tingimused, kõigile samad",
+    "tiersTitle": "Aastatasu",
+    "tiers": [
+      {
+        "name": "Väike",
+        "who": "kuni 49 töötajat",
+        "price": "500 €"
+      },
+      {
+        "name": "Keskmine",
+        "who": "50 kuni 249 töötajat",
+        "price": "2500 €"
+      },
+      {
+        "name": "Suur",
+        "who": "250 või rohkem töötajat",
+        "price": "10 000 €"
+      }
+    ],
+    "perYear": "aastas, ilma käibemaksuta",
+    "tiersNote": "Tasud on 2027. aasta ettepanek ja kinnituvad, kui sihtasutus on loodud. Tasu maksab ainult loetelus olemise eest. Standard, test ja tarkvara jäävad kõigile tasuta ning partneritel ei ole standardi üle rohkem sõnaõigust kui kellelgi teisel.",
+    "partnerCta": "Hakake partneriks",
+    "mailSubject": "Ametlik partner",
+    "listTitle": "Ametlikud partnerid"
   }
 }

@@ -1,0 +1,44 @@
+# Open Brand Exchange
+
+> Open Brand Exchange (OBX) is an open standard and free software for how fashion brands deliver product photos and article data to their retailers. It covers clothing, shoes, bags and luggage. Each brand publishes its content in its own portal. Retailers get it in the browser, as a zip or spreadsheet, or straight into their own software (webshop, PIM, ERP, POS) through one standard API. It is an open alternative to closed content platforms: there is no fee per retailer, no lock-in, and brands keep their own data.
+
+Key facts:
+
+- Specification: version 0.2, OpenAPI 3.1 and JSON Schema, licensed CC-BY-4.0. Anyone may implement it, commercially too.
+- Software: three portal editions (Cloudflare Workers, Go/Docker/Google Cloud Run, PHP web hosting) under AGPL-3.0; the Go SDK, the `obx` command-line tool and the admin web interface under Apache-2.0.
+- Conformance: the open-source test `obx-conformance` runs 61 automated checks in four profiles (protocol, ingest, portal, security). Testing and the label "Compatible with Open Brand Exchange" are free.
+- Official partners: a paid listing on the website (proposed fees for 2027: €500, €2,500 or €10,000 a year by company size). The same criteria apply to everyone. The fee pays only for the listing; partners have no more say in the standard than anyone else.
+- Article data: fibre composition per part, with recycled and organic flags, as required by EU Regulation 1007/2011; animal origin; footwear materials per Directive 94/11/EC; ISO 3758 care symbols; country of origin; measurements for bags, luggage and shoes (height, width, depth, weight, volume, handle drop, strap length, heel height); features such as wheels or a detachable strap; certifications; colour families.
+- Images: every image is linked to its product, colour and EAN (GTIN), with web, square and thumbnail versions, usage rights, embargo dates and AI provenance.
+- Roles: brands publish, either themselves or through a provider; retailers receive at no cost; ERP, PIM, webshop and POS vendors build one connection that works for every brand. Existing brand portals, B2B platforms, image portals, image banks and DAMs can connect by implementing the read side of the protocol and passing the conformance test.
+- Publisher: the Open Brand Exchange Foundation (in formation). Contact: hello@openbrandexchange.com. Security reports: security@openbrandexchange.com.
+
+## For brands
+
+- [For brands](https://openbrandexchange.com/en/for-brands/): what a brand gets, and the four steps from spreadsheet to every retailer
+- [Excel template](https://openbrandexchange.com/downloads/products.xlsx): the import columns with drop-down lists and an explanation in English and Dutch
+- [Automation](https://openbrandexchange.com/en/automation/): scheduled import, the obx tool, GitHub Actions, n8n, Make and Zapier
+- [Hosting](https://openbrandexchange.com/en/hosting/): hosted by a provider, one click on Cloudflare, Docker or ordinary PHP web hosting
+
+## For retailers and software vendors
+
+- [For retailers](https://openbrandexchange.com/en/for-retailers/): the brand portal, the care-label data and what EU law requires
+- [Developers](https://openbrandexchange.com/en/developers/): the specification, the APIs, the SDK and the conformance test
+- [API reference](https://openbrandexchange.com/reference/): OpenAPI reference of the protocol
+- [Error codes](https://openbrandexchange.com/errors/): every error code with its meaning
+- [JSON Schemas](https://openbrandexchange.com/schemas/v0.2/): the schemas at the path of their $id
+
+## For portals and providers
+
+- [Partners](https://openbrandexchange.com/en/partners/): the free conformance test, "Compatible with Open Brand Exchange", and the paid listing as official partner
+- [Directory](https://openbrandexchange.com/en/directory/): brands and their portals ([machine-readable](https://openbrandexchange.com/directory.json))
+
+## Project
+
+- [FAQ](https://openbrandexchange.com/en/faq/): cost, access, formats, rights, switching providers
+- [Governance](https://openbrandexchange.com/en/governance/): how the standard is decided and who owns the name
+- [Source code](https://github.com/openbrandexchange): the specification and every implementation
+
+## Optional
+
+- The website is available in the 24 official EU languages and Norwegian: replace `/en/` in a URL with `/nl/`, `/de/`, `/fr/` and so on.

@@ -5,9 +5,9 @@ import Flow from '../components/Flow.astro';
 import Editions from '../components/Editions.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Icon from '../components/Icon.astro';
-import { format, messages, repo, url, type Lang, type PageKey } from '../i18n';
+import { format, messages, repo, url, type Lang } from '../i18n';
 import { orgVars, HELLO_EMAIL, SECURITY_EMAIL } from '../lib/org';
-import { assetChange, discovery, discoveryResponse, heroChanges, pushAction, pushTerminal } from '../data/snippets';
+import { assetChange, discovery, discoveryResponse, pushAction, pushTerminal } from '../data/snippets';
 
 interface Props {
   lang: Lang;
@@ -22,7 +22,7 @@ const faq = t.faq.items.slice(0, 4);
 // "Publish once. Every retailer gets it.": the second sentence in a softer tone, on its own line.
 const split = h.h1.search(/[.!?]\s/);
 const h1 = split > 0 ? [h.h1.slice(0, split + 1) + ' ', h.h1.slice(split + 2)] : [h.h1, ''];
-const pages: PageKey[] = ['brands', 'retailers'];
+const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'developers')];
 // The explainer video (video/, rendered with Remotion): Dutch for Dutch, English for every other
 // language. Captions are burned in; nothing loads until the visitor presses play (preload="none").
 const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
@@ -49,26 +49,16 @@ const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
         }
       </dl>
     </div>
-    <div class="hero-product">
+    <div class="hero-product hero-video">
       <div class="hero-glow" aria-hidden="true"></div>
-      <Screenshot name="portal-catalog" lang={lang} alt={t.site.shots.portalCatalog} sizes="(min-width: 1024px) 860px, calc(100vw - 32px)" eager />
-      <CodeWindow class="hero-code" code={heroChanges} lang="json" title="GET /obx/v1/changes" label={h.codeCaption} />
+      <figure class="video-frame">
+        <video controls preload="none" playsinline poster={`${video}.jpg`} width="1280" height="720" aria-label={h.videoTitle}>
+          <source src={`${video}.webm`} type="video/webm" />
+          <source src={`${video}.mp4`} type="video/mp4" />
+        </video>
+        <figcaption>{h.videoTitle} · {h.videoNote}</figcaption>
+      </figure>
     </div>
-  </div>
-</section>
-
-<section class="band home-video" aria-labelledby="video-title">
-  <div class="wrap">
-    <header class="section-head" data-reveal>
-      <h2 id="video-title">{h.videoTitle}</h2>
-      <p class="lead">{h.videoNote}</p>
-    </header>
-    <figure class="video-frame" data-reveal="2">
-      <video controls preload="none" playsinline poster={`${video}.jpg`} width="1280" height="720" aria-labelledby="video-title">
-        <source src={`${video}.webm`} type="video/webm" />
-        <source src={`${video}.mp4`} type="video/mp4" />
-      </video>
-    </figure>
   </div>
 </section>
 
@@ -119,17 +109,18 @@ const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
   </div>
 </section>
 
-<section class="band" aria-labelledby="audience-title">
+<section class="band" aria-labelledby="roles-title">
   <div class="wrap">
     <header class="section-head" data-reveal>
-      <p class="eyebrow">{h.audienceEyebrow}</p>
-      <h2 id="audience-title">{h.audienceTitle}</h2>
+      <p class="eyebrow">{h.rolesEyebrow}</p>
+      <h2 id="roles-title">{h.rolesTitle}</h2>
+      <p class="lead">{h.rolesLead}</p>
     </header>
-    <div class="audience">
+    <div class="audience roles">
       {
-        [h.brands, h.retailers].map((a, i) => (
-          <article class:list={['audience-card', i === 0 && 'dark']} aria-labelledby={`aud-${i}`} data-reveal={String(i + 1)}>
-            <h3 id={`aud-${i}`}>{a.h}</h3>
+        h.roles.map((a, i) => (
+          <article class:list={['audience-card', i === 0 && 'dark']} aria-labelledby={`role-${i}`} data-reveal={String(i + 1)}>
+            <h3 id={`role-${i}`}>{a.h}</h3>
             <p>{a.p}</p>
             <ul class="checks">
               {a.items.map((item) => (
@@ -137,7 +128,7 @@ const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
               ))}
             </ul>
             <div class="actions">
-              <a class:list={['button', i === 0 ? 'primary' : 'secondary']} href={url(lang, pages[i])}>
+              <a class:list={['button', i === 0 ? 'primary' : 'secondary']} href={roleLinks[i]}>
                 {a.cta} <Icon name="arrow" class="arrow" />
               </a>
             </div>
@@ -148,7 +139,34 @@ const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
   </div>
 </section>
 
-<section class="band band-alt" aria-labelledby="editions-title">
+<section class="band band-alt" aria-labelledby="portals-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">{h.portalsEyebrow}</p>
+      <h2 id="portals-title">{h.portalsTitle}</h2>
+      <p class="lead">{h.portalsLead}</p>
+    </header>
+    <ul class="facts-grid portal-types" data-reveal="2">
+      {
+        h.portalTypes.map((item) => (
+          <li>
+            <h3>{item.h}</h3>
+            <p>{item.p}</p>
+          </li>
+        ))
+      }
+    </ul>
+    <ol class="steps steps-row" data-reveal="2">
+      {h.portalsSteps.map((step) => <li>{step}</li>)}
+    </ol>
+    <p class="actions">
+      <a class="button primary" href={url(lang, 'partners')}>{h.portalsCta} <Icon name="arrow" class="arrow" /></a>
+      <a class="button secondary" href={url(lang, 'developers')}>{t.nav.developers}</a>
+    </p>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="editions-title">
   <div class="wrap">
     <header class="section-head" data-reveal>
       <p class="eyebrow">{h.editionsEyebrow}</p>
