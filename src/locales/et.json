@@ -10,7 +10,7 @@
     "copy": "Kopeeri",
     "copied": "Kopeeritud",
     "draft": "Versioon 0.2 on avaldatud. Spetsifikatsioon ja tarkvara on vabalt kasutatavad.",
-    "footerAbout": "Tasuta ja avatud viis, kuidas moekaubamärgid saavad edasimüüjatele tootefotosid ja tooteandmeid edastada.",
+    "footerAbout": "Tasuta ja avatud viis, kuidas kaubamärgid saavad tootefotosid ja tooteandmeid oma edasimüüjatega jagada.",
     "footerMore": "Veel",
     "footerSource": "Lähtekood ja spetsifikatsioon",
     "footerLicence": "See veebisait: sisu CC-BY-4.0, kood MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: avatud standard moe tootesisu jaoks",
-      "description": "Tasuta avatud standard ja tarkvara moekaubamärkidele ja edasimüüjatele: tootefotod, kiukoostis ja hooldusjuhised ühes vormingus, portaalis või otse edasimüüja tarkvaras."
+      "title": "Open Brand Exchange: standard kaubamärkidele ja edasimüüjatele",
+      "description": "Tasuta ja avatud standard ning tarkvara tootefotode ja tooteandmete jagamiseks kaubamärkide ja edasimüüjate vahel: portaalis, allalaadimisena või otse edasimüüja tarkvarasse."
     },
     "brands": {
       "title": "Kaubamärkidele",
@@ -880,7 +880,7 @@
       "preview": "Versioon 0.2"
     },
     "footer": {
-      "tagline": "Avatud standard tootefotode ja tooteandmete edastamiseks moekaubamärkidelt nende edasimüüjatele.",
+      "tagline": "Avatud standard tootefotode ja tooteandmete jagamiseks kaubamärkide ja edasimüüjate vahel.",
       "product": "Toode",
       "developers": "Arendajatele",
       "project": "Projekt",
@@ -901,9 +901,9 @@
       "adminAutomation": "Automaatne üleslaadimine kaubamärgi halduses: valmis retseptid tööriistale obx, cronile, GitHub Actionsile ja muule."
     },
     "home": {
-      "eyebrow": "Avatud standard moele · Tasuta tarkvara",
-      "h1": "Moe tootesisu, valmis igale edasimüüjale.",
-      "lead": "Paljud pildiportaalid on aeglased, neid on raske liidestada ja neid tuleb käsitsi läbi klõpsida. Open Brand Exchange on avatud standard selle kohta, kuidas rõiva-, jalatsi-, koti- ja reisikohvrikaubamärgid edastavad tootefotod ja tooteandmed oma edasimüüjatele: avatud alternatiiv suletud platvormidele.",
+      "eyebrow": "Avatud standard · Tasuta tarkvara",
+      "h1": "Standard kaubamärkidele ja edasimüüjatele.",
+      "lead": "Üks viis tootefotode ja tooteandmete jagamiseks: portaalis, allalaadimisena või otse edasimüüja tarkvarasse.",
       "ctaRetailer": "Olen edasimüüja",
       "proofLabel": "Lühidalt",
       "proof": [
@@ -931,42 +931,31 @@
       "codeCaption": "Mida edasimüüja tarkvara saab",
       "videoTitle": "Vaadake, kuidas see töötab",
       "videoNote": "Inglise keeles, ingliskeelsete subtiitritega.",
-      "flowEyebrow": "Kuidas see toimib",
-      "flowTitle": "Üks allikas. Edasimüüjad võtavad, mida vajavad.",
-      "flowLead": "Teie sisu on teie enda portaalis. Ostjad otsivad ja laadivad faile brauseris alla, nende tarkvara loeb sama sisu API kaudu.",
-      "flowCaption": "Kuidas sisu liigub kaubamärgi süsteemidest tema oma portaali kaudu edasimüüjateni.",
+      "flowEyebrow": "Kuidas see töötab",
+      "flowTitle": "Kui kõik struktureerivad andmeid ühtemoodi, võidavad kõik.",
+      "flowLead": "Täna istub peaaegu igas edasimüüjas keegi, kes kopeerib tabeleid ja sisestab tootandmeid iga kaubamärgi jaoks uuesti, ning iga uus kollektsioon on kiirustamine. Ühe standardiga see töö kaob: võtke see kasutusele ükskord ja kõik saavad sellest aastaid kasu. On aeg parema töö jaoks.",
+      "flowCaption": "Mida kaubamärk sisestab, avatud standard keskel ja mida edasimüüjad saavad.",
       "flow": {
-        "systems": "Teie süsteemid",
-        "systemsItems": [
+        "inTitle": "Sisse",
+        "inLead": "Mida kaubamärk sisestab",
+        "inItems": [
+          "Tootandmed PIM-ist, ERP-st või Excelist",
+          "Tootefotod"
+        ],
+        "stdTitle": "Avatud standard",
+        "stdLead": "Üks kindel struktuur igale kaubamärgile",
+        "stdItems": [
+          "Artiklid, värvid ja suurused koos EAN-iga",
+          "Materjalid, hooldus ja mõõdud",
+          "Pildid kasutusõigustega"
+        ],
+        "outTitle": "Välja",
+        "outLead": "Mida edasimüüjad saavad",
+        "outItems": [
+          "E-pood",
           "PIM",
-          "ERP",
-          "DAM",
-          "Ekspordikaust"
-        ],
-        "upload": "Sisu lisamine",
-        "uploadItems": [
-          "Ajastatud import",
-          "Tööriist obx",
-          "GitHub Action",
-          "Üleslaadimise API"
-        ],
-        "portal": "Teie portaal",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Kataloog ja fotod",
-          "Juurdepääs edasimüüja kaupa",
-          "Kasutusstatistika"
-        ],
-        "retailers": "Teie edasimüüjad",
-        "browser": "Ostjad, brauseris",
-        "browserItems": [
-          "Otsing ja EAN-loend",
-          "Allalaadimine zip- ja CSV-failina"
-        ],
-        "software": "Nende tarkvara, API kaudu",
-        "softwareItems": [
-          "E-pood ja PIM",
-          "Kassasüsteem ja sisutööriistad"
+          "Kassasüsteem ja ERP",
+          "Allalaadimised brauseris"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Versioon 0.2, litsentsiga CC-BY-4.0. Igaüks võib selle teostada, ka ärilistel eesmärkidel."
         },
         {
-          "h": "Te pole kellegagi seotud",
+          "h": "Teie andmed jäävad teile",
           "p": "Kaubamärk saab igal ajal eksportida kõik oma andmed ja fotod ning minna üle teisele teenusepakkujale või seda ise majutada."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Tasuta tarkvara või teenusepakkuja, kes teeb kõik ära",
             "Alustage oma Exceli-failist või süsteemist",
-            "Kõik edasimüüjad korraga, ei mingit failide saatmist",
+            "Kõik teie edasimüüjad korraga",
             "Teie otsustate, kes mida näeb",
             "Näete, kes mida alla laadib",
-            "Te pole kellegagi seotud: eksportige kõik ja lahkuge"
+            "Eksportige kõik, millal tahes"
           ],
           "cta": "Lähemalt kaubamärkidele"
         },
@@ -1120,7 +1109,7 @@
             "Edasimüüjatele tasuta",
             "Iga kaubamärk samas vormingus",
             "Kleepige EAN-id, saate õiged fotod",
-            "Kiukoostis ja hooldusjuhised e-poe jaoks valmis",
+            "Materjalid ja hooldus e-poe jaoks valmis",
             "Kasutusõigused ja embargo kuupäevad iga foto juures",
             "Brauseris või otse teie tarkvarasse"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Kaubamärgiportaalid, B2B- ja pildiportaalid, DAM-id",
             "ERP-, PIM-, e-poe- ja kassatarkvara",
-            "Üks avatud API, litsentsitasu puudub",
+            "Üks avatud API, tasuta kasutada",
             "Kõigepealt täielik koopia, seejärel ainult muudatused",
             "Tasuta märgis „Ühilduv Open Brand Exchange'iga”"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Ühilduv või partner",
       "heroChecks": [
-        "Tasuta ja avatud, tasu edasimüüja kohta puudub",
+        "Tasuta kasutada",
         "Kõik teie edasimüüjad korraga",
         "Algab teie enda Excelist või süsteemist",
         "Fotod koos kasutusõigustega",
-        "Te pole kellegagi seotud: teie andmed jäävad teile"
+        "Teie andmed jäävad teile"
       ],
       "devRepos": [
         {

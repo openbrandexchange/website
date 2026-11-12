@@ -10,7 +10,7 @@
     "copy": "Kopieer",
     "copied": "Gekopieerd",
     "draft": "Versie 0.2 is uit. De specificatie en de software zijn vrij te gebruiken.",
-    "footerAbout": "Een gratis, open manier voor modemerken om productbeelden en artikeldata aan hun retailers te leveren.",
+    "footerAbout": "Een gratis, open manier voor merken om productbeelden en artikeldata met hun retailers te delen.",
     "footerMore": "Meer",
     "footerSource": "Broncode en specificatie",
     "footerLicence": "Deze website: inhoud CC-BY-4.0, code MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: de open standaard voor productcontent in de mode",
-      "description": "Een gratis, open standaard en software voor modemerken en retailers: productfoto's, vezelsamenstelling en wasvoorschriften in één formaat, in een portaal of rechtstreeks in de software van de retailer."
+      "title": "Open Brand Exchange: de standaard voor merken en retailers",
+      "description": "Een gratis, open standaard en software om productfoto's en artikeldata te delen tussen merken en retailers: in een portaal, als download of rechtstreeks in de software van de retailer."
     },
     "brands": {
       "title": "Voor merken",
@@ -880,7 +880,7 @@
       "preview": "Versie 0.2"
     },
     "footer": {
-      "tagline": "De open standaard voor het leveren van productbeelden en artikeldata van modemerken aan hun retailers.",
+      "tagline": "De open standaard voor het delen van productbeelden en artikeldata tussen merken en retailers.",
       "product": "Product",
       "developers": "Ontwikkelaars",
       "project": "Project",
@@ -901,9 +901,9 @@
       "adminAutomation": "Automatisch uploaden in het merkbeheer: kant-en-klare recepten voor de obx-tool, cron, GitHub Actions en meer."
     },
     "home": {
-      "eyebrow": "Open standaard voor de mode · Gratis software",
-      "h1": "Je modecontent, klaar voor elke retailer.",
-      "lead": "Veel beeldportalen zijn traag, nauwelijks te koppelen en moeten met de hand worden doorgeklikt. Open Brand Exchange is de open standaard voor hoe merken in mode, schoenen, tassen en koffers productfoto's en artikeldata aan hun retailers leveren: een open alternatief voor gesloten platforms.",
+      "eyebrow": "Open standaard · Gratis software",
+      "h1": "De standaard voor merken en retailers.",
+      "lead": "Eén manier om productfoto's en artikeldata te delen: in een portaal, als download, of rechtstreeks in de software van de retailer.",
       "ctaRetailer": "Ik ben retailer",
       "proofLabel": "In het kort",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "Bekijk hoe het werkt",
       "videoNote": "Met ondertiteling, dus ook zonder geluid te volgen.",
       "flowEyebrow": "Zo werkt het",
-      "flowTitle": "Eén bron. Retailers halen op wat ze nodig hebben.",
-      "flowLead": "Je content staat in je eigen portaal. Inkopers zoeken en downloaden in de browser; hun software leest dezelfde content via de API.",
-      "flowCaption": "Hoe content van de systemen van een merk via het eigen portaal bij de retailers komt.",
+      "flowTitle": "Als iedereen data op dezelfde manier structureert, wint iedereen.",
+      "flowLead": "Nu zit er bij bijna elke retailer iemand Excel-bestanden te kopiëren en productdata over te typen, voor elk merk opnieuw, en elke nieuwe collectie is haasten. Met één standaard verdwijnt dat werk: één keer implementeren, en iedereen heeft er jaren plezier van. Tijd voor beter werk.",
+      "flowCaption": "Wat een merk erin stopt, de open standaard in het midden, en wat retailers eruit krijgen.",
       "flow": {
-        "systems": "Je systemen",
-        "systemsItems": [
+        "inTitle": "In",
+        "inLead": "Wat een merk erin stopt",
+        "inItems": [
+          "Productdata uit PIM, ERP of Excel",
+          "Productfoto's"
+        ],
+        "stdTitle": "De open standaard",
+        "stdLead": "Eén vaste structuur voor elk merk",
+        "stdItems": [
+          "Artikelen, kleuren en maten met EAN",
+          "Materialen, onderhoud en afmetingen",
+          "Beelden met gebruiksrechten"
+        ],
+        "outTitle": "Uit",
+        "outLead": "Wat retailers krijgen",
+        "outItems": [
+          "Webshop",
           "PIM",
-          "ERP",
-          "DAM",
-          "Exportmap"
-        ],
-        "upload": "Content erin krijgen",
-        "uploadItems": [
-          "Geplande import",
-          "obx-tool",
-          "GitHub Action",
-          "Upload-API"
-        ],
-        "portal": "Je portaal",
-        "portalDomain": "brands.jouwmerk.nl",
-        "portalItems": [
-          "Catalogus en beelden",
-          "Toegang per retailer",
-          "Gebruiksstatistieken"
-        ],
-        "retailers": "Je retailers",
-        "browser": "Inkopers, in de browser",
-        "browserItems": [
-          "Zoeken en EAN-lijst",
-          "Zips en CSV downloaden"
-        ],
-        "software": "Hun software, via de API",
-        "softwareItems": [
-          "Webshop en PIM",
-          "Kassa en contenttools"
+          "Kassa en ERP",
+          "Downloads in de browser"
         ]
       },
       "pillars": [
@@ -1061,8 +1050,8 @@
           "p": "Versie 0.2, onder CC-BY-4.0. Iedereen mag hem bouwen, ook commercieel."
         },
         {
-          "h": "Geen lock-in",
-          "p": "Een merk kan altijd al zijn data en beelden exporteren, en overstappen naar een andere provider of het zelf hosten."
+          "h": "Je data blijft van jou",
+          "p": "Een merk kan altijd al zijn data en beelden exporteren, overstappen naar een andere provider of het zelf hosten."
         },
         {
           "h": "Opensourcelicenties",
@@ -1106,10 +1095,10 @@
           "items": [
             "Gratis software, of een provider die alles regelt",
             "Begin bij je eigen Excel-bestand of systeem",
-            "Al je retailers in één keer, geen bestanden meer rondsturen",
+            "Al je retailers in één keer",
             "Jij bepaalt wie wat ziet",
             "Zie wie wat downloadt",
-            "Geen lock-in: exporteer alles en vertrek"
+            "Exporteer alles, wanneer je wilt"
           ],
           "cta": "Bekijk voor merken"
         },
@@ -1120,7 +1109,7 @@
             "Gratis voor retailers",
             "Elk merk in hetzelfde formaat",
             "Plak EAN's, krijg de juiste beelden",
-            "Vezelsamenstelling en wasvoorschrift klaar voor de webshop",
+            "Materialen en onderhoud klaar voor de webshop",
             "Gebruiksrechten en embargodata bij elk beeld",
             "In de browser, of rechtstreeks in je software"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Merkportalen, B2B- en beeldportalen, DAM's",
             "ERP-, PIM-, webshop- en kassasoftware",
-            "Eén open API, geen licentiekosten",
+            "Eén open API, gratis te gebruiken",
             "Eerst een volledige kopie, daarna alleen de wijzigingen",
             "Gratis label „Compatibel met Open Brand Exchange”"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Compatibel of partner",
       "heroChecks": [
-        "Gratis en open, geen kosten per retailer",
+        "Gratis te gebruiken",
         "Al je retailers in één keer",
-        "Begint bij je eigen Excel of systeem",
-        "Beelden met gebruiksrechten erbij",
-        "Geen lock-in: je data blijft van jou"
+        "Begin bij je eigen Excel of systeem",
+        "Beelden met gebruiksrechten",
+        "Je data blijft van jou"
       ],
       "devRepos": [
         {

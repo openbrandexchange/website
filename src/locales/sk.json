@@ -10,7 +10,7 @@
     "copy": "Kopírovať",
     "copied": "Skopírované",
     "draft": "Verzia 0.2 je vydaná. Špecifikácia aj softvér sú voľne na použitie.",
-    "footerAbout": "Bezplatný a otvorený spôsob, ako môžu módne značky odovzdávať produktové fotografie a údaje o tovare svojim predajcom.",
+    "footerAbout": "Bezplatný a otvorený spôsob, ako môžu značky zdieľať produktové fotografie a údaje o tovare so svojimi predajcami.",
     "footerMore": "Viac",
     "footerSource": "Zdrojový kód a špecifikácia",
     "footerLicence": "Tento web: obsah CC-BY-4.0, kód MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: otvorený štandard pre produktový obsah v móde",
-      "description": "Bezplatný otvorený štandard a softvér pre módne značky a predajcov: produktové fotografie, vláknové zloženie a pokyny na ošetrovanie v jednom formáte, na portáli alebo priamo v softvéri predajcu."
+      "title": "Open Brand Exchange: štandard pre značky a predajcov",
+      "description": "Bezplatný, otvorený štandard a softvér na zdieľanie produktových fotografií a údajov o tovare medzi značkami a predajcami: v portáli, ako stiahnutie alebo priamo v softvéri predajcu."
     },
     "brands": {
       "title": "Pre značky",
@@ -880,7 +880,7 @@
       "preview": "Verzia 0.2"
     },
     "footer": {
-      "tagline": "Otvorený štandard na odovzdávanie produktových fotografií a údajov o tovare od módnych značiek ich predajcom.",
+      "tagline": "Otvorený štandard na zdieľanie produktových fotografií a údajov o tovare medzi značkami a predajcami.",
       "product": "Produkt",
       "developers": "Pre vývojárov",
       "project": "Projekt",
@@ -901,9 +901,9 @@
       "adminAutomation": "Automatické nahrávanie v administrácii značky: hotové návody pre nástroj obx, cron, GitHub Actions a ďalšie."
     },
     "home": {
-      "eyebrow": "Otvorený štandard pre módu · Bezplatný softvér",
-      "h1": "Produktový obsah z módy, pripravený pre každého predajcu.",
-      "lead": "Mnohé obrazové portály sú pomalé, ťažko sa napájajú a musia sa preklikávať ručne. Open Brand Exchange je otvorený štandard pre to, ako značky odevov, obuvi, kabeliek a batožiny odovzdávajú svojim predajcom produktové fotografie a údaje o tovare: otvorená alternatíva k uzavretým platformám.",
+      "eyebrow": "Otvorený štandard · Bezplatný softvér",
+      "h1": "Štandard pre značky a predajcov.",
+      "lead": "Jeden spôsob zdieľania produktových fotografií a údajov o tovare: v portáli, ako stiahnutie alebo priamo v softvéri predajcu.",
       "ctaRetailer": "Som predajca",
       "proofLabel": "Na prvý pohľad",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "Pozrite sa, ako to funguje",
       "videoNote": "V angličtine, s anglickými titulkami.",
       "flowEyebrow": "Ako to funguje",
-      "flowTitle": "Jeden zdroj. Predajcovia si vezmú, čo potrebujú.",
-      "flowLead": "Váš obsah je vo vašom vlastnom portáli. Nákupcovia v ňom vyhľadávajú a sťahujú súbory v prehliadači, ich softvér číta rovnaký obsah cez API.",
-      "flowCaption": "Ako obsah prúdi zo systémov značky cez jej vlastný portál k predajcom.",
+      "flowTitle": "Keď všetci štruktúrujú dáta rovnako, vyhrávajú všetci.",
+      "flowLead": "Dnes u takmer každého predajcu niekto kopíruje tabuľky a znova prepisuje produktové dáta pre každú značku a každá nová kolekcia je naháňačka. S jedným štandardom táto práca zmizne: zavediete ho raz a všetci z neho majú úžitok roky. Čas na lepšiu prácu.",
+      "flowCaption": "Čo značka vloží, otvorený štandard uprostred a čo predajcovia dostanú.",
       "flow": {
-        "systems": "Vaše systémy",
-        "systemsItems": [
+        "inTitle": "Vstup",
+        "inLead": "Čo značka vloží",
+        "inItems": [
+          "Produktové dáta z PIM, ERP alebo Excelu",
+          "Produktové fotografie"
+        ],
+        "stdTitle": "Otvorený štandard",
+        "stdLead": "Jedna pevná štruktúra pre každú značku",
+        "stdItems": [
+          "Artikle, farby a veľkosti s EAN",
+          "Materiály, ošetrovanie a rozmery",
+          "Obrázky s právami na používanie"
+        ],
+        "outTitle": "Výstup",
+        "outLead": "Čo predajcovia dostanú",
+        "outItems": [
+          "E-shop",
           "PIM",
-          "ERP",
-          "DAM",
-          "Exportný priečinok"
-        ],
-        "upload": "Ako sa obsah dostane dnu",
-        "uploadItems": [
-          "Plánovaný import",
-          "Nástroj obx",
-          "GitHub Action",
-          "API na nahrávanie"
-        ],
-        "portal": "Váš portál",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Katalóg a fotografie",
-          "Prístup pre každého predajcu",
-          "Štatistiky používania"
-        ],
-        "retailers": "Vaši predajcovia",
-        "browser": "Nákupcovia, v prehliadači",
-        "browserItems": [
-          "Vyhľadávanie a zoznam EAN",
-          "Sťahovanie ZIP a CSV"
-        ],
-        "software": "Ich softvér, cez API",
-        "softwareItems": [
-          "E-shop a PIM",
-          "POS a nástroje na obsah"
+          "POS a ERP",
+          "Sťahovanie v prehliadači"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Verzia 0.2 pod licenciou CC-BY-4.0. Implementovať ju smie ktokoľvek, aj komerčne."
         },
         {
-          "h": "Žiadna závislosť",
+          "h": "Vaše údaje zostávajú vaše",
           "p": "Značka môže kedykoľvek exportovať všetky svoje údaje a fotografie a prejsť k inému poskytovateľovi alebo si ich hostiť sama."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Bezplatný softvér alebo poskytovateľ, ktorý všetko zariadi",
             "Začnite od vlastného súboru Excel alebo systému",
-            "Všetci predajcovia naraz, žiadne posielanie súborov",
+            "Všetci vaši predajcovia naraz",
             "Vy určujete, kto čo vidí",
             "Vidíte, kto čo sťahuje",
-            "Žiadna závislosť: exportujte všetko a odíďte"
+            "Exportujte všetko, kedykoľvek"
           ],
           "cta": "Viac pre značky"
         },
@@ -1120,7 +1109,7 @@
             "Pre predajcov zadarmo",
             "Každá značka v rovnakom formáte",
             "Vložte EAN, dostanete správne fotografie",
-            "Vláknové zloženie a pokyny na ošetrovanie pripravené pre e-shop",
+            "Materiály a ošetrovanie pripravené pre e-shop",
             "Práva na použitie a dátumy embarga pri každej fotografii",
             "V prehliadači alebo priamo vo vašom softvéri"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Portály značiek, B2B a obrazové portály, DAM",
             "Softvér pre ERP, PIM, e-shopy a pokladnice",
-            "Jedno otvorené API, bez licenčných poplatkov",
+            "Jedno otvorené API, zadarmo na použitie",
             "Najprv úplná kópia, potom už len zmeny",
             "Bezplatné označenie „Kompatibilné s Open Brand Exchange“"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Kompatibilita alebo partnerstvo",
       "heroChecks": [
-        "Zadarmo a otvorené, bez poplatku za predajcu",
+        "Zadarmo na použitie",
         "Všetci vaši predajcovia naraz",
         "Začína vo vašom Exceli alebo systéme",
         "Fotografie vrátane práv na použitie",
-        "Žiadna závislosť: vaše údaje zostávajú vaše"
+        "Vaše údaje zostávajú vaše"
       ],
       "devRepos": [
         {

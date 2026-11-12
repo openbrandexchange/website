@@ -10,7 +10,7 @@
     "copy": "Copiar",
     "copied": "Copiado",
     "draft": "A versão 0.2 foi publicada. A especificação e o software são de utilização livre.",
-    "footerAbout": "Uma forma gratuita e aberta de as marcas de moda entregarem imagens de produto e dados de artigos aos seus revendedores.",
+    "footerAbout": "Uma forma gratuita e aberta de as marcas partilharem imagens de produto e dados de artigos com os seus revendedores.",
     "footerMore": "Mais",
     "footerSource": "Código-fonte e especificação",
     "footerLicence": "Este site: conteúdo CC-BY-4.0, código MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: a norma aberta para conteúdo de produto na moda",
-      "description": "Uma norma aberta e software gratuitos para marcas de moda e revendedores: fotografias de produto, composição em fibras e instruções de cuidados num só formato, num portal ou diretamente no software do revendedor."
+      "title": "Open Brand Exchange: a norma para marcas e revendedores",
+      "description": "Uma norma aberta e gratuita, com software, para partilhar fotografias de produto e dados de artigos entre marcas e revendedores: num portal, como transferência ou diretamente no software do revendedor."
     },
     "brands": {
       "title": "Para marcas",
@@ -880,7 +880,7 @@
       "preview": "Versão 0.2"
     },
     "footer": {
-      "tagline": "A norma aberta para a entrega de imagens de produto e dados de artigos das marcas de moda aos seus revendedores.",
+      "tagline": "A norma aberta para partilhar imagens de produto e dados de artigos entre marcas e revendedores.",
       "product": "Produto",
       "developers": "Programadores",
       "project": "Projeto",
@@ -901,9 +901,9 @@
       "adminAutomation": "Envio automático na administração da marca: receitas prontas para a ferramenta obx, cron, GitHub Actions e muito mais."
     },
     "home": {
-      "eyebrow": "Norma aberta para a moda · Software gratuito",
-      "h1": "Conteúdo de produto de moda, pronto para todos os revendedores.",
-      "lead": "Muitos portais de imagens são lentos, difíceis de ligar e têm de ser percorridos à mão, clique a clique. Open Brand Exchange é a norma aberta para a forma como as marcas de moda, calçado, malas e artigos de viagem entregam fotografias de produto e dados de artigos aos seus revendedores: uma alternativa aberta às plataformas fechadas.",
+      "eyebrow": "Norma aberta · Software gratuito",
+      "h1": "A norma para marcas e revendedores.",
+      "lead": "Uma só forma de partilhar fotografias de produto e dados de artigos: num portal, como transferência ou diretamente no software do revendedor.",
       "ctaRetailer": "Sou revendedor",
       "proofLabel": "Em resumo",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "Veja como funciona",
       "videoNote": "Em inglês, com legendas em inglês.",
       "flowEyebrow": "Como funciona",
-      "flowTitle": "Uma só fonte. Os revendedores vão buscar o que precisam.",
-      "flowLead": "O seu conteúdo está no seu próprio portal. Os compradores pesquisam e transferem ficheiros no navegador; o software deles lê o mesmo conteúdo através da API.",
-      "flowCaption": "Como o conteúdo segue dos sistemas de uma marca, através do seu próprio portal, até aos seus revendedores.",
+      "flowTitle": "Quando todos estruturam os dados da mesma forma, todos ganham.",
+      "flowLead": "Hoje, em quase todos os revendedores há alguém a copiar folhas de cálculo e a voltar a escrever os dados de produto para cada marca, e cada nova coleção é uma correria. Com um único standard, esse trabalho desaparece: implementa-se uma vez e todos beneficiam durante anos. É tempo de melhor trabalho.",
+      "flowCaption": "O que uma marca introduz, o standard aberto ao centro e o que os revendedores recebem.",
       "flow": {
-        "systems": "Os seus sistemas",
-        "systemsItems": [
+        "inTitle": "Entrada",
+        "inLead": "O que uma marca introduz",
+        "inItems": [
+          "Dados de produto do PIM, do ERP ou do Excel",
+          "Fotografias de produto"
+        ],
+        "stdTitle": "O standard aberto",
+        "stdLead": "Uma estrutura fixa para cada marca",
+        "stdItems": [
+          "Artigos, cores e tamanhos com EAN",
+          "Materiais, conservação e medidas",
+          "Imagens com direitos de utilização"
+        ],
+        "outTitle": "Saída",
+        "outLead": "O que os revendedores recebem",
+        "outItems": [
+          "Loja online",
           "PIM",
-          "ERP",
-          "DAM",
-          "Pasta de exportação"
-        ],
-        "upload": "Colocar o conteúdo",
-        "uploadItems": [
-          "Importação agendada",
-          "Ferramenta obx",
-          "GitHub Action",
-          "API de envio"
-        ],
-        "portal": "O seu portal",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Catálogo e imagens",
-          "Acesso por revendedor",
-          "Estatísticas de utilização"
-        ],
-        "retailers": "Os seus revendedores",
-        "browser": "Compradores, no navegador",
-        "browserItems": [
-          "Pesquisa e lista de EAN",
-          "Transferências em zip e CSV"
-        ],
-        "software": "O software deles, através da API",
-        "softwareItems": [
-          "Loja online e PIM",
-          "POS e ferramentas de conteúdo"
+          "POS e ERP",
+          "Transferências no navegador"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Versão 0.2, sob CC-BY-4.0. Qualquer pessoa a pode implementar, também para fins comerciais."
         },
         {
-          "h": "Sem dependência",
+          "h": "Os seus dados continuam a ser seus",
           "p": "Uma marca pode exportar todos os seus dados e imagens a qualquer momento, e mudar para outro fornecedor ou alojá-los ela própria."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Software gratuito, ou um fornecedor que trata de tudo",
             "Comece pelo seu próprio ficheiro Excel ou sistema",
-            "Todos os seus revendedores de uma só vez, sem enviar ficheiros",
+            "Todos os seus revendedores de uma só vez",
             "Decide quem vê o quê",
             "Veja quem transfere o quê",
-            "Sem dependência: exporte tudo e saia"
+            "Exporte tudo, quando quiser"
           ],
           "cta": "Saiba mais para marcas"
         },
@@ -1120,7 +1109,7 @@
             "Gratuito para revendedores",
             "Todas as marcas no mesmo formato",
             "Cole EAN e obtenha as imagens certas",
-            "Composição em fibras e instruções de cuidados prontas para a loja online",
+            "Materiais e conservação prontos para a loja online",
             "Direitos de utilização e datas de embargo em cada imagem",
             "No navegador, ou diretamente no seu software"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Portais de marca, portais B2B e de imagens, DAM",
             "Software de ERP, PIM, loja online e ponto de venda",
-            "Uma API aberta, sem custos de licença",
+            "Uma API aberta, gratuita",
             "Primeiro uma cópia completa, depois só as alterações",
             "Selo gratuito «Compatível com Open Brand Exchange»"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Compatível ou parceiro",
       "heroChecks": [
-        "Gratuito e aberto, sem custos por revendedor",
+        "Gratuito para utilizar",
         "Todos os seus revendedores de uma só vez",
         "Começa no seu próprio Excel ou sistema",
         "Imagens com direitos de utilização incluídos",
-        "Sem dependência: os seus dados continuam a ser seus"
+        "Os seus dados continuam a ser seus"
       ],
       "devRepos": [
         {

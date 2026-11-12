@@ -4,7 +4,7 @@
 
 const SPEC = 'https://github.com/openbrandexchange/spec/blob/main';
 
-export const exportPrompt = `You are helping me connect our system to Open Brand Exchange (OBX), the open standard for how fashion brands deliver product photos and article data to retailers.
+export const exportPrompt = `You are helping me connect our system to Open Brand Exchange (OBX), the open standard for how brands share product photos and article data with retailers.
 
 Read these first:
 - Import format: ${SPEC}/docs/import-format.md
@@ -22,7 +22,7 @@ Task:
 
 Ask me for anything you need to know about our system before you write code.`;
 
-export const readPrompt = `You are helping me read Open Brand Exchange (OBX) in our software. OBX is the open standard for how fashion brands deliver product photos and article data to retailers; every brand runs its own portal with the same API.
+export const readPrompt = `You are helping me read Open Brand Exchange (OBX) in our software. OBX is the open standard for how brands share product photos and article data with retailers; every brand runs its own portal with the same API.
 
 Read these first:
 - OBX in 10 minutes: ${SPEC}/docs/quickstart.md

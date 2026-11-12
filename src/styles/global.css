@@ -1151,184 +1151,96 @@ main:focus {
 .flow {
   margin: 0;
 }
+/* In → the open standard → Out. Three blocks; the standard in the middle is framed. On phones
+   the blocks stack with a short connector between them. */
 .flow-cols {
   display: grid;
-  gap: var(--s-6);
+  gap: var(--s-5);
   list-style: none;
   padding: 0;
   margin: 0;
+  align-items: stretch;
 }
-@media (min-width: 64rem) {
+@media (min-width: 56rem) {
   .flow-cols {
-    grid-template-columns: 1fr 1fr 1.25fr 1.35fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr);
     gap: var(--s-7);
-    align-items: start;
-  }
-  .flow-col:nth-child(3) {
-    padding-top: calc(0.75rem * 1.6 + var(--s-3));
+    align-items: center;
   }
 }
 .flow-col {
   position: relative;
+  padding: var(--s-5);
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
 }
-.flow-col > h3 {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 var(--s-3);
-}
-.flow-list {
-  list-style: none;
-  padding: 0;
+.flow-col h3 {
   margin: 0;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.flow-col .flow-lead {
+  margin: var(--s-2) 0 var(--s-4);
+  color: var(--fg-2);
+  font-size: 0.9375rem;
+}
+.flow-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: grid;
   gap: var(--s-2);
 }
-.flow-node {
+.flow-col li {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.6rem 0.8rem;
-  background: var(--surface);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
-  font-size: 0.9375rem;
   font-weight: 540;
 }
-.flow-node svg {
+.flow-col li svg {
   flex: none;
-  color: var(--muted);
-}
-.flow-hub {
-  position: relative;
-  padding: var(--s-5);
-  border-radius: var(--radius-lg);
-  background: var(--ink);
-  color: var(--ink-fg);
-  box-shadow: 0 0 0 1px rgb(255 255 255 / 0.08), 0 24px 48px -16px rgb(7 12 26 / 0.5);
-  color-scheme: dark;
-}
-.flow-hub::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  padding: 1px;
-  background: linear-gradient(140deg, var(--accent), transparent 55%);
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-.flow-hub h3 {
-  color: var(--ink-muted);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin: 0 0 var(--s-2);
-}
-.flow-hub .domain {
-  display: block;
-  font-size: 1.0625rem;
-  font-weight: 620;
-  letter-spacing: -0.01em;
-  margin-bottom: var(--s-4);
-  overflow-wrap: anywhere;
-}
-.flow-hub ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: var(--s-2);
-  font-size: 0.875rem;
-  color: var(--ink-fg-2);
-}
-.flow-hub li {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-}
-.flow-hub li svg {
-  color: var(--ink-accent);
-  flex: none;
-}
-.flow-group {
-  padding: var(--s-4);
-  border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: var(--shadow-sm);
-}
-.flow-group + .flow-group {
-  margin-top: var(--s-3);
-}
-.flow-group h4 {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9375rem;
-  font-weight: 620;
-  letter-spacing: -0.01em;
-  margin: 0 0 var(--s-2);
-}
-.flow-group h4 svg {
   color: var(--accent-fg);
 }
-.flow-group ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.flow-std {
+  padding: var(--s-6);
+  border: 2px solid var(--fg);
+  box-shadow: 6px 6px 0 var(--fg);
+}
+.flow-std h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
   font-size: 0.875rem;
-  color: var(--muted);
 }
-.flow-group li + li {
-  margin-top: 0.15rem;
+.flow-std h3 .mark {
+  flex: none;
 }
-/* Connectors: a line with a moving pulse between columns. */
-.flow-link {
+/* Connectors: an arrow between the blocks, sideways on wide screens, down on phones. */
+.flow-col:not(:last-child)::after {
+  content: '';
   position: absolute;
-  display: none;
-  pointer-events: none;
+  left: 50%;
+  bottom: calc(-1 * var(--s-5));
+  width: 2px;
+  height: var(--s-5);
+  margin-left: -1px;
+  background: var(--fg);
 }
-@media (min-width: 64rem) {
-  .flow-link {
-    display: block;
-    top: 55%;
-    right: calc(-1 * var(--s-7));
-    width: var(--s-7);
-    height: 2px;
-    translate: 0 -1px;
-    color: var(--accent);
-  }
-}
-.flow-link line {
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-dasharray: 3 5;
-  opacity: 0.6;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .flow-link line {
-    animation: flow-dash 1.2s linear infinite;
-  }
-}
-@keyframes flow-dash {
-  to {
-    stroke-dashoffset: -16;
-  }
-}
-@media (max-width: 63.99rem) {
+@media (min-width: 56rem) {
   .flow-col:not(:last-child)::after {
-    content: '';
-    display: block;
-    width: 2px;
-    height: var(--s-5);
-    margin: var(--s-3) auto 0;
-    background: repeating-linear-gradient(to bottom, var(--accent) 0 3px, transparent 3px 8px);
-    opacity: 0.7;
+    left: 100%;
+    top: 50%;
+    bottom: auto;
+    width: calc(var(--s-7) + 2px);
+    height: 2px;
+    margin: -1px 0 0;
+  }
+  .flow-std:not(:last-child)::after {
+    width: calc(var(--s-7) - 4px);
+    margin-left: 6px;
   }
 }
 .flow figcaption {
@@ -1336,7 +1248,6 @@ main:focus {
   font-size: 0.875rem;
   color: var(--muted);
 }
-
 
 /* ---------- Feature splits (pillars) ---------- */
 

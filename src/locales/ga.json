@@ -10,7 +10,7 @@
     "copy": "Cóipeáil",
     "copied": "Cóipeáilte",
     "draft": "Tá leagan 0.2 eisithe. Tá an tsonraíocht agus na bogearraí saor le húsáid.",
-    "footerAbout": "Bealach saor in aisce agus oscailte do bhrandaí faisin grianghraif táirgí agus sonraí earraí a sheachadadh chuig a gcuid miondíoltóirí.",
+    "footerAbout": "Bealach saor in aisce agus oscailte do bhrandaí íomhánna táirgí agus sonraí earraí a roinnt lena gcuid miondíoltóirí.",
     "footerMore": "Tuilleadh",
     "footerSource": "Cód foinseach agus sonraíocht",
     "footerLicence": "An suíomh gréasáin seo: ábhar CC-BY-4.0, cód MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: an caighdeán oscailte d'ábhar táirgí faisin",
-      "description": "Caighdeán oscailte agus bogearraí saor in aisce do bhrandaí faisin agus do mhiondíoltóirí: grianghraif táirgí, comhdhéanamh snáithíní agus treoracha cúraim i bhformáid amháin, i dtairseach nó díreach isteach i mbogearraí an mhiondíoltóra."
+      "title": "Open Brand Exchange: an caighdeán do bhrandaí agus do mhiondíoltóirí",
+      "description": "Caighdeán oscailte saor in aisce agus bogearraí chun grianghraif táirgí agus sonraí earraí a roinnt idir brandaí agus miondíoltóirí: i dtairseach, mar íoslódáil nó go díreach i mbogearraí an mhiondíoltóra."
     },
     "brands": {
       "title": "Do bhrandaí",
@@ -880,7 +880,7 @@
       "preview": "Leagan 0.2"
     },
     "footer": {
-      "tagline": "An caighdeán oscailte chun grianghraif táirgí agus sonraí earraí a sheachadadh ó bhrandaí faisin chuig a gcuid miondíoltóirí.",
+      "tagline": "An caighdeán oscailte chun íomhánna táirgí agus sonraí earraí a roinnt idir brandaí agus miondíoltóirí.",
       "product": "Táirge",
       "developers": "Forbróirí",
       "project": "Tionscadal",
@@ -901,9 +901,9 @@
       "adminAutomation": "Uaslódáil uathoibríoch i riarachán an bhranda: oidis réidh don uirlis obx, cron, GitHub Actions agus tuilleadh."
     },
     "home": {
-      "eyebrow": "Caighdeán oscailte don fhaisean · Bogearraí saor in aisce",
-      "h1": "Ábhar táirgí faisin, réidh do gach miondíoltóir.",
-      "lead": "Bíonn go leor tairseach íomhánna mall, deacair le nascadh agus caithfear cliceáil tríothu de láimh. Is é Open Brand Exchange an caighdeán oscailte a leagann amach conas a sheachadann brandaí éadaí, bróg, málaí agus bagáiste grianghraif táirgí agus sonraí earraí chuig a gcuid miondíoltóirí: rogha oscailte seachas ardáin dhúnta.",
+      "eyebrow": "Caighdeán oscailte · Bogearraí saor in aisce",
+      "h1": "An caighdeán do bhrandaí agus do mhiondíoltóirí.",
+      "lead": "Bealach amháin chun grianghraif táirgí agus sonraí earraí a roinnt: i dtairseach, mar íoslódáil nó go díreach i mbogearraí an mhiondíoltóra.",
       "ctaRetailer": "Is miondíoltóir mé",
       "proofLabel": "Sracfhéachaint",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "Féach conas a oibríonn sé",
       "videoNote": "I mBéarla, le fotheidil Bhéarla.",
       "flowEyebrow": "Conas a oibríonn sé",
-      "flowTitle": "Foinse amháin. Faigheann miondíoltóirí a bhfuil uathu.",
-      "flowLead": "Tá do chuid ábhair i do thairseach féin. Déanann ceannaitheoirí cuardach agus íoslódálann siad comhaid sa bhrabhsálaí; léann a gcuid bogearraí an t-ábhar céanna tríd an API.",
-      "flowCaption": "Conas a ghluaiseann ábhar ó chórais branda, trína thairseach féin, go dtí a mhiondíoltóirí.",
+      "flowTitle": "Nuair a struchtúraíonn gach duine sonraí ar an mbealach céanna, buann gach duine.",
+      "flowLead": "Inniu, ag beagnach gach miondíoltóir tá duine éigin ag cóipeáil scarbhileoga agus ag athchlóscríobh sonraí táirge do gach branda, agus is rás í gach bailiúchán nua. Le caighdeán amháin imíonn an obair sin: cuir i bhfeidhm é uair amháin, agus tá sé ina leas do gach duine ar feadh blianta. Am le haghaidh oibre níos fearr.",
+      "flowCaption": "An méid a chuireann branda isteach, an caighdeán oscailte sa lár, agus an méid a fhaigheann miondíoltóirí.",
       "flow": {
-        "systems": "Do chórais",
-        "systemsItems": [
+        "inTitle": "Isteach",
+        "inLead": "An méid a chuireann branda isteach",
+        "inItems": [
+          "Sonraí táirge ó PIM, ERP nó Excel",
+          "Grianghraif táirge"
+        ],
+        "stdTitle": "An caighdeán oscailte",
+        "stdLead": "Struchtúr seasta amháin do gach branda",
+        "stdItems": [
+          "Earraí, dathanna agus méideanna le EAN",
+          "Ábhair, cúram agus tomhais",
+          "Íomhánna le cearta úsáide"
+        ],
+        "outTitle": "Amach",
+        "outLead": "An méid a fhaigheann miondíoltóirí",
+        "outItems": [
+          "Siopa gréasáin",
           "PIM",
-          "ERP",
-          "DAM",
-          "Fillteán easpórtála"
-        ],
-        "upload": "Ábhar a chur isteach",
-        "uploadItems": [
-          "Iompórtáil sceidealaithe",
-          "An uirlis obx",
-          "GitHub Action",
-          "API uaslódála"
-        ],
-        "portal": "Do thairseach",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Catalóg agus grianghraif",
-          "Rochtain do gach miondíoltóir",
-          "Staitisticí úsáide"
-        ],
-        "retailers": "Do mhiondíoltóirí",
-        "browser": "Ceannaitheoirí, sa bhrabhsálaí",
-        "browserItems": [
-          "Cuardach agus liosta EAN",
-          "Íoslódálacha zip agus CSV"
-        ],
-        "software": "A gcuid bogearraí, tríd an API",
-        "softwareItems": [
-          "Siopa gréasáin agus PIM",
-          "POS agus uirlisí ábhair"
+          "POS agus ERP",
+          "Íoslódálacha sa bhrabhsálaí"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Leagan 0.2, faoi CC-BY-4.0. Is féidir le duine ar bith í a chur i bhfeidhm, go tráchtála freisin."
         },
         {
-          "h": "Gan glasáil isteach",
+          "h": "Is leatsa do shonraí i gcónaí",
           "p": "Is féidir le branda a shonraí agus a íomhánna go léir a easpórtáil am ar bith, agus bogadh chuig soláthraí eile nó é a óstáil é féin."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Bogearraí saor in aisce, nó soláthraí a dhéanann an t-iomlán",
             "Tosaigh ó do chomhad Excel nó do chóras féin",
-            "Do mhiondíoltóirí go léir in aon iarracht amháin, gan comhaid a sheoladh níos mó",
+            "Do mhiondíoltóirí go léir in aon iarracht amháin",
             "Socraíonn tusa cé a fheiceann cad",
             "Feic cé a íoslódálann cad",
-            "Gan glasáil isteach: easpórtáil gach rud agus imigh"
+            "Easpórtáil gach rud, am ar bith"
           ],
           "cta": "Tuilleadh do bhrandaí"
         },
@@ -1120,7 +1109,7 @@
             "Saor in aisce do mhiondíoltóirí",
             "Gach branda sa bhformáid chéanna",
             "Greamaigh EANanna, faigh na híomhánna cearta",
-            "Comhdhéanamh snáithíní agus treoracha cúraim réidh don siopa gréasáin",
+            "Ábhair agus cúram réidh don siopa gréasáin",
             "Cearta úsáide agus dátaí lánchoisc le gach íomhá",
             "Sa bhrabhsálaí, nó díreach isteach i do bhogearraí"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Tairseacha branda, tairseacha B2B agus íomhánna, DAManna",
             "Bogearraí ERP, PIM, siopa gréasáin agus díolacháin",
-            "API oscailte amháin, gan táille ceadúnais",
+            "API oscailte amháin, saor in aisce le húsáid",
             "Cóip iomlán ar dtús, ansin na hathruithe amháin",
             "Lipéad saor in aisce “Comhoiriúnach le Open Brand Exchange”"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Comhoiriúnach nó comhpháirtí",
       "heroChecks": [
-        "Saor in aisce agus oscailte, gan táille in aghaidh an mhiondíoltóra",
+        "Saor in aisce le húsáid",
         "Do mhiondíoltóirí go léir in aon iarracht amháin",
         "Tosaíonn sé ó do Excel nó do chóras féin",
         "Íomhánna le cearta úsáide san áireamh",
-        "Gan glasáil isteach: is leatsa do shonraí i gcónaí"
+        "Is leatsa do shonraí i gcónaí"
       ],
       "devRepos": [
         {

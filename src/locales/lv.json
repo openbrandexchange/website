@@ -10,7 +10,7 @@
     "copy": "Kopēt",
     "copied": "Nokopēts",
     "draft": "Versija 0.2 ir izlaista. Specifikācija un programmatūra ir brīvi izmantojamas.",
-    "footerAbout": "Bezmaksas, atvērts veids, kā modes zīmoli var piegādāt produktu fotoattēlus un preču datus saviem tirgotājiem.",
+    "footerAbout": "Bezmaksas, atvērts veids, kā zīmoli var kopīgot produktu attēlus un preču datus ar saviem tirgotājiem.",
     "footerMore": "Vairāk",
     "footerSource": "Pirmkods un specifikācija",
     "footerLicence": "Šī tīmekļa vietne: saturs CC-BY-4.0, kods MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: atvērtais standarts modes produktu saturam",
-      "description": "Bezmaksas atvērts standarts un programmatūra modes zīmoliem un tirgotājiem: produktu fotoattēli, šķiedru sastāvs un kopšanas norādījumi vienā formātā, portālā vai tieši tirgotāja programmatūrā."
+      "title": "Open Brand Exchange: standarts zīmoliem un tirgotājiem",
+      "description": "Bezmaksas, atvērts standarts un programmatūra produktu fotoattēlu un preču datu kopīgošanai starp zīmoliem un tirgotājiem: portālā, kā lejupielāde vai tieši tirgotāja programmatūrā."
     },
     "brands": {
       "title": "Zīmoliem",
@@ -880,7 +880,7 @@
       "preview": "Versija 0.2"
     },
     "footer": {
-      "tagline": "Atvērtais standarts, ar kuru modes zīmoli piegādā produktu fotoattēlus un preču datus saviem tirgotājiem.",
+      "tagline": "Atvērtais standarts produktu attēlu un preču datu kopīgošanai starp zīmoliem un tirgotājiem.",
       "product": "Produkts",
       "developers": "Izstrādātājiem",
       "project": "Projekts",
@@ -901,9 +901,9 @@
       "adminAutomation": "Automātiska augšupielāde zīmola pārvaldībā: gatavas receptes rīkam obx, cron, GitHub Actions un citiem."
     },
     "home": {
-      "eyebrow": "Atvērts standarts modei · Bezmaksas programmatūra",
-      "h1": "Modes produktu saturs, gatavs katram tirgotājam.",
-      "lead": "Daudzi attēlu portāli ir lēni, tos grūti savienot, un tie jāizklikšķina ar roku. Open Brand Exchange ir atvērtais standarts tam, kā apģērbu, apavu, somu un čemodānu zīmoli piegādā produktu fotoattēlus un preču datus saviem tirgotājiem: atvērta alternatīva slēgtām platformām.",
+      "eyebrow": "Atvērts standarts · Bezmaksas programmatūra",
+      "h1": "Standarts zīmoliem un tirgotājiem.",
+      "lead": "Viens veids, kā kopīgot produktu fotoattēlus un preču datus: portālā, kā lejupielāde vai tieši tirgotāja programmatūrā.",
       "ctaRetailer": "Esmu tirgotājs",
       "proofLabel": "Īsumā",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "Skatiet, kā tas darbojas",
       "videoNote": "Angļu valodā, ar angļu subtitriem.",
       "flowEyebrow": "Kā tas darbojas",
-      "flowTitle": "Viens avots. Tirgotāji paņem to, kas viņiem vajadzīgs.",
-      "flowLead": "Jūsu saturs atrodas jūsu portālā. Pircēji tajā meklē un lejupielādē failus pārlūkā, bet viņu programmatūra to pašu saturu nolasa caur API.",
-      "flowCaption": "Kā saturs plūst no zīmola sistēmām caur tā paša portālu līdz tā tirgotājiem.",
+      "flowTitle": "Kad visi datus strukturē vienādi, uzvar visi.",
+      "flowLead": "Šodien gandrīz katrā tirgotājā kāds kopē izklājlapas un katram zīmolam no jauna pārraksta produktu datus, un katra jauna kolekcija ir steigā. Ar vienu standartu šis darbs izzūd: to ievieš vienreiz, un visi no tā gūst labumu gadiem ilgi. Laiks labākam darbam.",
+      "flowCaption": "Ko zīmols ievada, atvērtais standarts vidū un ko saņem tirgotāji.",
       "flow": {
-        "systems": "Jūsu sistēmas",
-        "systemsItems": [
+        "inTitle": "Ieeja",
+        "inLead": "Ko zīmols ievada",
+        "inItems": [
+          "Produktu dati no PIM, ERP vai Excel",
+          "Produktu fotoattēli"
+        ],
+        "stdTitle": "Atvērtais standarts",
+        "stdLead": "Viena fiksēta struktūra katram zīmolam",
+        "stdItems": [
+          "Artikuli, krāsas un izmēri ar EAN",
+          "Materiāli, kopšana un izmēri",
+          "Attēli ar lietošanas tiesībām"
+        ],
+        "outTitle": "Izeja",
+        "outLead": "Ko saņem tirgotāji",
+        "outItems": [
+          "Interneta veikals",
           "PIM",
-          "ERP",
-          "DAM",
-          "Eksporta mape"
-        ],
-        "upload": "Satura augšupielāde",
-        "uploadItems": [
-          "Plānots imports",
-          "Rīks obx",
-          "GitHub Action",
-          "Augšupielādes API"
-        ],
-        "portal": "Jūsu portāls",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Katalogs un fotoattēli",
-          "Piekļuve katram tirgotājam",
-          "Lietošanas statistika"
-        ],
-        "retailers": "Jūsu tirgotāji",
-        "browser": "Pircēji pārlūkā",
-        "browserItems": [
-          "Meklēšana un EAN saraksts",
-          "Zip un CSV lejupielādes"
-        ],
-        "software": "Viņu programmatūra caur API",
-        "softwareItems": [
-          "Interneta veikals un PIM",
-          "POS un satura rīki"
+          "POS un ERP",
+          "Lejupielādes pārlūkā"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Versija 0.2, ar licenci CC-BY-4.0. To drīkst ieviest ikviens, arī komerciāli."
         },
         {
-          "h": "Nav piesaistes",
+          "h": "Jūsu dati paliek jūsu",
           "p": "Zīmols jebkurā brīdī var eksportēt visus savus datus un attēlus un pāriet pie cita pakalpojumu sniedzēja vai mitināt tos pats."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Bezmaksas programmatūra vai pakalpojumu sniedzējs, kas visu nokārto",
             "Sāciet no sava Excel faila vai sistēmas",
-            "Visi jūsu tirgotāji uzreiz, vairs nav jāsūta faili",
+            "Visi jūsu tirgotāji uzreiz",
             "Jūs lemjat, kurš ko redz",
             "Redziet, kurš ko lejupielādē",
-            "Nav piesaistes: eksportējiet visu un aizejiet"
+            "Eksportējiet visu jebkurā laikā"
           ],
           "cta": "Uzziniet vairāk zīmoliem"
         },
@@ -1120,7 +1109,7 @@
             "Bezmaksas tirgotājiem",
             "Katrs zīmols vienā un tajā pašā formātā",
             "Ielīmējiet EAN, saņemiet pareizos attēlus",
-            "Šķiedru sastāvs un kopšanas norādījumi, gatavi interneta veikalam",
+            "Materiāli un kopšana, gatavi interneta veikalam",
             "Lietošanas tiesības un embargo datumi pie katra attēla",
             "Pārlūkā vai tieši jūsu programmatūrā"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Zīmolu portāli, B2B un attēlu portāli, DAM",
             "ERP, PIM, interneta veikalu un kases programmatūra",
-            "Viens atvērts API, nav licences maksas",
+            "Viens atvērts API, bezmaksas lietošanai",
             "Vispirms pilna kopija, pēc tam tikai izmaiņas",
             "Bezmaksas zīme „Saderīgs ar Open Brand Exchange”"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Saderība vai partnerība",
       "heroChecks": [
-        "Bezmaksas un atvērts, nav maksas par tirgotāju",
+        "Bezmaksas lietošanai",
         "Visi jūsu tirgotāji uzreiz",
         "Sākas no jūsu Excel vai sistēmas",
         "Attēli kopā ar lietošanas tiesībām",
-        "Nav piesaistes: jūsu dati paliek jūsu"
+        "Jūsu dati paliek jūsu"
       ],
       "devRepos": [
         {

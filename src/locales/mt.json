@@ -10,7 +10,7 @@
     "copy": "Ikkopja",
     "copied": "Ikkupjat",
     "draft": "Il-verżjoni 0.2 ħarġet. L-ispeċifikazzjoni u s-software huma ħielsa biex tużahom.",
-    "footerAbout": "Mod b'xejn u miftuħ għall-marki tal-moda biex iwasslu ritratti tal-prodotti u data tal-oġġetti lill-bejjiegħa tagħhom.",
+    "footerAbout": "Mod b'xejn u miftuħ għall-marki biex jaqsmu ritratti tal-prodotti u data tal-oġġetti mal-bejjiegħa tagħhom.",
     "footerMore": "Aktar",
     "footerSource": "Kodiċi sors u speċifikazzjoni",
     "footerLicence": "Dan is-sit: kontenut CC-BY-4.0, kodiċi MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: l-istandard miftuħ għall-kontenut tal-prodotti tal-moda",
-      "description": "Standard miftuħ u software b'xejn għall-marki u l-bejjiegħa tal-moda: ritratti tal-prodotti, kompożizzjoni tal-fibri u struzzjonijiet tal-kura f'format wieħed, f'portal jew dritt fis-software tal-bejjiegħ."
+      "title": "Open Brand Exchange: l-istandard għall-marki u l-bejjiegħa",
+      "description": "Standard miftuħ u b'xejn, bis-software, biex jinqasmu ritratti tal-prodotti u data tal-oġġetti bejn marki u bejjiegħa: f'portal, bħala download jew direttament fis-software tal-bejjiegħ."
     },
     "brands": {
       "title": "Għall-marki",
@@ -880,7 +880,7 @@
       "preview": "Verżjoni 0.2"
     },
     "footer": {
-      "tagline": "L-istandard miftuħ biex il-marki tal-moda jwasslu ritratti tal-prodotti u data tal-oġġetti lill-bejjiegħa tagħhom.",
+      "tagline": "L-istandard miftuħ biex jinqasmu ritratti tal-prodotti u data tal-oġġetti bejn marki u bejjiegħa.",
       "product": "Prodott",
       "developers": "Żviluppaturi",
       "project": "Proġett",
@@ -901,9 +901,9 @@
       "adminAutomation": "Tlugħ awtomatiku fl-amministrazzjoni tal-marka: riċetti lesti għall-għodda obx, cron, GitHub Actions u aktar."
     },
     "home": {
-      "eyebrow": "Standard miftuħ għall-moda · Software b'xejn",
-      "h1": "Kontenut tal-prodotti tal-moda, lest għal kull bejjiegħ.",
-      "lead": "Ħafna portali tal-immaġni huma bil-mod, diffiċli biex tgħaqqadhom u jridu jiġu kklikkjati wieħed wieħed bl-idejn. Open Brand Exchange huwa l-istandard miftuħ għal kif il-marki tal-ħwejjeġ, iż-żraben, il-basktijiet u l-bagalji jwasslu r-ritratti tal-prodotti u d-data tal-oġġetti lill-bejjiegħa tagħhom: alternattiva miftuħa għall-pjattaformi magħluqa.",
+      "eyebrow": "Standard miftuħ · Software b'xejn",
+      "h1": "L-istandard għall-marki u l-bejjiegħa.",
+      "lead": "Mod wieħed biex jinqasmu ritratti tal-prodotti u data tal-oġġetti: f'portal, bħala download jew direttament fis-software tal-bejjiegħ.",
       "ctaRetailer": "Jien bejjiegħ",
       "proofLabel": "Fil-qosor",
       "proof": [
@@ -931,42 +931,31 @@
       "codeCaption": "X'jirċievi s-software ta' bejjiegħ",
       "videoTitle": "Ara kif jaħdem",
       "videoNote": "Bl-Ingliż, b'sottotitoli bl-Ingliż.",
-      "flowEyebrow": "Kif jaħdem",
-      "flowTitle": "Sors wieħed. Il-bejjiegħa jieħdu dak li għandhom bżonn.",
-      "flowLead": "Il-kontenut tiegħek jinsab fil-portal tiegħek stess. Ix-xerrejja jfittxu u jniżżlu l-fajls fil-browser; is-software tagħhom jaqra l-istess kontenut permezz tal-API.",
-      "flowCaption": "Kif il-kontenut jgħaddi mis-sistemi ta' marka, permezz tal-portal tagħha stess, sal-bejjiegħa tagħha.",
+      "flowEyebrow": "Kif taħdem",
+      "flowTitle": "Meta kulħadd jistruttura d-data bl-istess mod, kulħadd jirbaħ.",
+      "flowLead": "Illum, kważi f'kull bejjiegħ hemm xi ħadd li jikkopja spreadsheets u jerġa' jittajpja d-data tal-prodotti għal kull marka, u kull kollezzjoni ġdida tkun ġirja. B'standard wieħed dak ix-xogħol jisparixxi: timplimentah darba, u kulħadd jibbenefika minnu għal snin. Wasal iż-żmien għal xogħol aħjar.",
+      "flowCaption": "Dak li marka tqiegħed, l-istandard miftuħ f'nofs, u dak li jieħdu l-bejjiegħa.",
       "flow": {
-        "systems": "Is-sistemi tiegħek",
-        "systemsItems": [
+        "inTitle": "Dħul",
+        "inLead": "Dak li marka tqiegħed",
+        "inItems": [
+          "Data tal-prodotti minn PIM, ERP jew Excel",
+          "Ritratti tal-prodotti"
+        ],
+        "stdTitle": "L-istandard miftuħ",
+        "stdLead": "Struttura fissa waħda għal kull marka",
+        "stdItems": [
+          "Artikli, kuluri u daqsijiet bl-EAN",
+          "Materjali, kura u kejl",
+          "Immaġini bid-drittijiet tal-użu"
+        ],
+        "outTitle": "Ħruġ",
+        "outLead": "Dak li jieħdu l-bejjiegħa",
+        "outItems": [
+          "Ħanut online",
           "PIM",
-          "ERP",
-          "DAM",
-          "Folder tal-esportazzjoni"
-        ],
-        "upload": "Kif jidħol il-kontenut",
-        "uploadItems": [
-          "Importazzjoni skedata",
-          "L-għodda obx",
-          "GitHub Action",
-          "API tat-tlugħ"
-        ],
-        "portal": "Il-portal tiegħek",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Katalgu u ritratti",
-          "Aċċess għal kull bejjiegħ",
-          "Statistika tal-użu"
-        ],
-        "retailers": "Il-bejjiegħa tiegħek",
-        "browser": "Xerrejja, fil-browser",
-        "browserItems": [
-          "Tfittxija u lista tal-EAN",
-          "Downloads f'zip u CSV"
-        ],
-        "software": "Is-software tagħhom, permezz tal-API",
-        "softwareItems": [
-          "Ħanut online u PIM",
-          "POS u għodod tal-kontenut"
+          "POS u ERP",
+          "Downloads fil-browser"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Verżjoni 0.2, taħt CC-BY-4.0. Kulħadd jista' jimplimentaha, anki b'mod kummerċjali."
         },
         {
-          "h": "L-ebda lock-in",
+          "h": "Id-data tiegħek tibqa' tiegħek",
           "p": "Marka tista' tesporta d-data u r-ritratti kollha tagħha meta trid, u taqleb għal fornitur ieħor jew tospitahom hi stess."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Software b'xejn, jew fornitur li jieħu ħsieb kollox",
             "Ibda mill-fajl Excel jew mis-sistema tiegħek",
-            "Il-bejjiegħa kollha tiegħek f'daqqa, m'hemmx aktar bżonn tibgħat fajls",
+            "Il-bejjiegħa kollha tiegħek f'daqqa",
             "Int tiddeċiedi min jara xiex",
             "Ara min iniżżel xiex",
-            "L-ebda lock-in: esporta kollox u mur"
+            "Esporta kollox, meta trid"
           ],
           "cta": "Skopri għall-marki"
         },
@@ -1120,7 +1109,7 @@
             "B'xejn għall-bejjiegħa",
             "Kull marka fl-istess format",
             "Waħħal l-EAN, ikseb ir-ritratti t-tajba",
-            "Kompożizzjoni tal-fibri u struzzjonijiet tal-kura lesti għall-ħanut online",
+            "Materjali u kura lesti għall-ħanut online",
             "Drittijiet tal-użu u dati tal-embargo ma' kull ritratt",
             "Fil-browser, jew direttament fis-software tiegħek"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Portals tal-marki, portals B2B u tar-ritratti, DAMs",
             "Software tal-ERP, tal-PIM, tal-ħanut online u tal-kaxxa",
-            "API miftuħ wieħed, l-ebda miżata tal-liċenzja",
+            "API miftuħ wieħed, b'xejn biex tużah",
             "L-ewwel kopja sħiħa, imbagħad il-bidliet biss",
             "Tikketta b'xejn “Kompatibbli ma' Open Brand Exchange”"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Kompatibbli jew sieħeb",
       "heroChecks": [
-        "B'xejn u miftuħ, l-ebda miżata għal kull bejjiegħ",
+        "B'xejn biex tużah",
         "Il-bejjiegħa kollha tiegħek f'daqqa",
         "Jibda mill-Excel jew mis-sistema tiegħek",
         "Ritratti bid-drittijiet tal-użu inklużi",
-        "L-ebda lock-in: id-data tiegħek tibqa' tiegħek"
+        "Id-data tiegħek tibqa' tiegħek"
       ],
       "devRepos": [
         {

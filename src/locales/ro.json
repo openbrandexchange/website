@@ -10,7 +10,7 @@
     "copy": "Copiază",
     "copied": "Copiat",
     "draft": "Versiunea 0.2 a fost lansată. Specificația și software-ul sunt libere de folosit.",
-    "footerAbout": "O modalitate gratuită și deschisă prin care mărcile de modă le livrează comercianților fotografii de produs și date despre articole.",
+    "footerAbout": "O modalitate gratuită și deschisă prin care mărcile partajează imagini de produs și date despre articole cu comercianții lor.",
     "footerMore": "Mai mult",
     "footerSource": "Cod sursă și specificație",
     "footerLicence": "Acest site: conținut CC-BY-4.0, cod MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: standardul deschis pentru conținutul de produs din modă",
-      "description": "Un standard deschis și software gratuite pentru mărcile de modă și comercianți: fotografii de produs, compoziție fibroasă și instrucțiuni de îngrijire într-un singur format, într-un portal sau direct în software-ul comerciantului."
+      "title": "Open Brand Exchange: standardul pentru mărci și comercianți",
+      "description": "Un standard deschis și gratuit, cu software, pentru partajarea fotografiilor de produs și a datelor despre articole între mărci și comercianți: într-un portal, ca descărcare sau direct în software-ul comerciantului."
     },
     "brands": {
       "title": "Pentru mărci",
@@ -880,7 +880,7 @@
       "preview": "Versiunea 0.2"
     },
     "footer": {
-      "tagline": "Standardul deschis pentru livrarea fotografiilor de produs și a datelor despre articole de la mărcile de modă către comercianții lor.",
+      "tagline": "Standardul deschis pentru partajarea imaginilor de produs și a datelor despre articole între mărci și comercianți.",
       "product": "Produs",
       "developers": "Pentru dezvoltatori",
       "project": "Proiect",
@@ -901,9 +901,9 @@
       "adminAutomation": "Încărcare automată în administrarea mărcii: rețete gata făcute pentru instrumentul obx, cron, GitHub Actions și altele."
     },
     "home": {
-      "eyebrow": "Standard deschis pentru modă · Software gratuit",
-      "h1": "Conținutul produselor de modă, gata pentru fiecare comerciant.",
-      "lead": "Multe portaluri de imagini sunt lente, greu de conectat și trebuie parcurse manual, clic cu clic. Open Brand Exchange este standardul deschis pentru felul în care mărcile de modă, încălțăminte, genți și bagaje le livrează comercianților fotografii de produs și date despre articole: o alternativă deschisă la platformele închise.",
+      "eyebrow": "Standard deschis · Software gratuit",
+      "h1": "Standardul pentru mărci și comercianți.",
+      "lead": "Un singur mod de a partaja fotografii de produs și date despre articole: într-un portal, ca descărcare sau direct în software-ul comerciantului.",
       "ctaRetailer": "Sunt comerciant",
       "proofLabel": "Pe scurt",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "Vedeți cum funcționează",
       "videoNote": "În engleză, cu subtitrări în engleză.",
       "flowEyebrow": "Cum funcționează",
-      "flowTitle": "O singură sursă. Comercianții preiau ce le trebuie.",
-      "flowLead": "Conținutul dvs. stă în propriul portal. Cumpărătorii caută și descarcă fișiere în browser; sistemele lor citesc același conținut prin API.",
-      "flowCaption": "Cum ajunge conținutul din sistemele unei mărci, prin propriul portal, la comercianții săi.",
+      "flowTitle": "Când toți structurează datele la fel, toți câștigă.",
+      "flowLead": "Astăzi, la aproape fiecare comerciant cineva copiază foi de calcul și retranscrie datele de produs pentru fiecare brand, iar fiecare colecție nouă e o cursă. Cu un singur standard, munca aceasta dispare: îl implementați o dată și toți au de câștigat ani la rând. E timpul pentru o muncă mai bună.",
+      "flowCaption": "Ce introduce un brand, standardul deschis la mijloc și ce primesc comercianții.",
       "flow": {
-        "systems": "Sistemele dvs.",
-        "systemsItems": [
+        "inTitle": "Intrare",
+        "inLead": "Ce introduce un brand",
+        "inItems": [
+          "Date de produs din PIM, ERP sau Excel",
+          "Fotografii de produs"
+        ],
+        "stdTitle": "Standardul deschis",
+        "stdLead": "O structură fixă pentru fiecare brand",
+        "stdItems": [
+          "Articole, culori și mărimi cu EAN",
+          "Materiale, îngrijire și dimensiuni",
+          "Imagini cu drepturi de utilizare"
+        ],
+        "outTitle": "Ieșire",
+        "outLead": "Ce primesc comercianții",
+        "outItems": [
+          "Magazin online",
           "PIM",
-          "ERP",
-          "DAM",
-          "Folder de export"
-        ],
-        "upload": "Cum intră conținutul",
-        "uploadItems": [
-          "Import programat",
-          "Instrumentul obx",
-          "GitHub Action",
-          "API de încărcare"
-        ],
-        "portal": "Portalul dvs.",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Catalog și fotografii",
-          "Acces pe comerciant",
-          "Statistici de utilizare"
-        ],
-        "retailers": "Comercianții dvs.",
-        "browser": "Cumpărătorii, în browser",
-        "browserItems": [
-          "Căutare și listă de EAN",
-          "Descărcări zip și CSV"
-        ],
-        "software": "Sistemele lor, prin API",
-        "softwareItems": [
-          "Magazin online și PIM",
-          "POS și instrumente de conținut"
+          "POS și ERP",
+          "Descărcări în browser"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Versiunea 0.2, sub licența CC-BY-4.0. Oricine o poate implementa, inclusiv în scop comercial."
         },
         {
-          "h": "Fără dependență",
+          "h": "Datele rămân ale dvs.",
           "p": "O marcă își poate exporta oricând toate datele și fotografiile și poate trece la alt furnizor sau le poate găzdui singură."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Software gratuit sau un furnizor care se ocupă de tot",
             "Porniți de la propriul fișier Excel sau sistem",
-            "Toți comercianții deodată, fără să mai trimiteți fișiere",
+            "Toți comercianții dvs. deodată",
             "Decideți cine vede ce",
             "Vedeți cine descarcă ce",
-            "Fără dependență: exportați tot și plecați"
+            "Exportați tot, oricând"
           ],
           "cta": "Aflați mai multe pentru mărci"
         },
@@ -1120,7 +1109,7 @@
             "Gratuit pentru comercianți",
             "Fiecare marcă în același format",
             "Lipiți coduri EAN, primiți fotografiile potrivite",
-            "Compoziție fibroasă și instrucțiuni de îngrijire gata pentru magazinul online",
+            "Materiale și îngrijire gata pentru magazinul online",
             "Drepturi de utilizare și date de embargo la fiecare fotografie",
             "În browser sau direct în software-ul dvs."
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Portaluri de marcă, portaluri B2B și de imagini, DAM-uri",
             "Software ERP, PIM, de magazin online și de casă de marcat",
-            "Un singur API deschis, fără taxă de licență",
+            "Un singur API deschis, gratuit",
             "Mai întâi o copie completă, apoi doar modificările",
             "Eticheta gratuită „Compatibil cu Open Brand Exchange”"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Compatibil sau partener",
       "heroChecks": [
-        "Gratuit și deschis, fără taxă pe comerciant",
+        "Gratuit de folosit",
         "Toți comercianții dvs. deodată",
         "Pornește de la propriul Excel sau sistem",
         "Fotografii cu drepturile de utilizare incluse",
-        "Fără dependență: datele rămân ale dvs."
+        "Datele rămân ale dvs."
       ],
       "devRepos": [
         {

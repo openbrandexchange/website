@@ -10,7 +10,7 @@
     "copy": "Copiar",
     "copied": "Copiado",
     "draft": "La versión 0.2 ya está publicada. La especificación y el software son de uso libre.",
-    "footerAbout": "Una forma gratuita y abierta para que las marcas de moda entreguen imágenes de producto y datos de artículo a sus distribuidores.",
+    "footerAbout": "Una forma gratuita y abierta de que las marcas compartan imágenes de producto y datos de artículo con sus distribuidores.",
     "footerMore": "Más",
     "footerSource": "Código fuente y especificación",
     "footerLicence": "Este sitio web: contenido CC-BY-4.0, código MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: el estándar abierto para el contenido de producto en moda",
-      "description": "Un estándar abierto y gratuito, con su software, para marcas de moda y distribuidores: fotos de producto, composición de fibras y etiquetas de cuidado en un solo formato, en un portal o directamente en el software del distribuidor."
+      "title": "Open Brand Exchange: el estándar para marcas y distribuidores",
+      "description": "Un estándar abierto y gratuito, con software, para compartir fotos de producto y datos de artículo entre marcas y distribuidores: en un portal, como descarga o directamente en el software del distribuidor."
     },
     "brands": {
       "title": "Para marcas",
@@ -880,7 +880,7 @@
       "preview": "Versión 0.2"
     },
     "footer": {
-      "tagline": "El estándar abierto para entregar imágenes de producto y datos de artículo de las marcas de moda a sus distribuidores.",
+      "tagline": "El estándar abierto para compartir imágenes de producto y datos de artículo entre marcas y distribuidores.",
       "product": "Producto",
       "developers": "Desarrolladores",
       "project": "Proyecto",
@@ -901,9 +901,9 @@
       "adminAutomation": "Subida automática en la administración de la marca: recetas listas para la herramienta obx, cron, GitHub Actions y más."
     },
     "home": {
-      "eyebrow": "Estándar abierto para la moda · Software libre",
-      "h1": "Tu contenido de moda, listo para cada distribuidor.",
-      "lead": "Muchos portales de imágenes son lentos, difíciles de conectar y hay que recorrerlos a mano, clic a clic. Open Brand Exchange es el estándar abierto para que las marcas de moda, calzado, bolsos y maletas entreguen fotos de producto y datos de artículo a sus distribuidores: una alternativa abierta a las plataformas cerradas.",
+      "eyebrow": "Estándar abierto · Software libre",
+      "h1": "El estándar para marcas y distribuidores.",
+      "lead": "Una sola forma de compartir fotos de producto y datos de artículo: en un portal, como descarga o directamente en el software del distribuidor.",
       "ctaRetailer": "Soy distribuidor",
       "proofLabel": "En cifras",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "Mira cómo funciona",
       "videoNote": "En inglés, con subtítulos en inglés.",
       "flowEyebrow": "Cómo funciona",
-      "flowTitle": "Una sola fuente. Los distribuidores recogen lo que necesitan.",
-      "flowLead": "Tu contenido está en tu propio portal. Los compradores buscan y descargan archivos en el navegador; su software lee el mismo contenido a través de la API.",
-      "flowCaption": "Cómo fluye el contenido desde los sistemas de una marca, a través de su propio portal, hasta sus distribuidores.",
+      "flowTitle": "Cuando todos estructuran los datos de la misma manera, todos ganan.",
+      "flowLead": "Hoy, en casi todos los distribuidores hay alguien que copia hojas de cálculo y vuelve a teclear los datos de producto para cada marca, y cada nueva colección es una carrera. Con un único estándar ese trabajo desaparece: se implementa una vez y todos se benefician durante años. Es hora de trabajar mejor.",
+      "flowCaption": "Lo que aporta una marca, el estándar abierto en el centro y lo que reciben los distribuidores.",
       "flow": {
-        "systems": "Tus sistemas",
-        "systemsItems": [
+        "inTitle": "Entrada",
+        "inLead": "Lo que aporta una marca",
+        "inItems": [
+          "Datos de producto desde PIM, ERP o Excel",
+          "Fotos de producto"
+        ],
+        "stdTitle": "El estándar abierto",
+        "stdLead": "Una estructura fija para cada marca",
+        "stdItems": [
+          "Artículos, colores y tallas con EAN",
+          "Materiales, cuidado y medidas",
+          "Imágenes con derechos de uso"
+        ],
+        "outTitle": "Salida",
+        "outLead": "Lo que reciben los distribuidores",
+        "outItems": [
+          "Tienda online",
           "PIM",
-          "ERP",
-          "DAM",
-          "Carpeta de exportación"
-        ],
-        "upload": "Cómo entra el contenido",
-        "uploadItems": [
-          "Importación programada",
-          "Herramienta obx",
-          "GitHub Action",
-          "API de subida"
-        ],
-        "portal": "Tu portal",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Catálogo e imágenes",
-          "Acceso por distribuidor",
-          "Estadísticas de uso"
-        ],
-        "retailers": "Tus distribuidores",
-        "browser": "Compradores, en el navegador",
-        "browserItems": [
-          "Búsqueda y lista de EAN",
-          "Descargas en zip y CSV"
-        ],
-        "software": "Su software, a través de la API",
-        "softwareItems": [
-          "Tienda online y PIM",
-          "TPV y herramientas de contenido"
+          "TPV y ERP",
+          "Descargas en el navegador"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Versión 0.2, bajo CC-BY-4.0. Cualquiera puede implementarla, también con fines comerciales."
         },
         {
-          "h": "Sin dependencia",
+          "h": "Tus datos siguen siendo tuyos",
           "p": "Una marca puede exportar en cualquier momento todos sus datos e imágenes y pasarse a otro proveedor o alojarlo ella misma."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Software gratuito, o un proveedor que se encarga de todo",
             "Parte de tu propio archivo Excel o sistema",
-            "Todos tus distribuidores a la vez, sin enviar más archivos",
+            "Todos tus distribuidores a la vez",
             "Tú decides quién ve qué",
             "Ve quién descarga qué",
-            "Sin dependencia: exporta todo y cambia"
+            "Exporta todo, cuando quieras"
           ],
           "cta": "Ver para marcas"
         },
@@ -1120,7 +1109,7 @@
             "Gratis para distribuidores",
             "Todas las marcas en el mismo formato",
             "Pega EAN y obtén las imágenes correctas",
-            "Composición de fibras e instrucciones de cuidado listas para la tienda online",
+            "Materiales y cuidado listos para la tienda online",
             "Derechos de uso y fechas de embargo con cada imagen",
             "En el navegador, o directamente en tu software"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Portales de marca, B2B y de imágenes, DAM",
             "Software de ERP, PIM, tienda online y TPV",
-            "Una API abierta, sin cuota de licencia",
+            "Una API abierta, de uso gratuito",
             "Primero una copia completa, después solo los cambios",
             "Sello gratuito «Compatible con Open Brand Exchange»"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Compatible o socio",
       "heroChecks": [
-        "Gratis y abierto, sin cuota por distribuidor",
+        "Uso gratuito",
         "Todos tus distribuidores a la vez",
         "Parte de tu propio Excel o sistema",
         "Imágenes con derechos de uso incluidos",
-        "Sin dependencia: tus datos siguen siendo tuyos"
+        "Tus datos siguen siendo tuyos"
       ],
       "devRepos": [
         {

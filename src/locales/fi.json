@@ -10,7 +10,7 @@
     "copy": "Kopioi",
     "copied": "Kopioitu",
     "draft": "Versio 0.2 on julkaistu. Määrittely ja ohjelmisto ovat vapaasti käytettävissä.",
-    "footerAbout": "Maksuton ja avoin tapa muotibrändeille toimittaa tuotekuvat ja tuotetiedot jälleenmyyjilleen.",
+    "footerAbout": "Maksuton ja avoin tapa brändeille jakaa tuotekuvat ja tuotetiedot jälleenmyyjilleen.",
     "footerMore": "Lisää",
     "footerSource": "Lähdekoodi ja määrittely",
     "footerLicence": "Tämä sivusto: sisältö CC-BY-4.0, koodi MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: avoin standardi muodin tuotesisällölle",
-      "description": "Maksuton avoin standardi ja ohjelmisto muotibrändeille ja jälleenmyyjille: tuotekuvat, kuitukoostumus ja hoito-ohjeet yhdessä muodossa, portaalissa tai suoraan jälleenmyyjän ohjelmistossa."
+      "title": "Open Brand Exchange: standardi brändeille ja jälleenmyyjille",
+      "description": "Maksuton, avoin standardi ja ohjelmisto tuotekuvien ja tuotetietojen jakamiseen brändien ja jälleenmyyjien välillä: portaalissa, latauksena tai suoraan jälleenmyyjän ohjelmistoon."
     },
     "brands": {
       "title": "Brändeille",
@@ -880,7 +880,7 @@
       "preview": "Versio 0.2"
     },
     "footer": {
-      "tagline": "Avoin standardi tuotekuvien ja tuotetietojen toimittamiseen muotibrändeiltä niiden jälleenmyyjille.",
+      "tagline": "Avoin standardi tuotekuvien ja tuotetietojen jakamiseen brändien ja jälleenmyyjien välillä.",
       "product": "Tuote",
       "developers": "Kehittäjille",
       "project": "Projekti",
@@ -901,9 +901,9 @@
       "adminAutomation": "Automaattinen lataus brändin hallinnassa: valmiit ohjeet obx-työkalulle, cronille, GitHub Actionsille ja muille."
     },
     "home": {
-      "eyebrow": "Avoin standardi muodille · Maksuton ohjelmisto",
-      "h1": "Muodin tuotesisältö valmiina jokaiselle jälleenmyyjälle.",
-      "lead": "Monet kuvaportaalit ovat hitaita, vaikeita liittää muihin järjestelmiin ja ne on klikattava läpi käsin. Open Brand Exchange on avoin standardi sille, miten vaate-, kenkä-, laukku- ja matkalaukkubrändit toimittavat tuotekuvat ja tuotetiedot jälleenmyyjilleen: avoin vaihtoehto suljetuille alustoille.",
+      "eyebrow": "Avoin standardi · Maksuton ohjelmisto",
+      "h1": "Standardi brändeille ja jälleenmyyjille.",
+      "lead": "Yksi tapa jakaa tuotekuvat ja tuotetiedot: portaalissa, latauksena tai suoraan jälleenmyyjän ohjelmistoon.",
       "ctaRetailer": "Olen jälleenmyyjä",
       "proofLabel": "Lyhyesti",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "Katso, miten se toimii",
       "videoNote": "Englanniksi, englanninkielisin tekstityksin.",
       "flowEyebrow": "Näin se toimii",
-      "flowTitle": "Yksi lähde. Jälleenmyyjät hakevat, mitä tarvitsevat.",
-      "flowLead": "Sisältösi on omassa portaalissasi. Ostajat hakevat ja lataavat tiedostoja selaimessa, ja heidän ohjelmistonsa lukevat saman sisällön APIn kautta.",
-      "flowCaption": "Näin sisältö kulkee brändin järjestelmistä sen oman portaalin kautta jälleenmyyjille.",
+      "flowTitle": "Kun kaikki jäsentävät tiedot samalla tavalla, kaikki voittavat.",
+      "flowLead": "Nykyään lähes jokaisella jälleenmyyjällä joku kopioi taulukoita ja kirjoittaa tuotetiedot uudelleen jokaiselle brändille, ja jokainen uusi mallisto on kiirettä. Yhdellä standardilla tämä työ poistuu: se otetaan käyttöön kerran, ja kaikki hyötyvät siitä vuosien ajan. Aika tehdä parempaa työtä.",
+      "flowCaption": "Mitä brändi tuo mukanaan, avoin standardi keskellä ja mitä jälleenmyyjät saavat.",
       "flow": {
-        "systems": "Järjestelmäsi",
-        "systemsItems": [
+        "inTitle": "Sisään",
+        "inLead": "Mitä brändi tuo mukanaan",
+        "inItems": [
+          "Tuotetiedot PIM-, ERP- tai Excel-järjestelmästä",
+          "Tuotekuvat"
+        ],
+        "stdTitle": "Avoin standardi",
+        "stdLead": "Yksi kiinteä rakenne jokaiselle brändille",
+        "stdItems": [
+          "Tuotteet, värit ja koot EAN-koodeineen",
+          "Materiaalit, hoito ja mitat",
+          "Kuvat käyttöoikeuksineen"
+        ],
+        "outTitle": "Ulos",
+        "outLead": "Mitä jälleenmyyjät saavat",
+        "outItems": [
+          "Verkkokauppa",
           "PIM",
-          "ERP",
-          "DAM",
-          "Vientikansio"
-        ],
-        "upload": "Sisällön tuonti",
-        "uploadItems": [
-          "Ajastettu tuonti",
-          "obx-työkalu",
-          "GitHub Action",
-          "Lataus-API"
-        ],
-        "portal": "Portaalisi",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Luettelo ja kuvat",
-          "Pääsy jälleenmyyjäkohtaisesti",
-          "Käyttötilastot"
-        ],
-        "retailers": "Jälleenmyyjäsi",
-        "browser": "Ostajat selaimessa",
-        "browserItems": [
-          "Haku ja EAN-luettelo",
-          "Lataukset zip- ja CSV-muodossa"
-        ],
-        "software": "Heidän ohjelmistonsa APIn kautta",
-        "softwareItems": [
-          "Verkkokauppa ja PIM",
-          "Kassa ja sisältötyökalut"
+          "Kassa ja ERP",
+          "Lataukset selaimessa"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Versio 0.2, CC-BY-4.0-lisenssillä. Kuka tahansa saa toteuttaa sen, myös kaupallisesti."
         },
         {
-          "h": "Ei sitoutumista",
+          "h": "Tietosi pysyvät sinun",
           "p": "Brändi voi milloin tahansa viedä kaikki tietonsa ja kuvansa ja siirtyä toiselle palveluntarjoajalle tai ylläpitää portaalia itse."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Maksuton ohjelmisto tai palveluntarjoaja, joka hoitaa kaiken",
             "Aloita omasta Excel-tiedostostasi tai järjestelmästäsi",
-            "Kaikki jälleenmyyjäsi kerralla, ei enää tiedostojen lähettelyä",
+            "Kaikki jälleenmyyjäsi kerralla",
             "Sinä päätät, kuka näkee mitä",
             "Näet, kuka lataa mitä",
-            "Ei sitoutumista: vie kaikki ja lähde"
+            "Vie kaikki, milloin haluat"
           ],
           "cta": "Lisää brändeille"
         },
@@ -1120,7 +1109,7 @@
             "Maksuton jälleenmyyjille",
             "Jokainen brändi samassa muodossa",
             "Liitä EAN-koodit, saat oikeat kuvat",
-            "Kuitukoostumus ja hoito-ohjeet valmiina verkkokauppaan",
+            "Materiaalit ja hoito valmiina verkkokauppaan",
             "Käyttöoikeudet ja julkaisuvapautuksen päivät jokaisen kuvan mukana",
             "Selaimessa tai suoraan ohjelmistoosi"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Brändiportaalit, B2B- ja kuvaportaalit, DAM-järjestelmät",
             "ERP-, PIM-, verkkokauppa- ja kassaohjelmistot",
-            "Yksi avoin API, ei lisenssimaksua",
+            "Yksi avoin API, maksuton käyttää",
             "Ensin täydellinen kopio, sitten vain muutokset",
             "Maksuton merkintä ”Yhteensopiva Open Brand Exchangen kanssa”"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Yhteensopiva vai kumppani",
       "heroChecks": [
-        "Maksuton ja avoin, ei maksua jälleenmyyjää kohden",
+        "Maksuton käyttää",
         "Kaikki jälleenmyyjäsi kerralla",
         "Lähtee omasta Excelistäsi tai järjestelmästäsi",
         "Kuvat käyttöoikeuksineen",
-        "Ei sitoutumista: tietosi pysyvät sinun"
+        "Tietosi pysyvät sinun"
       ],
       "devRepos": [
         {

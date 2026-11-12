@@ -10,7 +10,7 @@
     "copy": "Kopieren",
     "copied": "Kopiert",
     "draft": "Version 0.2 ist erschienen. Spezifikation und Software sind frei nutzbar.",
-    "footerAbout": "Ein kostenloser, offener Weg für Modemarken, Produktbilder und Artikeldaten an ihre Händler zu liefern.",
+    "footerAbout": "Ein kostenloser, offener Weg für Marken, Produktbilder und Artikeldaten mit ihren Händlern zu teilen.",
     "footerMore": "Mehr",
     "footerSource": "Quellcode und Spezifikation",
     "footerLicence": "Diese Website: Inhalte CC-BY-4.0, Code MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: der offene Standard für Produktinhalte in der Mode",
-      "description": "Ein kostenloser, offener Standard mit Software für Modemarken und Händler: Produktfotos, Faserzusammensetzung und Pflegehinweise in einem Format, in einem Portal oder direkt in der Software des Händlers."
+      "title": "Open Brand Exchange: der Standard für Marken und Händler",
+      "description": "Ein kostenloser, offener Standard und Software zum Teilen von Produktfotos und Artikeldaten zwischen Marken und Händlern: in einem Portal, als Download oder direkt in die Software des Händlers."
     },
     "brands": {
       "title": "Für Marken",
@@ -880,7 +880,7 @@
       "preview": "Version 0.2"
     },
     "footer": {
-      "tagline": "Der offene Standard für die Lieferung von Produktbildern und Artikeldaten von Modemarken an ihre Händler.",
+      "tagline": "Der offene Standard zum Teilen von Produktbildern und Artikeldaten zwischen Marken und Händlern.",
       "product": "Produkt",
       "developers": "Entwickler",
       "project": "Projekt",
@@ -901,9 +901,9 @@
       "adminAutomation": "Automatischer Upload in der Verwaltung der Marke: fertige Rezepte für das obx-Tool, cron, GitHub Actions und mehr."
     },
     "home": {
-      "eyebrow": "Offener Standard für die Mode · Freie Software",
-      "h1": "Ihre Modeinhalte, bereit für jeden Händler.",
-      "lead": "Viele Bildportale sind langsam, kaum anzubinden und müssen von Hand durchgeklickt werden. Open Brand Exchange ist der offene Standard dafür, wie Marken für Mode, Schuhe, Taschen und Koffer Produktfotos und Artikeldaten an ihre Händler liefern: eine offene Alternative zu geschlossenen Plattformen.",
+      "eyebrow": "Offener Standard · Freie Software",
+      "h1": "Der Standard für Marken und Händler.",
+      "lead": "Ein Weg, Produktfotos und Artikeldaten zu teilen: in einem Portal, als Download oder direkt in die Software des Händlers.",
       "ctaRetailer": "Ich bin Händler",
       "proofLabel": "Auf einen Blick",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "Im Video: so funktioniert es",
       "videoNote": "Auf Englisch, mit englischen Untertiteln.",
       "flowEyebrow": "So funktioniert es",
-      "flowTitle": "Eine Quelle. Händler holen sich, was sie brauchen.",
-      "flowLead": "Ihre Inhalte liegen in Ihrem eigenen Portal. Einkäufer suchen dort und laden Dateien im Browser herunter; ihre Software liest dieselben Inhalte über die API.",
-      "flowCaption": "Wie Inhalte aus den Systemen einer Marke über ihr eigenes Portal zu ihren Händlern gelangen.",
+      "flowTitle": "Wenn alle Daten auf dieselbe Weise strukturieren, gewinnen alle.",
+      "flowLead": "Heute sitzt bei fast jedem Händler jemand und kopiert Excel-Dateien und tippt Produktdaten für jede Marke neu ab, und jede neue Kollektion ist ein Wettlauf. Mit einem Standard fällt diese Arbeit weg: einmal umsetzen, und alle haben jahrelang etwas davon. Zeit für bessere Arbeit.",
+      "flowCaption": "Was eine Marke einspielt, der offene Standard in der Mitte und was Händler daraus bekommen.",
       "flow": {
-        "systems": "Ihre Systeme",
-        "systemsItems": [
+        "inTitle": "Rein",
+        "inLead": "Was eine Marke einspielt",
+        "inItems": [
+          "Produktdaten aus PIM, ERP oder Excel",
+          "Produktfotos"
+        ],
+        "stdTitle": "Der offene Standard",
+        "stdLead": "Eine feste Struktur für jede Marke",
+        "stdItems": [
+          "Artikel, Farben und Größen mit EAN",
+          "Materialien, Pflege und Maße",
+          "Bilder mit Nutzungsrechten"
+        ],
+        "outTitle": "Raus",
+        "outLead": "Was Händler bekommen",
+        "outItems": [
+          "Webshop",
           "PIM",
-          "ERP",
-          "DAM",
-          "Exportordner"
-        ],
-        "upload": "Inhalte einspielen",
-        "uploadItems": [
-          "Geplanter Import",
-          "obx-Tool",
-          "GitHub Action",
-          "Upload-API"
-        ],
-        "portal": "Ihr Portal",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Katalog und Bilder",
-          "Zugang pro Händler",
-          "Nutzungsstatistiken"
-        ],
-        "retailers": "Ihre Händler",
-        "browser": "Einkäufer, im Browser",
-        "browserItems": [
-          "Suche und EAN-Liste",
-          "ZIP- und CSV-Downloads"
-        ],
-        "software": "Deren Software, über die API",
-        "softwareItems": [
-          "Webshop und PIM",
-          "Kassensystem und Content-Tools"
+          "Kassensystem und ERP",
+          "Downloads im Browser"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Version 0.2, unter CC-BY-4.0. Jeder darf sie implementieren, auch kommerziell."
         },
         {
-          "h": "Kein Lock-in",
+          "h": "Ihre Daten bleiben Ihre",
           "p": "Eine Marke kann jederzeit alle ihre Daten und Bilder exportieren und zu einem anderen Anbieter wechseln oder selbst hosten."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Kostenlose Software oder ein Anbieter, der alles übernimmt",
             "Starten Sie mit Ihrer eigenen Excel-Datei oder Ihrem System",
-            "Alle Händler auf einmal, kein Dateiversand mehr",
+            "Alle Ihre Händler auf einmal",
             "Sie bestimmen, wer was sieht",
             "Sehen Sie, wer was herunterlädt",
-            "Kein Lock-in: alles exportieren und wechseln"
+            "Alles exportieren, jederzeit"
           ],
           "cta": "Mehr für Marken"
         },
@@ -1120,7 +1109,7 @@
             "Kostenlos für Händler",
             "Jede Marke im selben Format",
             "EANs einfügen, die richtigen Bilder erhalten",
-            "Faserzusammensetzung und Pflegehinweise bereit für den Webshop",
+            "Materialien und Pflege bereit für den Webshop",
             "Nutzungsrechte und Sperrfristen zu jedem Bild",
             "Im Browser oder direkt in Ihrer Software"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Markenportale, B2B- und Bildportale, DAMs",
             "ERP-, PIM-, Webshop- und Kassensoftware",
-            "Eine offene API, keine Lizenzgebühr",
+            "Eine offene API, kostenlos nutzbar",
             "Zuerst eine vollständige Kopie, danach nur die Änderungen",
             "Kostenloses Label „Kompatibel mit Open Brand Exchange“"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Kompatibel oder Partner",
       "heroChecks": [
-        "Kostenlos und offen, keine Gebühr pro Händler",
+        "Kostenlos nutzbar",
         "Alle Ihre Händler auf einmal",
         "Startet mit Ihrer eigenen Excel-Datei oder Ihrem System",
         "Bilder mit Nutzungsrechten",
-        "Kein Lock-in: Ihre Daten bleiben Ihre"
+        "Ihre Daten bleiben Ihre"
       ],
       "devRepos": [
         {

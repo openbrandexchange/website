@@ -1,8 +1,9 @@
 ---
-// The architecture at a glance: brand systems → automatic upload → the brand's portal →
-// retailers in the browser and their software through the API. Real HTML lists (readable
-// without the picture, and they wrap in every language); SVG only for the connectors.
+// How it works, in three blocks: what a brand puts in → the open standard (framed) → what
+// retailers get out. Real HTML lists, readable without the picture and wrapping in every language.
+// The technical detail (upload tools, the portal itself) lives on the automation and developer pages.
 import Icon from './Icon.astro';
+import Logo from './Logo.astro';
 import { messages, type Lang } from '../i18n';
 
 interface Props {
@@ -11,68 +12,26 @@ interface Props {
 const { lang } = Astro.props;
 const h = messages[lang].site.home;
 const f = h.flow;
-const systemIcons = ['database', 'layers', 'image', 'folder'] as const;
-const uploadIcons = ['clock', 'terminal', 'branch', 'code'] as const;
-const hubIcons = ['image', 'lock', 'chart'] as const;
+const inIcons = ['database', 'image'] as const;
+const outIcons = ['browser', 'layers', 'barcode', 'download'] as const;
 ---
 
 <figure class="flow" aria-labelledby="flow-caption">
   <ol class="flow-cols">
     <li class="flow-col">
-      <h3>{f.systems}</h3>
-      <ul class="flow-list">
-        {
-          f.systemsItems.map((item, i) => (
-            <li class="flow-node">
-              <Icon name={systemIcons[i]} />
-              {item}
-            </li>
-          ))
-        }
-      </ul>
-      <svg class="flow-link" viewBox="0 0 48 2" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="1" x2="48" y2="1"></line></svg>
+      <h3>{f.inTitle}</h3>
+      <p class="flow-lead">{f.inLead}</p>
+      <ul>{f.inItems.map((item, i) => <li><Icon name={inIcons[i] ?? 'check'} />{item}</li>)}</ul>
+    </li>
+    <li class="flow-col flow-std">
+      <h3><Logo size={22} /> {f.stdTitle}</h3>
+      <p class="flow-lead">{f.stdLead}</p>
+      <ul>{f.stdItems.map((item) => <li><Icon name="check" />{item}</li>)}</ul>
     </li>
     <li class="flow-col">
-      <h3>{f.upload}</h3>
-      <ul class="flow-list">
-        {
-          f.uploadItems.map((item, i) => (
-            <li class="flow-node">
-              <Icon name={uploadIcons[i]} />
-              {item}
-            </li>
-          ))
-        }
-      </ul>
-      <svg class="flow-link" viewBox="0 0 48 2" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="1" x2="48" y2="1"></line></svg>
-    </li>
-    <li class="flow-col">
-      <div class="flow-hub">
-        <h3>{f.portal}</h3>
-        <span class="domain">{f.portalDomain}</span>
-        <ul>
-          {
-            f.portalItems.map((item, i) => (
-              <li>
-                <Icon name={hubIcons[i]} />
-                {item}
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <svg class="flow-link" viewBox="0 0 48 2" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="1" x2="48" y2="1"></line></svg>
-    </li>
-    <li class="flow-col">
-      <h3>{f.retailers}</h3>
-      <div class="flow-group">
-        <h4><Icon name="browser" />{f.browser}</h4>
-        <ul>{f.browserItems.map((item) => <li>{item}</li>)}</ul>
-      </div>
-      <div class="flow-group">
-        <h4><Icon name="plug" />{f.software}</h4>
-        <ul>{f.softwareItems.map((item) => <li>{item}</li>)}</ul>
-      </div>
+      <h3>{f.outTitle}</h3>
+      <p class="flow-lead">{f.outLead}</p>
+      <ul>{f.outItems.map((item, i) => <li><Icon name={outIcons[i] ?? 'check'} />{item}</li>)}</ul>
     </li>
   </ol>
   <figcaption id="flow-caption" class="sr-only">{h.flowCaption}</figcaption>

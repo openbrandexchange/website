@@ -10,7 +10,7 @@
     "copy": "Copy",
     "copied": "Copied",
     "draft": "Version 0.2 is out. The specification and the software are free to use.",
-    "footerAbout": "A free, open way for fashion brands to deliver product images and article data to their retailers.",
+    "footerAbout": "A free, open way for brands to share product images and article data with their retailers.",
     "footerMore": "More",
     "footerSource": "Source code and specification",
     "footerLicence": "This website: content CC-BY-4.0, code MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: the open standard for fashion product content",
-      "description": "A free, open standard and software for fashion brands and retailers: product photos, fibre composition and care labels in one format, in a portal or straight into the retailer's software."
+      "title": "Open Brand Exchange: the standard for brands and retailers",
+      "description": "A free, open standard and software for sharing product photos and article data between brands and retailers: in a portal, as a download or straight into the retailer's software."
     },
     "brands": {
       "title": "For brands",
@@ -880,7 +880,7 @@
       "preview": "Version 0.2"
     },
     "footer": {
-      "tagline": "The open standard for delivering product images and article data from fashion brands to their retailers.",
+      "tagline": "The open standard for sharing product images and article data between brands and retailers.",
       "product": "Product",
       "developers": "Developers",
       "project": "Project",
@@ -901,9 +901,9 @@
       "adminAutomation": "Automatic upload in the brand admin: ready-made recipes for the obx tool, cron, GitHub Actions and more."
     },
     "home": {
-      "eyebrow": "Open standard for fashion · Free software",
-      "h1": "Fashion product content, ready for every retailer.",
-      "lead": "Many image portals are slow, hard to connect to and have to be clicked through by hand. Open Brand Exchange is the open standard for how fashion, shoe, bag and luggage brands deliver product photos and article data to their retailers: an open alternative to closed platforms.",
+      "eyebrow": "Open standard · Free software",
+      "h1": "The standard for brands and retailers.",
+      "lead": "One way to share product photos and article data: in a portal, as a download, or straight into the retailer's software.",
       "ctaRetailer": "I am a retailer",
       "proofLabel": "At a glance",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "See how it works",
       "videoNote": "With captions, so it also works without sound.",
       "flowEyebrow": "How it works",
-      "flowTitle": "One source. Retailers fetch what they need.",
-      "flowLead": "Your content sits in your own portal. Buyers search it and download files in the browser; their software reads the same content through the API.",
-      "flowCaption": "How content flows from a brand's systems through its own portal to its retailers.",
+      "flowTitle": "When everyone structures data the same way, everyone wins.",
+      "flowLead": "Today, someone at almost every retailer copies spreadsheets and retypes product data for each brand, and every new collection is a rush. With one standard that work disappears: implement it once, and everyone benefits for years. Time for better work.",
+      "flowCaption": "What a brand puts in, the open standard in the middle, and what retailers get out.",
       "flow": {
-        "systems": "Your systems",
-        "systemsItems": [
+        "inTitle": "In",
+        "inLead": "What a brand puts in",
+        "inItems": [
+          "Product data from PIM, ERP or Excel",
+          "Product photos"
+        ],
+        "stdTitle": "The open standard",
+        "stdLead": "One fixed structure for every brand",
+        "stdItems": [
+          "Articles, colours and sizes with EAN",
+          "Materials, care and measurements",
+          "Images with usage rights"
+        ],
+        "outTitle": "Out",
+        "outLead": "What retailers get",
+        "outItems": [
+          "Webshop",
           "PIM",
-          "ERP",
-          "DAM",
-          "Export folder"
-        ],
-        "upload": "Getting content in",
-        "uploadItems": [
-          "Scheduled import",
-          "obx tool",
-          "GitHub Action",
-          "Upload API"
-        ],
-        "portal": "Your portal",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Catalog and images",
-          "Access per retailer",
-          "Usage statistics"
-        ],
-        "retailers": "Your retailers",
-        "browser": "Buyers, in the browser",
-        "browserItems": [
-          "Search and EAN list",
-          "Zip and CSV downloads"
-        ],
-        "software": "Their software, through the API",
-        "softwareItems": [
-          "Webshop and PIM",
-          "POS and content tools"
+          "POS and ERP",
+          "Downloads in the browser"
         ]
       },
       "pillars": [
@@ -1061,8 +1050,8 @@
           "p": "Version 0.2, under CC-BY-4.0. Anyone may implement it, commercially too."
         },
         {
-          "h": "No lock-in",
-          "p": "A brand can export all its data and images at any time, and move to another provider or host it itself."
+          "h": "Your data stays yours",
+          "p": "A brand can export all its data and images at any time, move to another provider or host it itself."
         },
         {
           "h": "Open-source licences",
@@ -1106,10 +1095,10 @@
           "items": [
             "Free software, or a provider who does it all",
             "Start from your own Excel file or system",
-            "All your retailers at once, no more sending files",
+            "All your retailers at once",
             "You decide who sees what",
             "See who downloads what",
-            "No lock-in: export everything and leave"
+            "Export everything, any time"
           ],
           "cta": "Explore for brands"
         },
@@ -1120,7 +1109,7 @@
             "Free for retailers",
             "Every brand in the same format",
             "Paste EANs, get the right images",
-            "Fibre composition and care ready for the webshop",
+            "Materials and care ready for the webshop",
             "Usage rights and embargo dates with every image",
             "In the browser, or straight into your software"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Brand portals, B2B and image portals, DAMs",
             "ERP, PIM, webshop and POS software",
-            "One open API, no licence fee",
+            "One open API, free to use",
             "A full copy first, then only the changes",
             "Free label “Compatible with Open Brand Exchange”"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Compatible or partner",
       "heroChecks": [
-        "Free and open, no fee per retailer",
+        "Free to use",
         "All your retailers at once",
-        "Starts from your own Excel or system",
-        "Images with usage rights included",
-        "No lock-in: your data stays yours"
+        "Start from your own Excel or system",
+        "Images with usage rights",
+        "Your data stays yours"
       ],
       "devRepos": [
         {

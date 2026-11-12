@@ -10,7 +10,7 @@
     "copy": "Kopiraj",
     "copied": "Kopirano",
     "draft": "Verzija 0.2 je objavljena. Specifikacija i softver slobodni su za korištenje.",
-    "footerAbout": "Besplatan i otvoren način na koji modne marke svojim trgovcima isporučuju fotografije proizvoda i podatke o artiklima.",
+    "footerAbout": "Besplatan i otvoren način na koji marke dijele fotografije proizvoda i podatke o artiklima sa svojim trgovcima.",
     "footerMore": "Više",
     "footerSource": "Izvorni kod i specifikacija",
     "footerLicence": "Ova web-stranica: sadržaj CC-BY-4.0, kod MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: otvoreni standard za sadržaj o modnim proizvodima",
-      "description": "Besplatan otvoreni standard i softver za modne marke i trgovce: fotografije proizvoda, sastav vlakana i upute za održavanje u jednom formatu, na portalu ili izravno u softveru trgovca."
+      "title": "Open Brand Exchange: standard za marke i trgovce",
+      "description": "Besplatan, otvoren standard i softver za razmjenu fotografija proizvoda i podataka o artiklima između marki i trgovaca: u portalu, kao preuzimanje ili izravno u softver trgovca."
     },
     "brands": {
       "title": "Za robne marke",
@@ -880,7 +880,7 @@
       "preview": "Verzija 0.2"
     },
     "footer": {
-      "tagline": "Otvoreni standard za isporuku fotografija proizvoda i podataka o artiklima od modnih marki njihovim trgovcima.",
+      "tagline": "Otvoreni standard za razmjenu fotografija proizvoda i podataka o artiklima između marki i trgovaca.",
       "product": "Proizvod",
       "developers": "Za programere",
       "project": "Projekt",
@@ -901,9 +901,9 @@
       "adminAutomation": "Automatsko učitavanje u administraciji marke: gotovi recepti za alat obx, cron, GitHub Actions i više."
     },
     "home": {
-      "eyebrow": "Otvoreni standard za modu · Besplatan softver",
-      "h1": "Sadržaj o modnim proizvodima, spreman za svakog trgovca.",
-      "lead": "Mnogi portali sa slikama su spori, teško se povezuju i treba ih ručno proklikati. Open Brand Exchange je otvoreni standard za to kako marke odjeće, obuće, torbi i prtljage isporučuju fotografije proizvoda i podatke o artiklima svojim trgovcima: otvorena alternativa zatvorenim platformama.",
+      "eyebrow": "Otvoreni standard · Besplatan softver",
+      "h1": "Standard za marke i trgovce.",
+      "lead": "Jedan način razmjene fotografija proizvoda i podataka o artiklima: u portalu, kao preuzimanje ili izravno u softver trgovca.",
       "ctaRetailer": "Ja sam trgovac",
       "proofLabel": "Ukratko",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "Pogledajte kako radi",
       "videoNote": "Na engleskom, s engleskim titlovima.",
       "flowEyebrow": "Kako funkcionira",
-      "flowTitle": "Jedan izvor. Trgovci preuzimaju ono što im treba.",
-      "flowLead": "Vaš sadržaj nalazi se na vašem vlastitom portalu. Nabavljači pretražuju i preuzimaju datoteke u pregledniku, a njihov softver čita isti sadržaj putem API-ja.",
-      "flowCaption": "Kako sadržaj teče iz sustava marke preko njezina portala do trgovaca.",
+      "flowTitle": "Kad svi strukturiraju podatke na isti način, svi pobjeđuju.",
+      "flowLead": "Danas kod gotovo svakog trgovca netko kopira tablice i iznova upisuje podatke o proizvodima za svaku marku, a svaka nova kolekcija je trka. S jednim standardom taj posao nestaje: uvedete ga jednom, a svi od njega imaju koristi godinama. Vrijeme je za bolji rad.",
+      "flowCaption": "Što marka unosi, otvoreni standard u sredini i što trgovci dobivaju.",
       "flow": {
-        "systems": "Vaši sustavi",
-        "systemsItems": [
+        "inTitle": "Ulaz",
+        "inLead": "Što marka unosi",
+        "inItems": [
+          "Podaci o proizvodima iz PIM-a, ERP-a ili Excela",
+          "Fotografije proizvoda"
+        ],
+        "stdTitle": "Otvoreni standard",
+        "stdLead": "Jedna fiksna struktura za svaku marku",
+        "stdItems": [
+          "Artikli, boje i veličine s EAN-om",
+          "Materijali, održavanje i mjere",
+          "Slike s pravima korištenja"
+        ],
+        "outTitle": "Izlaz",
+        "outLead": "Što trgovci dobivaju",
+        "outItems": [
+          "Web-trgovina",
           "PIM",
-          "ERP",
-          "DAM",
-          "Mapa za izvoz"
-        ],
-        "upload": "Unos sadržaja",
-        "uploadItems": [
-          "Zakazani uvoz",
-          "Alat obx",
-          "GitHub Action",
-          "API za učitavanje"
-        ],
-        "portal": "Vaš portal",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Katalog i fotografije",
-          "Pristup po trgovcu",
-          "Statistika korištenja"
-        ],
-        "retailers": "Vaši trgovci",
-        "browser": "Nabavljači, u pregledniku",
-        "browserItems": [
-          "Pretraživanje i popis EAN-ova",
-          "Preuzimanja ZIP i CSV"
-        ],
-        "software": "Njihov softver, putem API-ja",
-        "softwareItems": [
-          "Web-trgovina i PIM",
-          "POS i alati za sadržaj"
+          "POS i ERP",
+          "Preuzimanja u pregledniku"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Verzija 0.2, pod licencom CC-BY-4.0. Svatko je smije implementirati, i komercijalno."
         },
         {
-          "h": "Bez vezivanja",
+          "h": "Vaši podaci ostaju vaši",
           "p": "Marka u svakom trenutku može izvesti sve svoje podatke i fotografije te prijeći drugom pružatelju usluge ili portal hostati sama."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Besplatan softver ili pružatelj usluge koji sve odradi",
             "Krenite od vlastite Excel datoteke ili sustava",
-            "Svi trgovci odjednom, bez slanja datoteka",
+            "Svi vaši trgovci odjednom",
             "Vi odlučujete tko što vidi",
             "Vidite tko što preuzima",
-            "Bez vezivanja: izvezite sve i odite"
+            "Izvezite sve, kad god želite"
           ],
           "cta": "Više za marke"
         },
@@ -1120,7 +1109,7 @@
             "Besplatno za trgovce",
             "Svaka marka u istom formatu",
             "Zalijepite EAN-ove, dobijte prave fotografije",
-            "Sastav vlakana i upute za održavanje spremni za web-trgovinu",
+            "Materijali i održavanje spremni za web-trgovinu",
             "Prava korištenja i datumi embarga uz svaku fotografiju",
             "U pregledniku ili izravno u vašem softveru"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Portali marki, B2B portali i portali fotografija, DAM sustavi",
             "ERP, PIM, softver za web-trgovinu i blagajnu",
-            "Jedan otvoreni API, bez naknade za licencu",
+            "Jedan otvoreni API, besplatan za korištenje",
             "Najprije potpuna kopija, zatim samo promjene",
             "Besplatna oznaka „Kompatibilno s Open Brand Exchangeom”"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Kompatibilno ili partner",
       "heroChecks": [
-        "Besplatno i otvoreno, bez naknade po trgovcu",
+        "Besplatno za korištenje",
         "Svi vaši trgovci odjednom",
         "Polazi od vašeg Excela ili sustava",
         "Fotografije s pravima korištenja",
-        "Bez vezivanja: vaši podaci ostaju vaši"
+        "Vaši podaci ostaju vaši"
       ],
       "devRepos": [
         {

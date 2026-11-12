@@ -10,7 +10,7 @@
     "copy": "Kopiera",
     "copied": "Kopierat",
     "draft": "Version 0.2 är släppt. Specifikationen och programvaran är fria att använda.",
-    "footerAbout": "Ett kostnadsfritt, öppet sätt för modevarumärken att leverera produktbilder och artikeldata till sina återförsäljare.",
+    "footerAbout": "Ett kostnadsfritt, öppet sätt för varumärken att dela produktbilder och artikeldata med sina återförsäljare.",
     "footerMore": "Mer",
     "footerSource": "Källkod och specifikation",
     "footerLicence": "Den här webbplatsen: innehåll CC-BY-4.0, kod MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: den öppna standarden för produktinnehåll inom mode",
-      "description": "En kostnadsfri, öppen standard och programvara för modevarumärken och återförsäljare: produktbilder, fibersammansättning och tvättråd i ett format, i en portal eller direkt in i återförsäljarens system."
+      "title": "Open Brand Exchange: standarden för varumärken och återförsäljare",
+      "description": "En gratis, öppen standard och programvara för att dela produktbilder och artikeldata mellan varumärken och återförsäljare: i en portal, som nedladdning eller direkt i återförsäljarens programvara."
     },
     "brands": {
       "title": "För varumärken",
@@ -880,7 +880,7 @@
       "preview": "Version 0.2"
     },
     "footer": {
-      "tagline": "Den öppna standarden för att leverera produktbilder och artikeldata från modevarumärken till deras återförsäljare.",
+      "tagline": "Den öppna standarden för att dela produktbilder och artikeldata mellan varumärken och återförsäljare.",
       "product": "Produkt",
       "developers": "Utvecklare",
       "project": "Projekt",
@@ -901,9 +901,9 @@
       "adminAutomation": "Automatisk uppladdning i varumärkets administration: färdiga recept för verktyget obx, cron, GitHub Actions med mera."
     },
     "home": {
-      "eyebrow": "Öppen standard för mode · Gratis programvara",
-      "h1": "Produktinnehåll för mode, klart för alla återförsäljare.",
-      "lead": "Många bildportaler är långsamma, svåra att koppla upp mot och måste klickas igenom för hand. Open Brand Exchange är den öppna standarden för hur varumärken inom kläder, skor, väskor och resväskor levererar produktbilder och artikeldata till sina återförsäljare: ett öppet alternativ till slutna plattformar.",
+      "eyebrow": "Öppen standard · Gratis programvara",
+      "h1": "Standarden för varumärken och återförsäljare.",
+      "lead": "Ett sätt att dela produktbilder och artikeldata: i en portal, som nedladdning eller direkt i återförsäljarens programvara.",
       "ctaRetailer": "Jag är återförsäljare",
       "proofLabel": "I korthet",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "Se hur det fungerar",
       "videoNote": "På engelska, med engelsk text.",
       "flowEyebrow": "Så fungerar det",
-      "flowTitle": "En källa. Återförsäljarna hämtar det de behöver.",
-      "flowLead": "Ditt innehåll finns i din egen portal. Inköpare söker och laddar ner filer i webbläsaren, och deras system läser samma innehåll via API:et.",
-      "flowCaption": "Så flödar innehållet från ett varumärkes system via dess egen portal till återförsäljarna.",
+      "flowTitle": "När alla strukturerar data på samma sätt vinner alla.",
+      "flowLead": "Idag sitter det hos nästan varje återförsäljare någon som kopierar kalkylblad och skriver in produktdata på nytt för varje varumärke, och varje ny kollektion är ett race. Med en standard försvinner det arbetet: inför den en gång, så har alla glädje av den i åratal. Dags för bättre arbete.",
+      "flowCaption": "Det ett varumärke lägger in, den öppna standarden i mitten och det återförsäljarna får ut.",
       "flow": {
-        "systems": "Dina system",
-        "systemsItems": [
+        "inTitle": "In",
+        "inLead": "Det ett varumärke lägger in",
+        "inItems": [
+          "Produktdata från PIM, ERP eller Excel",
+          "Produktbilder"
+        ],
+        "stdTitle": "Den öppna standarden",
+        "stdLead": "En fast struktur för varje varumärke",
+        "stdItems": [
+          "Artiklar, färger och storlekar med EAN",
+          "Material, skötsel och mått",
+          "Bilder med användningsrättigheter"
+        ],
+        "outTitle": "Ut",
+        "outLead": "Det återförsäljarna får",
+        "outItems": [
+          "E-handel",
           "PIM",
-          "ERP",
-          "DAM",
-          "Exportmapp"
-        ],
-        "upload": "Få in innehållet",
-        "uploadItems": [
-          "Schemalagd import",
-          "Verktyget obx",
-          "GitHub Action",
-          "Uppladdnings-API"
-        ],
-        "portal": "Din portal",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Katalog och bilder",
-          "Åtkomst per återförsäljare",
-          "Användningsstatistik"
-        ],
-        "retailers": "Dina återförsäljare",
-        "browser": "Inköpare, i webbläsaren",
-        "browserItems": [
-          "Sökning och EAN-lista",
-          "Nedladdning som zip och CSV"
-        ],
-        "software": "Deras system, via API:et",
-        "softwareItems": [
-          "E-handel och PIM",
-          "Kassasystem och innehållsverktyg"
+          "Kassasystem och ERP",
+          "Nedladdningar i webbläsaren"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Version 0.2, under CC-BY-4.0. Alla får implementera den, även kommersiellt."
         },
         {
-          "h": "Ingen inlåsning",
+          "h": "Din data förblir din",
           "p": "Ett varumärke kan när som helst exportera all sin data och alla bilder, och byta till en annan leverantör eller drifta det själv."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Gratis programvara, eller en leverantör som sköter allt",
             "Utgå från din egen Excelfil eller ditt system",
-            "Alla återförsäljare på en gång, inga fler filutskick",
+            "Alla dina återförsäljare på en gång",
             "Du bestämmer vem som ser vad",
             "Se vem som laddar ner vad",
-            "Ingen inlåsning: exportera allt och gå vidare"
+            "Exportera allt, när som helst"
           ],
           "cta": "Läs mer för varumärken"
         },
@@ -1120,7 +1109,7 @@
             "Gratis för återförsäljare",
             "Alla varumärken i samma format",
             "Klistra in EAN, få rätt bilder",
-            "Fibersammansättning och tvättråd klara för webbutiken",
+            "Material och skötsel klara för webbutiken",
             "Användningsrättigheter och embargodatum vid varje bild",
             "I webbläsaren, eller direkt in i ditt system"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Varumärkesportaler, B2B- och bildportaler, DAM-system",
             "ERP-, PIM-, webbutiks- och kassaprogramvara",
-            "Ett öppet API, ingen licensavgift",
+            "Ett öppet API, gratis att använda",
             "Först en fullständig kopia, sedan bara ändringarna",
             "Gratis märkning ”Kompatibel med Open Brand Exchange”"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Kompatibel eller partner",
       "heroChecks": [
-        "Gratis och öppet, ingen avgift per återförsäljare",
+        "Gratis att använda",
         "Alla dina återförsäljare på en gång",
         "Utgår från din egen Excel eller ditt system",
         "Bilder med användningsrättigheter",
-        "Ingen inlåsning: din data förblir din"
+        "Din data förblir din"
       ],
       "devRepos": [
         {

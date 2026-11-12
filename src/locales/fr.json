@@ -10,7 +10,7 @@
     "copy": "Copier",
     "copied": "Copié",
     "draft": "La version 0.2 est publiée. La spécification et le logiciel sont libres d’utilisation.",
-    "footerAbout": "Une manière ouverte et gratuite pour les marques de mode de fournir leurs visuels produits et leurs données articles à leurs revendeurs.",
+    "footerAbout": "Une manière ouverte et gratuite pour les marques de partager leurs visuels produits et leurs données articles avec leurs revendeurs.",
     "footerMore": "Plus",
     "footerSource": "Code source et spécification",
     "footerLicence": "Ce site : contenu CC-BY-4.0, code MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange : le standard ouvert pour les contenus produits de la mode",
-      "description": "Un standard ouvert et un logiciel gratuits pour les marques de mode et les revendeurs : photos produits, composition en fibres et consignes d'entretien dans un seul format, dans un portail ou directement dans le logiciel du revendeur."
+      "title": "Open Brand Exchange : le standard des marques et des revendeurs",
+      "description": "Un standard ouvert et gratuit, avec son logiciel, pour partager visuels produits et données articles entre marques et revendeurs : dans un portail, en téléchargement ou directement dans le logiciel du revendeur."
     },
     "brands": {
       "title": "Pour les marques",
@@ -880,7 +880,7 @@
       "preview": "Version 0.2"
     },
     "footer": {
-      "tagline": "Le standard ouvert pour transmettre les visuels produits et les données articles des marques de mode à leurs revendeurs.",
+      "tagline": "Le standard ouvert pour partager visuels produits et données articles entre marques et revendeurs.",
       "product": "Produit",
       "developers": "Développeurs",
       "project": "Projet",
@@ -901,9 +901,9 @@
       "adminAutomation": "L'envoi automatique dans l'administration de la marque : des recettes prêtes à l'emploi pour l'outil obx, cron, GitHub Actions et plus encore."
     },
     "home": {
-      "eyebrow": "Standard ouvert pour la mode · Logiciel gratuit",
-      "h1": "Vos contenus produits de mode, prêts pour chaque revendeur.",
-      "lead": "Beaucoup de portails d'images sont lents, difficiles à connecter et se parcourent clic par clic, à la main. Open Brand Exchange est le standard ouvert qui définit comment les marques de mode, de chaussures, de sacs et de bagagerie fournissent photos produits et données articles à leurs revendeurs : une alternative ouverte aux plateformes fermées.",
+      "eyebrow": "Standard ouvert · Logiciel gratuit",
+      "h1": "Le standard des marques et des revendeurs.",
+      "lead": "Une seule façon de partager visuels produits et données articles : dans un portail, en téléchargement ou directement dans le logiciel du revendeur.",
       "ctaRetailer": "Je suis revendeur",
       "proofLabel": "En bref",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "Voir comment ça marche",
       "videoNote": "En anglais, avec sous-titres en anglais.",
       "flowEyebrow": "Comment ça marche",
-      "flowTitle": "Une seule source. Les revendeurs récupèrent ce dont ils ont besoin.",
-      "flowLead": "Vos contenus se trouvent dans votre propre portail. Les acheteurs y font leurs recherches et téléchargent les fichiers dans leur navigateur ; leurs logiciels lisent les mêmes contenus via l'API.",
-      "flowCaption": "Comment le contenu circule des systèmes d'une marque, via son propre portail, jusqu'à ses revendeurs.",
+      "flowTitle": "Quand tout le monde structure les données de la même façon, tout le monde y gagne.",
+      "flowLead": "Aujourd'hui, chez presque tous les revendeurs, quelqu'un copie des tableurs et ressaisit les données produit pour chaque marque, et chaque nouvelle collection est une course. Avec un seul standard, ce travail disparaît : on le met en place une fois, et tout le monde en profite pendant des années. Place à un meilleur travail.",
+      "flowCaption": "Ce qu'une marque apporte, le standard ouvert au milieu, et ce que les revendeurs reçoivent.",
       "flow": {
-        "systems": "Vos systèmes",
-        "systemsItems": [
+        "inTitle": "Entrée",
+        "inLead": "Ce qu'une marque apporte",
+        "inItems": [
+          "Données produit issues du PIM, de l'ERP ou d'Excel",
+          "Photos produit"
+        ],
+        "stdTitle": "Le standard ouvert",
+        "stdLead": "Une structure fixe pour chaque marque",
+        "stdItems": [
+          "Articles, couleurs et tailles avec EAN",
+          "Matières, entretien et mesures",
+          "Visuels avec droits d'usage"
+        ],
+        "outTitle": "Sortie",
+        "outLead": "Ce que reçoivent les revendeurs",
+        "outItems": [
+          "Boutique en ligne",
           "PIM",
-          "ERP",
-          "DAM",
-          "Dossier d'export"
-        ],
-        "upload": "Alimenter le portail",
-        "uploadItems": [
-          "Import planifié",
-          "Outil obx",
-          "GitHub Action",
-          "API d'envoi"
-        ],
-        "portal": "Votre portail",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Catalogue et visuels",
-          "Accès par revendeur",
-          "Statistiques d'usage"
-        ],
-        "retailers": "Vos revendeurs",
-        "browser": "Les acheteurs, dans le navigateur",
-        "browserItems": [
-          "Recherche et liste d'EAN",
-          "Téléchargements zip et CSV"
-        ],
-        "software": "Leurs logiciels, via l'API",
-        "softwareItems": [
-          "Boutique en ligne et PIM",
-          "Caisse et outils de contenu"
+          "Caisse et ERP",
+          "Téléchargements dans le navigateur"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Version 0.2, sous CC-BY-4.0. Chacun peut l'implémenter, y compris à des fins commerciales."
         },
         {
-          "h": "Aucune dépendance",
+          "h": "Vos données restent les vôtres",
           "p": "Une marque peut à tout moment exporter toutes ses données et tous ses visuels, et passer à un autre prestataire ou l'héberger elle-même."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Logiciel gratuit, ou un prestataire qui s'occupe de tout",
             "Partez de votre propre fichier Excel ou système",
-            "Tous vos revendeurs d'un coup, fini l'envoi de fichiers",
+            "Tous vos revendeurs d'un coup",
             "Vous décidez qui voit quoi",
             "Voyez qui télécharge quoi",
-            "Aucune dépendance : exportez tout et partez"
+            "Exportez tout, quand vous voulez"
           ],
           "cta": "Découvrir l'offre marques"
         },
@@ -1120,7 +1109,7 @@
             "Gratuit pour les revendeurs",
             "Chaque marque dans le même format",
             "Collez des EAN, obtenez les bons visuels",
-            "Composition en fibres et entretien prêts pour la boutique en ligne",
+            "Matières et entretien prêts pour la boutique en ligne",
             "Droits d'utilisation et dates d'embargo avec chaque visuel",
             "Dans le navigateur, ou directement dans votre logiciel"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Portails de marque, portails B2B et d'images, DAM",
             "Logiciels ERP, PIM, boutique en ligne et caisse",
-            "Une seule API ouverte, sans frais de licence",
+            "Une seule API ouverte, gratuite",
             "D'abord une copie complète, ensuite seulement les changements",
             "Label gratuit « Compatible avec Open Brand Exchange »"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Compatible ou partenaire",
       "heroChecks": [
-        "Gratuit et ouvert, aucun frais par revendeur",
+        "Gratuit à utiliser",
         "Tous vos revendeurs d'un coup",
         "Part de votre propre Excel ou système",
         "Visuels avec droits d'utilisation inclus",
-        "Aucune dépendance : vos données restent les vôtres"
+        "Vos données restent les vôtres"
       ],
       "devRepos": [
         {

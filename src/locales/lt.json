@@ -10,7 +10,7 @@
     "copy": "Kopijuoti",
     "copied": "Nukopijuota",
     "draft": "Išleista versija 0.2. Specifikacija ir programinė įranga naudojamos laisvai.",
-    "footerAbout": "Nemokamas ir atviras būdas mados prekių ženklams pateikti produktų nuotraukas ir prekių duomenis savo pardavėjams.",
+    "footerAbout": "Nemokamas ir atviras būdas prekių ženklams dalytis produktų nuotraukomis ir prekių duomenimis su savo pardavėjais.",
     "footerMore": "Daugiau",
     "footerSource": "Išeities kodas ir specifikacija",
     "footerLicence": "Ši svetainė: turinys CC-BY-4.0, kodas MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: atviras mados produktų turinio standartas",
-      "description": "Nemokamas atviras standartas ir programinė įranga mados prekių ženklams ir pardavėjams: produktų nuotraukos, pluoštinė sudėtis ir priežiūros nurodymai vienu formatu, portale arba tiesiai pardavėjo programinėje įrangoje."
+      "title": "Open Brand Exchange: standartas prekių ženklams ir pardavėjams",
+      "description": "Nemokamas, atviras standartas ir programinė įranga produktų nuotraukoms ir prekių duomenims dalytis tarp prekių ženklų ir pardavėjų: portale, kaip atsisiuntimas arba tiesiai į pardavėjo programinę įrangą."
     },
     "brands": {
       "title": "Prekių ženklams",
@@ -880,7 +880,7 @@
       "preview": "Versija 0.2"
     },
     "footer": {
-      "tagline": "Atviras standartas, pagal kurį mados prekių ženklai pateikia produktų nuotraukas ir prekių duomenis savo pardavėjams.",
+      "tagline": "Atviras standartas produktų nuotraukoms ir prekių duomenims dalytis tarp prekių ženklų ir pardavėjų.",
       "product": "Produktas",
       "developers": "Kūrėjams",
       "project": "Projektas",
@@ -901,9 +901,9 @@
       "adminAutomation": "Automatinis įkėlimas prekės ženklo administravime: paruošti receptai įrankiui obx, cron, GitHub Actions ir kitiems."
     },
     "home": {
-      "eyebrow": "Atviras mados standartas · Nemokama programinė įranga",
-      "h1": "Mados produktų turinys, paruoštas kiekvienam pardavėjui.",
-      "lead": "Daugelis vaizdų portalų yra lėti, sunkiai susiejami ir juos tenka išklikinti rankomis. Open Brand Exchange yra atviras standartas, nustatantis, kaip drabužių, avalynės, rankinių ir lagaminų prekių ženklai pateikia produktų nuotraukas ir prekių duomenis savo pardavėjams: atvira alternatyva uždaroms platformoms.",
+      "eyebrow": "Atviras standartas · Nemokama programinė įranga",
+      "h1": "Standartas prekių ženklams ir pardavėjams.",
+      "lead": "Vienas būdas dalytis produktų nuotraukomis ir prekių duomenimis: portale, kaip atsisiuntimas arba tiesiai į pardavėjo programinę įrangą.",
       "ctaRetailer": "Esu pardavėjas",
       "proofLabel": "Trumpai",
       "proof": [
@@ -932,41 +932,30 @@
       "videoTitle": "Pažiūrėkite, kaip tai veikia",
       "videoNote": "Anglų kalba, su angliškais subtitrais.",
       "flowEyebrow": "Kaip tai veikia",
-      "flowTitle": "Vienas šaltinis. Pardavėjai pasiima tai, ko reikia.",
-      "flowLead": "Jūsų turinys yra jūsų portale. Pirkėjai jo ieško ir atsisiunčia failus naršyklėje, o jų programinė įranga tą patį turinį skaito per API.",
-      "flowCaption": "Kaip turinys keliauja iš prekės ženklo sistemų per jo nuosavą portalą iki jo pardavėjų.",
+      "flowTitle": "Kai visi duomenis struktūruoja vienodai, laimi visi.",
+      "flowLead": "Šiandien beveik kiekviename pardavėjuje kažkas kopijuoja skaičiuokles ir iš naujo perrašo produktų duomenis kiekvienam prekių ženklui, o kiekviena nauja kolekcija yra skubėjimas. Su vienu standartu šis darbas išnyksta: įdiegiate jį vieną kartą ir visi iš to naudojasi metų metus. Metas geresniam darbui.",
+      "flowCaption": "Ką prekių ženklas įkelia, atviras standartas viduryje ir ką gauna pardavėjai.",
       "flow": {
-        "systems": "Jūsų sistemos",
-        "systemsItems": [
+        "inTitle": "Įėjimas",
+        "inLead": "Ką prekių ženklas įkelia",
+        "inItems": [
+          "Produktų duomenys iš PIM, ERP ar Excel",
+          "Produktų nuotraukos"
+        ],
+        "stdTitle": "Atviras standartas",
+        "stdLead": "Viena nuolatinė struktūra kiekvienam prekių ženklui",
+        "stdItems": [
+          "Prekės, spalvos ir dydžiai su EAN",
+          "Medžiagos, priežiūra ir matmenys",
+          "Vaizdai su naudojimo teisėmis"
+        ],
+        "outTitle": "Išėjimas",
+        "outLead": "Ką gauna pardavėjai",
+        "outItems": [
+          "Internetinė parduotuvė",
           "PIM",
-          "ERP",
-          "DAM",
-          "Eksporto aplankas"
-        ],
-        "upload": "Turinio įkėlimas",
-        "uploadItems": [
-          "Suplanuotas importas",
-          "Įrankis obx",
-          "GitHub Action",
-          "Įkėlimo API"
-        ],
-        "portal": "Jūsų portalas",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Katalogas ir nuotraukos",
-          "Prieiga kiekvienam pardavėjui",
-          "Naudojimo statistika"
-        ],
-        "retailers": "Jūsų pardavėjai",
-        "browser": "Pirkėjai naršyklėje",
-        "browserItems": [
-          "Paieška ir EAN sąrašas",
-          "Zip ir CSV atsisiuntimai"
-        ],
-        "software": "Jų programinė įranga per API",
-        "softwareItems": [
-          "Internetinė parduotuvė ir PIM",
-          "POS ir turinio įrankiai"
+          "POS ir ERP",
+          "Atsisiuntimai naršyklėje"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "Versija 0.2, pagal CC-BY-4.0. Įgyvendinti ją gali bet kas, taip pat komerciškai."
         },
         {
-          "h": "Jokio susiejimo",
+          "h": "Jūsų duomenys lieka jūsų",
           "p": "Prekės ženklas bet kada gali eksportuoti visus savo duomenis ir nuotraukas ir pereiti pas kitą paslaugų teikėją arba talpinti juos pats."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Nemokama programinė įranga arba paslaugų teikėjas, kuris viskuo pasirūpina",
             "Pradėkite nuo savo Excel failo ar sistemos",
-            "Visi jūsų pardavėjai iš karto, nebereikia siuntinėti failų",
+            "Visi jūsų pardavėjai iš karto",
             "Jūs sprendžiate, kas ką mato",
             "Matykite, kas ką atsisiunčia",
-            "Jokio susiejimo: eksportuokite viską ir išeikite"
+            "Eksportuokite viską bet kada"
           ],
           "cta": "Plačiau prekių ženklams"
         },
@@ -1120,7 +1109,7 @@
             "Nemokama pardavėjams",
             "Kiekvienas prekės ženklas tuo pačiu formatu",
             "Įklijuokite EAN, gaukite tinkamas nuotraukas",
-            "Pluoštinė sudėtis ir priežiūros nurodymai, paruošti internetinei parduotuvei",
+            "Medžiagos ir priežiūra, paruoštos internetinei parduotuvei",
             "Naudojimo teisės ir embargo datos prie kiekvienos nuotraukos",
             "Naršyklėje arba tiesiai jūsų programinėje įrangoje"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Prekių ženklų portalai, B2B ir nuotraukų portalai, DAM",
             "ERP, PIM, internetinių parduotuvių ir kasų programinė įranga",
-            "Vienas atviras API, jokio licencijos mokesčio",
+            "Vienas atviras API, nemokamas naudoti",
             "Pirmiausia visa kopija, paskui tik pakeitimai",
             "Nemokamas ženklas „Suderinama su Open Brand Exchange“"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Suderinamumas ar partnerystė",
       "heroChecks": [
-        "Nemokama ir atvira, jokio mokesčio už pardavėją",
+        "Nemokama naudoti",
         "Visi jūsų pardavėjai iš karto",
         "Pradedama nuo jūsų Excel ar sistemos",
         "Nuotraukos kartu su naudojimo teisėmis",
-        "Jokio susiejimo: jūsų duomenys lieka jūsų"
+        "Jūsų duomenys lieka jūsų"
       ],
       "devRepos": [
         {

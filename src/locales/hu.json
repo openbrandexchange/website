@@ -10,7 +10,7 @@
     "copy": "Másolás",
     "copied": "Másolva",
     "draft": "Megjelent a 0.2-es verzió. A specifikáció és a szoftver szabadon használható.",
-    "footerAbout": "Ingyenes, nyílt módszer, amellyel a divatmárkák termékfotókat és cikkadatokat juttathatnak el viszonteladóiknak.",
+    "footerAbout": "Ingyenes, nyílt módszer, amellyel a márkák megoszthatják termékfotóikat és cikkadataikat viszonteladóikkal.",
     "footerMore": "Továbbiak",
     "footerSource": "Forráskód és specifikáció",
     "footerLicence": "Ez a weboldal: tartalom CC-BY-4.0, kód MIT.",
@@ -39,8 +39,8 @@
   },
   "meta": {
     "home": {
-      "title": "Open Brand Exchange: nyílt szabvány divattermékek tartalmához",
-      "description": "Ingyenes, nyílt szabvány és szoftver divatmárkáknak és viszonteladóknak: termékfotók, szálösszetétel és kezelési útmutató egyetlen formátumban, portálon vagy közvetlenül a viszonteladó szoftverében."
+      "title": "Open Brand Exchange: szabvány márkáknak és viszonteladóknak",
+      "description": "Ingyenes, nyílt szabvány és szoftver termékfotók és cikkadatok megosztására márkák és viszonteladók között: portálon, letöltésként vagy közvetlenül a viszonteladó szoftverébe."
     },
     "brands": {
       "title": "Márkáknak",
@@ -880,7 +880,7 @@
       "preview": "0.2-es verzió"
     },
     "footer": {
-      "tagline": "Nyílt szabvány termékfotók és cikkadatok eljuttatására a divatmárkáktól a viszonteladóikhoz.",
+      "tagline": "A nyílt szabvány termékfotók és cikkadatok megosztására márkák és viszonteladók között.",
       "product": "Termék",
       "developers": "Fejlesztőknek",
       "project": "Projekt",
@@ -901,9 +901,9 @@
       "adminAutomation": "Automatikus feltöltés a márka adminisztrációjában: kész receptek az obx eszközhöz, cronhoz, GitHub Actionshöz és máshoz."
     },
     "home": {
-      "eyebrow": "Nyílt szabvány a divatnak · Ingyenes szoftver",
-      "h1": "Divattermékek tartalma, készen minden viszonteladónak.",
-      "lead": "Sok képportál lassú, nehezen köthető be, és kézzel kell végigkattintani. Az Open Brand Exchange nyílt szabvány arra, hogyan juttatják el a ruházati, cipő-, táska- és bőröndmárkák a termékfotókat és cikkadatokat viszonteladóiknak: nyílt alternatíva a zárt platformokkal szemben.",
+      "eyebrow": "Nyílt szabvány · Ingyenes szoftver",
+      "h1": "A szabvány márkáknak és viszonteladóknak.",
+      "lead": "Egyetlen módszer termékfotók és cikkadatok megosztására: portálon, letöltésként vagy közvetlenül a viszonteladó szoftverébe.",
       "ctaRetailer": "Viszonteladó vagyok",
       "proofLabel": "Röviden",
       "proof": [
@@ -931,42 +931,31 @@
       "codeCaption": "Amit egy viszonteladó szoftvere kap",
       "videoTitle": "Nézze meg, hogyan működik",
       "videoNote": "Angolul, angol felirattal.",
-      "flowEyebrow": "Így működik",
-      "flowTitle": "Egy forrás. A viszonteladók azt töltik le, amire szükségük van.",
-      "flowLead": "A tartalma a saját portálján van. A beszerzők böngészőben keresnek és töltenek le fájlokat, a szoftvereik pedig ugyanezt a tartalmat az API-n keresztül olvassák.",
-      "flowCaption": "Így jut el a tartalom a márka rendszereiből a saját portálján át a viszonteladókhoz.",
+      "flowEyebrow": "Hogyan működik",
+      "flowTitle": "Ha mindenki ugyanúgy strukturálja az adatokat, mindenki nyer.",
+      "flowLead": "Ma szinte minden viszonteladónál ül valaki, aki táblázatokat másol és minden márkához újra begépeli a termékadatokat, és minden új kollekció hajrá. Egyetlen szabvánnyal ez a munka megszűnik: egyszer bevezetik, és mindenki évekig profitál belőle. Ideje jobb munkára.",
+      "flowCaption": "Amit egy márka betölt, a nyílt szabvány középen, és amit a viszonteladók kapnak.",
       "flow": {
-        "systems": "Az Ön rendszerei",
-        "systemsItems": [
+        "inTitle": "Be",
+        "inLead": "Amit egy márka betölt",
+        "inItems": [
+          "Termékadatok PIM-ből, ERP-ből vagy Excelből",
+          "Termékfotók"
+        ],
+        "stdTitle": "A nyílt szabvány",
+        "stdLead": "Egy rögzített szerkezet minden márkának",
+        "stdItems": [
+          "Cikkek, színek és méretek EAN-nel",
+          "Anyagok, ápolás és méretek",
+          "Képek felhasználási jogokkal"
+        ],
+        "outTitle": "Ki",
+        "outLead": "Amit a viszonteladók kapnak",
+        "outItems": [
+          "Webáruház",
           "PIM",
-          "ERP",
-          "DAM",
-          "Exportmappa"
-        ],
-        "upload": "A tartalom feltöltése",
-        "uploadItems": [
-          "Ütemezett import",
-          "obx eszköz",
-          "GitHub Action",
-          "Feltöltési API"
-        ],
-        "portal": "Az Ön portálja",
-        "portalDomain": "brands.yourbrand.com",
-        "portalItems": [
-          "Katalógus és fotók",
-          "Hozzáférés viszonteladónként",
-          "Használati statisztikák"
-        ],
-        "retailers": "Az Ön viszonteladói",
-        "browser": "Beszerzők, böngészőben",
-        "browserItems": [
-          "Keresés és EAN-lista",
-          "ZIP- és CSV-letöltések"
-        ],
-        "software": "Szoftvereik, API-n keresztül",
-        "softwareItems": [
-          "Webáruház és PIM",
-          "POS és tartalomeszközök"
+          "POS és ERP",
+          "Letöltések a böngészőben"
         ]
       },
       "pillars": [
@@ -1061,7 +1050,7 @@
           "p": "A 0.2-es verzió CC-BY-4.0 licenccel. Bárki megvalósíthatja, üzleti célra is."
         },
         {
-          "h": "Nincs bezártság",
+          "h": "Az adatai az Önéi maradnak",
           "p": "Egy márka bármikor exportálhatja összes adatát és képét, és átválthat másik szolgáltatóra, vagy maga üzemeltetheti."
         },
         {
@@ -1106,10 +1095,10 @@
           "items": [
             "Ingyenes szoftver, vagy egy szolgáltató, aki mindent intéz",
             "Induljon a saját Excel-fájljából vagy rendszeréből",
-            "Minden viszonteladó egyszerre, nincs több fájlküldözgetés",
+            "Minden viszonteladója egyszerre",
             "Ön dönti el, ki mit lát",
             "Lássa, ki mit tölt le",
-            "Nincs bezártság: exportáljon mindent, és váltson"
+            "Exportáljon mindent, bármikor"
           ],
           "cta": "Részletek márkáknak"
         },
@@ -1120,7 +1109,7 @@
             "Ingyenes a viszonteladóknak",
             "Minden márka ugyanabban a formátumban",
             "Illesszen be EAN-okat, és megkapja a megfelelő képeket",
-            "Szálösszetétel és kezelési útmutató készen a webáruházhoz",
+            "Anyagok és ápolás készen a webáruházhoz",
             "Felhasználási jogok és embargódátumok minden képhez",
             "A böngészőben vagy közvetlenül a szoftverébe"
           ],
@@ -1132,7 +1121,7 @@
           "items": [
             "Márkaportálok, B2B- és képportálok, DAM-rendszerek",
             "ERP-, PIM-, webáruház- és pénztárszoftverek",
-            "Egyetlen nyílt API, licencdíj nélkül",
+            "Egyetlen nyílt API, ingyenesen használható",
             "Először egy teljes másolat, utána csak a változások",
             "Ingyenes „Kompatibilis az Open Brand Exchange-dzsel” címke"
           ],
@@ -1158,11 +1147,11 @@
       ],
       "portalsCta": "Kompatibilis vagy partner",
       "heroChecks": [
-        "Ingyenes és nyílt, nincs viszonteladónkénti díj",
+        "Ingyenesen használható",
         "Minden viszonteladója egyszerre",
         "A saját Excel-táblájából vagy rendszeréből indul",
         "Képek felhasználási jogokkal együtt",
-        "Nincs bezártság: az adatai az Önéi maradnak"
+        "Az adatai az Önéi maradnak"
       ],
       "devRepos": [
         {
