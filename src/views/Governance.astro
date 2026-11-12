@@ -15,6 +15,9 @@ const c = messages[lang].governance;
 
 <section class="band">
   <div class="wrap">
+    <DocSection id="non-profit" title={c.nonProfitTitle}>
+      <p>{c.nonProfitP} <a href={url(lang, 'partners')}>{messages[lang].nav.partners}</a></p>
+    </DocSection>
     <DocSection id="foundation" title={c.foundationTitle}>
       <p>{format(c.foundationP, orgVars(lang))} <a href={url(lang, 'imprint')}>{messages[lang].nav.imprint}</a>.</p>
     </DocSection>

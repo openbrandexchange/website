@@ -169,6 +169,7 @@ const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'devel
         ))
       }
     </ul>
+    <p class="small muted portals-example">{h.portalsExample}</p>
     <p class="actions">
       <a class="button primary" href={url(lang, 'developers')}>{h.portalsCta} <Icon name="arrow" class="arrow" /></a>
     </p>
@@ -181,6 +182,7 @@ const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'devel
       <p class="eyebrow">{h.editionsEyebrow}</p>
       <h2 id="editions-title">{h.editionsTitle}</h2>
       <p class="lead">{h.editionsLead}</p>
+      <p>{h.ownershipNote}</p>
     </header>
     <div data-reveal="2"><Editions lang={lang} /></div>
   </div>
