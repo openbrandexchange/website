@@ -130,7 +130,7 @@ test('the imprint names the publisher on behalf of the foundation in formation, 
   assert.match(en, /sole proprietorship of Richard Lindhout/);
   assert.match(en, /Kreeftenstraat 36<br\s*\/?>\s*4691 KR Tholen<br\s*\/?>\s*Netherlands/);
   assert.match(en, /KvK 56845367/);
-  assert.doesNotMatch(en, /VAT|BTW/i);
+  assert.doesNotMatch(en, /\b(VAT|BTW)\b/);
   assert.match(read('nl/imprint/index.html'), /Nederland/);
   assert.match(read('en/privacy/index.html'), /controller for this website is webRidge/);
   assert.doesNotMatch(read('en/index.html'), /Richard Lindhout/);

@@ -2,7 +2,7 @@
 import PageHero from '../components/PageHero.astro';
 import { format, messages, url, type Lang } from '../i18n';
 import { countryName } from '../lib/names';
-import { HELLO_EMAIL, SECURITY_EMAIL, imprintDetails, initiativeLine, orgVars } from '../lib/org';
+import { HELLO_EMAIL, PUBLISHER, SECURITY_EMAIL, imprintDetails, orgVars } from '../lib/org';
 
 interface Props {
   lang: Lang;
@@ -19,7 +19,7 @@ const addressLines = address ? [...address, ...(country ? [countryName(lang, cou
 <section class="band">
   <div class="wrap prose">
     <h2>{c.publisherTitle}</h2>
-    <p class="imprint-name">{initiativeLine(lang)}</p>
+    <p class="imprint-name">{PUBLISHER}</p>
     <p>{format(c.foundationP, orgVars(lang))}</p>
     {
       (address || phone || registration) && (
