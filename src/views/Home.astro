@@ -8,6 +8,7 @@ import Ways from '../components/Ways.astro';
 import { format, messages, url, type Lang } from '../i18n';
 import { orgVars, HELLO_EMAIL, SECURITY_EMAIL } from '../lib/org';
 import { DEMO_URL } from '../data/snippets';
+import { videoFor } from '../data/video';
 
 interface Props {
   lang: Lang;
@@ -18,6 +19,8 @@ const h = t.site.home;
 const vars = { ...orgVars(lang), email: SECURITY_EMAIL, portal: t.portalWord };
 const pillarLinks = [url(lang, 'retailers'), url(lang, 'retailers', '#api'), url(lang, 'brands', '#start')];
 const faq = t.faq.items.slice(0, 4);
+// The explainer video (v3): English voice, captions in the reader's language when rendered.
+const video = videoFor(lang);
 // "Publish once. Every retailer gets it.": the second sentence in a softer tone, on its own line.
 const split = h.h1.search(/[.!?]\s/);
 const h1 = split > 0 ? [h.h1.slice(0, split + 1) + ' ', h.h1.slice(split + 2)] : [h.h1, ''];
@@ -58,8 +61,14 @@ const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'partn
         }
       </dl>
     </div>
-    <div class="hero-product hero-flow" data-reveal="2">
-      <Flow lang={lang} stack />
+    <div class="hero-product hero-video">
+      <figure class="video-frame">
+        <video controls preload="none" playsinline poster={`${video}.jpg`} width="1920" height="1080" aria-label={h.videoTitle}>
+          <source src={`${video}.webm`} type="video/webm" />
+          <source src={`${video}.mp4`} type="video/mp4" />
+        </video>
+        <figcaption>{h.videoTitle} · {h.videoNote}</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -71,7 +80,8 @@ const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'partn
       <h2 id="flow-title">{h.flowTitle}</h2>
       <p class="lead">{h.flowLead}</p>
     </header>
-    <div data-reveal="2"><Ways lang={lang} /></div>
+    <div data-reveal="2"><Flow lang={lang} /></div>
+    <div data-reveal="2" class="ways-after-flow"><Ways lang={lang} /></div>
   </div>
 </section>
 

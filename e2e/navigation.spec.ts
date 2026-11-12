@@ -147,12 +147,21 @@ test('the desktop header stays on one row in every language', async ({ page, isM
   expect(wrapped).toEqual([]);
 });
 
-test('the home hero shows how it works in three blocks, and no video while it is being remade', async ({ page }) => {
-  for (const path of ['/nl/', '/de/']) {
+test('the home video loads nothing until it is played, in the reader\'s caption language', async ({ page }) => {
+  const media: string[] = [];
+  page.on('request', (r) => {
+    if (/\/video\/.*\.(mp4|webm)$/.test(r.url())) media.push(r.url());
+  });
+  for (const [path, file] of [['/nl/', '/video/v3/obx-v3-nl'], ['/de/', '/video/v3/obx-v3-de'], ['/sv/', '/video/v3/obx-v3-en']] as const) {
     await page.goto(path);
-    await expect(page.locator('.hero-flow .flow-col')).toHaveCount(3);
-    await expect(page.locator('.home-hero video')).toHaveCount(0);
+    const video = page.locator('.hero-video video');
+    await expect(video).toHaveAttribute('preload', 'none');
+    await expect(video).toHaveAttribute('poster', `${file}.jpg`);
+    await expect(video.locator('source[type="video/mp4"]')).toHaveAttribute('src', `${file}.mp4`);
+    await page.waitForLoadState('networkidle');
+    expect(media, `${path}: no video bytes before play`).toEqual([]);
   }
+  await expect(page.locator('.flow .flow-col')).toHaveCount(3);
 });
 
 test('brand and retailer pages show no technical material; it lives under For developers', async ({ page, isMobile }) => {
