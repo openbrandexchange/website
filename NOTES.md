@@ -33,11 +33,11 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
    choice in localStorage; Cloudflare may set a strictly necessary security cookie only when it
    challenges a visitor) and an imprint. They are written for the site as it is: no forms,
    accounts or tracking. They are not legal advice: have them reviewed before the launch.
-7. **Status wording.** The header pill (`site.nav.preview`, with `common.draft` as its full text),
-   the footer (`site.footer.status`) and the FAQ say that version 0.1 is in testing
-   and the first public release is being prepared, and the brochures split "ready in version 0.1"
-   from "coming next". Change these texts (all languages, then rebuild the brochures) on the day
-   the repositories and releases become public.
+7. **Status wording.** Since the launch on 2026-11-12 the header pill (`site.nav.preview`, with
+   `common.draft` as its full text), the footer (`site.footer.status`), the home page, the developers
+   page and the FAQ say that version 0.1 is out and free to use. The brochures still split "ready in
+   version 0.1" from "coming next". Change these texts in all languages, then rebuild the brochures,
+   with every new version.
 8. **Brochures.** Brands and retailers, all 25 languages, generated from the site's own locale
    texts (see docs/brochures.md). The retailer brochure includes the switch-kit e-mail. Contact
    is hello@openbrandexchange.com; Photopilot is mentioned only as the initiator's company and as

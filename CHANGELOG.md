@@ -6,6 +6,9 @@ its texts; the repository itself is versioned with [Semantic Versioning](https:/
 ## [Unreleased]
 
 ### Changed
+- Launch (2026-11-12): the status pill, footer, home page, developers page and FAQ say that
+  version 0.1 is out and free to use, in all 25 languages; brochures and social images rebuilt.
+  The preview password lock (`functions/_middleware.js`) is removed.
 - Redesign: one design system (tokens, 12-column grid, Inter served from the site itself, one
   cobalt accent), dark and light bands, a sticky header with a "v0.1" status pill instead of the
   yellow banner, and a multi-column footer. The home page now shows the product: real screenshots
