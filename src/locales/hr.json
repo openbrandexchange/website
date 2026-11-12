@@ -20,7 +20,9 @@
     "yes": "Da",
     "inDevelopment": "U razvoju",
     "available": "Dostupno",
-    "footerContact": "Kontakt"
+    "footerContact": "Kontakt",
+    "madeInEu": "Proizvedeno u EU-u",
+    "builtInNl": "Izrađeno u Nizozemskoj"
   },
   "nav": {
     "brands": "Za robne marke",
@@ -44,7 +46,7 @@
     },
     "brands": {
       "title": "Za robne marke",
-      "description": "Vlastiti portal za trgovce, standardni API i automatska objava iz PIM-a, ERP-a ili mapa. Hostajte ga sami besplatno ili preko pružatelja usluge."
+      "description": "Portal s vašim brendom za trgovce, standardni API i automatska objava iz PIM-a, ERP-a ili mapa. Besplatno uz vlastiti hosting ili dostupno preko pružatelja usluge."
     },
     "automation": {
       "title": "Automatizacija",
@@ -56,7 +58,7 @@
     },
     "retailers": {
       "title": "Za trgovce",
-      "description": "Što vam daje portal marke, API ključ za vaš sustav i gotov e-mail za marke koje se još nisu uključile."
+      "description": "Što nudi portal marke, API pristup za vaš vlastiti softver i gotov e-mail za marke koje još ne sudjeluju."
     },
     "developers": {
       "title": "Za programere",
@@ -154,14 +156,14 @@
   },
   "brands": {
     "h1": "Za robne marke",
-    "lead": "Vaši trgovci žele vaše fotografije i podatke o artiklima, najbolje izravno povezane s vlastitim artiklima. S Open Brand Exchangeom to postavite jednom, za sve odjednom.",
+    "lead": "Trgovcima su potrebne vaše fotografije i podaci o artiklima, povezani s njihovim vlastitim artiklima. S Open Brand Exchangeom to postavljate jednom, za sve trgovce istodobno.",
     "blocks": [
       {
         "h": "Portal za vaše trgovce",
-        "p": "Vaš portal nosi vaše ime i vizualni identitet: „Kestrel · {portal}”, po želji na vlastitoj domeni. Trgovci traže pristup, a vi odobravate ili odbijate.",
+        "p": "Vaš portal nosi vaše ime i vizualni identitet: „Kestrel · {portal}”, po želji na vlastitoj domeni. Trgovci traže pristup. Vi odobravate ili odbijate svaki zahtjev.",
         "items": [
           "Pretraživanje i filtriranje po marki, sezoni, kolekciji i vrsti proizvoda",
-          "Zalijepite popis EAN kodova i odmah vidite što postoji, a što nedostaje",
+          "Zalijepite popis EAN kodova i vidite što je dostupno, a što nedostaje",
           "Preuzimanje jedne fotografije, jednog artikla ili zip arhive cijelog odabira",
           "U potrebnom obliku: original, web (2000 px) ili kvadrat",
           "Podaci o artiklima u tablici, s materijalom i uputama za održavanje"
@@ -169,17 +171,17 @@
       },
       {
         "h": "Standardni API za njihove sustave",
-        "p": "Trgovci koji rade sa softverom dobivaju API ključ za svoj sustav. Blagajna, PIM ili web trgovina dohvaćaju sve jednom, a potom samo promjene.",
+        "p": "Trgovci koji koriste softver dobivaju API ključ. Njihov blagajnički, PIM ili softver web trgovine jednom dohvaća cijeli skup, a zatim samo promjene.",
         "items": [
-          "Pretraga po EAN-u, kako bi fotografije završile na pravom artiklu i veličini",
-          "Promjene stižu same, uključujući ono što povučete",
-          "Prava korištenja, embargo i podrijetlo umjetne inteligencije prate svaku fotografiju",
-          "Jednom izgrađeno radi sa svakom markom koja koristi Open Brand Exchange"
+          "Pretraga po EAN-u, kako bi se fotografije povezale s pravim artiklom i veličinom",
+          "Promjene se isporučuju automatski, uključujući povlačenja",
+          "Prava korištenja, embargo i podrijetlo umjetne inteligencije uključeni su uz svaku fotografiju",
+          "Jedna implementacija radi sa svakom markom koja koristi Open Brand Exchange"
         ]
       },
       {
         "h": "Automatsko učitavanje",
-        "p": "Nitko više ne mora premještati datoteke. Portal sam dohvaća vaš izvoz ili ga šalju vaši sustavi.",
+        "p": "Vaš portal automatski dohvaća vaš izvoz ili ga isporučuju vaši vlastiti sustavi.",
         "items": [
           "Planirani uvoz s web adrese, SFTP poslužitelja ili S3 spremnika, bez koda",
           "Mapa koja se automatski objavljuje alatom obx",
@@ -188,11 +190,11 @@
         ]
       },
       {
-        "h": "Vaše je",
-        "p": "Open Brand Exchange nije platforma kojoj predajete svoju marku. Vodite vlastiti portal ili to umjesto vas radi pružatelj usluge.",
+        "h": "Vlasništvo ostaje vaše",
+        "p": "Open Brand Exchange je standard, a ne platforma. Vlastiti portal vodite sami ili ga za vas vodi pružatelj usluge.",
         "items": [
           "Vlastiti hosting je besplatan: softver je otvorenog koda",
-          "Radije prepuštate drugima? Odaberite pružatelja i promijenite ga kad želite",
+          "Ili ga prepustite pružatelju usluge i promijenite pružatelja u bilo kojem trenutku",
           "Vidite tko što preuzima, po trgovcu",
           "Vi odlučujete tko dobiva pristup, kojim markama i jesu li originali dopušteni"
         ]
@@ -214,7 +216,7 @@
       },
       {
         "k": "API ključevi",
-        "v": "ključevi za sustave trgovaca: prikazuju se jednom, lako ih obnovite ili opozovete"
+        "v": "ključevi za softver vaših trgovaca: prikazuju se jednom, mogu se obnoviti ili opozvati u bilo kojem trenutku"
       },
       {
         "k": "Automatsko učitavanje",
@@ -250,13 +252,13 @@
         "p": "Spremite kao CSV UTF-8 i učitajte ga s fotografijama na svoj portal ili neka portal svake noći sam preuzme vaš izvoz."
       },
       {
-        "h": "Gotovo",
-        "p": "Vaši trgovci sve pronalaze na vašem portalu, a njihov softver sam preuzima svaku promjenu. Besplatno."
+        "h": "Objavljeno",
+        "p": "Vaši trgovci sve pronalaze na vašem portalu. Njihov softver automatski prima svaku promjenu. Besplatno."
       }
     ],
     "startTemplate": "Preuzmite Excel predložak",
-    "partnersTitle": "Ili neka partner sve odradi",
-    "partnersP": "Ne želite to raditi sami? Pružatelj usluge može preuzeti cijeli postupak. Photopilot, na primjer, nudi besplatan portal s OBX vezom, potpunu automatizaciju postupka i prilagođenu integraciju s vašim ERP-om.",
+    "partnersTitle": "Ili surađujte s partnerom",
+    "partnersP": "Pružatelj usluge može preuzeti cijeli postupak. Photopilot, na primjer, nudi besplatan portal s OBX vezom, potpunu automatizaciju postupka i prilagođenu integraciju s vašim ERP-om.",
     "partnersCta": "Pogledajte pružatelje usluge"
   },
   "automation": {
@@ -356,8 +358,8 @@
   "hosting": {
     "h1": "Hosting",
     "lead": "Jedan portal je jedna tvrtka s robnom markom na jednom poslužitelju. Vi birate kako ga vodite, od potpuno prepuštenog do potpuno vlastitog. U nastavku od najjednostavnijeg do najtehničkijeg.",
-    "p1Title": "1. Preko pružatelja usluge",
-    "p1P": "Najjednostavnije: tvrtka hosta vaš portal, održava ga ažurnim i pomaže pri postavljanju. Budući da svi portali govore istim standardom, kasnije možete prijeći drugom pružatelju ili na vlastiti hosting.",
+    "p1Title": "3. Partner ga hosta za vas",
+    "p1P": "Ne želite sami hostati? Partneri mogu hostati i održavati portal za vas.",
     "fieldBased": "Sjedište",
     "fieldLanguages": "Jezici",
     "fieldStatus": "Open Brand Exchange",
@@ -405,17 +407,43 @@
     "domainP": "Koristite poddomenu poput trgovci.vasamarka.hr ili b2b.vasamarka.hr. Trgovci tada vide vaše ime, a adresa ostaje ista i kad promijenite hosting.",
     "compareTitle": "Tri izdanja, jedan portal",
     "compareP": "Tri izdanja rade isto i imaju istu administraciju i isti portal za trgovce. Odaberite ono koje odgovara vašem hostingu; promijeniti možete kasnije.",
-    "compareLink": "Pogledajte implementacije"
+    "compareLink": "Pogledajte implementacije",
+    "heroTitle": "Vaš portal, gdje god želite.",
+    "heroLead": "Softver je besplatan. Vi birate gdje radi i možete se preseliti u bilo kojem trenutku.",
+    "heroChecks": [
+      "Besplatan softver, plaćate samo hosting",
+      "Preporučeno: u Europi, na primjer kod Hetznera (Njemačka)",
+      "Isti portal posvuda, pa uvijek možete prijeći",
+      "Ne želite sami? Partner ga hosta za vas"
+    ],
+    "euCta": "Vaš portal u Europi",
+    "euTitle": "1. Vlastiti poslužitelj u Europi (preporučeno)",
+    "euP": "Većini marki dovoljan je mali poslužitelj kod europskog pružatelja usluge. Vodič u nastavku koristi Hetzner, s podatkovnim centrima u Njemačkoj i Finskoj. Svaki poslužitelj na kojem radi Docker funkcionira na isti način.",
+    "euSteps": [
+      "Izradite poslužitelj kod Hetznera u Nürnbergu, Falkensteinu ili Helsinkiju, s uključenim sigurnosnim kopijama.",
+      "Usmjerite svoju domenu, na primjer images.vasamarka.hr, na poslužitelj.",
+      "Instalirajte Docker i pokrenite portal jednom naredbom. HTTPS se postavlja automatski.",
+      "Otvorite svoju domenu i prođite kroz čarobnjak za postavljanje.",
+      "Neobavezno: slike čuvajte u Hetzner Object Storage, na istoj lokaciji.",
+      "Zakažite noćnu sigurnosnu kopiju. Ažuriranje je jedna naredba."
+    ],
+    "euGuide": "Vodič korak po korak: vaš portal kod Hetznera",
+    "euData": "Kad su poslužitelj i pohrana na lokaciji u EU-u, vaš katalog, slike i baza podataka pohranjeni su u EU-u.",
+    "webTitle": "2. Običan web hosting",
+    "webP": "PHP izdanje radi na običnom europskom web hostingu s PHP-om i bazom podataka, na primjer kod TransIP-a, Strata ili OVHclouda. Nisu potrebne naredbe:",
+    "altTitle": "4. Ostali oblaci",
+    "altP": "Isti portal radi i na Cloudflare Workers i na Google Cloud Runu. Odaberite regiju u Europi ako je usluga nudi.",
+    "partnerLink": "Pogledajte partnere"
   },
   "retailers": {
     "h1": "Za trgovce",
-    "lead": "Marke koje koriste Open Brand Exchange isporučuju svoje fotografije i podatke o artiklima na jedan ujednačen način. Vi ih samo primate, besplatno: u portalu svake marke u svom pregledniku ili putem jednog API-ja izravno u svoj softver.",
-    "portalTitle": "Što vam daje portal marke",
+    "lead": "Marke koje koriste Open Brand Exchange isporučuju svoje fotografije i podatke o artiklima u jednom ujednačenom formatu. Vi ih samo trebate primiti, besplatno: u portalu svake marke u svom pregledniku ili putem jednog API-ja izravno u svoj softver.",
+    "portalTitle": "Što nudi portal marke",
     "portalP": "Svaka marka vodi vlastiti portal sa svojim imenom, na primjer „Kestrel · {portal}”.",
     "portal": [
       {
         "h": "Zatražite pristup",
-        "p": "Zatražite pristup na portalu marke. Marka odobrava, a vi primate pozivnicu e-poštom."
+        "p": "Zatražite pristup na portalu marke. Kada marka odobri zahtjev, primate pozivnicu e-poštom."
       },
       {
         "h": "Pretraživanje i filtri",
@@ -423,10 +451,10 @@
       },
       {
         "h": "Zalijepite popis EAN kodova",
-        "p": "Zalijepite EAN kodove iz blagajne i odmah vidite koji artikli postoje, a koji još nedostaju."
+        "p": "Zalijepite EAN kodove iz blagajne kako biste vidjeli koji su artikli dostupni, a koji nedostaju."
       },
       {
-        "h": "Preuzimanje po želji",
+        "h": "Mogućnosti preuzimanja",
         "p": "Jedna fotografija, jedan artikl, vaš odabir ili sve u filtru kao zip. Original (ako marka dopušta), web ili kvadrat."
       },
       {
@@ -434,28 +462,28 @@
         "p": "EAN po veličini, boja, materijal, upute za održavanje i opis, spremni za vaš sustav."
       },
       {
-        "h": "Što je dopušteno",
-        "p": "Prava korištenja, datum embarga i je li fotografija nastala uz umjetnu inteligenciju navedeni su uz svaku fotografiju."
+        "h": "Prava korištenja",
+        "p": "Svaka fotografija prikazuje svoja prava korištenja, datum embarga i je li nastala uz pomoć umjetne inteligencije."
       }
     ],
     "apiTitle": "API ključ za vaš softver",
-    "apiP": "Vaš PIM, blagajnički sustav ili web trgovina sami dohvaćaju fotografije? Onda zatražite API ključ za svoj sustav. On najprije dohvaća sve, a zatim samo promjene, uključujući ono što marka povuče. Fotografije se s vašim artiklima povezuju putem EAN-a.",
-    "apiDev": "Za vašeg programera: ovako to izgleda.",
+    "apiP": "Dohvaća li vaš PIM, blagajnički softver ili softver web trgovine fotografije automatski? Onda za njega zatražite API ključ. Softver najprije dohvaća cijeli skup, a zatim samo promjene, uključujući povlačenja od strane marke. Fotografije se s vašim artiklima povezuju putem EAN-a.",
+    "apiDev": "Za vašeg programera: primjer.",
     "toolsTitle": "Koji softver radi s tim",
-    "toolsP": "Open Brand Exchange je otvoreni standard: može ga podržavati bilo koji softver. Photopilot ga ugrađuje u svoj softver za trgovce, a drugi dobavljači mogu učiniti isto. Ne treba vam nikakav poseban softver: dovoljan je preglednik.",
+    "toolsP": "Open Brand Exchange je otvoreni standard koji može podržavati bilo koji softver. Photopilot ga ugrađuje u svoj softver za trgovce. Drugi dobavljači mogu učiniti isto. Nije potreban poseban softver: dovoljan je preglednik.",
     "toolsLink": "Specifikacija za programere",
     "findTitle": "Kako pronaći marku",
-    "findP": "Marke koje žele biti vidljive nalaze se na popisu marki. Ako vam marka jednostavno da adresu svog portala, i to funkcionira.",
+    "findP": "Marke koje odluče biti navedene nalaze se u imeniku. Marka vam može dati i adresu svog portala izravno.",
     "findLink": "Idi na popis marki",
-    "kitTitle": "Vaše marke nema? Pošaljite joj ovo",
-    "kitP": "Marka se najbrže uključuje kad to traže trgovine. Kopirajte ovu poruku, ispunite uglate zagrade i pošaljite je svom kontaktu ili predstavniku marke.",
+    "kitTitle": "Ako marka još ne sudjeluje, pošaljite ovaj e-mail",
+    "kitP": "Marke se najbrže uključuju kada to zatraže njihovi trgovci. Kopirajte ovaj e-mail, dovršite dijelove u uglatim zagradama i pošaljite ga svom kontaktu ili prodajnom predstavniku marke.",
     "kitEnglish": "Engleski (za međunarodne marke)",
     "kitDownload": "Preuzmi kao tekstnu datoteku",
     "kitMore": "Više materijala, poput brošure za trgovce, nalazi se među preuzimanjima.",
     "label": {
       "eyebrow": "Podaci o artiklima",
-      "title": "Ono što piše na etiketi stiže uz svaki artikl.",
-      "p": "Sastav po dijelovima, upute za održavanje redoslijedom s etikete i zemlja podrijetla dio su svakog artikla, uz EAN svake veličine. Vaša web-trgovina prikazuje ih kao tekst ili kao simbole za održavanje u svom stilu. Polja prate pravila EU-a o označavanju tekstilnih proizvoda i kodove za održavanje prema ISO 3758, pa kasnije mogu poslužiti i za digitalnu putovnicu proizvoda.",
+      "title": "Podaci s etikete za održavanje uključeni su uz svaki artikl.",
+      "p": "Sastav po dijelovima, upute za održavanje redoslijedom s etikete i zemlja podrijetla dio su svakog artikla, uz EAN svake veličine. Vaša web-trgovina može ih prikazati kao tekst ili kao simbole za održavanje u svom stilu. Polja prate pravila EU-a o označavanju tekstilnih proizvoda i kodove za održavanje prema ISO 3758, pa kasnije mogu poslužiti i za digitalnu putovnicu proizvoda.",
       "points": [
         "Sastav po dijelovima (vanjski materijal, podstava, punjenje, potplat) s postocima",
         "Upute za održavanje kao standardni kodovi, redoslijedom s etikete",
@@ -522,7 +550,7 @@
           },
           {
             "what": "Digitalna putovnica proizvoda",
-            "status": "Uskoro: delegirani akt za tekstil planiran je za 4. tromjesečje 2027.",
+            "status": "Predstoji: delegirani akt za tekstil planiran je za 4. tromjesečje 2027.",
             "basis": "Uredba (EU) 2024/1781 (ESPR)"
           }
         ],
@@ -932,8 +960,8 @@
       "videoTitle": "Pogledajte kako radi",
       "videoNote": "Na engleskom, s engleskim titlovima.",
       "flowEyebrow": "Kako funkcionira",
-      "flowTitle": "Kad svi strukturiraju podatke na isti način, svi pobjeđuju.",
-      "flowLead": "Danas kod gotovo svakog trgovca netko kopira tablice i iznova upisuje podatke o proizvodima za svaku marku, a svaka nova kolekcija je trka. S jednim standardom taj posao nestaje: uvedete ga jednom, a svi od njega imaju koristi godinama. Vrijeme je za bolji rad.",
+      "flowTitle": "Kad svaka strana strukturira podatke na isti način, svaka strana ima koristi.",
+      "flowLead": "Kod gotovo svakog trgovca netko kopira tablice i iznova upisuje podatke o proizvodima za svaku marku, pod vremenskim pritiskom sa svakom novom kolekcijom. Zajednički standard uklanja taj posao. Uvodi se jednom i godinama koristi svakoj strani. Vrijeme za kvalitetniji rad.",
       "flowCaption": "Što marka unosi, otvoreni standard u sredini i što trgovci dobivaju.",
       "flow": {
         "inTitle": "Ulaz",
@@ -965,28 +993,28 @@
           "p": "Nabavljači se prijave u vaš portal, zalijepe EAN kodove iz narudžbe i preuzmu točno ono što trebaju: jednu fotografiju, jedan artikl ili ZIP cijelog odabira.",
           "items": [
             "Pretraživanje i filtriranje po marki, sezoni, vrsti proizvoda i boji",
-            "Zalijepite popis EAN-ova i odmah vidite što postoji, a što nedostaje",
+            "Zalijepite popis EAN-ova kako biste vidjeli što je dostupno, a što nedostaje",
             "Original, web (2000 px) ili kvadrat, uz podatke o artiklima kao tablicu",
             "Vaše ime, logotip i domena: „Kestrel · {portal}”"
           ],
-          "link": "Pogledajte očima trgovca"
+          "link": "Pogledajte iz perspektive trgovca"
         },
         {
           "eyebrow": "API",
           "h": "Jedan API, isti za svaku marku.",
-          "p": "Softver trgovaca jednom preuzme sve, a zatim samo promjene, uključujući ono što povučete. Svaka fotografija stiže s pravima korištenja, datumom embarga i podrijetlom umjetne inteligencije.",
+          "p": "Softver trgovaca jednom dohvaća cijeli skup, a zatim samo promjene, uključujući povlačenja. Svaka fotografija uključuje prava korištenja, datum embarga i podrijetlo umjetne inteligencije.",
           "items": [
             "Najprije potpuna kopija, zatim samo promjene",
             "Pretraživanje po EAN-u, povezano s pravim artiklom i veličinom",
             "Web, kvadratna i minijaturna verzija; originali kad ih dopustite",
-            "Dobavljač softvera ugradi ga jednom i radi sa svakom markom"
+            "Dobavljač softvera implementira ga jednom i radi sa svakom markom"
           ],
           "link": "Pročitajte referencu API-ja"
         },
         {
           "eyebrow": "Vaši sustavi",
-          "h": "Radite kao i dosad.",
-          "p": "Standard određuje kako trgovci preuzimaju sadržaj. Kako vaš sadržaj dolazi na portal, birate sami: noćni uvoz s web-adrese, SFTP-a ili S3-a, mapa za izvoz ili alat obx za naredbeni redak.",
+          "h": "Vaš dosadašnji način rada ostaje.",
+          "p": "Standard određuje kako trgovci dohvaćaju sadržaj. Kako vaš sadržaj dolazi na portal, birate sami: noćni uvoz s web-adrese, SFTP-a ili S3-a, mapa za izvoz ili alat obx za naredbeni redak.",
           "items": [
             "Noćni uvoz s web-adrese, SFTP-a ili S3-a, bez koda",
             "Alat obx za Windows, macOS i Linux šalje samo promjene",
@@ -1008,46 +1036,49 @@
       ],
       "editions": [
         {
-          "tag": "Najjednostavnije",
-          "name": "Preko pružatelja usluge",
-          "runs": "Hosting tvrtka ili agencija vodi ga umjesto vas",
-          "need": "Ništa tehničko",
-          "setup": "Postavljaju ga zajedno s vama",
-          "cost": "Cjenik pružatelja usluge",
-          "cta": "Pogledajte pružatelje"
-        },
-        {
-          "tag": "Jedan klik",
-          "runs": "Cloudflare Workers s D1 i R2",
-          "need": "Cloudflare račun",
-          "setup": "Jedan klik, zatim čarobnjak za postavljanje",
-          "cost": "Paket Workers Paid, oko 5 dolara mjesečno",
-          "cta": "Instaliraj na Cloudflare"
-        },
-        {
-          "tag": "Kontejneri",
-          "runs": "Google Cloud Run ili bilo koji poslužitelj s Dockerom",
-          "need": "Google Cloud račun ili poslužitelj s Dockerom",
-          "setup": "Jedna skripta ili jedna Docker naredba",
-          "cost": "Plaćanje po korištenju na Cloud Runu ili vlastiti poslužitelj",
-          "cta": "Pokreni s Dockerom"
+          "tag": "Preporučeno",
+          "name": "Vlastiti poslužitelj u Europi",
+          "runs": "Poslužitelj kod europskog pružatelja usluge kao što je Hetzner (Njemačka), s Dockerom",
+          "need": "Poslužitelj i naziv domene",
+          "setup": "Jedna naredba, zatim čarobnjak za postavljanje",
+          "cost": "Poslužitelj koji iznajmljujete",
+          "cta": "Instaliraj u Europi"
         },
         {
           "tag": "Bez naredbi",
-          "runs": "Običan web hosting s PHP-om i bazom podataka",
+          "name": "Običan web hosting",
+          "runs": "Europski web hosting s PHP-om i bazom podataka, kao što su TransIP, Strato ili OVHcloud",
           "need": "FTP program",
           "setup": "Učitajte ZIP, zatim pokrenite instalacijski program",
           "cost": "Hosting koji već plaćate",
           "cta": "Instaliraj na web hosting"
+        },
+        {
+          "tag": "Najjednostavnije",
+          "name": "Hosta ga partner",
+          "runs": "Partner ga vodi umjesto vas",
+          "need": "Ništa tehničko",
+          "setup": "Partner ga postavlja zajedno s vama",
+          "cost": "Cjenik partnera",
+          "cta": "Pogledajte pružatelje"
+        },
+        {
+          "tag": "Ostali oblaci",
+          "name": "Cloudflare ili Google Cloud",
+          "runs": "Cloudflare Workers ili Google Cloud Run",
+          "need": "Cloudflare ili Google Cloud račun",
+          "setup": "Jedan klik ili jedna skripta",
+          "cost": "Cijene korištenja usluge",
+          "cta": "Instaliraj na drugi oblak"
         }
       ],
       "trustEyebrow": "Upravljanje",
       "trustTitle": "Otvoreni standard, a ne platforma.",
-      "trustLead": "Open Brand Exchange treba pripadati markama, trgovcima i dobavljačima softvera koji ga koriste, a ne jednoj tvrtki.",
+      "trustLead": "Open Brand Exchange zamišljen je da pripada markama, trgovcima i dobavljačima softvera koji ga koriste, a ne jednoj tvrtki.",
       "trust": [
         {
           "h": "Otvorena specifikacija",
-          "p": "Verzija 0.2, pod licencom CC-BY-4.0. Svatko je smije implementirati, i komercijalno."
+          "p": "Verzija 0.2, pod licencom CC-BY-4.0. Svatko je smije implementirati, uključujući u komercijalne svrhe."
         },
         {
           "h": "Vaši podaci ostaju vaši",
@@ -1066,7 +1097,7 @@
           "p": "Ranjivosti prijavite povjerljivo na {email}."
         },
         {
-          "h": "Privatnost na prvom mjestu",
+          "h": "Privatnost",
           "p": "Ova web-stranica ne postavlja kolačiće, ne koristi alate za praćenje i ništa ne učitava s drugih poslužitelja."
         }
       ],
@@ -1082,8 +1113,8 @@
       ],
       "faqTitle": "Što marke prvo pitaju",
       "faqLink": "Sva pitanja",
-      "closingTitle": "Neka trgovci sami preuzmu sadržaj.",
-      "closingP": "Postavite vlastiti portal ili nam recite nešto o svojim sustavima i trgovcima i pomozite oblikovati prvo izdanje.",
+      "closingTitle": "Omogućite trgovcima da vaš sadržaj dohvaćaju izravno.",
+      "closingP": "Postavite vlastiti portal. Ili nam opišite svoje sustave i trgovce te doprinesite prvom izdanju.",
       "closingMail": "Pišite nam",
       "rolesEyebrow": "Tko što radi",
       "rolesTitle": "Marke objavljuju. Trgovci primaju. Softver povezuje.",
@@ -1093,7 +1124,7 @@
           "h": "Marke",
           "p": "Objavite jednom, za svakog trgovca.",
           "items": [
-            "Besplatan softver ili pružatelj usluge koji sve odradi",
+            "Besplatan softver ili pružatelj usluge koji vodi cijeli postupak",
             "Krenite od vlastite Excel datoteke ili sustava",
             "Svi vaši trgovci odjednom",
             "Vi odlučujete tko što vidi",
@@ -1108,7 +1139,7 @@
           "items": [
             "Besplatno za trgovce",
             "Svaka marka u istom formatu",
-            "Zalijepite EAN-ove, dobijte prave fotografije",
+            "Zalijepite EAN-ove i primite odgovarajuće fotografije",
             "Materijali i održavanje spremni za web-trgovinu",
             "Prava korištenja i datumi embarga uz svaku fotografiju",
             "U pregledniku ili izravno u vašem softveru"
@@ -1125,16 +1156,16 @@
             "Najprije potpuna kopija, zatim samo promjene",
             "Besplatna oznaka „Kompatibilno s Open Brand Exchangeom”"
           ],
-          "cta": "Za portale i partnere"
+          "cta": "Povežite svoj sustav"
         }
       ],
       "portalsEyebrow": "Otvoreno za svaki portal",
-      "portalsTitle": "Već imate portal? Povežite ga sa standardom.",
+      "portalsTitle": "Postojeći portali mogu se povezati sa standardom.",
       "portalsLead": "Svaki portal ili sustav koji govori standardom radi sa svakim sustavom trgovca koji također govori standardom.",
       "portalTypes": [
         {
           "h": "Portali marki i B2B portali",
-          "p": "Dodajte OBX API uz ono što već radite i vaše marke dopiru do svakog sustava trgovca."
+          "p": "Dodajte OBX API uz svoje postojeće usluge kako bi vaše marke dosegnule svaki sustav trgovca."
         },
         {
           "h": "Portali fotografija i DAM sustavi",
@@ -1145,7 +1176,7 @@
           "p": "Objavite sastav vlakana, upute za održavanje, veličine i EAN-ove izravno iz sustava u kojem se nalaze."
         }
       ],
-      "portalsCta": "Kompatibilno ili partner",
+      "portalsCta": "Kako se povezati",
       "heroChecks": [
         "Besplatno za korištenje",
         "Svi vaši trgovci odjednom",
@@ -1181,7 +1212,7 @@
       ],
       "devQuickstart": "OBX za 10 minuta",
       "promptTitle": "Izgradite ga sa svojim AI asistentom",
-      "promptP": "Kopirajte upit u Claude, ChatGPT ili Cursor, ispunite dio u zagradama i pustite ga da napiše kod prema specifikaciji.",
+      "promptP": "Kopirajte upit u Claude, ChatGPT ili Cursor, dovršite dio u zagradama i neka asistent napiše kod prema specifikaciji.",
       "prompts": [
         {
           "h": "Izvoz iz vašeg sustava",
@@ -1194,7 +1225,17 @@
       ],
       "scopeLabel": "Kategorije",
       "scopeNow": "Verzija 0.2: odjeća, obuća, torbe i prtljaga",
-      "scopeNext": "Dom i sport: u razvoju za 0.3"
+      "scopeNext": "Dom i sport: u razvoju za 0.3",
+      "fairEyebrow": "Poštene cijene",
+      "fairTitle": "Plaćajte usluge, a ne pristup vlastitim podacima.",
+      "fairLead": "Razmjena podataka o proizvodima ne bi trebala ništa stajati po marki ni po trgovcu.",
+      "fairItems": [
+        "Trgovci dobivaju pristup besplatno.",
+        "Marke plaćaju samo vlastiti hosting ili biraju partnera.",
+        "Bez pretplate za pristup vlastitom sadržaju.",
+        "Plaćaju se usluge koje donose vrijednost: implementacija, automatizacija i integracije.",
+        "Otvoren format: promijenite hosting ili partnera kad god želite."
+      ]
     },
     "pages": {
       "brandsH1": "Postavite jednom. Za sve trgovce odjednom.",
@@ -1254,13 +1295,18 @@
     "certP": "Pošaljite nam JSON izvještaj i adresu svog testnog portala. Pokrećemo isti test i potvrđujemo rezultat. Od tada za svoj proizvod smijete reći „Kompatibilno s Open Brand Exchangeom”, za verziju koju ste testirali.",
     "certMail": "Pošaljite izvještaj",
     "partnerTitle": "3. Postanite službeni partner",
-    "partnerP": "Kompatibilni ste! Želite li da vas pronađu marke koje traže pružatelja usluge? Službeni partneri navedeni su s logotipom na stranicama partnera i hostinga, nose značku „Službeni partner” i preporučujemo ih markama koje od nas traže pružatelja usluge.",
+    "partnerP": "Službeni partneri navedeni su s logotipom na stranicama partnera i hostinga, nose značku „Službeni partner” i preporučujemo ih markama koje od nas traže pružatelja usluge.",
     "reqTitle": "Uvjeti, jednaki za sve",
     "tiersTitle": "Godišnja članarina",
     "tiers": [
       {
+        "name": "Vrlo mala",
+        "who": "1 osoba",
+        "price": "0 €"
+      },
+      {
         "name": "Mala",
-        "who": "do 49 zaposlenika",
+        "who": "od 2 do 49 zaposlenika",
         "price": "500 €"
       },
       {
@@ -1280,6 +1326,7 @@
     "mailSubject": "Službeni partner",
     "listTitle": "Pružatelji usluge",
     "feesNote": "Članarine stupaju na snagu nakon osnivanja zaklade. Do tada nitko ne plaća i ne šalju se računi; pišite nam kako biste iskazali interes.",
-    "interestCta": "Iskažite interes"
+    "interestCta": "Iskažite interes",
+    "publisherNote": "Transparentnost: ovu web-stranicu izdaje webRidge u ime {foundation}. webRidge je ovdje naveden i kao pružatelj usluge, prema istim kriterijima kao i svi ostali."
   }
 }

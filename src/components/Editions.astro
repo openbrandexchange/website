@@ -9,8 +9,9 @@ interface Props {
 const { lang } = Astro.props;
 const t = messages[lang];
 const h = t.site.home;
-const names = [h.editions[0].name, t.common.editionCloudflare, t.common.editionGoogle, t.common.editionHosting];
-const links = [url(lang, 'hosting', '#providers'), url(lang, 'hosting', '#cloudflare'), url(lang, 'hosting', '#cloud-run'), url(lang, 'hosting', '#web-hosting')];
+// Europe first: an own server (node-go with Docker), ordinary web hosting (node-php), a partner,
+// and the other clouds (node-ts on Cloudflare, node-go on Google Cloud Run).
+const links = [url(lang, 'hosting', '#europe'), url(lang, 'hosting', '#web-hosting'), url(lang, 'hosting', '#providers'), url(lang, 'hosting', '#other-clouds')];
 ---
 
 <ul class="editions">
@@ -18,7 +19,7 @@ const links = [url(lang, 'hosting', '#providers'), url(lang, 'hosting', '#cloudf
     h.editions.map((e, i) => (
       <li class:list={['edition', i === 0 && 'featured']}>
         <span class="edition-tag">{e.tag}</span>
-        <h3>{names[i]}</h3>
+        <h3>{e.name}</h3>
         <dl>
           {[e.runs, e.need, e.setup, e.cost].map((v, j) => (
             <div>

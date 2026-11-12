@@ -4,8 +4,8 @@
 import PageHero from '../components/PageHero.astro';
 import Providers from '../components/Providers.astro';
 import Icon from '../components/Icon.astro';
-import { messages, url, type Lang } from '../i18n';
-import { HELLO_EMAIL } from '../lib/org';
+import { format, messages, url, type Lang } from '../i18n';
+import { HELLO_EMAIL, orgVars } from '../lib/org';
 
 interface Props {
   lang: Lang;
@@ -120,5 +120,6 @@ const conformance = `${url(lang, 'developers')}#conformance`;
     <div class="cards">
       <Providers lang={lang} />
     </div>
+    <p class="small muted">{format(c.publisherNote, orgVars(lang))}</p>
   </div>
 </section>

@@ -20,7 +20,9 @@
     "yes": "Oui",
     "inDevelopment": "En développement",
     "available": "Disponible",
-    "footerContact": "Contact"
+    "footerContact": "Contact",
+    "madeInEu": "Fabriqué dans l'UE",
+    "builtInNl": "Conçu aux Pays-Bas"
   },
   "nav": {
     "brands": "Pour les marques",
@@ -44,7 +46,7 @@
     },
     "brands": {
       "title": "Pour les marques",
-      "description": "Votre propre portail pour vos revendeurs, une API standard et une publication automatique depuis votre PIM, votre ERP ou vos dossiers. Hébergé par vous gratuitement ou par un prestataire."
+      "description": "Un portail à vos couleurs pour vos revendeurs, une API standard et une publication automatique depuis votre PIM, votre ERP ou vos dossiers. Gratuit en auto-hébergement, ou disponible via un prestataire."
     },
     "automation": {
       "title": "Automatisation",
@@ -56,7 +58,7 @@
     },
     "retailers": {
       "title": "Pour les revendeurs",
-      "description": "Ce qu'un portail de marque vous apporte, une clé API pour votre logiciel et un e-mail prêt à envoyer aux marques qui n'y sont pas encore."
+      "description": "Ce qu'offre un portail de marque, un accès API pour votre propre logiciel et un e-mail prêt à envoyer aux marques qui ne participent pas encore."
     },
     "developers": {
       "title": "Développeurs",
@@ -154,14 +156,14 @@
   },
   "brands": {
     "h1": "Pour les marques",
-    "lead": "Vos revendeurs veulent vos visuels et vos données articles, idéalement reliés directement à leurs propres articles. Avec Open Brand Exchange, vous le mettez en place une fois, pour tous à la fois.",
+    "lead": "Les revendeurs ont besoin de vos visuels et de vos données articles, reliés à leurs propres articles. Avec Open Brand Exchange, vous le mettez en place une fois, pour tous les revendeurs à la fois.",
     "blocks": [
       {
         "h": "Un portail pour vos revendeurs",
-        "p": "Votre portail porte votre nom et votre identité : « Kestrel · {portal} », sur votre propre domaine si vous le souhaitez. Les revendeurs demandent l'accès, vous acceptez ou refusez.",
+        "p": "Votre portail porte votre nom et votre identité : « Kestrel · {portal} », sur votre propre domaine si vous le souhaitez. Les revendeurs demandent l'accès. Vous acceptez ou refusez chaque demande.",
         "items": [
           "Rechercher et filtrer par marque, saison, collection et type de produit",
-          "Coller une liste d'EAN et voir tout de suite ce qui existe et ce qui manque",
+          "Coller une liste d'EAN et voir ce qui est disponible et ce qui manque",
           "Télécharger une photo, un article ou un zip de toute une sélection",
           "Dans le format voulu : original, web (2000 px) ou carré",
           "Les données articles en tableur, avec matière et entretien"
@@ -169,17 +171,17 @@
       },
       {
         "h": "Une API standard pour leurs logiciels",
-        "p": "Les revendeurs équipés d'un logiciel reçoivent une clé API pour ce logiciel. Leur caisse, leur PIM ou leur boutique en ligne récupère tout une fois, puis seulement les changements.",
+        "p": "Les revendeurs qui utilisent un logiciel reçoivent une clé API. Leur logiciel de caisse, de PIM ou de boutique récupère l'ensemble une fois, puis uniquement les changements.",
         "items": [
-          "Recherche par EAN, pour que les visuels arrivent sur le bon article et la bonne taille",
-          "Les changements arrivent d'eux-mêmes, y compris ce que vous retirez",
-          "Droits d'utilisation, embargo et origine IA accompagnent chaque visuel",
-          "Développé une fois, cela fonctionne avec toutes les marques qui utilisent Open Brand Exchange"
+          "Recherche par EAN, pour que les visuels soient reliés au bon article et à la bonne taille",
+          "Les changements sont transmis automatiquement, y compris les retraits",
+          "Droits d'utilisation, embargo et origine IA sont fournis avec chaque visuel",
+          "Une seule implémentation fonctionne avec toutes les marques qui utilisent Open Brand Exchange"
         ]
       },
       {
         "h": "Envoi automatique",
-        "p": "Plus personne ne déplace de fichiers à la main. Votre portail va chercher votre export tout seul, ou vos propres systèmes l'envoient.",
+        "p": "Votre portail récupère votre export automatiquement, ou vos propres systèmes le transmettent.",
         "items": [
           "Import planifié depuis une adresse web, un serveur SFTP ou un bucket S3, sans code",
           "Un dossier publié automatiquement avec l'outil obx",
@@ -188,11 +190,11 @@
         ]
       },
       {
-        "h": "C'est à vous",
-        "p": "Open Brand Exchange n'est pas une plateforme à laquelle vous confiez votre marque. Vous faites tourner votre propre portail, ou vous le confiez à un prestataire.",
+        "h": "Vous restez propriétaire",
+        "p": "Open Brand Exchange est un standard, pas une plateforme. Vous exploitez votre propre portail, ou un prestataire l'exploite pour vous.",
         "items": [
           "L'auto-hébergement est gratuit : le logiciel est open source",
-          "Vous préférez déléguer ? Choisissez un prestataire, et changez quand vous voulez",
+          "Ou confiez-le à un prestataire, et changez de prestataire à tout moment",
           "Vous voyez qui télécharge quoi, par revendeur",
           "Vous décidez qui a accès, à quelles marques et si les originaux sont autorisés"
         ]
@@ -214,7 +216,7 @@
       },
       {
         "k": "Clés API",
-        "v": "des clés pour les logiciels de vos revendeurs : affichées une seule fois, faciles à renouveler ou révoquer"
+        "v": "des clés pour les logiciels de vos revendeurs : affichées une seule fois, renouvelables ou révocables à tout moment"
       },
       {
         "k": "Envoi automatique",
@@ -250,13 +252,13 @@
         "p": "Enregistrez-le en CSV UTF-8 et envoyez-le avec les photos dans votre portail, ou laissez le portail récupérer votre export chaque nuit."
       },
       {
-        "h": "C'est fait",
-        "p": "Vos revendeurs trouvent tout dans votre portail, et leurs logiciels récupèrent chaque changement d'eux-mêmes. Gratuitement."
+        "h": "Publié",
+        "p": "Vos revendeurs trouvent tout dans votre portail. Leurs logiciels reçoivent chaque changement automatiquement. Gratuitement."
       }
     ],
     "startTemplate": "Télécharger le modèle Excel",
-    "partnersTitle": "Ou confiez tout à un partenaire",
-    "partnersP": "Vous préférez ne pas le faire vous-même ? Un prestataire peut prendre en charge tout le processus. Photopilot, par exemple, propose un portail gratuit avec la connexion OBX, l'automatisation complète du processus et une intégration sur mesure avec votre ERP.",
+    "partnersTitle": "Ou travaillez avec un partenaire",
+    "partnersP": "Un prestataire peut prendre en charge l'ensemble du processus. Photopilot, par exemple, propose un portail gratuit avec la connexion OBX, l'automatisation complète du processus et une intégration sur mesure avec votre ERP.",
     "partnersCta": "Voir les prestataires"
   },
   "automation": {
@@ -356,8 +358,8 @@
   "hosting": {
     "h1": "Hébergement",
     "lead": "Un portail, c'est une entreprise de marque sur un serveur. Vous choisissez comment le faire tourner, de l'entièrement délégué à l'entièrement fait maison. Ci-dessous, du plus simple au plus technique.",
-    "p1Title": "1. Avec un prestataire",
-    "p1P": "Le plus simple : une entreprise héberge votre portail, le maintient à jour et vous aide à le configurer. Comme chaque portail parle le même standard, vous pourrez plus tard passer à un autre prestataire ou à votre propre hébergement.",
+    "p1Title": "3. Un partenaire l'héberge pour vous",
+    "p1P": "Vous préférez ne pas l'héberger vous-même ? Des partenaires peuvent héberger et maintenir le portail pour vous.",
     "fieldBased": "Implanté en",
     "fieldLanguages": "Langues",
     "fieldStatus": "Open Brand Exchange",
@@ -405,17 +407,43 @@
     "domainP": "Utilisez un sous-domaine comme revendeurs.votremarque.fr ou b2b.votremarque.fr. Les revendeurs voient alors votre nom, et votre adresse reste la même si vous changez d'hébergement.",
     "compareTitle": "Trois éditions, un seul portail",
     "compareP": "Les trois éditions font la même chose et partagent la même administration et le même espace revendeurs. Choisissez celle qui convient à votre hébergement ; vous pourrez changer plus tard.",
-    "compareLink": "Voir les implémentations"
+    "compareLink": "Voir les implémentations",
+    "heroTitle": "Votre portail, où vous voulez.",
+    "heroLead": "Le logiciel est gratuit. Vous choisissez où il tourne, et vous pouvez déménager à tout moment.",
+    "heroChecks": [
+      "Logiciel gratuit, vous ne payez que l'hébergement",
+      "Recommandé : en Europe, par exemple chez Hetzner (Allemagne)",
+      "Le même portail partout, vous pouvez donc toujours changer",
+      "Vous préférez ne pas vous en occuper ? Un partenaire l'héberge pour vous"
+    ],
+    "euCta": "Votre portail en Europe",
+    "euTitle": "1. Votre propre serveur en Europe (recommandé)",
+    "euP": "Un petit serveur chez un hébergeur européen suffit à la plupart des marques. Le guide ci-dessous utilise Hetzner, qui a des centres de données en Allemagne et en Finlande. Tout serveur qui fait tourner Docker fonctionne de la même manière.",
+    "euSteps": [
+      "Créez un serveur chez Hetzner à Nuremberg, Falkenstein ou Helsinki, avec les sauvegardes activées.",
+      "Faites pointer votre domaine, par exemple images.votremarque.fr, vers le serveur.",
+      "Installez Docker et démarrez le portail avec une seule commande. Le HTTPS est configuré automatiquement.",
+      "Ouvrez votre domaine et suivez l'assistant de configuration.",
+      "Facultatif : stockez les images dans Hetzner Object Storage, au même emplacement.",
+      "Planifiez une sauvegarde chaque nuit. Une mise à jour tient en une commande."
+    ],
+    "euGuide": "Guide pas à pas : votre portail chez Hetzner",
+    "euData": "Avec le serveur et le stockage dans un emplacement de l'UE, votre catalogue, vos images et votre base de données sont stockés dans l'UE.",
+    "webTitle": "2. Un hébergement web classique",
+    "webP": "L'édition PHP fonctionne sur un hébergement web européen classique avec PHP et une base de données, par exemple chez TransIP, Strato ou OVHcloud. Aucune commande nécessaire :",
+    "altTitle": "4. Autres clouds",
+    "altP": "Le même portail fonctionne aussi sur Cloudflare Workers et sur Google Cloud Run. Choisissez une région en Europe lorsque le service en propose une.",
+    "partnerLink": "Voir les partenaires"
   },
   "retailers": {
     "h1": "Pour les revendeurs",
-    "lead": "Les marques qui utilisent Open Brand Exchange livrent leurs visuels et leurs données articles d'une seule et même manière. Vous ne faites que les recevoir, gratuitement : dans le portail de chaque marque depuis votre navigateur, ou via une seule API directement dans votre logiciel.",
-    "portalTitle": "Ce qu'un portail de marque vous apporte",
+    "lead": "Les marques qui utilisent Open Brand Exchange livrent leurs visuels et leurs données articles dans un format unique et cohérent. Il vous suffit de les recevoir, gratuitement : dans le portail de chaque marque depuis votre navigateur, ou via une seule API directement dans votre logiciel.",
+    "portalTitle": "Ce qu'offre un portail de marque",
     "portalP": "Chaque marque fait tourner son propre portail, à son nom : par exemple « Kestrel · {portal} ».",
     "portal": [
       {
         "h": "Demander l'accès",
-        "p": "Demandez l'accès sur le portail de la marque. La marque accepte et vous recevez une invitation par e-mail."
+        "p": "Demandez l'accès sur le portail de la marque. Une fois la demande acceptée par la marque, vous recevez une invitation par e-mail."
       },
       {
         "h": "Rechercher et filtrer",
@@ -423,10 +451,10 @@
       },
       {
         "h": "Coller votre liste d'EAN",
-        "p": "Collez les EAN de votre caisse et voyez immédiatement quels articles sont disponibles et lesquels manquent encore."
+        "p": "Collez les EAN de votre caisse pour voir quels articles sont disponibles et lesquels manquent."
       },
       {
-        "h": "Télécharger comme vous voulez",
+        "h": "Options de téléchargement",
         "p": "Une photo, un article, votre sélection ou tout un filtre en zip. Original (si la marque l'autorise), web ou carré."
       },
       {
@@ -434,28 +462,28 @@
         "p": "EAN par taille, couleur, matière, entretien et description, prêts pour votre propre système."
       },
       {
-        "h": "Ce qui est autorisé",
-        "p": "Les droits d'utilisation, la date d'embargo et l'éventuel usage de l'IA figurent avec chaque visuel."
+        "h": "Droits d'utilisation",
+        "p": "Chaque visuel indique ses droits d'utilisation, sa date d'embargo et s'il a été créé avec l'IA."
       }
     ],
     "apiTitle": "Une clé API pour votre logiciel",
-    "apiP": "Votre PIM, votre caisse ou votre boutique en ligne récupère-t-il les visuels tout seul ? Demandez alors une clé API pour votre logiciel. Il récupère d'abord tout, puis seulement les changements, y compris ce que la marque retire. Les visuels sont rattachés à vos articles par EAN.",
-    "apiDev": "Pour votre développeur : voici à quoi cela ressemble.",
+    "apiP": "Votre logiciel de PIM, de caisse ou de boutique récupère-t-il les visuels automatiquement ? Demandez alors une clé API pour ce logiciel. Il récupère d'abord l'ensemble, puis uniquement les changements, y compris les retraits effectués par la marque. Les visuels sont rattachés à vos articles par EAN.",
+    "apiDev": "Pour votre développeur : un exemple.",
     "toolsTitle": "Quels logiciels le prennent en charge",
-    "toolsP": "Open Brand Exchange est un standard ouvert : n'importe quel logiciel peut le prendre en charge. Photopilot l'intègre à son logiciel pour les revendeurs, et d'autres éditeurs peuvent faire de même. Aucun logiciel particulier n'est nécessaire : un navigateur suffit.",
+    "toolsP": "Open Brand Exchange est un standard ouvert que tout logiciel peut prendre en charge. Photopilot l'intègre à son logiciel pour les revendeurs. D'autres éditeurs peuvent faire de même. Aucun logiciel particulier n'est nécessaire : un navigateur suffit.",
     "toolsLink": "Spécification pour les développeurs",
     "findTitle": "Trouver une marque",
-    "findP": "Les marques qui choisissent d'être listées figurent dans l'annuaire. Si une marque vous donne simplement l'adresse de son portail, cela fonctionne aussi.",
+    "findP": "Les marques qui choisissent d'être listées figurent dans l'annuaire. Une marque peut aussi vous communiquer directement l'adresse de son portail.",
     "findLink": "Voir l'annuaire",
-    "kitTitle": "Votre marque n'y est pas ? Envoyez-lui ceci",
-    "kitP": "Le moyen le plus rapide de convaincre une marque, c'est que les magasins le demandent. Copiez cet e-mail, remplissez les crochets et envoyez-le à votre contact ou à votre commercial chez la marque.",
+    "kitTitle": "Si une marque ne participe pas encore, envoyez-lui cet e-mail",
+    "kitP": "Les marques adhèrent plus rapidement lorsque leurs revendeurs le demandent. Copiez cet e-mail, complétez les parties entre crochets et envoyez-le à votre contact ou à votre commercial chez la marque.",
     "kitEnglish": "Anglais (pour les marques internationales)",
     "kitDownload": "Télécharger en fichier texte",
     "kitMore": "D'autres documents, comme la brochure pour les revendeurs, se trouvent dans les téléchargements.",
     "label": {
       "eyebrow": "Données articles",
-      "title": "Ce qui figure sur l'étiquette accompagne chaque article.",
-      "p": "La composition par partie, les consignes d'entretien dans l'ordre de l'étiquette et le pays de fabrication font partie de chaque article, avec l'EAN de chaque taille. Votre boutique les affiche en texte ou sous forme de symboles d'entretien, dans son propre style. Les champs suivent les règles européennes d'étiquetage des textiles et les codes d'entretien de la norme ISO 3758 ; ils pourront donc aussi alimenter plus tard un passeport numérique des produits.",
+      "title": "Les informations de l'étiquette d'entretien sont fournies avec chaque article.",
+      "p": "La composition par partie, les consignes d'entretien dans l'ordre de l'étiquette et le pays d'origine font partie de chaque article, avec l'EAN de chaque taille. Votre boutique peut les afficher en texte ou sous forme de symboles d'entretien, dans son propre style. Les champs suivent les règles européennes d'étiquetage des textiles et les codes d'entretien de la norme ISO 3758 ; ils pourront donc aussi alimenter plus tard un passeport numérique des produits.",
       "points": [
         "Composition par partie (tissu principal, doublure, garnissage, semelle) avec pourcentages",
         "Consignes d'entretien sous forme de codes standard, dans l'ordre de l'étiquette",
@@ -932,8 +960,8 @@
       "videoTitle": "Voir comment ça marche",
       "videoNote": "En anglais, avec sous-titres en anglais.",
       "flowEyebrow": "Comment ça marche",
-      "flowTitle": "Quand tout le monde structure les données de la même façon, tout le monde y gagne.",
-      "flowLead": "Aujourd'hui, chez presque tous les revendeurs, quelqu'un copie des tableurs et ressaisit les données produit pour chaque marque, et chaque nouvelle collection est une course. Avec un seul standard, ce travail disparaît : on le met en place une fois, et tout le monde en profite pendant des années. Place à un meilleur travail.",
+      "flowTitle": "Quand chaque acteur structure les données de la même façon, chaque acteur en bénéficie.",
+      "flowLead": "Chez presque tous les revendeurs, quelqu'un copie des tableurs et ressaisit les données produit pour chaque marque, sous pression à chaque nouvelle collection. Un standard commun supprime ce travail. Il est mis en place une fois et profite à chaque acteur pendant des années. Place à un travail plus utile.",
       "flowCaption": "Ce qu'une marque apporte, le standard ouvert au milieu, et ce que les revendeurs reçoivent.",
       "flow": {
         "inTitle": "Entrée",
@@ -965,7 +993,7 @@
           "p": "Les acheteurs se connectent à votre portail, collent les EAN de leur commande et téléchargent exactement ce qu'il leur faut : une photo, un article ou le zip de toute une sélection.",
           "items": [
             "Recherche et filtres par marque, saison, type de produit et couleur",
-            "Collez une liste d'EAN et voyez tout de suite ce qui existe et ce qui manque",
+            "Collez une liste d'EAN pour voir ce qui est disponible et ce qui manque",
             "Original, web (2000 px) ou carré, et les données articles en tableur",
             "Votre nom, votre logo et votre domaine : « Kestrel · {portal} »"
           ],
@@ -974,19 +1002,19 @@
         {
           "eyebrow": "API",
           "h": "Une seule API, la même pour chaque marque.",
-          "p": "Les logiciels des revendeurs récupèrent tout une fois, puis seulement les changements, y compris ce que vous retirez. Chaque visuel arrive avec ses droits d'utilisation, sa date d'embargo et son origine IA.",
+          "p": "Les logiciels des revendeurs récupèrent l'ensemble une fois, puis uniquement les changements, y compris les retraits. Chaque visuel est fourni avec ses droits d'utilisation, sa date d'embargo et son origine IA.",
           "items": [
             "D'abord une copie complète, ensuite uniquement les changements",
             "Recherche par EAN, rattachée au bon article et à la bonne taille",
             "Versions web, carrée et miniature ; les originaux si vous l'autorisez",
-            "Développée une fois par un éditeur, elle fonctionne avec toutes les marques"
+            "Un éditeur de logiciel l'implémente une fois, et cela fonctionne avec toutes les marques"
           ],
           "link": "Lire la référence de l'API"
         },
         {
           "eyebrow": "Vos systèmes",
-          "h": "Continuez à travailler comme aujourd'hui.",
-          "p": "Le standard porte sur la façon dont les revendeurs récupèrent les contenus. Pour alimenter le portail, c'est vous qui choisissez : un import chaque nuit depuis une adresse web, SFTP ou S3, un dossier d'export ou l'outil en ligne de commande obx.",
+          "h": "Votre façon de travailler actuelle reste en place.",
+          "p": "Le standard définit la façon dont les revendeurs récupèrent les contenus. La manière dont vos contenus arrivent dans le portail relève de votre choix : un import chaque nuit depuis une adresse web, SFTP ou S3, un dossier d'export ou l'outil en ligne de commande obx.",
           "items": [
             "Import chaque nuit depuis une adresse web, SFTP ou S3, sans code",
             "L'outil obx pour Windows, macOS et Linux n'envoie que ce qui a changé",
@@ -1008,42 +1036,45 @@
       ],
       "editions": [
         {
-          "tag": "Le plus simple",
-          "name": "Chez un prestataire",
-          "runs": "Un hébergeur ou une agence le fait tourner pour vous",
-          "need": "Aucune compétence technique",
-          "setup": "Le prestataire l'installe avec vous",
-          "cost": "Les tarifs du prestataire",
-          "cta": "Voir les prestataires"
-        },
-        {
-          "tag": "En un clic",
-          "runs": "Cloudflare Workers, avec D1 et R2",
-          "need": "Un compte Cloudflare",
-          "setup": "Un clic, puis l'assistant de configuration",
-          "cost": "Offre Workers Paid, environ 5 dollars par mois",
-          "cta": "Installer sur Cloudflare"
-        },
-        {
-          "tag": "Conteneurs",
-          "runs": "Google Cloud Run, ou tout serveur avec Docker",
-          "need": "Un compte Google Cloud ou un hôte Docker",
-          "setup": "Un script ou une commande Docker",
-          "cost": "À l'usage sur Cloud Run, ou votre propre serveur",
-          "cta": "Installer avec Docker"
+          "tag": "Recommandé",
+          "name": "Votre propre serveur en Europe",
+          "runs": "Un serveur chez un hébergeur européen comme Hetzner (Allemagne), avec Docker",
+          "need": "Un serveur et un nom de domaine",
+          "setup": "Une commande, puis l'assistant de configuration",
+          "cost": "Le serveur que vous louez",
+          "cta": "Installer en Europe"
         },
         {
           "tag": "Sans commande",
-          "runs": "Un hébergement web classique avec PHP et une base de données",
+          "name": "Un hébergement web classique",
+          "runs": "Un hébergement web européen avec PHP et une base de données, comme TransIP, Strato ou OVHcloud",
           "need": "Un logiciel FTP",
           "setup": "Envoyez un zip, puis lancez l'installateur",
           "cost": "L'hébergement que vous payez déjà",
           "cta": "Installer sur un hébergement web"
+        },
+        {
+          "tag": "Le plus simple",
+          "name": "Hébergé par un partenaire",
+          "runs": "Un partenaire le fait tourner pour vous",
+          "need": "Aucune compétence technique",
+          "setup": "Le partenaire l'installe avec vous",
+          "cost": "Les tarifs du partenaire",
+          "cta": "Voir les prestataires"
+        },
+        {
+          "tag": "Autres clouds",
+          "name": "Cloudflare ou Google Cloud",
+          "runs": "Cloudflare Workers, ou Google Cloud Run",
+          "need": "Un compte Cloudflare ou Google Cloud",
+          "setup": "Un clic ou un script",
+          "cost": "Les tarifs d'usage du service",
+          "cta": "Installer sur un autre cloud"
         }
       ],
       "trustEyebrow": "Gouvernance",
       "trustTitle": "Un standard ouvert, pas une plateforme.",
-      "trustLead": "Open Brand Exchange doit appartenir aux marques, aux revendeurs et aux éditeurs de logiciels qui l'utilisent, et non à une seule entreprise.",
+      "trustLead": "Open Brand Exchange a vocation à appartenir aux marques, aux revendeurs et aux éditeurs de logiciels qui l'utilisent, et non à une seule entreprise.",
       "trust": [
         {
           "h": "Spécification ouverte",
@@ -1066,7 +1097,7 @@
           "p": "Signalez les vulnérabilités en toute confidentialité à {email}."
         },
         {
-          "h": "Confidentialité d'abord",
+          "h": "Confidentialité",
           "p": "Ce site ne dépose aucun cookie, n'utilise aucun traceur et ne charge rien depuis d'autres serveurs."
         }
       ],
@@ -1082,8 +1113,8 @@
       ],
       "faqTitle": "Les premières questions des marques",
       "faqLink": "Toutes les questions",
-      "closingTitle": "Laissez vos revendeurs se servir eux-mêmes.",
-      "closingP": "Mettez en place votre propre portail, ou parlez-nous de vos systèmes et de vos revendeurs pour contribuer à la première version.",
+      "closingTitle": "Permettez aux revendeurs de récupérer vos contenus directement.",
+      "closingP": "Mettez en place votre propre portail. Ou présentez-nous vos systèmes et vos revendeurs, et contribuez à la première version.",
       "closingMail": "Écrivez-nous",
       "rolesEyebrow": "Qui fait quoi",
       "rolesTitle": "Les marques publient. Les revendeurs reçoivent. Les logiciels se connectent.",
@@ -1093,7 +1124,7 @@
           "h": "Marques",
           "p": "Publiez une fois, pour chaque revendeur.",
           "items": [
-            "Logiciel gratuit, ou un prestataire qui s'occupe de tout",
+            "Logiciel gratuit, ou un prestataire qui prend en charge l'ensemble du processus",
             "Partez de votre propre fichier Excel ou système",
             "Tous vos revendeurs d'un coup",
             "Vous décidez qui voit quoi",
@@ -1108,7 +1139,7 @@
           "items": [
             "Gratuit pour les revendeurs",
             "Chaque marque dans le même format",
-            "Collez des EAN, obtenez les bons visuels",
+            "Collez des EAN pour recevoir les visuels correspondants",
             "Matières et entretien prêts pour la boutique en ligne",
             "Droits d'utilisation et dates d'embargo avec chaque visuel",
             "Dans le navigateur, ou directement dans votre logiciel"
@@ -1125,16 +1156,16 @@
             "D'abord une copie complète, ensuite seulement les changements",
             "Label gratuit « Compatible avec Open Brand Exchange »"
           ],
-          "cta": "Pour les portails et partenaires"
+          "cta": "Connectez votre système"
         }
       ],
       "portalsEyebrow": "Ouvert à tous les portails",
-      "portalsTitle": "Vous avez déjà un portail ? Connectez-le au standard.",
+      "portalsTitle": "Les portails existants peuvent se connecter au standard.",
       "portalsLead": "Tout portail ou système qui parle le standard fonctionne avec chaque système de revendeur qui le parle aussi.",
       "portalTypes": [
         {
           "h": "Portails de marque et B2B",
-          "p": "Ajoutez l'API OBX à ce que vous faites déjà, et vos marques atteignent chaque système de revendeur."
+          "p": "Ajoutez l'API OBX à vos services existants, afin que vos marques atteignent chaque système de revendeur."
         },
         {
           "h": "Portails d'images et DAM",
@@ -1145,7 +1176,7 @@
           "p": "Publiez composition en fibres, consignes d'entretien, tailles et EAN directement depuis le système qui les contient."
         }
       ],
-      "portalsCta": "Compatible ou partenaire",
+      "portalsCta": "Comment se connecter",
       "heroChecks": [
         "Gratuit à utiliser",
         "Tous vos revendeurs d'un coup",
@@ -1181,7 +1212,7 @@
       ],
       "devQuickstart": "OBX en 10 minutes",
       "promptTitle": "Construisez-le avec votre assistant IA",
-      "promptP": "Copiez un prompt dans Claude, ChatGPT ou Cursor, complétez la partie entre crochets, et laissez-le écrire le code selon la spécification.",
+      "promptP": "Copiez un prompt dans Claude, ChatGPT ou Cursor, complétez la partie entre crochets, et laissez l'assistant écrire le code selon la spécification.",
       "prompts": [
         {
           "h": "Exporter depuis votre système",
@@ -1194,7 +1225,17 @@
       ],
       "scopeLabel": "Catégories",
       "scopeNow": "Version 0.2 : mode, chaussures, sacs et bagagerie",
-      "scopeNext": "Maison et sport : en développement pour la 0.3"
+      "scopeNext": "Maison et sport : en développement pour la 0.3",
+      "fairEyebrow": "Des prix justes",
+      "fairTitle": "Payez des services, pas l'accès à vos propres données.",
+      "fairLead": "Échanger des données produit ne devrait rien coûter par marque ni par revendeur.",
+      "fairItems": [
+        "Les revendeurs ont accès gratuitement.",
+        "Les marques ne paient que leur propre hébergement, ou choisissent un partenaire.",
+        "Pas d'abonnement pour accéder à votre propre contenu.",
+        "Les services payants sont ceux qui apportent de la valeur : mise en œuvre, automatisation et intégrations.",
+        "Un format ouvert : changez d'hébergement ou de partenaire quand vous le souhaitez."
+      ]
     },
     "pages": {
       "brandsH1": "Une seule mise en place. Pour tous vos revendeurs à la fois.",
@@ -1254,13 +1295,18 @@
     "certP": "Envoyez-nous le rapport JSON et l'adresse de votre portail de test. Nous lançons le même test et confirmons le résultat. Dès lors, vous pouvez dire que votre produit est « Compatible avec Open Brand Exchange », pour la version testée.",
     "certMail": "Envoyer votre rapport",
     "partnerTitle": "3. Devenez partenaire officiel",
-    "partnerP": "Vous êtes compatible ! Vous voulez que les marques qui cherchent un prestataire vous trouvent ? Les partenaires officiels figurent avec leur logo sur les pages partenaires et hébergement, portent le badge « Partenaire officiel » et sont recommandés aux marques qui nous demandent un prestataire.",
+    "partnerP": "Les partenaires officiels figurent avec leur logo sur les pages partenaires et hébergement, portent le badge « Partenaire officiel » et sont recommandés aux marques qui nous demandent un prestataire.",
     "reqTitle": "Les conditions, les mêmes pour tous",
     "tiersTitle": "Cotisation annuelle",
     "tiers": [
       {
+        "name": "Très petite",
+        "who": "1 personne",
+        "price": "0 €"
+      },
+      {
         "name": "Petite",
-        "who": "jusqu'à 49 salariés",
+        "who": "de 2 à 49 salariés",
         "price": "500 €"
       },
       {
@@ -1280,6 +1326,7 @@
     "mailSubject": "Partenaire officiel",
     "listTitle": "Prestataires",
     "feesNote": "Les cotisations prendront effet une fois la fondation créée. D'ici là, personne ne paie et aucune facture n'est envoyée ; écrivez-nous pour manifester votre intérêt.",
-    "interestCta": "Manifester votre intérêt"
+    "interestCta": "Manifester votre intérêt",
+    "publisherNote": "Transparence : ce site est publié par webRidge au nom de l'{foundation}. webRidge figure également ici en tant que prestataire, selon les mêmes critères que tous les autres."
   }
 }

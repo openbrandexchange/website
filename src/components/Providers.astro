@@ -15,6 +15,8 @@ const statusLabel: Record<string, string> = {
   in_development: t.common.inDevelopment,
   available: t.common.available,
 };
+// Optional ✓ points per language, with the same fallback as the texts (reader's language, then en).
+const pointsFor = (p: { points?: Record<string, string[]> }): string[] => p.points?.[lang] ?? p.points?.en ?? [];
 const logoFiles = import.meta.glob<{ default: ImageMetadata }>('../assets/providers/*', { eager: true });
 const logoSrc = async (file: string) => {
   const mod = logoFiles[`../assets/providers/${file}`];
@@ -39,6 +41,7 @@ const providers = await Promise.all(
             )}
             <h3 id={`provider-${p.id}`}>{p.name}</h3>
             <p>{localized(p.offers, lang)}</p>
+            {pointsFor(p).length > 0 && <ul class="checks">{pointsFor(p).map((pt) => <li>{pt}</li>)}</ul>}
             <dl>
               <dt>{c.fieldBased}</dt>
               <dd>{countryName(lang, p.based_in)}</dd>

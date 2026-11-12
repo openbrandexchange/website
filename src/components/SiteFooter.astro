@@ -1,5 +1,6 @@
 ---
 import Logo from './Logo.astro';
+import EuBadge from './EuBadge.astro';
 import { messages, repo, url, type Lang, type PageKey } from '../i18n';
 import { HELLO_EMAIL, initiativeLine } from '../lib/org';
 
@@ -33,6 +34,7 @@ const columns = [
       <div class="footer-brand">
         <a class="logo" href={url(lang, 'home')} aria-label={t.common.home}><Logo size={30} /></a>
         <p>{f.tagline}</p>
+        <EuBadge lang={lang} />
         <p class="small">
           {t.common.footerContact}: <a href={`mailto:${HELLO_EMAIL}`}>{HELLO_EMAIL}</a>
         </p>

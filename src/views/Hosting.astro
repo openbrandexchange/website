@@ -3,10 +3,10 @@ import Code from '../components/Code.astro';
 import PageHero from '../components/PageHero.astro';
 import DocSection from '../components/DocSection.astro';
 import Editions from '../components/Editions.astro';
+import Providers from '../components/Providers.astro';
 import Icon from '../components/Icon.astro';
 import { messages, repo, url, type Lang } from '../i18n';
 import * as s from '../data/snippets';
-import Providers from '../components/Providers.astro';
 
 interface Props {
   lang: Lang;
@@ -22,10 +22,10 @@ const env: [string, string][] = [
 ];
 ---
 
-<PageHero eyebrow={t.nav.hosting} title={t.site.home.editionsTitle} lead={c.lead}>
+<PageHero eyebrow={t.nav.hosting} title={c.heroTitle} lead={c.heroLead}>
   <Fragment slot="actions">
-    <a class="button primary lg" href="#providers">{c.p1Title.replace(/^\d+\.\s*/, '')} <Icon name="arrow" class="arrow" /></a>
-    <a class="button secondary lg" href="#one-click">{c.p2Title.replace(/^\d+\.\s*/, '')}</a>
+    <ul class="checks hero-checks">{c.heroChecks.map((item) => <li>{item}</li>)}</ul>
+    <a class="button primary lg" href="#europe">{c.euCta} <Icon name="arrow" class="arrow" /></a>
   </Fragment>
 </PageHero>
 
@@ -39,33 +39,44 @@ const env: [string, string][] = [
   </div>
 </section>
 
-<section class="band" aria-labelledby="providers">
+
+
+<section class="band" aria-labelledby="europe">
   <div class="wrap">
     <header class="section-head">
-      <h2 id="providers">{c.p1Title}</h2>
-      <p class="lead">{c.p1P}</p>
+      <h2 id="europe">{c.euTitle}</h2>
+      <p class="lead">{c.euP}</p>
     </header>
-    <div class="cards">
-      <Providers lang={lang} />
-      <article class="card accent" aria-labelledby="become-provider">
-        <h3 id="become-provider">{c.listTitle}</h3>
-        <p>{c.listP}</p>
-        <ul>{c.listItems.map((i) => <li>{i}</li>)}</ul>
-        <p class="small">
-          {c.listHow} <a href={url(lang, 'partners')}>{t.partners.partnerCta}</a>
-        </p>
-      </article>
-    </div>
+    <ol class="steps steps-row steps-three">
+      {c.euSteps.map((step) => <li>{step}</li>)}
+    </ol>
+    <p class="actions">
+      <a class="button primary" href={repo('node-go', '/blob/main/docs/hosting/hetzner.md')}>{c.euGuide} <Icon name="arrow" class="arrow" /></a>
+    </p>
+    <p class="note">{c.euData}</p>
   </div>
 </section>
 
-<section class="band band-alt" aria-labelledby="one-click">
+<section class="band band-alt">
+  <div class="wrap">
+    <DocSection id="web-hosting" title={c.webTitle}>
+      <p>{c.webP}</p>
+      <ol>{c.phpSteps.map((st) => <li>{st}</li>)}</ol>
+      <p class="small"><a href={repo('node-php', '/releases/latest')}>{c.phpDownload}</a> · <a href={repo('node-php')}>openbrandexchange/node-php</a></p>
+    </DocSection>
+    <DocSection id="providers" title={c.p1Title}>
+      <p>{c.p1P} <a href={url(lang, 'partners')}>{c.partnerLink}</a></p>
+      <div class="cards"><Providers lang={lang} /></div>
+    </DocSection>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="other-clouds">
   <div class="wrap">
     <header class="section-head">
-      <h2 id="one-click">{c.p2Title}</h2>
-      <p class="lead">{c.p2P}</p>
+      <h2 id="other-clouds">{c.altTitle}</h2>
+      <p class="lead">{c.altP}</p>
     </header>
-
     <DocSection id="cloudflare" title={t.common.editionCloudflare}>
       <p>{c.cfP}</p>
       <p>
@@ -80,17 +91,12 @@ const env: [string, string][] = [
       <p class="small"><a href={repo('node-go')}>openbrandexchange/node-go</a> · <a href="#docker">Docker</a></p>
     </DocSection>
 
-    <DocSection id="web-hosting" title={t.common.editionHosting}>
-      <p>{c.phpP}</p>
-      <ol>{c.phpSteps.map((st) => <li>{st}</li>)}</ol>
-      <p class="small"><a href={repo('node-php', '/releases/latest')}>{c.phpDownload}</a> · <a href={repo('node-php')}>openbrandexchange/node-php</a></p>
-    </DocSection>
   </div>
 </section>
 
 <section class="band">
   <div class="wrap">
-    <DocSection id="docker" title={c.p3Title}>
+    <DocSection id="docker" title={c.p3Title.replace(/^\d+\.\s*/, '')}>
       <p>{c.p3P}</p>
       <Code code={s.dockerRun} />
       <p>{c.composeP}</p>

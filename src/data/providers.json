@@ -1,5 +1,5 @@
 {
- "note": "Official partners, shown on /hosting and /partners. Listing requires a passed conformance test and the partner membership (see /partners); the criteria are the same for everyone, listed alphabetically by name. Texts are per language with fallback: reader's language, then en, then the first available. Optional logo: two PNG or SVG files in src/assets/providers/, one for light and one for dark backgrounds.",
+ "note": "Official partners, shown on /hosting and /partners. Listing requires a passed conformance test and the partner membership (see /partners); the criteria are the same for everyone, listed alphabetically by name. Texts are per language with fallback: reader's language, then en, then the first available. Optional logo: two PNG or SVG files in src/assets/providers/, one for light and one for dark backgrounds. Optional points: short ✓ lines per language, same fallback.",
  "providers": [
   {
    "id": "photopilot",
@@ -11,16 +11,82 @@
     "en"
    ],
    "offers": {
-    "nl": "Productfotografie-software voor mode en lifestyle. Biedt een gratis merkportaal met OBX-koppeling, volledige automatisering van het proces en een koppeling op maat met je ERP.",
-    "en": "Product photography software for fashion and lifestyle. Offers a free brand portal with the OBX connection, full automation of the process and a custom integration with your ERP.",
-    "de": "Software für Produktfotografie in Mode und Lifestyle. Bietet ein kostenloses Markenportal mit OBX-Anbindung, die vollständige Automatisierung des Prozesses und eine maßgeschneiderte Anbindung an Ihr ERP.",
-    "fr": "Logiciel de photographie produit pour la mode et le lifestyle. Propose un portail de marque gratuit avec la connexion OBX, l'automatisation complète du processus et une intégration sur mesure avec votre ERP."
+    "nl": "Productfotografie-software voor merken. Gratis merkportaal met OBX-koppeling, volledige procesautomatisering en een koppeling op maat met je ERP.",
+    "en": "Product photography software for brands. A free brand portal with the OBX connection, full process automation and a custom ERP integration.",
+    "de": "Software für Produktfotografie für Marken. Ein kostenloses Markenportal mit OBX-Anbindung, vollständige Prozessautomatisierung und eine maßgeschneiderte ERP-Anbindung.",
+    "fr": "Logiciel de photographie produit pour les marques. Un portail de marque gratuit avec la connexion OBX, l'automatisation complète du processus et une intégration ERP sur mesure."
    },
    "obx_status": "in_development",
    "data_export": true,
    "logo": {
     "light": "photopilot-on-light.png",
     "dark": "photopilot-on-dark.png"
+   },
+   "points": {
+    "nl": [
+     "Je ERP-data automatisch omgezet naar OBX, zodat je koppeling direct geregeld is",
+     "Packshots en modelfotografie direct vanaf je Canon-camera in je portaal",
+     "Van fotoshoot tot retailer in één proces"
+    ],
+    "en": [
+     "Your ERP data converted to OBX automatically, so your connection is in place at once",
+     "Packshots and model photography straight from your Canon camera into your portal",
+     "From photo shoot to retailer in one process"
+    ],
+    "de": [
+     "Ihre ERP-Daten automatisch in OBX umgewandelt, sodass Ihre Anbindung sofort steht",
+     "Packshots und Modelfotografie direkt von Ihrer Canon-Kamera in Ihr Portal",
+     "Vom Fotoshooting bis zum Händler in einem Prozess"
+    ],
+    "fr": [
+     "Vos données ERP converties automatiquement en OBX : votre connexion est en place immédiatement",
+     "Packshots et photos portées directement de votre appareil Canon vers votre portail",
+     "De la séance photo au revendeur en un seul processus"
+    ]
+   }
+  },
+  {
+   "id": "webridge",
+   "name": "webRidge",
+   "website": "https://www.webridge.nl",
+   "based_in": "NL",
+   "languages": [
+    "nl",
+    "en"
+   ],
+   "offers": {
+    "nl": "Host je OBX-portaal (Cloudflare Workers, D1 en R2) voor € 100 per maand, excl. btw. webRidge is ook de uitgever van deze website.",
+    "en": "Hosts your OBX portal (Cloudflare Workers, D1 and R2) for €100 per month, excl. VAT. webRidge is also the publisher of this website.",
+    "de": "Hostet Ihr OBX-Portal (Cloudflare Workers, D1 und R2) für 100 € pro Monat zzgl. MwSt. webRidge ist auch der Herausgeber dieser Website.",
+    "fr": "Héberge votre portail OBX (Cloudflare Workers, D1 et R2) pour 100 € par mois HT. webRidge est aussi l'éditeur de ce site."
+   },
+   "obx_status": "available",
+   "data_export": true,
+   "points": {
+    "nl": [
+     "2 TB opslag, ongeveer 200.000 productbeelden inclusief web- en vierkante versies",
+     "Onbeperkt downloaden voor al je retailers, zonder verkeerskosten",
+     "Je eigen domein, HTTPS, updates en back-ups",
+     "Extra opslag € 20 per TB per maand"
+    ],
+    "en": [
+     "2 TB of storage, about 200,000 product images including web and square versions",
+     "Unlimited downloads for all your retailers, with no traffic costs",
+     "Your own domain, HTTPS, updates and backups",
+     "Extra storage €20 per TB per month"
+    ],
+    "de": [
+     "2 TB Speicher, etwa 200.000 Produktbilder einschließlich Web- und quadratischer Versionen",
+     "Unbegrenzte Downloads für alle Ihre Händler, ohne Traffickosten",
+     "Ihre eigene Domain, HTTPS, Updates und Backups",
+     "Zusätzlicher Speicher 20 € pro TB und Monat"
+    ],
+    "fr": [
+     "2 To de stockage, environ 200 000 visuels produits avec leurs versions web et carrées",
+     "Téléchargements illimités pour tous vos revendeurs, sans frais de trafic",
+     "Votre propre domaine, HTTPS, mises à jour et sauvegardes",
+     "Stockage supplémentaire 20 € par To et par mois"
+    ]
    }
   }
  ]

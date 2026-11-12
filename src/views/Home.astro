@@ -5,6 +5,7 @@ import Flow from '../components/Flow.astro';
 import Editions from '../components/Editions.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Icon from '../components/Icon.astro';
+import EuBadge from '../components/EuBadge.astro';
 import { format, messages, repo, specDoc, url, type Lang } from '../i18n';
 import Code from '../components/Code.astro';
 import { prompts } from '../data/prompts';
@@ -24,7 +25,7 @@ const faq = t.faq.items.slice(0, 4);
 // "Publish once. Every retailer gets it.": the second sentence in a softer tone, on its own line.
 const split = h.h1.search(/[.!?]\s/);
 const h1 = split > 0 ? [h.h1.slice(0, split + 1) + ' ', h.h1.slice(split + 2)] : [h.h1, ''];
-const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'partners')];
+const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'developers')];
 // The explainer video (video/, rendered with Remotion): Dutch for Dutch, English for every other
 // language. Captions are burned in; nothing loads until the visitor presses play (preload="none").
 const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
@@ -47,6 +48,7 @@ const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
         <span class="sr-only">{h.scopeLabel}: </span><span class="scope-now">{h.scopeNow}</span>
         <span class="scope-next">{h.scopeNext}</span>
       </p>
+      <EuBadge lang={lang} />
       <dl class="proof" aria-label={h.proofLabel}>
         {
           h.proof.map((p) => (
@@ -148,6 +150,19 @@ const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
   </div>
 </section>
 
+<section class="band band-ink" aria-labelledby="fair-title">
+  <div class="wrap split even top">
+    <div class="split-copy">
+      <p class="eyebrow">{h.fairEyebrow}</p>
+      <h2 id="fair-title">{h.fairTitle}</h2>
+      <p class="lead">{h.fairLead}</p>
+    </div>
+    <div class="split-visual">
+      <ul class="checks">{h.fairItems.map((item) => <li>{item}</li>)}</ul>
+    </div>
+  </div>
+</section>
+
 <section class="band band-alt" aria-labelledby="portals-title">
   <div class="wrap">
     <header class="section-head" data-reveal>
@@ -166,8 +181,7 @@ const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
       }
     </ul>
     <p class="actions">
-      <a class="button primary" href={url(lang, 'partners')}>{h.portalsCta} <Icon name="arrow" class="arrow" /></a>
-      <a class="button secondary" href={url(lang, 'developers')}>{t.nav.developers}</a>
+      <a class="button primary" href={url(lang, 'developers')}>{h.portalsCta} <Icon name="arrow" class="arrow" /></a>
     </p>
   </div>
 </section>
