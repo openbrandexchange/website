@@ -33,7 +33,7 @@ jobs:
         run: npm audit --omit=dev --audit-level=low
       - name: Dependency audit (build tools, report only)
         run: npm audit --audit-level=high || true
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: dist
           path: dist
@@ -57,7 +57,7 @@ jobs:
           path: dist
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: playwright-report
