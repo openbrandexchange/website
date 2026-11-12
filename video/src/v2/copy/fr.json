@@ -15,15 +15,15 @@
     },
     {
       "id": "in",
-      "caption": "Une marque part de ce qu’elle a déjà :|les données produit de son PIM, de son ERP ou d’Excel, et ses photos produit."
+      "caption": "Une marque part de ce qu’elle a :|les données de son PIM, de son ERP ou d’Excel, et ses photos."
     },
     {
       "id": "standard",
-      "caption": "Open Brand Exchange les place dans une structure fixe,|la même pour chaque marque.|Y compris les visuels, avec leurs droits d’usage."
+      "caption": "Open Brand Exchange les place dans une structure fixe,|la même pour chaque marque,|droits des visuels compris."
     },
     {
       "id": "out",
-      "caption": "Les revendeurs les reçoivent directement dans leur boutique en ligne, leur PIM, leur caisse ou leur ERP,|ou les téléchargent dans le navigateur."
+      "caption": "Les revendeurs les reçoivent dans leur boutique en ligne, leur PIM, leur caisse ou leur ERP,|ou en téléchargement."
     },
     {
       "id": "after",
@@ -35,8 +35,28 @@
       "onScreen": true
     },
     {
+      "id": "dev",
+      "caption": "Un développeur connecte l’ERP en un après-midi,|avec un assistant IA et le prompt prêt à l’emploi,|pas en plusieurs mois."
+    },
+    {
+      "id": "open",
+      "caption": "Ouvert et sans but lucratif, et gratuit à utiliser."
+    },
+    {
+      "id": "connect",
+      "caption": "Chaque acteur peut se connecter :|marques, revendeurs, portails|et logiciels ERP, PIM et DAM."
+    },
+    {
+      "id": "portal",
+      "caption": "Le portail appartient à la marque :|sur son propre hébergement, ou hébergé pour elle."
+    },
+    {
+      "id": "example",
+      "caption": "Par exemple, Photopilot le met en œuvre|pour les marques et les revendeurs."
+    },
+    {
       "id": "end",
-      "caption": "Open Brand Exchange. Gratuit et ouvert, pour les marques et les revendeurs.",
+      "caption": "Open Brand Exchange.",
       "onScreen": true
     }
   ],
@@ -48,7 +68,10 @@
       "standard": "Le standard ouvert",
       "out": "Sortie",
       "after": "Ensuite",
-      "once": "Une fois"
+      "once": "Une fois",
+      "open": "Ouvert",
+      "example": "Un exemple",
+      "dev": "Développeurs"
     },
     "before": {
       "sheets": [
@@ -148,6 +171,57 @@
     },
     "once": {
       "year": "Année {n}"
+    },
+    "dev": {
+      "time": "Un après-midi",
+      "erp": "Export ERP",
+      "assistant": "Assistant IA",
+      "pasted": "Prompt prêt à l’emploi",
+      "prompt": "Exporte nos produits vers Open Brand Exchange. Notre ERP : [nom]",
+      "reply": "C’est fait : l’export, adapté au format.",
+      "check": "Contrôle de compatibilité",
+      "checks": [
+        "products.csv",
+        "Articles, variantes et EAN",
+        "Matières et entretien",
+        "Visuels et droits d’usage"
+      ],
+      "passed": "Compatible",
+      "portal": "Portail de la marque"
+    },
+    "open": {
+      "free": "Ouvert et sans but lucratif. Gratuit à utiliser.",
+      "feeNote": "Les contributions facultatives des partenaires ne couvrent que les frais de la fondation.",
+      "connect": "Chaque acteur peut se connecter",
+      "parties": [
+        "Marques",
+        "Revendeurs",
+        "Portails",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "Logiciels ERP, PIM et DAM",
+      "portal": "Le portail appartient à la marque",
+      "portalItems": [
+        "Vos propres données",
+        "Sur votre propre hébergement",
+        "Ou hébergé pour vous"
+      ]
+    },
+    "example": {
+      "lead": "Par exemple :",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Marques",
+          "p": "Portail, automatisation, intégration ERP, photographie"
+        },
+        {
+          "h": "Revendeurs",
+          "p": "Réception et traitement du contenu produit"
+        }
+      ]
     },
     "end": {
       "line": "Gratuit et ouvert, pour les marques et les revendeurs",

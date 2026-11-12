@@ -3,17 +3,20 @@ import { readFileSync } from "node:fs";
 
 export const FPS = 30;
 const BEATS = [
-  ["before", ["before", "rush"], 0, 0.3],
-  ["idea", ["idea"], 0, 0.4],
-  ["flow", ["in", "standard", "out"], 0, 1.1],
-  ["after", ["after"], 0, 0.6],
-  ["once", ["once"], 0, 0.5],
-  ["end", ["end"], 5.6, 0],
+  ["before", ["before", "rush"], 0, 0],
+  ["idea", ["idea"], 0, 0.1],
+  ["flow", ["in", "standard", "out"], 0, 0.3],
+  ["after", ["after"], 0, 0],
+  ["once", ["once"], 0, 0],
+  ["dev", ["dev"], 0, 0],
+  ["open", ["open", "connect", "portal"], 0, 0],
+  ["example", ["example"], 0, 0],
+  ["end", ["end"], 3.0, 0],
 ];
-const BREATH = { first: 0.7, lead: 0.35, gap: 0.45, tail: 0.5 };
+const BREATH = { first: 0.5, lead: 0.3, gap: 0.3, tail: 0.35 };
 
 export const timelineV2 = (locale) => {
-  const voice = locale === "nl" ? "nl" : "en";
+  const voice = "en"; // every language uses the English voice; only the captions differ
   const d = JSON.parse(readFileSync(`public/voice-v2/${voice}/durations.json`, "utf8"));
   const chunks = JSON.parse(readFileSync(`public/voice-v2/${voice}/chunks.json`, "utf8"));
   const scenes = {};

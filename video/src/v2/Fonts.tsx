@@ -7,10 +7,18 @@ const LATIN =
 const LATIN_EXT =
   "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF";
 
+// Greek (el) and Cyrillic (bg) captions.
+const GREEK = "U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF";
+const CYRILLIC = "U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116";
+
 const faces = [
   { family: "Inter Tight", file: "fonts/inter-tight-latin-wght-normal.woff2", range: LATIN },
   { family: "Inter Tight", file: "fonts/inter-tight-latin-ext-wght-normal.woff2", range: LATIN_EXT },
+  { family: "Inter Tight", file: "fonts/inter-tight-greek-wght-normal.woff2", range: GREEK },
+  { family: "Inter Tight", file: "fonts/inter-tight-cyrillic-wght-normal.woff2", range: CYRILLIC },
   { family: "JetBrains Mono", file: "fonts/jetbrains-mono-latin-wght-normal.woff2", range: LATIN },
+  { family: "JetBrains Mono", file: "fonts/jetbrains-mono-greek-wght-normal.woff2", range: GREEK },
+  { family: "JetBrains Mono", file: "fonts/jetbrains-mono-cyrillic-wght-normal.woff2", range: CYRILLIC },
   { family: "JetBrains Mono", file: "fonts/jetbrains-mono-latin-ext-wght-normal.woff2", range: LATIN_EXT },
 ];
 

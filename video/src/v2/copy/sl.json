@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Skoraj pri vsakem trgovcu nekdo kopira preglednice|in znova pretipka podatke o izdelkih, znamko za znamko."
+    },
+    {
+      "id": "rush",
+      "caption": "In vsaka nova kolekcija je dirka s časom."
+    },
+    {
+      "id": "idea",
+      "caption": "Ko vsi podatke strukturirajo enako, *zmagajo vsi.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Znamka začne s tem, kar ima:|s podatki iz PIM, ERP ali Excela in s svojimi fotografijami."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange jih postavi v eno stalno strukturo,|enako za vsako znamko,|skupaj s pravicami do slik."
+    },
+    {
+      "id": "out",
+      "caption": "Trgovci jih prejmejo v svojo spletno trgovino, PIM, POS ali ERP,|ali kot prenos."
+    },
+    {
+      "id": "after",
+      "caption": "Nato gre nova kolekcija sama od sebe na splet."
+    },
+    {
+      "id": "once",
+      "caption": "Enkrat uvedete in vsi imajo korist *leta in leta.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "Razvijalec poveže ERP v enem popoldnevu,|z asistentom UI in pripravljenim pozivom,|ne v mesecih."
+    },
+    {
+      "id": "open",
+      "caption": "Odprto in brez dobičkonosnega namena ter brezplačno za uporabo."
+    },
+    {
+      "id": "connect",
+      "caption": "Priključi se lahko vsaka stran:|znamke, trgovci, portali|ter programska oprema ERP, PIM in DAM."
+    },
+    {
+      "id": "portal",
+      "caption": "Portal pripada znamki:|na njenem lastnem gostovanju ali gostovan zanjo."
+    },
+    {
+      "id": "example",
+      "caption": "Photopilot ga na primer izvaja|za znamke in trgovce."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Danes",
+      "idea": "Ideja",
+      "in": "Vhod",
+      "standard": "Odprti standard",
+      "out": "Izhod",
+      "after": "Potem",
+      "once": "Enkrat",
+      "open": "Odprtost",
+      "example": "Primer",
+      "dev": "Razvijalci"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Št. art.",
+          "Barva",
+          "Velikost",
+          "Blago"
+        ],
+        [
+          "SKU",
+          "Različica",
+          "EAN",
+          "Material"
+        ],
+        [
+          "Artikel",
+          "Bar.",
+          "Vel.",
+          "Sest."
+        ]
+      ],
+      "target": "Naša spletna trgovina",
+      "brand": "Znamka {n} od 24",
+      "toEnter": "Še za vnos"
+    },
+    "flow": {
+      "inTitle": "Vhod",
+      "inLead": "Kaj znamka vnese",
+      "inItems": [
+        "Podatki o izdelkih iz PIM, ERP ali Excela",
+        "Fotografije izdelkov"
+      ],
+      "stdTitle": "Odprti standard",
+      "stdLead": "Ena stalna struktura za vsako znamko",
+      "outTitle": "Izhod",
+      "outLead": "Kaj dobijo trgovci",
+      "outItems": [
+        "Spletna trgovina",
+        "PIM",
+        "POS in ERP",
+        "Prenosi v brskalniku"
+      ],
+      "fields": [
+        "Artikel",
+        "Različica",
+        "EAN",
+        "Materiali",
+        "Nega",
+        "Mere",
+        "Pravice do slik"
+      ],
+      "products": [
+        {
+          "name": "Terenska jakna",
+          "variant": "Olivna · M",
+          "ean": "2041000000117",
+          "materials": "65 % bombaž, 35 % poliester",
+          "care": "Strojno pranje na 30 °C",
+          "dimensions": "Dolžina hrbta 74 cm",
+          "rights": "Splet, tisk"
+        },
+        {
+          "name": "Namizna svetilka",
+          "variant": "Medenina",
+          "ean": "2041000000285",
+          "materials": "Medenina, laneni senčnik",
+          "care": "Obrišite s suho krpo",
+          "dimensions": "V 52 cm · Ø 30 cm",
+          "rights": "Splet, družbena omrežja"
+        },
+        {
+          "name": "Čevelj za tek v naravi",
+          "variant": "Modra · 42",
+          "ean": "2041000000353",
+          "materials": "Mrežica, gumijast podplat",
+          "care": "Obrišite",
+          "dimensions": "Vložek 27 cm",
+          "rights": "Splet, tisk"
+        },
+        {
+          "name": "Espresso aparat",
+          "variant": "Mat črna",
+          "ean": "2041000000421",
+          "materials": "Nerjavno jeklo",
+          "care": "Mesečno odstranite vodni kamen",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Splet, tisk, družbena omrežja"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Naša spletna trgovina",
+      "title": "Nova kolekcija",
+      "online": "Na spletu",
+      "toEnter": "Še za vnos"
+    },
+    "once": {
+      "year": "Leto {n}"
+    },
+    "dev": {
+      "time": "En popoldan",
+      "erp": "Izvoz iz ERP",
+      "assistant": "Asistent UI",
+      "pasted": "Pripravljen poziv",
+      "prompt": "Izvozi naše izdelke v Open Brand Exchange. Naš ERP: [ime]",
+      "reply": "Končano: izvoz, preslikan v format.",
+      "check": "Preverjanje združljivosti",
+      "checks": [
+        "products.csv",
+        "Artikli, različice in EAN",
+        "Materiali in nega",
+        "Slike in pravice uporabe"
+      ],
+      "passed": "Združljivo",
+      "portal": "Portal znamke"
+    },
+    "open": {
+      "free": "Odprto in brez dobičkonosnega namena. Brezplačno za uporabo.",
+      "feeNote": "Neobvezni partnerski prispevki pokrivajo le stroške ustanove.",
+      "connect": "Priključi se lahko vsaka stran",
+      "parties": [
+        "Znamke",
+        "Trgovci",
+        "Portali",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "Programska oprema ERP, PIM in DAM",
+      "portal": "Portal pripada znamki",
+      "portalItems": [
+        "Vaši lastni podatki",
+        "Na vašem lastnem gostovanju",
+        "Ali gostovan za vas"
+      ]
+    },
+    "example": {
+      "lead": "Na primer:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Znamke",
+          "p": "Portal, avtomatizacija, integracija ERP, fotografija"
+        },
+        {
+          "h": "Trgovci",
+          "p": "Prejem in obdelava vsebine o izdelkih"
+        }
+      ]
+    },
+    "end": {
+      "line": "Brezplačno in odprto, za znamke in trgovce",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Prawie u każdego sprzedawcy ktoś kopiuje arkusze|i przepisuje dane produktów, marka po marce."
+    },
+    {
+      "id": "rush",
+      "caption": "A każda nowa kolekcja to wyścig z czasem."
+    },
+    {
+      "id": "idea",
+      "caption": "Gdy wszyscy porządkują dane tak samo, *wygrywają wszyscy.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Marka zaczyna od tego, co ma:|danych z PIM, ERP lub Excela i swoich zdjęć."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange układa je w jedną stałą strukturę,|taką samą dla każdej marki,|razem z prawami do zdjęć."
+    },
+    {
+      "id": "out",
+      "caption": "Sprzedawcy otrzymują je w sklepie internetowym, PIM, POS lub ERP,|albo jako plik do pobrania."
+    },
+    {
+      "id": "after",
+      "caption": "Potem nowa kolekcja sama trafia do sieci."
+    },
+    {
+      "id": "once",
+      "caption": "Wdrażasz raz, a wszyscy korzystają *latami.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "Programista podłącza ERP w jedno popołudnie,|z asystentem AI i gotowym promptem,|a nie w miesiące."
+    },
+    {
+      "id": "open",
+      "caption": "Otwarty, bez celu zarobkowego i bezpłatny w użyciu."
+    },
+    {
+      "id": "connect",
+      "caption": "Podłączyć może się każda strona:|marki, sprzedawcy, portale|oraz oprogramowanie ERP, PIM i DAM."
+    },
+    {
+      "id": "portal",
+      "caption": "Portal należy do marki:|na jej własnym hostingu albo hostowany dla niej."
+    },
+    {
+      "id": "example",
+      "caption": "Na przykład Photopilot wdraża go|dla marek i sprzedawców."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Dziś",
+      "idea": "Pomysł",
+      "in": "Wejście",
+      "standard": "Otwarty standard",
+      "out": "Wyjście",
+      "after": "Potem",
+      "once": "Raz",
+      "open": "Otwartość",
+      "example": "Przykład",
+      "dev": "Programiści"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Nr art.",
+          "Kolor",
+          "Rozmiar",
+          "Tkanina"
+        ],
+        [
+          "SKU",
+          "Wariant",
+          "EAN",
+          "Materiał"
+        ],
+        [
+          "Artykuł",
+          "Kol.",
+          "Rozm.",
+          "Skł."
+        ]
+      ],
+      "target": "Nasz sklep internetowy",
+      "brand": "Marka {n} z 24",
+      "toEnter": "Do wprowadzenia"
+    },
+    "flow": {
+      "inTitle": "Wejście",
+      "inLead": "Co wprowadza marka",
+      "inItems": [
+        "Dane produktowe z PIM, ERP lub Excela",
+        "Zdjęcia produktów"
+      ],
+      "stdTitle": "Otwarty standard",
+      "stdLead": "Jedna stała struktura dla każdej marki",
+      "outTitle": "Wyjście",
+      "outLead": "Co otrzymują sprzedawcy",
+      "outItems": [
+        "Sklep internetowy",
+        "PIM",
+        "POS i ERP",
+        "Pobieranie w przeglądarce"
+      ],
+      "fields": [
+        "Artykuł",
+        "Wariant",
+        "EAN",
+        "Materiały",
+        "Pielęgnacja",
+        "Wymiary",
+        "Prawa do zdjęć"
+      ],
+      "products": [
+        {
+          "name": "Kurtka polowa",
+          "variant": "Oliwkowy · M",
+          "ean": "2041000000117",
+          "materials": "65% bawełna, 35% poliester",
+          "care": "Pranie w pralce 30 °C",
+          "dimensions": "Długość pleców 74 cm",
+          "rights": "Internet, druk"
+        },
+        {
+          "name": "Lampa stołowa",
+          "variant": "Mosiądz",
+          "ean": "2041000000285",
+          "materials": "Mosiądz, lniany abażur",
+          "care": "Odkurzać suchą ściereczką",
+          "dimensions": "Wys. 52 cm · Ø 30 cm",
+          "rights": "Internet, media społecznościowe"
+        },
+        {
+          "name": "But do biegania w terenie",
+          "variant": "Niebieski · 42",
+          "ean": "2041000000353",
+          "materials": "Siatka, gumowa podeszwa",
+          "care": "Przetrzeć do czysta",
+          "dimensions": "Wkładka 27 cm",
+          "rights": "Internet, druk"
+        },
+        {
+          "name": "Ekspres do espresso",
+          "variant": "Czarny mat",
+          "ean": "2041000000421",
+          "materials": "Stal nierdzewna",
+          "care": "Odkamieniać co miesiąc",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Internet, druk, media społecznościowe"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Nasz sklep internetowy",
+      "title": "Nowa kolekcja",
+      "online": "Online",
+      "toEnter": "Do wprowadzenia"
+    },
+    "once": {
+      "year": "Rok {n}"
+    },
+    "dev": {
+      "time": "Jedno popołudnie",
+      "erp": "Eksport z ERP",
+      "assistant": "Asystent AI",
+      "pasted": "Gotowy prompt",
+      "prompt": "Wyeksportuj nasze produkty do Open Brand Exchange. Nasz ERP: [nazwa]",
+      "reply": "Gotowe: eksport dopasowany do formatu.",
+      "check": "Test zgodności",
+      "checks": [
+        "products.csv",
+        "Artykuły, warianty i kody EAN",
+        "Materiały i pielęgnacja",
+        "Zdjęcia i prawa do użycia"
+      ],
+      "passed": "Zgodny",
+      "portal": "Portal marki"
+    },
+    "open": {
+      "free": "Otwarty i bez celu zarobkowego. Bezpłatny w użyciu.",
+      "feeNote": "Opcjonalne opłaty partnerskie pokrywają tylko koszty fundacji.",
+      "connect": "Podłączyć może się każda strona",
+      "parties": [
+        "Marki",
+        "Sprzedawcy",
+        "Portale",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "Oprogramowanie ERP, PIM i DAM",
+      "portal": "Portal należy do marki",
+      "portalItems": [
+        "Twoje własne dane",
+        "Na Twoim własnym hostingu",
+        "Albo hostowany dla Ciebie"
+      ]
+    },
+    "example": {
+      "lead": "Na przykład:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Marki",
+          "p": "Portal, automatyzacja, integracja z ERP, fotografia"
+        },
+        {
+          "h": "Sprzedawcy",
+          "p": "Odbiór i przetwarzanie treści produktowych"
+        }
+      ]
+    },
+    "end": {
+      "line": "Bezpłatny i otwarty, dla marek i sprzedawców",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

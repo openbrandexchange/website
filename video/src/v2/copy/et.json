@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Peaaegu iga edasimüüja juures kopeerib keegi tabeleid|ja trükib tooteandmeid ümber, kaubamärk kaubamärgi järel."
+    },
+    {
+      "id": "rush",
+      "caption": "Ja iga uus kollektsioon on võidujooks ajaga."
+    },
+    {
+      "id": "idea",
+      "caption": "Kui kõik struktureerivad andmeid ühtemoodi, *võidavad kõik.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Kaubamärk alustab sellest, mis tal on:|andmed oma PIM-ist, ERP-st või Excelist ning fotod."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange paneb need ühte kindlasse struktuuri,|igale kaubamärgile sama,|koos piltide kasutusõigustega."
+    },
+    {
+      "id": "out",
+      "caption": "Edasimüüjad saavad need oma e-poodi, PIM-i, kassasüsteemi või ERP-sse|või allalaadimisena."
+    },
+    {
+      "id": "after",
+      "caption": "Siis jõuab uus kollektsioon ise veebi."
+    },
+    {
+      "id": "once",
+      "caption": "Rakenda üks kord ja kõik saavad kasu *aastaid.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "Arendaja ühendab ERP-i ühe pärastlõunaga,|AI-assistendi ja valmis viibaga,|mitte kuudega."
+    },
+    {
+      "id": "open",
+      "caption": "Avatud ja ilma kasumieesmärgita ning tasuta kasutada."
+    },
+    {
+      "id": "connect",
+      "caption": "Liituda saab iga osapool:|kaubamärgid, edasimüüjad, portaalid|ning ERP-, PIM- ja DAM-tarkvara."
+    },
+    {
+      "id": "portal",
+      "caption": "Portaal kuulub kaubamärgile:|oma majutuses või tema jaoks majutatuna."
+    },
+    {
+      "id": "example",
+      "caption": "Näiteks Photopilot rakendab seda|kaubamärkidele ja edasimüüjatele."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Täna",
+      "idea": "Idee",
+      "in": "Sisse",
+      "standard": "Avatud standard",
+      "out": "Välja",
+      "after": "Pärast",
+      "once": "Üks kord",
+      "open": "Avatud",
+      "example": "Näide",
+      "dev": "Arendajad"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Art-nr",
+          "Värv",
+          "Suurus",
+          "Kangas"
+        ],
+        [
+          "SKU",
+          "Variant",
+          "EAN",
+          "Materjal"
+        ],
+        [
+          "Toode",
+          "Värv",
+          "Suur.",
+          "Koost."
+        ]
+      ],
+      "target": "Meie e-pood",
+      "brand": "Kaubamärk {n}/24",
+      "toEnter": "Sisestamata artiklid"
+    },
+    "flow": {
+      "inTitle": "Sisse",
+      "inLead": "Mida kaubamärk sisestab",
+      "inItems": [
+        "Tootandmed PIM-ist, ERP-st või Excelist",
+        "Tootefotod"
+      ],
+      "stdTitle": "Avatud standard",
+      "stdLead": "Üks kindel struktuur igale kaubamärgile",
+      "outTitle": "Välja",
+      "outLead": "Mida edasimüüjad saavad",
+      "outItems": [
+        "E-pood",
+        "PIM",
+        "Kassasüsteem ja ERP",
+        "Allalaadimised brauseris"
+      ],
+      "fields": [
+        "Artikkel",
+        "Variant",
+        "EAN",
+        "Materjalid",
+        "Hooldus",
+        "Mõõdud",
+        "Pildiõigused"
+      ],
+      "products": [
+        {
+          "name": "Välijakk",
+          "variant": "Oliiv · M",
+          "ean": "2041000000117",
+          "materials": "65% puuvill, 35% polüester",
+          "care": "Masinpesu 30 °C",
+          "dimensions": "Selja pikkus 74 cm",
+          "rights": "Veeb, trükk"
+        },
+        {
+          "name": "Laualamp",
+          "variant": "Messing",
+          "ean": "2041000000285",
+          "materials": "Messing, linane kuppel",
+          "care": "Pühkida kuiva lapiga tolmust",
+          "dimensions": "K 52 cm · Ø 30 cm",
+          "rights": "Veeb, sotsiaalmeedia"
+        },
+        {
+          "name": "Maastikujooksujalats",
+          "variant": "Sinine · 42",
+          "ean": "2041000000353",
+          "materials": "Võrkkangas, kummitald",
+          "care": "Pühkida puhtaks",
+          "dimensions": "Sisetald 27 cm",
+          "rights": "Veeb, trükk"
+        },
+        {
+          "name": "Espressomasin",
+          "variant": "Mattmust",
+          "ean": "2041000000421",
+          "materials": "Roostevaba teras",
+          "care": "Katlakivi eemaldada kord kuus",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Veeb, trükk, sotsiaalmeedia"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Meie e-pood",
+      "title": "Uus kollektsioon",
+      "online": "Veebis",
+      "toEnter": "Sisestamata artiklid"
+    },
+    "once": {
+      "year": "Aasta {n}"
+    },
+    "dev": {
+      "time": "Üks pärastlõuna",
+      "erp": "ERP eksport",
+      "assistant": "AI-assistent",
+      "pasted": "Valmis viip",
+      "prompt": "Ekspordi meie tooted Open Brand Exchange'i. Meie ERP: [nimi]",
+      "reply": "Valmis: eksport, vormingule vastendatud.",
+      "check": "Ühilduvuse kontroll",
+      "checks": [
+        "products.csv",
+        "Artiklid, variandid ja EAN-id",
+        "Materjalid ja hooldus",
+        "Pildid ja kasutusõigused"
+      ],
+      "passed": "Ühilduv",
+      "portal": "Kaubamärgi portaal"
+    },
+    "open": {
+      "free": "Avatud ja ilma kasumieesmärgita. Tasuta kasutada.",
+      "feeNote": "Valikulised partnerimaksed katavad ainult sihtasutuse kulud.",
+      "connect": "Liituda saab iga osapool",
+      "parties": [
+        "Kaubamärgid",
+        "Edasimüüjad",
+        "Portaalid",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "ERP-, PIM- ja DAM-tarkvara",
+      "portal": "Portaal kuulub kaubamärgile",
+      "portalItems": [
+        "Teie oma andmed",
+        "Teie oma majutuses",
+        "Või teie jaoks majutatuna"
+      ]
+    },
+    "example": {
+      "lead": "Näiteks:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Kaubamärgid",
+          "p": "Portaal, automatiseerimine, ERP-liidestus, fotograafia"
+        },
+        {
+          "h": "Edasimüüjad",
+          "p": "Tootesisu vastuvõtmine ja töötlemine"
+        }
+      ]
+    },
+    "end": {
+      "line": "Tasuta ja avatud, kaubamärkidele ja edasimüüjatele",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

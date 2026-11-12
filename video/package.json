@@ -10,8 +10,7 @@
     "render": "node scripts/render.mjs en && node scripts/render.mjs nl && node scripts/render.mjs en --portrait && node scripts/render.mjs nl --portrait",
     "typecheck": "tsc --noEmit",
     "stills": "node scripts/stills.mjs",
-    "voice:v2:en": "python3 scripts/voiceover.py src/v2/copy/en.json public/voice-v2/en --language en --timestamps --voice Xb7hH8MSUJpSbSDYk0k2 --speed 1.07",
-    "voice:v2:nl": "python3 scripts/voiceover.py src/v2/copy/nl.json public/voice-v2/nl --language nl --timestamps --voice UNBIyLbtFB9k7FKW8wJv --speed 1.07",
+    "voice:v2:en": "python3 scripts/voiceover.py src/v2/copy/en.json public/voice-v2/en --language en --timestamps --voice Xb7hH8MSUJpSbSDYk0k2 --speed 1.15 --tempo 1.08",
     "render:v2": "node scripts/render-v2.mjs",
     "stills:v2": "node scripts/stills-v2.mjs"
   },

@@ -15,15 +15,15 @@
     },
     {
       "id": "in",
-      "caption": "Een merk begint met wat het al heeft:|productdata uit PIM, ERP of Excel, en de productfoto's."
+      "caption": "Een merk begint met wat het heeft:|data uit PIM, ERP of Excel, en de foto's."
     },
     {
       "id": "standard",
-      "caption": "Open Brand Exchange zet het in één vaste structuur,|voor elk merk dezelfde.|Inclusief de beelden, met hun gebruiksrechten."
+      "caption": "Open Brand Exchange zet het in één vaste structuur,|voor elk merk dezelfde,|met de beeldrechten erbij."
     },
     {
       "id": "out",
-      "caption": "Retailers krijgen het rechtstreeks in hun webshop, PIM, kassa of ERP,|of downloaden het in de browser."
+      "caption": "Retailers krijgen het in hun webshop, PIM, kassa of ERP,|of als download."
     },
     {
       "id": "after",
@@ -35,8 +35,28 @@
       "onScreen": true
     },
     {
+      "id": "dev",
+      "caption": "Een developer koppelt het ERP in één middag,|met een AI-assistent en de kant-en-klare prompt,|niet in maanden."
+    },
+    {
+      "id": "open",
+      "caption": "Open en zonder winstoogmerk, en gratis te gebruiken."
+    },
+    {
+      "id": "connect",
+      "caption": "Elke partij kan aansluiten:|merken, retailers, portalen|en ERP-, PIM- en DAM-software."
+    },
+    {
+      "id": "portal",
+      "caption": "Het portaal is van het merk:|op je eigen hosting, of laat het voor je hosten."
+    },
+    {
+      "id": "example",
+      "caption": "Photopilot implementeert het bijvoorbeeld|voor merken en retailers."
+    },
+    {
       "id": "end",
-      "caption": "Open Brand Exchange. Gratis en open, voor merken en retailers.",
+      "caption": "Open Brand Exchange.",
       "onScreen": true
     }
   ],
@@ -48,7 +68,10 @@
       "standard": "De open standaard",
       "out": "Uit",
       "after": "Daarna",
-      "once": "Eén keer"
+      "once": "Eén keer",
+      "open": "Open",
+      "example": "Een voorbeeld",
+      "dev": "Developers"
     },
     "before": {
       "sheets": [
@@ -148,6 +171,57 @@
     },
     "once": {
       "year": "Jaar {n}"
+    },
+    "dev": {
+      "time": "Eén middag",
+      "erp": "ERP-export",
+      "assistant": "AI-assistent",
+      "pasted": "Kant-en-klare prompt",
+      "prompt": "Exporteer onze producten naar Open Brand Exchange. Ons ERP: [naam]",
+      "reply": "Klaar: de export, omgezet naar het formaat.",
+      "check": "Compatibiliteitscheck",
+      "checks": [
+        "products.csv",
+        "Artikelen, varianten en EAN's",
+        "Materialen en onderhoud",
+        "Beelden en gebruiksrechten"
+      ],
+      "passed": "Compatibel",
+      "portal": "Merkportaal"
+    },
+    "open": {
+      "free": "Open en zonder winstoogmerk. Gratis te gebruiken.",
+      "feeNote": "Optionele partnerbijdragen dekken alleen de kosten van de stichting.",
+      "connect": "Elke partij kan aansluiten",
+      "parties": [
+        "Merken",
+        "Retailers",
+        "Portalen",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "ERP-, PIM- en DAM-software",
+      "portal": "Het portaal is van het merk",
+      "portalItems": [
+        "Je eigen data",
+        "Op je eigen hosting",
+        "Of laat het voor je hosten"
+      ]
+    },
+    "example": {
+      "lead": "Bijvoorbeeld:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Merken",
+          "p": "Portaal, automatisering, ERP-koppeling, fotografie"
+        },
+        {
+          "h": "Retailers",
+          "p": "Productcontent ontvangen en verwerken"
+        }
+      ]
     },
     "end": {
       "line": "Gratis en open, voor merken en retailers",

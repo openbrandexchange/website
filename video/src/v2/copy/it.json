@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Presso quasi ogni rivenditore, qualcuno copia fogli di calcolo|e ridigita i dati di prodotto, brand dopo brand."
+    },
+    {
+      "id": "rush",
+      "caption": "E ogni nuova collezione è una corsa contro il tempo."
+    },
+    {
+      "id": "idea",
+      "caption": "Quando tutti strutturano i dati allo stesso modo, *vincono tutti.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Un brand parte da ciò che ha:|i dati del suo PIM, ERP o Excel, e le sue foto."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange li mette in un'unica struttura fissa,|la stessa per ogni brand,|con i diritti d'immagine inclusi."
+    },
+    {
+      "id": "out",
+      "caption": "I rivenditori li ricevono nel loro negozio online, PIM, cassa o ERP,|o come download."
+    },
+    {
+      "id": "after",
+      "caption": "Poi la nuova collezione va online da sola."
+    },
+    {
+      "id": "once",
+      "caption": "Si implementa una volta, e tutti ne beneficiano *per anni.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "Uno sviluppatore collega l'ERP in un pomeriggio,|con un assistente AI e il prompt già pronto,|non in mesi."
+    },
+    {
+      "id": "open",
+      "caption": "Aperto e senza scopo di lucro, e gratuito da usare."
+    },
+    {
+      "id": "connect",
+      "caption": "Ogni parte può collegarsi:|brand, rivenditori, portali|e software ERP, PIM e DAM."
+    },
+    {
+      "id": "portal",
+      "caption": "Il portale appartiene al brand:|sul proprio hosting o ospitato per lui."
+    },
+    {
+      "id": "example",
+      "caption": "Per esempio, Photopilot lo implementa|per brand e rivenditori."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Oggi",
+      "idea": "L'idea",
+      "in": "Ingresso",
+      "standard": "Lo standard aperto",
+      "out": "Uscita",
+      "after": "Dopo",
+      "once": "Una volta",
+      "open": "Aperto",
+      "example": "Un esempio",
+      "dev": "Sviluppatori"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Cod. art.",
+          "Colore",
+          "Taglia",
+          "Tessuto"
+        ],
+        [
+          "SKU",
+          "Variante",
+          "EAN",
+          "Materiale"
+        ],
+        [
+          "Articolo",
+          "Col.",
+          "Tg.",
+          "Comp."
+        ]
+      ],
+      "target": "Il nostro negozio online",
+      "brand": "Brand {n} di 24",
+      "toEnter": "Articoli da inserire"
+    },
+    "flow": {
+      "inTitle": "Ingresso",
+      "inLead": "Ciò che un marchio inserisce",
+      "inItems": [
+        "Dati di prodotto da PIM, ERP o Excel",
+        "Foto di prodotto"
+      ],
+      "stdTitle": "Lo standard aperto",
+      "stdLead": "Un'unica struttura fissa per ogni marchio",
+      "outTitle": "Uscita",
+      "outLead": "Ciò che ricevono i rivenditori",
+      "outItems": [
+        "Negozio online",
+        "PIM",
+        "Cassa e ERP",
+        "Download nel browser"
+      ],
+      "fields": [
+        "Articolo",
+        "Variante",
+        "EAN",
+        "Materiali",
+        "Cura",
+        "Misure",
+        "Diritti d'immagine"
+      ],
+      "products": [
+        {
+          "name": "Giacca da campo",
+          "variant": "Oliva · M",
+          "ean": "2041000000117",
+          "materials": "65% cotone, 35% poliestere",
+          "care": "Lavaggio in lavatrice a 30 °C",
+          "dimensions": "Lunghezza dietro 74 cm",
+          "rights": "Web, stampa"
+        },
+        {
+          "name": "Lampada da tavolo",
+          "variant": "Ottone",
+          "ean": "2041000000285",
+          "materials": "Ottone, paralume in lino",
+          "care": "Spolverare con un panno asciutto",
+          "dimensions": "H 52 cm · Ø 30 cm",
+          "rights": "Web, social media"
+        },
+        {
+          "name": "Scarpa da trail running",
+          "variant": "Blu · 42",
+          "ean": "2041000000353",
+          "materials": "Mesh, suola in gomma",
+          "care": "Pulire con un panno",
+          "dimensions": "Soletta 27 cm",
+          "rights": "Web, stampa"
+        },
+        {
+          "name": "Macchina per espresso",
+          "variant": "Nero opaco",
+          "ean": "2041000000421",
+          "materials": "Acciaio inox",
+          "care": "Decalcificare ogni mese",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Web, stampa, social media"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Il nostro negozio online",
+      "title": "Nuova collezione",
+      "online": "Online",
+      "toEnter": "Articoli da inserire"
+    },
+    "once": {
+      "year": "Anno {n}"
+    },
+    "dev": {
+      "time": "Un pomeriggio",
+      "erp": "Export ERP",
+      "assistant": "Assistente AI",
+      "pasted": "Prompt già pronto",
+      "prompt": "Esporta i nostri prodotti verso Open Brand Exchange. Il nostro ERP: [nome]",
+      "reply": "Fatto: l'export, mappato sul formato.",
+      "check": "Verifica di compatibilità",
+      "checks": [
+        "products.csv",
+        "Articoli, varianti ed EAN",
+        "Materiali e cura",
+        "Immagini e diritti d'uso"
+      ],
+      "passed": "Compatibile",
+      "portal": "Portale del brand"
+    },
+    "open": {
+      "free": "Aperto e senza scopo di lucro. Gratuito da usare.",
+      "feeNote": "I contributi facoltativi dei partner coprono solo i costi della fondazione.",
+      "connect": "Ogni parte può collegarsi",
+      "parties": [
+        "Brand",
+        "Rivenditori",
+        "Portali",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "Software ERP, PIM e DAM",
+      "portal": "Il portale appartiene al brand",
+      "portalItems": [
+        "I tuoi dati",
+        "Sul tuo hosting",
+        "Oppure ospitato per te"
+      ]
+    },
+    "example": {
+      "lead": "Per esempio:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Brand",
+          "p": "Portale, automazione, integrazione ERP, fotografia"
+        },
+        {
+          "h": "Rivenditori",
+          "p": "Ricezione ed elaborazione dei contenuti di prodotto"
+        }
+      ]
+    },
+    "end": {
+      "line": "Gratuito e aperto, per brand e rivenditori",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

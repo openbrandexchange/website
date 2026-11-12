@@ -6,15 +6,18 @@ type Beat = { id: string; lines: LineId[]; minSeconds?: number; extraSeconds?: n
 
 // One beat per scene; each lasts as long as its voice lines plus a calm breath around them.
 export const BEATS: Beat[] = [
-  { id: "before", lines: ["before", "rush"], extraSeconds: 0.3 },
-  { id: "idea", lines: ["idea"], extraSeconds: 0.4 },
-  { id: "flow", lines: ["in", "standard", "out"], extraSeconds: 1.1 },
-  { id: "after", lines: ["after"], extraSeconds: 0.6 },
-  { id: "once", lines: ["once"], extraSeconds: 0.5 },
-  { id: "end", lines: ["end"], minSeconds: 5.6 },
+  { id: "before", lines: ["before", "rush"] },
+  { id: "idea", lines: ["idea"], extraSeconds: 0.1 },
+  { id: "flow", lines: ["in", "standard", "out"], extraSeconds: 0.3 },
+  { id: "after", lines: ["after"] },
+  { id: "once", lines: ["once"] },
+  { id: "dev", lines: ["dev"] },
+  { id: "open", lines: ["open", "connect", "portal"] },
+  { id: "example", lines: ["example"] },
+  { id: "end", lines: ["end"], minSeconds: 3.0 },
 ];
 
-const BREATH = { first: 0.7, lead: 0.35, gap: 0.45, tail: 0.5 };
+const BREATH = { first: 0.5, lead: 0.3, gap: 0.3, tail: 0.35 };
 
 export type Line = { id: LineId; from: number; frames: number };
 export type Span = { from: number; frames: number };

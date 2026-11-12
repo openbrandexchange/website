@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Kod gotovo svakog trgovca netko kopira tablice|i ponovno upisuje podatke o proizvodima, marku po marku."
+    },
+    {
+      "id": "rush",
+      "caption": "I svaka nova kolekcija utrka je s vremenom."
+    },
+    {
+      "id": "idea",
+      "caption": "Kad svi strukturiraju podatke na isti način, *svi dobivaju.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Marka počinje s onim što ima:|podacima iz svog PIM-a, ERP-a ili Excela i svojim fotografijama."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange stavlja ih u jednu fiksnu strukturu,|istu za svaku marku,|uključujući prava na slike."
+    },
+    {
+      "id": "out",
+      "caption": "Trgovci ih primaju u svoju web-trgovinu, PIM, POS ili ERP,|ili kao preuzimanje."
+    },
+    {
+      "id": "after",
+      "caption": "Tada nova kolekcija sama od sebe ide online."
+    },
+    {
+      "id": "once",
+      "caption": "Implementirajte jednom i svi imaju koristi *godinama.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "Programer poveže ERP u jednom popodnevu,|uz AI asistenta i gotov prompt,|a ne za nekoliko mjeseci."
+    },
+    {
+      "id": "open",
+      "caption": "Otvoreno i bez profitnog cilja, i besplatno za korištenje."
+    },
+    {
+      "id": "connect",
+      "caption": "Svaka se strana može povezati:|marke, trgovci, portali|i ERP, PIM i DAM softver."
+    },
+    {
+      "id": "portal",
+      "caption": "Portal pripada marki:|na vlastitom hostingu ili hostiran za nju."
+    },
+    {
+      "id": "example",
+      "caption": "Na primjer, Photopilot ga implementira|za marke i trgovce."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Danas",
+      "idea": "Ideja",
+      "in": "Ulaz",
+      "standard": "Otvoreni standard",
+      "out": "Izlaz",
+      "after": "Poslije",
+      "once": "Jednom",
+      "open": "Otvoreno",
+      "example": "Primjer",
+      "dev": "Programeri"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Šif. art.",
+          "Boja",
+          "Veličina",
+          "Tkanina"
+        ],
+        [
+          "SKU",
+          "Varijanta",
+          "EAN",
+          "Materijal"
+        ],
+        [
+          "Artikl",
+          "Boja",
+          "Vel.",
+          "Sast."
+        ]
+      ],
+      "target": "Naša web-trgovina",
+      "brand": "Marka {n} od 24",
+      "toEnter": "Artikli za unos"
+    },
+    "flow": {
+      "inTitle": "Ulaz",
+      "inLead": "Što marka unosi",
+      "inItems": [
+        "Podaci o proizvodima iz PIM-a, ERP-a ili Excela",
+        "Fotografije proizvoda"
+      ],
+      "stdTitle": "Otvoreni standard",
+      "stdLead": "Jedna fiksna struktura za svaku marku",
+      "outTitle": "Izlaz",
+      "outLead": "Što trgovci dobivaju",
+      "outItems": [
+        "Web-trgovina",
+        "PIM",
+        "POS i ERP",
+        "Preuzimanja u pregledniku"
+      ],
+      "fields": [
+        "Artikl",
+        "Varijanta",
+        "EAN",
+        "Materijali",
+        "Održavanje",
+        "Mjere",
+        "Prava na slike"
+      ],
+      "products": [
+        {
+          "name": "Terenska jakna",
+          "variant": "Maslinasta · M",
+          "ean": "2041000000117",
+          "materials": "65 % pamuk, 35 % poliester",
+          "care": "Strojno pranje na 30 °C",
+          "dimensions": "Duljina leđa 74 cm",
+          "rights": "Web, tisak"
+        },
+        {
+          "name": "Stolna svjetiljka",
+          "variant": "Mjed",
+          "ean": "2041000000285",
+          "materials": "Mjed, laneno sjenilo",
+          "care": "Brisati suhom krpom",
+          "dimensions": "V 52 cm · Ø 30 cm",
+          "rights": "Web, društvene mreže"
+        },
+        {
+          "name": "Tenisica za trail trčanje",
+          "variant": "Plava · 42",
+          "ean": "2041000000353",
+          "materials": "Mrežica, gumeni potplat",
+          "care": "Obrisati krpom",
+          "dimensions": "Uložak 27 cm",
+          "rights": "Web, tisak"
+        },
+        {
+          "name": "Aparat za espresso",
+          "variant": "Mat crna",
+          "ean": "2041000000421",
+          "materials": "Nehrđajući čelik",
+          "care": "Jednom mjesečno ukloniti kamenac",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Web, tisak, društvene mreže"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Naša web-trgovina",
+      "title": "Nova kolekcija",
+      "online": "Online",
+      "toEnter": "Artikli za unos"
+    },
+    "once": {
+      "year": "Godina {n}"
+    },
+    "dev": {
+      "time": "Jedno popodne",
+      "erp": "ERP izvoz",
+      "assistant": "AI asistent",
+      "pasted": "Gotov prompt",
+      "prompt": "Izvezi naše proizvode u Open Brand Exchange. Naš ERP: [naziv]",
+      "reply": "Gotovo: izvoz, usklađen s formatom.",
+      "check": "Provjera kompatibilnosti",
+      "checks": [
+        "products.csv",
+        "Artikli, varijante i EAN-ovi",
+        "Materijali i održavanje",
+        "Slike i prava korištenja"
+      ],
+      "passed": "Kompatibilno",
+      "portal": "Portal marke"
+    },
+    "open": {
+      "free": "Otvoreno i bez profitnog cilja. Besplatno za korištenje.",
+      "feeNote": "Neobvezne partnerske naknade pokrivaju samo troškove zaklade.",
+      "connect": "Svaka se strana može povezati",
+      "parties": [
+        "Marke",
+        "Trgovci",
+        "Portali",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "ERP, PIM i DAM softver",
+      "portal": "Portal pripada marki",
+      "portalItems": [
+        "Vaši vlastiti podaci",
+        "Na vašem vlastitom hostingu",
+        "Ili hostiran za vas"
+      ]
+    },
+    "example": {
+      "lead": "Na primjer:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Marke",
+          "p": "Portal, automatizacija, ERP integracija, fotografija"
+        },
+        {
+          "h": "Trgovci",
+          "p": "Primanje i obrada sadržaja o proizvodima"
+        }
+      ]
+    },
+    "end": {
+      "line": "Besplatno i otvoreno, za marke i trgovce",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

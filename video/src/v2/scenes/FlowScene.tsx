@@ -167,7 +167,7 @@ const OUT_ICONS: IconName[] = ["browser", "layers", "barcode", "download"];
 
 const OutBlock = ({ ui, t, portrait }: { ui: Ui["flow"]; t: FlowTimes; portrait: boolean }) => {
   const frame = useCurrentFrame();
-  const starts = [t.out + 34, t.out + 52, t.out + 70, t.outDownload];
+  const starts = [t.out + 46, t.out + 71, t.out + 96, t.outDownload];
   return (
     <Block style={{ height: "100%" }}>
       <Kicker size={24}>{ui.outTitle}</Kicker>

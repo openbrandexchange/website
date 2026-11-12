@@ -6,6 +6,8 @@ import { AfterScene } from "./scenes/AfterScene";
 import { BeforeScene } from "./scenes/BeforeScene";
 import { FlowScene, type FlowTimes } from "./scenes/FlowScene";
 import { clamp, Kicker, Mark } from "./scenes/kit";
+import { DevScene } from "./scenes/DevScene";
+import { ExampleScene, OpenScene, type OpenTimes } from "./scenes/OpenScenes";
 import { EndScene, IdeaScene, OnceScene } from "./scenes/StatementScenes";
 import { theme } from "./theme";
 import { buildTimeline, FPS, type Line } from "./timeline";
@@ -104,7 +106,18 @@ export const ExplainerV2 = ({ locale }: ExplainerV2Props) => {
     { from: scenes.flow.from + t.out, n: 5, label: ui.chapters.out },
     { from: scenes.after.from, n: 6, label: ui.chapters.after },
     { from: scenes.once.from, n: 7, label: ui.chapters.once },
+    { from: scenes.dev.from, n: 8, label: ui.chapters.dev },
+    { from: scenes.open.from, n: 9, label: ui.chapters.open },
+    { from: scenes.example.from, n: 10, label: ui.chapters.example },
   ];
+
+  const open: OpenTimes = {
+    open: at("open", "open"),
+    connect: at("connect", "open"),
+    parties: chunkAt("connect", "open", 1),
+    systems: chunkAt("connect", "open", 2),
+    portal: at("portal", "open"),
+  };
 
   const scene = (id: string, children: ReactNode) => (
     <Sequence key={id} from={scenes[id].from} durationInFrames={scenes[id].frames} name={id}>
@@ -138,6 +151,9 @@ export const ExplainerV2 = ({ locale }: ExplainerV2Props) => {
       {scene("flow", <FlowScene ui={ui.flow} t={t} />)}
       {scene("after", <AfterScene ui={ui.after} names={ui.flow.products.map((p) => p.name)} />)}
       {scene("once", <OnceScene text={caption("once")} ui={ui.once} lineFrames={line("once").frames} />)}
+      {scene("dev", <DevScene ui={ui.dev} names={ui.flow.products.map((p) => p.name)} t={{ start: at("dev", "dev"), assistant: chunkAt("dev", "dev", 1), months: chunkAt("dev", "dev", 2) }} />)}
+      {scene("open", <OpenScene ui={ui.open} t={open} end={scenes.open.frames + 30} />)}
+      {scene("example", <ExampleScene ui={ui.example} />)}
       {scene("end", <EndScene ui={ui.end} />)}
 
       <Header chapters={chapters} hideAt={scenes.end.from + 6} />

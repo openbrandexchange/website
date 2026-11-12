@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Em quase todos os revendedores, alguém copia folhas de cálculo|e volta a escrever dados de produto, marca a marca."
+    },
+    {
+      "id": "rush",
+      "caption": "E cada nova coleção é uma corrida contra o tempo."
+    },
+    {
+      "id": "idea",
+      "caption": "Quando todos estruturam os dados da mesma forma, *todos ganham.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Uma marca começa com o que tem:|dados do PIM, do ERP ou do Excel, e as suas fotografias."
+    },
+    {
+      "id": "standard",
+      "caption": "O Open Brand Exchange coloca-os numa estrutura fixa,|igual para todas as marcas,|com os direitos de imagem incluídos."
+    },
+    {
+      "id": "out",
+      "caption": "Os revendedores recebem-nos na loja online, PIM, POS ou ERP,|ou como transferência."
+    },
+    {
+      "id": "after",
+      "caption": "Depois, a nova coleção fica online por si só."
+    },
+    {
+      "id": "once",
+      "caption": "Implementa-se uma vez e todos beneficiam *durante anos.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "Um programador liga o ERP numa tarde,|com um assistente de IA e o prompt pronto,|não em meses."
+    },
+    {
+      "id": "open",
+      "caption": "Aberto e sem fins lucrativos, e gratuito para utilizar."
+    },
+    {
+      "id": "connect",
+      "caption": "Qualquer parte se pode ligar:|marcas, revendedores, portais|e software de ERP, PIM e DAM."
+    },
+    {
+      "id": "portal",
+      "caption": "O portal pertence à marca:|no seu próprio alojamento, ou alojado para ela."
+    },
+    {
+      "id": "example",
+      "caption": "Por exemplo, a Photopilot implementa-o|para marcas e revendedores."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Hoje",
+      "idea": "A ideia",
+      "in": "Entrada",
+      "standard": "O standard aberto",
+      "out": "Saída",
+      "after": "Depois",
+      "once": "Uma vez",
+      "open": "Aberto",
+      "example": "Um exemplo",
+      "dev": "Programadores"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Ref.ª",
+          "Cor",
+          "Tamanho",
+          "Tecido"
+        ],
+        [
+          "SKU",
+          "Variante",
+          "EAN",
+          "Material"
+        ],
+        [
+          "Artigo",
+          "Cor",
+          "Tam.",
+          "Comp."
+        ]
+      ],
+      "target": "A nossa loja online",
+      "brand": "Marca {n} de 24",
+      "toEnter": "Artigos por introduzir"
+    },
+    "flow": {
+      "inTitle": "Entrada",
+      "inLead": "O que uma marca introduz",
+      "inItems": [
+        "Dados de produto do PIM, do ERP ou do Excel",
+        "Fotografias de produto"
+      ],
+      "stdTitle": "O standard aberto",
+      "stdLead": "Uma estrutura fixa para cada marca",
+      "outTitle": "Saída",
+      "outLead": "O que os revendedores recebem",
+      "outItems": [
+        "Loja online",
+        "PIM",
+        "POS e ERP",
+        "Transferências no navegador"
+      ],
+      "fields": [
+        "Artigo",
+        "Variante",
+        "EAN",
+        "Materiais",
+        "Conservação",
+        "Medidas",
+        "Direitos de imagem"
+      ],
+      "products": [
+        {
+          "name": "Casaco de campanha",
+          "variant": "Verde-oliva · M",
+          "ean": "2041000000117",
+          "materials": "65% algodão, 35% poliéster",
+          "care": "Lavar à máquina a 30 °C",
+          "dimensions": "Comprimento das costas 74 cm",
+          "rights": "Web, impressão"
+        },
+        {
+          "name": "Candeeiro de mesa",
+          "variant": "Latão",
+          "ean": "2041000000285",
+          "materials": "Latão, abajur de linho",
+          "care": "Limpar o pó com pano seco",
+          "dimensions": "A 52 cm · Ø 30 cm",
+          "rights": "Web, redes sociais"
+        },
+        {
+          "name": "Sapatilha de trail",
+          "variant": "Azul · 42",
+          "ean": "2041000000353",
+          "materials": "Malha, sola de borracha",
+          "care": "Limpar com um pano",
+          "dimensions": "Palmilha 27 cm",
+          "rights": "Web, impressão"
+        },
+        {
+          "name": "Máquina de café expresso",
+          "variant": "Preto mate",
+          "ean": "2041000000421",
+          "materials": "Aço inoxidável",
+          "care": "Descalcificar todos os meses",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Web, impressão, redes sociais"
+        }
+      ]
+    },
+    "after": {
+      "shop": "A nossa loja online",
+      "title": "Nova coleção",
+      "online": "Online",
+      "toEnter": "Artigos por introduzir"
+    },
+    "once": {
+      "year": "Ano {n}"
+    },
+    "dev": {
+      "time": "Uma tarde",
+      "erp": "Exportação do ERP",
+      "assistant": "Assistente de IA",
+      "pasted": "Prompt pronto",
+      "prompt": "Exporta os nossos produtos para o Open Brand Exchange. O nosso ERP: [nome]",
+      "reply": "Feito: a exportação, mapeada para o formato.",
+      "check": "Verificação de compatibilidade",
+      "checks": [
+        "products.csv",
+        "Artigos, variantes e EAN",
+        "Materiais e conservação",
+        "Imagens e direitos de utilização"
+      ],
+      "passed": "Compatível",
+      "portal": "Portal da marca"
+    },
+    "open": {
+      "free": "Aberto e sem fins lucrativos. Gratuito para utilizar.",
+      "feeNote": "As contribuições opcionais dos parceiros cobrem apenas os custos da fundação.",
+      "connect": "Qualquer parte se pode ligar",
+      "parties": [
+        "Marcas",
+        "Revendedores",
+        "Portais",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "Software de ERP, PIM e DAM",
+      "portal": "O portal pertence à marca",
+      "portalItems": [
+        "Os seus próprios dados",
+        "No seu próprio alojamento",
+        "Ou alojado para si"
+      ]
+    },
+    "example": {
+      "lead": "Por exemplo:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Marcas",
+          "p": "Portal, automatização, integração ERP, fotografia"
+        },
+        {
+          "h": "Revendedores",
+          "p": "Receção e tratamento de conteúdo de produto"
+        }
+      ]
+    },
+    "end": {
+      "line": "Gratuito e aberto, para marcas e revendedores",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

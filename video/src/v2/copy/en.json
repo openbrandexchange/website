@@ -15,15 +15,15 @@
     },
     {
       "id": "in",
-      "caption": "A brand starts with what it already has:|product data from its PIM, ERP or Excel, and its product photos."
+      "caption": "A brand starts with what it has:|data from its PIM, ERP or Excel, and its photos."
     },
     {
       "id": "standard",
-      "caption": "Open Brand Exchange puts it in one fixed structure,|the same for every brand.|Including the images, with their usage rights."
+      "caption": "Open Brand Exchange puts it in one fixed structure,|the same for every brand,|with the image rights included."
     },
     {
       "id": "out",
-      "caption": "Retailers receive it straight into their webshop, PIM, POS or ERP,|or download it in the browser."
+      "caption": "Retailers receive it in their webshop, PIM, POS or ERP,|or as a download."
     },
     {
       "id": "after",
@@ -35,8 +35,28 @@
       "onScreen": true
     },
     {
+      "id": "dev",
+      "caption": "A developer links the ERP in an afternoon,|with an AI assistant and the ready-made prompt,|not in months."
+    },
+    {
+      "id": "open",
+      "caption": "Open and non-profit, and free to use."
+    },
+    {
+      "id": "connect",
+      "caption": "Every party can connect:|brands, retailers, portals|and ERP, PIM and DAM software."
+    },
+    {
+      "id": "portal",
+      "caption": "The portal belongs to the brand:|on its own hosting, or hosted for it."
+    },
+    {
+      "id": "example",
+      "caption": "For example, Photopilot implements it|for brands and retailers."
+    },
+    {
       "id": "end",
-      "caption": "Open Brand Exchange. Free and open, for brands and retailers.",
+      "caption": "Open Brand Exchange.",
       "onScreen": true
     }
   ],
@@ -48,7 +68,10 @@
       "standard": "The open standard",
       "out": "Out",
       "after": "After",
-      "once": "Once"
+      "once": "Once",
+      "open": "Open",
+      "example": "An example",
+      "dev": "Developers"
     },
     "before": {
       "sheets": [
@@ -148,6 +171,57 @@
     },
     "once": {
       "year": "Year {n}"
+    },
+    "dev": {
+      "time": "One afternoon",
+      "erp": "ERP export",
+      "assistant": "AI assistant",
+      "pasted": "Ready-made prompt",
+      "prompt": "Export our products to Open Brand Exchange. Our ERP: [name]",
+      "reply": "Done: the export, mapped to the format.",
+      "check": "Compatibility check",
+      "checks": [
+        "products.csv",
+        "Articles, variants and EANs",
+        "Materials and care",
+        "Images and usage rights"
+      ],
+      "passed": "Compatible",
+      "portal": "Brand portal"
+    },
+    "open": {
+      "free": "Open and non-profit. Free to use.",
+      "feeNote": "Optional partner fees only cover the foundation's costs.",
+      "connect": "Every party can connect",
+      "parties": [
+        "Brands",
+        "Retailers",
+        "Portals",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "ERP, PIM and DAM software",
+      "portal": "The portal belongs to the brand",
+      "portalItems": [
+        "Your own data",
+        "On your own hosting",
+        "Or have it hosted"
+      ]
+    },
+    "example": {
+      "lead": "For example:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Brands",
+          "p": "Portal, automation, ERP integration, photography"
+        },
+        {
+          "h": "Retailers",
+          "p": "Receiving and processing product content"
+        }
+      ]
     },
     "end": {
       "line": "Free and open, for brands and retailers",

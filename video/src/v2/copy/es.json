@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "En casi todos los distribuidores, alguien copia hojas de cálculo|y vuelve a teclear datos de producto, marca por marca."
+    },
+    {
+      "id": "rush",
+      "caption": "Y cada nueva colección es una carrera contra el reloj."
+    },
+    {
+      "id": "idea",
+      "caption": "Cuando todos estructuran los datos igual, *todos ganan.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Una marca parte de lo que tiene:|datos de su PIM, ERP o Excel, y sus fotos."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange los pone en una estructura fija,|la misma para cada marca,|con los derechos de imagen incluidos."
+    },
+    {
+      "id": "out",
+      "caption": "Los distribuidores los reciben en su tienda online, PIM, TPV o ERP,|o como descarga."
+    },
+    {
+      "id": "after",
+      "caption": "Luego la nueva colección sale online por sí sola."
+    },
+    {
+      "id": "once",
+      "caption": "Se implementa una vez, y todos se benefician *durante años.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "Un desarrollador conecta el ERP en una tarde,|con un asistente de IA y el prompt ya preparado,|no en meses."
+    },
+    {
+      "id": "open",
+      "caption": "Abierto y sin ánimo de lucro, y de uso gratuito."
+    },
+    {
+      "id": "connect",
+      "caption": "Cualquier parte puede conectarse:|marcas, distribuidores, portales|y software ERP, PIM y DAM."
+    },
+    {
+      "id": "portal",
+      "caption": "El portal pertenece a la marca:|en su propio alojamiento o alojado para ella."
+    },
+    {
+      "id": "example",
+      "caption": "Por ejemplo, Photopilot lo implementa|para marcas y distribuidores."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Hoy",
+      "idea": "La idea",
+      "in": "Entrada",
+      "standard": "El estándar abierto",
+      "out": "Salida",
+      "after": "Después",
+      "once": "Una vez",
+      "open": "Abierto",
+      "example": "Un ejemplo",
+      "dev": "Desarrolladores"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Ref.",
+          "Color",
+          "Talla",
+          "Tejido"
+        ],
+        [
+          "SKU",
+          "Variante",
+          "EAN",
+          "Material"
+        ],
+        [
+          "Artículo",
+          "Col.",
+          "T.",
+          "Comp."
+        ]
+      ],
+      "target": "Nuestra tienda online",
+      "brand": "Marca {n} de 24",
+      "toEnter": "Artículos por introducir"
+    },
+    "flow": {
+      "inTitle": "Entrada",
+      "inLead": "Lo que aporta una marca",
+      "inItems": [
+        "Datos de producto desde PIM, ERP o Excel",
+        "Fotos de producto"
+      ],
+      "stdTitle": "El estándar abierto",
+      "stdLead": "Una estructura fija para cada marca",
+      "outTitle": "Salida",
+      "outLead": "Lo que reciben los distribuidores",
+      "outItems": [
+        "Tienda online",
+        "PIM",
+        "TPV y ERP",
+        "Descargas en el navegador"
+      ],
+      "fields": [
+        "Artículo",
+        "Variante",
+        "EAN",
+        "Materiales",
+        "Cuidado",
+        "Medidas",
+        "Derechos de imagen"
+      ],
+      "products": [
+        {
+          "name": "Chaqueta de campo",
+          "variant": "Oliva · M",
+          "ean": "2041000000117",
+          "materials": "65 % algodón, 35 % poliéster",
+          "care": "Lavado a máquina 30 °C",
+          "dimensions": "Largo de espalda 74 cm",
+          "rights": "Web, impresión"
+        },
+        {
+          "name": "Lámpara de mesa",
+          "variant": "Latón",
+          "ean": "2041000000285",
+          "materials": "Latón, pantalla de lino",
+          "care": "Quitar el polvo con un paño seco",
+          "dimensions": "Alto 52 cm · Ø 30 cm",
+          "rights": "Web, redes sociales"
+        },
+        {
+          "name": "Zapatilla de trail running",
+          "variant": "Azul · 42",
+          "ean": "2041000000353",
+          "materials": "Malla, suela de goma",
+          "care": "Limpiar con un paño",
+          "dimensions": "Plantilla 27 cm",
+          "rights": "Web, impresión"
+        },
+        {
+          "name": "Cafetera espresso",
+          "variant": "Negro mate",
+          "ean": "2041000000421",
+          "materials": "Acero inoxidable",
+          "care": "Descalcificar cada mes",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Web, impresión, redes sociales"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Nuestra tienda online",
+      "title": "Nueva colección",
+      "online": "Online",
+      "toEnter": "Artículos por introducir"
+    },
+    "once": {
+      "year": "Año {n}"
+    },
+    "dev": {
+      "time": "Una tarde",
+      "erp": "Exportación del ERP",
+      "assistant": "Asistente de IA",
+      "pasted": "Prompt ya preparado",
+      "prompt": "Exporta nuestros productos a Open Brand Exchange. Nuestro ERP: [nombre]",
+      "reply": "Hecho: la exportación, adaptada al formato.",
+      "check": "Comprobación de compatibilidad",
+      "checks": [
+        "products.csv",
+        "Artículos, variantes y EAN",
+        "Materiales y cuidado",
+        "Imágenes y derechos de uso"
+      ],
+      "passed": "Compatible",
+      "portal": "Portal de la marca"
+    },
+    "open": {
+      "free": "Abierto y sin ánimo de lucro. De uso gratuito.",
+      "feeNote": "Las cuotas opcionales de socios solo cubren los costes de la fundación.",
+      "connect": "Cualquier parte puede conectarse",
+      "parties": [
+        "Marcas",
+        "Distribuidores",
+        "Portales",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "Software ERP, PIM y DAM",
+      "portal": "El portal pertenece a la marca",
+      "portalItems": [
+        "Tus propios datos",
+        "En tu propio alojamiento",
+        "O alojado para ti"
+      ]
+    },
+    "example": {
+      "lead": "Por ejemplo:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Marcas",
+          "p": "Portal, automatización, integración con ERP, fotografía"
+        },
+        {
+          "h": "Distribuidores",
+          "p": "Recepción y procesamiento de contenido de producto"
+        }
+      ]
+    },
+    "end": {
+      "line": "Gratuito y abierto, para marcas y distribuidores",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Takmer u každého predajcu niekto kopíruje tabuľky|a prepisuje produktové dáta, značku po značke."
+    },
+    {
+      "id": "rush",
+      "caption": "A každá nová kolekcia je naháňačka."
+    },
+    {
+      "id": "idea",
+      "caption": "Keď všetci štruktúrujú dáta rovnako, *vyhrávajú všetci.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Značka začína tým, čo má:|dátami z PIM, ERP alebo Excelu a svojimi fotografiami."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange ich vloží do jednej pevnej štruktúry,|rovnakej pre každú značku,|vrátane práv k obrázkom."
+    },
+    {
+      "id": "out",
+      "caption": "Predajcovia ich dostanú do svojho e-shopu, PIM, POS alebo ERP,|alebo na stiahnutie."
+    },
+    {
+      "id": "after",
+      "caption": "Potom nová kolekcia ide online sama."
+    },
+    {
+      "id": "once",
+      "caption": "Implementujete raz a všetci profitujú *celé roky.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "Vývojár pripojí ERP za jedno popoludnie,|s AI asistentom a hotovým promptom,|nie za mesiace."
+    },
+    {
+      "id": "open",
+      "caption": "Otvorené, bez zárobkového cieľa a zadarmo na použitie."
+    },
+    {
+      "id": "connect",
+      "caption": "Pripojiť sa môže každá strana:|značky, predajcovia, portály|a softvér ERP, PIM a DAM."
+    },
+    {
+      "id": "portal",
+      "caption": "Portál patrí značke:|na jej vlastnom hostingu alebo hostovaný za ňu."
+    },
+    {
+      "id": "example",
+      "caption": "Napríklad Photopilot ho implementuje|pre značky a predajcov."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Dnes",
+      "idea": "Myšlienka",
+      "in": "Vstup",
+      "standard": "Otvorený štandard",
+      "out": "Výstup",
+      "after": "Potom",
+      "once": "Raz",
+      "open": "Otvorenosť",
+      "example": "Príklad",
+      "dev": "Vývojári"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Č. art.",
+          "Farba",
+          "Veľkosť",
+          "Látka"
+        ],
+        [
+          "SKU",
+          "Variant",
+          "EAN",
+          "Materiál"
+        ],
+        [
+          "Položka",
+          "Far.",
+          "Veľ.",
+          "Zlož."
+        ]
+      ],
+      "target": "Náš e-shop",
+      "brand": "Značka {n} z 24",
+      "toEnter": "Zostáva zadať"
+    },
+    "flow": {
+      "inTitle": "Vstup",
+      "inLead": "Čo značka vloží",
+      "inItems": [
+        "Produktové dáta z PIM, ERP alebo Excelu",
+        "Produktové fotografie"
+      ],
+      "stdTitle": "Otvorený štandard",
+      "stdLead": "Jedna pevná štruktúra pre každú značku",
+      "outTitle": "Výstup",
+      "outLead": "Čo dostanú predajcovia",
+      "outItems": [
+        "E-shop",
+        "PIM",
+        "POS a ERP",
+        "Sťahovanie v prehliadači"
+      ],
+      "fields": [
+        "Artikel",
+        "Variant",
+        "EAN",
+        "Materiály",
+        "Ošetrovanie",
+        "Rozmery",
+        "Práva k obrázkom"
+      ],
+      "products": [
+        {
+          "name": "Poľná bunda",
+          "variant": "Olivová · M",
+          "ean": "2041000000117",
+          "materials": "65 % bavlna, 35 % polyester",
+          "care": "Prať v práčke pri 30 °C",
+          "dimensions": "Dĺžka chrbta 74 cm",
+          "rights": "Web, tlač"
+        },
+        {
+          "name": "Stolová lampa",
+          "variant": "Mosadz",
+          "ean": "2041000000285",
+          "materials": "Mosadz, ľanové tienidlo",
+          "care": "Utierať suchou handričkou",
+          "dimensions": "V 52 cm · Ø 30 cm",
+          "rights": "Web, sociálne siete"
+        },
+        {
+          "name": "Trailová bežecká obuv",
+          "variant": "Modrá · 42",
+          "ean": "2041000000353",
+          "materials": "Sieťovina, gumová podrážka",
+          "care": "Utrieť dočista",
+          "dimensions": "Vložka 27 cm",
+          "rights": "Web, tlač"
+        },
+        {
+          "name": "Espresso kávovar",
+          "variant": "Matná čierna",
+          "ean": "2041000000421",
+          "materials": "Nehrdzavejúca oceľ",
+          "care": "Odvápňovať každý mesiac",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Web, tlač, sociálne siete"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Náš e-shop",
+      "title": "Nová kolekcia",
+      "online": "Online",
+      "toEnter": "Zostáva zadať"
+    },
+    "once": {
+      "year": "Rok {n}"
+    },
+    "dev": {
+      "time": "Jedno popoludnie",
+      "erp": "Export z ERP",
+      "assistant": "AI asistent",
+      "pasted": "Hotový prompt",
+      "prompt": "Exportuj naše produkty do Open Brand Exchange. Náš ERP: [názov]",
+      "reply": "Hotovo: export namapovaný na formát.",
+      "check": "Kontrola kompatibility",
+      "checks": [
+        "products.csv",
+        "Artikle, varianty a EAN",
+        "Materiály a ošetrovanie",
+        "Obrázky a práva na používanie"
+      ],
+      "passed": "Kompatibilné",
+      "portal": "Portál značky"
+    },
+    "open": {
+      "free": "Otvorené a bez zárobkového cieľa. Zadarmo na použitie.",
+      "feeNote": "Nepovinné partnerské príspevky pokrývajú iba náklady nadácie.",
+      "connect": "Pripojiť sa môže každá strana",
+      "parties": [
+        "Značky",
+        "Predajcovia",
+        "Portály",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "Softvér ERP, PIM a DAM",
+      "portal": "Portál patrí značke",
+      "portalItems": [
+        "Vaše vlastné dáta",
+        "Na vašom vlastnom hostingu",
+        "Alebo hostovaný za vás"
+      ]
+    },
+    "example": {
+      "lead": "Napríklad:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Značky",
+          "p": "Portál, automatizácia, integrácia s ERP, fotografia"
+        },
+        {
+          "h": "Predajcovia",
+          "p": "Príjem a spracovanie produktového obsahu"
+        }
+      ]
+    },
+    "end": {
+      "line": "Zadarmo a otvorené, pre značky a predajcov",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

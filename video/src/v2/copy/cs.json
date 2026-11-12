@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Téměř u každého prodejce někdo kopíruje tabulky|a přepisuje produktová data, značku po značce."
+    },
+    {
+      "id": "rush",
+      "caption": "A každá nová kolekce je závod s časem."
+    },
+    {
+      "id": "idea",
+      "caption": "Když všichni strukturují data stejně, *vyhrávají všichni.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Značka začíná tím, co má:|daty ze svého PIM, ERP nebo Excelu a svými fotografiemi."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange je převede do jedné pevné struktury,|stejné pro každou značku,|včetně práv k obrázkům."
+    },
+    {
+      "id": "out",
+      "caption": "Prodejci je dostanou do svého e-shopu, PIM, POS nebo ERP,|nebo ke stažení."
+    },
+    {
+      "id": "after",
+      "caption": "Pak je nová kolekce online sama od sebe."
+    },
+    {
+      "id": "once",
+      "caption": "Jednou implementovat a všichni mají užitek *po léta.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "Vývojář propojí ERP za jedno odpoledne,|s AI asistentem a připraveným promptem,|ne za měsíce."
+    },
+    {
+      "id": "open",
+      "caption": "Otevřené, bez účelu zisku a zdarma k použití."
+    },
+    {
+      "id": "connect",
+      "caption": "Připojit se může každý:|značky, prodejci, portály|i software pro ERP, PIM a DAM."
+    },
+    {
+      "id": "portal",
+      "caption": "Portál patří značce:|na vlastním hostingu, nebo hostovaný za ni."
+    },
+    {
+      "id": "example",
+      "caption": "Například Photopilot ho implementuje|pro značky a prodejce."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Dnes",
+      "idea": "Myšlenka",
+      "in": "Vstup",
+      "standard": "Otevřený standard",
+      "out": "Výstup",
+      "after": "Potom",
+      "once": "Jednou",
+      "open": "Otevřenost",
+      "example": "Příklad",
+      "dev": "Vývojáři"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Kat. č.",
+          "Barva",
+          "Velikost",
+          "Látka"
+        ],
+        [
+          "SKU",
+          "Varianta",
+          "EAN",
+          "Materiál"
+        ],
+        [
+          "Položka",
+          "Bar.",
+          "Vel.",
+          "Slož."
+        ]
+      ],
+      "target": "Náš e-shop",
+      "brand": "Značka {n} z 24",
+      "toEnter": "Položky k zadání"
+    },
+    "flow": {
+      "inTitle": "Vstup",
+      "inLead": "Co značka vloží",
+      "inItems": [
+        "Produktová data z PIM, ERP nebo Excelu",
+        "Produktové fotografie"
+      ],
+      "stdTitle": "Otevřený standard",
+      "stdLead": "Jedna pevná struktura pro každou značku",
+      "outTitle": "Výstup",
+      "outLead": "Co dostanou prodejci",
+      "outItems": [
+        "E-shop",
+        "PIM",
+        "POS a ERP",
+        "Stahování v prohlížeči"
+      ],
+      "fields": [
+        "Artikl",
+        "Varianta",
+        "EAN",
+        "Materiály",
+        "Péče",
+        "Rozměry",
+        "Práva k obrázkům"
+      ],
+      "products": [
+        {
+          "name": "Polní bunda",
+          "variant": "Olivová · M",
+          "ean": "2041000000117",
+          "materials": "65 % bavlna, 35 % polyester",
+          "care": "Praní v pračce na 30 °C",
+          "dimensions": "Délka zad 74 cm",
+          "rights": "Web, tisk"
+        },
+        {
+          "name": "Stolní lampa",
+          "variant": "Mosaz",
+          "ean": "2041000000285",
+          "materials": "Mosaz, lněné stínidlo",
+          "care": "Otírat suchým hadříkem",
+          "dimensions": "V 52 cm · Ø 30 cm",
+          "rights": "Web, sociální sítě"
+        },
+        {
+          "name": "Trailová běžecká bota",
+          "variant": "Modrá · 42",
+          "ean": "2041000000353",
+          "materials": "Síťovina, gumová podrážka",
+          "care": "Otřít do čista",
+          "dimensions": "Stélka 27 cm",
+          "rights": "Web, tisk"
+        },
+        {
+          "name": "Espresso kávovar",
+          "variant": "Matná černá",
+          "ean": "2041000000421",
+          "materials": "Nerezová ocel",
+          "care": "Odvápnit každý měsíc",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Web, tisk, sociální sítě"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Náš e-shop",
+      "title": "Nová kolekce",
+      "online": "Online",
+      "toEnter": "Položky k zadání"
+    },
+    "once": {
+      "year": "Rok {n}"
+    },
+    "dev": {
+      "time": "Jedno odpoledne",
+      "erp": "Export z ERP",
+      "assistant": "AI asistent",
+      "pasted": "Připravený prompt",
+      "prompt": "Exportuj naše produkty do Open Brand Exchange. Naše ERP: [název]",
+      "reply": "Hotovo: export namapovaný na formát.",
+      "check": "Kontrola kompatibility",
+      "checks": [
+        "products.csv",
+        "Artikly, varianty a EAN",
+        "Materiály a péče",
+        "Obrázky a užívací práva"
+      ],
+      "passed": "Kompatibilní",
+      "portal": "Portál značky"
+    },
+    "open": {
+      "free": "Otevřené a bez účelu zisku. Zdarma k použití.",
+      "feeNote": "Nepovinné partnerské příspěvky pokrývají jen náklady nadace.",
+      "connect": "Připojit se může každý",
+      "parties": [
+        "Značky",
+        "Prodejci",
+        "Portály",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "Software pro ERP, PIM a DAM",
+      "portal": "Portál patří značce",
+      "portalItems": [
+        "Vaše vlastní data",
+        "Na vašem vlastním hostingu",
+        "Nebo hostované za vás"
+      ]
+    },
+    "example": {
+      "lead": "Například:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Značky",
+          "p": "Portál, automatizace, integrace s ERP, fotografie"
+        },
+        {
+          "h": "Prodejci",
+          "p": "Příjem a zpracování produktového obsahu"
+        }
+      ]
+    },
+    "end": {
+      "line": "Zdarma a otevřené, pro značky a prodejce",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

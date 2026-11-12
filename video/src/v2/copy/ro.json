@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "La aproape fiecare comerciant, cineva copiază foi de calcul|și retastează datele de produs, marcă după marcă."
+    },
+    {
+      "id": "rush",
+      "caption": "Și fiecare colecție nouă e o cursă contra cronometru."
+    },
+    {
+      "id": "idea",
+      "caption": "Când toți structurează datele la fel, *câștigă toți.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "O marcă pornește de la ce are:|date din PIM, ERP sau Excel și fotografiile sale."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange le pune într-o singură structură fixă,|aceeași pentru fiecare marcă,|cu drepturile de imagine incluse."
+    },
+    {
+      "id": "out",
+      "caption": "Comercianții le primesc în magazinul online, PIM, POS sau ERP,|sau ca descărcare."
+    },
+    {
+      "id": "after",
+      "caption": "Apoi noua colecție ajunge online de la sine."
+    },
+    {
+      "id": "once",
+      "caption": "Implementezi o dată și toți câștigă *ani la rând.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "Un dezvoltator conectează ERP-ul într-o după-amiază,|cu un asistent AI și promptul gata făcut,|nu în luni."
+    },
+    {
+      "id": "open",
+      "caption": "Deschis și fără scop lucrativ, și gratuit de folosit."
+    },
+    {
+      "id": "connect",
+      "caption": "Orice parte se poate conecta:|mărci, comercianți, portaluri|și software ERP, PIM și DAM."
+    },
+    {
+      "id": "portal",
+      "caption": "Portalul aparține mărcii:|pe propria găzduire sau găzduit pentru ea."
+    },
+    {
+      "id": "example",
+      "caption": "De exemplu, Photopilot îl implementează|pentru mărci și comercianți."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Azi",
+      "idea": "Ideea",
+      "in": "Intrare",
+      "standard": "Standardul deschis",
+      "out": "Ieșire",
+      "after": "După",
+      "once": "O dată",
+      "open": "Deschis",
+      "example": "Un exemplu",
+      "dev": "Dezvoltatori"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Nr. art.",
+          "Culoare",
+          "Mărime",
+          "Țesătură"
+        ],
+        [
+          "SKU",
+          "Variantă",
+          "EAN",
+          "Material"
+        ],
+        [
+          "Articol",
+          "Cul.",
+          "Măr.",
+          "Comp."
+        ]
+      ],
+      "target": "Magazinul nostru online",
+      "brand": "Marca {n} din 24",
+      "toEnter": "Articole de introdus"
+    },
+    "flow": {
+      "inTitle": "Intrare",
+      "inLead": "Ce introduce un brand",
+      "inItems": [
+        "Date de produs din PIM, ERP sau Excel",
+        "Fotografii de produs"
+      ],
+      "stdTitle": "Standardul deschis",
+      "stdLead": "O structură fixă pentru fiecare brand",
+      "outTitle": "Ieșire",
+      "outLead": "Ce primesc comercianții",
+      "outItems": [
+        "Magazin online",
+        "PIM",
+        "POS și ERP",
+        "Descărcări în browser"
+      ],
+      "fields": [
+        "Articol",
+        "Variantă",
+        "EAN",
+        "Materiale",
+        "Întreținere",
+        "Dimensiuni",
+        "Drepturi de imagine"
+      ],
+      "products": [
+        {
+          "name": "Jachetă militară",
+          "variant": "Oliv · M",
+          "ean": "2041000000117",
+          "materials": "65% bumbac, 35% poliester",
+          "care": "Spălare la mașină la 30 °C",
+          "dimensions": "Lungime spate 74 cm",
+          "rights": "Web, tipar"
+        },
+        {
+          "name": "Lampă de masă",
+          "variant": "Alamă",
+          "ean": "2041000000285",
+          "materials": "Alamă, abajur din in",
+          "care": "Se șterge cu o cârpă uscată",
+          "dimensions": "Î 52 cm · Ø 30 cm",
+          "rights": "Web, social media"
+        },
+        {
+          "name": "Pantof de alergare trail",
+          "variant": "Albastru · 42",
+          "ean": "2041000000353",
+          "materials": "Plasă, talpă de cauciuc",
+          "care": "Se șterge",
+          "dimensions": "Branț 27 cm",
+          "rights": "Web, tipar"
+        },
+        {
+          "name": "Espressor",
+          "variant": "Negru mat",
+          "ean": "2041000000421",
+          "materials": "Oțel inoxidabil",
+          "care": "Decalcifiere lunară",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Web, tipar, social media"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Magazinul nostru online",
+      "title": "Colecție nouă",
+      "online": "Online",
+      "toEnter": "Articole de introdus"
+    },
+    "once": {
+      "year": "Anul {n}"
+    },
+    "dev": {
+      "time": "O după-amiază",
+      "erp": "Export ERP",
+      "assistant": "Asistent AI",
+      "pasted": "Prompt gata făcut",
+      "prompt": "Exportă produsele noastre în Open Brand Exchange. ERP-ul nostru: [nume]",
+      "reply": "Gata: exportul, mapat pe format.",
+      "check": "Verificare de compatibilitate",
+      "checks": [
+        "products.csv",
+        "Articole, variante și EAN",
+        "Materiale și întreținere",
+        "Imagini și drepturi de utilizare"
+      ],
+      "passed": "Compatibil",
+      "portal": "Portalul mărcii"
+    },
+    "open": {
+      "free": "Deschis și fără scop lucrativ. Gratuit de folosit.",
+      "feeNote": "Contribuțiile opționale ale partenerilor acoperă doar costurile fundației.",
+      "connect": "Orice parte se poate conecta",
+      "parties": [
+        "Mărci",
+        "Comercianți",
+        "Portaluri",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "Software ERP, PIM și DAM",
+      "portal": "Portalul aparține mărcii",
+      "portalItems": [
+        "Propriile date",
+        "Pe propria găzduire",
+        "Sau găzduit pentru dvs."
+      ]
+    },
+    "example": {
+      "lead": "De exemplu:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Mărci",
+          "p": "Portal, automatizare, integrare ERP, fotografie"
+        },
+        {
+          "h": "Comercianți",
+          "p": "Primirea și procesarea conținutului de produs"
+        }
+      ]
+    },
+    "end": {
+      "line": "Gratuit și deschis, pentru mărci și comercianți",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

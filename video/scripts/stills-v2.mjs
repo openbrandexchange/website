@@ -18,6 +18,12 @@ const auto = {
   poster: posterFrame,
   after: end("after") - 14,
   once: end("once") - 14,
+  devAssistant: lines.dev + Math.round((c.dev[1] + 1.6) * FPS),
+  dev: end("dev") - 14,
+  open: lines.connect - 4,
+  connect: lines.portal - 4,
+  portal: end("open") - 14,
+  example: end("example") - 14,
   end: end("end") - 2,
 };
 const frames = given.length ? given.map((f) => [f, Number(f)]) : Object.entries(auto);

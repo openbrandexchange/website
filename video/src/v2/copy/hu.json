@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Szinte minden viszonteladónál valaki táblázatokat másol|és újragépeli a termékadatokat, márkáról márkára."
+    },
+    {
+      "id": "rush",
+      "caption": "És minden új kollekció versenyfutás az idővel."
+    },
+    {
+      "id": "idea",
+      "caption": "Ha mindenki ugyanúgy strukturálja az adatokat, *mindenki nyer.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "A márka abból indul ki, ami megvan neki:|a PIM-jéből, ERP-jéből vagy Excelből származó adatokból és a fotóiból."
+    },
+    {
+      "id": "standard",
+      "caption": "Az Open Brand Exchange egyetlen rögzített szerkezetbe rendezi,|amely minden márkánál ugyanaz,|a képjogokkal együtt."
+    },
+    {
+      "id": "out",
+      "caption": "A viszonteladók megkapják a webáruházukba, PIM-be, POS- vagy ERP-rendszerbe,|vagy letöltésként."
+    },
+    {
+      "id": "after",
+      "caption": "Aztán az új kollekció magától kerül online."
+    },
+    {
+      "id": "once",
+      "caption": "Egyszer kell bevezetni, és mindenki profitál belőle *évekig.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "Egy fejlesztő egyetlen délután alatt bekapcsolja az ERP-t,|egy AI-asszisztenssel és a kész prompttal,|nem hónapok alatt."
+    },
+    {
+      "id": "open",
+      "caption": "Nyílt és nyereségszerzési cél nélküli, és ingyenesen használható."
+    },
+    {
+      "id": "connect",
+      "caption": "Bármely fél csatlakozhat:|márkák, viszonteladók, portálok|és ERP-, PIM- és DAM-szoftverek."
+    },
+    {
+      "id": "portal",
+      "caption": "A portál a márkáé:|saját üzemeltetésben vagy számára üzemeltetve."
+    },
+    {
+      "id": "example",
+      "caption": "A Photopilot például megvalósítja|márkák és viszonteladók számára."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Ma",
+      "idea": "Az ötlet",
+      "in": "Be",
+      "standard": "A nyílt szabvány",
+      "out": "Ki",
+      "after": "Utána",
+      "once": "Egyszer",
+      "open": "Nyílt",
+      "example": "Egy példa",
+      "dev": "Fejlesztők"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Cikkszám",
+          "Szín",
+          "Méret",
+          "Szövet"
+        ],
+        [
+          "SKU",
+          "Változat",
+          "EAN",
+          "Anyag"
+        ],
+        [
+          "Tétel",
+          "Szín",
+          "Mér.",
+          "Össz."
+        ]
+      ],
+      "target": "Webáruházunk",
+      "brand": "{n}. márka a 24-ből",
+      "toEnter": "Felviendő cikkek"
+    },
+    "flow": {
+      "inTitle": "Be",
+      "inLead": "Amit egy márka betölt",
+      "inItems": [
+        "Termékadatok PIM-ből, ERP-ből vagy Excelből",
+        "Termékfotók"
+      ],
+      "stdTitle": "A nyílt szabvány",
+      "stdLead": "Egy rögzített szerkezet minden márkának",
+      "outTitle": "Ki",
+      "outLead": "Amit a viszonteladók kapnak",
+      "outItems": [
+        "Webáruház",
+        "PIM",
+        "POS és ERP",
+        "Letöltések a böngészőben"
+      ],
+      "fields": [
+        "Cikk",
+        "Változat",
+        "EAN",
+        "Anyagok",
+        "Ápolás",
+        "Méretek",
+        "Képjogok"
+      ],
+      "products": [
+        {
+          "name": "Terepdzseki",
+          "variant": "Olíva · M",
+          "ean": "2041000000117",
+          "materials": "65% pamut, 35% poliészter",
+          "care": "Gépi mosás 30 °C-on",
+          "dimensions": "Háthossz 74 cm",
+          "rights": "Web, nyomtatás"
+        },
+        {
+          "name": "Asztali lámpa",
+          "variant": "Sárgaréz",
+          "ean": "2041000000285",
+          "materials": "Sárgaréz, lenvászon ernyő",
+          "care": "Száraz ruhával portalanítandó",
+          "dimensions": "M 52 cm · Ø 30 cm",
+          "rights": "Web, közösségi média"
+        },
+        {
+          "name": "Terepfutócipő",
+          "variant": "Kék · 42",
+          "ean": "2041000000353",
+          "materials": "Háló, gumitalp",
+          "care": "Áttörölhető",
+          "dimensions": "Talpbetét 27 cm",
+          "rights": "Web, nyomtatás"
+        },
+        {
+          "name": "Eszpresszógép",
+          "variant": "Matt fekete",
+          "ean": "2041000000421",
+          "materials": "Rozsdamentes acél",
+          "care": "Havonta vízkőmentesítendő",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Web, nyomtatás, közösségi média"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Webáruházunk",
+      "title": "Új kollekció",
+      "online": "Online",
+      "toEnter": "Felviendő cikkek"
+    },
+    "once": {
+      "year": "{n}. év"
+    },
+    "dev": {
+      "time": "Egy délután",
+      "erp": "ERP-export",
+      "assistant": "AI-asszisztens",
+      "pasted": "Kész prompt",
+      "prompt": "Exportáld a termékeinket az Open Brand Exchange-be. Az ERP-nk: [név]",
+      "reply": "Kész: az export, a formátumhoz illesztve.",
+      "check": "Kompatibilitási ellenőrzés",
+      "checks": [
+        "products.csv",
+        "Cikkek, változatok és EAN-kódok",
+        "Anyagok és ápolás",
+        "Képek és felhasználási jogok"
+      ],
+      "passed": "Kompatibilis",
+      "portal": "Márkaportál"
+    },
+    "open": {
+      "free": "Nyílt és nyereségszerzési cél nélküli. Ingyenesen használható.",
+      "feeNote": "Az opcionális partnerdíjak csak az alapítvány költségeit fedezik.",
+      "connect": "Bármely fél csatlakozhat",
+      "parties": [
+        "Márkák",
+        "Viszonteladók",
+        "Portálok",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "ERP-, PIM- és DAM-szoftverek",
+      "portal": "A portál a márkáé",
+      "portalItems": [
+        "Saját adatok",
+        "Saját üzemeltetésben",
+        "Vagy az Ön számára üzemeltetve"
+      ]
+    },
+    "example": {
+      "lead": "Például:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Márkák",
+          "p": "Portál, automatizálás, ERP-integráció, fotózás"
+        },
+        {
+          "h": "Viszonteladók",
+          "p": "Terméktartalom fogadása és feldolgozása"
+        }
+      ]
+    },
+    "end": {
+      "line": "Ingyenes és nyílt, márkáknak és viszonteladóknak",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

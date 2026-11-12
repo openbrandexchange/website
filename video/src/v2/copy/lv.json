@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Gandrīz pie katra tirgotāja kāds kopē izklājlapas|un pārraksta produktu datus, zīmolu pēc zīmola."
+    },
+    {
+      "id": "rush",
+      "caption": "Un katra jauna kolekcija ir steiga."
+    },
+    {
+      "id": "idea",
+      "caption": "Kad visi strukturē datus vienādi, *iegūst visi.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Zīmols sāk ar to, kas tam ir:|dati no PIM, ERP vai Excel un tā fotoattēli."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange ieliek tos vienā fiksētā struktūrā,|vienādā katram zīmolam,|kopā ar attēlu tiesībām."
+    },
+    {
+      "id": "out",
+      "caption": "Tirgotāji tos saņem savā interneta veikalā, PIM, POS vai ERP,|vai kā lejupielādi."
+    },
+    {
+      "id": "after",
+      "caption": "Pēc tam jaunā kolekcija nonāk tiešsaistē pati no sevis."
+    },
+    {
+      "id": "once",
+      "caption": "Ievieš vienreiz, un ieguvums visiem ir *uz gadiem.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "Izstrādātājs pieslēdz ERP vienā pēcpusdienā,|ar MI asistentu un gatavu uzvedni,|nevis mēnešos."
+    },
+    {
+      "id": "open",
+      "caption": "Atvērts un bez peļņas gūšanas mērķa, bezmaksas lietošanai."
+    },
+    {
+      "id": "connect",
+      "caption": "Pievienoties var ikviena puse:|zīmoli, tirgotāji, portāli|un ERP, PIM un DAM programmatūra."
+    },
+    {
+      "id": "portal",
+      "caption": "Portāls pieder zīmolam:|tā paša mitināšanā vai mitināts tā vietā."
+    },
+    {
+      "id": "example",
+      "caption": "Piemēram, Photopilot to ievieš|zīmoliem un tirgotājiem."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Šodien",
+      "idea": "Ideja",
+      "in": "Ieeja",
+      "standard": "Atvērtais standarts",
+      "out": "Izeja",
+      "after": "Pēc tam",
+      "once": "Vienreiz",
+      "open": "Atvērtība",
+      "example": "Piemērs",
+      "dev": "Izstrādātāji"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Art. nr.",
+          "Krāsa",
+          "Izmērs",
+          "Audums"
+        ],
+        [
+          "SKU",
+          "Variants",
+          "EAN",
+          "Materiāls"
+        ],
+        [
+          "Prece",
+          "Kr.",
+          "Izm.",
+          "Sast."
+        ]
+      ],
+      "target": "Mūsu interneta veikals",
+      "brand": "Zīmols {n} no 24",
+      "toEnter": "Vēl jāievada"
+    },
+    "flow": {
+      "inTitle": "Ieeja",
+      "inLead": "Ko zīmols ievada",
+      "inItems": [
+        "Produktu dati no PIM, ERP vai Excel",
+        "Produktu fotoattēli"
+      ],
+      "stdTitle": "Atvērtais standarts",
+      "stdLead": "Viena fiksēta struktūra katram zīmolam",
+      "outTitle": "Izeja",
+      "outLead": "Ko saņem tirgotāji",
+      "outItems": [
+        "Interneta veikals",
+        "PIM",
+        "POS un ERP",
+        "Lejupielādes pārlūkā"
+      ],
+      "fields": [
+        "Artikuls",
+        "Variants",
+        "EAN",
+        "Materiāli",
+        "Kopšana",
+        "Izmēri",
+        "Attēlu tiesības"
+      ],
+      "products": [
+        {
+          "name": "Lauka jaka",
+          "variant": "Olīvu · M",
+          "ean": "2041000000117",
+          "materials": "65% kokvilna, 35% poliesters",
+          "care": "Mazgāt veļasmašīnā 30 °C",
+          "dimensions": "Muguras garums 74 cm",
+          "rights": "Tīmeklis, druka"
+        },
+        {
+          "name": "Galda lampa",
+          "variant": "Misiņš",
+          "ean": "2041000000285",
+          "materials": "Misiņš, lina abažūrs",
+          "care": "Noslaucīt ar sausu drānu",
+          "dimensions": "A 52 cm · Ø 30 cm",
+          "rights": "Tīmeklis, sociālie tīkli"
+        },
+        {
+          "name": "Taku skriešanas apavi",
+          "variant": "Zila · 42",
+          "ean": "2041000000353",
+          "materials": "Siets, gumijas zole",
+          "care": "Noslaucīt",
+          "dimensions": "Iekšzole 27 cm",
+          "rights": "Tīmeklis, druka"
+        },
+        {
+          "name": "Espresso automāts",
+          "variant": "Matēti melns",
+          "ean": "2041000000421",
+          "materials": "Nerūsējošais tērauds",
+          "care": "Atkaļķot reizi mēnesī",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Tīmeklis, druka, sociālie tīkli"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Mūsu interneta veikals",
+      "title": "Jaunā kolekcija",
+      "online": "Tiešsaistē",
+      "toEnter": "Vēl jāievada"
+    },
+    "once": {
+      "year": "{n}. gads"
+    },
+    "dev": {
+      "time": "Viena pēcpusdiena",
+      "erp": "ERP eksports",
+      "assistant": "MI asistents",
+      "pasted": "Gatava uzvedne",
+      "prompt": "Eksportē mūsu produktus uz Open Brand Exchange. Mūsu ERP: [nosaukums]",
+      "reply": "Gatavs: eksports, pielāgots formātam.",
+      "check": "Saderības pārbaude",
+      "checks": [
+        "products.csv",
+        "Artikuli, varianti un EAN",
+        "Materiāli un kopšana",
+        "Attēli un lietošanas tiesības"
+      ],
+      "passed": "Saderīgs",
+      "portal": "Zīmola portāls"
+    },
+    "open": {
+      "free": "Atvērts un bez peļņas gūšanas mērķa. Bezmaksas lietošanai.",
+      "feeNote": "Neobligātās partneru iemaksas sedz tikai fonda izmaksas.",
+      "connect": "Pievienoties var ikviena puse",
+      "parties": [
+        "Zīmoli",
+        "Tirgotāji",
+        "Portāli",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "ERP, PIM un DAM programmatūra",
+      "portal": "Portāls pieder zīmolam",
+      "portalItems": [
+        "Jūsu pašu dati",
+        "Jūsu pašu mitināšanā",
+        "Vai mitināts jūsu vietā"
+      ]
+    },
+    "example": {
+      "lead": "Piemēram:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Zīmoli",
+          "p": "Portāls, automatizācija, ERP integrācija, fotografēšana"
+        },
+        {
+          "h": "Tirgotāji",
+          "p": "Produktu satura saņemšana un apstrāde"
+        }
+      ]
+    },
+    "end": {
+      "line": "Bezmaksas un atvērts, zīmoliem un tirgotājiem",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

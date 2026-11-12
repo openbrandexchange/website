@@ -1,7 +1,7 @@
 """Render the voice-over lines with ElevenLabs.
 
   python3 scripts/voiceover.py src/copy/en.json public/voice/en --language en [--voice ID] [--speed 1.0] [--only id,id]
-  python3 scripts/voiceover.py src/v2/copy/en.json public/voice-v2/en --language en --timestamps --voice ID --speed 1.0
+  python3 scripts/voiceover.py src/v2/copy/en.json public/voice-v2/en --language en --timestamps --voice ID --speed 1.0 [--tempo 1.06]
 
 --timestamps (v2) asks ElevenLabs for the character alignment as well: it writes <id>.json with the
 alignment, takes the end of the speech from it, and writes chunks.json with the start (in seconds,
@@ -11,7 +11,8 @@ spelled for the voice, e.g. "E.A.N."), with the same number of chunks.
 
 Reads ELEVENLABS_API_KEY from the environment (never written anywhere). Writes one mp3 per
 line plus durations.json, which the composition reads to place every line, and appends the
-character cost to .drafts/cost-log.jsonl. --only re-renders a few lines and keeps the rest.
+character cost to .drafts/cost-log.jsonl. --tempo plays every line a little faster afterwards (ffmpeg
+atempo, pitch kept; eleven_v4 barely follows --speed) and scales the alignment to match. --only re-renders a few lines and keeps the rest.
 """
 
 import argparse
@@ -73,6 +74,20 @@ def synthesize(text, voice, language, speed, out, previous, following, timestamp
         raise SystemExit(f"HTTP {error.code}: {error.read().decode()[:1000]}")
 
 
+def retime(path, tempo, alignment):
+    """Play a line `tempo` times faster (same pitch) and scale its alignment to match."""
+    temp = path + ".tmp.mp3"
+    subprocess.run(
+        ["ffmpeg", "-loglevel", "error", "-y", "-i", path, "-filter:a", f"atempo={tempo}", "-c:a", "libmp3lame", "-b:a", "128k", temp],
+        check=True,
+    )
+    os.replace(temp, path)
+    if alignment:
+        for key in ("character_start_times_seconds", "character_end_times_seconds"):
+            alignment[key] = [round(t / tempo, 3) for t in alignment[key]]
+    return alignment
+
+
 def seconds(path):
     """Where the speech ends: the file length minus the silence ElevenLabs leaves at the end."""
     output = subprocess.run(
@@ -102,6 +117,7 @@ def main():
     parser.add_argument("--speed", type=float, default=1.12)
     parser.add_argument("--only", default="")
     parser.add_argument("--timestamps", action="store_true")
+    parser.add_argument("--tempo", type=float, default=1.0)
     args = parser.parse_args()
     voice = args.voice or VOICES[args.language]
     only = {x for x in args.only.split(",") if x}
@@ -121,6 +137,8 @@ def main():
         previous = say(lines[index - 1]) if index else ""
         following = say(lines[index + 1]) if index + 1 < len(lines) else ""
         alignment = synthesize(say(line), voice, args.language, args.speed, out, previous, following, args.timestamps)
+        if args.tempo != 1.0:
+            alignment = retime(out, args.tempo, alignment)
         durations[line["id"]] = round(seconds(out), 3)
         if alignment:
             with open(os.path.join(args.outdir, f"{line['id']}.json"), "w") as handle:
@@ -147,6 +165,7 @@ def main():
         "voice": voice,
         "language": args.language,
         "speed": args.speed,
+        "tempo": args.tempo,
         "characters": characters,
         "usd": round(characters * USD_PER_CHARACTER, 4),
     }

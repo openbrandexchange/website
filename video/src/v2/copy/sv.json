@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Hos nästan varje återförsäljare kopierar någon kalkylblad|och skriver in produktdata igen, varumärke för varumärke."
+    },
+    {
+      "id": "rush",
+      "caption": "Och varje ny kollektion är en kamp mot klockan."
+    },
+    {
+      "id": "idea",
+      "caption": "När alla strukturerar data på samma sätt *vinner alla.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Ett varumärke börjar med det det har:|data från PIM, ERP eller Excel, och sina bilder."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange lägger den i en fast struktur,|samma för varje varumärke,|med bildrättigheterna inkluderade."
+    },
+    {
+      "id": "out",
+      "caption": "Återförsäljare får den i sin webbutik, PIM, kassa eller ERP,|eller som nedladdning."
+    },
+    {
+      "id": "after",
+      "caption": "Sedan hamnar den nya kollektionen online av sig själv."
+    },
+    {
+      "id": "once",
+      "caption": "Implementera en gång, och alla har nytta av det *i många år.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "En utvecklare kopplar ERP:t på en eftermiddag,|med en AI-assistent och den färdiga prompten,|inte på flera månader."
+    },
+    {
+      "id": "open",
+      "caption": "Öppet och utan vinstsyfte, och gratis att använda."
+    },
+    {
+      "id": "connect",
+      "caption": "Alla parter kan ansluta:|varumärken, återförsäljare, portaler|och ERP-, PIM- och DAM-programvara."
+    },
+    {
+      "id": "portal",
+      "caption": "Portalen tillhör varumärket:|på egen hosting, eller hostad åt det."
+    },
+    {
+      "id": "example",
+      "caption": "Photopilot implementerar det till exempel|för varumärken och återförsäljare."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "I dag",
+      "idea": "Idén",
+      "in": "In",
+      "standard": "Den öppna standarden",
+      "out": "Ut",
+      "after": "Efteråt",
+      "once": "En gång",
+      "open": "Öppet",
+      "example": "Ett exempel",
+      "dev": "Utvecklare"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Art.nr",
+          "Färg",
+          "Storlek",
+          "Tyg"
+        ],
+        [
+          "SKU",
+          "Variant",
+          "EAN",
+          "Material"
+        ],
+        [
+          "Artikel",
+          "Frg.",
+          "Strl.",
+          "Samm."
+        ]
+      ],
+      "target": "Vår webbutik",
+      "brand": "Varumärke {n} av 24",
+      "toEnter": "Kvar att lägga in"
+    },
+    "flow": {
+      "inTitle": "In",
+      "inLead": "Det ett varumärke lägger in",
+      "inItems": [
+        "Produktdata från PIM, ERP eller Excel",
+        "Produktbilder"
+      ],
+      "stdTitle": "Den öppna standarden",
+      "stdLead": "En fast struktur för varje varumärke",
+      "outTitle": "Ut",
+      "outLead": "Det återförsäljare får",
+      "outItems": [
+        "E-handel",
+        "PIM",
+        "Kassasystem och ERP",
+        "Nedladdningar i webbläsaren"
+      ],
+      "fields": [
+        "Artikel",
+        "Variant",
+        "EAN",
+        "Material",
+        "Skötsel",
+        "Mått",
+        "Bildrättigheter"
+      ],
+      "products": [
+        {
+          "name": "Fältjacka",
+          "variant": "Oliv · M",
+          "ean": "2041000000117",
+          "materials": "65 % bomull, 35 % polyester",
+          "care": "Maskintvätt 30 °C",
+          "dimensions": "Rygglängd 74 cm",
+          "rights": "Webb, tryck"
+        },
+        {
+          "name": "Bordslampa",
+          "variant": "Mässing",
+          "ean": "2041000000285",
+          "materials": "Mässing, linneskärm",
+          "care": "Damma av med torr trasa",
+          "dimensions": "H 52 cm · Ø 30 cm",
+          "rights": "Webb, sociala medier"
+        },
+        {
+          "name": "Terränglöparsko",
+          "variant": "Blå · 42",
+          "ean": "2041000000353",
+          "materials": "Mesh, gummisula",
+          "care": "Torka av",
+          "dimensions": "Innersula 27 cm",
+          "rights": "Webb, tryck"
+        },
+        {
+          "name": "Espressomaskin",
+          "variant": "Mattsvart",
+          "ean": "2041000000421",
+          "materials": "Rostfritt stål",
+          "care": "Avkalka varje månad",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Webb, tryck, sociala medier"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Vår webbutik",
+      "title": "Ny kollektion",
+      "online": "Online",
+      "toEnter": "Kvar att lägga in"
+    },
+    "once": {
+      "year": "År {n}"
+    },
+    "dev": {
+      "time": "En eftermiddag",
+      "erp": "ERP-export",
+      "assistant": "AI-assistent",
+      "pasted": "Färdig prompt",
+      "prompt": "Exportera våra produkter till Open Brand Exchange. Vårt ERP: [namn]",
+      "reply": "Klart: exporten, mappad till formatet.",
+      "check": "Kompatibilitetskontroll",
+      "checks": [
+        "products.csv",
+        "Artiklar, varianter och EAN",
+        "Material och skötsel",
+        "Bilder och användningsrättigheter"
+      ],
+      "passed": "Kompatibel",
+      "portal": "Varumärkesportal"
+    },
+    "open": {
+      "free": "Öppet och utan vinstsyfte. Gratis att använda.",
+      "feeNote": "Valfria partneravgifter täcker bara stiftelsens kostnader.",
+      "connect": "Alla parter kan ansluta",
+      "parties": [
+        "Varumärken",
+        "Återförsäljare",
+        "Portaler",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "ERP-, PIM- och DAM-programvara",
+      "portal": "Portalen tillhör varumärket",
+      "portalItems": [
+        "Din egen data",
+        "På din egen hosting",
+        "Eller hostad åt dig"
+      ]
+    },
+    "example": {
+      "lead": "Till exempel:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Varumärken",
+          "p": "Portal, automatisering, ERP-integration, fotografering"
+        },
+        {
+          "h": "Återförsäljare",
+          "p": "Mottagning och hantering av produktinnehåll"
+        }
+      ]
+    },
+    "end": {
+      "line": "Gratis och öppet, för varumärken och återförsäljare",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

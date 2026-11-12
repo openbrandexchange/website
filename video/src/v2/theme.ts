@@ -13,6 +13,8 @@ export const theme = {
   accent: "#cf3a24",
   accentFg: "#b3301c",
   accentSoft: "#fbe6e1",
+  ok: "#1d7a3e",
+  okSoft: "#e3f1e7",
   ink: "#111110",
   inkFg: "#f4f2ec",
   font: '"Inter Tight", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif',

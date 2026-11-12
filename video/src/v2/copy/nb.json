@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Hos nesten hver forhandler kopierer noen regneark|og taster inn produktdata på nytt, merke for merke."
+    },
+    {
+      "id": "rush",
+      "caption": "Og hver nye kolleksjon er et kappløp."
+    },
+    {
+      "id": "idea",
+      "caption": "Når alle strukturerer data på samme måte, *vinner alle.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Et merke starter med det det har:|data fra PIM, ERP eller Excel, og bildene sine."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange legger det i én fast struktur,|lik for hvert merke,|med bilderettighetene inkludert."
+    },
+    {
+      "id": "out",
+      "caption": "Forhandlere får det i nettbutikken, PIM, kassesystemet eller ERP,|eller som nedlasting."
+    },
+    {
+      "id": "after",
+      "caption": "Så går den nye kolleksjonen på nett av seg selv."
+    },
+    {
+      "id": "once",
+      "caption": "Implementer én gang, og alle har nytte av det *i årevis.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "En utvikler kobler til ERP-et på én ettermiddag,|med en AI-assistent og den ferdige prompten,|ikke på flere måneder."
+    },
+    {
+      "id": "open",
+      "caption": "Åpen og uten fortjenestehensikt, og gratis å bruke."
+    },
+    {
+      "id": "connect",
+      "caption": "Alle parter kan koble seg på:|merkevarer, forhandlere, portaler|og ERP-, PIM- og DAM-programvare."
+    },
+    {
+      "id": "portal",
+      "caption": "Portalen tilhører merkevaren:|på egen hosting, eller hostet for den."
+    },
+    {
+      "id": "example",
+      "caption": "Photopilot implementerer det for eksempel|for merkevarer og forhandlere."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "I dag",
+      "idea": "Idéen",
+      "in": "Inn",
+      "standard": "Den åpne standarden",
+      "out": "Ut",
+      "after": "Etterpå",
+      "once": "Én gang",
+      "open": "Åpent",
+      "example": "Et eksempel",
+      "dev": "Utviklere"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Art.nr.",
+          "Farge",
+          "Størrelse",
+          "Stoff"
+        ],
+        [
+          "SKU",
+          "Variant",
+          "EAN",
+          "Materiale"
+        ],
+        [
+          "Vare",
+          "Frg.",
+          "Str.",
+          "Sams."
+        ]
+      ],
+      "target": "Vår nettbutikk",
+      "brand": "Merke {n} av 24",
+      "toEnter": "Gjenstår å registrere"
+    },
+    "flow": {
+      "inTitle": "Inn",
+      "inLead": "Det et merke legger inn",
+      "inItems": [
+        "Produktdata fra PIM, ERP eller Excel",
+        "Produktbilder"
+      ],
+      "stdTitle": "Den åpne standarden",
+      "stdLead": "Én fast struktur for hvert merke",
+      "outTitle": "Ut",
+      "outLead": "Det forhandlere får",
+      "outItems": [
+        "Nettbutikk",
+        "PIM",
+        "Kassesystem og ERP",
+        "Nedlastinger i nettleseren"
+      ],
+      "fields": [
+        "Artikkel",
+        "Variant",
+        "EAN",
+        "Materialer",
+        "Vedlikehold",
+        "Mål",
+        "Bilderettigheter"
+      ],
+      "products": [
+        {
+          "name": "Feltjakke",
+          "variant": "Oliven · M",
+          "ean": "2041000000117",
+          "materials": "65 % bomull, 35 % polyester",
+          "care": "Maskinvask 30 °C",
+          "dimensions": "Ryggengde 74 cm",
+          "rights": "Nett, trykk"
+        },
+        {
+          "name": "Bordlampe",
+          "variant": "Messing",
+          "ean": "2041000000285",
+          "materials": "Messing, skjerm i lin",
+          "care": "Tørk støv med tørr klut",
+          "dimensions": "H 52 cm · Ø 30 cm",
+          "rights": "Nett, sosiale medier"
+        },
+        {
+          "name": "Terrengløpesko",
+          "variant": "Blå · 42",
+          "ean": "2041000000353",
+          "materials": "Mesh, gummisåle",
+          "care": "Tørk av",
+          "dimensions": "Innersåle 27 cm",
+          "rights": "Nett, trykk"
+        },
+        {
+          "name": "Espressomaskin",
+          "variant": "Matt svart",
+          "ean": "2041000000421",
+          "materials": "Rustfritt stål",
+          "care": "Avkalkes månedlig",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Nett, trykk, sosiale medier"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Vår nettbutikk",
+      "title": "Ny kolleksjon",
+      "online": "På nett",
+      "toEnter": "Gjenstår å registrere"
+    },
+    "once": {
+      "year": "År {n}"
+    },
+    "dev": {
+      "time": "Én ettermiddag",
+      "erp": "ERP-eksport",
+      "assistant": "AI-assistent",
+      "pasted": "Ferdig prompt",
+      "prompt": "Eksporter produktene våre til Open Brand Exchange. Vårt ERP: [navn]",
+      "reply": "Ferdig: eksporten, tilpasset formatet.",
+      "check": "Kompatibilitetssjekk",
+      "checks": [
+        "products.csv",
+        "Artikler, varianter og EAN",
+        "Materialer og vedlikehold",
+        "Bilder og bruksrettigheter"
+      ],
+      "passed": "Kompatibel",
+      "portal": "Merkevareportal"
+    },
+    "open": {
+      "free": "Åpen og uten fortjenestehensikt. Gratis å bruke.",
+      "feeNote": "Valgfrie partnerbidrag dekker bare stiftelsens kostnader.",
+      "connect": "Alle parter kan koble seg på",
+      "parties": [
+        "Merkevarer",
+        "Forhandlere",
+        "Portaler",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "ERP-, PIM- og DAM-programvare",
+      "portal": "Portalen tilhører merkevaren",
+      "portalItems": [
+        "Dine egne data",
+        "På din egen hosting",
+        "Eller hostet for deg"
+      ]
+    },
+    "example": {
+      "lead": "For eksempel:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Merkevarer",
+          "p": "Portal, automatisering, ERP-integrasjon, fotografering"
+        },
+        {
+          "h": "Forhandlere",
+          "p": "Mottak og behandling av produktinnhold"
+        }
+      ]
+    },
+    "end": {
+      "line": "Gratis og åpen, for merkevarer og forhandlere",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

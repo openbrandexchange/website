@@ -1,0 +1,231 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Lähes jokaisella jälleenmyyjällä joku kopioi taulukoita|ja näppäilee tuotetietoja uudelleen, brändi kerrallaan."
+    },
+    {
+      "id": "rush",
+      "caption": "Ja jokainen uusi mallisto on kilpajuoksua aikaa vastaan."
+    },
+    {
+      "id": "idea",
+      "caption": "Kun kaikki jäsentävät tiedot samalla tavalla, *kaikki voittavat.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Brändi aloittaa siitä, mitä sillä on:|tiedot PIM:stä, ERP:stä tai Excelistä sekä kuvat."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange vie ne yhteen kiinteään rakenteeseen,|joka on sama jokaiselle brändille,|kuvaoikeudet mukaan lukien."
+    },
+    {
+      "id": "out",
+      "caption": "Jälleenmyyjät saavat ne verkkokauppaansa, PIM:iin, kassaan tai ERP:hen,|tai ladattavina."
+    },
+    {
+      "id": "after",
+      "caption": "Sitten uusi mallisto menee verkkoon itsestään."
+    },
+    {
+      "id": "once",
+      "caption": "Toteuta kerran, ja kaikki hyötyvät *vuosia.*",
+      "onScreen": true
+    },
+    {
+      "id": "dev",
+      "caption": "Kehittäjä liittää ERP:n yhdessä iltapäivässä,|tekoälyavustajalla ja valmiilla kehotteella,|ei kuukausissa."
+    },
+    {
+      "id": "open",
+      "caption": "Avoin ja ilman voitontavoittelua, ja maksuton käyttää."
+    },
+    {
+      "id": "connect",
+      "caption": "Jokainen osapuoli voi liittyä:|brändit, jälleenmyyjät, portaalit|sekä ERP-, PIM- ja DAM-ohjelmistot."
+    },
+    {
+      "id": "portal",
+      "caption": "Portaali kuuluu brändille:|omassa ylläpidossa tai sille ylläpidettynä."
+    },
+    {
+      "id": "example",
+      "caption": "Esimerkiksi Photopilot toteuttaa sen|brändeille ja jälleenmyyjille."
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Nyt",
+      "idea": "Ajatus",
+      "in": "Sisään",
+      "standard": "Avoin standardi",
+      "out": "Ulos",
+      "after": "Jälkeen",
+      "once": "Kerran",
+      "open": "Avoin",
+      "example": "Esimerkki",
+      "dev": "Kehittäjät"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Tuotenro",
+          "Väri",
+          "Koko",
+          "Kangas"
+        ],
+        [
+          "SKU",
+          "Variantti",
+          "EAN",
+          "Materiaali"
+        ],
+        [
+          "Tuote",
+          "Vä.",
+          "Ko.",
+          "Koost."
+        ]
+      ],
+      "target": "Verkkokauppamme",
+      "brand": "Brändi {n}/24",
+      "toEnter": "Syötettäviä tuotteita"
+    },
+    "flow": {
+      "inTitle": "Sisään",
+      "inLead": "Mitä brändi tuo mukanaan",
+      "inItems": [
+        "Tuotetiedot PIM-, ERP- tai Excel-järjestelmästä",
+        "Tuotekuvat"
+      ],
+      "stdTitle": "Avoin standardi",
+      "stdLead": "Yksi kiinteä rakenne jokaiselle brändille",
+      "outTitle": "Ulos",
+      "outLead": "Mitä jälleenmyyjät saavat",
+      "outItems": [
+        "Verkkokauppa",
+        "PIM",
+        "Kassa ja ERP",
+        "Lataukset selaimessa"
+      ],
+      "fields": [
+        "Tuote",
+        "Variantti",
+        "EAN",
+        "Materiaalit",
+        "Hoito",
+        "Mitat",
+        "Kuvaoikeudet"
+      ],
+      "products": [
+        {
+          "name": "Kenttätakki",
+          "variant": "Oliivi · M",
+          "ean": "2041000000117",
+          "materials": "65 % puuvillaa, 35 % polyesteriä",
+          "care": "Konepesu 30 °C",
+          "dimensions": "Selkäpituus 74 cm",
+          "rights": "Verkko, painotuotteet"
+        },
+        {
+          "name": "Pöytävalaisin",
+          "variant": "Messinki",
+          "ean": "2041000000285",
+          "materials": "Messinki, pellavavarjostin",
+          "care": "Pyyhi pölyt kuivalla liinalla",
+          "dimensions": "K 52 cm · Ø 30 cm",
+          "rights": "Verkko, sosiaalinen media"
+        },
+        {
+          "name": "Polkujuoksukenkä",
+          "variant": "Sininen · 42",
+          "ean": "2041000000353",
+          "materials": "Mesh, kumipohja",
+          "care": "Pyyhi puhtaaksi",
+          "dimensions": "Sisäpohja 27 cm",
+          "rights": "Verkko, painotuotteet"
+        },
+        {
+          "name": "Espressokone",
+          "variant": "Mattamusta",
+          "ean": "2041000000421",
+          "materials": "Ruostumaton teräs",
+          "care": "Kalkinpoisto kuukausittain",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Verkko, painotuotteet, sosiaalinen media"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Verkkokauppamme",
+      "title": "Uusi mallisto",
+      "online": "Verkossa",
+      "toEnter": "Syötettäviä tuotteita"
+    },
+    "once": {
+      "year": "Vuosi {n}"
+    },
+    "dev": {
+      "time": "Yksi iltapäivä",
+      "erp": "ERP-vienti",
+      "assistant": "Tekoälyavustaja",
+      "pasted": "Valmis kehote",
+      "prompt": "Vie tuotteemme Open Brand Exchangeen. ERP-järjestelmämme: [nimi]",
+      "reply": "Valmis: vienti muunnettuna formaattiin.",
+      "check": "Yhteensopivuustarkistus",
+      "checks": [
+        "products.csv",
+        "Tuotteet, variantit ja EAN-koodit",
+        "Materiaalit ja hoito",
+        "Kuvat ja käyttöoikeudet"
+      ],
+      "passed": "Yhteensopiva",
+      "portal": "Brändiportaali"
+    },
+    "open": {
+      "free": "Avoin ja ilman voitontavoittelua. Maksuton käyttää.",
+      "feeNote": "Vapaaehtoiset kumppanimaksut kattavat vain säätiön kulut.",
+      "connect": "Jokainen osapuoli voi liittyä",
+      "parties": [
+        "Brändit",
+        "Jälleenmyyjät",
+        "Portaalit",
+        "ERP",
+        "PIM",
+        "DAM"
+      ],
+      "partiesNote": "ERP-, PIM- ja DAM-ohjelmistot",
+      "portal": "Portaali kuuluu brändille",
+      "portalItems": [
+        "Omat tietosi",
+        "Omassa ylläpidossasi",
+        "Tai sinulle ylläpidettynä"
+      ]
+    },
+    "example": {
+      "lead": "Esimerkiksi:",
+      "name": "Photopilot",
+      "sides": [
+        {
+          "h": "Brändit",
+          "p": "Portaali, automaatio, ERP-integraatio, valokuvaus"
+        },
+        {
+          "h": "Jälleenmyyjät",
+          "p": "Tuotesisällön vastaanotto ja käsittely"
+        }
+      ]
+    },
+    "end": {
+      "line": "Maksuton ja avoin, brändeille ja jälleenmyyjille",
+      "url": "openbrandexchange.com"
+    }
+  }
+}
