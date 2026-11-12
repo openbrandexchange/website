@@ -17,6 +17,13 @@ await new Promise((r) => setTimeout(r, 800));
 mkdirSync('.cache/lighthouse', { recursive: true });
 let failed = false;
 try {
+  // Warm-up run, not scored: the first Lighthouse run after the server and Chrome start reports a
+  // ~2 s unattributable long task on whichever page comes first (measured 2026-11-12: /en/ scored
+  // 73 when first and 99 when second, with identical assets).
+  execFileSync('npx', ['--yes', 'lighthouse@12', `http://127.0.0.1:${port}${pages[0]}`, '--quiet', '--output=json', '--output-path=.cache/lighthouse/warmup.json', '--chrome-flags=--headless=new --no-sandbox'], {
+    stdio: 'ignore',
+    env: { ...process.env, ...(chrome ? { CHROME_PATH: chrome } : {}) },
+  });
   for (const page of pages) {
     const out = `.cache/lighthouse/${page.replace(/\//g, '_') || 'root'}.json`;
     execFileSync('npx', ['--yes', 'lighthouse@12', `http://127.0.0.1:${port}${page}`, '--quiet', '--output=json', `--output-path=${out}`, '--chrome-flags=--headless=new --no-sandbox'], {
