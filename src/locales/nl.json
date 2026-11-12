@@ -364,7 +364,7 @@
     "fieldExport": "Al je content exporteren",
     "fieldWebsite": "Website",
     "listTitle": "Hier vermeld worden als provider?",
-    "listP": "De providers op deze pagina zijn officiële partners. De voorwaarden zijn voor iedereen gelijk:",
+    "listP": "De voorwaarden voor een vermelding hier zijn voor iedereen gelijk:",
     "listItems": [
       "je portaal slaagt voor de conformancetest van de huidige versie",
       "een merk kan al zijn data en beelden exporteren en vertrekken",
@@ -726,7 +726,7 @@
       }
     ],
     "nameTitle": "Over de naam",
-    "nameP": "De naam „Open Brand Exchange” is in elke taal hetzelfde en wordt nooit vertaald. Het is nog geen geregistreerd merk. Software die de conformiteitstests doorstaat, mag zeggen dat hij „werkt met Open Brand Exchange”.",
+    "nameP": "De naam „Open Brand Exchange” is in elke taal hetzelfde en wordt nooit vertaald. Het is nog geen geregistreerd merk. Software die slaagt voor de conformancetest mag zeggen dat ze „Compatibel met Open Brand Exchange” is.",
     "specLink": "Volledig governancedocument",
     "foundationTitle": "Wie erachter zit",
     "foundationP": "De {foundation} wordt opgericht als Nederlandse stichting. Zodra die bestaat, worden het auteursrecht, de naam, het domein en de GitHub-organisatie aan haar overgedragen."
@@ -737,7 +737,7 @@
     "sections": [
       {
         "h": "Wie verantwoordelijk is",
-        "p": "Deze website wordt beheerd door {person} (zie het colofon). Voor alles over privacy mail je naar {email}."
+        "p": "Tot de stichting is ingeschreven, is {publisher}, de eenmanszaak van {person}, namens de {foundation} verantwoordelijk voor deze website (adres en KvK-nummer in het colofon). Mail voor alles over privacy naar {email}."
       },
       {
         "h": "Wat we verzamelen",
@@ -774,7 +774,7 @@
     "h1": "Colofon",
     "lead": "Wie deze website uitgeeft, en hoe je ons bereikt.",
     "publisherTitle": "Uitgegeven door",
-    "foundationP": "De {foundation} wordt opgericht als Nederlandse stichting. Tot ze is ingeschreven, is {person} verantwoordelijk voor deze website.",
+    "foundationP": "Open Brand Exchange wordt uitgegeven door {publisher} namens de {foundation}, die wordt opgericht als Nederlandse stichting. {publisher} is de eenmanszaak van {person}.",
     "addressLabel": "Postadres",
     "phoneLabel": "Telefoon",
     "registrationLabel": "Inschrijvingsnummer",
@@ -889,7 +889,7 @@
       "errors": "Foutcodes",
       "spec": "Specificatie",
       "sdk": "Go-SDK en obx-tool",
-      "status": "Versie 0.2 is uit. De specificatie en de software zijn vrij te gebruiken."
+      "status": "Versie 0.2 is uit, voor mode, schoenen, tassen en koffers. De specificatie en de software zijn vrij te gebruiken."
     },
     "shots": {
       "portalCatalog": "De beeldbank van het fictieve merk Kestrel zoals een retailer hem ziet: acht artikelen met filters op merk, producttype en kleur.",
@@ -903,7 +903,7 @@
     "home": {
       "eyebrow": "Open standaard voor de mode · Gratis software",
       "h1": "Je modecontent, klaar voor elke retailer.",
-      "lead": "Veel beeldportalen zijn traag, nauwelijks te koppelen en moeten met de hand worden doorgeklikt. Open Brand Exchange is de open standaard voor hoe merken in mode, schoenen, tassen en koffers productfoto's en artikeldata aan hun retailers leveren: in een portaal, als zip of spreadsheet, of rechtstreeks in de software van de retailer via één API. Een open alternatief voor gesloten platforms: geen kosten per retailer, geen lock-in, en je data blijft van jou.",
+      "lead": "Veel beeldportalen zijn traag, nauwelijks te koppelen en moeten met de hand worden doorgeklikt. Open Brand Exchange is de open standaard voor hoe merken in mode, schoenen, tassen en koffers productfoto's en artikeldata aan hun retailers leveren: een open alternatief voor gesloten platforms.",
       "ctaRetailer": "Ik ben retailer",
       "proofLabel": "In het kort",
       "proof": [
@@ -916,8 +916,8 @@
           "l": "portaaledities"
         },
         {
-          "v": "61",
-          "l": "conformiteitstests"
+          "v": "1",
+          "l": "API voor elk merk"
         },
         {
           "v": "25",
@@ -1009,7 +1009,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Draai het waar je wilt. Betaal alleen voor hosting.",
-      "editionsLead": "Drie edities van hetzelfde portaal. Ze doorstaan dezelfde conformiteitstests en spreken dezelfde API, dus je kunt van de een naar de ander overstappen.",
+      "editionsLead": "Drie edities van hetzelfde portaal. Ze spreken dezelfde API, dus je kunt van de ene naar de andere overstappen.",
       "editionsLink": "Vergelijk de hostingopties",
       "editionFields": [
         "Draait op",
@@ -1058,11 +1058,11 @@
       "trust": [
         {
           "h": "Open specificatie",
-          "p": "Versie 0.2, vastgelegd als OpenAPI 3.1 en JSON Schema onder CC-BY-4.0. Iedereen mag het implementeren, ook commercieel."
+          "p": "Versie 0.2, onder CC-BY-4.0. Iedereen mag hem bouwen, ook commercieel."
         },
         {
-          "h": "Conformiteitstests",
-          "p": "61 geautomatiseerde tests in vier profielen. Elke implementatie wordt op dezelfde manier getest."
+          "h": "Geen lock-in",
+          "p": "Een merk kan altijd al zijn data en beelden exporteren, en overstappen naar een andere provider of het zelf hosten."
         },
         {
           "h": "Opensourcelicenties",
@@ -1070,21 +1070,21 @@
         },
         {
           "h": "Een stichting in oprichting",
-          "p": "Het auteursrecht, de naam en het domein gaan naar de {foundation} zodra die is ingeschreven."
+          "p": "Het auteursrecht, de naam en het domein gaan naar de {foundation} zodra die is opgericht."
         },
         {
           "h": "Beveiliging",
-          "p": "Meld kwetsbaarheden vertrouwelijk aan {email}. Beveiliging is een van de vier conformiteitsprofielen."
+          "p": "Meld kwetsbaarheden vertrouwelijk aan {email}."
         },
         {
-          "h": "Privacy voorop",
-          "p": "Deze website plaatst geen cookies, gebruikt geen trackers en laadt niets van andere servers."
+          "h": "Privacy eerst",
+          "p": "Deze website zet geen cookies, gebruikt geen trackers en laadt niets van andere servers."
         }
       ],
       "trustLink": "Lees hoe het wordt bestuurd",
-      "devEyebrow": "Ontwikkelaars",
-      "devTitle": "Een specificatie waarop je kunt bouwen.",
-      "devP": "Drie OpenAPI-contracten, JSON Schema's, een fictief testmerk en conformiteitstests. De Go-SDK en de obx-tool zijn klaar voor gebruik, en elke HTTP-client werkt.",
+      "devEyebrow": "Voor ontwikkelaars",
+      "devTitle": "Open source, op GitHub.",
+      "devP": "OpenAPI 3.1, JSON Schemas, een fictief testmerk en kant-en-klare software. Elke HTTP-client werkt.",
       "devLinks": [
         "API-referentie",
         "Specificatie op GitHub",
@@ -1098,62 +1098,114 @@
       "closingMail": "Mail ons",
       "rolesEyebrow": "Wie doet wat",
       "rolesTitle": "Merken publiceren. Retailers ontvangen. Software koppelt.",
-      "rolesLead": "De standaard legt vast hoe productcontent van merk naar retailer gaat. Elke partij doet haar eigen deel, en niemand hoeft op een ander te wachten.",
+      "rolesLead": "Wat elke partij eraan heeft.",
       "roles": [
         {
-          "h": "Merken publiceren",
-          "p": "Een merk zet zijn content één keer klaar, in het standaardformaat, in zijn eigen portaal. Het automatiseert de uitgaande data zelf, of een provider regelt het.",
+          "h": "Merken",
+          "p": "Eén keer publiceren, voor elke retailer.",
           "items": [
-            "Je foto's en artikeldata in één standaardformaat",
-            "Automatiseer het zelf met de gratis tools, of laat een provider het doen",
-            "Jij keurt elke retailer goed en bepaalt wat hij ziet"
+            "Gratis software, of een provider die alles regelt",
+            "Begin bij je eigen Excel-bestand of systeem",
+            "Al je retailers in één keer, geen bestanden meer rondsturen",
+            "Jij bepaalt wie wat ziet",
+            "Zie wie wat downloadt",
+            "Geen lock-in: exporteer alles en vertrek"
           ],
           "cta": "Bekijk voor merken"
         },
         {
-          "h": "Retailers ontvangen",
-          "p": "Een retailer haalt bij elk merk op de standaard op wat hij nodig heeft, steeds op dezelfde manier. Geen nieuw werk voor elk nieuw merk.",
+          "h": "Retailers",
+          "p": "Alles ontvangen, zonder extra werk.",
           "items": [
-            "Zoeken, EAN's plakken en downloaden in de browser",
-            "Beelden en vezelsamenstelling klaar voor de webshop",
-            "Gebruiksrechten en embargodata bij elk beeld"
+            "Gratis voor retailers",
+            "Elk merk in hetzelfde formaat",
+            "Plak EAN's, krijg de juiste beelden",
+            "Vezelsamenstelling en wasvoorschrift klaar voor de webshop",
+            "Gebruiksrechten en embargodata bij elk beeld",
+            "In de browser, of rechtstreeks in je software"
           ],
           "cta": "Bekijk voor retailers"
         },
         {
-          "h": "ERP- en softwareleveranciers koppelen",
-          "p": "Een leverancier van ERP-, PIM-, webshop- of kassasoftware bouwt één koppeling en leest daarna elk merkportaal op dezelfde manier. Inkomende data automatiseer je zoals bij elke andere leveranciersfeed.",
+          "h": "Portalen en software",
+          "p": "Eén keer koppelen, elk merk bereiken.",
           "items": [
-            "Eén API, beschreven in OpenAPI 3.1",
+            "Merkportalen, B2B- en beeldportalen, DAM's",
+            "ERP-, PIM-, webshop- en kassasoftware",
+            "Eén open API, geen licentiekosten",
             "Eerst een volledige kopie, daarna alleen de wijzigingen",
-            "Test je koppeling met de gratis conformancetest"
+            "Gratis label „Compatibel met Open Brand Exchange”"
           ],
-          "cta": "Lees de handleiding voor ontwikkelaars"
+          "cta": "Voor portalen en partners"
         }
       ],
       "portalsEyebrow": "Open voor elk portaal",
       "portalsTitle": "Heb je al een portaal? Sluit het aan op de standaard.",
-      "portalsLead": "Open Brand Exchange is niet één stuk software. Elk portaal dat het protocol spreekt en slaagt voor de conformancetest is compatibel, en de software van retailers leest het zoals elk ander portaal.",
+      "portalsLead": "Elk portaal of systeem dat de standaard spreekt, werkt met elk retailersysteem dat dat ook doet.",
       "portalTypes": [
         {
           "h": "Merk- en B2B-portalen",
-          "p": "Een merkportaal, B2B-shop of groothandelsplatform zet de OBX-API naast wat het al doet. De merken erop bereiken dan elk retailersysteem dat de standaard spreekt."
+          "p": "Zet de OBX-API naast wat je al doet, en je merken bereiken elk retailersysteem."
         },
         {
           "h": "Beeldportalen en DAM's",
-          "p": "Fotoportalen, beeldbanken en DAM's voor productbeelden publiceren de beelden per artikel: elke foto gekoppeld aan product, kleur en EAN, met webversies, gebruiksrechten en embargodata. Ze bieden de ophaalkant van het protocol aan, en de software van retailers haalt de beelden op zoals bij elk ander portaal."
+          "p": "Publiceer productbeelden per artikel, kleur en EAN, met webversies, gebruiksrechten en embargodata."
         },
         {
           "h": "PIM- en ERP-systemen",
-          "p": "Een PIM of ERP waarin de artikeldata van een merk staat, kan die direct publiceren: vezelsamenstelling, wasvoorschriften, maten en EAN's in het standaardformaat, zonder apart portaal."
+          "p": "Publiceer vezelsamenstelling, wasvoorschrift, maten en EAN's rechtstreeks uit het systeem waar ze staan."
         }
       ],
-      "portalsSteps": [
-        "Lees de specificatie en laad het fictieve testmerk Kestrel",
-        "Bied discovery, de wijzigingenfeed, producten en beelden aan via de API",
-        "Draai de gratis conformancetest: slaag je, dan ben je compatibel"
+      "portalsCta": "Compatibel of partner",
+      "heroChecks": [
+        "Gratis en open, geen kosten per retailer",
+        "Al je retailers in één keer",
+        "Begint bij je eigen Excel of systeem",
+        "Beelden met gebruiksrechten erbij",
+        "Geen lock-in: je data blijft van jou"
       ],
-      "portalsCta": "Compatibel of partner"
+      "devRepos": [
+        {
+          "name": "spec",
+          "d": "De specificatie, schema's en testdata"
+        },
+        {
+          "name": "obx-go",
+          "d": "Go-SDK, de obx-tool en de conformancetest"
+        },
+        {
+          "name": "node-ts",
+          "d": "Portaal voor Cloudflare Workers"
+        },
+        {
+          "name": "node-go",
+          "d": "Portaal voor Docker en Google Cloud Run"
+        },
+        {
+          "name": "node-php",
+          "d": "Portaal voor gewone webhosting"
+        },
+        {
+          "name": "admin-ui",
+          "d": "De webinterface van elk portaal"
+        }
+      ],
+      "devQuickstart": "OBX in 10 minuten",
+      "promptTitle": "Bouw het met je AI-assistent",
+      "promptP": "Kopieer een prompt naar Claude, ChatGPT of Cursor, vul het deel tussen haken in, en laat de code schrijven volgens de specificatie.",
+      "prompts": [
+        {
+          "h": "Exporteren uit je systeem",
+          "note": "Voor merken en leveranciers van ERP en PIM: products.csv en beeldnamen."
+        },
+        {
+          "h": "OBX inlezen in je software",
+          "note": "Voor leveranciers van webshop-, PIM- en kassasoftware: de wijzigingenfeed en beelden."
+        }
+      ],
+      "scopeLabel": "Categorieën",
+      "scopeNow": "Versie 0.2: mode, schoenen, tassen en koffers",
+      "scopeNext": "Wonen en sport: in ontwikkeling voor 0.3"
     },
     "pages": {
       "brandsH1": "Eén keer inrichten. Voor al je retailers tegelijk.",
@@ -1237,6 +1289,8 @@
     "tiersNote": "Voorgestelde bedragen voor 2027, definitief zodra de stichting is opgericht. De bijdrage is alleen voor de vermelding. De standaard, de test en de software blijven voor iedereen gratis, en partners hebben niet meer te zeggen over de standaard dan ieder ander.",
     "partnerCta": "Word partner",
     "mailSubject": "Officiële partner",
-    "listTitle": "Officiële partners"
+    "listTitle": "Providers",
+    "feesNote": "De bijdragen gaan in zodra de stichting is ingeschreven. Tot die tijd betaalt niemand en worden er geen facturen verstuurd; mail ons om je interesse door te geven.",
+    "interestCta": "Geef je interesse door"
   }
 }

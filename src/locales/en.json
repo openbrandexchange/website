@@ -364,7 +364,7 @@
     "fieldExport": "Export all your content",
     "fieldWebsite": "Website",
     "listTitle": "Listed here as a provider?",
-    "listP": "The providers on this page are official partners. The criteria are the same for everyone:",
+    "listP": "The criteria for a listing here are the same for everyone:",
     "listItems": [
       "your portal passes the conformance test for the current version",
       "a brand can export all its data and images and leave",
@@ -726,7 +726,7 @@
       }
     ],
     "nameTitle": "About the name",
-    "nameP": "The name \"Open Brand Exchange\" is the same in every language and is never translated. It is not a registered trademark yet. Software that passes the conformance suite may say it \"works with Open Brand Exchange\".",
+    "nameP": "The name \"Open Brand Exchange\" is the same in every language and is never translated. It is not a registered trademark yet. Software that passes the conformance test may say it is \"Compatible with Open Brand Exchange\".",
     "specLink": "Full governance document",
     "foundationTitle": "Who is behind it",
     "foundationP": "The {foundation} is being set up as a Dutch foundation (stichting). Once it exists, the copyright, the name, the domain and the GitHub organisation will be transferred to it."
@@ -737,7 +737,7 @@
     "sections": [
       {
         "h": "Who is responsible",
-        "p": "This website is run by {person} (see the imprint). For anything about privacy, email {email}."
+        "p": "Until the foundation is registered, the controller for this website is {publisher}, the sole proprietorship of {person}, on behalf of the {foundation} (address and registration number in the imprint). For anything about privacy, email {email}."
       },
       {
         "h": "What we collect",
@@ -774,7 +774,7 @@
     "h1": "Imprint",
     "lead": "Who publishes this website, and how to reach us.",
     "publisherTitle": "Published by",
-    "foundationP": "The {foundation} is being set up as a Dutch foundation (stichting). Until it is registered, {person} is responsible for this website.",
+    "foundationP": "Open Brand Exchange is published by {publisher} on behalf of the {foundation}, which is being set up as a Dutch foundation (stichting). {publisher} is the sole proprietorship of {person}.",
     "addressLabel": "Postal address",
     "phoneLabel": "Phone",
     "registrationLabel": "Registration number",
@@ -889,7 +889,7 @@
       "errors": "Error codes",
       "spec": "Specification",
       "sdk": "Go SDK and obx tool",
-      "status": "Version 0.2 is out. The specification and the software are free to use."
+      "status": "Version 0.2 is out, for fashion, shoes, bags and luggage. The specification and the software are free to use."
     },
     "shots": {
       "portalCatalog": "The brand portal of the fictional brand Kestrel as a retailer sees it: eight articles with filters for brand, product type and colour.",
@@ -903,7 +903,7 @@
     "home": {
       "eyebrow": "Open standard for fashion · Free software",
       "h1": "Fashion product content, ready for every retailer.",
-      "lead": "Many image portals are slow, hard to connect to and have to be clicked through by hand. Open Brand Exchange is the open standard for how fashion, shoe, bag and luggage brands deliver product photos and article data to their retailers: in a portal, as a zip or spreadsheet, or straight into the retailer's software through one API. An open alternative to closed platforms: no fee per retailer, no lock-in, and your data stays yours.",
+      "lead": "Many image portals are slow, hard to connect to and have to be clicked through by hand. Open Brand Exchange is the open standard for how fashion, shoe, bag and luggage brands deliver product photos and article data to their retailers: an open alternative to closed platforms.",
       "ctaRetailer": "I am a retailer",
       "proofLabel": "At a glance",
       "proof": [
@@ -916,8 +916,8 @@
           "l": "portal editions"
         },
         {
-          "v": "61",
-          "l": "conformance checks"
+          "v": "1",
+          "l": "API for every brand"
         },
         {
           "v": "25",
@@ -1009,7 +1009,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Run it where you want. Pay only for hosting.",
-      "editionsLead": "Three editions of the same portal. They pass the same conformance suite and speak the same API, so you can move from one to another.",
+      "editionsLead": "Three editions of the same portal. They speak the same API, so you can move from one to another.",
       "editionsLink": "Compare the hosting options",
       "editionFields": [
         "Runs on",
@@ -1058,11 +1058,11 @@
       "trust": [
         {
           "h": "Open specification",
-          "p": "Version 0.2, written as OpenAPI 3.1 and JSON Schema under CC-BY-4.0. Anyone may implement it, commercially too."
+          "p": "Version 0.2, under CC-BY-4.0. Anyone may implement it, commercially too."
         },
         {
-          "h": "Conformance suite",
-          "p": "61 automated checks in four profiles. Every implementation is tested the same way."
+          "h": "No lock-in",
+          "p": "A brand can export all its data and images at any time, and move to another provider or host it itself."
         },
         {
           "h": "Open-source licences",
@@ -1074,7 +1074,7 @@
         },
         {
           "h": "Security",
-          "p": "Report vulnerabilities privately to {email}. Security is one of the four conformance profiles."
+          "p": "Report vulnerabilities privately to {email}."
         },
         {
           "h": "Privacy first",
@@ -1082,9 +1082,9 @@
         }
       ],
       "trustLink": "Read how it is governed",
-      "devEyebrow": "Developers",
-      "devTitle": "A specification you can build on.",
-      "devP": "Three OpenAPI contracts, JSON Schemas, a fictional test brand and a conformance suite. The Go SDK and the obx tool are ready to use, and any HTTP client works.",
+      "devEyebrow": "For developers",
+      "devTitle": "Open source, on GitHub.",
+      "devP": "OpenAPI 3.1, JSON Schemas, a fictional test brand and ready-made software. Any HTTP client works.",
       "devLinks": [
         "API reference",
         "Specification on GitHub",
@@ -1098,62 +1098,114 @@
       "closingMail": "Email us",
       "rolesEyebrow": "Who does what",
       "rolesTitle": "Brands publish. Retailers receive. Software connects.",
-      "rolesLead": "The standard sets how product content travels from brand to retailer. Each party does its own part, and nobody has to wait for anyone else.",
+      "rolesLead": "What each party gets.",
       "roles": [
         {
-          "h": "Brands publish",
-          "p": "A brand sets out its content once, in the standard format, in its own portal. It automates the outgoing data itself, or a provider arranges it.",
+          "h": "Brands",
+          "p": "Publish once, for every retailer.",
           "items": [
-            "Your photos and article data in one standard format",
-            "Automate it yourself with the free tools, or let a provider do it",
-            "You approve every retailer and decide what they see"
+            "Free software, or a provider who does it all",
+            "Start from your own Excel file or system",
+            "All your retailers at once, no more sending files",
+            "You decide who sees what",
+            "See who downloads what",
+            "No lock-in: export everything and leave"
           ],
           "cta": "Explore for brands"
         },
         {
-          "h": "Retailers receive",
-          "p": "A retailer fetches what it needs from every brand on the standard, in the same way. No new work for each new brand.",
+          "h": "Retailers",
+          "p": "Receive everything, without extra work.",
           "items": [
-            "Search, paste EANs and download in the browser",
-            "Images and fibre composition ready for the webshop",
-            "Usage rights and embargo dates with every image"
+            "Free for retailers",
+            "Every brand in the same format",
+            "Paste EANs, get the right images",
+            "Fibre composition and care ready for the webshop",
+            "Usage rights and embargo dates with every image",
+            "In the browser, or straight into your software"
           ],
           "cta": "Explore for retailers"
         },
         {
-          "h": "ERP and software vendors connect",
-          "p": "A vendor of ERP, PIM, webshop or POS software builds one connection and then reads every brand portal the same way. Incoming data is automated as with any other supplier feed.",
+          "h": "Portals and software",
+          "p": "Connect once, reach every brand.",
           "items": [
-            "One API, documented in OpenAPI 3.1",
+            "Brand portals, B2B and image portals, DAMs",
+            "ERP, PIM, webshop and POS software",
+            "One open API, no licence fee",
             "A full copy first, then only the changes",
-            "Test your connection with the free conformance suite"
+            "Free label “Compatible with Open Brand Exchange”"
           ],
-          "cta": "Read the developer guide"
+          "cta": "For portals and partners"
         }
       ],
       "portalsEyebrow": "Open to every portal",
       "portalsTitle": "Already have a portal? Connect it to the standard.",
-      "portalsLead": "Open Brand Exchange is not one piece of software. Any portal that speaks the protocol and passes the conformance test is compatible, and retailers' software reads it like any other.",
+      "portalsLead": "Any portal or system that speaks the standard works with every retailer system that does too.",
       "portalTypes": [
         {
           "h": "Brand and B2B portals",
-          "p": "A brand portal, B2B shop or wholesale platform adds the OBX API next to what it already does. Its brands then reach every retailer system that speaks the standard."
+          "p": "Add the OBX API next to what you already do, and your brands reach every retailer system."
         },
         {
           "h": "Image portals and DAMs",
-          "p": "Photo portals, image banks and DAMs for product images publish the images per article: every photo linked to its product, colour and EAN, with web versions, usage rights and embargo dates. They implement the read side of the protocol, and retailers' software fetches the images as from any other portal."
+          "p": "Publish product images per article, colour and EAN, with web versions, usage rights and embargo dates."
         },
         {
           "h": "PIM and ERP systems",
-          "p": "A PIM or ERP that holds a brand's article data can publish it directly: fibre composition, care instructions, sizes and EANs in the standard format, without a separate portal."
+          "p": "Publish fibre composition, care, sizes and EANs straight from the system that holds them."
         }
       ],
-      "portalsSteps": [
-        "Read the specification and load the fictional test brand Kestrel",
-        "Offer discovery, the change feed, products and images over the API",
-        "Run the free conformance test: when it passes, you are compatible"
+      "portalsCta": "Compatible or partner",
+      "heroChecks": [
+        "Free and open, no fee per retailer",
+        "All your retailers at once",
+        "Starts from your own Excel or system",
+        "Images with usage rights included",
+        "No lock-in: your data stays yours"
       ],
-      "portalsCta": "Compatible or partner"
+      "devRepos": [
+        {
+          "name": "spec",
+          "d": "The specification, schemas and test data"
+        },
+        {
+          "name": "obx-go",
+          "d": "Go SDK, the obx tool and the conformance test"
+        },
+        {
+          "name": "node-ts",
+          "d": "Portal for Cloudflare Workers"
+        },
+        {
+          "name": "node-go",
+          "d": "Portal for Docker and Google Cloud Run"
+        },
+        {
+          "name": "node-php",
+          "d": "Portal for ordinary web hosting"
+        },
+        {
+          "name": "admin-ui",
+          "d": "The web interface of every portal"
+        }
+      ],
+      "devQuickstart": "OBX in 10 minutes",
+      "promptTitle": "Build it with your AI assistant",
+      "promptP": "Copy a prompt into Claude, ChatGPT or Cursor, fill in the part between brackets, and let it write the code against the specification.",
+      "prompts": [
+        {
+          "h": "Export from your system",
+          "note": "For brands, ERP and PIM vendors: products.csv and image names."
+        },
+        {
+          "h": "Read OBX in your software",
+          "note": "For webshop, PIM and POS vendors: the change feed and images."
+        }
+      ],
+      "scopeLabel": "Categories",
+      "scopeNow": "Version 0.2: fashion, shoes, bags and luggage",
+      "scopeNext": "Home and sport: in development for 0.3"
     },
     "pages": {
       "brandsH1": "Set it up once. For every retailer at the same time.",
@@ -1237,6 +1289,8 @@
     "tiersNote": "Proposed fees for 2027, final once the foundation is set up. The fee pays for the listing only. The standard, the test and the software stay free for everyone, and partners have no more say in the standard than anyone else.",
     "partnerCta": "Become a partner",
     "mailSubject": "Official partner",
-    "listTitle": "Official partners"
+    "listTitle": "Providers",
+    "feesNote": "The fees take effect once the foundation is registered. Until then nobody pays and no invoices are sent; email us to register your interest.",
+    "interestCta": "Register your interest"
   }
 }

@@ -516,15 +516,9 @@ main:focus {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgb(247 246 242 / 0.9);
-  backdrop-filter: saturate(1.4) blur(14px);
-  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+  /* Opaque, so the header keeps one colour while light and dark bands scroll under it. */
+  background: var(--bg);
   box-shadow: 0 1px 0 var(--fg);
-}
-@media (prefers-color-scheme: dark) {
-  .site-header {
-    background: rgb(18 18 17 / 0.9);
-  }
 }
 .header-row {
   display: flex;
@@ -2484,4 +2478,84 @@ input[type='search'] {
 .band-ink .mark-text,
 .site-footer .mark-text {
   fill: var(--ink);
+
+/* Home hero: the short benefits and the categories of this version. */
+.hero-checks {
+  margin-top: var(--s-5);
+}
+.scope {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2) var(--s-3);
+  margin: var(--s-6) 0 0;
+  font-size: 0.875rem;
+}
+.scope span:not(.sr-only) {
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+}
+.scope-now {
+  color: var(--fg);
+}
+.scope-next {
+  color: var(--muted);
+  border-style: dashed;
+}
+
+/* Home "For developers": the repositories and the copyable prompts. */
+.repo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+.repo-list a {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.2rem var(--s-3);
+  padding: var(--s-3) 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  color: var(--fg);
+}
+.repo-list a:hover .repo-name {
+  text-decoration: underline;
+}
+.repo-name {
+  font-family: var(--mono, ui-monospace, monospace);
+  font-size: 0.9063rem;
+  font-weight: 600;
+}
+.repo-d {
+  color: var(--fg-2);
+  font-size: 0.875rem;
+}
+.prompts {
+  margin-top: var(--s-8);
+}
+.prompts > p {
+  max-width: 44rem;
+  color: var(--fg-2);
+}
+.prompt pre {
+  max-height: 22rem;
+  padding-top: 2.75rem;
+}
+.prompt pre,
+.prompt pre code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.prompt {
+  min-width: 0;
+}
+.note {
+  padding: var(--s-3) var(--s-4);
+  border-left: 3px solid var(--accent);
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
 }

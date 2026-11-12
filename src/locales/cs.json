@@ -364,7 +364,7 @@
     "fieldExport": "Export veškerého obsahu",
     "fieldWebsite": "Web",
     "listTitle": "Chcete být uvedeni jako poskytovatel?",
-    "listP": "Poskytovatelé na této stránce jsou oficiální partneři. Podmínky jsou pro všechny stejné:",
+    "listP": "Podmínky pro uvedení zde jsou pro všechny stejné:",
     "listItems": [
       "váš portál projde testem shody pro aktuální verzi",
       "značka může exportovat všechna svá data a obrázky a odejít",
@@ -726,7 +726,7 @@
       }
     ],
     "nameTitle": "O názvu",
-    "nameP": "Název „Open Brand Exchange“ je ve všech jazycích stejný a nikdy se nepřekládá. Zatím to není registrovaná ochranná známka. Software, který projde testy shody, smí uvádět, že „funguje s Open Brand Exchange“.",
+    "nameP": "Název „Open Brand Exchange“ je ve všech jazycích stejný a nikdy se nepřekládá. Zatím to není registrovaná ochranná známka. Software, který projde testem shody, smí uvádět, že je „Kompatibilní s Open Brand Exchange“.",
     "specLink": "Úplný dokument o správě",
     "foundationTitle": "Kdo za tím stojí",
     "foundationP": "{foundation} vzniká jako nizozemská nadace (stichting). Jakmile vznikne, převedou se na ni autorská práva, název, doména a organizace na GitHubu."
@@ -737,7 +737,7 @@
     "sections": [
       {
         "h": "Kdo odpovídá",
-        "p": "Tento web provozuje {person} (viz tiráž). Se vším, co se týká soukromí, pište na {email}."
+        "p": "Do zápisu nadace je správcem tohoto webu {publisher} (živnost; podnikatelem je {person}) jménem {foundation} (adresa a registrační číslo jsou v tiráži). Se vším, co se týká soukromí, pište na {email}."
       },
       {
         "h": "Co shromažďujeme",
@@ -774,7 +774,7 @@
     "h1": "Tiráž",
     "lead": "Kdo tento web vydává a jak nás kontaktovat.",
     "publisherTitle": "Vydává",
-    "foundationP": "{foundation} se zakládá jako nizozemská nadace (stichting). Do jejího zápisu odpovídá za tento web {person}.",
+    "foundationP": "Open Brand Exchange vydává {publisher} jménem {foundation}, která se zakládá jako nizozemská nadace (stichting). {publisher} je živnost; podnikatelem je {person}.",
     "addressLabel": "Poštovní adresa",
     "phoneLabel": "Telefon",
     "registrationLabel": "Registrační číslo",
@@ -889,7 +889,7 @@
       "errors": "Chybové kódy",
       "spec": "Specifikace",
       "sdk": "Go SDK a nástroj obx",
-      "status": "Verze 0.2 je venku. Specifikace i software jsou volně k použití."
+      "status": "Verze 0.2 je venku, pro oblečení, obuv, tašky a zavazadla. Specifikace i software jsou volně k použití."
     },
     "shots": {
       "portalCatalog": "Portál fiktivní značky Kestrel očima prodejce: osm položek s filtry podle značky, typu produktu a barvy.",
@@ -903,7 +903,7 @@
     "home": {
       "eyebrow": "Otevřený standard pro módu · Software zdarma",
       "h1": "Váš módní obsah, připravený pro každého prodejce.",
-      "lead": "Mnoho obrazových portálů je pomalých, špatně se napojují a musí se proklikávat ručně. Open Brand Exchange je otevřený standard pro to, jak značky oblečení, obuvi, tašek a zavazadel dodávají produktové fotky a data o zboží svým prodejcům: na portálu, jako zip nebo tabulku, nebo přímo do softwaru prodejce přes jedno API. Otevřená alternativa k uzavřeným platformám: žádný poplatek za prodejce, žádná závislost na dodavateli a vaše data zůstávají vaše.",
+      "lead": "Mnoho obrazových portálů je pomalých, špatně se napojují a musí se proklikávat ručně. Open Brand Exchange je otevřený standard pro to, jak značky oblečení, obuvi, tašek a zavazadel dodávají produktové fotky a data o zboží svým prodejcům: otevřená alternativa k uzavřeným platformám.",
       "ctaRetailer": "Jsem prodejce",
       "proofLabel": "Na první pohled",
       "proof": [
@@ -916,8 +916,8 @@
           "l": "edice portálu"
         },
         {
-          "v": "61",
-          "l": "testů shody"
+          "v": "1",
+          "l": "API pro každou značku"
         },
         {
           "v": "25",
@@ -1009,7 +1009,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Provozujte, kde chcete. Plaťte jen hosting.",
-      "editionsLead": "Tři edice stejného portálu. Procházejí stejnými testy shody a mluví stejným API, takže můžete přejít z jedné na druhou.",
+      "editionsLead": "Tři edice stejného portálu. Mluví stejným API, takže můžete přejít z jedné na druhou.",
       "editionsLink": "Porovnat možnosti hostingu",
       "editionFields": [
         "Běží na",
@@ -1058,11 +1058,11 @@
       "trust": [
         {
           "h": "Otevřená specifikace",
-          "p": "Verze 0.2, zapsaná jako OpenAPI 3.1 a JSON Schema pod licencí CC-BY-4.0. Implementovat ji smí kdokoli, i komerčně."
+          "p": "Verze 0.2, pod licencí CC-BY-4.0. Implementovat ji smí kdokoli, i komerčně."
         },
         {
-          "h": "Testy shody",
-          "p": "61 automatických testů ve čtyřech profilech. Každá implementace se testuje stejně."
+          "h": "Žádná závislost",
+          "p": "Značka může kdykoli exportovat všechna svá data a obrázky a přejít k jinému poskytovateli nebo si vše provozovat sama."
         },
         {
           "h": "Open-source licence",
@@ -1074,7 +1074,7 @@
         },
         {
           "h": "Bezpečnost",
-          "p": "Zranitelnosti hlaste důvěrně na {email}. Bezpečnost je jedním ze čtyř profilů shody."
+          "p": "Zranitelnosti hlaste důvěrně na {email}."
         },
         {
           "h": "Soukromí na prvním místě",
@@ -1083,8 +1083,8 @@
       ],
       "trustLink": "Jak je projekt spravován",
       "devEyebrow": "Pro vývojáře",
-      "devTitle": "Specifikace, na které můžete stavět.",
-      "devP": "Tři kontrakty OpenAPI, JSON Schema, fiktivní testovací značka a sada testů shody. Go SDK a nástroj obx jsou připravené k použití a funguje jakýkoli HTTP klient.",
+      "devTitle": "Open source, na GitHubu.",
+      "devP": "OpenAPI 3.1, JSON Schemas, fiktivní testovací značka a hotový software. Funguje jakýkoli HTTP klient.",
       "devLinks": [
         "Reference API",
         "Specifikace na GitHubu",
@@ -1098,62 +1098,114 @@
       "closingMail": "Napište nám",
       "rolesEyebrow": "Kdo co dělá",
       "rolesTitle": "Značky publikují. Prodejci přijímají. Software propojuje.",
-      "rolesLead": "Standard určuje, jak se produktový obsah dostane od značky k prodejci. Každá strana dělá svou část a nikdo nemusí čekat na ostatní.",
+      "rolesLead": "Co z toho má každá strana.",
       "roles": [
         {
-          "h": "Značky publikují",
-          "p": "Značka připraví svůj obsah jednou, ve standardním formátu, na vlastním portálu. Odchozí data si automatizuje sama, nebo to zařídí poskytovatel.",
+          "h": "Značky",
+          "p": "Jednou publikovat, pro každého prodejce.",
           "items": [
-            "Vaše fotky a data o zboží v jednom standardním formátu",
-            "Automatizujte to sami pomocí bezplatných nástrojů, nebo to svěřte poskytovateli",
-            "Každého prodejce schvalujete vy a určujete, co uvidí"
+            "Bezplatný software, nebo poskytovatel, který vše zařídí",
+            "Začněte u vlastního souboru Excel nebo systému",
+            "Všichni prodejci najednou, žádné posílání souborů",
+            "Vy rozhodujete, kdo co uvidí",
+            "Vidíte, kdo co stahuje",
+            "Žádná závislost: vše exportujete a odejdete"
           ],
           "cta": "Pro značky"
         },
         {
-          "h": "Prodejci přijímají",
-          "p": "Prodejce si od každé značky, která standard používá, stáhne, co potřebuje, vždy stejným způsobem. Žádná nová práce s každou novou značkou.",
+          "h": "Prodejci",
+          "p": "Dostanete vše, bez práce navíc.",
           "items": [
-            "Hledání, vložení EAN a stažení v prohlížeči",
-            "Obrázky a vlákenné složení připravené pro e-shop",
-            "Užívací práva a data embarga u každého obrázku"
+            "Pro prodejce zdarma",
+            "Každá značka ve stejném formátu",
+            "Vložte EAN, dostanete správné obrázky",
+            "Vlákenné složení a pokyny k údržbě připravené pro e-shop",
+            "Užívací práva a data embarga u každého obrázku",
+            "V prohlížeči, nebo přímo ve vašem softwaru"
           ],
           "cta": "Pro prodejce"
         },
         {
-          "h": "Dodavatelé ERP a softwaru propojují",
-          "p": "Dodavatel ERP, PIM, e-shopu nebo pokladního softwaru vytvoří jedno propojení a pak čte každý portál značky stejným způsobem. Příchozí data se automatizují jako u každého jiného feedu od dodavatele.",
+          "h": "Portály a software",
+          "p": "Jednou propojit, oslovit každou značku.",
           "items": [
-            "Jedno API, popsané v OpenAPI 3.1",
+            "Portály značek, B2B a obrazové portály, DAM",
+            "Software pro ERP, PIM, e-shop a pokladnu",
+            "Jedno otevřené API, žádné licenční poplatky",
             "Nejdřív úplná kopie, potom jen změny",
-            "Otestujte své propojení bezplatnými testy shody"
+            "Bezplatné označení „Kompatibilní s Open Brand Exchange“"
           ],
-          "cta": "Přečíst příručku pro vývojáře"
+          "cta": "Pro portály a partnery"
         }
       ],
       "portalsEyebrow": "Otevřené každému portálu",
       "portalsTitle": "Už máte portál? Připojte ho ke standardu.",
-      "portalsLead": "Open Brand Exchange není jeden konkrétní software. Každý portál, který mluví protokolem a projde testem shody, je kompatibilní a software prodejců ho čte jako kterýkoli jiný.",
+      "portalsLead": "Každý portál nebo systém, který mluví standardem, funguje s každým systémem prodejce, který jím mluví také.",
       "portalTypes": [
         {
           "h": "Portály značek a B2B portály",
-          "p": "Portál značky, B2B obchod nebo velkoobchodní platforma přidá k tomu, co už dělá, API OBX. Značky na něm pak dosáhnou na každý systém prodejce, který standard podporuje."
+          "p": "Přidejte OBX API k tomu, co už děláte, a vaše značky se dostanou do každého systému prodejce."
         },
         {
           "h": "Obrazové portály a DAM",
-          "p": "Fotoportály, fotobanky a DAM pro produktové obrázky publikují obrázky po jednotlivých artiklech: každá fotka propojená s produktem, barvou a EAN, s webovými verzemi, užívacími právy a daty embarga. Implementují čtecí část protokolu a software prodejců si obrázky stahuje jako z kteréhokoli jiného portálu."
+          "p": "Publikujte produktové obrázky podle artiklu, barvy a EAN, s webovými verzemi, užívacími právy a daty embarga."
         },
         {
           "h": "Systémy PIM a ERP",
-          "p": "PIM nebo ERP, ve kterém jsou data o zboží značky, je může publikovat přímo: vlákenné složení, pokyny k údržbě, velikosti a EAN ve standardním formátu, bez samostatného portálu."
+          "p": "Publikujte vlákenné složení, pokyny k údržbě, velikosti a EAN přímo ze systému, kde jsou uložené."
         }
       ],
-      "portalsSteps": [
-        "Přečtěte si specifikaci a nahrajte fiktivní testovací značku Kestrel",
-        "Nabídněte přes API discovery, kanál změn, produkty a obrázky",
-        "Spusťte bezplatný test shody: když projde, jste kompatibilní"
+      "portalsCta": "Kompatibilita nebo partnerství",
+      "heroChecks": [
+        "Zdarma a otevřené, žádný poplatek za prodejce",
+        "Všichni vaši prodejci najednou",
+        "Začíná u vašeho Excelu nebo systému",
+        "Obrázky včetně užívacích práv",
+        "Žádná závislost: vaše data zůstávají vaše"
       ],
-      "portalsCta": "Kompatibilita nebo partnerství"
+      "devRepos": [
+        {
+          "name": "spec",
+          "d": "Specifikace, schémata a testovací data"
+        },
+        {
+          "name": "obx-go",
+          "d": "Go SDK, nástroj obx a test shody"
+        },
+        {
+          "name": "node-ts",
+          "d": "Portál pro Cloudflare Workers"
+        },
+        {
+          "name": "node-go",
+          "d": "Portál pro Docker a Google Cloud Run"
+        },
+        {
+          "name": "node-php",
+          "d": "Portál pro běžný webhosting"
+        },
+        {
+          "name": "admin-ui",
+          "d": "Webové rozhraní každého portálu"
+        }
+      ],
+      "devQuickstart": "OBX za 10 minut",
+      "promptTitle": "Postavte to se svým AI asistentem",
+      "promptP": "Zkopírujte prompt do Claude, ChatGPT nebo Cursor, doplňte část v závorkách a nechte asistenta napsat kód podle specifikace.",
+      "prompts": [
+        {
+          "h": "Export z vašeho systému",
+          "note": "Pro značky a dodavatele ERP a PIM: products.csv a názvy obrázků."
+        },
+        {
+          "h": "Načtení OBX do vašeho softwaru",
+          "note": "Pro dodavatele e-shopů, PIM a pokladního softwaru: feed změn a obrázky."
+        }
+      ],
+      "scopeLabel": "Kategorie",
+      "scopeNow": "Verze 0.2: oblečení, obuv, tašky a zavazadla",
+      "scopeNext": "Domov a sport: ve vývoji pro 0.3"
     },
     "pages": {
       "brandsH1": "Nastavte jednou. Pro všechny prodejce najednou.",
@@ -1237,6 +1289,8 @@
     "tiersNote": "Navrhované poplatky pro rok 2027, platné po založení nadace. Poplatek je jen za uvedení v seznamu. Standard, test i software zůstávají pro všechny zdarma a partneři nemají do standardu co mluvit víc než kdokoli jiný.",
     "partnerCta": "Staňte se partnerem",
     "mailSubject": "Oficiální partner",
-    "listTitle": "Oficiální partneři"
+    "listTitle": "Poskytovatelé",
+    "feesNote": "Poplatky začnou platit po založení nadace. Do té doby nikdo neplatí a neposílají se žádné faktury; napište nám a projevte zájem.",
+    "interestCta": "Projevit zájem"
   }
 }

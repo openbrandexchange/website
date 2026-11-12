@@ -364,7 +364,7 @@
     "fieldExport": "Izvoz celotne vsebine",
     "fieldWebsite": "Spletno mesto",
     "listTitle": "Bi bili tu navedeni kot ponudnik?",
-    "listP": "Ponudniki na tej strani so uradni partnerji. Pogoji so za vse enaki:",
+    "listP": "Pogoji za navedbo tukaj so za vse enaki:",
     "listItems": [
       "vaš portal opravi test skladnosti za trenutno različico",
       "znamka lahko izvozi vse podatke in fotografije ter odide",
@@ -726,7 +726,7 @@
       }
     ],
     "nameTitle": "O imenu",
-    "nameP": "Ime »Open Brand Exchange« je v vseh jezikih enako in se nikoli ne prevaja. Še ni registrirana blagovna znamka. Programska oprema, ki opravi preizkuse skladnosti, lahko navaja, da »deluje z Open Brand Exchange«.",
+    "nameP": "Ime „Open Brand Exchange“ je v vseh jezikih enako in se nikoli ne prevaja. Še ni registrirana blagovna znamka. Programska oprema, ki opravi test skladnosti, lahko nosi oznako „Združljivo z Open Brand Exchange“.",
     "specLink": "Celoten dokument o upravljanju",
     "foundationTitle": "Kdo stoji za tem",
     "foundationP": "{foundation} se ustanavlja kot nizozemska fundacija (stichting). Takoj ko bo ustanovljena, bodo nanjo prenesene avtorske pravice, ime, domena in organizacija na GitHubu."
@@ -737,7 +737,7 @@
     "sections": [
       {
         "h": "Kdo je odgovoren",
-        "p": "To spletno mesto upravlja {person} (glejte kolofon). Za vse o zasebnosti pišite na {email}."
+        "p": "Do vpisa fundacije je upravljavec tega spletnega mesta {publisher} (samostojni podjetnik; podjetnik: {person}) v imenu {foundation} (naslov in matična številka sta v kolofonu). Za vse o zasebnosti pišite na {email}."
       },
       {
         "h": "Kaj zbiramo",
@@ -774,7 +774,7 @@
     "h1": "Kolofon",
     "lead": "Kdo izdaja to spletno mesto in kako nas dosežete.",
     "publisherTitle": "Izdajatelj",
-    "foundationP": "{foundation} se ustanavlja kot nizozemska fundacija (stichting). Do njenega vpisa je za to spletno mesto odgovoren {person}.",
+    "foundationP": "Open Brand Exchange izdaja {publisher} v imenu {foundation}, ki se ustanavlja kot nizozemska fundacija (stichting). {publisher} je samostojni podjetnik; podjetnik je {person}.",
     "addressLabel": "Poštni naslov",
     "phoneLabel": "Telefon",
     "registrationLabel": "Matična številka",
@@ -889,7 +889,7 @@
       "errors": "Kode napak",
       "spec": "Specifikacija",
       "sdk": "Go SDK in orodje obx",
-      "status": "Različica 0.2 je izdana. Specifikacija in programska oprema sta prosto na voljo za uporabo."
+      "status": "Različica 0.2 je izdana, za oblačila, obutev, torbe in prtljago. Specifikacija in programska oprema sta prosto na voljo za uporabo."
     },
     "shots": {
       "portalCatalog": "Portal izmišljene znamke Kestrel, kot ga vidi trgovec: osem artiklov s filtri po znamki, vrsti izdelka in barvi.",
@@ -903,7 +903,7 @@
     "home": {
       "eyebrow": "Odprt standard za modo · Brezplačna programska oprema",
       "h1": "Vsebina o modnih izdelkih, pripravljena za vsakega trgovca.",
-      "lead": "Veliko slikovnih portalov je počasnih, težko jih je povezati in jih je treba preklikati ročno. Open Brand Exchange je odprt standard za to, kako znamke oblačil, obutve, torb in prtljage svojim trgovcem dostavijo fotografije izdelkov in podatke o artiklih: na portalu, kot zip ali preglednico ali neposredno v programsko opremo trgovca prek enega API-ja. Odprta alternativa zaprtim platformam: brez plačila za vsakega trgovca, brez vezave na ponudnika, vaši podatki pa ostanejo vaši.",
+      "lead": "Veliko slikovnih portalov je počasnih, težko jih je povezati in jih je treba preklikati ročno. Open Brand Exchange je odprti standard za to, kako znamke oblačil, obutve, torb in prtljage svojim trgovcem dostavijo fotografije izdelkov in podatke o artiklih: odprta alternativa zaprtim platformam.",
       "ctaRetailer": "Sem trgovec",
       "proofLabel": "Na kratko",
       "proof": [
@@ -916,8 +916,8 @@
           "l": "izdaje portala"
         },
         {
-          "v": "61",
-          "l": "preverjanj skladnosti"
+          "v": "1",
+          "l": "API za vsako znamko"
         },
         {
           "v": "25",
@@ -1009,7 +1009,7 @@
       ],
       "editionsEyebrow": "Gostovanje",
       "editionsTitle": "Gostite, kjer želite. Plačate le gostovanje.",
-      "editionsLead": "Tri izdaje istega portala. Prestanejo ista preverjanja skladnosti in govorijo isti API, zato lahko prehajate med njimi.",
+      "editionsLead": "Tri izdaje istega portala. Govorijo isti API, zato lahko prehajate med njimi.",
       "editionsLink": "Primerjajte možnosti gostovanja",
       "editionFields": [
         "Deluje na",
@@ -1058,11 +1058,11 @@
       "trust": [
         {
           "h": "Odprta specifikacija",
-          "p": "Različica 0.2, zapisana kot OpenAPI 3.1 in JSON Schema pod licenco CC-BY-4.0. Implementira jo lahko vsakdo, tudi komercialno."
+          "p": "Različica 0.2 pod licenco CC-BY-4.0. Implementira jo lahko vsakdo, tudi komercialno."
         },
         {
-          "h": "Preverjanje skladnosti",
-          "p": "61 samodejnih preverjanj v štirih profilih. Vsaka implementacija je preizkušena na enak način."
+          "h": "Brez vezave",
+          "p": "Znamka lahko kadar koli izvozi vse svoje podatke in fotografije ter preide k drugemu ponudniku ali jih gosti sama."
         },
         {
           "h": "Odprtokodne licence",
@@ -1074,7 +1074,7 @@
         },
         {
           "h": "Varnost",
-          "p": "Ranljivosti zaupno sporočite na {email}. Varnost je eden od štirih profilov skladnosti."
+          "p": "Ranljivosti zaupno sporočite na {email}."
         },
         {
           "h": "Najprej zasebnost",
@@ -1083,8 +1083,8 @@
       ],
       "trustLink": "Preberite, kako se upravlja",
       "devEyebrow": "Za razvijalce",
-      "devTitle": "Specifikacija, na kateri lahko gradite.",
-      "devP": "Tri pogodbe OpenAPI, JSON Schema, izmišljena testna znamka in zbirka preverjanj skladnosti. Go SDK in orodje obx sta pripravljena za uporabo, deluje pa vsak odjemalec HTTP.",
+      "devTitle": "Odprta koda, na GitHubu.",
+      "devP": "OpenAPI 3.1, JSON Schemas, izmišljena testna znamka in pripravljena programska oprema. Deluje vsak odjemalec HTTP.",
       "devLinks": [
         "Referenca API",
         "Specifikacija na GitHubu",
@@ -1098,62 +1098,114 @@
       "closingMail": "Pišite nam",
       "rolesEyebrow": "Kdo kaj dela",
       "rolesTitle": "Znamke objavljajo. Trgovci prejemajo. Programska oprema povezuje.",
-      "rolesLead": "Standard določa, kako vsebina o izdelkih potuje od znamke do trgovca. Vsaka stran opravi svoj del in nihče ne čaka na druge.",
+      "rolesLead": "Kaj dobi vsaka stran.",
       "roles": [
         {
-          "h": "Znamke objavljajo",
-          "p": "Znamka svojo vsebino pripravi enkrat, v standardnem formatu, na svojem portalu. Odhodne podatke avtomatizira sama ali to uredi ponudnik.",
+          "h": "Znamke",
+          "p": "Objavite enkrat, za vsakega trgovca.",
           "items": [
-            "Vaše fotografije in podatki o artiklih v enem standardnem formatu",
-            "Avtomatizirajte sami z brezplačnimi orodji ali to prepustite ponudniku",
-            "Vsakega trgovca odobrite sami in določite, kaj vidi"
+            "Brezplačna programska oprema ali ponudnik, ki uredi vse",
+            "Začnite z lastno datoteko Excel ali sistemom",
+            "Vsi trgovci hkrati, brez pošiljanja datotek",
+            "Vi določite, kdo vidi kaj",
+            "Vidite, kdo kaj prenese",
+            "Brez vezave: izvozite vse in odidite"
           ],
           "cta": "Več za znamke"
         },
         {
-          "h": "Trgovci prejemajo",
-          "p": "Trgovec od vsake znamke v standardu vzame, kar potrebuje, vedno na enak način. Nobenega novega dela za vsako novo znamko.",
+          "h": "Trgovci",
+          "p": "Prejmite vse, brez dodatnega dela.",
           "items": [
-            "Iščite, prilepite EAN-e in prenašajte v brskalniku",
-            "Fotografije in surovinska sestava, pripravljene za spletno trgovino",
-            "Pravice uporabe in datumi embarga ob vsaki fotografiji"
+            "Brezplačno za trgovce",
+            "Vsaka znamka v enakem formatu",
+            "Prilepite EAN-e, dobite prave fotografije",
+            "Surovinska sestava in navodila za nego, pripravljena za spletno trgovino",
+            "Pravice uporabe in datumi embarga ob vsaki fotografiji",
+            "V brskalniku ali neposredno v vaši programski opremi"
           ],
           "cta": "Več za trgovce"
         },
         {
-          "h": "Ponudniki ERP in programske opreme se povežejo",
-          "p": "Ponudnik ERP-ja, PIM-a, spletne trgovine ali blagajniške programske opreme zgradi eno povezavo in nato vsak portal znamke bere na enak način. Dohodni podatki se avtomatizirajo kot pri vsakem drugem viru podatkov dobavitelja.",
+          "h": "Portali in programska oprema",
+          "p": "Povežite se enkrat, dosežite vsako znamko.",
           "items": [
-            "En API, dokumentiran v OpenAPI 3.1",
+            "Portali znamk, portali B2B in slikovni portali, DAM-i",
+            "Programska oprema za ERP, PIM, spletne trgovine in blagajne",
+            "En odprt API, brez licenčnine",
             "Najprej celotna kopija, nato samo spremembe",
-            "Preizkusite povezavo z brezplačnim testom skladnosti"
+            "Brezplačna oznaka „Združljivo z Open Brand Exchange“"
           ],
-          "cta": "Preberite vodnik za razvijalce"
+          "cta": "Za portale in partnerje"
         }
       ],
       "portalsEyebrow": "Odprto za vsak portal",
       "portalsTitle": "Že imate portal? Povežite ga s standardom.",
-      "portalsLead": "Open Brand Exchange ni en sam program. Vsak portal, ki govori protokol in opravi test skladnosti, je združljiv, programska oprema trgovcev pa ga bere kot vsakega drugega.",
+      "portalsLead": "Vsak portal ali sistem, ki govori standard, deluje z vsakim sistemom trgovca, ki ga prav tako govori.",
       "portalTypes": [
         {
           "h": "Portali znamk in portali B2B",
-          "p": "Portal znamke, trgovina B2B ali veleprodajna platforma doda API OBX k temu, kar že počne. Njene znamke tako dosežejo vsak sistem trgovca, ki govori standard."
+          "p": "Dodajte API OBX k temu, kar že počnete, in vaše znamke dosežejo vsak sistem trgovca."
         },
         {
           "h": "Slikovni portali in DAM-i",
-          "p": "Fotografski portali, slikovne banke in DAM-i za fotografije izdelkov objavljajo fotografije po artiklih: vsaka fotografija je povezana z izdelkom, barvo in EAN-om, s spletnimi različicami, pravicami uporabe in datumi embarga. Izvajajo bralno stran protokola, programska oprema trgovcev pa fotografije prevzame kot s katerega koli drugega portala."
+          "p": "Objavite fotografije izdelkov po artiklu, barvi in EAN-u, s spletnimi različicami, pravicami uporabe in datumi embarga."
         },
         {
           "h": "Sistemi PIM in ERP",
-          "p": "PIM ali ERP, v katerem so podatki o artiklih znamke, jih lahko objavi neposredno: surovinsko sestavo, navodila za nego, velikosti in EAN-e v standardnem formatu, brez ločenega portala."
+          "p": "Objavite surovinsko sestavo, navodila za nego, velikosti in EAN-e neposredno iz sistema, v katerem so."
         }
       ],
-      "portalsSteps": [
-        "Preberite specifikacijo in naložite izmišljeno testno znamko Kestrel",
-        "Prek API-ja ponudite odkrivanje, vir sprememb, izdelke in fotografije",
-        "Zaženite brezplačni test skladnosti: ko ga opravite, ste združljivi"
+      "portalsCta": "Združljivost ali partnerstvo",
+      "heroChecks": [
+        "Brezplačno in odprto, brez plačila za vsakega trgovca",
+        "Vsi vaši trgovci hkrati",
+        "Začne se v vašem Excelu ali sistemu",
+        "Fotografije s pravicami uporabe",
+        "Brez vezave: vaši podatki ostanejo vaši"
       ],
-      "portalsCta": "Združljivost ali partnerstvo"
+      "devRepos": [
+        {
+          "name": "spec",
+          "d": "Specifikacija, sheme in testni podatki"
+        },
+        {
+          "name": "obx-go",
+          "d": "Go SDK, orodje obx in test skladnosti"
+        },
+        {
+          "name": "node-ts",
+          "d": "Portal za Cloudflare Workers"
+        },
+        {
+          "name": "node-go",
+          "d": "Portal za Docker in Google Cloud Run"
+        },
+        {
+          "name": "node-php",
+          "d": "Portal za običajno spletno gostovanje"
+        },
+        {
+          "name": "admin-ui",
+          "d": "Spletni vmesnik vsakega portala"
+        }
+      ],
+      "devQuickstart": "OBX v 10 minutah",
+      "promptTitle": "Zgradite ga s svojim pomočnikom AI",
+      "promptP": "Kopirajte poziv v Claude, ChatGPT ali Cursor, izpolnite del v oglatih oklepajih in pustite, da napiše kodo po specifikaciji.",
+      "prompts": [
+        {
+          "h": "Izvoz iz vašega sistema",
+          "note": "Za znamke ter ponudnike ERP in PIM: products.csv in imena fotografij."
+        },
+        {
+          "h": "Branje OBX v vaši programski opremi",
+          "note": "Za ponudnike programske opreme za spletne trgovine, PIM in blagajne: vir sprememb in fotografije."
+        }
+      ],
+      "scopeLabel": "Kategorije",
+      "scopeNow": "Različica 0.2: oblačila, obutev, torbe in prtljaga",
+      "scopeNext": "Dom in šport: v razvoju za 0.3"
     },
     "pages": {
       "brandsH1": "Nastavite enkrat. Za vse trgovce hkrati.",
@@ -1237,6 +1289,8 @@
     "tiersNote": "Predlagani zneski za leto 2027, dokončni po ustanovitvi fundacije. Članarina krije samo navedbo. Standard, test in programska oprema ostanejo brezplačni za vse, partnerji pa pri standardu nimajo več besede kot kdor koli drug.",
     "partnerCta": "Postanite partner",
     "mailSubject": "Uradni partner",
-    "listTitle": "Uradni partnerji"
+    "listTitle": "Ponudniki",
+    "feesNote": "Članarine začnejo veljati, ko bo fundacija ustanovljena. Do takrat nihče ne plačuje in računi se ne pošiljajo; pišite nam, če vas zanima.",
+    "interestCta": "Izrazite zanimanje"
   }
 }

@@ -364,7 +364,7 @@
     "fieldExport": "Minden tartalom exportálása",
     "fieldWebsite": "Weboldal",
     "listTitle": "Szeretne itt szolgáltatóként szerepelni?",
-    "listP": "Az oldalon szereplő szolgáltatók hivatalos partnerek. A feltételek mindenkire ugyanazok:",
+    "listP": "Az itt való szerepléshez szükséges feltételek mindenkire ugyanazok:",
     "listItems": [
       "portálja átmegy a jelenlegi verzió megfelelőségi tesztjén",
       "a márka minden adatát és képét exportálhatja, és távozhat",
@@ -726,7 +726,7 @@
       }
     ],
     "nameTitle": "A névről",
-    "nameP": "Az „Open Brand Exchange” név minden nyelven ugyanaz, és soha nem fordítjuk le. Még nem bejegyzett védjegy. Az a szoftver, amely átmegy a megfelelőségi teszteken, feltüntetheti, hogy „működik az Open Brand Exchange-dzsel”.",
+    "nameP": "Az „Open Brand Exchange” név minden nyelven ugyanaz, és soha nem fordítjuk le. Még nem bejegyzett védjegy. Az a szoftver, amely átmegy a megfelelőségi teszten, feltüntetheti, hogy „Kompatibilis az Open Brand Exchange-dzsel”.",
     "specLink": "A teljes irányítási dokumentum",
     "foundationTitle": "Ki áll mögötte",
     "foundationP": "A(z) {foundation} holland alapítványként (stichting) jön létre. Amint megalakul, átkerül hozzá a szerzői jog, a név, a domain és a GitHub-szervezet."
@@ -737,7 +737,7 @@
     "sections": [
       {
         "h": "Ki a felelős",
-        "p": "Ezt a weboldalt {person} üzemelteti (lásd az impresszumot). Adatvédelmi kérdésekben írjon a(z) {email} címre."
+        "p": "Az alapítvány bejegyzéséig e weboldal adatkezelője {publisher} (egyéni vállalkozás; vállalkozó: {person}) a(z) {foundation} nevében (a cím és a nyilvántartási szám az impresszumban található). Adatvédelmi kérdésekben írjon a(z) {email} címre."
       },
       {
         "h": "Mit gyűjtünk",
@@ -774,7 +774,7 @@
     "h1": "Impresszum",
     "lead": "Ki adja ki ezt a weboldalt, és hogyan érhet el minket.",
     "publisherTitle": "Kiadó",
-    "foundationP": "A(z) {foundation} holland alapítványként (stichting) alakul. Bejegyzéséig ezért a weboldalért {person} felel.",
+    "foundationP": "Az Open Brand Exchange kiadója {publisher} a(z) {foundation} nevében, amely holland alapítványként (stichting) alakul. {publisher} egyéni vállalkozás; a vállalkozó {person}.",
     "addressLabel": "Postacím",
     "phoneLabel": "Telefon",
     "registrationLabel": "Nyilvántartási szám",
@@ -889,7 +889,7 @@
       "errors": "Hibakódok",
       "spec": "Specifikáció",
       "sdk": "Go SDK és obx eszköz",
-      "status": "Megjelent a 0.2-es verzió. A specifikáció és a szoftver szabadon használható."
+      "status": "Megjelent a 0.2-es verzió ruházathoz, cipőkhöz, táskákhoz és bőröndökhöz. A specifikáció és a szoftver szabadon használható."
     },
     "shots": {
       "portalCatalog": "A kitalált Kestrel márka portálja egy viszonteladó szemével: nyolc cikk márka, terméktípus és szín szerinti szűrőkkel.",
@@ -903,7 +903,7 @@
     "home": {
       "eyebrow": "Nyílt szabvány a divatnak · Ingyenes szoftver",
       "h1": "Divattermékek tartalma, készen minden viszonteladónak.",
-      "lead": "Sok képportál lassú, nehezen köthető be, és kézzel kell végigkattintani. Az Open Brand Exchange nyílt szabvány arra, hogyan juttatják el a ruházati, cipő-, táska- és bőröndmárkák a termékfotókat és cikkadatokat viszonteladóiknak: portálon, ZIP-ként vagy táblázatként, vagy egyetlen API-n keresztül közvetlenül a viszonteladó szoftverébe. Nyílt alternatíva a zárt platformokkal szemben: nincs viszonteladónkénti díj, nincs bezártság, és az adatai az Önéi maradnak.",
+      "lead": "Sok képportál lassú, nehezen köthető be, és kézzel kell végigkattintani. Az Open Brand Exchange nyílt szabvány arra, hogyan juttatják el a ruházati, cipő-, táska- és bőröndmárkák a termékfotókat és cikkadatokat viszonteladóiknak: nyílt alternatíva a zárt platformokkal szemben.",
       "ctaRetailer": "Viszonteladó vagyok",
       "proofLabel": "Röviden",
       "proof": [
@@ -916,8 +916,8 @@
           "l": "portálkiadás"
         },
         {
-          "v": "61",
-          "l": "megfelelőségi ellenőrzés"
+          "v": "1",
+          "l": "API minden márkához"
         },
         {
           "v": "25",
@@ -1009,7 +1009,7 @@
       ],
       "editionsEyebrow": "Üzemeltetés",
       "editionsTitle": "Futtassa, ahol akarja. Csak az üzemeltetést fizeti.",
-      "editionsLead": "Ugyanannak a portálnak három kiadása. Ugyanazokon a megfelelőségi ellenőrzéseken mennek át, és ugyanazt az API-t beszélik, így bármikor válthat közöttük.",
+      "editionsLead": "Ugyanannak a portálnak három kiadása. Ugyanazt az API-t beszélik, így bármikor válthat közöttük.",
       "editionsLink": "Üzemeltetési lehetőségek összehasonlítása",
       "editionFields": [
         "Hol fut",
@@ -1058,11 +1058,11 @@
       "trust": [
         {
           "h": "Nyílt specifikáció",
-          "p": "A 0.2-es verzió OpenAPI 3.1 és JSON Schema formátumú, CC-BY-4.0 licenccel. Bárki megvalósíthatja, üzleti célra is."
+          "p": "A 0.2-es verzió CC-BY-4.0 licenccel. Bárki megvalósíthatja, üzleti célra is."
         },
         {
-          "h": "Megfelelőségi tesztcsomag",
-          "p": "61 automatikus ellenőrzés négy profilban. Minden implementációt ugyanígy tesztelünk."
+          "h": "Nincs bezártság",
+          "p": "Egy márka bármikor exportálhatja összes adatát és képét, és átválthat másik szolgáltatóra, vagy maga üzemeltetheti."
         },
         {
           "h": "Nyílt forráskódú licencek",
@@ -1074,7 +1074,7 @@
         },
         {
           "h": "Biztonság",
-          "p": "Sebezhetőséget bizalmasan jelentsen itt: {email}. A biztonság a négy megfelelőségi profil egyike."
+          "p": "Sebezhetőséget bizalmasan jelentsen itt: {email}."
         },
         {
           "h": "Az adatvédelem az első",
@@ -1083,8 +1083,8 @@
       ],
       "trustLink": "Olvassa el, hogyan irányítják",
       "devEyebrow": "Fejlesztőknek",
-      "devTitle": "Specifikáció, amelyre építhet.",
-      "devP": "Három OpenAPI-szerződés, JSON Schemák, egy kitalált tesztmárka és egy megfelelőségi tesztcsomag. A Go SDK és az obx eszköz használatra kész, és bármely HTTP-kliens működik.",
+      "devTitle": "Nyílt forráskód, a GitHubon.",
+      "devP": "OpenAPI 3.1, JSON Schemas, egy kitalált tesztmárka és kész szoftver. Bármely HTTP-kliens működik.",
       "devLinks": [
         "API-referencia",
         "Specifikáció a GitHubon",
@@ -1098,62 +1098,114 @@
       "closingMail": "Írjon nekünk",
       "rolesEyebrow": "Ki mit csinál",
       "rolesTitle": "A márkák közzéteszik. A viszonteladók megkapják. A szoftverek összekötik.",
-      "rolesLead": "A szabvány rögzíti, hogyan jut el a terméktartalom a márkától a viszonteladóig. Mindenki a saját részét végzi, és senkinek sem kell másra várnia.",
+      "rolesLead": "Mit kap belőle minden fél.",
       "roles": [
         {
-          "h": "A márkák közzéteszik",
-          "p": "A márka egyszer, szabványos formátumban készíti elő a tartalmát, a saját portálján. A kimenő adatokat maga automatizálja, vagy egy szolgáltató intézi.",
+          "h": "Márkák",
+          "p": "Egyszer tegye közzé, minden viszonteladónak.",
           "items": [
-            "Fotói és cikkadatai egyetlen szabványos formátumban",
-            "Automatizálja maga az ingyenes eszközökkel, vagy bízza szolgáltatóra",
-            "Minden viszonteladót Ön hagy jóvá, és Ön dönti el, mit lát"
+            "Ingyenes szoftver, vagy egy szolgáltató, aki mindent intéz",
+            "Induljon a saját Excel-fájljából vagy rendszeréből",
+            "Minden viszonteladó egyszerre, nincs több fájlküldözgetés",
+            "Ön dönti el, ki mit lát",
+            "Lássa, ki mit tölt le",
+            "Nincs bezártság: exportáljon mindent, és váltson"
           ],
           "cta": "Részletek márkáknak"
         },
         {
-          "h": "A viszonteladók megkapják",
-          "p": "A viszonteladó minden, a szabványt követő márkától ugyanúgy szerzi be, amire szüksége van. Egy új márka nem jelent új munkát.",
+          "h": "Viszonteladók",
+          "p": "Megkap mindent, többletmunka nélkül.",
           "items": [
-            "Keresés, EAN-ok beillesztése és letöltés a böngészőben",
-            "Fotók és szálösszetétel készen a webáruházhoz",
-            "Felhasználási jogok és embargódátumok minden fotóhoz"
+            "Ingyenes a viszonteladóknak",
+            "Minden márka ugyanabban a formátumban",
+            "Illesszen be EAN-okat, és megkapja a megfelelő képeket",
+            "Szálösszetétel és kezelési útmutató készen a webáruházhoz",
+            "Felhasználási jogok és embargódátumok minden képhez",
+            "A böngészőben vagy közvetlenül a szoftverébe"
           ],
           "cta": "Részletek viszonteladóknak"
         },
         {
-          "h": "Az ERP- és szoftverszállítók összekötik",
-          "p": "Az ERP-, PIM-, webáruház- vagy pénztárszoftver szállítója egyetlen kapcsolatot épít ki, majd minden márkaportált ugyanúgy olvas. A beérkező adatok automatizálása ugyanúgy történik, mint bármely más beszállítói adatfolyamnál.",
+          "h": "Portálok és szoftverek",
+          "p": "Egyszer kapcsolódjon, és minden márkát elér.",
           "items": [
-            "Egyetlen API, OpenAPI 3.1 formátumban dokumentálva",
+            "Márkaportálok, B2B- és képportálok, DAM-rendszerek",
+            "ERP-, PIM-, webáruház- és pénztárszoftverek",
+            "Egyetlen nyílt API, licencdíj nélkül",
             "Először egy teljes másolat, utána csak a változások",
-            "Tesztelje a kapcsolatát az ingyenes megfelelőségi tesztcsomaggal"
+            "Ingyenes „Kompatibilis az Open Brand Exchange-dzsel” címke"
           ],
-          "cta": "Fejlesztői útmutató"
+          "cta": "Portáloknak és partnereknek"
         }
       ],
       "portalsEyebrow": "Nyitott minden portál előtt",
       "portalsTitle": "Már van portálja? Kösse össze a szabvánnyal.",
-      "portalsLead": "Az Open Brand Exchange nem egyetlen szoftver. Minden portál kompatibilis, amely beszéli a protokollt és átmegy a megfelelőségi teszten, és a viszonteladók szoftverei ugyanúgy olvassák, mint bármely másikat.",
+      "portalsLead": "Minden portál vagy rendszer, amely beszéli a szabványt, együttműködik minden olyan viszonteladói rendszerrel, amely szintén beszéli.",
       "portalTypes": [
         {
           "h": "Márka- és B2B-portálok",
-          "p": "A márkaportál, B2B-webáruház vagy nagykereskedelmi platform a meglévő funkciói mellé teszi az OBX API-t. Márkái így minden olyan viszonteladói rendszert elérnek, amely beszéli a szabványt."
+          "p": "Tegye az OBX API-t a meglévő funkciói mellé, és márkái minden viszonteladói rendszert elérnek."
         },
         {
           "h": "Képportálok és DAM-rendszerek",
-          "p": "A fotóportálok, képbankok és termékfotókhoz használt DAM-rendszerek cikkenként teszik közzé a képeket: minden fotó a termékéhez, színéhez és EAN-jához kapcsolódik, webes változatokkal, felhasználási jogokkal és embargódátumokkal. Ezek a protokoll olvasási oldalát valósítják meg, és a viszonteladók szoftverei ugyanúgy töltik le a képeket, mint bármely más portálról."
+          "p": "Tegye közzé a termékképeket cikkenként, színenként és EAN-onként, webes változatokkal, felhasználási jogokkal és embargódátumokkal."
         },
         {
           "h": "PIM- és ERP-rendszerek",
-          "p": "Az a PIM vagy ERP, amelyben egy márka cikkadatai vannak, közvetlenül közzéteheti azokat: szálösszetételt, kezelési útmutatót, méreteket és EAN-okat szabványos formátumban, külön portál nélkül."
+          "p": "Tegye közzé a szálösszetételt, a kezelési útmutatót, a méreteket és az EAN-okat közvetlenül abból a rendszerből, amelyben vannak."
         }
       ],
-      "portalsSteps": [
-        "Olvassa el a specifikációt, és töltse be a kitalált Kestrel tesztmárkát",
-        "Kínálja az API-n keresztül a discoveryt, a változásfolyamot, a termékeket és a képeket",
-        "Futtassa az ingyenes megfelelőségi tesztet: ha átmegy, kompatibilis"
+      "portalsCta": "Kompatibilis vagy partner",
+      "heroChecks": [
+        "Ingyenes és nyílt, nincs viszonteladónkénti díj",
+        "Minden viszonteladója egyszerre",
+        "A saját Excel-táblájából vagy rendszeréből indul",
+        "Képek felhasználási jogokkal együtt",
+        "Nincs bezártság: az adatai az Önéi maradnak"
       ],
-      "portalsCta": "Kompatibilis vagy partner"
+      "devRepos": [
+        {
+          "name": "spec",
+          "d": "A specifikáció, a sémák és a tesztadatok"
+        },
+        {
+          "name": "obx-go",
+          "d": "Go SDK, az obx eszköz és a megfelelőségi teszt"
+        },
+        {
+          "name": "node-ts",
+          "d": "Portál Cloudflare Workershez"
+        },
+        {
+          "name": "node-go",
+          "d": "Portál Dockerhez és Google Cloud Runhoz"
+        },
+        {
+          "name": "node-php",
+          "d": "Portál hagyományos webtárhelyre"
+        },
+        {
+          "name": "admin-ui",
+          "d": "Minden portál webes felülete"
+        }
+      ],
+      "devQuickstart": "OBX 10 perc alatt",
+      "promptTitle": "Építse meg AI-asszisztensével",
+      "promptP": "Másoljon egy promptot a Claude-ba, a ChatGPT-be vagy a Cursorba, töltse ki a zárójelek közötti részt, és hagyja, hogy megírja a kódot a specifikáció alapján.",
+      "prompts": [
+        {
+          "h": "Exportálás a rendszeréből",
+          "note": "Márkáknak, valamint ERP- és PIM-szállítóknak: products.csv és képnevek."
+        },
+        {
+          "h": "OBX beolvasása a szoftverébe",
+          "note": "Webáruház-, PIM- és pénztárszoftver-szállítóknak: a változásfolyam és a képek."
+        }
+      ],
+      "scopeLabel": "Kategóriák",
+      "scopeNow": "0.2-es verzió: ruházat, cipők, táskák és bőröndök",
+      "scopeNext": "Lakás és sport: fejlesztés alatt a 0.3-hoz"
     },
     "pages": {
       "brandsH1": "Egyszer beállítja. Minden viszonteladónak egyszerre.",
@@ -1237,6 +1289,8 @@
     "tiersNote": "Javasolt díjak 2027-re, az alapítvány létrejöttével válnak véglegessé. A díj csak a megjelenésért fizetendő. A szabvány, a teszt és a szoftver mindenki számára ingyenes marad, és a partnereknek nincs nagyobb beleszólásuk a szabványba, mint bárki másnak.",
     "partnerCta": "Legyen partnerünk",
     "mailSubject": "Hivatalos partner",
-    "listTitle": "Hivatalos partnerek"
+    "listTitle": "Szolgáltatók",
+    "feesNote": "A díjak az alapítvány létrejöttével lépnek életbe. Addig senki sem fizet, és számlát sem küldünk; írjon nekünk, ha érdeklődik.",
+    "interestCta": "Érdeklődés jelzése"
   }
 }

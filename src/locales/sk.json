@@ -364,7 +364,7 @@
     "fieldExport": "Export všetkého obsahu",
     "fieldWebsite": "Web",
     "listTitle": "Chcete byť tu uvedení ako poskytovateľ?",
-    "listP": "Poskytovatelia na tejto stránke sú oficiálni partneri. Podmienky sú pre všetkých rovnaké:",
+    "listP": "Podmienky na zápis sú pre všetkých rovnaké:",
     "listItems": [
       "váš portál prejde testom zhody pre aktuálnu verziu",
       "značka môže exportovať všetky údaje a fotografie a odísť",
@@ -726,7 +726,7 @@
       }
     ],
     "nameTitle": "O názve",
-    "nameP": "Názov „Open Brand Exchange“ je vo všetkých jazykoch rovnaký a nikdy sa neprekladá. Zatiaľ nie je registrovanou ochrannou známkou. Softvér, ktorý prejde testami zhody, môže uvádzať, že „funguje s Open Brand Exchange“.",
+    "nameP": "Názov „Open Brand Exchange“ je vo všetkých jazykoch rovnaký a nikdy sa neprekladá. Zatiaľ nie je registrovanou ochrannou známkou. Softvér, ktorý prejde testom zhody, môže niesť označenie „Kompatibilné s Open Brand Exchange“.",
     "specLink": "Úplný dokument o správe",
     "foundationTitle": "Kto za tým stojí",
     "foundationP": "{foundation} vzniká ako holandská nadácia (stichting). Hneď ako bude existovať, prevedú sa na ňu autorské práva, názov, doména a organizácia na GitHube."
@@ -737,7 +737,7 @@
     "sections": [
       {
         "h": "Kto zodpovedá",
-        "p": "Tento web prevádzkuje {person} (pozri tiráž). So všetkým, čo sa týka súkromia, píšte na {email}."
+        "p": "Do zápisu nadácie je prevádzkovateľom tohto webu {publisher} (živnosť; podnikateľ: {person}) v mene {foundation} (adresa a registračné číslo sú v tiráži). So všetkým, čo sa týka súkromia, píšte na {email}."
       },
       {
         "h": "Čo zbierame",
@@ -774,7 +774,7 @@
     "h1": "Tiráž",
     "lead": "Kto tento web vydáva a ako nás kontaktovať.",
     "publisherTitle": "Vydáva",
-    "foundationP": "{foundation} sa zakladá ako holandská nadácia (stichting). Do jej zápisu zodpovedá za tento web {person}.",
+    "foundationP": "Open Brand Exchange vydáva {publisher} v mene {foundation}, ktorá sa zakladá ako holandská nadácia (stichting). {publisher} je živnosť; podnikateľom je {person}.",
     "addressLabel": "Poštová adresa",
     "phoneLabel": "Telefón",
     "registrationLabel": "Registračné číslo",
@@ -889,7 +889,7 @@
       "errors": "Chybové kódy",
       "spec": "Špecifikácia",
       "sdk": "Go SDK a nástroj obx",
-      "status": "Verzia 0.2 je vydaná. Špecifikácia aj softvér sú voľne na použitie."
+      "status": "Verzia 0.2 je vydaná, pre odevy, obuv, kabelky a batožinu. Špecifikácia aj softvér sú voľne na použitie."
     },
     "shots": {
       "portalCatalog": "Portál fiktívnej značky Kestrel očami predajcu: osem položiek s filtrami podľa značky, typu produktu a farby.",
@@ -903,7 +903,7 @@
     "home": {
       "eyebrow": "Otvorený štandard pre módu · Bezplatný softvér",
       "h1": "Produktový obsah z módy, pripravený pre každého predajcu.",
-      "lead": "Mnohé obrazové portály sú pomalé, ťažko sa napájajú a musia sa preklikávať ručne. Open Brand Exchange je otvorený štandard pre to, ako značky odevov, obuvi, kabeliek a batožiny odovzdávajú svojim predajcom produktové fotografie a údaje o tovare: na portáli, ako ZIP alebo tabuľku, alebo priamo do softvéru predajcu cez jedno API. Otvorená alternatíva k uzavretým platformám: žiadne poplatky za predajcu, žiadna závislosť od dodávateľa a vaše údaje zostávajú vaše.",
+      "lead": "Mnohé obrazové portály sú pomalé, ťažko sa napájajú a musia sa preklikávať ručne. Open Brand Exchange je otvorený štandard pre to, ako značky odevov, obuvi, kabeliek a batožiny odovzdávajú svojim predajcom produktové fotografie a údaje o tovare: otvorená alternatíva k uzavretým platformám.",
       "ctaRetailer": "Som predajca",
       "proofLabel": "Na prvý pohľad",
       "proof": [
@@ -916,8 +916,8 @@
           "l": "edície portálu"
         },
         {
-          "v": "61",
-          "l": "testov zhody"
+          "v": "1",
+          "l": "API pre každú značku"
         },
         {
           "v": "25",
@@ -1009,7 +1009,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Prevádzkujte, kde chcete. Plaťte len hosting.",
-      "editionsLead": "Tri edície toho istého portálu. Prechádzajú rovnakými testami zhody a hovoria rovnakým API, takže môžete prejsť z jednej na druhú.",
+      "editionsLead": "Tri edície toho istého portálu. Hovoria rovnakým API, takže môžete prejsť z jednej na druhú.",
       "editionsLink": "Porovnať možnosti hostingu",
       "editionFields": [
         "Beží na",
@@ -1058,11 +1058,11 @@
       "trust": [
         {
           "h": "Otvorená špecifikácia",
-          "p": "Verzia 0.2, zapísaná ako OpenAPI 3.1 a JSON Schema pod licenciou CC-BY-4.0. Implementovať ju smie ktokoľvek, aj komerčne."
+          "p": "Verzia 0.2 pod licenciou CC-BY-4.0. Implementovať ju smie ktokoľvek, aj komerčne."
         },
         {
-          "h": "Testy zhody",
-          "p": "61 automatických testov v štyroch profiloch. Každá implementácia sa testuje rovnako."
+          "h": "Žiadna závislosť",
+          "p": "Značka môže kedykoľvek exportovať všetky svoje údaje a fotografie a prejsť k inému poskytovateľovi alebo si ich hostiť sama."
         },
         {
           "h": "Open-source licencie",
@@ -1074,7 +1074,7 @@
         },
         {
           "h": "Bezpečnosť",
-          "p": "Zraniteľnosti hláste dôverne na {email}. Bezpečnosť je jedným zo štyroch profilov zhody."
+          "p": "Zraniteľnosti hláste dôverne na {email}."
         },
         {
           "h": "Súkromie na prvom mieste",
@@ -1083,8 +1083,8 @@
       ],
       "trustLink": "Ako je projekt spravovaný",
       "devEyebrow": "Pre vývojárov",
-      "devTitle": "Špecifikácia, na ktorej môžete stavať.",
-      "devP": "Tri kontrakty OpenAPI, JSON Schema, fiktívna testovacia značka a sada testov zhody. Go SDK a nástroj obx sú pripravené na použitie a funguje akýkoľvek HTTP klient.",
+      "devTitle": "Open source, na GitHube.",
+      "devP": "OpenAPI 3.1, JSON Schemas, fiktívna testovacia značka a hotový softvér. Funguje akýkoľvek HTTP klient.",
       "devLinks": [
         "Referencia API",
         "Špecifikácia na GitHube",
@@ -1098,62 +1098,114 @@
       "closingMail": "Napíšte nám",
       "rolesEyebrow": "Kto čo robí",
       "rolesTitle": "Značky publikujú. Predajcovia prijímajú. Softvér prepája.",
-      "rolesLead": "Štandard určuje, ako sa produktový obsah dostane od značky k predajcovi. Každá strana robí svoju časť a nikto nemusí čakať na iných.",
+      "rolesLead": "Čo z toho má každá strana.",
       "roles": [
         {
-          "h": "Značky publikujú",
-          "p": "Značka pripraví svoj obsah raz, v štandardnom formáte, na vlastnom portáli. Odchádzajúce údaje si automatizuje sama, alebo to zariadi poskytovateľ.",
+          "h": "Značky",
+          "p": "Publikujte raz, pre každého predajcu.",
           "items": [
-            "Vaše fotografie a údaje o tovare v jednom štandardnom formáte",
-            "Automatizujte to sami s bezplatnými nástrojmi, alebo to nechajte na poskytovateľa",
-            "Každého predajcu schvaľujete a určujete, čo uvidí"
+            "Bezplatný softvér alebo poskytovateľ, ktorý všetko zariadi",
+            "Začnite od vlastného súboru Excel alebo systému",
+            "Všetci predajcovia naraz, žiadne posielanie súborov",
+            "Vy určujete, kto čo vidí",
+            "Vidíte, kto čo sťahuje",
+            "Žiadna závislosť: exportujte všetko a odíďte"
           ],
           "cta": "Viac pre značky"
         },
         {
-          "h": "Predajcovia prijímajú",
-          "p": "Predajca si od každej značky v štandarde vezme, čo potrebuje, vždy rovnakým spôsobom. Žiadna nová práca pri každej novej značke.",
+          "h": "Predajcovia",
+          "p": "Dostanete všetko, bez práce navyše.",
           "items": [
-            "Vyhľadávajte, vkladajte EAN a sťahujte v prehliadači",
-            "Fotografie a vláknové zloženie pripravené pre e-shop",
-            "Práva na použitie a dátumy embarga pri každej fotografii"
+            "Pre predajcov zadarmo",
+            "Každá značka v rovnakom formáte",
+            "Vložte EAN, dostanete správne fotografie",
+            "Vláknové zloženie a pokyny na ošetrovanie pripravené pre e-shop",
+            "Práva na použitie a dátumy embarga pri každej fotografii",
+            "V prehliadači alebo priamo vo vašom softvéri"
           ],
           "cta": "Viac pre predajcov"
         },
         {
-          "h": "Dodávatelia ERP a softvéru sa napájajú",
-          "p": "Dodávateľ ERP, PIM, e-shopového alebo pokladničného softvéru postaví jedno napojenie a potom číta každý portál značky rovnako. Prichádzajúce údaje sa automatizujú ako pri každom inom dodávateľskom feede.",
+          "h": "Portály a softvér",
+          "p": "Napojte sa raz, oslovte každú značku.",
           "items": [
-            "Jedno API, zdokumentované v OpenAPI 3.1",
+            "Portály značiek, B2B a obrazové portály, DAM",
+            "Softvér pre ERP, PIM, e-shopy a pokladnice",
+            "Jedno otvorené API, bez licenčných poplatkov",
             "Najprv úplná kópia, potom už len zmeny",
-            "Otestujte svoje napojenie bezplatným testom zhody"
+            "Bezplatné označenie „Kompatibilné s Open Brand Exchange“"
           ],
-          "cta": "Prečítajte si príručku pre vývojárov"
+          "cta": "Pre portály a partnerov"
         }
       ],
       "portalsEyebrow": "Otvorené pre každý portál",
       "portalsTitle": "Už máte portál? Napojte ho na štandard.",
-      "portalsLead": "Open Brand Exchange nie je jeden konkrétny softvér. Každý portál, ktorý hovorí protokolom a prejde testom zhody, je kompatibilný a softvér predajcov ho číta ako každý iný.",
+      "portalsLead": "Každý portál alebo systém, ktorý hovorí štandardom, funguje s každým systémom predajcu, ktorý ním hovorí tiež.",
       "portalTypes": [
         {
           "h": "Portály značiek a B2B portály",
-          "p": "Portál značky, B2B obchod alebo veľkoobchodná platforma pridá API OBX k tomu, čo už robí. Jej značky sa potom dostanú ku každému systému predajcu, ktorý hovorí štandardom."
+          "p": "Pridajte API OBX k tomu, čo už robíte, a vaše značky sa dostanú ku každému systému predajcu."
         },
         {
           "h": "Obrazové portály a DAM",
-          "p": "Fotoportály, obrazové banky a DAM pre produktové fotografie publikujú fotografie podľa tovaru: každá fotografia je prepojená s produktom, farbou a EAN, s webovými verziami, právami na použitie a dátumami embarga. Implementujú čítaciu stranu protokolu a softvér predajcov si fotografie berie ako z každého iného portálu."
+          "p": "Publikujte produktové fotografie podľa tovaru, farby a EAN, s webovými verziami, právami na použitie a dátumami embarga."
         },
         {
           "h": "Systémy PIM a ERP",
-          "p": "PIM alebo ERP, v ktorom sú údaje o tovare značky, ich môže publikovať priamo: vláknové zloženie, pokyny na ošetrovanie, veľkosti a EAN v štandardnom formáte, bez samostatného portálu."
+          "p": "Publikujte vláknové zloženie, pokyny na ošetrovanie, veľkosti a EAN priamo zo systému, v ktorom sú."
         }
       ],
-      "portalsSteps": [
-        "Prečítajte si špecifikáciu a načítajte fiktívnu testovaciu značku Kestrel",
-        "Poskytnite cez API discovery, feed zmien, produkty a fotografie",
-        "Spustite bezplatný test zhody: keď prejde, ste kompatibilní"
+      "portalsCta": "Kompatibilita alebo partnerstvo",
+      "heroChecks": [
+        "Zadarmo a otvorené, bez poplatku za predajcu",
+        "Všetci vaši predajcovia naraz",
+        "Začína vo vašom Exceli alebo systéme",
+        "Fotografie vrátane práv na použitie",
+        "Žiadna závislosť: vaše údaje zostávajú vaše"
       ],
-      "portalsCta": "Kompatibilita alebo partnerstvo"
+      "devRepos": [
+        {
+          "name": "spec",
+          "d": "Špecifikácia, schémy a testovacie údaje"
+        },
+        {
+          "name": "obx-go",
+          "d": "Go SDK, nástroj obx a test zhody"
+        },
+        {
+          "name": "node-ts",
+          "d": "Portál pre Cloudflare Workers"
+        },
+        {
+          "name": "node-go",
+          "d": "Portál pre Docker a Google Cloud Run"
+        },
+        {
+          "name": "node-php",
+          "d": "Portál pre bežný webhosting"
+        },
+        {
+          "name": "admin-ui",
+          "d": "Webové rozhranie každého portálu"
+        }
+      ],
+      "devQuickstart": "OBX za 10 minút",
+      "promptTitle": "Postavte to so svojím AI asistentom",
+      "promptP": "Skopírujte prompt do Claude, ChatGPT alebo Cursor, doplňte časť v hranatých zátvorkách a nechajte ho napísať kód podľa špecifikácie.",
+      "prompts": [
+        {
+          "h": "Export z vášho systému",
+          "note": "Pre značky a dodávateľov ERP a PIM: products.csv a názvy fotografií."
+        },
+        {
+          "h": "Načítanie OBX do vášho softvéru",
+          "note": "Pre dodávateľov e-shopového, PIM a pokladničného softvéru: feed zmien a fotografie."
+        }
+      ],
+      "scopeLabel": "Kategórie",
+      "scopeNow": "Verzia 0.2: odevy, obuv, kabelky a batožina",
+      "scopeNext": "Domácnosť a šport: vo vývoji pre 0.3"
     },
     "pages": {
       "brandsH1": "Nastavte raz. Pre všetkých predajcov naraz.",
@@ -1237,6 +1289,8 @@
     "tiersNote": "Navrhované poplatky na rok 2027, definitívne po založení nadácie. Poplatok platí len za zápis. Štandard, test aj softvér zostávajú pre všetkých zadarmo a partneri nemajú do štandardu viac čo hovoriť ako ktokoľvek iný.",
     "partnerCta": "Staňte sa partnerom",
     "mailSubject": "Oficiálny partner",
-    "listTitle": "Oficiálni partneri"
+    "listTitle": "Poskytovatelia",
+    "feesNote": "Poplatky začnú platiť po založení nadácie. Dovtedy nikto neplatí a nezasielajú sa žiadne faktúry; napíšte nám a prejavte záujem.",
+    "interestCta": "Prejaviť záujem"
   }
 }

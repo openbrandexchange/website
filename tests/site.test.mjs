@@ -123,16 +123,22 @@ test('the downloads page offers both brochures in every language, and the files 
   }
 });
 
-test('the imprint names the foundation in formation and the responsible person, with the contact addresses', { skip: !built && 'dist/ not built' }, () => {
+test('the imprint names the publisher on behalf of the foundation in formation, with address, KvK and contact addresses', { skip: !built && 'dist/ not built' }, () => {
   const en = read('en/imprint/index.html');
   assert.match(en, /Open Brand Exchange Foundation \(in formation\)/);
-  assert.match(en, /Richard Lindhout is responsible for this website/);
+  assert.match(en, /published by webRidge on behalf of the Open Brand Exchange Foundation \(in formation\)/);
+  assert.match(en, /sole proprietorship of Richard Lindhout/);
+  assert.match(en, /Kreeftenstraat 36<br\s*\/?>\s*4691 KR Tholen<br\s*\/?>\s*Netherlands/);
+  assert.match(en, /KvK 56845367/);
+  assert.doesNotMatch(en, /VAT|BTW/i);
+  assert.match(read('nl/imprint/index.html'), /Nederland/);
+  assert.match(read('en/privacy/index.html'), /controller for this website is webRidge/);
   assert.doesNotMatch(read('en/index.html'), /Richard Lindhout/);
   assert.match(en, /Dutch foundation \(stichting\)/);
   assert.match(en, /href="mailto:hello@openbrandexchange.com"/);
   assert.match(en, /href="mailto:security@openbrandexchange.com"/);
-  // No address or phone is shown until the owner fills them in (src/data/imprint.json).
-  assert.doesNotMatch(en, /Postal address|href="tel:/);
+  // No phone number is published (src/data/imprint.json).
+  assert.doesNotMatch(en, /href="tel:/);
   assert.match(read('nl/imprint/index.html'), /Open Brand Exchange Foundation \(in oprichting\)/);
   assert.match(read('de/imprint/index.html'), /Open Brand Exchange Foundation \(in Gründung\)/);
   assert.match(read('fr/imprint/index.html'), /Open Brand Exchange Foundation \(en cours de constitution\)/);

@@ -364,7 +364,7 @@
     "fieldExport": "Kogu sisu eksport",
     "fieldWebsite": "Veebisait",
     "listTitle": "Kas soovite olla siin teenusepakkujana?",
-    "listP": "Sellel lehel olevad teenusepakkujad on ametlikud partnerid. Tingimused on kõigile samad:",
+    "listP": "Siin loetellu kandmise tingimused on kõigile samad:",
     "listItems": [
       "teie portaal läbib kehtiva versiooni vastavustesti",
       "kaubamärk saab kõik oma andmed ja fotod eksportida ning lahkuda",
@@ -726,7 +726,7 @@
       }
     ],
     "nameTitle": "Nimest",
-    "nameP": "Nimi „Open Brand Exchange” on kõigis keeltes sama ja seda ei tõlgita kunagi. See ei ole veel registreeritud kaubamärk. Tarkvara, mis läbib vastavustestid, võib öelda, et see „töötab Open Brand Exchange'iga”.",
+    "nameP": "Nimi „Open Brand Exchange” on kõigis keeltes sama ja seda ei tõlgita kunagi. See ei ole veel registreeritud kaubamärk. Tarkvara, mis läbib vastavustesti, võib öelda, et see on „Ühilduv Open Brand Exchange'iga”.",
     "specLink": "Täielik juhtimisdokument",
     "foundationTitle": "Kes on selle taga",
     "foundationP": "Organisatsioon {foundation} asutatakse Hollandi sihtasutusena (stichting). Kui see on olemas, antakse sellele üle autoriõigus, nimi, domeen ja GitHubi organisatsioon."
@@ -737,7 +737,7 @@
     "sections": [
       {
         "h": "Kes vastutab",
-        "p": "Seda veebisaiti haldab {person} (vt impressumit). Kõigis privaatsusküsimustes kirjutage aadressil {email}."
+        "p": "Kuni sihtasutuse registreerimiseni on selle veebisaidi vastutav töötleja {publisher} (füüsilisest isikust ettevõtja; ettevõtja: {person}) sihtasutuse {foundation} nimel (aadress ja registrinumber on impressumis). Kõigis privaatsusküsimustes kirjutage aadressil {email}."
       },
       {
         "h": "Mida me kogume",
@@ -774,7 +774,7 @@
     "h1": "Impressum",
     "lead": "Kes selle veebisaidi välja annab ja kuidas meiega ühendust võtta.",
     "publisherTitle": "Väljaandja",
-    "foundationP": "{foundation} asutatakse Hollandi sihtasutusena (stichting). Kuni selle registreerimiseni vastutab selle veebisaidi eest {person}.",
+    "foundationP": "Open Brand Exchange'i annab välja {publisher} sihtasutuse {foundation} nimel, mis asutatakse Hollandi sihtasutusena (stichting). {publisher} on füüsilisest isikust ettevõtja; ettevõtja on {person}.",
     "addressLabel": "Postiaadress",
     "phoneLabel": "Telefon",
     "registrationLabel": "Registrikood",
@@ -889,7 +889,7 @@
       "errors": "Veakoodid",
       "spec": "Spetsifikatsioon",
       "sdk": "Go SDK ja tööriist obx",
-      "status": "Versioon 0.2 on avaldatud. Spetsifikatsioon ja tarkvara on vabalt kasutatavad."
+      "status": "Versioon 0.2 on avaldatud rõivastele, jalatsitele, kottidele ja reisikohvritele. Spetsifikatsioon ja tarkvara on vabalt kasutatavad."
     },
     "shots": {
       "portalCatalog": "Väljamõeldud kaubamärgi Kestrel edasimüüjate portaal edasimüüja pilgu läbi: kaheksa toodet ning filtrid kaubamärgi, tootetüübi ja värvi järgi.",
@@ -903,7 +903,7 @@
     "home": {
       "eyebrow": "Avatud standard moele · Tasuta tarkvara",
       "h1": "Moe tootesisu, valmis igale edasimüüjale.",
-      "lead": "Paljud pildiportaalid on aeglased, neid on raske liidestada ja neid tuleb käsitsi läbi klõpsida. Open Brand Exchange on avatud standard selle kohta, kuidas rõiva-, jalatsi-, koti- ja reisikohvrikaubamärgid edastavad tootefotod ja tooteandmed oma edasimüüjatele: portaalis, zip-faili või tabelina või ühe API kaudu otse edasimüüja tarkvarasse. Avatud alternatiiv suletud platvormidele: tasu edasimüüja kohta puudub, te ei ole kellegagi seotud ja teie andmed jäävad teile.",
+      "lead": "Paljud pildiportaalid on aeglased, neid on raske liidestada ja neid tuleb käsitsi läbi klõpsida. Open Brand Exchange on avatud standard selle kohta, kuidas rõiva-, jalatsi-, koti- ja reisikohvrikaubamärgid edastavad tootefotod ja tooteandmed oma edasimüüjatele: avatud alternatiiv suletud platvormidele.",
       "ctaRetailer": "Olen edasimüüja",
       "proofLabel": "Lühidalt",
       "proof": [
@@ -916,8 +916,8 @@
           "l": "portaali väljaannet"
         },
         {
-          "v": "61",
-          "l": "vastavustesti"
+          "v": "1",
+          "l": "API iga kaubamärgi jaoks"
         },
         {
           "v": "25",
@@ -1009,7 +1009,7 @@
       ],
       "editionsEyebrow": "Majutus",
       "editionsTitle": "Käitage seda, kus soovite. Maksate ainult majutuse eest.",
-      "editionsLead": "Sama portaali kolm väljaannet. Need läbivad samad vastavustestid ja räägivad sama API-t, nii et saate ühelt teisele üle minna.",
+      "editionsLead": "Sama portaali kolm väljaannet. Need räägivad sama API-t, nii et saate ühelt teisele üle minna.",
       "editionsLink": "Võrrelge majutusvõimalusi",
       "editionFields": [
         "Töötab",
@@ -1058,11 +1058,11 @@
       "trust": [
         {
           "h": "Avatud spetsifikatsioon",
-          "p": "Versioon 0.2, kirjutatud OpenAPI 3.1 ja JSON Schema vormingus litsentsiga CC-BY-4.0. Igaüks võib selle teostada, ka ärilistel eesmärkidel."
+          "p": "Versioon 0.2, litsentsiga CC-BY-4.0. Igaüks võib selle teostada, ka ärilistel eesmärkidel."
         },
         {
-          "h": "Vastavustestid",
-          "p": "61 automaatset testi neljas profiilis. Iga teostust testitakse ühtemoodi."
+          "h": "Te pole kellegagi seotud",
+          "p": "Kaubamärk saab igal ajal eksportida kõik oma andmed ja fotod ning minna üle teisele teenusepakkujale või seda ise majutada."
         },
         {
           "h": "Avatud lähtekoodi litsentsid",
@@ -1074,7 +1074,7 @@
         },
         {
           "h": "Turvalisus",
-          "p": "Teatage turvanõrkustest konfidentsiaalselt aadressil {email}. Turvalisus on üks neljast vastavusprofiilist."
+          "p": "Teatage turvanõrkustest konfidentsiaalselt aadressil {email}."
         },
         {
           "h": "Privaatsus ennekõike",
@@ -1083,8 +1083,8 @@
       ],
       "trustLink": "Lugege, kuidas seda juhitakse",
       "devEyebrow": "Arendajatele",
-      "devTitle": "Spetsifikatsioon, millele saab ehitada.",
-      "devP": "Kolm OpenAPI lepingut, JSON-skeemid, väljamõeldud testkaubamärk ja vastavustestid. Go SDK ja tööriist obx on kasutusvalmis ning sobib iga HTTP-klient.",
+      "devTitle": "Avatud lähtekood, GitHubis.",
+      "devP": "OpenAPI 3.1, JSON Schemas, väljamõeldud testkaubamärk ja valmis tarkvara. Sobib iga HTTP-klient.",
       "devLinks": [
         "API viide",
         "Spetsifikatsioon GitHubis",
@@ -1098,62 +1098,114 @@
       "closingMail": "Kirjutage meile",
       "rolesEyebrow": "Kes mida teeb",
       "rolesTitle": "Kaubamärgid avaldavad. Edasimüüjad võtavad vastu. Tarkvara ühendab.",
-      "rolesLead": "Standard määrab, kuidas tootesisu kaubamärgilt edasimüüjani liigub. Iga osapool teeb oma osa ja keegi ei pea teist ootama.",
+      "rolesLead": "Mida iga osapool saab.",
       "roles": [
         {
-          "h": "Kaubamärgid avaldavad",
-          "p": "Kaubamärk paneb oma sisu üks kord standardvormingus valmis, oma portaali. Väljaminevad andmed automatiseerib ta ise või teeb seda teenusepakkuja.",
+          "h": "Kaubamärgid",
+          "p": "Avaldage üks kord, iga edasimüüja jaoks.",
           "items": [
-            "Teie fotod ja tooteandmed ühes standardvormingus",
-            "Automatiseerige ise tasuta tööriistadega või laske seda teha teenusepakkujal",
-            "Kinnitate iga edasimüüja ja otsustate, mida ta näeb"
+            "Tasuta tarkvara või teenusepakkuja, kes teeb kõik ära",
+            "Alustage oma Exceli-failist või süsteemist",
+            "Kõik edasimüüjad korraga, ei mingit failide saatmist",
+            "Teie otsustate, kes mida näeb",
+            "Näete, kes mida alla laadib",
+            "Te pole kellegagi seotud: eksportige kõik ja lahkuge"
           ],
           "cta": "Lähemalt kaubamärkidele"
         },
         {
-          "h": "Edasimüüjad võtavad vastu",
-          "p": "Edasimüüja võtab iga standardit kasutava kaubamärgi juurest vajaliku alati samal viisil. Iga uus kaubamärk ei too lisatööd.",
+          "h": "Edasimüüjad",
+          "p": "Saage kõik kätte ilma lisatööta.",
           "items": [
-            "Otsige, kleepige EAN-id ja laadige alla brauseris",
-            "Fotod ja kiukoostis valmis e-poe jaoks",
-            "Kasutusõigused ja embargo kuupäevad iga foto juures"
+            "Edasimüüjatele tasuta",
+            "Iga kaubamärk samas vormingus",
+            "Kleepige EAN-id, saate õiged fotod",
+            "Kiukoostis ja hooldusjuhised e-poe jaoks valmis",
+            "Kasutusõigused ja embargo kuupäevad iga foto juures",
+            "Brauseris või otse teie tarkvarasse"
           ],
           "cta": "Lähemalt edasimüüjatele"
         },
         {
-          "h": "ERP- ja tarkvaratarnijad ühendavad",
-          "p": "ERP-, PIM-, e-poe- või kassatarkvara tarnija ehitab ühe liidese ja loeb seejärel iga kaubamärgi portaali samal viisil. Sissetulevad andmed automatiseeritakse nagu iga teise tarnija andmevoog.",
+          "h": "Portaalid ja tarkvara",
+          "p": "Ühendage üks kord, jõudke iga kaubamärgini.",
           "items": [
-            "Üks API, kirjeldatud OpenAPI 3.1 vormingus",
+            "Kaubamärgiportaalid, B2B- ja pildiportaalid, DAM-id",
+            "ERP-, PIM-, e-poe- ja kassatarkvara",
+            "Üks avatud API, litsentsitasu puudub",
             "Kõigepealt täielik koopia, seejärel ainult muudatused",
-            "Testige oma liidest tasuta vastavustestidega"
+            "Tasuta märgis „Ühilduv Open Brand Exchange'iga”"
           ],
-          "cta": "Lugege arendaja juhendit"
+          "cta": "Portaalidele ja partneritele"
         }
       ],
       "portalsEyebrow": "Avatud igale portaalile",
       "portalsTitle": "Teil on juba portaal? Ühendage see standardiga.",
-      "portalsLead": "Open Brand Exchange ei ole üks konkreetne tarkvara. Iga portaal, mis räägib protokolli ja läbib vastavustesti, on ühilduv, ning edasimüüjate tarkvara loeb seda nagu iga teist.",
+      "portalsLead": "Iga portaal või süsteem, mis räägib standardit, töötab iga edasimüüja süsteemiga, mis teeb sama.",
       "portalTypes": [
         {
           "h": "Kaubamärgi- ja B2B-portaalid",
-          "p": "Kaubamärgi portaal, B2B-pood või hulgimüügiplatvorm lisab OBX API olemasoleva kõrvale. Selle kaubamärgid jõuavad siis iga edasimüüja süsteemini, mis standardit räägib."
+          "p": "Lisage OBX API olemasoleva kõrvale ja teie kaubamärgid jõuavad iga edasimüüja süsteemini."
         },
         {
           "h": "Pildiportaalid ja DAM-id",
-          "p": "Fotoportaalid, pildipangad ja tootefotode DAM-id avaldavad fotod toote kaupa: iga foto on seotud toote, värvi ja EAN-iga ning sellel on veebiversioonid, kasutusõigused ja embargo kuupäevad. Need teostavad protokolli lugemispoole ning edasimüüjate tarkvara laadib fotod alla nagu igast teisest portaalist."
+          "p": "Avaldage tootefotod toote, värvi ja EAN-i kaupa, koos veebiversioonide, kasutusõiguste ja embargo kuupäevadega."
         },
         {
           "h": "PIM- ja ERP-süsteemid",
-          "p": "PIM või ERP, kus on kaubamärgi tooteandmed, saab need otse avaldada: kiukoostis, hooldusjuhised, suurused ja EAN-id standardvormingus, ilma eraldi portaalita."
+          "p": "Avaldage kiukoostis, hooldusjuhised, suurused ja EAN-id otse süsteemist, kus need asuvad."
         }
       ],
-      "portalsSteps": [
-        "Lugege spetsifikatsiooni ja laadige väljamõeldud testkaubamärk Kestrel",
-        "Pakkuge API kaudu discovery't, muudatuste voogu, tooteid ja fotosid",
-        "Käivitage tasuta vastavustest: kui see läbib, olete ühilduv"
+      "portalsCta": "Ühilduv või partner",
+      "heroChecks": [
+        "Tasuta ja avatud, tasu edasimüüja kohta puudub",
+        "Kõik teie edasimüüjad korraga",
+        "Algab teie enda Excelist või süsteemist",
+        "Fotod koos kasutusõigustega",
+        "Te pole kellegagi seotud: teie andmed jäävad teile"
       ],
-      "portalsCta": "Ühilduv või partner"
+      "devRepos": [
+        {
+          "name": "spec",
+          "d": "Spetsifikatsioon, skeemid ja testandmed"
+        },
+        {
+          "name": "obx-go",
+          "d": "Go SDK, tööriist obx ja vastavustest"
+        },
+        {
+          "name": "node-ts",
+          "d": "Portaal Cloudflare Workersi jaoks"
+        },
+        {
+          "name": "node-go",
+          "d": "Portaal Dockeri ja Google Cloud Runi jaoks"
+        },
+        {
+          "name": "node-php",
+          "d": "Portaal tavalise veebimajutuse jaoks"
+        },
+        {
+          "name": "admin-ui",
+          "d": "Iga portaali veebiliides"
+        }
+      ],
+      "devQuickstart": "OBX 10 minutiga",
+      "promptTitle": "Ehitage see oma AI-assistendiga",
+      "promptP": "Kopeerige viip Claude'i, ChatGPT-sse või Cursorisse, täitke nurksulgudes osa ja laske sel kirjutada kood spetsifikatsiooni järgi.",
+      "prompts": [
+        {
+          "h": "Eksport teie süsteemist",
+          "note": "Kaubamärkidele ning ERP- ja PIM-tarnijatele: products.csv ja piltide nimed."
+        },
+        {
+          "h": "OBX-i lugemine teie tarkvaras",
+          "note": "E-poe-, PIM- ja kassatarkvara tarnijatele: muudatuste voog ja pildid."
+        }
+      ],
+      "scopeLabel": "Kategooriad",
+      "scopeNow": "Versioon 0.2: rõivad, jalatsid, kotid ja reisikohvrid",
+      "scopeNext": "Kodu ja sport: arenduses versiooni 0.3 jaoks"
     },
     "pages": {
       "brandsH1": "Seadistage üks kord. Kõigile edasimüüjatele korraga.",
@@ -1237,6 +1289,8 @@
     "tiersNote": "Tasud on 2027. aasta ettepanek ja kinnituvad, kui sihtasutus on loodud. Tasu maksab ainult loetelus olemise eest. Standard, test ja tarkvara jäävad kõigile tasuta ning partneritel ei ole standardi üle rohkem sõnaõigust kui kellelgi teisel.",
     "partnerCta": "Hakake partneriks",
     "mailSubject": "Ametlik partner",
-    "listTitle": "Ametlikud partnerid"
+    "listTitle": "Teenusepakkujad",
+    "feesNote": "Tasud hakkavad kehtima, kui sihtasutus on loodud. Seni ei maksa keegi ja arveid ei saadeta; kirjutage meile, et huvi avaldada.",
+    "interestCta": "Avaldage huvi"
   }
 }

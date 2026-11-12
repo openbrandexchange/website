@@ -5,9 +5,11 @@ import Flow from '../components/Flow.astro';
 import Editions from '../components/Editions.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Icon from '../components/Icon.astro';
-import { format, messages, repo, url, type Lang } from '../i18n';
+import { format, messages, repo, specDoc, url, type Lang } from '../i18n';
+import Code from '../components/Code.astro';
+import { prompts } from '../data/prompts';
 import { orgVars, HELLO_EMAIL, SECURITY_EMAIL } from '../lib/org';
-import { assetChange, discovery, discoveryResponse, pushAction, pushTerminal } from '../data/snippets';
+import { assetChange, pushAction, pushTerminal } from '../data/snippets';
 
 interface Props {
   lang: Lang;
@@ -22,7 +24,7 @@ const faq = t.faq.items.slice(0, 4);
 // "Publish once. Every retailer gets it.": the second sentence in a softer tone, on its own line.
 const split = h.h1.search(/[.!?]\s/);
 const h1 = split > 0 ? [h.h1.slice(0, split + 1) + ' ', h.h1.slice(split + 2)] : [h.h1, ''];
-const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'developers')];
+const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'partners')];
 // The explainer video (video/, rendered with Remotion): Dutch for Dutch, English for every other
 // language. Captions are burned in; nothing loads until the visitor presses play (preload="none").
 const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
@@ -34,10 +36,17 @@ const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
       <p class="eyebrow">{h.eyebrow}</p>
       <h1 id="hero-title">{h1[0]}{h1[1] && <span class="h1-soft">{h1[1]}</span>}</h1>
       <p class="lead">{h.lead}</p>
+      <ul class="checks hero-checks">
+        {h.heroChecks.map((item) => <li>{item}</li>)}
+      </ul>
       <div class="actions">
         <a class="button primary lg" href={url(lang, 'brands')}>{t.site.nav.start} <Icon name="arrow" class="arrow" /></a>
         <a class="button secondary lg" href={url(lang, 'retailers')}>{h.ctaRetailer}</a>
       </div>
+      <p class="scope">
+        <span class="sr-only">{h.scopeLabel}: </span><span class="scope-now">{h.scopeNow}</span>
+        <span class="scope-next">{h.scopeNext}</span>
+      </p>
       <dl class="proof" aria-label={h.proofLabel}>
         {
           h.proof.map((p) => (
@@ -156,9 +165,6 @@ const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
         ))
       }
     </ul>
-    <ol class="steps steps-row" data-reveal="2">
-      {h.portalsSteps.map((step) => <li>{step}</li>)}
-    </ol>
     <p class="actions">
       <a class="button primary" href={url(lang, 'partners')}>{h.portalsCta} <Icon name="arrow" class="arrow" /></a>
       <a class="button secondary" href={url(lang, 'developers')}>{t.nav.developers}</a>
@@ -201,26 +207,54 @@ const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
 </section>
 
 <section class="band" aria-labelledby="dev-title">
-  <div class="wrap split">
-    <div class="split-copy" data-reveal>
-      <p class="eyebrow">{h.devEyebrow}</p>
-      <h2 id="dev-title">{h.devTitle}</h2>
-      <p>{h.devP}</p>
-      <ul class="link-list">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-copy" data-reveal>
+        <p class="eyebrow">{h.devEyebrow}</p>
+        <h2 id="dev-title">{h.devTitle}</h2>
+        <p>{h.devP}</p>
+        <ul class="link-list">
+          <li>
+            <a href={specDoc('docs/quickstart.md')}>{h.devQuickstart} <Icon name="arrow" class="arrow" /></a>
+          </li>
+          {
+            h.devLinks.map((label, i) => (
+              <li>
+                <a href={devLinks[i]}>
+                  {label} <Icon name="arrow" class="arrow" />
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="split-visual" data-reveal="2">
+        <ul class="repo-list">
+          {
+            h.devRepos.map((r) => (
+              <li>
+                <a href={repo(r.name)}>
+                  <span class="repo-name">openbrandexchange/{r.name}</span>
+                  <span class="repo-d">{r.d}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+    <div class="prompts" data-reveal="2">
+      <h3 id="prompt-title">{h.promptTitle}</h3>
+      <p>{h.promptP}</p>
+      <div class="cards two">
         {
-          h.devLinks.map((label, i) => (
-            <li>
-              <a href={devLinks[i]}>
-                {label} <Icon name="arrow" class="arrow" />
-              </a>
-            </li>
+          h.prompts.map((pr, i) => (
+            <div class="prompt">
+              <Code code={prompts[i]} label={`${pr.h} · ${pr.note}`} lang="text" />
+            </div>
           ))
         }
-      </ul>
-    </div>
-    <div class="split-visual stack" data-reveal="2">
-      <CodeWindow code={discovery} lang="shell" title="Terminal" />
-      <CodeWindow code={discoveryResponse} lang="json" title="200 OK · application/json" />
+      </div>
     </div>
   </div>
 </section>

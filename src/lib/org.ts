@@ -4,7 +4,7 @@ import { messages, type Lang } from '../i18n';
 import imprint from '../data/imprint.json';
 import { foundationName, initiativeText, orgPlaceholders } from './org-core.ts';
 
-export { HELLO_EMAIL, SECURITY_EMAIL, PERSON, FOUNDATION, PRIVACY_UPDATED, longDate } from './org-core.ts';
+export { HELLO_EMAIL, SECURITY_EMAIL, PERSON, PUBLISHER, FOUNDATION, PRIVACY_UPDATED, longDate } from './org-core.ts';
 
 export const foundation = (lang: Lang) => foundationName(messages[lang]);
 export const initiativeLine = (lang: Lang) => initiativeText(messages[lang]);
@@ -12,6 +12,8 @@ export const orgVars = (lang: Lang) => orgPlaceholders(messages[lang]);
 
 export interface ImprintDetails {
   address: string[] | null;
+  /** ISO country code of the address, shown in the reader's language. */
+  country: string | null;
   phone: string | null;
   registration: string | null;
 }
@@ -19,6 +21,7 @@ export interface ImprintDetails {
 /** Optional imprint details, filled in by the owner in src/data/imprint.json; null = not shown. */
 export const imprintDetails: ImprintDetails = {
   address: imprint.address as string[] | null,
+  country: (imprint as { country?: string | null }).country ?? null,
   phone: imprint.phone as string | null,
   registration: imprint.registration as string | null,
 };

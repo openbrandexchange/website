@@ -119,7 +119,7 @@ function foot(t, n, total, left) {
 function cover(t, lang, { eyebrow, h1, lead, flow }) {
   const steps = flow.map((s) => `<div class="step"><b>${esc(s.h)}</b><span>${esc(s.p)}</span></div>`).join(ARROW);
   return `<section class="page cover">
-  <div class="brandline">${MARK}<span>Open Brand Exchange</span></div>
+  <div class="brandline">${MARK}<span>OBX</span></div>
   <div class="eyebrow">${esc(eyebrow)}</div>
   <h1>${esc(h1)}</h1>
   <p class="lead">${esc(lead)}</p>
@@ -253,7 +253,7 @@ export function ogHtml(lang, t = loadMessages(lang)) {
   .mark{width:56px;height:56px;color:#fff;--mark-on:#0a4f42}
   h1{font-size:64px;line-height:1.08;font-weight:700;letter-spacing:-0.02em;margin:auto 0 28px;max-width:1040px;hyphens:auto}
   p{font-size:28px;margin:0;opacity:.88}
-  </style></head><body><div class="b">${MARK}<span>Open Brand Exchange</span></div><h1>${esc(t.home.h1)}</h1><p>openbrandexchange.com</p></body></html>`;
+  </style></head><body><div class="b">${MARK}<span>OBX</span></div><h1>${esc(t.home.h1)}</h1><p>openbrandexchange.com</p></body></html>`;
 }
 
 /** Hash of everything a rendered file depends on, so tests can tell when a PDF is stale. */

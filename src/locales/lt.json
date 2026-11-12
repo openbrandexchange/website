@@ -364,7 +364,7 @@
     "fieldExport": "Viso turinio eksportas",
     "fieldWebsite": "Svetainė",
     "listTitle": "Norite būti čia kaip paslaugų teikėjas?",
-    "listP": "Šiame puslapyje nurodyti paslaugų teikėjai yra oficialūs partneriai. Kriterijai visiems vienodi:",
+    "listP": "Būtinos sąlygos, kad čia būtumėte nurodyti, visiems vienodos:",
     "listItems": [
       "jūsų portalas išlaiko dabartinės versijos atitikties testą",
       "prekės ženklas gali eksportuoti visus savo duomenis ir nuotraukas ir išeiti",
@@ -726,7 +726,7 @@
       }
     ],
     "nameTitle": "Apie pavadinimą",
-    "nameP": "Pavadinimas „Open Brand Exchange“ visomis kalbomis tas pats ir niekada neverčiamas. Tai dar nėra registruotas prekių ženklas. Programinė įranga, išlaikiusi atitikties testus, gali teigti, kad ji „veikia su Open Brand Exchange“.",
+    "nameP": "Pavadinimas „Open Brand Exchange“ visomis kalbomis tas pats ir niekada neverčiamas. Tai dar nėra registruotas prekių ženklas. Programinė įranga, išlaikiusi atitikties testą, gali teigti, kad ji yra „Suderinama su Open Brand Exchange“.",
     "specLink": "Visas valdymo dokumentas",
     "foundationTitle": "Kas už to stovi",
     "foundationP": "{foundation} steigiama kaip Nyderlandų fondas (stichting). Kai tik ji bus įsteigta, jai bus perduotos autorių teisės, pavadinimas, domenas ir GitHub organizacija."
@@ -737,7 +737,7 @@
     "sections": [
       {
         "h": "Kas atsakingas",
-        "p": "Šią svetainę tvarko {person} (žr. leidėjo informaciją). Visais privatumo klausimais rašykite adresu {email}."
+        "p": "Kol fondas neįregistruotas, šios svetainės duomenų valdytojas yra {publisher} (individuali įmonė; savininkas: {person}) fondo {foundation} vardu (adresas ir registracijos numeris pateikti leidėjo informacijoje). Visais privatumo klausimais rašykite adresu {email}."
       },
       {
         "h": "Ką renkame",
@@ -774,7 +774,7 @@
     "h1": "Leidėjo informacija",
     "lead": "Kas leidžia šią svetainę ir kaip su mumis susisiekti.",
     "publisherTitle": "Leidėjas",
-    "foundationP": "{foundation} steigiama kaip Nyderlandų fondas (stichting). Kol ji neįregistruota, už šią svetainę atsako {person}.",
+    "foundationP": "Open Brand Exchange leidžia {publisher} fondo {foundation} vardu; šis fondas steigiamas kaip Nyderlandų fondas (stichting). {publisher} yra individuali įmonė; savininkas – {person}.",
     "addressLabel": "Pašto adresas",
     "phoneLabel": "Telefonas",
     "registrationLabel": "Registracijos numeris",
@@ -889,7 +889,7 @@
       "errors": "Klaidų kodai",
       "spec": "Specifikacija",
       "sdk": "Go SDK ir įrankis obx",
-      "status": "Išleista versija 0.2. Specifikacija ir programinė įranga naudojamos laisvai."
+      "status": "Išleista versija 0.2, skirta drabužiams, avalynei, rankinėms ir lagaminams. Specifikacija ir programinė įranga naudojamos laisvai."
     },
     "shots": {
       "portalCatalog": "Išgalvoto prekės ženklo Kestrel portalas taip, kaip jį mato pardavėjas: aštuonios prekės su filtrais pagal prekės ženklą, produkto tipą ir spalvą.",
@@ -903,7 +903,7 @@
     "home": {
       "eyebrow": "Atviras mados standartas · Nemokama programinė įranga",
       "h1": "Mados produktų turinys, paruoštas kiekvienam pardavėjui.",
-      "lead": "Daugelis vaizdų portalų yra lėti, sunkiai susiejami ir juos tenka išklikinti rankomis. Open Brand Exchange yra atviras standartas, nustatantis, kaip drabužių, avalynės, rankinių ir lagaminų prekių ženklai pateikia produktų nuotraukas ir prekių duomenis savo pardavėjams: portale, kaip zip archyvą ar skaičiuoklę arba tiesiai į pardavėjo programinę įrangą per vieną API. Atvira alternatyva uždaroms platformoms: jokio mokesčio už pardavėją, jokio susiejimo, o jūsų duomenys lieka jūsų.",
+      "lead": "Daugelis vaizdų portalų yra lėti, sunkiai susiejami ir juos tenka išklikinti rankomis. Open Brand Exchange yra atviras standartas, nustatantis, kaip drabužių, avalynės, rankinių ir lagaminų prekių ženklai pateikia produktų nuotraukas ir prekių duomenis savo pardavėjams: atvira alternatyva uždaroms platformoms.",
       "ctaRetailer": "Esu pardavėjas",
       "proofLabel": "Trumpai",
       "proof": [
@@ -916,8 +916,8 @@
           "l": "portalo leidimai"
         },
         {
-          "v": "61",
-          "l": "atitikties patikra"
+          "v": "1",
+          "l": "API kiekvienam prekės ženklui"
         },
         {
           "v": "25",
@@ -1009,7 +1009,7 @@
       ],
       "editionsEyebrow": "Talpinimas",
       "editionsTitle": "Kur norite. Mokate tik už talpinimą.",
-      "editionsLead": "Trys to paties portalo leidimai. Jie išlaiko tuos pačius atitikties testus ir kalba tuo pačiu API, todėl galite pereiti nuo vieno prie kito.",
+      "editionsLead": "Trys to paties portalo leidimai. Jie kalba tuo pačiu API, todėl galite pereiti nuo vieno prie kito.",
       "editionsLink": "Palyginkite talpinimo galimybes",
       "editionFields": [
         "Veikia",
@@ -1058,11 +1058,11 @@
       "trust": [
         {
           "h": "Atvira specifikacija",
-          "p": "Versija 0.2, aprašyta OpenAPI 3.1 ir JSON Schema pagal CC-BY-4.0. Įgyvendinti ją gali bet kas, taip pat komerciškai."
+          "p": "Versija 0.2, pagal CC-BY-4.0. Įgyvendinti ją gali bet kas, taip pat komerciškai."
         },
         {
-          "h": "Atitikties testai",
-          "p": "61 automatinė patikra keturiuose profiliuose. Kiekvienas įgyvendinimas tikrinamas vienodai."
+          "h": "Jokio susiejimo",
+          "p": "Prekės ženklas bet kada gali eksportuoti visus savo duomenis ir nuotraukas ir pereiti pas kitą paslaugų teikėją arba talpinti juos pats."
         },
         {
           "h": "Atvirojo kodo licencijos",
@@ -1074,7 +1074,7 @@
         },
         {
           "h": "Saugumas",
-          "p": "Apie pažeidžiamumus praneškite konfidencialiai adresu {email}. Saugumas yra vienas iš keturių atitikties profilių."
+          "p": "Apie pažeidžiamumus praneškite konfidencialiai adresu {email}."
         },
         {
           "h": "Privatumas pirmiausia",
@@ -1083,8 +1083,8 @@
       ],
       "trustLink": "Skaitykite, kaip jis valdomas",
       "devEyebrow": "Kūrėjams",
-      "devTitle": "Specifikacija, ant kurios galite statyti.",
-      "devP": "Trys OpenAPI sutartys, JSON Schemos, išgalvotas bandomasis prekės ženklas ir atitikties testai. Go SDK ir įrankis obx paruošti naudoti, tinka ir bet kuris HTTP klientas.",
+      "devTitle": "Atvirasis kodas, GitHub.",
+      "devP": "OpenAPI 3.1, JSON Schemas, išgalvotas bandomasis prekės ženklas ir paruošta programinė įranga. Tinka bet kuris HTTP klientas.",
       "devLinks": [
         "API žinynas",
         "Specifikacija GitHub",
@@ -1098,62 +1098,114 @@
       "closingMail": "Parašykite mums",
       "rolesEyebrow": "Kas ką daro",
       "rolesTitle": "Prekių ženklai skelbia. Pardavėjai gauna. Programinė įranga sujungia.",
-      "rolesLead": "Standartas nustato, kaip produktų turinys keliauja nuo prekės ženklo iki pardavėjo. Kiekviena šalis atlieka savo dalį, ir niekam nereikia laukti kitų.",
+      "rolesLead": "Ką gauna kiekviena šalis.",
       "roles": [
         {
-          "h": "Prekių ženklai skelbia",
-          "p": "Prekės ženklas vieną kartą paruošia savo turinį standartiniu formatu savo portale. Siunčiamus duomenis jis automatizuoja pats arba tai padaro paslaugų teikėjas.",
+          "h": "Prekių ženklai",
+          "p": "Paskelbkite vieną kartą, visiems pardavėjams.",
           "items": [
-            "Jūsų nuotraukos ir prekių duomenys vienu standartiniu formatu",
-            "Automatizuokite patys nemokamais įrankiais arba patikėkite tai paslaugų teikėjui",
-            "Jūs patvirtinate kiekvieną pardavėją ir sprendžiate, ką jis mato"
+            "Nemokama programinė įranga arba paslaugų teikėjas, kuris viskuo pasirūpina",
+            "Pradėkite nuo savo Excel failo ar sistemos",
+            "Visi jūsų pardavėjai iš karto, nebereikia siuntinėti failų",
+            "Jūs sprendžiate, kas ką mato",
+            "Matykite, kas ką atsisiunčia",
+            "Jokio susiejimo: eksportuokite viską ir išeikite"
           ],
           "cta": "Plačiau prekių ženklams"
         },
         {
-          "h": "Pardavėjai gauna",
-          "p": "Pardavėjas iš kiekvieno standarto prekės ženklo pasiima tai, ko reikia, visada tuo pačiu būdu. Joks naujas prekės ženklas neprideda naujo darbo.",
+          "h": "Pardavėjai",
+          "p": "Gaukite viską be papildomo darbo.",
           "items": [
-            "Ieškokite, įklijuokite EAN ir atsisiųskite naršyklėje",
-            "Nuotraukos ir pluoštinė sudėtis, paruoštos internetinei parduotuvei",
-            "Naudojimo teisės ir embargo datos prie kiekvienos nuotraukos"
+            "Nemokama pardavėjams",
+            "Kiekvienas prekės ženklas tuo pačiu formatu",
+            "Įklijuokite EAN, gaukite tinkamas nuotraukas",
+            "Pluoštinė sudėtis ir priežiūros nurodymai, paruošti internetinei parduotuvei",
+            "Naudojimo teisės ir embargo datos prie kiekvienos nuotraukos",
+            "Naršyklėje arba tiesiai jūsų programinėje įrangoje"
           ],
           "cta": "Plačiau pardavėjams"
         },
         {
-          "h": "ERP ir programinės įrangos tiekėjai sujungia",
-          "p": "ERP, PIM, internetinės parduotuvės ar kasos programinės įrangos tiekėjas sukuria vieną jungtį ir tada visus prekių ženklų portalus skaito vienodai. Gaunami duomenys automatizuojami kaip ir bet kurio kito tiekėjo duomenų srautas.",
+          "h": "Portalai ir programinė įranga",
+          "p": "Prisijunkite vieną kartą, pasiekite visus prekių ženklus.",
           "items": [
-            "Vienas API, aprašytas OpenAPI 3.1",
+            "Prekių ženklų portalai, B2B ir nuotraukų portalai, DAM",
+            "ERP, PIM, internetinių parduotuvių ir kasų programinė įranga",
+            "Vienas atviras API, jokio licencijos mokesčio",
             "Pirmiausia visa kopija, paskui tik pakeitimai",
-            "Išbandykite savo jungtį nemokamu atitikties testu"
+            "Nemokamas ženklas „Suderinama su Open Brand Exchange“"
           ],
-          "cta": "Skaitykite kūrėjų vadovą"
+          "cta": "Portalams ir partneriams"
         }
       ],
       "portalsEyebrow": "Atvira kiekvienam portalui",
       "portalsTitle": "Jau turite portalą? Prijunkite jį prie standarto.",
-      "portalsLead": "Open Brand Exchange nėra viena programa. Kiekvienas portalas, kuris palaiko protokolą ir išlaiko atitikties testą, yra suderinamas, o pardavėjų programinė įranga jį skaito kaip bet kurį kitą.",
+      "portalsLead": "Kiekvienas portalas ar sistema, palaikanti standartą, veikia su kiekviena pardavėjo sistema, kuri taip pat jį palaiko.",
       "portalTypes": [
         {
           "h": "Prekių ženklų ir B2B portalai",
-          "p": "Prekės ženklo portalas, B2B parduotuvė ar didmeninės prekybos platforma prie to, ką jau daro, prideda OBX API. Tada jos prekių ženklai pasiekia kiekvieną pardavėjo sistemą, kuri palaiko standartą."
+          "p": "Pridėkite OBX API prie to, ką jau darote, ir jūsų prekių ženklai pasieks kiekvieną pardavėjo sistemą."
         },
         {
           "h": "Nuotraukų portalai ir DAM",
-          "p": "Nuotraukų portalai, nuotraukų bankai ir produktų nuotraukų DAM skelbia nuotraukas pagal prekę: kiekviena nuotrauka susieta su produktu, spalva ir EAN, su interneto versijomis, naudojimo teisėmis ir embargo datomis. Jie įgyvendina protokolo skaitymo pusę, o pardavėjų programinė įranga paima nuotraukas kaip iš bet kurio kito portalo."
+          "p": "Skelbkite produktų nuotraukas pagal prekę, spalvą ir EAN, su interneto versijomis, naudojimo teisėmis ir embargo datomis."
         },
         {
           "h": "PIM ir ERP sistemos",
-          "p": "PIM ar ERP, kuriame yra prekės ženklo prekių duomenys, gali juos skelbti tiesiogiai: pluoštinę sudėtį, priežiūros nurodymus, dydžius ir EAN standartiniu formatu, be atskiro portalo."
+          "p": "Skelbkite pluoštinę sudėtį, priežiūros nurodymus, dydžius ir EAN tiesiai iš sistemos, kurioje jie saugomi."
         }
       ],
-      "portalsSteps": [
-        "Perskaitykite specifikaciją ir įkelkite išgalvotą bandomąjį prekės ženklą Kestrel",
-        "Per API pateikite discovery, pakeitimų srautą, produktus ir nuotraukas",
-        "Paleiskite nemokamą atitikties testą: jei jis praeina, esate suderinami"
+      "portalsCta": "Suderinamumas ar partnerystė",
+      "heroChecks": [
+        "Nemokama ir atvira, jokio mokesčio už pardavėją",
+        "Visi jūsų pardavėjai iš karto",
+        "Pradedama nuo jūsų Excel ar sistemos",
+        "Nuotraukos kartu su naudojimo teisėmis",
+        "Jokio susiejimo: jūsų duomenys lieka jūsų"
       ],
-      "portalsCta": "Suderinamumas ar partnerystė"
+      "devRepos": [
+        {
+          "name": "spec",
+          "d": "Specifikacija, schemos ir bandomieji duomenys"
+        },
+        {
+          "name": "obx-go",
+          "d": "Go SDK, įrankis obx ir atitikties testas"
+        },
+        {
+          "name": "node-ts",
+          "d": "Portalas Cloudflare Workers"
+        },
+        {
+          "name": "node-go",
+          "d": "Portalas Docker ir Google Cloud Run"
+        },
+        {
+          "name": "node-php",
+          "d": "Portalas įprastam žiniatinklio prieglobos planui"
+        },
+        {
+          "name": "admin-ui",
+          "d": "Kiekvieno portalo žiniatinklio sąsaja"
+        }
+      ],
+      "devQuickstart": "OBX per 10 minučių",
+      "promptTitle": "Sukurkite su savo DI asistentu",
+      "promptP": "Nukopijuokite raginimą į Claude, ChatGPT ar Cursor, užpildykite dalį tarp skliaustų ir leiskite jam parašyti kodą pagal specifikaciją.",
+      "prompts": [
+        {
+          "h": "Eksportas iš jūsų sistemos",
+          "note": "Prekių ženklams ir ERP bei PIM tiekėjams: products.csv ir nuotraukų pavadinimai."
+        },
+        {
+          "h": "OBX skaitymas jūsų programinėje įrangoje",
+          "note": "Internetinių parduotuvių, PIM ir kasų programinės įrangos tiekėjams: pakeitimų srautas ir nuotraukos."
+        }
+      ],
+      "scopeLabel": "Kategorijos",
+      "scopeNow": "Versija 0.2: drabužiai, avalynė, rankinės ir lagaminai",
+      "scopeNext": "Namai ir sportas: kuriama versijai 0.3"
     },
     "pages": {
       "brandsH1": "Nustatykite kartą. Visiems pardavėjams iš karto.",
@@ -1237,6 +1289,8 @@
     "tiersNote": "Siūlomi 2027 m. mokesčiai, galutiniai, kai bus įsteigtas fondas. Mokestis apmoka tik vietą sąraše. Standartas, testas ir programinė įranga lieka nemokami visiems, o partneriai dėl standarto neturi daugiau balso nei bet kas kitas.",
     "partnerCta": "Tapkite partneriu",
     "mailSubject": "Oficialus partneris",
-    "listTitle": "Oficialūs partneriai"
+    "listTitle": "Paslaugų teikėjai",
+    "feesNote": "Mokesčiai pradės galioti, kai bus įsteigtas fondas. Iki tol niekas nemoka ir sąskaitos nesiunčiamos; rašykite mums ir pareikškite susidomėjimą.",
+    "interestCta": "Pareikškite susidomėjimą"
   }
 }

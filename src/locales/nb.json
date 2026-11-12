@@ -364,7 +364,7 @@
     "fieldExport": "Eksporter alt innholdet ditt",
     "fieldWebsite": "Nettsted",
     "listTitle": "Vil du stå her som leverandør?",
-    "listP": "Leverandørene på denne siden er offisielle partnere. Kriteriene er like for alle:",
+    "listP": "Kriteriene for å bli oppført her er like for alle:",
     "listItems": [
       "portalen din består samsvarstesten for gjeldende versjon",
       "en merkevare kan eksportere alle data og bilder og forlate deg",
@@ -726,7 +726,7 @@
       }
     ],
     "nameTitle": "Om navnet",
-    "nameP": "Navnet «Open Brand Exchange» er det samme på alle språk og oversettes aldri. Det er ennå ikke et registrert varemerke. Programvare som består samsvarstestene, kan si at den «fungerer med Open Brand Exchange».",
+    "nameP": "Navnet «Open Brand Exchange» er det samme på alle språk og oversettes aldri. Det er ennå ikke et registrert varemerke. Programvare som består samsvarstesten, kan si at den er «Kompatibel med Open Brand Exchange».",
     "specLink": "Hele styringsdokumentet",
     "foundationTitle": "Hvem står bak",
     "foundationP": "{foundation} opprettes som en nederlandsk stiftelse (stichting). Så snart den finnes, overføres opphavsretten, navnet, domenet og GitHub-organisasjonen til den."
@@ -737,7 +737,7 @@
     "sections": [
       {
         "h": "Hvem er ansvarlig",
-        "p": "Dette nettstedet drives av {person} (se Om nettstedet). Skriv til {email} om alt som gjelder personvern."
+        "p": "Inntil stiftelsen er registrert, er {publisher}, et enkeltpersonforetak eid av {person}, behandlingsansvarlig for dette nettstedet på vegne av {foundation} (adresse og registreringsnummer står under Om nettstedet). Skriv til {email} om alt som gjelder personvern."
       },
       {
         "h": "Hva vi samler inn",
@@ -774,7 +774,7 @@
     "h1": "Om nettstedet",
     "lead": "Hvem som utgir dette nettstedet, og hvordan du når oss.",
     "publisherTitle": "Utgitt av",
-    "foundationP": "{foundation} er under opprettelse som en nederlandsk stiftelse (stichting). Inntil den er registrert, er {person} ansvarlig for dette nettstedet.",
+    "foundationP": "Open Brand Exchange utgis av {publisher} på vegne av {foundation}, som er under opprettelse som en nederlandsk stiftelse (stichting). {publisher} er et enkeltpersonforetak eid av {person}.",
     "addressLabel": "Postadresse",
     "phoneLabel": "Telefon",
     "registrationLabel": "Registreringsnummer",
@@ -889,7 +889,7 @@
       "errors": "Feilkoder",
       "spec": "Spesifikasjon",
       "sdk": "Go SDK og obx-verktøyet",
-      "status": "Versjon 0.2 er utgitt. Spesifikasjonen og programvaren er fri å bruke."
+      "status": "Versjon 0.2 er ute, for klær, sko, vesker og bagasje. Spesifikasjonen og programvaren er fri til bruk."
     },
     "shots": {
       "portalCatalog": "Forhandlerportalen til den fiktive merkevaren Kestrel, slik en forhandler ser den: åtte artikler med filtre for merkevare, produkttype og farge.",
@@ -903,7 +903,7 @@
     "home": {
       "eyebrow": "Åpen standard for mote · Gratis programvare",
       "h1": "Produktinnhold for mote, klart for alle forhandlere.",
-      "lead": "Mange bildeportaler er trege, vanskelige å koble til og må klikkes gjennom for hånd. Open Brand Exchange er den åpne standarden for hvordan merkevarer innen klær, sko, vesker og bagasje leverer produktbilder og artikkeldata til forhandlerne sine: i en portal, som zip eller regneark, eller rett inn i forhandlerens programvare via ett API. Et åpent alternativ til lukkede plattformer: ingen avgift per forhandler, ingen innlåsing, og dataene dine forblir dine.",
+      "lead": "Mange bildeportaler er trege, vanskelige å koble til og må klikkes gjennom for hånd. Open Brand Exchange er den åpne standarden for hvordan merkevarer innen klær, sko, vesker og bagasje leverer produktbilder og artikkeldata til forhandlerne sine: et åpent alternativ til lukkede plattformer.",
       "ctaRetailer": "Jeg er forhandler",
       "proofLabel": "Kort fortalt",
       "proof": [
@@ -916,8 +916,8 @@
           "l": "portalutgaver"
         },
         {
-          "v": "61",
-          "l": "samsvarstester"
+          "v": "1",
+          "l": "API for alle merkevarer"
         },
         {
           "v": "25",
@@ -1009,7 +1009,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Kjør den der du vil. Betal bare for hosting.",
-      "editionsLead": "Tre utgaver av den samme portalen. De består de samme samsvarstestene og snakker det samme API-et, så du kan bytte mellom dem.",
+      "editionsLead": "Tre utgaver av samme portal. De snakker samme API, så du kan bytte fra den ene til den andre.",
       "editionsLink": "Sammenlign hostingvalgene",
       "editionFields": [
         "Kjører på",
@@ -1058,11 +1058,11 @@
       "trust": [
         {
           "h": "Åpen spesifikasjon",
-          "p": "Versjon 0.2, skrevet i OpenAPI 3.1 og JSON Schema under CC-BY-4.0. Alle kan implementere den, også kommersielt."
+          "p": "Versjon 0.2, under CC-BY-4.0. Alle kan implementere den, også kommersielt."
         },
         {
-          "h": "Samsvarstester",
-          "p": "61 automatiske tester i fire profiler. Alle implementasjoner testes på samme måte."
+          "h": "Ingen innlåsing",
+          "p": "En merkevare kan når som helst eksportere alle data og bilder, og bytte til en annen leverandør eller drifte det selv."
         },
         {
           "h": "Åpne lisenser",
@@ -1074,7 +1074,7 @@
         },
         {
           "h": "Sikkerhet",
-          "p": "Rapporter sårbarheter fortrolig til {email}. Sikkerhet er én av de fire samsvarsprofilene."
+          "p": "Rapporter sårbarheter fortrolig til {email}."
         },
         {
           "h": "Personvern først",
@@ -1082,9 +1082,9 @@
         }
       ],
       "trustLink": "Les hvordan det styres",
-      "devEyebrow": "Utviklere",
-      "devTitle": "En spesifikasjon du kan bygge på.",
-      "devP": "Tre OpenAPI-kontrakter, JSON Schemas, en fiktiv testmerkevare og samsvarstester. Go SDK og obx-verktøyet er klare til bruk, og enhver HTTP-klient fungerer.",
+      "devEyebrow": "For utviklere",
+      "devTitle": "Åpen kildekode, på GitHub.",
+      "devP": "OpenAPI 3.1, JSON Schemas, en fiktiv testmerkevare og ferdig programvare. Alle HTTP-klienter fungerer.",
       "devLinks": [
         "API-referanse",
         "Spesifikasjonen på GitHub",
@@ -1098,62 +1098,114 @@
       "closingMail": "Send oss en e-post",
       "rolesEyebrow": "Hvem gjør hva",
       "rolesTitle": "Merkevarer publiserer. Forhandlere mottar. Programvare kobler sammen.",
-      "rolesLead": "Standarden fastsetter hvordan produktinnhold går fra merkevare til forhandler. Hver part gjør sin del, og ingen trenger å vente på noen andre.",
+      "rolesLead": "Hva hver part får.",
       "roles": [
         {
-          "h": "Merkevarer publiserer",
-          "p": "En merkevare legger ut innholdet sitt én gang, i standardformatet, i sin egen portal. Den automatiserer utgående data selv, eller en leverandør ordner det.",
+          "h": "Merkevarer",
+          "p": "Publiser én gang, for alle forhandlere.",
           "items": [
-            "Bildene og artikkeldataene dine i ett standardformat",
-            "Automatiser selv med de gratis verktøyene, eller la en leverandør gjøre det",
-            "Du godkjenner hver forhandler og bestemmer hva de ser"
+            "Gratis programvare, eller en leverandør som ordner alt",
+            "Start fra din egen Excel-fil eller ditt eget system",
+            "Alle forhandlerne dine på én gang, ikke mer filsending",
+            "Du bestemmer hvem som ser hva",
+            "Se hvem som laster ned hva",
+            "Ingen innlåsing: eksporter alt og gå videre"
           ],
           "cta": "Les mer for merkevarer"
         },
         {
-          "h": "Forhandlere mottar",
-          "p": "En forhandler henter det den trenger fra hver merkevare på standarden, alltid på samme måte. Ikke noe nytt arbeid for hver ny merkevare.",
+          "h": "Forhandlere",
+          "p": "Motta alt, uten ekstra arbeid.",
           "items": [
-            "Søk, lim inn EAN-er og last ned i nettleseren",
-            "Bilder og fibersammensetning klare for nettbutikken",
-            "Bruksrettigheter og embargodatoer ved hvert bilde"
+            "Gratis for forhandlere",
+            "Alle merkevarer i samme format",
+            "Lim inn EAN-er, få de riktige bildene",
+            "Fibersammensetning og vaskeråd klare for nettbutikken",
+            "Bruksrettigheter og embargodatoer ved hvert bilde",
+            "I nettleseren, eller rett inn i programvaren din"
           ],
           "cta": "Les mer for forhandlere"
         },
         {
-          "h": "ERP- og programvareleverandører kobler til",
-          "p": "En leverandør av ERP-, PIM-, nettbutikk- eller kassasystemer bygger én tilkobling og leser deretter alle merkevareportaler på samme måte. Innkommende data automatiseres som enhver annen leverandørfeed.",
+          "h": "Portaler og programvare",
+          "p": "Koble til én gang, nå alle merkevarer.",
           "items": [
-            "Ett API, dokumentert i OpenAPI 3.1",
+            "Merkevareportaler, B2B- og bildeportaler, DAM-er",
+            "ERP-, PIM-, nettbutikk- og kassaprogramvare",
+            "Ett åpent API, ingen lisensavgift",
             "Først en full kopi, deretter bare endringene",
-            "Test tilkoblingen din med den gratis samsvarstesten"
+            "Gratis merke «Kompatibel med Open Brand Exchange»"
           ],
-          "cta": "Les utviklerveiledningen"
+          "cta": "For portaler og partnere"
         }
       ],
       "portalsEyebrow": "Åpen for alle portaler",
       "portalsTitle": "Har du allerede en portal? Koble den til standarden.",
-      "portalsLead": "Open Brand Exchange er ikke ett enkelt program. Alle portaler som snakker protokollen og består samsvarstesten, er kompatible, og forhandlernes programvare leser dem som alle andre.",
+      "portalsLead": "Alle portaler eller systemer som snakker standarden, fungerer med alle forhandlersystemer som gjør det samme.",
       "portalTypes": [
         {
           "h": "Merkevare- og B2B-portaler",
-          "p": "En merkevareportal, B2B-butikk eller grossistplattform legger til OBX-API-et ved siden av det den allerede gjør. Merkevarene der når da alle forhandlersystemer som snakker standarden."
+          "p": "Legg til OBX-API-et ved siden av det du allerede gjør, så når merkevarene dine alle forhandlersystemer."
         },
         {
           "h": "Bildeportaler og DAM-er",
-          "p": "Fotoportaler, bildebanker og DAM-er for produktbilder publiserer bildene per vare: hvert bilde koblet til produkt, farge og EAN, med webversjoner, bruksrettigheter og embargodatoer. De implementerer lesesiden av protokollen, og forhandlernes programvare henter bildene som fra enhver annen portal."
+          "p": "Publiser produktbilder per vare, farge og EAN, med webversjoner, bruksrettigheter og embargodatoer."
         },
         {
           "h": "PIM- og ERP-systemer",
-          "p": "Et PIM eller ERP som har artikkeldataene til en merkevare, kan publisere dem direkte: fibersammensetning, vaskeråd, størrelser og EAN-er i standardformatet, uten egen portal."
+          "p": "Publiser fibersammensetning, vaskeråd, størrelser og EAN-er rett fra systemet der de ligger."
         }
       ],
-      "portalsSteps": [
-        "Les spesifikasjonen og last inn den fiktive testmerkevaren Kestrel",
-        "Tilby discovery, endringsfeeden, produkter og bilder via API-et",
-        "Kjør den gratis samsvarstesten: består du, er du kompatibel"
+      "portalsCta": "Kompatibel eller partner",
+      "heroChecks": [
+        "Gratis og åpen, ingen avgift per forhandler",
+        "Alle forhandlerne dine på én gang",
+        "Starter fra ditt eget Excel eller system",
+        "Bilder med bruksrettigheter inkludert",
+        "Ingen innlåsing: dataene dine forblir dine"
       ],
-      "portalsCta": "Kompatibel eller partner"
+      "devRepos": [
+        {
+          "name": "spec",
+          "d": "Spesifikasjonen, skjemaene og testdata"
+        },
+        {
+          "name": "obx-go",
+          "d": "Go-SDK, obx-verktøyet og samsvarstesten"
+        },
+        {
+          "name": "node-ts",
+          "d": "Portal for Cloudflare Workers"
+        },
+        {
+          "name": "node-go",
+          "d": "Portal for Docker og Google Cloud Run"
+        },
+        {
+          "name": "node-php",
+          "d": "Portal for vanlig webhotell"
+        },
+        {
+          "name": "admin-ui",
+          "d": "Nettgrensesnittet til hver portal"
+        }
+      ],
+      "devQuickstart": "OBX på 10 minutter",
+      "promptTitle": "Bygg det med AI-assistenten din",
+      "promptP": "Kopier en prompt inn i Claude, ChatGPT eller Cursor, fyll inn delen i klammer, og la den skrive koden etter spesifikasjonen.",
+      "prompts": [
+        {
+          "h": "Eksporter fra systemet ditt",
+          "note": "For merkevarer og leverandører av ERP og PIM: products.csv og bildenavn."
+        },
+        {
+          "h": "Les OBX inn i programvaren din",
+          "note": "For leverandører av nettbutikk-, PIM- og kassaprogramvare: endringsfeeden og bildene."
+        }
+      ],
+      "scopeLabel": "Kategorier",
+      "scopeNow": "Versjon 0.2: klær, sko, vesker og bagasje",
+      "scopeNext": "Hjem og sport: under utvikling for 0.3"
     },
     "pages": {
       "brandsH1": "Sett det opp én gang. For alle forhandlere samtidig.",
@@ -1237,6 +1289,8 @@
     "tiersNote": "Foreslåtte avgifter for 2027, endelige når stiftelsen er opprettet. Avgiften dekker bare oppføringen. Standarden, testen og programvaren forblir gratis for alle, og partnere har ikke mer å si om standarden enn noen andre.",
     "partnerCta": "Bli partner",
     "mailSubject": "Offisiell partner",
-    "listTitle": "Offisielle partnere"
+    "listTitle": "Leverandører",
+    "feesNote": "Avgiftene trer i kraft når stiftelsen er opprettet. Frem til da betaler ingen, og det sendes ingen fakturaer; send oss en e-post for å melde din interesse.",
+    "interestCta": "Meld din interesse"
   }
 }

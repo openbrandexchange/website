@@ -1,6 +1,7 @@
 ---
 import PageHero from '../components/PageHero.astro';
 import { format, messages, url, type Lang } from '../i18n';
+import { countryName } from '../lib/names';
 import { HELLO_EMAIL, SECURITY_EMAIL, imprintDetails, initiativeLine, orgVars } from '../lib/org';
 
 interface Props {
@@ -9,7 +10,8 @@ interface Props {
 const { lang } = Astro.props;
 const t = messages[lang];
 const c = t.imprint;
-const { address, phone, registration } = imprintDetails;
+const { address, country, phone, registration } = imprintDetails;
+const addressLines = address ? [...address, ...(country ? [countryName(lang, country)] : [])] : null;
 ---
 
 <PageHero title={c.h1} lead={c.lead} dark={false} />
@@ -27,7 +29,7 @@ const { address, phone, registration } = imprintDetails;
               <dt>{c.addressLabel}</dt>
               <dd>
                 <address>
-                  {address.map((line, i) => (
+                  {addressLines!.map((line, i) => (
                     <>
                       {i > 0 && <br />}
                       {line}

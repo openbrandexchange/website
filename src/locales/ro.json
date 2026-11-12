@@ -364,7 +364,7 @@
     "fieldExport": "Exportul întregului conținut",
     "fieldWebsite": "Site web",
     "listTitle": "Doriți să apăreți aici ca furnizor?",
-    "listP": "Furnizorii de pe această pagină sunt parteneri oficiali. Condițiile sunt aceleași pentru toți:",
+    "listP": "Criteriile pentru a apărea aici sunt aceleași pentru toți:",
     "listItems": [
       "portalul dvs. trece testul de conformitate pentru versiunea curentă",
       "o marcă își poate exporta toate datele și fotografiile și poate pleca",
@@ -726,7 +726,7 @@
       }
     ],
     "nameTitle": "Despre nume",
-    "nameP": "Numele „Open Brand Exchange” este același în toate limbile și nu se traduce niciodată. Nu este încă o marcă înregistrată. Software-ul care trece suita de conformitate poate spune că „funcționează cu Open Brand Exchange”.",
+    "nameP": "Numele „Open Brand Exchange” este același în toate limbile și nu se traduce niciodată. Nu este încă o marcă înregistrată. Software-ul care trece testul de conformitate poate spune că este „Compatibil cu Open Brand Exchange”.",
     "specLink": "Documentul complet de guvernanță",
     "foundationTitle": "Cine se află în spate",
     "foundationP": "{foundation} este în curs de înființare ca fundație olandeză (stichting). Imediat ce va exista, drepturile de autor, numele, domeniul și organizația GitHub vor fi transferate către ea."
@@ -737,7 +737,7 @@
     "sections": [
       {
         "h": "Cine este responsabil",
-        "p": "Acest site este administrat de {person} (vezi informațiile legale). Pentru orice întrebare despre confidențialitate, scrieți la {email}."
+        "p": "Până la înregistrarea fundației, operatorul acestui site este {publisher} (persoană fizică autorizată; titular: {person}), în numele {foundation} (adresa și numărul de înregistrare în informațiile legale). Pentru orice întrebare despre confidențialitate, scrieți la {email}."
       },
       {
         "h": "Ce colectăm",
@@ -774,7 +774,7 @@
     "h1": "Informații legale",
     "lead": "Cine publică acest site și cum ne puteți contacta.",
     "publisherTitle": "Publicat de",
-    "foundationP": "{foundation} este în curs de înființare ca fundație olandeză (stichting). Până la înregistrarea ei, {person} este responsabil pentru acest site.",
+    "foundationP": "Open Brand Exchange este publicat de {publisher} în numele {foundation}, care este în curs de înființare ca fundație olandeză (stichting). {publisher} este o persoană fizică autorizată; titularul este {person}.",
     "addressLabel": "Adresă poștală",
     "phoneLabel": "Telefon",
     "registrationLabel": "Număr de înregistrare",
@@ -889,7 +889,7 @@
       "errors": "Coduri de eroare",
       "spec": "Specificație",
       "sdk": "Go SDK și instrumentul obx",
-      "status": "Versiunea 0.2 a fost lansată. Specificația și software-ul sunt libere de folosit."
+      "status": "Versiunea 0.2 a fost lansată, pentru modă, încălțăminte, genți și bagaje. Specificația și software-ul sunt libere de folosit."
     },
     "shots": {
       "portalCatalog": "Portalul mărcii fictive Kestrel, așa cum îl vede un comerciant: opt articole cu filtre după marcă, tip de produs și culoare.",
@@ -903,7 +903,7 @@
     "home": {
       "eyebrow": "Standard deschis pentru modă · Software gratuit",
       "h1": "Conținutul produselor de modă, gata pentru fiecare comerciant.",
-      "lead": "Multe portaluri de imagini sunt lente, greu de conectat și trebuie parcurse manual, clic cu clic. Open Brand Exchange este standardul deschis pentru felul în care mărcile de modă, încălțăminte, genți și bagaje le livrează comercianților fotografii de produs și date despre articole: într-un portal, ca arhivă zip sau foaie de calcul, ori direct în software-ul comerciantului, printr-un singur API. O alternativă deschisă la platformele închise: fără taxă pe comerciant, fără dependență de un furnizor, iar datele rămân ale dvs.",
+      "lead": "Multe portaluri de imagini sunt lente, greu de conectat și trebuie parcurse manual, clic cu clic. Open Brand Exchange este standardul deschis pentru felul în care mărcile de modă, încălțăminte, genți și bagaje le livrează comercianților fotografii de produs și date despre articole: o alternativă deschisă la platformele închise.",
       "ctaRetailer": "Sunt comerciant",
       "proofLabel": "Pe scurt",
       "proof": [
@@ -916,8 +916,8 @@
           "l": "ediții ale portalului"
         },
         {
-          "v": "61",
-          "l": "teste de conformitate"
+          "v": "1",
+          "l": "API pentru fiecare marcă"
         },
         {
           "v": "25",
@@ -1009,7 +1009,7 @@
       ],
       "editionsEyebrow": "Găzduire",
       "editionsTitle": "Unde doriți. Plătiți doar găzduirea.",
-      "editionsLead": "Trei ediții ale aceluiași portal. Trec aceleași teste de conformitate și vorbesc același API, deci puteți trece oricând de la una la alta.",
+      "editionsLead": "Trei ediții ale aceluiași portal. Vorbesc același API, deci puteți trece de la una la alta.",
       "editionsLink": "Comparați opțiunile de găzduire",
       "editionFields": [
         "Rulează pe",
@@ -1058,11 +1058,11 @@
       "trust": [
         {
           "h": "Specificație deschisă",
-          "p": "Versiunea 0.2, scrisă în OpenAPI 3.1 și JSON Schema, sub licența CC-BY-4.0. Oricine o poate implementa, inclusiv în scop comercial."
+          "p": "Versiunea 0.2, sub licența CC-BY-4.0. Oricine o poate implementa, inclusiv în scop comercial."
         },
         {
-          "h": "Teste de conformitate",
-          "p": "61 de verificări automate în patru profiluri. Fiecare implementare este testată la fel."
+          "h": "Fără dependență",
+          "p": "O marcă își poate exporta oricând toate datele și fotografiile și poate trece la alt furnizor sau le poate găzdui singură."
         },
         {
           "h": "Licențe open source",
@@ -1074,7 +1074,7 @@
         },
         {
           "h": "Securitate",
-          "p": "Raportați vulnerabilitățile confidențial la {email}. Securitatea este unul dintre cele patru profiluri de conformitate."
+          "p": "Raportați vulnerabilitățile confidențial la {email}."
         },
         {
           "h": "Confidențialitate înainte de toate",
@@ -1083,8 +1083,8 @@
       ],
       "trustLink": "Aflați cum este guvernat",
       "devEyebrow": "Pentru dezvoltatori",
-      "devTitle": "O specificație pe care puteți construi.",
-      "devP": "Trei contracte OpenAPI, JSON Schema, o marcă de test fictivă și o suită de teste de conformitate. Go SDK și instrumentul obx sunt gata de folosit, iar orice client HTTP funcționează.",
+      "devTitle": "Open source, pe GitHub.",
+      "devP": "OpenAPI 3.1, JSON Schemas, o marcă de test fictivă și software gata de folosit. Orice client HTTP funcționează.",
       "devLinks": [
         "Referință API",
         "Specificația pe GitHub",
@@ -1098,62 +1098,114 @@
       "closingMail": "Scrieți-ne",
       "rolesEyebrow": "Cine ce face",
       "rolesTitle": "Mărcile publică. Comercianții primesc. Software-ul conectează.",
-      "rolesLead": "Standardul stabilește cum ajunge conținutul de produs de la marcă la comerciant. Fiecare parte își face partea, și nimeni nu trebuie să aștepte după altcineva.",
+      "rolesLead": "Ce primește fiecare parte.",
       "roles": [
         {
-          "h": "Mărcile publică",
-          "p": "O marcă își pregătește conținutul o singură dată, în formatul standard, în propriul portal. Automatizează singură datele care pleacă, sau se ocupă un furnizor.",
+          "h": "Mărci",
+          "p": "Publicați o dată, pentru fiecare comerciant.",
           "items": [
-            "Fotografiile și datele articolelor într-un singur format standard",
-            "Automatizați singuri cu instrumentele gratuite sau lăsați un furnizor să o facă",
-            "Aprobați fiecare comerciant și decideți ce vede"
+            "Software gratuit sau un furnizor care se ocupă de tot",
+            "Porniți de la propriul fișier Excel sau sistem",
+            "Toți comercianții deodată, fără să mai trimiteți fișiere",
+            "Decideți cine vede ce",
+            "Vedeți cine descarcă ce",
+            "Fără dependență: exportați tot și plecați"
           ],
           "cta": "Aflați mai multe pentru mărci"
         },
         {
-          "h": "Comercianții primesc",
-          "p": "Un comerciant preia ce îi trebuie de la fiecare marcă din standard, mereu în același fel. Nicio muncă nouă pentru fiecare marcă nouă.",
+          "h": "Comercianți",
+          "p": "Primiți totul, fără muncă în plus.",
           "items": [
-            "Căutați, lipiți coduri EAN și descărcați în browser",
-            "Fotografii și compoziție fibroasă gata pentru magazinul online",
-            "Drepturi de utilizare și date de embargo la fiecare fotografie"
+            "Gratuit pentru comercianți",
+            "Fiecare marcă în același format",
+            "Lipiți coduri EAN, primiți fotografiile potrivite",
+            "Compoziție fibroasă și instrucțiuni de îngrijire gata pentru magazinul online",
+            "Drepturi de utilizare și date de embargo la fiecare fotografie",
+            "În browser sau direct în software-ul dvs."
           ],
           "cta": "Aflați mai multe pentru comercianți"
         },
         {
-          "h": "Furnizorii de ERP și software se conectează",
-          "p": "Un furnizor de software ERP, PIM, de magazin online sau de casă de marcat construiește o singură conexiune și apoi citește fiecare portal de marcă în același fel. Datele care intră se automatizează ca la orice alt flux de la furnizori.",
+          "h": "Portaluri și software",
+          "p": "Conectați-vă o dată, ajungeți la fiecare marcă.",
           "items": [
-            "Un singur API, documentat în OpenAPI 3.1",
+            "Portaluri de marcă, portaluri B2B și de imagini, DAM-uri",
+            "Software ERP, PIM, de magazin online și de casă de marcat",
+            "Un singur API deschis, fără taxă de licență",
             "Mai întâi o copie completă, apoi doar modificările",
-            "Testați conexiunea cu testul de conformitate gratuit"
+            "Eticheta gratuită „Compatibil cu Open Brand Exchange”"
           ],
-          "cta": "Citiți ghidul pentru dezvoltatori"
+          "cta": "Pentru portaluri și parteneri"
         }
       ],
       "portalsEyebrow": "Deschis oricărui portal",
       "portalsTitle": "Aveți deja un portal? Conectați-l la standard.",
-      "portalsLead": "Open Brand Exchange nu este un singur software. Orice portal care vorbește protocolul și trece testul de conformitate este compatibil, iar software-ul comercianților îl citește ca pe oricare altul.",
+      "portalsLead": "Orice portal sau sistem care vorbește standardul funcționează cu fiecare sistem de comerciant care îl vorbește și el.",
       "portalTypes": [
         {
           "h": "Portaluri de marcă și B2B",
-          "p": "Un portal de marcă, un magazin B2B sau o platformă en-gros adaugă API-ul OBX pe lângă ce face deja. Mărcile sale ajung astfel la fiecare sistem de comerciant care vorbește standardul."
+          "p": "Adăugați API-ul OBX pe lângă ce faceți deja, iar mărcile dvs. ajung la fiecare sistem de comerciant."
         },
         {
           "h": "Portaluri de imagini și DAM-uri",
-          "p": "Portalurile foto, băncile de imagini și DAM-urile pentru fotografii de produs publică fotografiile pe articol: fiecare fotografie legată de produs, culoare și EAN, cu versiuni web, drepturi de utilizare și date de embargo. Ele implementează partea de citire a protocolului, iar software-ul comercianților preia fotografiile ca de la orice alt portal."
+          "p": "Publicați fotografii de produs pe articol, culoare și EAN, cu versiuni web, drepturi de utilizare și date de embargo."
         },
         {
           "h": "Sisteme PIM și ERP",
-          "p": "Un PIM sau ERP care conține datele articolelor unei mărci le poate publica direct: compoziție fibroasă, instrucțiuni de îngrijire, mărimi și coduri EAN în formatul standard, fără un portal separat."
+          "p": "Publicați compoziția fibroasă, instrucțiunile de îngrijire, mărimile și codurile EAN direct din sistemul care le conține."
         }
       ],
-      "portalsSteps": [
-        "Citiți specificația și încărcați marca de test fictivă Kestrel",
-        "Oferiți descoperirea, fluxul de modificări, produsele și fotografiile prin API",
-        "Rulați testul de conformitate gratuit: dacă trece, sunteți compatibil"
+      "portalsCta": "Compatibil sau partener",
+      "heroChecks": [
+        "Gratuit și deschis, fără taxă pe comerciant",
+        "Toți comercianții dvs. deodată",
+        "Pornește de la propriul Excel sau sistem",
+        "Fotografii cu drepturile de utilizare incluse",
+        "Fără dependență: datele rămân ale dvs."
       ],
-      "portalsCta": "Compatibil sau partener"
+      "devRepos": [
+        {
+          "name": "spec",
+          "d": "Specificația, schemele și datele de test"
+        },
+        {
+          "name": "obx-go",
+          "d": "Go SDK, instrumentul obx și testul de conformitate"
+        },
+        {
+          "name": "node-ts",
+          "d": "Portal pentru Cloudflare Workers"
+        },
+        {
+          "name": "node-go",
+          "d": "Portal pentru Docker și Google Cloud Run"
+        },
+        {
+          "name": "node-php",
+          "d": "Portal pentru găzduire web obișnuită"
+        },
+        {
+          "name": "admin-ui",
+          "d": "Interfața web a fiecărui portal"
+        }
+      ],
+      "devQuickstart": "OBX în 10 minute",
+      "promptTitle": "Construiți-l cu asistentul dvs. AI",
+      "promptP": "Copiați un prompt în Claude, ChatGPT sau Cursor, completați partea dintre parantezele drepte și lăsați-l să scrie codul după specificație.",
+      "prompts": [
+        {
+          "h": "Export din sistemul dvs.",
+          "note": "Pentru mărci și furnizori de ERP și PIM: products.csv și numele fotografiilor."
+        },
+        {
+          "h": "Citiți OBX în software-ul dvs.",
+          "note": "Pentru furnizori de software de magazin online, PIM și casă de marcat: fluxul de modificări și fotografiile."
+        }
+      ],
+      "scopeLabel": "Categorii",
+      "scopeNow": "Versiunea 0.2: modă, încălțăminte, genți și bagaje",
+      "scopeNext": "Casă și sport: în dezvoltare pentru 0.3"
     },
     "pages": {
       "brandsH1": "Configurați o dată. Pentru toți comercianții deodată.",
@@ -1237,6 +1289,8 @@
     "tiersNote": "Taxe propuse pentru 2027, definitive după înființarea fundației. Taxa acoperă doar listarea. Standardul, testul și software-ul rămân gratuite pentru toți, iar partenerii nu au mai mult cuvânt de spus asupra standardului decât oricine altcineva.",
     "partnerCta": "Deveniți partener",
     "mailSubject": "Partener oficial",
-    "listTitle": "Parteneri oficiali"
+    "listTitle": "Furnizori",
+    "feesNote": "Taxele intră în vigoare după înființarea fundației. Până atunci nimeni nu plătește și nu se trimit facturi; scrieți-ne pentru a vă exprima interesul.",
+    "interestCta": "Exprimați-vă interesul"
   }
 }

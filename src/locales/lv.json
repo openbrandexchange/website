@@ -364,7 +364,7 @@
     "fieldExport": "Visa satura eksports",
     "fieldWebsite": "Tīmekļa vietne",
     "listTitle": "Vēlaties būt šeit kā pakalpojumu sniedzējs?",
-    "listP": "Šajā lapā norādītie pakalpojumu sniedzēji ir oficiālie partneri. Kritēriji visiem ir vienādi:",
+    "listP": "Nosacījumi, lai šeit tiktu norādīti, visiem ir vienādi:",
     "listItems": [
       "jūsu portāls iztur pašreizējās versijas atbilstības testu",
       "zīmols var eksportēt visus savus datus un fotoattēlus un aiziet",
@@ -726,7 +726,7 @@
       }
     ],
     "nameTitle": "Par nosaukumu",
-    "nameP": "Nosaukums “Open Brand Exchange” visās valodās ir vienāds un nekad netiek tulkots. Tā vēl nav reģistrēta preču zīme. Programmatūra, kas iztur atbilstības testus, drīkst teikt, ka tā “darbojas ar Open Brand Exchange”.",
+    "nameP": "Nosaukums “Open Brand Exchange” visās valodās ir vienāds un nekad netiek tulkots. Tā vēl nav reģistrēta preču zīme. Programmatūra, kas iztur atbilstības testu, drīkst teikt, ka tā ir „saderīga ar Open Brand Exchange”.",
     "specLink": "Pilns pārvaldības dokuments",
     "foundationTitle": "Kas ir aiz tā",
     "foundationP": "{foundation} tiek dibināta kā Nīderlandes nodibinājums (stichting). Tiklīdz tā būs izveidota, tai tiks nodotas autortiesības, nosaukums, domēns un GitHub organizācija."
@@ -737,7 +737,7 @@
     "sections": [
       {
         "h": "Kas ir atbildīgs",
-        "p": "Šo vietni uztur {person} (skatiet izdevēja informāciju). Visos privātuma jautājumos rakstiet uz {email}."
+        "p": "Līdz nodibinājuma reģistrācijai šīs vietnes pārzinis ir {publisher} (individuālais komersants; īpašnieks: {person}) nodibinājuma {foundation} vārdā (adrese un reģistrācijas numurs norādīti izdevēja informācijā). Visos privātuma jautājumos rakstiet uz {email}."
       },
       {
         "h": "Ko mēs vācam",
@@ -774,7 +774,7 @@
     "h1": "Izdevēja informācija",
     "lead": "Kas izdod šo vietni un kā ar mums sazināties.",
     "publisherTitle": "Izdevējs",
-    "foundationP": "{foundation} tiek dibināta kā Nīderlandes nodibinājums (stichting). Līdz tās reģistrācijai par šo vietni atbild {person}.",
+    "foundationP": "Open Brand Exchange izdod {publisher} nodibinājuma {foundation} vārdā; nodibinājums tiek dibināts kā Nīderlandes nodibinājums (stichting). {publisher} ir individuālais komersants; īpašnieks ir {person}.",
     "addressLabel": "Pasta adrese",
     "phoneLabel": "Tālrunis",
     "registrationLabel": "Reģistrācijas numurs",
@@ -889,7 +889,7 @@
       "errors": "Kļūdu kodi",
       "spec": "Specifikācija",
       "sdk": "Go SDK un rīks obx",
-      "status": "Versija 0.2 ir izlaista. Specifikācija un programmatūra ir brīvi izmantojamas."
+      "status": "Versija 0.2 ir izlaista apģērbiem, apaviem, somām un čemodāniem. Specifikācija un programmatūra ir brīvi izmantojamas."
     },
     "shots": {
       "portalCatalog": "Izdomātā zīmola Kestrel portāls, kā to redz tirgotājs: astoņas preces ar filtriem pēc zīmola, produkta veida un krāsas.",
@@ -903,7 +903,7 @@
     "home": {
       "eyebrow": "Atvērts standarts modei · Bezmaksas programmatūra",
       "h1": "Modes produktu saturs, gatavs katram tirgotājam.",
-      "lead": "Daudzi attēlu portāli ir lēni, tos grūti savienot, un tie jāizklikšķina ar roku. Open Brand Exchange ir atvērtais standarts tam, kā apģērbu, apavu, somu un čemodānu zīmoli piegādā produktu fotoattēlus un preču datus saviem tirgotājiem: portālā, kā zip arhīvu vai izklājlapu, vai tieši tirgotāja programmatūrā caur vienu API. Atvērta alternatīva slēgtām platformām: nav maksas par katru tirgotāju, nav piesaistes, un jūsu dati paliek jūsu.",
+      "lead": "Daudzi attēlu portāli ir lēni, tos grūti savienot, un tie jāizklikšķina ar roku. Open Brand Exchange ir atvērtais standarts tam, kā apģērbu, apavu, somu un čemodānu zīmoli piegādā produktu fotoattēlus un preču datus saviem tirgotājiem: atvērta alternatīva slēgtām platformām.",
       "ctaRetailer": "Esmu tirgotājs",
       "proofLabel": "Īsumā",
       "proof": [
@@ -916,8 +916,8 @@
           "l": "portāla izdevumi"
         },
         {
-          "v": "61",
-          "l": "atbilstības pārbaude"
+          "v": "1",
+          "l": "API katram zīmolam"
         },
         {
           "v": "25",
@@ -1009,7 +1009,7 @@
       ],
       "editionsEyebrow": "Mitināšana",
       "editionsTitle": "Kur vēlaties. Maksājiet tikai par mitināšanu.",
-      "editionsLead": "Trīs viena un tā paša portāla izdevumi. Tie iztur tos pašus atbilstības testus un runā vienā API, tāpēc varat pāriet no viena uz otru.",
+      "editionsLead": "Trīs viena un tā paša portāla izdevumi. Tie runā vienā API, tāpēc varat pāriet no viena uz otru.",
       "editionsLink": "Salīdziniet mitināšanas iespējas",
       "editionFields": [
         "Darbojas",
@@ -1058,11 +1058,11 @@
       "trust": [
         {
           "h": "Atvērta specifikācija",
-          "p": "Versija 0.2, aprakstīta OpenAPI 3.1 un JSON Schema ar licenci CC-BY-4.0. To drīkst ieviest ikviens, arī komerciāli."
+          "p": "Versija 0.2, ar licenci CC-BY-4.0. To drīkst ieviest ikviens, arī komerciāli."
         },
         {
-          "h": "Atbilstības testi",
-          "p": "61 automātiska pārbaude četros profilos. Katru ieviešanu pārbauda vienādi."
+          "h": "Nav piesaistes",
+          "p": "Zīmols jebkurā brīdī var eksportēt visus savus datus un attēlus un pāriet pie cita pakalpojumu sniedzēja vai mitināt tos pats."
         },
         {
           "h": "Atvērtā koda licences",
@@ -1074,7 +1074,7 @@
         },
         {
           "h": "Drošība",
-          "p": "Par ievainojamībām ziņojiet konfidenciāli uz {email}. Drošība ir viens no četriem atbilstības profiliem."
+          "p": "Par ievainojamībām ziņojiet konfidenciāli uz {email}."
         },
         {
           "h": "Privātums pirmajā vietā",
@@ -1083,8 +1083,8 @@
       ],
       "trustLink": "Uzziniet, kā tas tiek pārvaldīts",
       "devEyebrow": "Izstrādātājiem",
-      "devTitle": "Specifikācija, uz kuras būvēt.",
-      "devP": "Trīs OpenAPI līgumi, JSON Schema shēmas, izdomāts testa zīmols un atbilstības testi. Go SDK un rīks obx ir gatavi lietošanai, der arī jebkurš HTTP klients.",
+      "devTitle": "Atvērtais kods, GitHub.",
+      "devP": "OpenAPI 3.1, JSON Schemas, izdomāts testa zīmols un gatava programmatūra. Der jebkurš HTTP klients.",
       "devLinks": [
         "API rokasgrāmata",
         "Specifikācija GitHub",
@@ -1098,62 +1098,114 @@
       "closingMail": "Rakstiet mums",
       "rolesEyebrow": "Kurš ko dara",
       "rolesTitle": "Zīmoli publicē. Tirgotāji saņem. Programmatūra savieno.",
-      "rolesLead": "Standarts nosaka, kā produktu saturs nonāk no zīmola līdz tirgotājam. Katra puse dara savu daļu, un nevienam nav jāgaida uz citiem.",
+      "rolesLead": "Ko iegūst katra puse.",
       "roles": [
         {
-          "h": "Zīmoli publicē",
-          "p": "Zīmols vienreiz sagatavo savu saturu standarta formātā savā portālā. Izejošos datus tas automatizē pats, vai to nokārto pakalpojumu sniedzējs.",
+          "h": "Zīmoli",
+          "p": "Publicējiet vienreiz, katram tirgotājam.",
           "items": [
-            "Jūsu fotoattēli un preču dati vienā standarta formātā",
-            "Automatizējiet paši ar bezmaksas rīkiem vai uzticiet to pakalpojumu sniedzējam",
-            "Jūs apstiprināt katru tirgotāju un lemjat, ko viņš redz"
+            "Bezmaksas programmatūra vai pakalpojumu sniedzējs, kas visu nokārto",
+            "Sāciet no sava Excel faila vai sistēmas",
+            "Visi jūsu tirgotāji uzreiz, vairs nav jāsūta faili",
+            "Jūs lemjat, kurš ko redz",
+            "Redziet, kurš ko lejupielādē",
+            "Nav piesaistes: eksportējiet visu un aizejiet"
           ],
           "cta": "Uzziniet vairāk zīmoliem"
         },
         {
-          "h": "Tirgotāji saņem",
-          "p": "Tirgotājs no katra standarta zīmola paņem to, kas vajadzīgs, vienmēr vienādi. Katrs jauns zīmols nenozīmē jaunu darbu.",
+          "h": "Tirgotāji",
+          "p": "Saņemiet visu bez papildu darba.",
           "items": [
-            "Meklējiet, ielīmējiet EAN un lejupielādējiet pārlūkā",
-            "Fotoattēli un šķiedru sastāvs, gatavi interneta veikalam",
-            "Lietošanas tiesības un embargo datumi pie katra fotoattēla"
+            "Bezmaksas tirgotājiem",
+            "Katrs zīmols vienā un tajā pašā formātā",
+            "Ielīmējiet EAN, saņemiet pareizos attēlus",
+            "Šķiedru sastāvs un kopšanas norādījumi, gatavi interneta veikalam",
+            "Lietošanas tiesības un embargo datumi pie katra attēla",
+            "Pārlūkā vai tieši jūsu programmatūrā"
           ],
           "cta": "Uzziniet vairāk tirgotājiem"
         },
         {
-          "h": "ERP un programmatūras piegādātāji savieno",
-          "p": "ERP, PIM, interneta veikala vai kases programmatūras piegādātājs izveido vienu savienojumu un pēc tam visus zīmolu portālus lasa vienādi. Ienākošos datus automatizē tāpat kā jebkuru citu piegādātāja datu plūsmu.",
+          "h": "Portāli un programmatūra",
+          "p": "Savienojiet vienreiz, sasniedziet katru zīmolu.",
           "items": [
-            "Viens API, aprakstīts OpenAPI 3.1",
+            "Zīmolu portāli, B2B un attēlu portāli, DAM",
+            "ERP, PIM, interneta veikalu un kases programmatūra",
+            "Viens atvērts API, nav licences maksas",
             "Vispirms pilna kopija, pēc tam tikai izmaiņas",
-            "Pārbaudiet savienojumu ar bezmaksas atbilstības testu"
+            "Bezmaksas zīme „Saderīgs ar Open Brand Exchange”"
           ],
-          "cta": "Lasiet izstrādātāju rokasgrāmatu"
+          "cta": "Portāliem un partneriem"
         }
       ],
       "portalsEyebrow": "Atvērts katram portālam",
       "portalsTitle": "Jums jau ir portāls? Pieslēdziet to standartam.",
-      "portalsLead": "Open Brand Exchange nav viena programma. Katrs portāls, kas atbalsta protokolu un iztur atbilstības testu, ir saderīgs, un tirgotāju programmatūra to lasa tāpat kā jebkuru citu.",
+      "portalsLead": "Katrs portāls vai sistēma, kas atbalsta standartu, darbojas ar katru tirgotāja sistēmu, kas to arī atbalsta.",
       "portalTypes": [
         {
           "h": "Zīmolu un B2B portāli",
-          "p": "Zīmola portāls, B2B veikals vai vairumtirdzniecības platforma papildus tam, ko jau dara, pievieno OBX API. Tad tā zīmoli sasniedz katru tirgotāja sistēmu, kas atbalsta standartu."
+          "p": "Pievienojiet OBX API tam, ko jau darāt, un jūsu zīmoli sasniegs katru tirgotāja sistēmu."
         },
         {
           "h": "Attēlu portāli un DAM",
-          "p": "Fotoattēlu portāli, attēlu bankas un produktu attēlu DAM publicē attēlus pa precēm: katrs fotoattēls ir saistīts ar produktu, krāsu un EAN, ar tīmekļa versijām, lietošanas tiesībām un embargo datumiem. Tie īsteno protokola lasīšanas pusi, un tirgotāju programmatūra paņem attēlus tāpat kā no jebkura cita portāla."
+          "p": "Publicējiet produktu attēlus pa precēm, krāsām un EAN, ar tīmekļa versijām, lietošanas tiesībām un embargo datumiem."
         },
         {
           "h": "PIM un ERP sistēmas",
-          "p": "PIM vai ERP, kurā glabājas zīmola preču dati, var tos publicēt tieši: šķiedru sastāvu, kopšanas norādījumus, izmērus un EAN standarta formātā, bez atsevišķa portāla."
+          "p": "Publicējiet šķiedru sastāvu, kopšanas norādījumus, izmērus un EAN tieši no sistēmas, kurā tie glabājas."
         }
       ],
-      "portalsSteps": [
-        "Izlasiet specifikāciju un ielādējiet izdomāto testa zīmolu Kestrel",
-        "Piedāvājiet discovery, izmaiņu plūsmu, produktus un attēlus caur API",
-        "Palaidiet bezmaksas atbilstības testu: ja tas izdodas, jūs esat saderīgi"
+      "portalsCta": "Saderība vai partnerība",
+      "heroChecks": [
+        "Bezmaksas un atvērts, nav maksas par tirgotāju",
+        "Visi jūsu tirgotāji uzreiz",
+        "Sākas no jūsu Excel vai sistēmas",
+        "Attēli kopā ar lietošanas tiesībām",
+        "Nav piesaistes: jūsu dati paliek jūsu"
       ],
-      "portalsCta": "Saderība vai partnerība"
+      "devRepos": [
+        {
+          "name": "spec",
+          "d": "Specifikācija, shēmas un testa dati"
+        },
+        {
+          "name": "obx-go",
+          "d": "Go SDK, rīks obx un atbilstības tests"
+        },
+        {
+          "name": "node-ts",
+          "d": "Portāls Cloudflare Workers"
+        },
+        {
+          "name": "node-go",
+          "d": "Portāls Docker un Google Cloud Run"
+        },
+        {
+          "name": "node-php",
+          "d": "Portāls parastai tīmekļa mitināšanai"
+        },
+        {
+          "name": "admin-ui",
+          "d": "Katra portāla tīmekļa saskarne"
+        }
+      ],
+      "devQuickstart": "OBX 10 minūtēs",
+      "promptTitle": "Izveidojiet to ar savu MI asistentu",
+      "promptP": "Iekopējiet uzvedni Claude, ChatGPT vai Cursor, aizpildiet daļu iekavās un ļaujiet tam uzrakstīt kodu atbilstoši specifikācijai.",
+      "prompts": [
+        {
+          "h": "Eksports no jūsu sistēmas",
+          "note": "Zīmoliem un ERP un PIM piegādātājiem: products.csv un attēlu nosaukumi."
+        },
+        {
+          "h": "OBX nolasīšana jūsu programmatūrā",
+          "note": "Interneta veikalu, PIM un kases programmatūras piegādātājiem: izmaiņu plūsma un attēli."
+        }
+      ],
+      "scopeLabel": "Kategorijas",
+      "scopeNow": "Versija 0.2: apģērbi, apavi, somas un čemodāni",
+      "scopeNext": "Mājai un sportam: izstrādē versijai 0.3"
     },
     "pages": {
       "brandsH1": "Iestatiet vienreiz. Visiem tirgotājiem uzreiz.",
@@ -1237,6 +1289,8 @@
     "tiersNote": "Ierosinātās maksas 2027. gadam, galīgas, kad būs nodibināts fonds. Maksa sedz tikai vietu sarakstā. Standarts, tests un programmatūra paliek bez maksas visiem, un partneriem nav lielākas teikšanas par standartu kā jebkuram citam.",
     "partnerCta": "Kļūstiet par partneri",
     "mailSubject": "Oficiālais partneris",
-    "listTitle": "Oficiālie partneri"
+    "listTitle": "Pakalpojumu sniedzēji",
+    "feesNote": "Maksas stāsies spēkā, kad būs nodibināts fonds. Līdz tam neviens nemaksā un rēķini netiek sūtīti; rakstiet mums, lai izteiktu interesi.",
+    "interestCta": "Izteikt interesi"
   }
 }

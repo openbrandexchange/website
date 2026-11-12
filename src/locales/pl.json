@@ -364,7 +364,7 @@
     "fieldExport": "Eksport wszystkich treści",
     "fieldWebsite": "Strona internetowa",
     "listTitle": "Chcesz być tu wymieniony jako dostawca?",
-    "listP": "Dostawcy na tej stronie to oficjalni partnerzy. Kryteria są takie same dla wszystkich:",
+    "listP": "Kryteria wpisu na listę są takie same dla wszystkich:",
     "listItems": [
       "Twój portal przechodzi test zgodności dla bieżącej wersji",
       "marka może wyeksportować wszystkie dane i zdjęcia i odejść",
@@ -726,7 +726,7 @@
       }
     ],
     "nameTitle": "O nazwie",
-    "nameP": "Nazwa „Open Brand Exchange” jest taka sama w każdym języku i nigdy nie jest tłumaczona. Nie jest jeszcze zarejestrowanym znakiem towarowym. Oprogramowanie, które przechodzi testy zgodności, może mówić, że „działa z Open Brand Exchange”.",
+    "nameP": "Nazwa „Open Brand Exchange” jest taka sama w każdym języku i nigdy nie jest tłumaczona. Nie jest jeszcze zarejestrowanym znakiem towarowym. Oprogramowanie, które przechodzi test zgodności, może określać się jako „Zgodne z Open Brand Exchange”.",
     "specLink": "Pełny dokument o zarządzaniu",
     "foundationTitle": "Kto za tym stoi",
     "foundationP": "{foundation} powstaje jako niderlandzka fundacja (stichting). Gdy tylko zostanie założona, zostaną na nią przeniesione prawa autorskie, nazwa, domena i organizacja na GitHubie."
@@ -737,7 +737,7 @@
     "sections": [
       {
         "h": "Kto odpowiada",
-        "p": "Tę stronę prowadzi {person} (zob. informacje prawne). W każdej sprawie dotyczącej prywatności napisz na {email}."
+        "p": "Do czasu rejestracji fundacji administratorem tej strony jest {publisher} (jednoosobowa działalność gospodarcza; właściciel: {person}) w imieniu {foundation} (adres i numer rejestracyjny w informacjach prawnych). W każdej sprawie dotyczącej prywatności napisz na {email}."
       },
       {
         "h": "Co zbieramy",
@@ -774,7 +774,7 @@
     "h1": "Informacje prawne",
     "lead": "Kto wydaje tę stronę i jak się z nami skontaktować.",
     "publisherTitle": "Wydawca",
-    "foundationP": "{foundation} powstaje jako niderlandzka fundacja (stichting). Do czasu jej rejestracji za tę stronę odpowiada {person}.",
+    "foundationP": "Open Brand Exchange wydaje {publisher} w imieniu {foundation}, która powstaje jako niderlandzka fundacja (stichting). {publisher} to jednoosobowa działalność gospodarcza; właścicielem jest {person}.",
     "addressLabel": "Adres pocztowy",
     "phoneLabel": "Telefon",
     "registrationLabel": "Numer rejestrowy",
@@ -889,7 +889,7 @@
       "errors": "Kody błędów",
       "spec": "Specyfikacja",
       "sdk": "Go SDK i narzędzie obx",
-      "status": "Wersja 0.2 jest już wydana. Specyfikacja i oprogramowanie są do swobodnego użytku."
+      "status": "Wersja 0.2 jest dostępna dla odzieży, obuwia, torebek i bagażu. Specyfikacja i oprogramowanie są do swobodnego użytku."
     },
     "shots": {
       "portalCatalog": "Portal fikcyjnej marki Kestrel oczami sprzedawcy: osiem artykułów z filtrami według marki, typu produktu i koloru.",
@@ -903,7 +903,7 @@
     "home": {
       "eyebrow": "Otwarty standard dla mody · Bezpłatne oprogramowanie",
       "h1": "Treści o produktach modowych, gotowe dla każdego sprzedawcy.",
-      "lead": "Wiele portali ze zdjęciami działa wolno, trudno je zintegrować i trzeba je przeklikiwać ręcznie. Open Brand Exchange to otwarty standard określający, jak marki odzieżowe, obuwnicze, torebkowe i bagażowe dostarczają zdjęcia produktów i dane artykułów swoim sprzedawcom: w portalu, jako ZIP lub arkusz kalkulacyjny albo bezpośrednio do oprogramowania sprzedawcy przez jedno API. Otwarta alternatywa dla zamkniętych platform: bez opłat za każdego sprzedawcę, bez uzależnienia od dostawcy, a Twoje dane pozostają Twoje.",
+      "lead": "Wiele portali ze zdjęciami działa wolno, trudno je zintegrować i trzeba je przeklikiwać ręcznie. Open Brand Exchange to otwarty standard tego, jak marki odzieżowe, obuwnicze, torebkowe i bagażowe dostarczają zdjęcia produktów i dane artykułów swoim sprzedawcom: otwarta alternatywa dla zamkniętych platform.",
       "ctaRetailer": "Jestem sprzedawcą",
       "proofLabel": "W skrócie",
       "proof": [
@@ -916,8 +916,8 @@
           "l": "edycje portalu"
         },
         {
-          "v": "61",
-          "l": "testów zgodności"
+          "v": "1",
+          "l": "API dla każdej marki"
         },
         {
           "v": "25",
@@ -1009,7 +1009,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Uruchom, gdzie chcesz. Płać tylko za hosting.",
-      "editionsLead": "Trzy edycje tego samego portalu. Przechodzą te same testy zgodności i mówią tym samym API, więc możesz przejść z jednej na drugą.",
+      "editionsLead": "Trzy edycje tego samego portalu. Obsługują to samo API, więc możesz przejść z jednej na drugą.",
       "editionsLink": "Porównaj opcje hostingu",
       "editionFields": [
         "Działa na",
@@ -1058,11 +1058,11 @@
       "trust": [
         {
           "h": "Otwarta specyfikacja",
-          "p": "Wersja 0.2, zapisana jako OpenAPI 3.1 i JSON Schema na licencji CC-BY-4.0. Każdy może ją wdrożyć, także komercyjnie."
+          "p": "Wersja 0.2, na licencji CC-BY-4.0. Każdy może ją wdrożyć, także komercyjnie."
         },
         {
-          "h": "Testy zgodności",
-          "p": "61 automatycznych testów w czterech profilach. Każda implementacja jest testowana w ten sam sposób."
+          "h": "Bez uzależnienia",
+          "p": "Marka może w każdej chwili wyeksportować wszystkie swoje dane i zdjęcia oraz przejść do innego dostawcy lub hostować je samodzielnie."
         },
         {
           "h": "Licencje open source",
@@ -1074,7 +1074,7 @@
         },
         {
           "h": "Bezpieczeństwo",
-          "p": "Luki zgłaszaj poufnie na adres {email}. Bezpieczeństwo to jeden z czterech profili zgodności."
+          "p": "Luki zgłaszaj poufnie na adres {email}."
         },
         {
           "h": "Prywatność przede wszystkim",
@@ -1083,8 +1083,8 @@
       ],
       "trustLink": "Zobacz, jak jest zarządzany",
       "devEyebrow": "Dla programistów",
-      "devTitle": "Specyfikacja, na której możesz budować.",
-      "devP": "Trzy kontrakty OpenAPI, JSON Schema, fikcyjna marka testowa i zestaw testów zgodności. Go SDK i narzędzie obx są gotowe do użycia, a zadziała każdy klient HTTP.",
+      "devTitle": "Open source, na GitHubie.",
+      "devP": "OpenAPI 3.1, JSON Schemas, fikcyjna marka testowa i gotowe oprogramowanie. Działa każdy klient HTTP.",
       "devLinks": [
         "Dokumentacja API",
         "Specyfikacja na GitHubie",
@@ -1098,62 +1098,114 @@
       "closingMail": "Napisz do nas",
       "rolesEyebrow": "Kto co robi",
       "rolesTitle": "Marki publikują. Sprzedawcy odbierają. Oprogramowanie łączy.",
-      "rolesLead": "Standard określa, jak treści produktowe trafiają od marki do sprzedawcy. Każda strona robi swoją część i nikt nie musi czekać na innych.",
+      "rolesLead": "Co zyskuje każda strona.",
       "roles": [
         {
-          "h": "Marki publikują",
-          "p": "Marka przygotowuje swoje treści raz, w standardowym formacie, we własnym portalu. Dane wychodzące automatyzuje sama albo zajmuje się tym dostawca.",
+          "h": "Marki",
+          "p": "Publikuj raz, dla każdego sprzedawcy.",
           "items": [
-            "Twoje zdjęcia i dane artykułów w jednym standardowym formacie",
-            "Zautomatyzuj to sam za pomocą bezpłatnych narzędzi albo zleć to dostawcy",
-            "Akceptujesz każdego sprzedawcę i decydujesz, co widzi"
+            "Bezpłatne oprogramowanie albo dostawca, który zrobi wszystko",
+            "Zacznij od własnego pliku Excel lub systemu",
+            "Wszyscy Twoi sprzedawcy naraz, koniec z wysyłaniem plików",
+            "Ty decydujesz, kto co widzi",
+            "Zobacz, kto co pobiera",
+            "Bez uzależnienia: wyeksportuj wszystko i odejdź"
           ],
           "cta": "Poznaj ofertę dla marek"
         },
         {
-          "h": "Sprzedawcy odbierają",
-          "p": "Sprzedawca pobiera to, czego potrzebuje, od każdej marki w standardzie, zawsze w ten sam sposób. Żadnej nowej pracy przy każdej nowej marce.",
+          "h": "Sprzedawcy",
+          "p": "Otrzymuj wszystko bez dodatkowej pracy.",
           "items": [
-            "Wyszukuj, wklejaj EAN i pobieraj w przeglądarce",
-            "Zdjęcia i skład surowcowy gotowe dla sklepu internetowego",
-            "Prawa do użycia i daty embarga przy każdym zdjęciu"
+            "Bezpłatnie dla sprzedawców",
+            "Każda marka w tym samym formacie",
+            "Wklej EAN, otrzymaj właściwe zdjęcia",
+            "Skład surowcowy i zalecenia pielęgnacji gotowe dla sklepu internetowego",
+            "Prawa do użycia i daty embarga przy każdym zdjęciu",
+            "W przeglądarce lub bezpośrednio w Twoim oprogramowaniu"
           ],
           "cta": "Poznaj ofertę dla sprzedawców"
         },
         {
-          "h": "Producenci ERP i oprogramowania łączą",
-          "p": "Producent oprogramowania ERP, PIM, sklepu internetowego lub kasowego buduje jedno połączenie, a potem czyta każdy portal marki w ten sam sposób. Dane przychodzące automatyzuje się jak każdy inny kanał danych od dostawców.",
+          "h": "Portale i oprogramowanie",
+          "p": "Połącz raz, docieraj do każdej marki.",
           "items": [
-            "Jedno API, opisane w OpenAPI 3.1",
+            "Portale marek, portale B2B i zdjęć, systemy DAM",
+            "Oprogramowanie ERP, PIM, sklepowe i kasowe",
+            "Jedno otwarte API, bez opłat licencyjnych",
             "Najpierw pełna kopia, potem tylko zmiany",
-            "Sprawdź swoje połączenie bezpłatnym testem zgodności"
+            "Bezpłatne oznaczenie „Zgodne z Open Brand Exchange”"
           ],
-          "cta": "Przeczytaj przewodnik dla programistów"
+          "cta": "Dla portali i partnerów"
         }
       ],
       "portalsEyebrow": "Otwarty dla każdego portalu",
       "portalsTitle": "Masz już portal? Podłącz go do standardu.",
-      "portalsLead": "Open Brand Exchange to nie jeden program. Każdy portal, który obsługuje protokół i przechodzi test zgodności, jest zgodny, a oprogramowanie sprzedawców czyta go jak każdy inny.",
+      "portalsLead": "Każdy portal lub system obsługujący standard działa z każdym systemem sprzedawcy, który także go obsługuje.",
       "portalTypes": [
         {
           "h": "Portale marek i B2B",
-          "p": "Portal marki, sklep B2B lub platforma hurtowa dodaje API OBX do tego, co już robi. Jej marki docierają wtedy do każdego systemu sprzedawcy, który obsługuje standard."
+          "p": "Dodaj API OBX do tego, co już robisz, a Twoje marki dotrą do każdego systemu sprzedawcy."
         },
         {
           "h": "Portale zdjęć i systemy DAM",
-          "p": "Portale fotograficzne, banki zdjęć i systemy DAM ze zdjęciami produktów publikują zdjęcia według artykułu: każde zdjęcie powiązane z produktem, kolorem i EAN, z wersjami webowymi, prawami do użycia i datami embarga. Wdrażają stronę odczytu protokołu, a oprogramowanie sprzedawców pobiera zdjęcia jak z każdego innego portalu."
+          "p": "Publikuj zdjęcia produktów według artykułu, koloru i EAN, z wersjami webowymi, prawami do użycia i datami embarga."
         },
         {
           "h": "Systemy PIM i ERP",
-          "p": "PIM lub ERP, w którym są dane artykułów marki, może je publikować bezpośrednio: skład surowcowy, zalecenia pielęgnacji, rozmiary i EAN w standardowym formacie, bez osobnego portalu."
+          "p": "Publikuj skład surowcowy, zalecenia pielęgnacji, rozmiary i EAN bezpośrednio z systemu, w którym się znajdują."
         }
       ],
-      "portalsSteps": [
-        "Przeczytaj specyfikację i wczytaj fikcyjną markę testową Kestrel",
-        "Udostępnij discovery, kanał zmian, produkty i zdjęcia przez API",
-        "Uruchom bezpłatny test zgodności: jeśli przejdzie, jesteś zgodny"
+      "portalsCta": "Zgodność czy partnerstwo",
+      "heroChecks": [
+        "Bezpłatny i otwarty, bez opłat za sprzedawcę",
+        "Wszyscy Twoi sprzedawcy naraz",
+        "Zaczyna od Twojego Excela lub systemu",
+        "Zdjęcia razem z prawami do użycia",
+        "Bez uzależnienia: Twoje dane pozostają Twoje"
       ],
-      "portalsCta": "Zgodność czy partnerstwo"
+      "devRepos": [
+        {
+          "name": "spec",
+          "d": "Specyfikacja, schematy i dane testowe"
+        },
+        {
+          "name": "obx-go",
+          "d": "SDK dla Go, narzędzie obx i test zgodności"
+        },
+        {
+          "name": "node-ts",
+          "d": "Portal dla Cloudflare Workers"
+        },
+        {
+          "name": "node-go",
+          "d": "Portal dla Docker i Google Cloud Run"
+        },
+        {
+          "name": "node-php",
+          "d": "Portal dla zwykłego hostingu"
+        },
+        {
+          "name": "admin-ui",
+          "d": "Interfejs WWW każdego portalu"
+        }
+      ],
+      "devQuickstart": "OBX w 10 minut",
+      "promptTitle": "Zbuduj to z asystentem AI",
+      "promptP": "Skopiuj prompt do Claude, ChatGPT lub Cursor, uzupełnij część w nawiasach i pozwól mu napisać kod zgodnie ze specyfikacją.",
+      "prompts": [
+        {
+          "h": "Eksport z Twojego systemu",
+          "note": "Dla marek oraz dostawców ERP i PIM: products.csv i nazwy zdjęć."
+        },
+        {
+          "h": "Odczyt OBX w Twoim oprogramowaniu",
+          "note": "Dla dostawców oprogramowania sklepowego, PIM i kasowego: kanał zmian i zdjęcia."
+        }
+      ],
+      "scopeLabel": "Kategorie",
+      "scopeNow": "Wersja 0.2: odzież, obuwie, torebki i bagaż",
+      "scopeNext": "Dom i sport: w przygotowaniu dla 0.3"
     },
     "pages": {
       "brandsH1": "Ustaw raz. Dla wszystkich sprzedawców naraz.",
@@ -1237,6 +1289,8 @@
     "tiersNote": "Proponowane opłaty na 2027 rok, ostateczne po utworzeniu fundacji. Opłata obejmuje wyłącznie miejsce na liście. Standard, test i oprogramowanie pozostają bezpłatne dla wszystkich, a partnerzy nie mają w sprawie standardu więcej do powiedzenia niż ktokolwiek inny.",
     "partnerCta": "Zostań partnerem",
     "mailSubject": "Oficjalny partner",
-    "listTitle": "Oficjalni partnerzy"
+    "listTitle": "Dostawcy",
+    "feesNote": "Opłaty zaczną obowiązywać po utworzeniu fundacji. Do tego czasu nikt nie płaci i nie są wysyłane faktury; napisz do nas, aby zgłosić zainteresowanie.",
+    "interestCta": "Zgłoś zainteresowanie"
   }
 }
