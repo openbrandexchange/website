@@ -1,0 +1,20 @@
+// The website's "Label" tokens (website/src/styles/global.css, light scheme): black on warm paper,
+// square corners, solid black rules, monospace for labels and data, one signal-red accent.
+export const theme = {
+  bg: "#f7f6f2",
+  bgAlt: "#efede6",
+  surface: "#ffffff",
+  surface2: "#f1efe9",
+  fg: "#111111",
+  fg2: "#3a3935",
+  muted: "#5f5d57",
+  line: "rgba(17, 17, 17, 0.12)",
+  lineStrong: "rgba(17, 17, 17, 0.85)",
+  accent: "#cf3a24",
+  accentFg: "#b3301c",
+  accentSoft: "#fbe6e1",
+  ink: "#111110",
+  inkFg: "#f4f2ec",
+  font: '"Inter Tight", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif',
+  mono: '"JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace',
+};

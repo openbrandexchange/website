@@ -1,0 +1,157 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "Chez presque chaque revendeur, quelqu’un copie des tableurs|et ressaisit les données produit, marque après marque."
+    },
+    {
+      "id": "rush",
+      "caption": "Et chaque nouvelle collection est une course contre la montre."
+    },
+    {
+      "id": "idea",
+      "caption": "Quand tout le monde structure les données de la même façon, *tout le monde y gagne.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "Une marque part de ce qu’elle a déjà :|les données produit de son PIM, de son ERP ou d’Excel, et ses photos produit."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange les place dans une structure fixe,|la même pour chaque marque.|Y compris les visuels, avec leurs droits d’usage."
+    },
+    {
+      "id": "out",
+      "caption": "Les revendeurs les reçoivent directement dans leur boutique en ligne, leur PIM, leur caisse ou leur ERP,|ou les téléchargent dans le navigateur."
+    },
+    {
+      "id": "after",
+      "caption": "Ensuite, la nouvelle collection est en ligne d’elle-même."
+    },
+    {
+      "id": "once",
+      "caption": "Une seule mise en œuvre, et tout le monde en profite *pendant des années.*",
+      "onScreen": true
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange. Gratuit et ouvert, pour les marques et les revendeurs.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Aujourd’hui",
+      "idea": "L’idée",
+      "in": "Entrée",
+      "standard": "Le standard ouvert",
+      "out": "Sortie",
+      "after": "Ensuite",
+      "once": "Une fois"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Réf.",
+          "Couleur",
+          "Taille",
+          "Tissu"
+        ],
+        [
+          "SKU",
+          "Variante",
+          "EAN",
+          "Matière"
+        ],
+        [
+          "Article",
+          "Coul.",
+          "T.",
+          "Compo."
+        ]
+      ],
+      "target": "Notre boutique",
+      "brand": "Marque {n} sur 24",
+      "toEnter": "Articles à saisir"
+    },
+    "flow": {
+      "inTitle": "Entrée",
+      "inLead": "Ce qu'une marque apporte",
+      "inItems": [
+        "Données produit issues du PIM, de l'ERP ou d'Excel",
+        "Photos produit"
+      ],
+      "stdTitle": "Le standard ouvert",
+      "stdLead": "Une structure fixe pour chaque marque",
+      "outTitle": "Sortie",
+      "outLead": "Ce que reçoivent les revendeurs",
+      "outItems": [
+        "Boutique en ligne",
+        "PIM",
+        "Caisse et ERP",
+        "Téléchargements dans le navigateur"
+      ],
+      "fields": [
+        "Article",
+        "Variante",
+        "EAN",
+        "Matières",
+        "Entretien",
+        "Dimensions",
+        "Droits visuels"
+      ],
+      "products": [
+        {
+          "name": "Veste de terrain",
+          "variant": "Olive · M",
+          "ean": "2041000000117",
+          "materials": "65 % coton, 35 % polyester",
+          "care": "Lavage machine 30 °C",
+          "dimensions": "Longueur dos 74 cm",
+          "rights": "Web, print"
+        },
+        {
+          "name": "Lampe de table",
+          "variant": "Laiton",
+          "ean": "2041000000285",
+          "materials": "Laiton, abat-jour en lin",
+          "care": "Dépoussiérer à sec",
+          "dimensions": "H 52 cm · Ø 30 cm",
+          "rights": "Web, réseaux sociaux"
+        },
+        {
+          "name": "Chaussure de trail",
+          "variant": "Bleu · 42",
+          "ean": "2041000000353",
+          "materials": "Mesh, semelle caoutchouc",
+          "care": "Essuyer avec un chiffon",
+          "dimensions": "Semelle 27 cm",
+          "rights": "Web, print"
+        },
+        {
+          "name": "Machine à expresso",
+          "variant": "Noir mat",
+          "ean": "2041000000421",
+          "materials": "Acier inoxydable",
+          "care": "Détartrer chaque mois",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Web, print, réseaux sociaux"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Notre boutique en ligne",
+      "title": "Nouvelle collection",
+      "online": "En ligne",
+      "toEnter": "Articles à saisir"
+    },
+    "once": {
+      "year": "Année {n}"
+    },
+    "end": {
+      "line": "Gratuit et ouvert, pour les marques et les revendeurs",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

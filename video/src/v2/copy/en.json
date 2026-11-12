@@ -1,0 +1,157 @@
+{
+  "voice": [
+    {
+      "id": "before",
+      "caption": "At almost every retailer, someone copies spreadsheets|and retypes product data, brand by brand."
+    },
+    {
+      "id": "rush",
+      "caption": "And every new collection is a rush."
+    },
+    {
+      "id": "idea",
+      "caption": "When everyone structures data the same way, *everyone wins.*",
+      "onScreen": true
+    },
+    {
+      "id": "in",
+      "caption": "A brand starts with what it already has:|product data from its PIM, ERP or Excel, and its product photos."
+    },
+    {
+      "id": "standard",
+      "caption": "Open Brand Exchange puts it in one fixed structure,|the same for every brand.|Including the images, with their usage rights."
+    },
+    {
+      "id": "out",
+      "caption": "Retailers receive it straight into their webshop, PIM, POS or ERP,|or download it in the browser."
+    },
+    {
+      "id": "after",
+      "caption": "Then the new collection goes online by itself."
+    },
+    {
+      "id": "once",
+      "caption": "Implement once, and everyone benefits *for years.*",
+      "onScreen": true
+    },
+    {
+      "id": "end",
+      "caption": "Open Brand Exchange. Free and open, for brands and retailers.",
+      "onScreen": true
+    }
+  ],
+  "ui": {
+    "chapters": {
+      "before": "Today",
+      "idea": "The idea",
+      "in": "In",
+      "standard": "The open standard",
+      "out": "Out",
+      "after": "After",
+      "once": "Once"
+    },
+    "before": {
+      "sheets": [
+        [
+          "Art. no.",
+          "Colour",
+          "Size",
+          "Fabric"
+        ],
+        [
+          "SKU",
+          "Variant",
+          "EAN",
+          "Material"
+        ],
+        [
+          "Item",
+          "Col.",
+          "Sz.",
+          "Comp."
+        ]
+      ],
+      "target": "Our webshop",
+      "brand": "Brand {n} of 24",
+      "toEnter": "Articles to enter"
+    },
+    "flow": {
+      "inTitle": "In",
+      "inLead": "What a brand puts in",
+      "inItems": [
+        "Product data from PIM, ERP or Excel",
+        "Product photos"
+      ],
+      "stdTitle": "The open standard",
+      "stdLead": "One fixed structure for every brand",
+      "outTitle": "Out",
+      "outLead": "What retailers get",
+      "outItems": [
+        "Webshop",
+        "PIM",
+        "POS and ERP",
+        "Downloads in the browser"
+      ],
+      "fields": [
+        "Article",
+        "Variant",
+        "EAN",
+        "Materials",
+        "Care",
+        "Dimensions",
+        "Image rights"
+      ],
+      "products": [
+        {
+          "name": "Field jacket",
+          "variant": "Olive · M",
+          "ean": "2041000000117",
+          "materials": "65% cotton, 35% polyester",
+          "care": "Machine wash 30 °C",
+          "dimensions": "Back length 74 cm",
+          "rights": "Web, print"
+        },
+        {
+          "name": "Table lamp",
+          "variant": "Brass",
+          "ean": "2041000000285",
+          "materials": "Brass, linen shade",
+          "care": "Dust with a dry cloth",
+          "dimensions": "H 52 cm · Ø 30 cm",
+          "rights": "Web, social media"
+        },
+        {
+          "name": "Trail running shoe",
+          "variant": "Blue · 42",
+          "ean": "2041000000353",
+          "materials": "Mesh, rubber sole",
+          "care": "Wipe clean",
+          "dimensions": "Insole 27 cm",
+          "rights": "Web, print"
+        },
+        {
+          "name": "Espresso machine",
+          "variant": "Matt black",
+          "ean": "2041000000421",
+          "materials": "Stainless steel",
+          "care": "Descale monthly",
+          "dimensions": "33 × 24 × 42 cm",
+          "rights": "Web, print, social media"
+        }
+      ]
+    },
+    "after": {
+      "shop": "Our webshop",
+      "title": "New collection",
+      "online": "Online",
+      "toEnter": "Articles to enter"
+    },
+    "once": {
+      "year": "Year {n}"
+    },
+    "end": {
+      "line": "Free and open, for brands and retailers",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

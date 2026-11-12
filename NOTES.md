@@ -89,6 +89,15 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
     `public/video/obx-{en,nl}.{mp4,webm,jpg}` and a 9:16 cut to `video/out/` (not committed). The
     home page shows Dutch for nl and English for every other language, with `preload="none"`, so
     nothing but the poster loads until the visitor presses play (an end-to-end test checks this).
+    **Version 2** (2026-11, in review, not on the site yet) sits next to it: compositions
+    `ExplainerV2-16x9` / `ExplainerV2-9x16`, source in `video/src/v2/`, voice in
+    `video/public/voice-v2/`. Label style, industry-neutral (jacket, lamp, shoe, coffee machine as
+    line drawings), no jargon, ±60 s: before → "when everyone structures data the same way,
+    everyone wins" → In → the open standard → Out → after → "implement once" → end card. Voice
+    EN Alice (British, calm), NL Serge de Beer; DE and FR are caption-only cuts of the English voice
+    (each caption has the same number of `|` chunks as the English line; chunk times come from the
+    ElevenLabs alignment, `npm run voice:v2:en` / `voice:v2:nl`). `npm run render:v2` writes
+    `video/out/v2/` (not committed); `npm run stills:v2 -- en 16x9` writes review stills.
 
 18. **What the law requires (spec 0.2).** The retailers page has a table under the care-label example
     (`retailers.label.law`) with what EU law makes mandatory (fibre composition per component, also
