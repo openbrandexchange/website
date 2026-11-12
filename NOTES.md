@@ -57,18 +57,22 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
 11. **Switch-kit e-mails.** Written for every language; the retailers page shows the page language
     plus English; downloads are generated at build time (`/downloads/switch-kit-<lang>.txt`).
 12. **Provider texts** use the LocalizedText fallback (reader's language → en → first).
-13. **Fonts.** The site serves Inter (variable, OFL-1.1) from its own origin via
-    `@fontsource-variable/inter`, with `unicode-range` subsets so a page only loads the scripts it
-    uses; the Latin file is preloaded. No third-party requests. The brochures and social images
-    embed Inter too, so Greek and Cyrillic render the same everywhere.
+13. **Fonts.** The site serves Inter Tight (text and headings) and JetBrains Mono (labels, codes and
+    data), both variable and OFL-1.1, from its own origin via `@fontsource-variable/*`, with
+    `unicode-range` subsets so a page only loads the scripts it uses. No third-party requests, and
+    no `data:` fonts (`assetsInlineLimit: 0`; the CSP allows fonts from 'self' only). The brochures,
+    social images and the explainer video still embed Inter (see open points).
 
-14. **Design system (2026-09-29 redesign).** One stylesheet (`src/styles/global.css`): tokens for
-    colour, a 4 px spacing scale, a 12-column grid in a 1240 px container, Inter with tight display
-    tracking. Colour: deep ink for dark bands, white and a cool near-white for light bands, and one
-    accent, cobalt blue `#2450e8`, for actions, links and key highlights only. Blue was chosen over
-    the earlier green because it reads as infrastructure, stays clearly apart from the admin-ui's
-    own teal in the screenshots, and keeps AA contrast as a button fill and as link text on white.
-    Pages alternate dark and light full-bleed bands. No icons in circles, no gradient blobs.
+14. **Design system: "Label" (2026-11-12, replaces the cobalt redesign of 2026-09-29).** One
+    stylesheet (`src/styles/global.css`). The idea is a woven garment label: black on warm paper
+    (`#f7f6f2`), square corners, solid black rules, monospace for eyebrows, the status pill and
+    data, and one accent, signal red `#cf3a24` (buttons, links, the square before an eyebrow).
+    The mark is a label with notched ends and "OBX" (`src/components/Logo.astro`); the favicon is
+    the same label. Chosen because the site speaks to fashion brands first and should look like
+    their world while staying plainly professional. Contrast: white on the red is 4.9:1, the red
+    as text on paper 4.5:1 or more (`--accent-fg` darker still). Dark bands are near-black, not
+    navy. Still: no icons in circles, no gradient blobs.
+
 15. **Product screenshots** come from the real admin-ui in mock mode
     (`npm run capture:screenshots`, en, nl, de and fr; other languages show English). For the
     screenshots only, the spec's fixture swatches are redrawn as simple garment illustrations
@@ -104,6 +108,10 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
     directory is validated against the current (v0.2) Directory schema.
 
 ## Open points (tracked here, not in the code)
+
+- **Old style in generated media.** The brochures (`scripts/brochure/template.mjs`), the social images
+  in `public/og/` and the explainer video still use the cobalt mark and Inter. Rebuild them in the
+  Label style (`npm run build:brochures`, the OG script, `video/`).
 
 - **Native review of 21 languages.** en, nl, de and fr were written with extra care; the other 21
   are complete and on-glossary but machine-quality. Irish (ga) and Maltese (mt) first.

@@ -1,15 +1,14 @@
 ---
-// The mark: two offset bars that pass each other, one per side of the exchange.
+// The mark: a woven garment label with "OBX", the notched ends cut like a folded label.
+// The label takes the text colour; the letters punch through in the background colour.
 interface Props {
   size?: number;
 }
 const { size = 26 } = Astro.props;
+const width = Math.round((size * 44) / 26);
 ---
 
-<svg class="mark" viewBox="0 0 32 32" width={size} height={size} aria-hidden="true" focusable="false">
-  <rect width="32" height="32" rx="8" fill="#2450e8"></rect>
-  <path d="M8 12.5h12.5" stroke="#fff" stroke-width="3" stroke-linecap="round"></path>
-  <path d="m18.5 8.5 4 4-4 4" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-  <path d="M24 19.5H11.5" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".62"></path>
-  <path d="m13.5 15.5-4 4 4 4" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".62"></path>
+<svg class="mark" viewBox="0 0 44 26" width={width} height={size} aria-hidden="true" focusable="false">
+  <path class="mark-label" d="M0 0h44l-4.5 13L44 26H0l4.5-13z"></path>
+  <text class="mark-text" x="22" y="17.1" text-anchor="middle">OBX</text>
 </svg>
