@@ -1,0 +1,204 @@
+{
+  "voice": [
+    {
+      "id": "problem",
+      "text": "A brand sends photos and product data to dozens of retailers, each in a different way."
+    },
+    {
+      "id": "portal",
+      "text": "With Open Brand Exchange, the brand has one portal, on its own domain."
+    },
+    {
+      "id": "buyers",
+      "text": "Buyers search it, paste EAN codes from an order, and download images and a spreadsheet of article data."
+    },
+    {
+      "id": "api",
+      "text": "Their software reads the same content through one API: a full copy first, then only what changed, including withdrawals."
+    },
+    {
+      "id": "label",
+      "text": "The care label comes along as data, with the EAN of every size."
+    },
+    {
+      "id": "labelLaw",
+      "text": "In the EU, fibre composition is mandatory, also online before purchase."
+    },
+    {
+      "id": "luggage",
+      "text": "Bags and luggage get dimensions, weight and volume, measured the same way by every brand."
+    },
+    {
+      "id": "rights",
+      "text": "Every image carries its usage rights, its embargo date, and whether it was made with AI."
+    },
+    {
+      "id": "open",
+      "text": "The specification is open. The portal comes in three free editions that pass the same 61 automated checks."
+    },
+    {
+      "id": "foundation",
+      "text": "The standard is run by the Open Brand Exchange Foundation, in formation."
+    },
+    {
+      "id": "cta",
+      "text": "Open Brand Exchange. For brands and retailers."
+    }
+  ],
+  "ui": {
+    "problem": {
+      "eyebrow": "Today",
+      "title": "Every retailer gets it a different way.",
+      "kinds": {
+        "mail": "Email",
+        "link": "Transfer link",
+        "sheet": "Spreadsheet",
+        "portal": "Retailer portal"
+      },
+      "items": {
+        "mail": [
+          "Photos AW26, part 2",
+          "Fwd: new colours",
+          "Re: missing images"
+        ],
+        "link": [
+          "Images_AW26.zip",
+          "Link expires soon",
+          "This link is no longer available"
+        ],
+        "sheet": [
+          "articles_final_v3.xlsx",
+          "EAN list (new).csv",
+          "Product data template.xlsx"
+        ],
+        "portal": [
+          "Upload your images here",
+          "Log in to the supplier portal",
+          "Fill in all required fields"
+        ]
+      }
+    },
+    "portal": {
+      "eyebrow": "One portal",
+      "title": "On the brand's own domain.",
+      "domain": "brands.yourbrand.com",
+      "downloads": "Buyers download",
+      "chips": [
+        "Original",
+        "Web (2000 px)",
+        "Square",
+        "Article data (CSV)"
+      ]
+    },
+    "api": {
+      "eyebrow": "One API",
+      "title": "Their software fetches the same content.",
+      "steps": [
+        "A full copy",
+        "Then only what changed"
+      ],
+      "software": [
+        "Webshop",
+        "PIM"
+      ],
+      "withdrawn": "withdrawn"
+    },
+    "label": {
+      "eyebrow": "Article data",
+      "title": "The care label, as data.",
+      "product": "Trail Running Shorts",
+      "colour": "Black",
+      "composition": "Composition",
+      "outer": "Outer",
+      "lining": "Lining",
+      "care": "Care",
+      "origin": "Made in",
+      "country": "Vietnam",
+      "sizes": "Sizes and EAN",
+      "size": "Size",
+      "codeLabel": "The same article in the API",
+      "fibres": {
+        "recycled_polyester": "recycled polyester",
+        "polyamide": "polyamide",
+        "elastane": "elastane"
+      },
+      "careText": {
+        "wash_30": "Machine wash at 30 °C",
+        "do_not_bleach": "Do not bleach",
+        "do_not_tumble_dry": "Do not tumble dry",
+        "do_not_iron": "Do not iron",
+        "do_not_dry_clean": "Do not dry clean"
+      },
+      "law": "Fibre composition is mandatory in the EU, also online before purchase.",
+      "lawSource": "Regulation (EU) No 1007/2011"
+    },
+    "luggage": {
+      "eyebrow": "Bags and luggage",
+      "title": "Measured the same way by every brand.",
+      "product": "Hardshell Cabin Spinner",
+      "height": "55 cm",
+      "width": "40 cm",
+      "depth": "20 cm",
+      "features": [
+        "4 wheels",
+        "TSA lock",
+        "Expandable",
+        "2.6 kg",
+        "36 l"
+      ],
+      "note": "Outer dimensions, including wheels and handles, with the handles retracted."
+    },
+    "rights": {
+      "eyebrow": "Image rights",
+      "title": "The rights travel with every image.",
+      "file": "KO-1003_RST_3.jpg",
+      "rows": [
+        {
+          "label": "Usage rights",
+          "value": "Webshop · Marketplaces · Social"
+        },
+        {
+          "label": "Embargo until",
+          "value": "1 Feb 2027, 09:00"
+        },
+        {
+          "label": "AI-generated",
+          "value": "Yes"
+        }
+      ]
+    },
+    "open": {
+      "eyebrow": "Open and neutral",
+      "title": "An open standard, not a platform.",
+      "facts": [
+        {
+          "v": "Open",
+          "l": "specification, CC-BY-4.0"
+        },
+        {
+          "v": "3",
+          "l": "free portal editions"
+        },
+        {
+          "v": "61",
+          "l": "automated conformance checks"
+        },
+        {
+          "v": "25",
+          "l": "languages"
+        }
+      ],
+      "editions": [
+        "Portal for Cloudflare",
+        "Portal for Google Cloud & Docker",
+        "Portal for web hosting"
+      ],
+      "foundation": "Open Brand Exchange Foundation (in formation)"
+    },
+    "end": {
+      "line": "Free to use. Yours to host.",
+      "audience": "For brands and retailers",
+      "url": "openbrandexchange.com"
+    }
+  }
+}

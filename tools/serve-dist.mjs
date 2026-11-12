@@ -13,6 +13,7 @@ const types = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8',
   '.json': 'application/json', '.xml': 'application/xml; charset=utf-8', '.txt': 'text/plain; charset=utf-8',
   '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.avif': 'image/avif', '.woff2': 'font/woff2', '.jpg': 'image/jpeg', '.pdf': 'application/pdf', '.ico': 'image/x-icon',
+  '.mp4': 'video/mp4', '.webm': 'video/webm',
 };
 
 /**
@@ -69,6 +70,17 @@ createServer((req, res) => {
       if (detached.has(k.toLowerCase())) continue;
       headers[k] = k in headers && k !== 'Content-Type' ? `${headers[k]}, ${v}` : v;
     }
+  }
+  // Byte ranges, as Cloudflare Pages serves them: browsers request video in ranges.
+  const range = status === 200 && /^bytes=(\d*)-(\d*)$/.exec(req.headers.range ?? '');
+  if (range) {
+    const size = statSync(file).size;
+    const start = range[1] ? Number(range[1]) : Math.max(0, size - Number(range[2]));
+    const end = range[1] && range[2] ? Math.min(Number(range[2]), size - 1) : size - 1;
+    if (start > end || start >= size) return void res.writeHead(416, { 'Content-Range': `bytes */${size}` }).end();
+    res.writeHead(206, { ...headers, 'Accept-Ranges': 'bytes', 'Content-Range': `bytes ${start}-${end}/${size}`, 'Content-Length': end - start + 1 });
+    res.end(req.method === 'HEAD' ? undefined : readFileSync(file).subarray(start, end + 1));
+    return;
   }
   res.writeHead(status, headers);
   res.end(req.method === 'HEAD' ? undefined : readFileSync(file));

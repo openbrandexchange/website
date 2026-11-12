@@ -74,6 +74,13 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
     over. The status pill shows "v0.1" and, on very wide screens, its full label, except in the
     languages where the label would not fit (listed in `global.css`). An end-to-end test measures
     the header in all 25 languages; shorten a label rather than loosening the test.
+17. **Explainer video** (`video/`, Remotion, its own package). One beat per point, timed by the
+    voice-over (ElevenLabs, `npm run voice:en` / `voice:nl`; cost logged in `video/.drafts/`), no
+    music, captions burned in. It uses the real portal screenshots and draws everything else; facts
+    only (the label is spec fixture KT-2001, the suitcase KO-1008). `npm run render` writes
+    `public/video/obx-{en,nl}.{mp4,webm,jpg}` and a 9:16 cut to `video/out/` (not committed). The
+    home page shows Dutch for nl and English for every other language, with `preload="none"`, so
+    nothing but the poster loads until the visitor presses play (an end-to-end test checks this).
 
 ## Open points (tracked here, not in the code)
 

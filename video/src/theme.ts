@@ -1,0 +1,45 @@
+// The website's design tokens (website/src/styles/global.css): deep ink for dark bands, white and a
+// cool near-white for light bands, neutral greys, and one accent, cobalt blue, for key highlights.
+export const theme = {
+  ink: "#0a1020",
+  inkPanel: "#151e35",
+  inkFg: "#f3f5fa",
+  inkFg2: "#b9c1d4",
+  inkMuted: "#a3adc2",
+  inkLine: "rgba(255, 255, 255, 0.1)",
+  inkLineStrong: "rgba(255, 255, 255, 0.2)",
+  inkAccent: "#8ea9ff",
+  inkGrid: "rgba(255, 255, 255, 0.035)",
+
+  paper: "#f5f7fa",
+  surface: "#ffffff",
+  surface2: "#f0f3f7",
+  fg: "#0a1020",
+  fg2: "#3d4659",
+  muted: "#5b6477",
+  line: "rgba(10, 16, 32, 0.1)",
+  lineStrong: "rgba(10, 16, 32, 0.18)",
+  accent: "#2450e8",
+  accentSoft: "#eaf0ff",
+  accentFg: "#1e46d6",
+  ok: "#107a4a",
+  okSoft: "#e3f4ea",
+  warnSoft: "#fff4d6",
+  warnFg: "#6b4e00",
+
+  codeInk: "#0b1122",
+  codeFg: "#d8deeb",
+  tKey: "#9ab4ff",
+  tStr: "#9fdcb3",
+  tNum: "#f4c27a",
+  tKw: "#f29db4",
+  tCom: "#8791a8",
+
+  font: '"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif',
+  mono: 'ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace',
+  features: '"cv11", "ss03"',
+  shadow: "0 1px 2px rgba(10, 16, 32, 0.05), 0 4px 12px rgba(10, 16, 32, 0.05), 0 0 0 1px rgba(10, 16, 32, 0.07)",
+  shadowLg:
+    "0 2px 4px rgba(10, 16, 32, 0.04), 0 12px 32px rgba(10, 16, 32, 0.1), 0 40px 80px -20px rgba(10, 16, 32, 0.18), 0 0 0 1px rgba(10, 16, 32, 0.08)",
+  shadowDark: "0 12px 32px rgba(0, 0, 0, 0.4), 0 40px 80px -20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1)",
+};

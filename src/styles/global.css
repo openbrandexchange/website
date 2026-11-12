@@ -2235,6 +2235,30 @@ input[type='search'] {
   font-size: 0.9375rem;
 }
 
+/* The explainer video on the home page: 16:9, framed like the screenshots, loaded only on play. */
+.video-frame {
+  margin: 0 auto;
+  max-width: 60rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--ink);
+  box-shadow: var(--shadow-lg);
+}
+.video-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: var(--ink);
+}
+/* Chromium does not match :focus-visible on a video or on its own controls (play, timeline,
+ * volume); the ring sits inside the frame. */
+.video-frame video:focus,
+.video-frame video:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: -4px;
+}
+
 /* The care-label example on the retailers page: the label as data, next to its API form. */
 .care-label {
   margin: 0 0 var(--s-5);

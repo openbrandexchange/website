@@ -146,3 +146,34 @@ test('the desktop header stays on one row in every language', async ({ page, isM
   }
   expect(wrapped).toEqual([]);
 });
+
+test('the home video loads nothing until it is played, and plays under the CSP', async ({ page, browserName }) => {
+  const media: string[] = [];
+  page.on('request', (r) => {
+    if (/\/video\/.*\.(mp4|webm)$/.test(r.url())) media.push(r.url());
+  });
+  await page.addInitScript(() => {
+    (window as unknown as { cspViolations: string[] }).cspViolations = [];
+    document.addEventListener('securitypolicyviolation', (e) => {
+      (window as unknown as { cspViolations: string[] }).cspViolations.push(`${e.violatedDirective} ${e.blockedURI}`);
+    });
+  });
+  for (const [path, file] of [['/nl/', '/video/obx-nl'], ['/de/', '/video/obx-en']] as const) {
+    await page.goto(path);
+    const video = page.locator('.home-video video');
+    await expect(video).toHaveAttribute('preload', 'none');
+    await expect(video).toHaveAttribute('poster', `${file}.jpg`);
+    await expect(video.locator('source[type="video/mp4"]')).toHaveAttribute('src', `${file}.mp4`);
+    await video.scrollIntoViewIfNeeded();
+    await page.waitForLoadState('networkidle');
+    expect(media, `${path}: no video bytes before play`).toEqual([]);
+  }
+  test.skip(browserName !== 'chromium', 'playback is checked once');
+  await page.locator('.home-video video').evaluate((v: HTMLVideoElement) => {
+    v.muted = true;
+    return v.play();
+  });
+  await expect.poll(() => page.locator('.home-video video').evaluate((v: HTMLVideoElement) => v.currentTime)).toBeGreaterThan(0);
+  expect(media.length).toBeGreaterThan(0);
+  expect(await page.evaluate(() => (window as unknown as { cspViolations: string[] }).cspViolations)).toEqual([]);
+});

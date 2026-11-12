@@ -23,6 +23,9 @@ const faq = t.faq.items.slice(0, 4);
 const split = h.h1.search(/[.!?]\s/);
 const h1 = split > 0 ? [h.h1.slice(0, split + 1) + ' ', h.h1.slice(split + 2)] : [h.h1, ''];
 const pages: PageKey[] = ['brands', 'retailers'];
+// The explainer video (video/, rendered with Remotion): Dutch for Dutch, English for every other
+// language. Captions are burned in; nothing loads until the visitor presses play (preload="none").
+const video = `/video/obx-${lang === 'nl' ? 'nl' : 'en'}`;
 ---
 
 <section class="band band-ink grid-bg home-hero" aria-labelledby="hero-title">
@@ -51,6 +54,21 @@ const pages: PageKey[] = ['brands', 'retailers'];
       <Screenshot name="portal-catalog" lang={lang} alt={t.site.shots.portalCatalog} sizes="(min-width: 1024px) 860px, calc(100vw - 32px)" eager />
       <CodeWindow class="hero-code" code={heroChanges} lang="json" title="GET /obx/v1/changes" label={h.codeCaption} />
     </div>
+  </div>
+</section>
+
+<section class="band home-video" aria-labelledby="video-title">
+  <div class="wrap">
+    <header class="section-head" data-reveal>
+      <h2 id="video-title">{h.videoTitle}</h2>
+      <p class="lead">{h.videoNote}</p>
+    </header>
+    <figure class="video-frame" data-reveal="2">
+      <video controls preload="none" playsinline poster={`${video}.jpg`} width="1280" height="720" aria-labelledby="video-title">
+        <source src={`${video}.webm`} type="video/webm" />
+        <source src={`${video}.mp4`} type="video/mp4" />
+      </video>
+    </figure>
   </div>
 </section>
 
