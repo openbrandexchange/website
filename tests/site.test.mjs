@@ -252,9 +252,9 @@ test('every error code has a page at its problem type URL, with its HTTP status'
 });
 
 test('the schemas are served at the address of their $id, and the API reference with them', { skip: !built && 'dist/ not built' }, () => {
-  // Every version stays served: the frozen 0.1 copies next to the current 0.2 schemas.
+  // Only the current version is served; older version paths redirect (functions/_middleware.js).
   const versions = readdirSync(new URL('schemas/', dist)).filter((d) => /^v\d+\.\d+$/.test(d));
-  for (const v of ['v0.1', 'v0.2']) assert.ok(versions.includes(v), `schemas/${v}/ is served`);
+  assert.deepEqual(versions, ['v0.2']);
   for (const v of versions) {
     const files = readdirSync(new URL(`schemas/${v}/`, dist)).filter((f) => f.endsWith('.json'));
     assert.ok(files.length >= 40, `${v}: ${files.length} schemas`);

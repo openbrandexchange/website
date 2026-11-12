@@ -29,7 +29,7 @@ test('the API reference runs under its own policy: the site-wide header is detac
 });
 
 test('a schema is served at the address of its $id, the current and the frozen version', async ({ request }) => {
-  for (const path of ['/schemas/v0.2/Problem.json', '/schemas/v0.2/Measurements.json', '/schemas/v0.1/Problem.json']) {
+  for (const path of ['/schemas/v0.2/Problem.json', '/schemas/v0.2/Measurements.json']) {
     const res = await request.get(path);
     expect(res.ok(), path).toBeTruthy();
     expect((await res.json()).$id).toBe(`https://openbrandexchange.com${path}`);

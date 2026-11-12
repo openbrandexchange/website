@@ -5,6 +5,8 @@
 //    Accept-Language, else Dutch, the same rule as the home address (src/lib/i18n-core.ts).
 // Everything else passes through unchanged.
 
+import { CURRENT_SCHEMA_VERSION } from './schema-version.js';
+
 /** The page slugs of src/i18n.ts (tests/site.test.mjs checks they match). */
 export const PAGE_SLUGS = [
   'for-brands', 'automation', 'hosting', 'partners', 'for-retailers', 'developers', 'check', 'directory',
@@ -40,6 +42,12 @@ export async function onRequest({ request, next }) {
   const url = new URL(request.url);
   if (url.hostname === 'www.openbrandexchange.com') {
     url.hostname = 'openbrandexchange.com';
+    return Response.redirect(url.toString(), 301);
+  }
+  // 3. Schemas of an earlier version (only the current one is served) redirect to the current one.
+  const old = /^\/(reference\/)?schemas\/(v\d+\.\d+)\/(.*)$/.exec(url.pathname);
+  if (old && old[2] !== CURRENT_SCHEMA_VERSION) {
+    url.pathname = `/${old[1] ?? ''}schemas/${CURRENT_SCHEMA_VERSION}/${old[3]}`;
     return Response.redirect(url.toString(), 301);
   }
   const slug = url.pathname.replace(/^\/+|\/+$/g, '');

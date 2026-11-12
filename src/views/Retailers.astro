@@ -36,6 +36,19 @@ if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });
   <Screenshot slot="visual" name="portal-article" lang={lang} alt={t.site.shots.portalArticle} sizes="(min-width: 1024px) 820px, calc(100vw - 32px)" eager />
 </PageHero>
 
+<section class="band" aria-labelledby="benefits">
+  <div class="wrap split even top">
+    <div class="split-copy">
+      <h2 id="benefits">{c.benefitsTitle}</h2>
+      <ul class="checks">{c.benefits.map((b) => <li>{b}</li>)}</ul>
+    </div>
+    <div class="split-visual">
+      <h3>{c.howTitle}</h3>
+      <ul class="checks">{c.how.map((h) => <li>{h}</li>)}</ul>
+    </div>
+  </div>
+</section>
+
 <section class="band" aria-labelledby="portal">
   <div class="wrap">
     <header class="section-head" data-reveal>

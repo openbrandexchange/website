@@ -41,3 +41,13 @@ test('other addresses pass through, www goes to the apex', async () => {
   assert.equal(www.status, 301);
   assert.equal(www.headers.get('Location'), 'https://openbrandexchange.com/en/');
 });
+
+test('schemas of an earlier version redirect to the current version', async () => {
+  const { CURRENT_SCHEMA_VERSION } = await import('../functions/schema-version.js');
+  for (const [path, to] of [['/schemas/v0.1/Problem.json', `/schemas/${CURRENT_SCHEMA_VERSION}/Problem.json`], ['/reference/schemas/v0.1/Common.json', `/reference/schemas/${CURRENT_SCHEMA_VERSION}/Common.json`]]) {
+    const res = await run(path);
+    assert.equal(res.status, 301, path);
+    assert.equal(res.headers.get('Location'), `https://openbrandexchange.com${to}`);
+  }
+  assert.equal(await (await run(`/schemas/${CURRENT_SCHEMA_VERSION}/Problem.json`)).text(), 'page');
+});
