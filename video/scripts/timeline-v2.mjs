@@ -5,7 +5,7 @@ export const FPS = 30;
 const BEATS = [
   ["before", ["before", "rush"], 0, 0],
   ["idea", ["idea"], 0, 0.1],
-  ["flow", ["in", "standard", "out"], 0, 0.3],
+  ["flow", ["in", "standard", "out"], 0, 0.8],
   ["after", ["after"], 0, 0],
   ["once", ["once"], 0, 0],
   ["dev", ["dev"], 0, 0],
@@ -34,5 +34,5 @@ export const timelineV2 = (locale) => {
   });
   const end = (id) => scenes[id].from + scenes[id].frames;
   // The poster: the full In → standard → Out diagram, just before the flow scene fades out.
-  return { scenes, lines, chunks, end, posterFrame: end("flow") - 16, totalFrames: Math.round(cursor * FPS) };
+  return { scenes, lines, chunks, end, posterFrame: end("flow") - 12, totalFrames: Math.round(cursor * FPS) };
 };

@@ -8,7 +8,7 @@ type Beat = { id: string; lines: LineId[]; minSeconds?: number; extraSeconds?: n
 export const BEATS: Beat[] = [
   { id: "before", lines: ["before", "rush"] },
   { id: "idea", lines: ["idea"], extraSeconds: 0.1 },
-  { id: "flow", lines: ["in", "standard", "out"], extraSeconds: 0.3 },
+  { id: "flow", lines: ["in", "standard", "out"], extraSeconds: 0.8 },
   { id: "after", lines: ["after"] },
   { id: "once", lines: ["once"] },
   { id: "dev", lines: ["dev"] },
@@ -38,6 +38,6 @@ export const buildTimeline = (durations: Record<string, number>) => {
   });
   const total = Math.round(cursor * FPS);
   // The poster: the full In → standard → Out diagram, just before the flow scene fades out.
-  const posterFrame = scenes.flow.from + scenes.flow.frames - 16;
+  const posterFrame = scenes.flow.from + scenes.flow.frames - 12;
   return { scenes, lines, totalFrames: total, posterFrame };
 };
