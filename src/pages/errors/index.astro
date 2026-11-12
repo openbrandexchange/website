@@ -7,7 +7,7 @@ import { specDoc } from '../../i18n';
 const parts = (text: string) => text.split('`').map((s, i) => ({ s, code: i % 2 === 1 }));
 ---
 
-<Reference title="Error codes" description="The problem types of the Open Brand Exchange APIs: every obx_error with its HTTP status and meaning." path="/errors/">
+<Reference title="Error codes" description="The problem types of the Open Brand Exchange APIs: every obx_error with its HTTP status and meaning, and the label completeness warnings." path="/errors/">
   <section class="hero">
     <div class="wrap">
       <h1>Error codes</h1>
@@ -39,6 +39,36 @@ const parts = (text: string) => text.split('`').map((s, i) => ({ s, code: i % 2 
       <p class="prose">
         Source: the error table of <a href={specDoc('docs/protocol.md')}>protocol.md</a>. The OpenAPI descriptions are in the
         <a href="/reference/">API reference</a>.
+      </p>
+    </div>
+  </section>
+  <section class="section" aria-labelledby="warnings">
+    <div class="wrap">
+      <h2 id="warnings">Label completeness warnings</h2>
+      <p class="prose">
+        Since version 0.2, imports and the Ingest API warn when a product misses what its label needs under EU law. The code
+        is in <code>obx_error</code> of an import row with <code>severity: warning</code>, and in
+        <code>warning_details</code> of an Ingest result. A warning never blocks a write or publishing. Software must ignore
+        warning codes it does not know.
+      </p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Code</th><th scope="col">When</th><th scope="col">Column</th></tr></thead>
+          <tbody>
+            {
+              data.warnings.map((w) => (
+                <tr id={w.code}>
+                  <th scope="row"><a href={`/errors/${w.code}/`}><code>{w.code}</code></a></th>
+                  <td>{parts(w.when).map((p) => (p.code ? <code>{p.s}</code> : p.s))}</td>
+                  <td><code>{w.column}</code></td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+      <p class="prose">
+        Source: rule 10 of <a href={specDoc('docs/import-format.md#label-completeness')}>import-format.md</a>.
       </p>
     </div>
   </section>

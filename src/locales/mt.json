@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, paġna ewlenija",
     "copy": "Ikkopja",
     "copied": "Ikkupjat",
-    "draft": "Il-verżjoni 0.1 ħarġet. L-ispeċifikazzjoni u s-software huma ħielsa biex tużahom.",
+    "draft": "Il-verżjoni 0.2 ħarġet. L-ispeċifikazzjoni u s-software huma ħielsa biex tużahom.",
     "footerAbout": "Mod b'xejn u miftuħ għall-marki biex iwasslu ritratti tal-prodotti u data tal-oġġetti lill-bejjiegħa tagħhom.",
     "footerMore": "Aktar",
     "footerSource": "Kodiċi sors u speċifikazzjoni",
@@ -144,7 +144,7 @@
         "p": "Pubblikazzjoni waħda għall-bejjiegħa kollha tiegħek. Ma jkunx hemm aktar trasferimenti ta' fajls, emails b'zips jew integrazzjoni separata għal kull ħanut."
       }
     ],
-    "status": "Open Brand Exchange għadu fil-bidu. Il-verżjoni 0.1 tal-ispeċifikazzjoni u tas-software ħarġet u hija ħielsa biex tużaha. Ma nurux klijenti jew numri li għadhom ma jeżistux.",
+    "status": "Open Brand Exchange għadu fil-bidu. Il-verżjoni 0.2 tal-ispeċifikazzjoni u tas-software ħarġet u hija ħielsa biex tużaha. Ma nurux klijenti jew numri li għadhom ma jeżistux.",
     "statusLink": "Aqra kif huwa ggvernat"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "Il-pass li jmiss",
     "nextHosting": "Agħżel kif tospitah",
-    "nextAutomation": "Ara r-riċetti tal-awtomazzjoni"
+    "nextAutomation": "Ara r-riċetti tal-awtomazzjoni",
+    "labelNote": "Jekk tonqos xi ħaġa li l-liġi titlob fuq it-tikketta, bħall-kompożizzjoni tal-fibri jew il-materjali ta’ żarbuna, Open Brand Exchange iwissik meta ttella’ d-data. Twissija qatt ma twaqqaf il-pubblikazzjoni.",
+    "bagsNote": "Il-bagalji u l-basktijiet issa għandhom qisien (Għ × W × F, piż, volum) u karatteristiċi (roti, serratura, ċinga li tinqala’ …), imkejla bl-istess mod minn kull marka."
   },
   "automation": {
     "h1": "Awtomazzjoni",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Tnixxifx fid-dryer",
         "do_not_iron": "Tgħaddix il-ħadid",
         "do_not_dry_clean": "Tagħmilx dry cleaning"
+      },
+      "law": {
+        "title": "X'titlob il-liġi",
+        "lead": "X'jitlob id-dritt tal-UE għat-tessuti u għax-xedd tas-saqajn, u x'inhu volontarju. Gwida, mhux parir legali.",
+        "head": [
+          "Informazzjoni",
+          "Fl-UE",
+          "Bażi legali"
+        ],
+        "rows": [
+          {
+            "what": "Kompożizzjoni tal-fibri għal kull komponent, f'%",
+            "status": "Obbligatorja, anke online qabel ix-xiri",
+            "basis": "Regolament (UE) Nru 1007/2011"
+          },
+          {
+            "what": "“Fih partijiet mhux tessili ta’ oriġini mill-annimali”",
+            "status": "Obbligatorja meta l-prodott ikollu partijiet bħal dawn",
+            "basis": "Regolament (UE) Nru 1007/2011, Artikolu 12"
+          },
+          {
+            "what": "Il-materjal tal-parti ta’ fuq, tal-inforra u l-qiegħ ta’ ġewwa, u tal-qiegħ ta’ barra tax-xedd tas-saqajn",
+            "status": "Obbligatorju",
+            "basis": "Direttiva 94/11/KE"
+          },
+          {
+            "what": "Struzzjonijiet tal-kura",
+            "status": "Volontarji (prattika komuni; simboli ISO 3758)"
+          },
+          {
+            "what": "Pajjiż tal-oriġini",
+            "status": "Volontarju fl-UE"
+          },
+          {
+            "what": "Ċertifikazzjonijiet (GOTS, OEKO-TEX …)",
+            "status": "Volontarji, skemi privati"
+          },
+          {
+            "what": "Passaport diġitali tal-prodott",
+            "status": "Ġej: l-att delegat għat-tessuti huwa ppjanat għar-raba’ kwart tal-2027",
+            "basis": "Regolament (UE) 2024/1781 (ESPR)"
+          }
+        ],
+        "note": "Open Brand Exchange iwissi lill-marka diġà meta ttella’ d-data jekk tonqos xi ħaġa obbligatorja; twissija qatt ma twaqqaf il-pubblikazzjoni."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Għall-iżviluppaturi",
     "lead": "Open Brand Exchange hija speċifikazzjoni bi tliet APIs, JSON Schemas, data tat-test u testijiet ta' konformità. L-ispeċifikazzjoni hija s-sors tal-verità; l-implimentazzjonijiet isegwuha.",
     "specTitle": "L-ispeċifikazzjoni",
-    "specP": "Verżjoni 0.1. OpenAPI 3.1, JSON Schema 2020-12, eżempji u marka tat-test fittizja, Kestrel Outfitters. Liċenzja CC-BY-4.0: ħielsa biex tiġi implimentata, anke kummerċjalment.",
+    "specP": "Verżjoni 0.2. OpenAPI 3.1, JSON Schema 2020-12, eżempji u marka tat-test fittizja, Kestrel Outfitters. Liċenzja CC-BY-4.0: ħielsa biex tiġi implimentata, anke kummerċjalment.",
     "specStart": "Ibda bi protocol.md",
     "apisTitle": "Tliet APIs",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: web hosting normali",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Qed tibni l-implimentazzjoni jew il-client tiegħek? Għarrafna b'issue jew pull request, u tidħol f'din it-tabella hekk kif tgħaddi mit-testijiet ta' konformità.",
     "docsTitle": "Dokumenti",
     "docs": [
@@ -519,7 +565,8 @@
       "direttorji tal-marki"
     ],
     "contribute": "Il-kontribuzzjonijiet isiru permezz ta' pull requests fuq ir-repożitorju spec.",
-    "governanceLink": "Kif jittieħdu d-deċiżjonijiet"
+    "governanceLink": "Kif jittieħdu d-deċiżjonijiet",
+    "quickstart": "Bidu malajr: OBX f’10 minuti"
   },
   "directory": {
     "h1": "Direttorju tal-marki",
@@ -609,7 +656,7 @@
       },
       {
         "q": "Huwa lest?",
-        "a": "Iva, il-verżjoni 0.1: l-ispeċifikazzjoni, it-tliet portali, il-kmand obx u l-kontroll tal-konformità ħarġu u huma ħielsa biex tużahom. Għadna fil-bidu: l-ewwel marki qed jingħaqdu issa."
+        "a": "Iva, il-verżjoni 0.2: l-ispeċifikazzjoni, it-tliet portali, il-kmand obx u l-kontroll tal-konformità ħarġu u huma ħielsa biex tużahom. Għadna fil-bidu: l-ewwel marki qed jingħaqdu issa."
       },
       {
         "q": "Min hemm warajh?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "X'hemm lest, u x'ġej",
-    "readyTitle": "Lest fil-verżjoni 0.1",
+    "readyTitle": "Lest fil-verżjoni 0.2",
     "comingTitle": "Ġej",
     "readyBadge": "Lest",
     "comingBadge": "Dalwaqt",
@@ -784,13 +831,13 @@
     "ctaTitle": "Għandek mistoqsijiet, jew trid tieħu sehem mill-bidu?",
     "ctaBrands": "Qed infittxu marki li jridu jgħinu jsawru l-ewwel verżjoni: liema sistemi tuża, u kemm-il bejjiegħ taqdi? Iktbilna.",
     "ctaRetailers": "Qed infittxu bejjiegħa li jridu jgħinu jsawru l-ewwel verżjoni: liema marki tixtieq tqabbad, u liema software tuża? Iktbilna.",
-    "footer": "Il-funzjonijiet taħt “Ġej” għadhom qed jiġu żviluppati. Verżjoni 0.1, {date}."
+    "footer": "Il-funzjonijiet taħt “Ġej” għadhom qed jiġu żviluppati. Verżjoni 0.2, {date}."
   },
   "site": {
     "nav": {
       "start": "Ibda bħala marka",
       "docs": "Dokumentazzjoni",
-      "preview": "Verżjoni 0.1"
+      "preview": "Verżjoni 0.2"
     },
     "footer": {
       "tagline": "L-istandard miftuħ biex il-marki jwasslu ritratti tal-prodotti u data tal-oġġetti lill-bejjiegħa tagħhom.",
@@ -802,7 +849,7 @@
       "errors": "Kodiċi tal-iżbalji",
       "spec": "Speċifikazzjoni",
       "sdk": "Go SDK u l-għodda obx",
-      "status": "Il-verżjoni 0.1 ħarġet. L-ispeċifikazzjoni u s-software huma ħielsa biex tużahom."
+      "status": "Il-verżjoni 0.2 ħarġet. L-ispeċifikazzjoni u s-software huma ħielsa biex tużahom."
     },
     "shots": {
       "portalCatalog": "Il-portal tal-marka fittizja Kestrel kif jarah bejjiegħ: tmien oġġetti b'filtri għall-marka, it-tip ta' prodott u l-kulur.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Speċifikazzjoni miftuħa",
-          "p": "Verżjoni 0.1, miktuba f'OpenAPI 3.1 u JSON Schema taħt CC-BY-4.0. Kulħadd jista' jimplimentaha, anki b'mod kummerċjali."
+          "p": "Verżjoni 0.2, miktuba f'OpenAPI 3.1 u JSON Schema taħt CC-BY-4.0. Kulħadd jista' jimplimentaha, anki b'mod kummerċjali."
         },
         {
           "h": "Testijiet ta' konformità",

@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, sākumlapa",
     "copy": "Kopēt",
     "copied": "Nokopēts",
-    "draft": "Versija 0.1 ir izlaista. Specifikācija un programmatūra ir brīvi izmantojamas.",
+    "draft": "Versija 0.2 ir izlaista. Specifikācija un programmatūra ir brīvi izmantojamas.",
     "footerAbout": "Bezmaksas, atvērts veids, kā zīmoli var piegādāt produktu fotoattēlus un preču datus saviem tirgotājiem.",
     "footerMore": "Vairāk",
     "footerSource": "Pirmkods un specifikācija",
@@ -144,7 +144,7 @@
         "p": "Viena publikācija visiem tirgotājiem. Vairs nekādu failu sūtīšanu, e-pastu ar zip arhīviem un atsevišķu integrāciju katram veikalam."
       }
     ],
-    "status": "Open Brand Exchange ir pašā sākumā. Specifikācijas un programmatūras versija 0.1 ir izlaista un brīvi izmantojama. Mēs nerādām klientus vai skaitļus, kuru vēl nav.",
+    "status": "Open Brand Exchange ir pašā sākumā. Specifikācijas un programmatūras versija 0.2 ir izlaista un brīvi izmantojama. Mēs nerādām klientus vai skaitļus, kuru vēl nav.",
     "statusLink": "Uzziniet, kā tas tiek pārvaldīts"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "Nākamais solis",
     "nextHosting": "Izvēlieties mitināšanu",
-    "nextAutomation": "Apskatiet automatizācijas receptes"
+    "nextAutomation": "Apskatiet automatizācijas receptes",
+    "labelNote": "Ja trūkst kaut kā, ko likums prasa etiķetē, piemēram, šķiedru sastāva vai apava materiālu, Open Brand Exchange jūs brīdina augšupielādes laikā. Brīdinājums nekad neaptur publicēšanu.",
+    "bagsNote": "Koferiem un somām tagad ir izmēri (A × P × D, svars, tilpums) un īpašības (riteņi, slēdzene, noņemama siksna …), ko katrs zīmols mēra vienādi."
   },
   "automation": {
     "h1": "Automatizācija",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Nežāvēt veļas žāvētājā",
         "do_not_iron": "Negludināt",
         "do_not_dry_clean": "Neveikt ķīmisko tīrīšanu"
+      },
+      "law": {
+        "title": "Ko prasa likums",
+        "lead": "Ko ES tiesības prasa tekstilizstrādājumiem un apaviem un kas ir brīvprātīgs. Orientieris, nevis juridiska konsultācija.",
+        "head": [
+          "Informācija",
+          "ES",
+          "Juridiskais pamats"
+        ],
+        "rows": [
+          {
+            "what": "Šķiedru sastāvs pa sastāvdaļām, %",
+            "status": "Obligāti, arī tiešsaistē pirms pirkuma",
+            "basis": "Regula (ES) Nr. 1007/2011"
+          },
+          {
+            "what": "“Satur dzīvnieku izcelsmes netekstila daļas”",
+            "status": "Obligāti, ja izstrādājumam ir šādas daļas",
+            "basis": "Regula (ES) Nr. 1007/2011, 12. pants"
+          },
+          {
+            "what": "Apavu virsas, oderes un iekšzoles un ārējās zoles materiāls",
+            "status": "Obligāti",
+            "basis": "Direktīva 94/11/EK"
+          },
+          {
+            "what": "Kopšanas norādījumi",
+            "status": "Brīvprātīgi (ierasta prakse; ISO 3758 simboli)"
+          },
+          {
+            "what": "Izcelsmes valsts",
+            "status": "ES brīvprātīgi"
+          },
+          {
+            "what": "Sertifikāti (GOTS, OEKO-TEX …)",
+            "status": "Brīvprātīgi, privātas shēmas"
+          },
+          {
+            "what": "Digitālā produkta pase",
+            "status": "Gaidāma: deleģētais akts tekstilizstrādājumiem plānots 2027. gada 4. ceturksnī",
+            "basis": "Regula (ES) 2024/1781 (ESPR)"
+          }
+        ],
+        "note": "Open Brand Exchange brīdina zīmolu jau augšupielādes laikā, ja trūkst kaut kā obligāta; brīdinājums nekad neaptur publicēšanu."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Izstrādātājiem",
     "lead": "Open Brand Exchange ir specifikācija ar trim API, JSON shēmām, testa datiem un atbilstības testiem. Specifikācija ir patiesības avots; implementācijas tai seko.",
     "specTitle": "Specifikācija",
-    "specP": "Versija 0.1. OpenAPI 3.1, JSON Schema 2020-12, piemēri un izdomāts testa zīmols Kestrel Outfitters. Licence CC-BY-4.0: brīvi implementējama, arī komerciāli.",
+    "specP": "Versija 0.2. OpenAPI 3.1, JSON Schema 2020-12, piemēri un izdomāts testa zīmols Kestrel Outfitters. Licence CC-BY-4.0: brīvi implementējama, arī komerciāli.",
     "specStart": "Sāciet ar protocol.md",
     "apisTitle": "Trīs API",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: parasta tīmekļa mitināšana",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Veidojat savu implementāciju vai klientu? Paziņojiet ar issue vai pull request; tā nonāks šajā tabulā, tiklīdz izturēs atbilstības testus.",
     "docsTitle": "Dokumenti",
     "docs": [
@@ -519,7 +565,8 @@
       "zīmolu saraksti"
     ],
     "contribute": "Ieguldījums notiek ar pull requests spec repozitorijā.",
-    "governanceLink": "Kā tiek pieņemti lēmumi"
+    "governanceLink": "Kā tiek pieņemti lēmumi",
+    "quickstart": "Ātrais sākums: OBX 10 minūtēs"
   },
   "directory": {
     "h1": "Zīmolu saraksts",
@@ -609,7 +656,7 @@
       },
       {
         "q": "Vai tas ir gatavs?",
-        "a": "Jā, versija 0.1: specifikācija, trīs portāli, komanda obx un atbilstības pārbaude ir izlaisti un brīvi izmantojami. Esam pašā sākumā: pirmie zīmoli pievienojas tagad."
+        "a": "Jā, versija 0.2: specifikācija, trīs portāli, komanda obx un atbilstības pārbaude ir izlaisti un brīvi izmantojami. Esam pašā sākumā: pirmie zīmoli pievienojas tagad."
       },
       {
         "q": "Kas ir aiz tā?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "Kas ir gatavs un kas vēl būs",
-    "readyTitle": "Gatavs versijā 0.1",
+    "readyTitle": "Gatavs versijā 0.2",
     "comingTitle": "Drīzumā",
     "readyBadge": "Gatavs",
     "comingBadge": "Drīzumā",
@@ -784,13 +831,13 @@
     "ctaTitle": "Jautājumi, vai vēlaties piedalīties no paša sākuma?",
     "ctaBrands": "Meklējam zīmolus, kas vēlas veidot pirmo versiju: kādas sistēmas izmantojat un cik tirgotājus apkalpojat? Rakstiet mums.",
     "ctaRetailers": "Meklējam tirgotājus, kas vēlas veidot pirmo versiju: kurus zīmolus vēlaties pieslēgt un kādu programmatūru izmantojat? Rakstiet mums.",
-    "footer": "Sadaļas “Drīzumā” funkcijas tiek izstrādātas. Versija 0.1, {date}."
+    "footer": "Sadaļas “Drīzumā” funkcijas tiek izstrādātas. Versija 0.2, {date}."
   },
   "site": {
     "nav": {
       "start": "Sāciet kā zīmols",
       "docs": "Dokumentācija",
-      "preview": "Versija 0.1"
+      "preview": "Versija 0.2"
     },
     "footer": {
       "tagline": "Atvērtais standarts, ar kuru zīmoli piegādā produktu fotoattēlus un preču datus saviem tirgotājiem.",
@@ -802,7 +849,7 @@
       "errors": "Kļūdu kodi",
       "spec": "Specifikācija",
       "sdk": "Go SDK un rīks obx",
-      "status": "Versija 0.1 ir izlaista. Specifikācija un programmatūra ir brīvi izmantojamas."
+      "status": "Versija 0.2 ir izlaista. Specifikācija un programmatūra ir brīvi izmantojamas."
     },
     "shots": {
       "portalCatalog": "Izdomātā zīmola Kestrel portāls, kā to redz tirgotājs: astoņas preces ar filtriem pēc zīmola, produkta veida un krāsas.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Atvērta specifikācija",
-          "p": "Versija 0.1, aprakstīta OpenAPI 3.1 un JSON Schema ar licenci CC-BY-4.0. To drīkst ieviest ikviens, arī komerciāli."
+          "p": "Versija 0.2, aprakstīta OpenAPI 3.1 un JSON Schema ar licenci CC-BY-4.0. To drīkst ieviest ikviens, arī komerciāli."
         },
         {
           "h": "Atbilstības testi",

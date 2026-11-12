@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, početna stranica",
     "copy": "Kopiraj",
     "copied": "Kopirano",
-    "draft": "Verzija 0.1 je objavljena. Specifikacija i softver slobodni su za korištenje.",
+    "draft": "Verzija 0.2 je objavljena. Specifikacija i softver slobodni su za korištenje.",
     "footerAbout": "Besplatan i otvoren način na koji robne marke svojim trgovcima isporučuju fotografije proizvoda i podatke o artiklima.",
     "footerMore": "Više",
     "footerSource": "Izvorni kod i specifikacija",
@@ -144,7 +144,7 @@
         "p": "Jedna objava za sve trgovce. Kraj slanju datoteka, e-porukama sa zip arhivama i zasebnoj integraciji za svaku trgovinu."
       }
     ],
-    "status": "Open Brand Exchange je na početku. Verzija 0.1 specifikacije i softvera je objavljena i slobodna za korištenje. Ne prikazujemo kupce ni brojke koji još ne postoje.",
+    "status": "Open Brand Exchange je na početku. Verzija 0.2 specifikacije i softvera je objavljena i slobodna za korištenje. Ne prikazujemo kupce ni brojke koji još ne postoje.",
     "statusLink": "Pročitajte kako se upravlja"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "Sljedeći korak",
     "nextHosting": "Odaberite hosting",
-    "nextAutomation": "Pogledajte recepte za automatizaciju"
+    "nextAutomation": "Pogledajte recepte za automatizaciju",
+    "labelNote": "Ako nedostaje nešto što zakon propisuje na etiketi, primjerice sastav vlakana ili materijali cipele, Open Brand Exchange upozorit će vas pri prijenosu. Upozorenje nikad ne sprječava objavu.",
+    "bagsNote": "Kovčezi i torbe sada imaju mjere (V × Š × D, težina, zapremina) i značajke (kotačići, brava, odvojivi remen …), koje svaka robna marka mjeri na isti način."
   },
   "automation": {
     "h1": "Automatizacija",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Ne sušiti u sušilici",
         "do_not_iron": "Ne glačati",
         "do_not_dry_clean": "Ne kemijski čistiti"
+      },
+      "law": {
+        "title": "Što propisuje zakon",
+        "lead": "Što pravo EU-a propisuje za tekstil i obuću, a što je dobrovoljno. Smjernica, a ne pravni savjet.",
+        "head": [
+          "Podatak",
+          "U EU-u",
+          "Pravna osnova"
+        ],
+        "rows": [
+          {
+            "what": "Sastav vlakana po dijelovima, u %",
+            "status": "Obvezno, i na internetu prije kupnje",
+            "basis": "Uredba (EU) br. 1007/2011"
+          },
+          {
+            "what": "„Sadrži netekstilne dijelove životinjskog podrijetla”",
+            "status": "Obvezno ako proizvod ima takve dijelove",
+            "basis": "Uredba (EU) br. 1007/2011, članak 12."
+          },
+          {
+            "what": "Materijal gornjeg dijela, podstave i uloška te vanjskog potplata obuće",
+            "status": "Obvezno",
+            "basis": "Direktiva 94/11/EZ"
+          },
+          {
+            "what": "Upute za održavanje",
+            "status": "Dobrovoljno (uobičajena praksa; simboli prema ISO 3758)"
+          },
+          {
+            "what": "Zemlja podrijetla",
+            "status": "Dobrovoljno u EU-u"
+          },
+          {
+            "what": "Certifikati (GOTS, OEKO-TEX …)",
+            "status": "Dobrovoljno, privatni sustavi"
+          },
+          {
+            "what": "Digitalna putovnica proizvoda",
+            "status": "Uskoro: delegirani akt za tekstil planiran je za 4. tromjesečje 2027.",
+            "basis": "Uredba (EU) 2024/1781 (ESPR)"
+          }
+        ],
+        "note": "Open Brand Exchange upozorava robnu marku već pri prijenosu ako nešto obvezno nedostaje; upozorenje nikad ne sprječava objavu."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Za programere",
     "lead": "Open Brand Exchange je specifikacija s tri API-ja, JSON shemama, testnim podacima i testovima sukladnosti. Specifikacija je izvor istine; implementacije je slijede.",
     "specTitle": "Specifikacija",
-    "specP": "Verzija 0.1. OpenAPI 3.1, JSON Schema 2020-12, primjeri i izmišljena testna marka Kestrel Outfitters. Licenca CC-BY-4.0: slobodno za implementaciju, i komercijalno.",
+    "specP": "Verzija 0.2. OpenAPI 3.1, JSON Schema 2020-12, primjeri i izmišljena testna marka Kestrel Outfitters. Licenca CC-BY-4.0: slobodno za implementaciju, i komercijalno.",
     "specStart": "Počnite s protocol.md",
     "apisTitle": "Tri API-ja",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: običan web hosting",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Gradite vlastitu implementaciju ili klijent? Javite nam putem issuea ili pull requesta; ući će u tablicu čim prođe testove sukladnosti.",
     "docsTitle": "Dokumenti",
     "docs": [
@@ -519,7 +565,8 @@
       "popisi marki"
     ],
     "contribute": "Doprinosi idu putem pull requestova u repozitorij spec.",
-    "governanceLink": "Kako se donose odluke"
+    "governanceLink": "Kako se donose odluke",
+    "quickstart": "Brzi početak: OBX za 10 minuta"
   },
   "directory": {
     "h1": "Popis marki",
@@ -609,7 +656,7 @@
       },
       {
         "q": "Je li gotovo?",
-        "a": "Da, verzija 0.1: specifikacija, tri portala, naredba obx i provjera sukladnosti objavljeni su i slobodni za korištenje. Na početku smo: prve marke se pridružuju upravo sada."
+        "a": "Da, verzija 0.2: specifikacija, tri portala, naredba obx i provjera sukladnosti objavljeni su i slobodni za korištenje. Na početku smo: prve marke se pridružuju upravo sada."
       },
       {
         "q": "Tko stoji iza toga?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "Što je spremno, a što dolazi",
-    "readyTitle": "Spremno u verziji 0.1",
+    "readyTitle": "Spremno u verziji 0.2",
     "comingTitle": "Uskoro dolazi",
     "readyBadge": "Spremno",
     "comingBadge": "Uskoro",
@@ -784,13 +831,13 @@
     "ctaTitle": "Imate pitanja ili želite sudjelovati od početka?",
     "ctaBrands": "Tražimo marke koje žele sudjelovati u oblikovanju prve verzije: koje sustave koristite i koliko trgovaca opslužujete? Pišite nam.",
     "ctaRetailers": "Tražimo trgovce koji žele sudjelovati u oblikovanju prve verzije: koje marke želite povezati i koji softver koristite? Pišite nam.",
-    "footer": "Funkcije pod „Uskoro dolazi” su u razvoju. Verzija 0.1, {date}."
+    "footer": "Funkcije pod „Uskoro dolazi” su u razvoju. Verzija 0.2, {date}."
   },
   "site": {
     "nav": {
       "start": "Započnite kao marka",
       "docs": "Dokumentacija",
-      "preview": "Verzija 0.1"
+      "preview": "Verzija 0.2"
     },
     "footer": {
       "tagline": "Otvoreni standard za isporuku fotografija proizvoda i podataka o artiklima od robnih marki njihovim trgovcima.",
@@ -802,7 +849,7 @@
       "errors": "Kodovi pogrešaka",
       "spec": "Specifikacija",
       "sdk": "Go SDK i alat obx",
-      "status": "Verzija 0.1 je objavljena. Specifikacija i softver slobodni su za korištenje."
+      "status": "Verzija 0.2 je objavljena. Specifikacija i softver slobodni su za korištenje."
     },
     "shots": {
       "portalCatalog": "Portal izmišljene marke Kestrel kako ga vidi trgovac: osam artikala s filtrima po marki, vrsti proizvoda i boji.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Otvorena specifikacija",
-          "p": "Verzija 0.1, zapisana kao OpenAPI 3.1 i JSON Schema pod licencom CC-BY-4.0. Svatko je smije implementirati, i komercijalno."
+          "p": "Verzija 0.2, zapisana kao OpenAPI 3.1 i JSON Schema pod licencom CC-BY-4.0. Svatko je smije implementirati, i komercijalno."
         },
         {
           "h": "Provjere sukladnosti",

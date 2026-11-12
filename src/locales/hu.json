@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, kezdőlap",
     "copy": "Másolás",
     "copied": "Másolva",
-    "draft": "Megjelent a 0.1-es verzió. A specifikáció és a szoftver szabadon használható.",
+    "draft": "Megjelent a 0.2-es verzió. A specifikáció és a szoftver szabadon használható.",
     "footerAbout": "Ingyenes, nyílt módszer, amellyel a márkák termékfotókat és cikkadatokat juttathatnak el viszonteladóiknak.",
     "footerMore": "Továbbiak",
     "footerSource": "Forráskód és specifikáció",
@@ -144,7 +144,7 @@
         "p": "Egyetlen közzététel minden viszonteladónak. Nincs több fájlküldés, zipes e-mail és külön integráció minden üzlethez."
       }
     ],
-    "status": "Az Open Brand Exchange az út elején jár. Megjelent a specifikáció és a szoftver 0.1-es verziója, és szabadon használható. Nem mutatunk olyan ügyfeleket vagy számokat, amelyek még nem léteznek.",
+    "status": "Az Open Brand Exchange az út elején jár. Megjelent a specifikáció és a szoftver 0.2-es verziója, és szabadon használható. Nem mutatunk olyan ügyfeleket vagy számokat, amelyek még nem léteznek.",
     "statusLink": "Olvassa el, hogyan irányítják"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "Következő lépés",
     "nextHosting": "Válasszon üzemeltetést",
-    "nextAutomation": "Nézze meg az automatizálási recepteket"
+    "nextAutomation": "Nézze meg az automatizálási recepteket",
+    "labelNote": "Ha hiányzik valami, amit a jogszabály a címkén előír, például a szálösszetétel vagy egy cipő anyagai, az Open Brand Exchange feltöltéskor figyelmezteti Önt. A figyelmeztetés soha nem akadályozza a közzétételt.",
+    "bagsNote": "A bőröndök és táskák mostantól méreteket (Ma × Sz × Mé, súly, térfogat) és jellemzőket (kerekek, zár, levehető pánt …) is tartalmaznak, amelyeket minden márka ugyanúgy mér."
   },
   "automation": {
     "h1": "Automatizálás",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Szárítógépben szárítani tilos",
         "do_not_iron": "Vasalni tilos",
         "do_not_dry_clean": "Vegytisztítani tilos"
+      },
+      "law": {
+        "title": "Amit a jogszabály előír",
+        "lead": "Mit ír elő az uniós jog a textiltermékeknél és a lábbeliknél, és mi önkéntes. Tájékoztatás, nem jogi tanácsadás.",
+        "head": [
+          "Adat",
+          "Az EU-ban",
+          "Jogalap"
+        ],
+        "rows": [
+          {
+            "what": "Szálösszetétel összetevőnként, %-ban",
+            "status": "Kötelező, online is a vásárlás előtt",
+            "basis": "1007/2011/EU rendelet"
+          },
+          {
+            "what": "„Állati eredetű nem textil részeket tartalmaz”",
+            "status": "Kötelező, ha a terméknek vannak ilyen részei",
+            "basis": "1007/2011/EU rendelet, 12. cikk"
+          },
+          {
+            "what": "A lábbeli felsőrészének, bélésének és talpbélésének, valamint járótalpának anyaga",
+            "status": "Kötelező",
+            "basis": "94/11/EK irányelv"
+          },
+          {
+            "what": "Kezelési útmutató",
+            "status": "Önkéntes (bevett gyakorlat; ISO 3758 szerinti jelek)"
+          },
+          {
+            "what": "Származási ország",
+            "status": "Az EU-ban önkéntes"
+          },
+          {
+            "what": "Tanúsítványok (GOTS, OEKO-TEX …)",
+            "status": "Önkéntes, magánrendszerek"
+          },
+          {
+            "what": "Digitális termékútlevél",
+            "status": "Hamarosan: a textiltermékekre vonatkozó felhatalmazáson alapuló jogi aktus 2027 negyedik negyedévére várható",
+            "basis": "(EU) 2024/1781 rendelet (ESPR)"
+          }
+        ],
+        "note": "Az Open Brand Exchange már feltöltéskor figyelmezteti a márkát, ha valami kötelező hiányzik; a figyelmeztetés soha nem akadályozza a közzétételt."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Fejlesztőknek",
     "lead": "Az Open Brand Exchange egy specifikáció három API-val, JSON-sémákkal, tesztadatokkal és megfelelőségi tesztekkel. A specifikáció a mérvadó; az implementációk ezt követik.",
     "specTitle": "A specifikáció",
-    "specP": "0.1-es verzió. OpenAPI 3.1, JSON Schema 2020-12, példák és egy kitalált tesztmárka, a Kestrel Outfitters. Licenc CC-BY-4.0: szabadon implementálható, üzleti célra is.",
+    "specP": "0.2-es verzió. OpenAPI 3.1, JSON Schema 2020-12, példák és egy kitalált tesztmárka, a Kestrel Outfitters. Licenc CC-BY-4.0: szabadon implementálható, üzleti célra is.",
     "specStart": "Kezdje a protocol.md fájllal",
     "apisTitle": "Három API",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: hagyományos webtárhely",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Saját implementációt vagy klienst épít? Jelezze issue-ban vagy pull requestben; amint átmegy a megfelelőségi teszteken, bekerül ebbe a táblázatba.",
     "docsTitle": "Dokumentumok",
     "docs": [
@@ -519,7 +565,8 @@
       "márkajegyzékek"
     ],
     "contribute": "A hozzájárulás a spec tárolóba küldött pull requestekkel történik.",
-    "governanceLink": "Hogyan születnek a döntések"
+    "governanceLink": "Hogyan születnek a döntések",
+    "quickstart": "Gyors kezdés: OBX 10 perc alatt"
   },
   "directory": {
     "h1": "Márkajegyzék",
@@ -609,7 +656,7 @@
       },
       {
         "q": "Kész van?",
-        "a": "Igen, a 0.1-es verzió: a specifikáció, a három portál, az obx parancs és a megfelelőségi ellenőrzés megjelent, és szabadon használható. Az elején tartunk: az első márkák most csatlakoznak."
+        "a": "Igen, a 0.2-es verzió: a specifikáció, a három portál, az obx parancs és a megfelelőségi ellenőrzés megjelent, és szabadon használható. Az elején tartunk: az első márkák most csatlakoznak."
       },
       {
         "q": "Ki áll mögötte?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "Mi van kész, és mi jön még",
-    "readyTitle": "Kész a 0.1-es verzióban",
+    "readyTitle": "Kész a 0.2-es verzióban",
     "comingTitle": "Hamarosan",
     "readyBadge": "Kész",
     "comingBadge": "Hamarosan",
@@ -784,13 +831,13 @@
     "ctaTitle": "Kérdése van, vagy az elejétől részt venne?",
     "ctaBrands": "Olyan márkákat keresünk, akik szívesen formálják az első verziót: milyen rendszereket használ, és hány viszonteladót szolgál ki? Írjon nekünk.",
     "ctaRetailers": "Olyan viszonteladókat keresünk, akik szívesen formálják az első verziót: mely márkákat kapcsolná be, és milyen szoftvert használ? Írjon nekünk.",
-    "footer": "A „Hamarosan” alatti funkciók fejlesztés alatt állnak. 0.1-es verzió, {date}."
+    "footer": "A „Hamarosan” alatti funkciók fejlesztés alatt állnak. 0.2-es verzió, {date}."
   },
   "site": {
     "nav": {
       "start": "Kezdés márkaként",
       "docs": "Dokumentáció",
-      "preview": "0.1-es verzió"
+      "preview": "0.2-es verzió"
     },
     "footer": {
       "tagline": "Nyílt szabvány termékfotók és cikkadatok eljuttatására a márkáktól a viszonteladóikhoz.",
@@ -802,7 +849,7 @@
       "errors": "Hibakódok",
       "spec": "Specifikáció",
       "sdk": "Go SDK és obx eszköz",
-      "status": "Megjelent a 0.1-es verzió. A specifikáció és a szoftver szabadon használható."
+      "status": "Megjelent a 0.2-es verzió. A specifikáció és a szoftver szabadon használható."
     },
     "shots": {
       "portalCatalog": "A kitalált Kestrel márka portálja egy viszonteladó szemével: nyolc cikk márka, terméktípus és szín szerinti szűrőkkel.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Nyílt specifikáció",
-          "p": "A 0.1-es verzió OpenAPI 3.1 és JSON Schema formátumú, CC-BY-4.0 licenccel. Bárki megvalósíthatja, üzleti célra is."
+          "p": "A 0.2-es verzió OpenAPI 3.1 és JSON Schema formátumú, CC-BY-4.0 licenccel. Bárki megvalósíthatja, üzleti célra is."
         },
         {
           "h": "Megfelelőségi tesztcsomag",

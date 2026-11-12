@@ -11,8 +11,8 @@ const root = new URL('../../', import.meta.url);
 const FONT_DIR = new URL('node_modules/@fontsource/inter/', root);
 const fontLinks = ['400', '600', '700'].map((w) => `<link rel="stylesheet" href="${new URL(`${w}.css`, FONT_DIR).href}">`).join('');
 export const SITE = 'https://openbrandexchange.com';
-/** Shown on the last page as "Version 0.1, <month year>". Bump with every content change. */
-export const EDITION = '2026-09-28';
+/** Shown on the last page as "Version 0.2, <month year>". Bump with every content change. */
+export const EDITION = '2026-11-12';
 
 export const loadMessages = (lang) => JSON.parse(readFileSync(new URL(`src/locales/${lang}.json`, root), 'utf8'));
 

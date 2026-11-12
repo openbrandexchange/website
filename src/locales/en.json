@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, home",
     "copy": "Copy",
     "copied": "Copied",
-    "draft": "Version 0.1 is out. The specification and the software are free to use.",
+    "draft": "Version 0.2 is out. The specification and the software are free to use.",
     "footerAbout": "A free, open way for brands to deliver product images and article data to their retailers.",
     "footerMore": "More",
     "footerSource": "Source code and specification",
@@ -144,7 +144,7 @@
         "p": "One publication for all your retailers. No more file transfers, emails with zips or a separate integration per store."
       }
     ],
-    "status": "Open Brand Exchange is at the start. Version 0.1 of the specification and the software is out and free to use. We do not show customers or numbers that do not exist yet.",
+    "status": "Open Brand Exchange is at the start. Version 0.2 of the specification and the software is out and free to use. We do not show customers or numbers that do not exist yet.",
     "statusLink": "Read how it is governed"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "Next step",
     "nextHosting": "Choose how to host it",
-    "nextAutomation": "See the automation recipes"
+    "nextAutomation": "See the automation recipes",
+    "labelNote": "When something the law requires on the label is missing, such as the fibre composition or the materials of a shoe, Open Brand Exchange warns you at upload. A warning never blocks publishing.",
+    "bagsNote": "Luggage and bags now carry measurements (H × W × D, weight, volume) and features (wheels, lock, detachable strap …), measured the same way by every brand."
   },
   "automation": {
     "h1": "Automation",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Do not tumble dry",
         "do_not_iron": "Do not iron",
         "do_not_dry_clean": "Do not dry clean"
+      },
+      "law": {
+        "title": "What the law requires",
+        "lead": "What EU law requires for textiles and footwear, and what is voluntary. A pointer, not legal advice.",
+        "head": [
+          "Information",
+          "In the EU",
+          "Legal basis"
+        ],
+        "rows": [
+          {
+            "what": "Fibre composition per component, in %",
+            "status": "Mandatory, also online before purchase",
+            "basis": "Regulation (EU) No 1007/2011"
+          },
+          {
+            "what": "“Contains non-textile parts of animal origin”",
+            "status": "Mandatory when the product has such parts",
+            "basis": "Regulation (EU) No 1007/2011, Art. 12"
+          },
+          {
+            "what": "Materials of the upper, the lining and sock, and the outer sole of footwear",
+            "status": "Mandatory",
+            "basis": "Directive 94/11/EC"
+          },
+          {
+            "what": "Care instructions",
+            "status": "Voluntary (common practice; ISO 3758 symbols)"
+          },
+          {
+            "what": "Country of origin",
+            "status": "Voluntary in the EU"
+          },
+          {
+            "what": "Certifications (GOTS, OEKO-TEX …)",
+            "status": "Voluntary, private schemes"
+          },
+          {
+            "what": "Digital Product Passport",
+            "status": "Coming: the textiles delegated act is planned for Q4 2027",
+            "basis": "Regulation (EU) 2024/1781 (ESPR)"
+          }
+        ],
+        "note": "Open Brand Exchange warns the brand at upload when something mandatory is missing; a warning never blocks publishing."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Developers",
     "lead": "Open Brand Exchange is a specification with three APIs, JSON Schemas, test data and a conformance suite. The specification is the source of truth; the implementations follow it.",
     "specTitle": "The specification",
-    "specP": "Version 0.1. OpenAPI 3.1, JSON Schema 2020-12, examples and a fictional test brand, Kestrel Outfitters. Licensed CC-BY-4.0: free to implement, commercially too.",
+    "specP": "Version 0.2. OpenAPI 3.1, JSON Schema 2020-12, examples and a fictional test brand, Kestrel Outfitters. Licensed CC-BY-4.0: free to implement, commercially too.",
     "specStart": "Start with protocol.md",
     "apisTitle": "Three APIs",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: ordinary web hosting",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Building your own implementation or consumer? Let us know with an issue or pull request, and it goes into this table once it passes the conformance suite.",
     "docsTitle": "Documents",
     "docs": [
@@ -519,7 +565,8 @@
       "directories of brands"
     ],
     "contribute": "Contributions go through pull requests on the spec repository.",
-    "governanceLink": "How decisions are made"
+    "governanceLink": "How decisions are made",
+    "quickstart": "Quickstart: OBX in 10 minutes"
   },
   "directory": {
     "h1": "Directory",
@@ -609,7 +656,7 @@
       },
       {
         "q": "Is it ready?",
-        "a": "Yes, version 0.1: the specification, the three portals, the obx command and the conformance check are released and free to use. It is early days: the first brands are joining now."
+        "a": "Yes, version 0.2: the specification, the three portals, the obx command and the conformance check are released and free to use. It is early days: the first brands are joining now."
       },
       {
         "q": "Who is behind it?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "What is ready, and what is coming",
-    "readyTitle": "Ready in version 0.1",
+    "readyTitle": "Ready in version 0.2",
     "comingTitle": "Coming next",
     "readyBadge": "Ready",
     "comingBadge": "Coming",
@@ -784,13 +831,13 @@
     "ctaTitle": "Questions, or want to take part from the start?",
     "ctaBrands": "We are looking for brands that want to help shape the first version: which systems do you use, and how many retailers do you serve? Email us.",
     "ctaRetailers": "We are looking for retailers who want to help shape the first version: which brands would you like to connect, and which software do you use? Email us.",
-    "footer": "Features under \"Coming next\" are in development. Version 0.1, {date}."
+    "footer": "Features under \"Coming next\" are in development. Version 0.2, {date}."
   },
   "site": {
     "nav": {
       "start": "Start as a brand",
       "docs": "Documentation",
-      "preview": "Version 0.1"
+      "preview": "Version 0.2"
     },
     "footer": {
       "tagline": "The open standard for delivering product images and article data from brands to their retailers.",
@@ -802,7 +849,7 @@
       "errors": "Error codes",
       "spec": "Specification",
       "sdk": "Go SDK and obx tool",
-      "status": "Version 0.1 is out. The specification and the software are free to use."
+      "status": "Version 0.2 is out. The specification and the software are free to use."
     },
     "shots": {
       "portalCatalog": "The brand portal of the fictional brand Kestrel as a retailer sees it: eight articles with filters for brand, product type and colour.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Open specification",
-          "p": "Version 0.1, written as OpenAPI 3.1 and JSON Schema under CC-BY-4.0. Anyone may implement it, commercially too."
+          "p": "Version 0.2, written as OpenAPI 3.1 and JSON Schema under CC-BY-4.0. Anyone may implement it, commercially too."
         },
         {
           "h": "Conformance suite",

@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, pradžia",
     "copy": "Kopijuoti",
     "copied": "Nukopijuota",
-    "draft": "Išleista versija 0.1. Specifikacija ir programinė įranga naudojamos laisvai.",
+    "draft": "Išleista versija 0.2. Specifikacija ir programinė įranga naudojamos laisvai.",
     "footerAbout": "Nemokamas ir atviras būdas prekių ženklams pateikti produktų nuotraukas ir prekių duomenis savo pardavėjams.",
     "footerMore": "Daugiau",
     "footerSource": "Išeities kodas ir specifikacija",
@@ -144,7 +144,7 @@
         "p": "Vienas publikavimas visiems pardavėjams. Jokių failų siuntimų, laiškų su zip archyvais ir atskirų integracijų kiekvienai parduotuvei."
       }
     ],
-    "status": "Open Brand Exchange tik pradeda. Išleista specifikacijos ir programinės įrangos versija 0.1, ja galima laisvai naudotis. Nerodome klientų ar skaičių, kurių dar nėra.",
+    "status": "Open Brand Exchange tik pradeda. Išleista specifikacijos ir programinės įrangos versija 0.2, ja galima laisvai naudotis. Nerodome klientų ar skaičių, kurių dar nėra.",
     "statusLink": "Skaitykite, kaip jis valdomas"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "Kitas žingsnis",
     "nextHosting": "Pasirinkite talpinimą",
-    "nextAutomation": "Peržiūrėkite automatizavimo receptus"
+    "nextAutomation": "Peržiūrėkite automatizavimo receptus",
+    "labelNote": "Jei trūksta ko nors, ko įstatymai reikalauja etiketėje, pavyzdžiui, pluoštinės sudėties ar batų medžiagų, Open Brand Exchange jus įspėja įkeliant. Įspėjimas niekada neblokuoja paskelbimo.",
+    "bagsNote": "Lagaminai ir krepšiai dabar turi matmenis (A × P × G, svoris, tūris) ir savybes (ratukai, užraktas, nuimamas dirželis …), kuriuos kiekvienas prekės ženklas matuoja vienodai."
   },
   "automation": {
     "h1": "Automatizavimas",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Nedžiovinti būgninėje džiovyklėje",
         "do_not_iron": "Nelyginti",
         "do_not_dry_clean": "Nevalyti cheminiu būdu"
+      },
+      "law": {
+        "title": "Ko reikalauja įstatymai",
+        "lead": "Ko ES teisė reikalauja tekstilės gaminiams ir avalynei ir kas yra savanoriška. Gairės, o ne teisinė konsultacija.",
+        "head": [
+          "Informacija",
+          "ES",
+          "Teisinis pagrindas"
+        ],
+        "rows": [
+          {
+            "what": "Pluoštinė sudėtis pagal sudedamąsias dalis, %",
+            "status": "Privaloma, taip pat internete prieš pirkimą",
+            "basis": "Reglamentas (ES) Nr. 1007/2011"
+          },
+          {
+            "what": "„Sudėtyje yra netekstilinių gyvūninės kilmės dalių“",
+            "status": "Privaloma, jei gaminyje yra tokių dalių",
+            "basis": "Reglamentas (ES) Nr. 1007/2011, 12 straipsnis"
+          },
+          {
+            "what": "Avalynės viršaus, pamušalo ir vidpadžio bei išorinio pado medžiaga",
+            "status": "Privaloma",
+            "basis": "Direktyva 94/11/EB"
+          },
+          {
+            "what": "Priežiūros nurodymai",
+            "status": "Savanoriška (įprasta praktika; ISO 3758 simboliai)"
+          },
+          {
+            "what": "Kilmės šalis",
+            "status": "ES savanoriška"
+          },
+          {
+            "what": "Sertifikatai (GOTS, OEKO-TEX …)",
+            "status": "Savanoriška, privačios sistemos"
+          },
+          {
+            "what": "Skaitmeninis gaminio pasas",
+            "status": "Netrukus: tekstilės gaminių deleguotąjį aktą planuojama priimti 2027 m. IV ketvirtį",
+            "basis": "Reglamentas (ES) 2024/1781 (ESPR)"
+          }
+        ],
+        "note": "Open Brand Exchange įspėja prekės ženklą jau įkeliant, jei trūksta ko nors privalomo; įspėjimas niekada neblokuoja paskelbimo."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Kūrėjams",
     "lead": "Open Brand Exchange yra specifikacija su trimis API, JSON schemomis, bandomaisiais duomenimis ir atitikties testais. Specifikacija yra tiesos šaltinis; įgyvendinimai jos laikosi.",
     "specTitle": "Specifikacija",
-    "specP": "Versija 0.1. OpenAPI 3.1, JSON Schema 2020-12, pavyzdžiai ir išgalvotas bandomasis prekės ženklas Kestrel Outfitters. Licencija CC-BY-4.0: laisvai įgyvendinama, taip pat komerciškai.",
+    "specP": "Versija 0.2. OpenAPI 3.1, JSON Schema 2020-12, pavyzdžiai ir išgalvotas bandomasis prekės ženklas Kestrel Outfitters. Licencija CC-BY-4.0: laisvai įgyvendinama, taip pat komerciškai.",
     "specStart": "Pradėkite nuo protocol.md",
     "apisTitle": "Trys API",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: įprastas interneto talpinimas",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Kuriate savo įgyvendinimą ar klientą? Praneškite per issue ar pull request; jis pateks į šią lentelę, kai išlaikys atitikties testus.",
     "docsTitle": "Dokumentai",
     "docs": [
@@ -519,7 +565,8 @@
       "prekių ženklų sąrašai"
     ],
     "contribute": "Prisidedama per pull requests spec saugykloje.",
-    "governanceLink": "Kaip priimami sprendimai"
+    "governanceLink": "Kaip priimami sprendimai",
+    "quickstart": "Greita pradžia: OBX per 10 minučių"
   },
   "directory": {
     "h1": "Prekių ženklų sąrašas",
@@ -609,7 +656,7 @@
       },
       {
         "q": "Ar tai paruošta?",
-        "a": "Taip, versija 0.1: specifikacija, trys portalai, komanda obx ir atitikties patikra išleisti, jais galima laisvai naudotis. Esame pradžioje: pirmieji prekių ženklai prisijungia dabar."
+        "a": "Taip, versija 0.2: specifikacija, trys portalai, komanda obx ir atitikties patikra išleisti, jais galima laisvai naudotis. Esame pradžioje: pirmieji prekių ženklai prisijungia dabar."
       },
       {
         "q": "Kas už to stovi?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "Kas paruošta ir kas bus",
-    "readyTitle": "Paruošta versijoje 0.1",
+    "readyTitle": "Paruošta versijoje 0.2",
     "comingTitle": "Netrukus",
     "readyBadge": "Paruošta",
     "comingBadge": "Netrukus",
@@ -784,13 +831,13 @@
     "ctaTitle": "Turite klausimų ar norite dalyvauti nuo pradžių?",
     "ctaBrands": "Ieškome prekių ženklų, norinčių kurti pirmąją versiją kartu: kokias sistemas naudojate ir kiek pardavėjų aptarnaujate? Parašykite mums.",
     "ctaRetailers": "Ieškome pardavėjų, norinčių kurti pirmąją versiją kartu: kokius prekių ženklus norėtumėte prijungti ir kokią programinę įrangą naudojate? Parašykite mums.",
-    "footer": "Skiltyje „Netrukus“ nurodytos funkcijos kuriamos. Versija 0.1, {date}."
+    "footer": "Skiltyje „Netrukus“ nurodytos funkcijos kuriamos. Versija 0.2, {date}."
   },
   "site": {
     "nav": {
       "start": "Esu prekės ženklas",
       "docs": "Dokumentacija",
-      "preview": "Versija 0.1"
+      "preview": "Versija 0.2"
     },
     "footer": {
       "tagline": "Atviras standartas, pagal kurį prekių ženklai pateikia produktų nuotraukas ir prekių duomenis savo pardavėjams.",
@@ -802,7 +849,7 @@
       "errors": "Klaidų kodai",
       "spec": "Specifikacija",
       "sdk": "Go SDK ir įrankis obx",
-      "status": "Išleista versija 0.1. Specifikacija ir programinė įranga naudojamos laisvai."
+      "status": "Išleista versija 0.2. Specifikacija ir programinė įranga naudojamos laisvai."
     },
     "shots": {
       "portalCatalog": "Išgalvoto prekės ženklo Kestrel portalas taip, kaip jį mato pardavėjas: aštuonios prekės su filtrais pagal prekės ženklą, produkto tipą ir spalvą.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Atvira specifikacija",
-          "p": "Versija 0.1, aprašyta OpenAPI 3.1 ir JSON Schema pagal CC-BY-4.0. Įgyvendinti ją gali bet kas, taip pat komerciškai."
+          "p": "Versija 0.2, aprašyta OpenAPI 3.1 ir JSON Schema pagal CC-BY-4.0. Įgyvendinti ją gali bet kas, taip pat komerciškai."
         },
         {
           "h": "Atitikties testai",

@@ -8,7 +8,7 @@ social networks and chat apps show for a link).
 
 From the site's own locale files: the brochures reuse the texts of the home, brands, hosting,
 retailers and FAQ pages, plus a `brochure` section in each `src/locales/<lang>.json` for what
-only the brochures say (the flow on the cover, "ready in 0.1" versus "coming next", the call to
+only the brochures say (the flow on the cover, "ready in 0.2" versus "coming next", the call to
 action). So a translation fixed on the site is fixed in the brochure too, and the honest split
 between what works today and what is coming is kept in one place.
 

@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, etusivu",
     "copy": "Kopioi",
     "copied": "Kopioitu",
-    "draft": "Versio 0.1 on julkaistu. Määrittely ja ohjelmisto ovat vapaasti käytettävissä.",
+    "draft": "Versio 0.2 on julkaistu. Määrittely ja ohjelmisto ovat vapaasti käytettävissä.",
     "footerAbout": "Maksuton ja avoin tapa brändeille toimittaa tuotekuvat ja tuotetiedot jälleenmyyjilleen.",
     "footerMore": "Lisää",
     "footerSource": "Lähdekoodi ja määrittely",
@@ -144,7 +144,7 @@
         "p": "Yksi julkaisu kaikille jälleenmyyjille. Ei enää tiedostonsiirtoja, zip-sähköposteja eikä erillistä integraatiota jokaiselle kaupalle."
       }
     ],
-    "status": "Open Brand Exchange on alussa. Määrittelyn ja ohjelmiston versio 0.1 on julkaistu ja vapaasti käytettävissä. Emme näytä asiakkaita tai lukuja, joita ei vielä ole.",
+    "status": "Open Brand Exchange on alussa. Määrittelyn ja ohjelmiston versio 0.2 on julkaistu ja vapaasti käytettävissä. Emme näytä asiakkaita tai lukuja, joita ei vielä ole.",
     "statusLink": "Lue, miten sitä hallinnoidaan"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "Seuraava vaihe",
     "nextHosting": "Valitse ylläpito",
-    "nextAutomation": "Katso automaatio-ohjeet"
+    "nextAutomation": "Katso automaatio-ohjeet",
+    "labelNote": "Jos pesulapusta puuttuu jotain lain vaatimaa, kuten kuitukoostumus tai kengän materiaalit, Open Brand Exchange varoittaa sinua latausvaiheessa. Varoitus ei koskaan estä julkaisua.",
+    "bagsNote": "Matkalaukuilla ja laukuilla on nyt mitat (K × L × S, paino, tilavuus) ja ominaisuudet (pyörät, lukko, irrotettava hihna …), jotka jokainen brändi mittaa samalla tavalla."
   },
   "automation": {
     "h1": "Automaatio",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Ei rumpukuivausta",
         "do_not_iron": "Ei silitystä",
         "do_not_dry_clean": "Ei kemiallista pesua"
+      },
+      "law": {
+        "title": "Mitä laki vaatii",
+        "lead": "Mitä EU:n lainsäädäntö vaatii tekstiileiltä ja jalkineilta ja mikä on vapaaehtoista. Suuntaa antava, ei oikeudellinen neuvo.",
+        "head": [
+          "Tieto",
+          "EU:ssa",
+          "Oikeusperusta"
+        ],
+        "rows": [
+          {
+            "what": "Kuitukoostumus osittain, prosentteina",
+            "status": "Pakollinen, myös verkossa ennen ostoa",
+            "basis": "Asetus (EU) N:o 1007/2011"
+          },
+          {
+            "what": "”Sisältää eläinperäisiä muita kuin tekstiiliosia”",
+            "status": "Pakollinen, jos tuotteessa on tällaisia osia",
+            "basis": "Asetus (EU) N:o 1007/2011, 12 artikla"
+          },
+          {
+            "what": "Jalkineen päällisen, vuoren ja pohjallisen sekä ulkopohjan materiaali",
+            "status": "Pakollinen",
+            "basis": "Direktiivi 94/11/EY"
+          },
+          {
+            "what": "Hoito-ohjeet",
+            "status": "Vapaaehtoinen (vakiintunut käytäntö; ISO 3758 -merkit)"
+          },
+          {
+            "what": "Alkuperämaa",
+            "status": "EU:ssa vapaaehtoinen"
+          },
+          {
+            "what": "Sertifikaatit (GOTS, OEKO-TEX …)",
+            "status": "Vapaaehtoinen, yksityiset järjestelmät"
+          },
+          {
+            "what": "Digitaalinen tuotepassi",
+            "status": "Tulossa: tekstiilejä koskeva delegoitu säädös on suunniteltu vuoden 2027 viimeiselle neljännekselle",
+            "basis": "Asetus (EU) 2024/1781 (ESPR)"
+          }
+        ],
+        "note": "Open Brand Exchange varoittaa brändiä jo latausvaiheessa, jos jotain pakollista puuttuu; varoitus ei koskaan estä julkaisua."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Kehittäjille",
     "lead": "Open Brand Exchange on määrittely, jossa on kolme APIa, JSON Schemat, testidata ja yhdenmukaisuustestit. Määrittely on lähde; toteutukset seuraavat sitä.",
     "specTitle": "Määrittely",
-    "specP": "Versio 0.1. OpenAPI 3.1, JSON Schema 2020-12, esimerkit ja kuvitteellinen testibrändi Kestrel Outfitters. Lisenssi CC-BY-4.0: vapaasti toteutettavissa, myös kaupallisesti.",
+    "specP": "Versio 0.2. OpenAPI 3.1, JSON Schema 2020-12, esimerkit ja kuvitteellinen testibrändi Kestrel Outfitters. Lisenssi CC-BY-4.0: vapaasti toteutettavissa, myös kaupallisesti.",
     "specStart": "Aloita tiedostosta protocol.md",
     "apisTitle": "Kolme APIa",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: tavallinen webhotelli",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Rakennatko oman toteutuksen tai asiakkaan? Kerro siitä issuella tai pull requestilla; se lisätään taulukkoon, kun se läpäisee yhdenmukaisuustestit.",
     "docsTitle": "Dokumentit",
     "docs": [
@@ -519,7 +565,8 @@
       "brändihakemistot"
     ],
     "contribute": "Osallistuminen tapahtuu pull requesteilla spec-repositorioon.",
-    "governanceLink": "Miten päätökset tehdään"
+    "governanceLink": "Miten päätökset tehdään",
+    "quickstart": "Pika-aloitus: OBX 10 minuutissa"
   },
   "directory": {
     "h1": "Brändihakemisto",
@@ -609,7 +656,7 @@
       },
       {
         "q": "Onko se valmis?",
-        "a": "Kyllä, versio 0.1: määrittely, kolme portaalia, obx-komento ja vaatimustenmukaisuuden tarkistus on julkaistu ja vapaasti käytettävissä. Olemme alussa: ensimmäiset brändit liittyvät nyt."
+        "a": "Kyllä, versio 0.2: määrittely, kolme portaalia, obx-komento ja vaatimustenmukaisuuden tarkistus on julkaistu ja vapaasti käytettävissä. Olemme alussa: ensimmäiset brändit liittyvät nyt."
       },
       {
         "q": "Kuka sen takana on?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "Mikä on valmista ja mitä on tulossa",
-    "readyTitle": "Valmiina versiossa 0.1",
+    "readyTitle": "Valmiina versiossa 0.2",
     "comingTitle": "Tulossa",
     "readyBadge": "Valmis",
     "comingBadge": "Pian",
@@ -784,13 +831,13 @@
     "ctaTitle": "Kysyttävää, tai haluatko mukaan alusta asti?",
     "ctaBrands": "Etsimme brändejä, jotka haluavat olla muokkaamassa ensimmäistä versiota: mitä järjestelmiä käytät, ja kuinka monta jälleenmyyjää palvelet? Kirjoita meille.",
     "ctaRetailers": "Etsimme jälleenmyyjiä, jotka haluavat olla muokkaamassa ensimmäistä versiota: mitkä brändit haluaisit yhdistää, ja mitä ohjelmistoa käytät? Kirjoita meille.",
-    "footer": "Kohdan ”Tulossa” toiminnot ovat kehitteillä. Versio 0.1, {date}."
+    "footer": "Kohdan ”Tulossa” toiminnot ovat kehitteillä. Versio 0.2, {date}."
   },
   "site": {
     "nav": {
       "start": "Aloita brändinä",
       "docs": "Dokumentaatio",
-      "preview": "Versio 0.1"
+      "preview": "Versio 0.2"
     },
     "footer": {
       "tagline": "Avoin standardi tuotekuvien ja tuotetietojen toimittamiseen brändeiltä niiden jälleenmyyjille.",
@@ -802,7 +849,7 @@
       "errors": "Virhekoodit",
       "spec": "Määrittely",
       "sdk": "Go SDK ja obx-työkalu",
-      "status": "Versio 0.1 on julkaistu. Määrittely ja ohjelmisto ovat vapaasti käytettävissä."
+      "status": "Versio 0.2 on julkaistu. Määrittely ja ohjelmisto ovat vapaasti käytettävissä."
     },
     "shots": {
       "portalCatalog": "Kuvitteellisen Kestrel-brändin jälleenmyyjäportaali jälleenmyyjän näkökulmasta: kahdeksan tuotetta ja suodattimet brändin, tuotetyypin ja värin mukaan.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Avoin määrittely",
-          "p": "Versio 0.1, kirjoitettu OpenAPI 3.1- ja JSON Schema -muodossa CC-BY-4.0-lisenssillä. Kuka tahansa saa toteuttaa sen, myös kaupallisesti."
+          "p": "Versio 0.2, kirjoitettu OpenAPI 3.1- ja JSON Schema -muodossa CC-BY-4.0-lisenssillä. Kuka tahansa saa toteuttaa sen, myös kaupallisesti."
         },
         {
           "h": "Yhdenmukaisuustestit",

@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, startsida",
     "copy": "Kopiera",
     "copied": "Kopierat",
-    "draft": "Version 0.1 är släppt. Specifikationen och programvaran är fria att använda.",
+    "draft": "Version 0.2 är släppt. Specifikationen och programvaran är fria att använda.",
     "footerAbout": "Ett kostnadsfritt, öppet sätt för varumärken att leverera produktbilder och artikeldata till sina återförsäljare.",
     "footerMore": "Mer",
     "footerSource": "Källkod och specifikation",
@@ -144,7 +144,7 @@
         "p": "En publicering för alla dina återförsäljare. Slut på filöverföringar, mejl med zip-filer och en egen integration per butik."
       }
     ],
-    "status": "Open Brand Exchange är i början. Version 0.1 av specifikationen och programvaran är släppt och fri att använda. Vi visar inga kunder eller siffror som inte finns ännu.",
+    "status": "Open Brand Exchange är i början. Version 0.2 av specifikationen och programvaran är släppt och fri att använda. Vi visar inga kunder eller siffror som inte finns ännu.",
     "statusLink": "Läs hur det styrs"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "Nästa steg",
     "nextHosting": "Välj hosting",
-    "nextAutomation": "Se automatiseringsrecepten"
+    "nextAutomation": "Se automatiseringsrecepten",
+    "labelNote": "Saknas något som lagen kräver på etiketten, till exempel fibersammansättningen eller materialen i en sko, varnar Open Brand Exchange dig vid uppladdningen. En varning stoppar aldrig publiceringen.",
+    "bagsNote": "Resväskor och väskor har nu mått (H × B × D, vikt, volym) och egenskaper (hjul, lås, avtagbar rem …), som varje varumärke mäter på samma sätt."
   },
   "automation": {
     "h1": "Automatisering",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Får ej torktumlas",
         "do_not_iron": "Får ej strykas",
         "do_not_dry_clean": "Får ej kemtvättas"
+      },
+      "law": {
+        "title": "Vad lagen kräver",
+        "lead": "Vad EU-rätten kräver för textilier och skor, och vad som är frivilligt. En vägledning, inte juridisk rådgivning.",
+        "head": [
+          "Uppgift",
+          "I EU",
+          "Rättslig grund"
+        ],
+        "rows": [
+          {
+            "what": "Fibersammansättning per del, i %",
+            "status": "Obligatoriskt, även online före köpet",
+            "basis": "Förordning (EU) nr 1007/2011"
+          },
+          {
+            "what": "”Innehåller delar av animaliskt ursprung som inte är textilier”",
+            "status": "Obligatoriskt när produkten har sådana delar",
+            "basis": "Förordning (EU) nr 1007/2011, art. 12"
+          },
+          {
+            "what": "Material i ovandel, foder och bindsula samt yttersula på skor",
+            "status": "Obligatoriskt",
+            "basis": "Direktiv 94/11/EG"
+          },
+          {
+            "what": "Tvättråd",
+            "status": "Frivilligt (vanlig praxis; symboler enligt ISO 3758)"
+          },
+          {
+            "what": "Ursprungsland",
+            "status": "Frivilligt i EU"
+          },
+          {
+            "what": "Certifieringar (GOTS, OEKO-TEX …)",
+            "status": "Frivilligt, privata system"
+          },
+          {
+            "what": "Digitalt produktpass",
+            "status": "På väg: den delegerade akten för textilier är planerad till fjärde kvartalet 2027",
+            "basis": "Förordning (EU) 2024/1781 (ESPR)"
+          }
+        ],
+        "note": "Open Brand Exchange varnar varumärket redan vid uppladdningen när något obligatoriskt saknas; en varning stoppar aldrig publiceringen."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Utvecklare",
     "lead": "Open Brand Exchange är en specifikation med tre API:er, JSON Schemas, testdata och konformitetstester. Specifikationen är källan; implementationerna följer den.",
     "specTitle": "Specifikationen",
-    "specP": "Version 0.1. OpenAPI 3.1, JSON Schema 2020-12, exempel och ett fiktivt testvarumärke, Kestrel Outfitters. Licens CC-BY-4.0: fri att implementera, även kommersiellt.",
+    "specP": "Version 0.2. OpenAPI 3.1, JSON Schema 2020-12, exempel och ett fiktivt testvarumärke, Kestrel Outfitters. Licens CC-BY-4.0: fri att implementera, även kommersiellt.",
     "specStart": "Börja med protocol.md",
     "apisTitle": "Tre API:er",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: vanligt webbhotell",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Bygger du en egen implementation eller klient? Hör av dig med ett issue eller en pull request; den hamnar i tabellen så fort den klarar konformitetstesterna.",
     "docsTitle": "Dokument",
     "docs": [
@@ -519,7 +565,8 @@
       "varumärkeskataloger"
     ],
     "contribute": "Bidrag görs via pull requests i spec-repot.",
-    "governanceLink": "Hur beslut fattas"
+    "governanceLink": "Hur beslut fattas",
+    "quickstart": "Snabbstart: OBX på 10 minuter"
   },
   "directory": {
     "h1": "Varumärkeskatalog",
@@ -609,7 +656,7 @@
       },
       {
         "q": "Är det klart?",
-        "a": "Ja, version 0.1: specifikationen, de tre portalerna, kommandot obx och konformitetskontrollen är släppta och fria att använda. Vi är i början: de första varumärkena ansluter nu."
+        "a": "Ja, version 0.2: specifikationen, de tre portalerna, kommandot obx och konformitetskontrollen är släppta och fria att använda. Vi är i början: de första varumärkena ansluter nu."
       },
       {
         "q": "Vem ligger bakom?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "Vad som är klart och vad som kommer",
-    "readyTitle": "Klart i version 0.1",
+    "readyTitle": "Klart i version 0.2",
     "comingTitle": "På gång",
     "readyBadge": "Klart",
     "comingBadge": "Snart",
@@ -784,13 +831,13 @@
     "ctaTitle": "Frågor, eller vill du vara med från början?",
     "ctaBrands": "Vi söker varumärken som vill vara med och forma den första versionen: vilka system använder du, och hur många återförsäljare betjänar du? Skriv till oss.",
     "ctaRetailers": "Vi söker återförsäljare som vill vara med och forma den första versionen: vilka varumärken vill du koppla in, och vilket system använder du? Skriv till oss.",
-    "footer": "Funktioner under ”På gång” är under utveckling. Version 0.1, {date}."
+    "footer": "Funktioner under ”På gång” är under utveckling. Version 0.2, {date}."
   },
   "site": {
     "nav": {
       "start": "Kom igång som varumärke",
       "docs": "Dokumentation",
-      "preview": "Version 0.1"
+      "preview": "Version 0.2"
     },
     "footer": {
       "tagline": "Den öppna standarden för att leverera produktbilder och artikeldata från varumärken till deras återförsäljare.",
@@ -802,7 +849,7 @@
       "errors": "Felkoder",
       "spec": "Specifikation",
       "sdk": "Go SDK och verktyget obx",
-      "status": "Version 0.1 är släppt. Specifikationen och programvaran är fria att använda."
+      "status": "Version 0.2 är släppt. Specifikationen och programvaran är fria att använda."
     },
     "shots": {
       "portalCatalog": "Återförsäljarportalen för det fiktiva varumärket Kestrel, så som en återförsäljare ser den: åtta artiklar med filter för varumärke, produkttyp och färg.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Öppen specifikation",
-          "p": "Version 0.1, skriven i OpenAPI 3.1 och JSON Schema under CC-BY-4.0. Alla får implementera den, även kommersiellt."
+          "p": "Version 0.2, skriven i OpenAPI 3.1 och JSON Schema under CC-BY-4.0. Alla får implementera den, även kommersiellt."
         },
         {
           "h": "Konformitetstester",

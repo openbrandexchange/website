@@ -218,23 +218,40 @@ test('the Docker steps work when copied: the setup code is read from the log on 
 });
 
 test('every error code has a page at its problem type URL, with its HTTP status', { skip: !built && 'dist/ not built' }, () => {
-  const { errors } = JSON.parse(readFileSync(new URL('../src/data/errors.json', import.meta.url), 'utf8'));
-  const known = JSON.parse(read('schemas/v0.1/Common.json')).$defs.ErrorCode.enum;
-  assert.deepEqual(errors.map((e) => e.code).sort(), [...known].sort(), 'the pages cover exactly the codes of the schemas');
-  for (const e of errors) {
+  const { errors, warnings, current_schema_version: current } = JSON.parse(readFileSync(new URL('../src/data/errors.json', import.meta.url), 'utf8'));
+  const common = JSON.parse(read(`schemas/${current}/Common.json`)).$defs;
+  assert.deepEqual(errors.map((e) => e.code).sort(), [...common.ErrorCode.enum].sort(), 'the pages cover exactly the error codes of the schemas');
+  assert.deepEqual(warnings.map((w) => w.code).sort(), [...common.WarningCode.enum].sort(), 'and exactly the warning codes');
+  for (const e of [...errors, ...warnings]) {
     const html = read(`errors/${e.code}/index.html`);
-    assert.ok(html.includes(`https://openbrandexchange.com/errors/${e.code}`), e.code);
-    assert.match(html, new RegExp(`<dd>${e.status}</dd>`), `${e.code}: HTTP ${e.status}`);
+    if (e.status) {
+      assert.ok(html.includes(`https://openbrandexchange.com/errors/${e.code}`), e.code);
+      assert.match(html, new RegExp(`<dd>${e.status}</dd>`), `${e.code}: HTTP ${e.status}`);
+    } else {
+      assert.match(html, /never blocks/, `${e.code}: a warning never blocks publishing`);
+      assert.ok(html.includes(`<code>${e.column}</code>`), `${e.code}: column ${e.column}`);
+    }
     for (const [, attrs] of html.matchAll(/<script([^>]*)>/g)) assert.match(attrs, /\ssrc="/, `${e.code}: inline script`);
     assert.doesNotMatch(html, /<style[\s>]|\sstyle="/, `${e.code}: inline style`);
     assert.doesNotMatch(html, /[\w.+-]+@(?!openbrandexchange\.com)[\w-]+\.[\w.]+/, `${e.code}: e-mail address outside openbrandexchange.com`);
   }
+  for (const w of ['fibre_composition_missing', 'animal_origin_unknown', 'footwear_materials_missing', 'fibre_percentages_not_100']) {
+    assert.ok(warnings.some((x) => x.code === w), `warning ${w} (spec 0.2)`);
+  }
 });
 
 test('the schemas are served at the address of their $id, and the API reference with them', { skip: !built && 'dist/ not built' }, () => {
-  const files = readdirSync(new URL('schemas/v0.1/', dist)).filter((f) => f.endsWith('.json'));
-  assert.ok(files.length >= 40, `${files.length} schemas`);
-  for (const f of files) assert.equal(JSON.parse(read(`schemas/v0.1/${f}`)).$id, `https://openbrandexchange.com/schemas/v0.1/${f}`);
+  // Every version stays served: the frozen 0.1 copies next to the current 0.2 schemas.
+  const versions = readdirSync(new URL('schemas/', dist)).filter((d) => /^v\d+\.\d+$/.test(d));
+  for (const v of ['v0.1', 'v0.2']) assert.ok(versions.includes(v), `schemas/${v}/ is served`);
+  for (const v of versions) {
+    const files = readdirSync(new URL(`schemas/${v}/`, dist)).filter((f) => f.endsWith('.json'));
+    assert.ok(files.length >= 40, `${v}: ${files.length} schemas`);
+    for (const f of files) assert.equal(JSON.parse(read(`schemas/${v}/${f}`)).$id, `https://openbrandexchange.com/schemas/${v}/${f}`);
+  }
+  for (const f of ['Measurements.json', 'Features.json', 'FootwearMaterials.json', 'Certifications.json']) {
+    assert.ok(existsSync(new URL(`schemas/v0.2/${f}`, dist)), `the 0.2 schema ${f}`);
+  }
   for (const page of ['index', 'protocol', 'ingest', 'admin']) {
     assert.match(read(`reference/${page}.html`), /<meta http-equiv="Content-Security-Policy"/, `reference/${page}.html has its own policy`);
   }

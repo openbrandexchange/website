@@ -16,6 +16,10 @@ const { lang } = Astro.props;
 const t = messages[lang];
 const c = t.retailers;
 const lb = c.label;
+// What EU law requires (spec protocol.md §5.9.7, "Legal basis"): the first three rows are law,
+// care, origin and certifications are voluntary, the textiles DPP is still to come.
+const law = lb.law;
+const lawKind = ['mandatory', 'mandatory', 'mandatory', 'voluntary', 'voluntary', 'voluntary', 'coming'] as const;
 const parts: Record<string, string> = { outer: lb.outer, lining: lb.lining };
 // Spec 0.2: recycled content is a property of the fibre; the label text has its own wording for it.
 const fibre = (f: { fiber: string; recycled?: boolean }) => (lb.fibres as Record<string, string>)[f.recycled ? `recycled_${f.fiber}` : f.fiber] ?? f.fiber;
@@ -96,6 +100,27 @@ if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });
       </figure>
       <Code label={lb.codeLabel} code={labelJson} />
     </div>
+  </div>
+  <div class="wrap law" data-reveal>
+    <h3 id="law">{law.title}</h3>
+    <p>{law.lead}</p>
+    <div class="table-scroll">
+      <table aria-labelledby="law">
+        <thead><tr>{law.head.map((h) => <th scope="col">{h}</th>)}</tr></thead>
+        <tbody>
+          {
+            law.rows.map((row, i) => (
+              <tr class:list={[`law-${lawKind[i]}`]}>
+                <th scope="row">{row.what}</th>
+                <td>{lawKind[i] === 'mandatory' ? <strong>{row.status}</strong> : row.status}</td>
+                {'basis' in row ? <td>{row.basis}</td> : <td class="law-none">—</td>}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+    <p class="small muted">{law.note}</p>
   </div>
 </section>
 

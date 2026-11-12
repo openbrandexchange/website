@@ -54,7 +54,10 @@ const docs = [
   <div class="wrap">
     <DocSection id="spec" title={c.specTitle}>
       <p>{c.specP}</p>
-      <p><a href={repo('spec')}>openbrandexchange/spec</a> · <a href={specDoc('docs/protocol.md')}>{c.specStart}</a></p>
+      <p>
+        <a href={repo('spec')}>openbrandexchange/spec</a> · <a href={specDoc('docs/protocol.md')}>{c.specStart}</a> ·
+        <a href={specDoc('docs/quickstart.md')}>{c.quickstart}</a>
+      </p>
     </DocSection>
 
     <DocSection id="apis" title={c.apisTitle}>

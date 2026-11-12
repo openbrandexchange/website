@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, úvodní stránka",
     "copy": "Kopírovat",
     "copied": "Zkopírováno",
-    "draft": "Verze 0.1 je venku. Specifikace i software jsou volně k použití.",
+    "draft": "Verze 0.2 je venku. Specifikace i software jsou volně k použití.",
     "footerAbout": "Bezplatný a otevřený způsob, jak mohou značky předávat produktové fotografie a data o zboží svým prodejcům.",
     "footerMore": "Další",
     "footerSource": "Zdrojový kód a specifikace",
@@ -144,7 +144,7 @@
         "p": "Jedna publikace pro všechny prodejce. Konec přenosů souborů, e-mailů se zipy a zvláštní integrace pro každý obchod."
       }
     ],
-    "status": "Open Brand Exchange je na začátku. Verze 0.1 specifikace a softwaru je vydaná a volně k použití. Neukazujeme zákazníky ani čísla, která zatím neexistují.",
+    "status": "Open Brand Exchange je na začátku. Verze 0.2 specifikace a softwaru je vydaná a volně k použití. Neukazujeme zákazníky ani čísla, která zatím neexistují.",
     "statusLink": "Přečtěte si, jak je spravován"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "Další krok",
     "nextHosting": "Vyberte hosting",
-    "nextAutomation": "Prohlédněte si návody na automatizaci"
+    "nextAutomation": "Prohlédněte si návody na automatizaci",
+    "labelNote": "Pokud chybí něco, co zákon na etiketě vyžaduje, třeba vlákenné složení nebo materiály boty, Open Brand Exchange vás při nahrání upozorní. Upozornění nikdy nebrání zveřejnění.",
+    "bagsNote": "Kufry a tašky mají nyní rozměry (V × Š × H, hmotnost, objem) a vlastnosti (kolečka, zámek, odnímatelný popruh…), které každá značka měří stejně."
   },
   "automation": {
     "h1": "Automatizace",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Nesušit v bubnové sušičce",
         "do_not_iron": "Nežehlit",
         "do_not_dry_clean": "Nečistit chemicky"
+      },
+      "law": {
+        "title": "Co vyžaduje zákon",
+        "lead": "Co právo EU vyžaduje u textilií a obuvi a co je dobrovolné. Orientační přehled, ne právní rada.",
+        "head": [
+          "Údaj",
+          "V EU",
+          "Právní základ"
+        ],
+        "rows": [
+          {
+            "what": "Vlákenné složení podle částí, v %",
+            "status": "Povinné, i online před nákupem",
+            "basis": "Nařízení (EU) č. 1007/2011"
+          },
+          {
+            "what": "„Obsahuje netextilní části živočišného původu“",
+            "status": "Povinné, pokud výrobek takové části má",
+            "basis": "Nařízení (EU) č. 1007/2011, čl. 12"
+          },
+          {
+            "what": "Materiál svršku, podšívky a stélky a podešve obuvi",
+            "status": "Povinné",
+            "basis": "Směrnice 94/11/ES"
+          },
+          {
+            "what": "Pokyny k údržbě",
+            "status": "Dobrovolné (běžná praxe; symboly podle ISO 3758)"
+          },
+          {
+            "what": "Země původu",
+            "status": "V EU dobrovolné"
+          },
+          {
+            "what": "Certifikace (GOTS, OEKO-TEX…)",
+            "status": "Dobrovolné, soukromé systémy"
+          },
+          {
+            "what": "Digitální pas výrobku",
+            "status": "Připravuje se: akt v přenesené pravomoci pro textil je plánován na 4. čtvrtletí 2027",
+            "basis": "Nařízení (EU) 2024/1781 (ESPR)"
+          }
+        ],
+        "note": "Open Brand Exchange značku upozorní už při nahrání, když chybí něco povinného; upozornění nikdy nebrání zveřejnění."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Pro vývojáře",
     "lead": "Open Brand Exchange je specifikace se třemi API, schématy JSON, testovacími daty a testy shody. Specifikace je zdrojem pravdy; implementace se jí řídí.",
     "specTitle": "Specifikace",
-    "specP": "Verze 0.1. OpenAPI 3.1, JSON Schema 2020-12, příklady a fiktivní testovací značka Kestrel Outfitters. Licence CC-BY-4.0: volně implementovatelné, i komerčně.",
+    "specP": "Verze 0.2. OpenAPI 3.1, JSON Schema 2020-12, příklady a fiktivní testovací značka Kestrel Outfitters. Licence CC-BY-4.0: volně implementovatelné, i komerčně.",
     "specStart": "Začněte souborem protocol.md",
     "apisTitle": "Tři API",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: běžný webhosting",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Stavíte vlastní implementaci nebo klienta? Dejte vědět přes issue nebo pull request; do tabulky se dostane, jakmile projde testy shody.",
     "docsTitle": "Dokumenty",
     "docs": [
@@ -519,7 +565,8 @@
       "seznamy značek"
     ],
     "contribute": "Příspěvky probíhají přes pull requesty v repozitáři spec.",
-    "governanceLink": "Jak se přijímají rozhodnutí"
+    "governanceLink": "Jak se přijímají rozhodnutí",
+    "quickstart": "Rychlý start: OBX za 10 minut"
   },
   "directory": {
     "h1": "Seznam značek",
@@ -609,7 +656,7 @@
       },
       {
         "q": "Je to hotové?",
-        "a": "Ano, verze 0.1: specifikace, tři portály, příkaz obx a kontrola shody jsou vydané a volně k použití. Jsme na začátku: první značky se připojují právě teď."
+        "a": "Ano, verze 0.2: specifikace, tři portály, příkaz obx a kontrola shody jsou vydané a volně k použití. Jsme na začátku: první značky se připojují právě teď."
       },
       {
         "q": "Kdo za tím stojí?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "Co je hotové a co přijde",
-    "readyTitle": "Hotovo ve verzi 0.1",
+    "readyTitle": "Hotovo ve verzi 0.2",
     "comingTitle": "Připravujeme",
     "readyBadge": "Hotovo",
     "comingBadge": "Brzy",
@@ -784,13 +831,13 @@
     "ctaTitle": "Máte otázky nebo chcete být u toho od začátku?",
     "ctaBrands": "Hledáme značky, které chtějí spoluutvářet první verzi: jaké systémy používáte a kolik prodejců obsluhujete? Napište nám.",
     "ctaRetailers": "Hledáme prodejce, kteří chtějí spoluutvářet první verzi: jaké značky chcete propojit a jaký software používáte? Napište nám.",
-    "footer": "Funkce v části „Připravujeme“ jsou ve vývoji. Verze 0.1, {date}."
+    "footer": "Funkce v části „Připravujeme“ jsou ve vývoji. Verze 0.2, {date}."
   },
   "site": {
     "nav": {
       "start": "Začít jako značka",
       "docs": "Dokumentace",
-      "preview": "Verze 0.1"
+      "preview": "Verze 0.2"
     },
     "footer": {
       "tagline": "Otevřený standard pro předávání produktových fotografií a dat o zboží od značek jejich prodejcům.",
@@ -802,7 +849,7 @@
       "errors": "Chybové kódy",
       "spec": "Specifikace",
       "sdk": "Go SDK a nástroj obx",
-      "status": "Verze 0.1 je venku. Specifikace i software jsou volně k použití."
+      "status": "Verze 0.2 je venku. Specifikace i software jsou volně k použití."
     },
     "shots": {
       "portalCatalog": "Portál fiktivní značky Kestrel očima prodejce: osm položek s filtry podle značky, typu produktu a barvy.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Otevřená specifikace",
-          "p": "Verze 0.1, zapsaná jako OpenAPI 3.1 a JSON Schema pod licencí CC-BY-4.0. Implementovat ji smí kdokoli, i komerčně."
+          "p": "Verze 0.2, zapsaná jako OpenAPI 3.1 a JSON Schema pod licencí CC-BY-4.0. Implementovat ji smí kdokoli, i komerčně."
         },
         {
           "h": "Testy shody",

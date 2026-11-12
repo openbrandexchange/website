@@ -28,10 +28,21 @@ test('the API reference runs under its own policy: the site-wide header is detac
   expect((await violations(page)).filter((v) => !v.includes('cdn.redoc.ly/redoc/logo-mini'))).toEqual([]);
 });
 
-test('a schema is served at the address of its $id', async ({ request }) => {
-  const res = await request.get('/schemas/v0.1/Problem.json');
-  expect(res.ok()).toBeTruthy();
-  expect((await res.json()).$id).toBe('https://openbrandexchange.com/schemas/v0.1/Problem.json');
+test('a schema is served at the address of its $id, the current and the frozen version', async ({ request }) => {
+  for (const path of ['/schemas/v0.2/Problem.json', '/schemas/v0.2/Measurements.json', '/schemas/v0.1/Problem.json']) {
+    const res = await request.get(path);
+    expect(res.ok(), path).toBeTruthy();
+    expect((await res.json()).$id).toBe(`https://openbrandexchange.com${path}`);
+  }
+});
+
+test('a label completeness warning has its page too', async ({ page }) => {
+  const response = await page.goto('/errors/fibre_composition_missing');
+  expect(response?.status()).toBe(200);
+  await expect(page.locator('h1')).toHaveText('fibre_composition_missing');
+  await expect(page.locator('.lead')).toContainText('never blocks');
+  await page.goto('/errors/');
+  await expect(page.locator('tr#footwear_materials_missing')).toContainText('footwear_materials');
 });
 
 test('a problem type URL leads to its page: code, HTTP status and meaning', async ({ page }) => {
@@ -48,7 +59,7 @@ test('a problem type URL leads to its page: code, HTTP status and meaning', asyn
 for (const scheme of ['light', 'dark'] as const) {
   test(`the error pages have no axe violations (${scheme})`, async ({ page }) => {
     await page.emulateMedia({ colorScheme: scheme });
-    for (const path of ['/errors/', '/errors/rate_limited/']) {
+    for (const path of ['/errors/', '/errors/rate_limited/', '/errors/animal_origin_unknown/']) {
       await page.goto(path);
       const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice']).analyze();
       expect(results.violations.map((v) => `${v.id}: ${v.nodes.map((n) => n.target.join(' ')).join(', ')}`), path).toEqual([]);

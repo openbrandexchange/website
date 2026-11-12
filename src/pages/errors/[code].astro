@@ -3,36 +3,83 @@ import Reference from '../../layouts/Reference.astro';
 import data from '../../data/errors.json';
 import { specDoc } from '../../i18n';
 
+type Entry =
+  | ({ kind: 'error' } & (typeof data.errors)[number])
+  | ({ kind: 'warning' } & (typeof data.warnings)[number]);
+
 export function getStaticPaths() {
-  return data.errors.map((e) => ({ params: { code: e.code }, props: e }));
+  return [
+    ...data.errors.map((e) => ({ params: { code: e.code }, props: { kind: 'error', ...e } })),
+    ...data.warnings.map((w) => ({ params: { code: w.code }, props: { kind: 'warning', ...w } })),
+  ];
 }
-const { code, status, meaning } = Astro.props as (typeof data.errors)[number];
-const parts = meaning.split('`').map((s, i) => ({ s, code: i % 2 === 1 }));
-const plain = meaning.replace(/`/g, '');
+const entry = Astro.props as Entry;
+const { code } = entry;
+// `code` spans of the spec's table cells, rendered as <code>.
+const parts = (text: string) => text.split('`').map((s, i) => ({ s, code: i % 2 === 1 }));
+const plain = (text: string) => text.replace(/`/g, '');
+const description =
+  entry.kind === 'error'
+    ? `Open Brand Exchange error ${code} (HTTP ${entry.status}): ${plain(entry.meaning)}.`
+    : `Open Brand Exchange label completeness warning ${code}: ${plain(entry.when)}. A warning never blocks publishing.`;
 ---
 
-<Reference title={code} description={`Open Brand Exchange error ${code} (HTTP ${status}): ${plain}.`} path={`/errors/${code}/`}>
+<Reference title={code} description={description} path={`/errors/${code}/`}>
   <section class="hero">
     <div class="wrap">
-      <p class="muted small"><a href="/errors/">Error codes</a></p>
+      <p class="muted small"><a href={entry.kind === 'error' ? '/errors/' : '/errors/#warnings'}>{entry.kind === 'error' ? 'Error codes' : 'Label completeness warnings'}</a></p>
       <h1><code>{code}</code></h1>
-      <p class="lead">{parts.map((p) => (p.code ? <code>{p.s}</code> : p.s))}.</p>
+      {
+        entry.kind === 'error' ? (
+          <p class="lead">{parts(entry.meaning).map((p) => (p.code ? <code>{p.s}</code> : p.s))}.</p>
+        ) : (
+          <p class="lead">
+            Label completeness warning: {parts(entry.when).map((p) => (p.code ? <code>{p.s}</code> : p.s))}. It never blocks
+            the import, the write or publishing.
+          </p>
+        )
+      }
     </div>
   </section>
   <section class="section">
     <div class="wrap prose">
-      <dl>
-        <dt>HTTP status</dt>
-        <dd>{status}</dd>
-        <dt>Problem type</dt>
-        <dd><code>https://openbrandexchange.com/errors/{code}</code></dd>
-      </dl>
-      <p>
-        The answer is an <code>application/problem+json</code> document with <code>type</code>, <code>title</code>,
-        <code>status</code>, <code>detail</code> and <code>obx_error</code>; field problems are listed in <code>errors[]</code>
-        with a JSON Pointer. See <a href={specDoc('docs/protocol.md')}>protocol.md</a> and the
-        <a href="/reference/">API reference</a>.
-      </p>
+      {
+        entry.kind === 'error' ? (
+          <>
+            <dl>
+              <dt>HTTP status</dt>
+              <dd>{entry.status}</dd>
+              <dt>Problem type</dt>
+              <dd><code>https://openbrandexchange.com/errors/{code}</code></dd>
+            </dl>
+            <p>
+              The answer is an <code>application/problem+json</code> document with <code>type</code>, <code>title</code>,
+              <code>status</code>, <code>detail</code> and <code>obx_error</code>; field problems are listed in{' '}
+              <code>errors[]</code> with a JSON Pointer. See <a href={specDoc('docs/protocol.md')}>protocol.md</a> and the{' '}
+              <a href="/reference/">API reference</a>.
+            </p>
+          </>
+        ) : (
+          <>
+            <dl>
+              <dt>Column</dt>
+              <dd><code>{entry.column}</code></dd>
+              <dt>Why (legal basis)</dt>
+              <dd>{parts(entry.why).map((p) => (p.code ? <code>{p.s}</code> : p.s))}</dd>
+              <dt>Where it appears</dt>
+              <dd>
+                In <code>obx_error</code> of an import row with <code>severity: warning</code>, and in{' '}
+                <code>warning_details</code> of an Ingest result (since version 0.2).
+              </dd>
+            </dl>
+            <p>
+              The product is written and published as usual. See rule 10 of{' '}
+              <a href={specDoc('docs/import-format.md#label-completeness')}>import-format.md</a> and the legal basis table in{' '}
+              <a href={specDoc('docs/protocol.md#legal-basis')}>protocol.md §5.9.7</a>.
+            </p>
+          </>
+        )
+      }
     </div>
   </section>
 </Reference>

@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, pagina principală",
     "copy": "Copiază",
     "copied": "Copiat",
-    "draft": "Versiunea 0.1 a fost lansată. Specificația și software-ul sunt libere de folosit.",
+    "draft": "Versiunea 0.2 a fost lansată. Specificația și software-ul sunt libere de folosit.",
     "footerAbout": "O modalitate gratuită și deschisă prin care mărcile le livrează comercianților fotografii de produs și date despre articole.",
     "footerMore": "Mai mult",
     "footerSource": "Cod sursă și specificație",
@@ -144,7 +144,7 @@
         "p": "O singură publicare pentru toți comercianții. Gata cu transferurile de fișiere, e-mailurile cu arhive zip și integrările separate pentru fiecare magazin."
       }
     ],
-    "status": "Open Brand Exchange este la început. Versiunea 0.1 a specificației și a software-ului a fost lansată și este liberă de folosit. Nu arătăm clienți sau cifre care încă nu există.",
+    "status": "Open Brand Exchange este la început. Versiunea 0.2 a specificației și a software-ului a fost lansată și este liberă de folosit. Nu arătăm clienți sau cifre care încă nu există.",
     "statusLink": "Citiți cum este guvernat"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "Pasul următor",
     "nextHosting": "Alegeți găzduirea",
-    "nextAutomation": "Vedeți rețetele de automatizare"
+    "nextAutomation": "Vedeți rețetele de automatizare",
+    "labelNote": "Dacă lipsește ceva ce legea impune pe etichetă, de exemplu compoziția fibroasă sau materialele unui pantof, Open Brand Exchange vă avertizează la încărcare. Un avertisment nu blochează niciodată publicarea.",
+    "bagsNote": "Valizele și gențile au acum dimensiuni (Î × L × A, greutate, volum) și caracteristici (roți, încuietoare, curea detașabilă …), măsurate la fel de fiecare marcă."
   },
   "automation": {
     "h1": "Automatizare",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Nu se usucă în uscător",
         "do_not_iron": "Nu se calcă",
         "do_not_dry_clean": "Nu se curăță chimic"
+      },
+      "law": {
+        "title": "Ce impune legea",
+        "lead": "Ce impune legislația UE pentru textile și încălțăminte și ce este voluntar. O orientare, nu consultanță juridică.",
+        "head": [
+          "Informație",
+          "În UE",
+          "Temei juridic"
+        ],
+        "rows": [
+          {
+            "what": "Compoziția fibroasă pe componente, în %",
+            "status": "Obligatorie, inclusiv online înainte de cumpărare",
+            "basis": "Regulamentul (UE) nr. 1007/2011"
+          },
+          {
+            "what": "„Conține părți netextile de origine animală”",
+            "status": "Obligatorie dacă produsul are astfel de părți",
+            "basis": "Regulamentul (UE) nr. 1007/2011, art. 12"
+          },
+          {
+            "what": "Materialul feței, al căptușelii și branțului și al tălpii exterioare la încălțăminte",
+            "status": "Obligatoriu",
+            "basis": "Directiva 94/11/CE"
+          },
+          {
+            "what": "Instrucțiunile de întreținere",
+            "status": "Voluntare (practică obișnuită; simboluri ISO 3758)"
+          },
+          {
+            "what": "Țara de origine",
+            "status": "Voluntară în UE"
+          },
+          {
+            "what": "Certificările (GOTS, OEKO-TEX …)",
+            "status": "Voluntare, scheme private"
+          },
+          {
+            "what": "Pașaportul digital al produsului",
+            "status": "Urmează: actul delegat pentru textile este planificat pentru trimestrul IV 2027",
+            "basis": "Regulamentul (UE) 2024/1781 (ESPR)"
+          }
+        ],
+        "note": "Open Brand Exchange avertizează marca încă de la încărcare când lipsește ceva obligatoriu; un avertisment nu blochează niciodată publicarea."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Pentru dezvoltatori",
     "lead": "Open Brand Exchange este o specificație cu trei API-uri, scheme JSON, date de test și teste de conformitate. Specificația este sursa de adevăr; implementările o urmează.",
     "specTitle": "Specificația",
-    "specP": "Versiunea 0.1. OpenAPI 3.1, JSON Schema 2020-12, exemple și o marcă de test fictivă, Kestrel Outfitters. Licență CC-BY-4.0: liber de implementat, inclusiv comercial.",
+    "specP": "Versiunea 0.2. OpenAPI 3.1, JSON Schema 2020-12, exemple și o marcă de test fictivă, Kestrel Outfitters. Licență CC-BY-4.0: liber de implementat, inclusiv comercial.",
     "specStart": "Începeți cu protocol.md",
     "apisTitle": "Trei API-uri",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: găzduire web obișnuită",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Construiți propria implementare sau un client? Anunțați-ne printr-un issue sau pull request; intră în acest tabel după ce trece testele de conformitate.",
     "docsTitle": "Documente",
     "docs": [
@@ -519,7 +565,8 @@
       "liste de mărci"
     ],
     "contribute": "Contribuțiile se fac prin pull requesturi în depozitul spec.",
-    "governanceLink": "Cum se iau deciziile"
+    "governanceLink": "Cum se iau deciziile",
+    "quickstart": "Pornire rapidă: OBX în 10 minute"
   },
   "directory": {
     "h1": "Lista mărcilor",
@@ -609,7 +656,7 @@
       },
       {
         "q": "Este gata?",
-        "a": "Da, versiunea 0.1: specificația, cele trei portaluri, comanda obx și verificarea conformității au fost lansate și sunt libere de folosit. Suntem la început: primele mărci se alătură acum."
+        "a": "Da, versiunea 0.2: specificația, cele trei portaluri, comanda obx și verificarea conformității au fost lansate și sunt libere de folosit. Suntem la început: primele mărci se alătură acum."
       },
       {
         "q": "Cine se află în spate?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "Ce este gata și ce urmează",
-    "readyTitle": "Gata în versiunea 0.1",
+    "readyTitle": "Gata în versiunea 0.2",
     "comingTitle": "Urmează",
     "readyBadge": "Gata",
     "comingBadge": "În curând",
@@ -784,13 +831,13 @@
     "ctaTitle": "Întrebări sau vreți să participați de la început?",
     "ctaBrands": "Căutăm mărci care vor să contribuie la prima versiune: ce sisteme folosiți și câți comercianți deserviți? Scrieți-ne.",
     "ctaRetailers": "Căutăm comercianți care vor să contribuie la prima versiune: ce mărci vreți să conectați și ce software folosiți? Scrieți-ne.",
-    "footer": "Funcțiile de la „Urmează” sunt în dezvoltare. Versiunea 0.1, {date}."
+    "footer": "Funcțiile de la „Urmează” sunt în dezvoltare. Versiunea 0.2, {date}."
   },
   "site": {
     "nav": {
       "start": "Începeți ca marcă",
       "docs": "Documentație",
-      "preview": "Versiunea 0.1"
+      "preview": "Versiunea 0.2"
     },
     "footer": {
       "tagline": "Standardul deschis prin care mărcile le livrează comercianților fotografii de produs și date despre articole.",
@@ -802,7 +849,7 @@
       "errors": "Coduri de eroare",
       "spec": "Specificație",
       "sdk": "Go SDK și instrumentul obx",
-      "status": "Versiunea 0.1 a fost lansată. Specificația și software-ul sunt libere de folosit."
+      "status": "Versiunea 0.2 a fost lansată. Specificația și software-ul sunt libere de folosit."
     },
     "shots": {
       "portalCatalog": "Portalul mărcii fictive Kestrel, așa cum îl vede un comerciant: opt articole cu filtre după marcă, tip de produs și culoare.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Specificație deschisă",
-          "p": "Versiunea 0.1, scrisă în OpenAPI 3.1 și JSON Schema, sub licența CC-BY-4.0. Oricine o poate implementa, inclusiv în scop comercial."
+          "p": "Versiunea 0.2, scrisă în OpenAPI 3.1 și JSON Schema, sub licența CC-BY-4.0. Oricine o poate implementa, inclusiv în scop comercial."
         },
         {
           "h": "Teste de conformitate",

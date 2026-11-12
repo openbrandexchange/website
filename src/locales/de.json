@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, Startseite",
     "copy": "Kopieren",
     "copied": "Kopiert",
-    "draft": "Version 0.1 ist erschienen. Spezifikation und Software sind frei nutzbar.",
+    "draft": "Version 0.2 ist erschienen. Spezifikation und Software sind frei nutzbar.",
     "footerAbout": "Ein kostenloser, offener Weg für Marken, Produktbilder und Artikeldaten an ihre Händler zu liefern.",
     "footerMore": "Mehr",
     "footerSource": "Quellcode und Spezifikation",
@@ -144,7 +144,7 @@
         "p": "Eine Veröffentlichung für alle Händler. Keine Dateitransfers, keine E-Mails mit ZIP-Dateien und keine eigene Anbindung pro Geschäft mehr."
       }
     ],
-    "status": "Open Brand Exchange steht am Anfang. Version 0.1 der Spezifikation und der Software ist erschienen und frei nutzbar. Wir zeigen keine Kunden oder Zahlen, die es noch nicht gibt.",
+    "status": "Open Brand Exchange steht am Anfang. Version 0.2 der Spezifikation und der Software ist erschienen und frei nutzbar. Wir zeigen keine Kunden oder Zahlen, die es noch nicht gibt.",
     "statusLink": "Lesen Sie, wie es gesteuert wird"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "Nächster Schritt",
     "nextHosting": "Hosting wählen",
-    "nextAutomation": "Automatisierungsrezepte ansehen"
+    "nextAutomation": "Automatisierungsrezepte ansehen",
+    "labelNote": "Fehlt eine Angabe, die das Gesetz auf dem Etikett vorschreibt, etwa die Faserzusammensetzung oder die Materialien eines Schuhs, warnt Open Brand Exchange Sie beim Hochladen. Eine Warnung blockiert die Veröffentlichung nie.",
+    "bagsNote": "Koffer und Taschen haben jetzt Maße (H × B × T, Gewicht, Volumen) und Merkmale (Rollen, Schloss, abnehmbarer Gurt …), von jeder Marke auf dieselbe Weise gemessen."
   },
   "automation": {
     "h1": "Automatisierung",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Nicht im Trockner trocknen",
         "do_not_iron": "Nicht bügeln",
         "do_not_dry_clean": "Nicht chemisch reinigen"
+      },
+      "law": {
+        "title": "Was das Gesetz vorschreibt",
+        "lead": "Was das EU-Recht bei Textilien und Schuhen vorschreibt und was freiwillig ist. Ein Hinweis, keine Rechtsberatung.",
+        "head": [
+          "Angabe",
+          "In der EU",
+          "Rechtsgrundlage"
+        ],
+        "rows": [
+          {
+            "what": "Faserzusammensetzung je Bestandteil, in %",
+            "status": "Pflicht, auch online vor dem Kauf",
+            "basis": "Verordnung (EU) Nr. 1007/2011"
+          },
+          {
+            "what": "„Enthält nichttextile Teile tierischen Ursprungs“",
+            "status": "Pflicht, wenn das Produkt solche Teile hat",
+            "basis": "Verordnung (EU) Nr. 1007/2011, Art. 12"
+          },
+          {
+            "what": "Material von Obermaterial, Futter und Decksohle sowie Laufsohle bei Schuhen",
+            "status": "Pflicht",
+            "basis": "Richtlinie 94/11/EG"
+          },
+          {
+            "what": "Pflegehinweise",
+            "status": "Freiwillig (übliche Praxis; Symbole nach ISO 3758)"
+          },
+          {
+            "what": "Herkunftsland",
+            "status": "In der EU freiwillig"
+          },
+          {
+            "what": "Zertifizierungen (GOTS, OEKO-TEX …)",
+            "status": "Freiwillig, private Systeme"
+          },
+          {
+            "what": "Digitaler Produktpass",
+            "status": "Kommt: Der delegierte Rechtsakt für Textilien ist für das 4. Quartal 2027 geplant",
+            "basis": "Verordnung (EU) 2024/1781 (ESPR)"
+          }
+        ],
+        "note": "Open Brand Exchange warnt die Marke schon beim Hochladen, wenn eine Pflichtangabe fehlt; eine Warnung blockiert die Veröffentlichung nie."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Entwickler",
     "lead": "Open Brand Exchange ist eine Spezifikation mit drei APIs, JSON-Schemas, Testdaten und Konformitätstests. Die Spezifikation ist die Quelle; die Implementierungen folgen ihr.",
     "specTitle": "Die Spezifikation",
-    "specP": "Version 0.1. OpenAPI 3.1, JSON Schema 2020-12, Beispiele und eine fiktive Testmarke, Kestrel Outfitters. Lizenz CC-BY-4.0: frei implementierbar, auch kommerziell.",
+    "specP": "Version 0.2. OpenAPI 3.1, JSON Schema 2020-12, Beispiele und eine fiktive Testmarke, Kestrel Outfitters. Lizenz CC-BY-4.0: frei implementierbar, auch kommerziell.",
     "specStart": "Beginnen Sie mit protocol.md",
     "apisTitle": "Drei APIs",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: normales Webhosting",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Sie bauen eine eigene Implementierung oder einen Abnehmer? Melden Sie sich per Issue oder Pull Request; sobald die Konformitätstests bestanden sind, kommt sie in diese Tabelle.",
     "docsTitle": "Dokumente",
     "docs": [
@@ -519,7 +565,8 @@
       "Markenverzeichnisse"
     ],
     "contribute": "Beiträge laufen über Pull Requests im spec-Repository.",
-    "governanceLink": "Wie Entscheidungen getroffen werden"
+    "governanceLink": "Wie Entscheidungen getroffen werden",
+    "quickstart": "Schnellstart: OBX in 10 Minuten"
   },
   "directory": {
     "h1": "Markenverzeichnis",
@@ -609,7 +656,7 @@
       },
       {
         "q": "Ist es fertig?",
-        "a": "Ja, Version 0.1: Die Spezifikation, die drei Portale, der Befehl obx und die Konformitätsprüfung sind erschienen und frei nutzbar. Wir stehen am Anfang: Die ersten Marken steigen jetzt ein."
+        "a": "Ja, Version 0.2: Die Spezifikation, die drei Portale, der Befehl obx und die Konformitätsprüfung sind erschienen und frei nutzbar. Wir stehen am Anfang: Die ersten Marken steigen jetzt ein."
       },
       {
         "q": "Wer steckt dahinter?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "Was fertig ist, und was kommt",
-    "readyTitle": "Fertig in Version 0.1",
+    "readyTitle": "Fertig in Version 0.2",
     "comingTitle": "Als Nächstes",
     "readyBadge": "Fertig",
     "comingBadge": "Demnächst",
@@ -784,13 +831,13 @@
     "ctaTitle": "Fragen, oder von Anfang an dabei sein?",
     "ctaBrands": "Wir suchen Marken, die die erste Version mitgestalten möchten: Welche Systeme nutzen Sie, und wie viele Händler beliefern Sie? Schreiben Sie uns.",
     "ctaRetailers": "Wir suchen Händler, die die erste Version mitgestalten möchten: Welche Marken möchten Sie anbinden, und welche Software nutzen Sie? Schreiben Sie uns.",
-    "footer": "Funktionen unter „Als Nächstes“ sind in Entwicklung. Version 0.1, {date}."
+    "footer": "Funktionen unter „Als Nächstes“ sind in Entwicklung. Version 0.2, {date}."
   },
   "site": {
     "nav": {
       "start": "Als Marke starten",
       "docs": "Dokumentation",
-      "preview": "Version 0.1"
+      "preview": "Version 0.2"
     },
     "footer": {
       "tagline": "Der offene Standard, mit dem Marken Produktbilder und Artikeldaten an ihre Händler liefern.",
@@ -802,7 +849,7 @@
       "errors": "Fehlercodes",
       "spec": "Spezifikation",
       "sdk": "Go-SDK und obx-Tool",
-      "status": "Version 0.1 ist erschienen. Spezifikation und Software sind frei nutzbar."
+      "status": "Version 0.2 ist erschienen. Spezifikation und Software sind frei nutzbar."
     },
     "shots": {
       "portalCatalog": "Das Markenportal der fiktiven Marke Kestrel aus Sicht eines Händlers: acht Artikel mit Filtern nach Marke, Produkttyp und Farbe.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Offene Spezifikation",
-          "p": "Version 0.1, beschrieben in OpenAPI 3.1 und JSON Schema unter CC-BY-4.0. Jeder darf sie implementieren, auch kommerziell."
+          "p": "Version 0.2, beschrieben in OpenAPI 3.1 und JSON Schema unter CC-BY-4.0. Jeder darf sie implementieren, auch kommerziell."
         },
         {
           "h": "Konformitätstests",

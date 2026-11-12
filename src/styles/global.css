@@ -608,7 +608,7 @@ main:focus {
   padding: 0.5rem 0.8rem;
   font-size: 0.875rem;
 }
-/* The status pill: "v0.1" where space is tight, the full label on wide screens. */
+/* The status pill: "v0.2" where space is tight, the full label on wide screens. */
 .pill-long {
   display: none;
 }
@@ -2257,6 +2257,58 @@ input[type='search'] {
 .video-frame video:focus-within {
   outline: 2px solid var(--accent);
   outline-offset: -4px;
+}
+
+/* Article data under "What you manage yourself" on the brands page. */
+.article-data-title {
+  margin: var(--s-6) 0 var(--s-2);
+}
+
+/* "What the law requires" under the care-label example on the retailers page. */
+.law {
+  margin-top: var(--s-8);
+}
+.law > * {
+  max-width: 62rem;
+}
+.law h3 {
+  margin: 0 0 var(--s-2);
+}
+.law tbody th {
+  min-width: 12rem;
+}
+/* On phones each row becomes a small card, so the table never scrolls sideways. */
+@media (max-width: 40rem) {
+  .law thead {
+    display: none;
+  }
+  .law table,
+  .law tbody,
+  .law tr,
+  .law th,
+  .law td {
+    display: block;
+  }
+  .law tr {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .law tr:last-child {
+    border-bottom: 0;
+  }
+  .law tbody th,
+  .law td {
+    min-width: 0;
+    padding: 0;
+    border: 0;
+  }
+  .law td:last-child {
+    font-size: 0.8125rem;
+    color: var(--muted);
+  }
+  .law td.law-none {
+    display: none;
+  }
 }
 
 /* The care-label example on the retailers page: the label as data, next to its API form. */

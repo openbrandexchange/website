@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, leathanach baile",
     "copy": "Cóipeáil",
     "copied": "Cóipeáilte",
-    "draft": "Tá leagan 0.1 eisithe. Tá an tsonraíocht agus na bogearraí saor le húsáid.",
+    "draft": "Tá leagan 0.2 eisithe. Tá an tsonraíocht agus na bogearraí saor le húsáid.",
     "footerAbout": "Bealach saor in aisce agus oscailte do bhrandaí grianghraif táirgí agus sonraí earraí a sheachadadh chuig a gcuid miondíoltóirí.",
     "footerMore": "Tuilleadh",
     "footerSource": "Cód foinseach agus sonraíocht",
@@ -144,7 +144,7 @@
         "p": "Foilseachán amháin do do mhiondíoltóirí go léir. Deireadh le haistrithe comhad, ríomhphoist le zipeanna agus comhtháthú ar leith do gach siopa."
       }
     ],
-    "status": "Tá Open Brand Exchange ag an tús. Tá leagan 0.1 den sonraíocht agus de na bogearraí eisithe agus saor le húsáid. Ní thaispeánaimid custaiméirí ná figiúirí nach bhfuil ann fós.",
+    "status": "Tá Open Brand Exchange ag an tús. Tá leagan 0.2 den sonraíocht agus de na bogearraí eisithe agus saor le húsáid. Ní thaispeánaimid custaiméirí ná figiúirí nach bhfuil ann fós.",
     "statusLink": "Léigh conas a rialaítear é"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "An chéad chéim eile",
     "nextHosting": "Roghnaigh conas é a óstáil",
-    "nextAutomation": "Féach ar na hoidis uathoibrithe"
+    "nextAutomation": "Féach ar na hoidis uathoibrithe",
+    "labelNote": "Má tá rud ar iarraidh a éilíonn an dlí ar an lipéad, mar shampla comhdhéanamh na snáithíní nó ábhair bróige, tugann Open Brand Exchange rabhadh duit ag an uaslódáil. Ní chuireann rabhadh bac ar fhoilsiú riamh.",
+    "bagsNote": "Tá tomhais (A × L × D, meáchan, toilleadh) agus gnéithe (rothaí, glas, strapa in-bhainte …) ag málaí taistil agus málaí anois, tomhaiste ar an mbealach céanna ag gach branda."
   },
   "automation": {
     "h1": "Uathoibriú",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Ná triomaigh i dtriomadóir",
         "do_not_iron": "Ná hiarnáil",
         "do_not_dry_clean": "Ná glan tirim"
+      },
+      "law": {
+        "title": "A bhfuil de cheangal ag an dlí",
+        "lead": "A bhfuil de cheangal ag dlí an AE maidir le teicstílí agus coisbheart, agus a bhfuil deonach. Treoir, ní comhairle dlí.",
+        "head": [
+          "Faisnéis",
+          "San AE",
+          "Bunús dlí"
+        ],
+        "rows": [
+          {
+            "what": "Comhdhéanamh snáithíní de réir comhpháirte, i %",
+            "status": "Éigeantach, ar líne freisin roimh cheannach",
+            "basis": "Rialachán (AE) Uimh. 1007/2011"
+          },
+          {
+            "what": "“Tá codanna neamhtheicstíle de bhunadh ainmhíoch ann”",
+            "status": "Éigeantach nuair atá a leithéid de chodanna sa táirge",
+            "basis": "Rialachán (AE) Uimh. 1007/2011, Airteagal 12"
+          },
+          {
+            "what": "Ábhar an uachtair, na líneála agus an bhoinn istigh, agus an bhoinn sheachtraigh i gcoisbheart",
+            "status": "Éigeantach",
+            "basis": "Treoir 94/11/CE"
+          },
+          {
+            "what": "Treoracha cúraim",
+            "status": "Deonach (gnáthchleachtas; siombailí ISO 3758)"
+          },
+          {
+            "what": "Tír thionscnaimh",
+            "status": "Deonach san AE"
+          },
+          {
+            "what": "Deimhnithe (GOTS, OEKO-TEX …)",
+            "status": "Deonach, scéimeanna príobháideacha"
+          },
+          {
+            "what": "Pas digiteach táirge",
+            "status": "Le teacht: tá an gníomh tarmligthe do theicstílí beartaithe don cheathrú ráithe de 2027",
+            "basis": "Rialachán (AE) 2024/1781 (ESPR)"
+          }
+        ],
+        "note": "Tugann Open Brand Exchange rabhadh don bhranda ag an uaslódáil nuair atá rud éigeantach ar iarraidh; ní chuireann rabhadh bac ar fhoilsiú riamh."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Do fhorbróirí",
     "lead": "Is sonraíocht é Open Brand Exchange le trí API, JSON Schemas, sonraí tástála agus tástálacha comhréireachta. Is í an tsonraíocht an fhoinse fírinne; leanann na cur chun feidhme í.",
     "specTitle": "An tsonraíocht",
-    "specP": "Leagan 0.1. OpenAPI 3.1, JSON Schema 2020-12, samplaí agus branda tástála bréige, Kestrel Outfitters. Ceadúnas CC-BY-4.0: saor le cur chun feidhme, go tráchtála freisin.",
+    "specP": "Leagan 0.2. OpenAPI 3.1, JSON Schema 2020-12, samplaí agus branda tástála bréige, Kestrel Outfitters. Ceadúnas CC-BY-4.0: saor le cur chun feidhme, go tráchtála freisin.",
     "specStart": "Tosaigh le protocol.md",
     "apisTitle": "Trí API",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: gnáth-óstáil ghréasáin",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Ag tógáil do chur chun feidhme nó do chliant féin? Cuir in iúl dúinn le issue nó pull request, agus rachaidh sé sa tábla seo a luaithe a éiríonn leis sna tástálacha comhréireachta.",
     "docsTitle": "Doiciméid",
     "docs": [
@@ -519,7 +565,8 @@
       "eolairí brandaí"
     ],
     "contribute": "Déantar ranníocaíochtaí trí pull requests ar an stór spec.",
-    "governanceLink": "Conas a dhéantar cinntí"
+    "governanceLink": "Conas a dhéantar cinntí",
+    "quickstart": "Tús tapa: OBX i 10 nóiméad"
   },
   "directory": {
     "h1": "Eolaire brandaí",
@@ -609,7 +656,7 @@
       },
       {
         "q": "An bhfuil sé réidh?",
-        "a": "Tá, leagan 0.1: tá an tsonraíocht, na trí thairseach, an t-ordú obx agus an seiceáil comhréireachta eisithe agus saor le húsáid. Táimid ag an tús: tá na chéad bhrandaí ag teacht isteach anois."
+        "a": "Tá, leagan 0.2: tá an tsonraíocht, na trí thairseach, an t-ordú obx agus an seiceáil comhréireachta eisithe agus saor le húsáid. Táimid ag an tús: tá na chéad bhrandaí ag teacht isteach anois."
       },
       {
         "q": "Cé atá taobh thiar de?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "Cad atá réidh, agus cad atá le teacht",
-    "readyTitle": "Réidh i leagan 0.1",
+    "readyTitle": "Réidh i leagan 0.2",
     "comingTitle": "Le teacht",
     "readyBadge": "Réidh",
     "comingBadge": "Go luath",
@@ -784,13 +831,13 @@
     "ctaTitle": "Ceisteanna, nó ar mhaith leat a bheith páirteach ón tús?",
     "ctaBrands": "Táimid ag lorg brandaí ar mian leo an chéad leagan a mhúnlú: cé na córais a úsáideann tú, agus cé mhéad miondíoltóir a fhreastalaíonn tú? Scríobh chugainn.",
     "ctaRetailers": "Táimid ag lorg miondíoltóirí ar mian leo an chéad leagan a mhúnlú: cé na brandaí ar mhaith leat a nascadh, agus cé na bogearraí a úsáideann tú? Scríobh chugainn.",
-    "footer": "Tá na feidhmeanna faoi “Le teacht” á bhforbairt. Leagan 0.1, {date}."
+    "footer": "Tá na feidhmeanna faoi “Le teacht” á bhforbairt. Leagan 0.2, {date}."
   },
   "site": {
     "nav": {
       "start": "Tosaigh mar bhranda",
       "docs": "Doiciméadú",
-      "preview": "Leagan 0.1"
+      "preview": "Leagan 0.2"
     },
     "footer": {
       "tagline": "An caighdeán oscailte a ligeann do bhrandaí grianghraif táirgí agus sonraí earraí a sheachadadh chuig a gcuid miondíoltóirí.",
@@ -802,7 +849,7 @@
       "errors": "Cóid earráide",
       "spec": "Sonraíocht",
       "sdk": "Go SDK agus an uirlis obx",
-      "status": "Tá leagan 0.1 eisithe. Tá an tsonraíocht agus na bogearraí saor le húsáid."
+      "status": "Tá leagan 0.2 eisithe. Tá an tsonraíocht agus na bogearraí saor le húsáid."
     },
     "shots": {
       "portalCatalog": "Tairseach an bhranda fhicseanúil Kestrel mar a fheiceann miondíoltóir í: ocht n-earra le scagairí de réir branda, cineál táirge agus datha.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Sonraíocht oscailte",
-          "p": "Leagan 0.1, scríofa mar OpenAPI 3.1 agus JSON Schema faoi CC-BY-4.0. Is féidir le duine ar bith í a chur i bhfeidhm, go tráchtála freisin."
+          "p": "Leagan 0.2, scríofa mar OpenAPI 3.1 agus JSON Schema faoi CC-BY-4.0. Is féidir le duine ar bith í a chur i bhfeidhm, go tráchtála freisin."
         },
         {
           "h": "Tástálacha comhréireachta",

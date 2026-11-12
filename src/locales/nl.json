@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, homepage",
     "copy": "Kopieer",
     "copied": "Gekopieerd",
-    "draft": "Versie 0.1 is uit. De specificatie en de software zijn vrij te gebruiken.",
+    "draft": "Versie 0.2 is uit. De specificatie en de software zijn vrij te gebruiken.",
     "footerAbout": "Een gratis, open manier voor merken om productbeelden en artikeldata aan hun retailers te leveren.",
     "footerMore": "Meer",
     "footerSource": "Broncode en specificatie",
@@ -144,7 +144,7 @@
         "p": "Eén publicatie voor al je retailers. Geen WeTransfers, mails met zips of een aparte koppeling per winkel meer."
       }
     ],
-    "status": "Open Brand Exchange staat aan het begin. Versie 0.1 van de specificatie en de software is uit en vrij te gebruiken. We tonen geen klanten of cijfers die er nog niet zijn.",
+    "status": "Open Brand Exchange staat aan het begin. Versie 0.2 van de specificatie en de software is uit en vrij te gebruiken. We tonen geen klanten of cijfers die er nog niet zijn.",
     "statusLink": "Lees hoe het wordt bestuurd"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "Volgende stap",
     "nextHosting": "Kies hoe je het host",
-    "nextAutomation": "Bekijk de automatiseringsrecepten"
+    "nextAutomation": "Bekijk de automatiseringsrecepten",
+    "labelNote": "Ontbreekt er iets wat de wet op het label verplicht, zoals de vezelsamenstelling of de materialen van een schoen, dan waarschuwt Open Brand Exchange je bij het uploaden. Een waarschuwing houdt publiceren nooit tegen.",
+    "bagsNote": "Koffers en tassen hebben nu maten (H × B × D, gewicht, inhoud) en kenmerken (wielen, slot, afneembare riem …), bij elk merk op dezelfde manier gemeten."
   },
   "automation": {
     "h1": "Automatiseren",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Niet in de droogtrommel",
         "do_not_iron": "Niet strijken",
         "do_not_dry_clean": "Niet chemisch reinigen"
+      },
+      "law": {
+        "title": "Wat de wet verplicht",
+        "lead": "Wat de Europese wet verplicht voor textiel en schoenen, en wat vrijwillig is. Een wegwijzer, geen juridisch advies.",
+        "head": [
+          "Gegeven",
+          "In de EU",
+          "Wettelijke basis"
+        ],
+        "rows": [
+          {
+            "what": "Vezelsamenstelling per onderdeel, in %",
+            "status": "Verplicht, ook online vóór de aankoop",
+            "basis": "Verordening (EU) nr. 1007/2011"
+          },
+          {
+            "what": "“Bevat niet-textieldelen van dierlijke oorsprong”",
+            "status": "Verplicht als het product zulke delen heeft",
+            "basis": "Verordening (EU) nr. 1007/2011, art. 12"
+          },
+          {
+            "what": "Materiaal van bovenwerk, voering en binnenzool, en loopzool van schoenen",
+            "status": "Verplicht",
+            "basis": "Richtlijn 94/11/EG"
+          },
+          {
+            "what": "Wasvoorschriften",
+            "status": "Vrijwillig (gangbare praktijk; symbolen volgens ISO 3758)"
+          },
+          {
+            "what": "Land van herkomst",
+            "status": "Vrijwillig in de EU"
+          },
+          {
+            "what": "Certificeringen (GOTS, OEKO-TEX …)",
+            "status": "Vrijwillig, private keurmerken"
+          },
+          {
+            "what": "Digitaal productpaspoort",
+            "status": "Komt eraan: de gedelegeerde handeling voor textiel staat gepland voor het vierde kwartaal van 2027",
+            "basis": "Verordening (EU) 2024/1781 (ESPR)"
+          }
+        ],
+        "note": "Open Brand Exchange waarschuwt het merk al bij het uploaden als er iets verplichts ontbreekt; een waarschuwing houdt publiceren nooit tegen."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Ontwikkelaars",
     "lead": "Open Brand Exchange is een specificatie met drie API's, JSON Schema's, testdata en een conformancetest. De specificatie is de bron; de implementaties volgen haar.",
     "specTitle": "De specificatie",
-    "specP": "Versie 0.1. OpenAPI 3.1, JSON Schema 2020-12, voorbeelden en een fictief testmerk, Kestrel Outfitters. Licentie CC-BY-4.0: vrij te implementeren, ook commercieel.",
+    "specP": "Versie 0.2. OpenAPI 3.1, JSON Schema 2020-12, voorbeelden en een fictief testmerk, Kestrel Outfitters. Licentie CC-BY-4.0: vrij te implementeren, ook commercieel.",
     "specStart": "Begin bij protocol.md",
     "apisTitle": "Drie API's",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: gewone webhosting",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Bouw je zelf een implementatie of een afnemer? Laat het weten met een issue of pull request; hij komt in deze tabel zodra hij de conformancetest haalt.",
     "docsTitle": "Documenten",
     "docs": [
@@ -519,7 +565,8 @@
       "merkenlijsten"
     ],
     "contribute": "Bijdragen gaan via pull requests op de spec-repository.",
-    "governanceLink": "Hoe beslissingen worden genomen"
+    "governanceLink": "Hoe beslissingen worden genomen",
+    "quickstart": "Snel aan de slag: OBX in 10 minuten"
   },
   "directory": {
     "h1": "Merkenlijst",
@@ -609,7 +656,7 @@
       },
       {
         "q": "Is het klaar?",
-        "a": "Ja, versie 0.1: de specificatie, de drie portalen, het obx-commando en de conformiteitscheck zijn uitgebracht en vrij te gebruiken. We staan aan het begin: de eerste merken sluiten nu aan."
+        "a": "Ja, versie 0.2: de specificatie, de drie portalen, het obx-commando en de conformiteitscheck zijn uitgebracht en vrij te gebruiken. We staan aan het begin: de eerste merken sluiten nu aan."
       },
       {
         "q": "Wie zit erachter?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "Wat klaar is, en wat eraan komt",
-    "readyTitle": "Klaar in versie 0.1",
+    "readyTitle": "Klaar in versie 0.2",
     "comingTitle": "Komt hierna",
     "readyBadge": "Klaar",
     "comingBadge": "Binnenkort",
@@ -784,13 +831,13 @@
     "ctaTitle": "Vragen, of vanaf het begin meedoen?",
     "ctaBrands": "We zoeken merken die de eerste versie mee willen vormgeven: welke systemen gebruik je, en hoeveel retailers bedien je? Mail ons.",
     "ctaRetailers": "We zoeken retailers die de eerste versie mee willen vormgeven: welke merken wil je koppelen, en welke software gebruik je? Mail ons.",
-    "footer": "Functies onder „Komt hierna” zijn in ontwikkeling. Versie 0.1, {date}."
+    "footer": "Functies onder „Komt hierna” zijn in ontwikkeling. Versie 0.2, {date}."
   },
   "site": {
     "nav": {
       "start": "Start als merk",
       "docs": "Documentatie",
-      "preview": "Versie 0.1"
+      "preview": "Versie 0.2"
     },
     "footer": {
       "tagline": "De open standaard waarmee merken productbeelden en artikeldata aan hun retailers leveren.",
@@ -802,7 +849,7 @@
       "errors": "Foutcodes",
       "spec": "Specificatie",
       "sdk": "Go-SDK en obx-tool",
-      "status": "Versie 0.1 is uit. De specificatie en de software zijn vrij te gebruiken."
+      "status": "Versie 0.2 is uit. De specificatie en de software zijn vrij te gebruiken."
     },
     "shots": {
       "portalCatalog": "De beeldbank van het fictieve merk Kestrel zoals een retailer hem ziet: acht artikelen met filters op merk, producttype en kleur.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Open specificatie",
-          "p": "Versie 0.1, vastgelegd als OpenAPI 3.1 en JSON Schema onder CC-BY-4.0. Iedereen mag het implementeren, ook commercieel."
+          "p": "Versie 0.2, vastgelegd als OpenAPI 3.1 en JSON Schema onder CC-BY-4.0. Iedereen mag het implementeren, ook commercieel."
         },
         {
           "h": "Conformiteitstests",

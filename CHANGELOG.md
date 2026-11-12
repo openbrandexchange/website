@@ -6,12 +6,28 @@ its texts; the repository itself is versioned with [Semantic Versioning](https:/
 ## [Unreleased]
 
 ### Added
+- Specification 0.2 (2026-11-12): the schemas are served at `/schemas/v0.2/` next to the frozen
+  `/schemas/v0.1/`; the API reference is the 0.2 one; `/errors/` and its pages include the label
+  completeness warnings `fibre_composition_missing`, `animal_origin_unknown`,
+  `footwear_materials_missing` and `fibre_percentages_not_100`. `npm run sync:spec` copies every
+  schema version and the warning table of import-format.md rule 10.
+- For retailers: "What the law requires", a table under the care-label example of what EU law makes
+  mandatory (fibre composition per component, also online before purchase; "contains non-textile
+  parts of animal origin"; footwear materials) and what is voluntary (care, country of origin,
+  certifications), with the textiles Digital Product Passport planned for Q4 2027, and the line that
+  a warning at upload never blocks publishing. In all 25 languages.
+- For brands: one sentence on the label warnings at upload and one on luggage and bags, which now
+  carry measurements and features measured the same way by every brand.
+- Developers page: a link to "OBX in 10 minutes", the spec's quickstart.
 - For retailers: what is on the care label (composition per part, care instructions in label
   order, country of origin, EAN per size) shown on the test brand's trail shorts, next to the
   same article as the API returns it.
 - Provider logos on /hosting (light and dark version).
 
 ### Changed
+- Version 0.2: the status pill ("v0.2"), footer, home page, developers page, FAQ and brochures say
+  that version 0.2 is out, in all 25 languages; brochures and social images rebuilt; the discovery
+  example shows `"obx_version": "0.2"`; the directory is validated against the 0.2 schema.
 - The site leads with the fetching side: retailers get content in the portal, as file downloads
   or through the API; how a brand gets content into its portal is its own choice. Plainer copy
   on the home page.

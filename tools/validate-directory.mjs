@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Validates a directory.json against the OBX Directory schema (the copy the site publishes at
-// public/schemas/v0.1/, synced from the spec by npm run sync:spec) plus the listing rules from
+// public/schemas/v0.2/, synced from the spec by npm run sync:spec) plus the listing rules from
 // spec docs/directory.md:
 // unique ids, entries sorted by id, https discovery URLs ending in /.well-known/obx.
 // With --fetch it also asks every non-demo entry's discovery URL for its document.
@@ -15,11 +15,11 @@ const here = dirname(fileURLToPath(import.meta.url));
 export function loadValidator() {
   const ajv = new Ajv2020({ allErrors: true, strict: false });
   addFormats(ajv);
-  const dir = join(here, '..', 'public', 'schemas', 'v0.1');
+  const dir = join(here, '..', 'public', 'schemas', 'v0.2');
   for (const file of readdirSync(dir).filter((f) => f.endsWith('.json'))) {
     ajv.addSchema(JSON.parse(readFileSync(join(dir, file), 'utf8')));
   }
-  return ajv.getSchema('https://openbrandexchange.com/schemas/v0.1/Directory.json');
+  return ajv.getSchema('https://openbrandexchange.com/schemas/v0.2/Directory.json');
 }
 
 /** Returns a list of human-readable problems; empty means valid. */

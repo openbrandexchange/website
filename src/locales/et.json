@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, avaleht",
     "copy": "Kopeeri",
     "copied": "Kopeeritud",
-    "draft": "Versioon 0.1 on avaldatud. Spetsifikatsioon ja tarkvara on vabalt kasutatavad.",
+    "draft": "Versioon 0.2 on avaldatud. Spetsifikatsioon ja tarkvara on vabalt kasutatavad.",
     "footerAbout": "Tasuta ja avatud viis, kuidas kaubamärgid saavad edasimüüjatele tootefotosid ja tooteandmeid edastada.",
     "footerMore": "Veel",
     "footerSource": "Lähtekood ja spetsifikatsioon",
@@ -144,7 +144,7 @@
         "p": "Üks avaldamine kõigile edasimüüjatele. Enam ei ole failiedastusi, zip-failidega e-kirju ega eraldi liidest iga poe jaoks."
       }
     ],
-    "status": "Open Brand Exchange on alguses. Spetsifikatsiooni ja tarkvara versioon 0.1 on avaldatud ja vabalt kasutatav. Me ei näita kliente ega numbreid, mida veel pole.",
+    "status": "Open Brand Exchange on alguses. Spetsifikatsiooni ja tarkvara versioon 0.2 on avaldatud ja vabalt kasutatav. Me ei näita kliente ega numbreid, mida veel pole.",
     "statusLink": "Lugege, kuidas seda juhitakse"
   },
   "brands": {
@@ -226,7 +226,9 @@
     ],
     "nextTitle": "Järgmine samm",
     "nextHosting": "Valige majutus",
-    "nextAutomation": "Vaadake automatiseerimise retsepte"
+    "nextAutomation": "Vaadake automatiseerimise retsepte",
+    "labelNote": "Kui puudub midagi, mida seadus etiketil nõuab, näiteks kiukoostis või jalanõu materjalid, hoiatab Open Brand Exchange teid üleslaadimisel. Hoiatus ei takista kunagi avaldamist.",
+    "bagsNote": "Kohvritel ja kottidel on nüüd mõõdud (K × L × S, kaal, maht) ja omadused (rattad, lukk, eemaldatav rihm …), mida iga kaubamärk mõõdab ühtemoodi."
   },
   "automation": {
     "h1": "Automatiseerimine",
@@ -452,6 +454,50 @@
         "do_not_tumble_dry": "Mitte kuivatada trummelkuivatis",
         "do_not_iron": "Mitte triikida",
         "do_not_dry_clean": "Mitte keemiliselt puhastada"
+      },
+      "law": {
+        "title": "Mida seadus nõuab",
+        "lead": "Mida ELi õigus tekstiiltoodete ja jalatsite puhul nõuab ja mis on vabatahtlik. Juhis, mitte õigusnõuanne.",
+        "head": [
+          "Teave",
+          "ELis",
+          "Õiguslik alus"
+        ],
+        "rows": [
+          {
+            "what": "Kiukoostis osade kaupa, protsentides",
+            "status": "Kohustuslik, ka veebis enne ostu",
+            "basis": "Määrus (EL) nr 1007/2011"
+          },
+          {
+            "what": "„Sisaldab loomset päritolu mittetekstiilosi“",
+            "status": "Kohustuslik, kui tootel on selliseid osi",
+            "basis": "Määrus (EL) nr 1007/2011, artikkel 12"
+          },
+          {
+            "what": "Jalatsi pealse, voodri ja sisetalla ning välistalla materjal",
+            "status": "Kohustuslik",
+            "basis": "Direktiiv 94/11/EÜ"
+          },
+          {
+            "what": "Hooldusjuhised",
+            "status": "Vabatahtlik (tavapärane praktika; ISO 3758 tähised)"
+          },
+          {
+            "what": "Päritoluriik",
+            "status": "ELis vabatahtlik"
+          },
+          {
+            "what": "Sertifikaadid (GOTS, OEKO-TEX …)",
+            "status": "Vabatahtlik, eraskeemid"
+          },
+          {
+            "what": "Digitaalne tootepass",
+            "status": "Tulekul: tekstiiltoodete delegeeritud õigusakt on kavandatud 2027. aasta IV kvartalisse",
+            "basis": "Määrus (EL) 2024/1781 (ESPR)"
+          }
+        ],
+        "note": "Open Brand Exchange hoiatab kaubamärki juba üleslaadimisel, kui midagi kohustuslikku puudub; hoiatus ei takista kunagi avaldamist."
       }
     }
   },
@@ -463,7 +509,7 @@
     "h1": "Arendajatele",
     "lead": "Open Brand Exchange on spetsifikatsioon kolme API, JSON-skeemide, testandmete ja vastavustestidega. Spetsifikatsioon on tõe allikas; teostused järgivad seda.",
     "specTitle": "Spetsifikatsioon",
-    "specP": "Versioon 0.1. OpenAPI 3.1, JSON Schema 2020-12, näited ja väljamõeldud testkaubamärk Kestrel Outfitters. Litsents CC-BY-4.0: vabalt teostatav, ka äriliselt.",
+    "specP": "Versioon 0.2. OpenAPI 3.1, JSON Schema 2020-12, näited ja väljamõeldud testkaubamärk Kestrel Outfitters. Litsents CC-BY-4.0: vabalt teostatav, ka äriliselt.",
     "specStart": "Alustage failist protocol.md",
     "apisTitle": "Kolm API-t",
     "apisHead": [
@@ -506,7 +552,7 @@
       "PHP: tavaline veebimajutus",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.1",
+    "statusDraft": "0.2",
     "implP": "Ehitate oma teostust või klienti? Andke teada issue või pull requesti kaudu; see lisatakse tabelisse, kui see läbib vastavustestid.",
     "docsTitle": "Dokumendid",
     "docs": [
@@ -519,7 +565,8 @@
       "kaubamärkide loendid"
     ],
     "contribute": "Panustamine käib pull requestide kaudu spec-hoidlasse.",
-    "governanceLink": "Kuidas otsuseid tehakse"
+    "governanceLink": "Kuidas otsuseid tehakse",
+    "quickstart": "Kiirjuhend: OBX 10 minutiga"
   },
   "directory": {
     "h1": "Kaubamärkide loend",
@@ -609,7 +656,7 @@
       },
       {
         "q": "Kas see on valmis?",
-        "a": "Jah, versioon 0.1: spetsifikatsioon, kolm portaali, käsk obx ja vastavuskontroll on avaldatud ja vabalt kasutatavad. Oleme alguses: esimesed brändid liituvad praegu."
+        "a": "Jah, versioon 0.2: spetsifikatsioon, kolm portaali, käsk obx ja vastavuskontroll on avaldatud ja vabalt kasutatavad. Oleme alguses: esimesed brändid liituvad praegu."
       },
       {
         "q": "Kes on selle taga?",
@@ -752,7 +799,7 @@
       }
     ],
     "statusTitle": "Mis on valmis ja mis tuleb",
-    "readyTitle": "Valmis versioonis 0.1",
+    "readyTitle": "Valmis versioonis 0.2",
     "comingTitle": "Tulemas",
     "readyBadge": "Valmis",
     "comingBadge": "Varsti",
@@ -784,13 +831,13 @@
     "ctaTitle": "Küsimusi või soovite algusest peale kaasa lüüa?",
     "ctaBrands": "Otsime kaubamärke, kes tahavad esimest versiooni kujundada: milliseid süsteeme kasutate ja mitut edasimüüjat teenindate? Kirjutage meile.",
     "ctaRetailers": "Otsime edasimüüjaid, kes tahavad esimest versiooni kujundada: milliseid kaubamärke soovite ühendada ja millist tarkvara kasutate? Kirjutage meile.",
-    "footer": "Jaotise „Tulemas” funktsioonid on arendamisel. Versioon 0.1, {date}."
+    "footer": "Jaotise „Tulemas” funktsioonid on arendamisel. Versioon 0.2, {date}."
   },
   "site": {
     "nav": {
       "start": "Alustage kaubamärgina",
       "docs": "Dokumentatsioon",
-      "preview": "Versioon 0.1"
+      "preview": "Versioon 0.2"
     },
     "footer": {
       "tagline": "Avatud standard tootefotode ja tooteandmete edastamiseks kaubamärkidelt nende edasimüüjatele.",
@@ -802,7 +849,7 @@
       "errors": "Veakoodid",
       "spec": "Spetsifikatsioon",
       "sdk": "Go SDK ja tööriist obx",
-      "status": "Versioon 0.1 on avaldatud. Spetsifikatsioon ja tarkvara on vabalt kasutatavad."
+      "status": "Versioon 0.2 on avaldatud. Spetsifikatsioon ja tarkvara on vabalt kasutatavad."
     },
     "shots": {
       "portalCatalog": "Väljamõeldud kaubamärgi Kestrel edasimüüjate portaal edasimüüja pilgu läbi: kaheksa toodet ning filtrid kaubamärgi, tootetüübi ja värvi järgi.",
@@ -995,7 +1042,7 @@
       "trust": [
         {
           "h": "Avatud spetsifikatsioon",
-          "p": "Versioon 0.1, kirjutatud OpenAPI 3.1 ja JSON Schema vormingus litsentsiga CC-BY-4.0. Igaüks võib selle teostada, ka ärilistel eesmärkidel."
+          "p": "Versioon 0.2, kirjutatud OpenAPI 3.1 ja JSON Schema vormingus litsentsiga CC-BY-4.0. Igaüks võib selle teostada, ka ärilistel eesmärkidel."
         },
         {
           "h": "Vastavustestid",

@@ -227,7 +227,7 @@ jobs:
 
 export const discovery = `$ curl https://brands.kestrel.example/.well-known/obx`;
 export const discoveryResponse = `{
-  "obx_version": "0.1",
+  "obx_version": "0.2",
   "publisher": { "name": "Kestrel Outfitters" },
   "api_base": "https://brands.kestrel.example/obx/v1",
   "portal_url": "https://brands.kestrel.example/",
