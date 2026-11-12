@@ -17,7 +17,8 @@ const t = messages[lang];
 const c = t.retailers;
 const lb = c.label;
 const parts: Record<string, string> = { outer: lb.outer, lining: lb.lining };
-const fibre = (f: string) => (lb.fibres as Record<string, string>)[f] ?? f;
+// Spec 0.2: recycled content is a property of the fibre; the label text has its own wording for it.
+const fibre = (f: { fiber: string; recycled?: boolean }) => (lb.fibres as Record<string, string>)[f.recycled ? `recycled_${f.fiber}` : f.fiber] ?? f.fiber;
 const care = (code: string) => (lb.careText as Record<string, string>)[code] ?? code;
 const kits: { lang: Lang; label: string }[] = [{ lang, label: nativeNames[lang] }];
 if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });
@@ -73,7 +74,7 @@ if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });
             <dt>{lb.composition}</dt>
             <dd>
               {labelExample.materials.map((m) => (
-                <span class="care-line">{parts[m.part] ?? m.part}: {m.fibers.map((f) => `${f.percentage}% ${fibre(f.fiber)}`).join(', ')}</span>
+                <span class="care-line">{parts[m.part] ?? m.part}: {m.fibers.map((f) => `${f.percentage}% ${fibre(f)}`).join(', ')}</span>
               ))}
             </dd>
             <dt>{lb.care}</dt>

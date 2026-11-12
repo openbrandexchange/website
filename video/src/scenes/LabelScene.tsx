@@ -29,7 +29,7 @@ const JSON_LINES: { text: string; section?: Section }[] = [
   { text: '  "style_number": "KT-2001",' },
   { text: '  "materials": [', section: "materials" },
   { text: '    { "part": "outer", "fibers": [', section: "materials" },
-  { text: '      { "fiber": "recycled_polyester", "percentage": 100 } ] },', section: "materials" },
+  { text: '      { "fiber": "polyester", "percentage": 100, "recycled": true } ] },', section: "materials" },
   { text: '    { "part": "lining", "fibers": [', section: "materials" },
   { text: '      { "fiber": "polyamide", "percentage": 88 },', section: "materials" },
   { text: '      { "fiber": "elastane", "percentage": 12 } ] }', section: "materials" },

@@ -5,7 +5,7 @@ export const labelExample = {
   colourCode: 'BLK',
   countryOfOrigin: 'VN',
   materials: [
-    { part: 'outer', fibers: [{ fiber: 'recycled_polyester', percentage: 100 }] },
+    { part: 'outer', fibers: [{ fiber: 'polyester', percentage: 100, recycled: true }] },
     {
       part: 'lining',
       fibers: [
