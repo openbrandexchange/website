@@ -26,8 +26,8 @@ One-time setup by the owner of the Cloudflare account:
    (production branch `main`) if it does not exist yet.
 5. **Domain:** Workers & Pages → openbrandexchange → Custom domains → add
    `openbrandexchange.com` and `www.openbrandexchange.com`. Because the zone is on the same
-   Cloudflare account, the DNS records are created for you. Add a redirect rule
-   `www.openbrandexchange.com/*` → `https://openbrandexchange.com/$1` (301).
+   Cloudflare account, the DNS records are created for you. `functions/_middleware.js` redirects
+   `www.openbrandexchange.com` to `https://openbrandexchange.com` (301), so no redirect rule is needed.
 6. **TLS:** SSL/TLS → Edge Certificates: *Always Use HTTPS* on, minimum TLS 1.2. The site sends
    HSTS with `includeSubDomains` (no preload), so every subdomain must be HTTPS-only.
 
