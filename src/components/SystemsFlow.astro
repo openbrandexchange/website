@@ -1,0 +1,27 @@
+---
+// Your systems → your image portal (on the open standard) → your retailers. Three blocks in the
+// style of the home diagram, stacked on phones. Block titles are h2: the diagram follows the hero h1.
+import Logo from './Logo.astro';
+import { messages, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = messages[lang];
+const steps = t.brochure.brandsFlow;
+---
+
+<figure class="flow systems-flow" aria-labelledby="systems-flow-caption">
+  <ol class="flow-cols">
+    {
+      steps.map((s, i) => (
+        <li class:list={['flow-col', i === 1 && 'flow-std']}>
+          <h2>{i === 1 && <Logo size={22} />} {s.h}</h2>
+          <p class="flow-lead">{s.p}</p>
+        </li>
+      ))
+    }
+  </ol>
+  <figcaption id="systems-flow-caption" class="sr-only">{steps.map((s) => s.h).join(' → ')}</figcaption>
+</figure>

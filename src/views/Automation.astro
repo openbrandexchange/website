@@ -2,7 +2,7 @@
 import Code from '../components/Code.astro';
 import PageHero from '../components/PageHero.astro';
 import DocSection from '../components/DocSection.astro';
-import CodeWindow from '../components/CodeWindow.astro';
+import SystemsFlow from '../components/SystemsFlow.astro';
 import Icon from '../components/Icon.astro';
 import { messages, repo, specDoc, url, type Lang } from '../i18n';
 import * as s from '../data/snippets';
@@ -16,21 +16,26 @@ const c = t.automation;
 const rowIds = ['scheduled', 'watch', 'cron', 'github', 'http', 'api'];
 ---
 
-<PageHero eyebrow={t.nav.automation} title={t.site.home.pillars[2].h} lead={c.lead}>
+<PageHero eyebrow={t.nav.automation} title={c.heroTitle} lead={c.lead}>
   <Fragment slot="actions">
-    <a class="button primary lg" href="#choose">{c.chooseTitle} <Icon name="arrow" class="arrow" /></a>
-    <a class="button secondary lg" href={repo('obx-go', '/releases/latest')}>{c.cliGet}</a>
+    <ul class="checks hero-checks">{c.heroChecks.map((item) => <li>{item}</li>)}</ul>
+    <a class="button primary lg" href={url(lang, 'brands', '#start')}>{t.brands.nextTemplate} <Icon name="arrow" class="arrow" /></a>
+    <a class="button secondary lg" href="#choose">{c.chooseTitle}</a>
   </Fragment>
-  <div slot="visual" class="stack">
-    <CodeWindow code={s.pushTerminal} lang="shell" title="Terminal" />
-    <CodeWindow code={s.pushAction} lang="yaml" title="publish.yml" label="GitHub Action" />
-  </div>
 </PageHero>
 
-<section class="band" aria-labelledby="choose">
+<section class="band" aria-label={c.flowLabel}>
+  <div class="wrap">
+    <SystemsFlow lang={lang} />
+  </div>
+</section>
+
+<section class="band band-alt" aria-labelledby="choose">
   <div class="wrap">
     <header class="section-head">
+      <p class="eyebrow">{c.techEyebrow}</p>
       <h2 id="choose">{c.chooseTitle}</h2>
+      <p class="lead">{c.techIntro}</p>
     </header>
     <div class="table-scroll">
       <table>
@@ -55,7 +60,7 @@ const rowIds = ['scheduled', 'watch', 'cron', 'github', 'http', 'api'];
   </div>
 </section>
 
-<section class="band band-alt">
+<section class="band">
   <div class="wrap">
     <DocSection id="format" title={c.formatTitle}>
       <p>{c.formatP}</p>
@@ -72,7 +77,7 @@ const rowIds = ['scheduled', 'watch', 'cron', 'github', 'http', 'api'];
   </div>
 </section>
 
-<section class="band">
+<section class="band band-alt">
   <div class="wrap">
     <DocSection id="scheduled" title={c.scheduledTitle}>
       <p>{c.scheduledP}</p>

@@ -95,7 +95,7 @@ if (page === 'faq') {
 }
 // Escape "<" so no text can close the script element.
 const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
-const nav: PageKey[] = ['brands', 'retailers', 'automation', 'hosting'];
+const nav: PageKey[] = ['brands', 'retailers', 'hosting', 'developers'];
 ---
 
 <!doctype html>
@@ -188,7 +188,6 @@ const nav: PageKey[] = ['brands', 'retailers', 'automation', 'hosting'];
                 }
               </ul>
             </details>
-            <a class="button secondary" href={url(lang, 'developers')} aria-current={page === 'developers' ? 'page' : undefined}>{s.nav.docs}</a>
             <a class="button primary" href={url(lang, 'brands')}>{s.nav.start}</a>
           </div>
         </nav>

@@ -28,7 +28,7 @@
     "automation": "Automatisering",
     "hosting": "Hosting",
     "retailers": "For forhandlere",
-    "developers": "Udviklere",
+    "developers": "For udviklere",
     "directory": "Brandoversigt",
     "downloads": "Downloads",
     "faq": "Ofte stillede spørgsmål",
@@ -45,22 +45,22 @@
     },
     "brands": {
       "title": "For brands",
-      "description": "En portal med dit brand til forhandlere, et standard-API og automatisk udgivelse fra dit PIM, ERP eller mapper. Gratis at hoste selv eller tilgængelig via en udbyder."
+      "description": "Din forhandlerportal på den åbne standard: forhandlere søger og downloader dine billeder og produktdata, og deres software modtager alt automatisk. Gratis at hoste selv eller via en partner."
     },
     "automation": {
       "title": "Automatisering",
-      "description": "Udgiv automatisk: planlagte importer, obx-værktøjet, cron, GitHub Actions, n8n, Make, Zapier eller curl. Opskrifter til at kopiere."
+      "description": "Arbejd videre, som du plejer: din forhandlerportal henter automatisk data og billeder fra dit PIM, ERP, DAM eller en delt mappe. Med opskrifter til den person, der sætter det op."
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Fra det enkleste til det mest tekniske: en udbyder, ét klik på Cloudflare, Google Cloud Run eller et almindeligt webhotel, eller Docker."
+      "description": "Din forhandlerportal, hvor du vil: hostet af en partner, på din egen server i Europa, på et almindeligt webhotel eller i en anden cloud."
     },
     "retailers": {
       "title": "For forhandlere",
-      "description": "Hvad en brandportal tilbyder, API-adgang til din egen software og en færdig mail til brands, der endnu ikke deltager."
+      "description": "Komplet produktindhold fra alle deltagende brands, uden beregning: i brandets portal i din browser eller automatisk i din webshop, dit PIM eller dit kassesystem."
     },
     "developers": {
-      "title": "Udviklere",
+      "title": "For udviklere",
       "description": "Specifikationen, de tre API'er, SDK og kommandolinjeværktøj, konformitetstestene og implementeringerne."
     },
     "directory": {
@@ -98,25 +98,25 @@
   },
   "home": {
     "eyebrow": "En åben standard for brands",
-    "h1": "Ét sted og ét API til alle dine forhandlere",
-    "lead": "Open Brand Exchange er en gratis, åben måde at levere dine endelige produktbilleder og varedata til dine forhandlere. Dine forhandlere får en portal hos dig, deres software får et standard-API, og du udgiver automatisk fra dine egne systemer.",
+    "h1": "Din forhandlerportal, på den åbne standard",
+    "lead": "Open Brand Exchange giver dine forhandlere en forhandlerportal med dit navn, hvor de søger og downloader billeder og varedata. Fordi den bygger på den åbne standard, kan deres software også modtage alt automatisk.",
     "ctaBrands": "Sådan virker det for brands",
     "ctaRetailers": "Jeg er forhandler",
     "howTitle": "Sådan virker det",
     "steps": [
       {
-        "h": "Sæt din portal op",
-        "p": "Lad en udbyder drive den, eller host den selv gratis med ét klik eller én kommando.",
+        "h": "Opret din forhandlerportal",
+        "p": "Brug den gratis forhandlerportal, hostet af en partner eller af dig selv. Har du allerede en forhandlerportal? Spørg din leverandør om understøttelse.",
         "link": "Hostingmuligheder"
       },
       {
-        "h": "Udgiv automatisk",
-        "p": "Én CSV-fil og billeder med et fast navn. Dit PIM, ERP eller en almindelig mappe leverer dem hver nat, uden manuelt arbejde.",
-        "link": "Automatisering"
+        "h": "Tilføj dine produkter",
+        "p": "Udfyld Excel-skabelonen, eller lad dit PIM, ERP eller en delt mappe levere hver nat, uden manuelt arbejde.",
+        "link": "Excel-skabelonen"
       },
       {
         "h": "Dine forhandlere klarer resten",
-        "p": "Forhandlere logger ind, indsætter deres EAN-liste og downloader. Deres software henter det samme indhold via standard-API'et.",
+        "p": "Forhandlere logger ind, indsætter deres EAN-liste og downloader. Deres software modtager det samme indhold automatisk.",
         "link": "For forhandlere"
       }
     ],
@@ -155,11 +155,11 @@
   },
   "brands": {
     "h1": "For brands",
-    "lead": "Forhandlere har brug for dine billeder og varedata, koblet til deres egne varer. Med Open Brand Exchange sætter du det op én gang, for alle forhandlere på samme tid.",
+    "lead": "Dine forhandlere søger i din forhandlerportal og downloader billeder og produktdata, med adgang pr. forhandler. Fordi den bygger på den åbne standard, kan deres software også modtage alt automatisk.",
     "blocks": [
       {
-        "h": "En portal til dine forhandlere",
-        "p": "Din portal bærer dit navn og din visuelle identitet: \"Kestrel · {portal}\", eventuelt på dit eget domæne. Forhandlere anmoder om adgang. Du godkender eller afviser hver anmodning.",
+        "h": "En forhandlerportal med dit navn",
+        "p": "Din forhandlerportal bærer dit navn: \"Kestrel · {portal}\", på dit eget domæne, hvis du vil. Forhandlere anmoder om adgang, og du beslutter for hver forhandler.",
         "items": [
           "Søg og filtrér efter brand, sæson, kollektion og produkttype",
           "Indsæt en liste med EAN'er og se, hvad der er tilgængeligt, og hvad der mangler",
@@ -169,31 +169,31 @@
         ]
       },
       {
-        "h": "Et standard-API til deres software",
-        "p": "Forhandlere, der bruger software, modtager en API-nøgle. Deres kassesystem, PIM eller webshop henter det fulde sæt én gang og derefter kun ændringerne.",
+        "h": "Direkte ind i deres webshop",
+        "p": "Forhandlere kan lade deres webshop, PIM eller kassesystem modtage dine produkter automatisk. Til det anmoder de om en API-nøgle i din forhandlerportal: en personlig adgangskode til deres software.",
         "items": [
-          "Opslag på EAN, så billederne kobles til den rigtige vare og størrelse",
-          "Ændringer leveres automatisk, også tilbagetrækninger",
-          "Brugsrettigheder, embargo og AI-oprindelse følger med hvert billede",
-          "Én implementering virker med alle brands, der bruger Open Brand Exchange"
+          "Koblet til den rigtige vare og størrelse via EAN",
+          "Ændringer kommer af sig selv, også varer, du trækker tilbage",
+          "Brugsrettigheder, embargodato og om der er brugt AI, med hvert billede",
+          "Software, der understøtter standarden, virker med alle brands"
         ]
       },
       {
         "h": "Automatisk upload",
-        "p": "Din portal henter din eksport automatisk, eller dine egne systemer leverer den.",
+        "p": "Din forhandlerportal henter selv dine produkter, for eksempel hver nat. Nye kollektioner kommer hurtigere online, uden manuelt arbejde.",
         "items": [
-          "Planlagt import fra en webadresse, en SFTP-server eller en S3-bucket, uden kode",
-          "En mappe, der udgives automatisk med obx-værktøjet",
-          "Opskrifter til cron, GitHub Actions, n8n, Make og Zapier",
-          "Ét CSV-format og én navneregel for billeder: KO-1001_NVY_1.jpg"
+          "Hver nat fra eksporten fra dit PIM eller ERP, uden ekstra software",
+          "Eller fra en delt mappe: det, der gemmes der, bliver udgivet",
+          "Kun det, der er ændret, sendes, så opdateringer går hurtigt",
+          "Én klar opbygning af data og én navneregel for fotos, for eksempel KO-1001_NVY_1.jpg"
         ]
       },
       {
         "h": "Du forbliver ejer",
-        "p": "Open Brand Exchange er en standard, ikke en platform. Du driver din egen portal, eller en udbyder driver den for dig.",
+        "p": "Open Brand Exchange er en standard, ikke en platform. Du driver din egen forhandlerportal, eller en partner driver den for dig.",
         "items": [
           "Det er gratis at hoste selv: softwaren er open source",
-          "Eller overlad det til en udbyder, og skift udbyder når som helst",
+          "Eller overlad det til en partner, og skift partner når som helst",
           "Du kan se, hvem der downloader hvad, pr. forhandler",
           "Du bestemmer, hvem der får adgang, til hvilke brands, og om originaler er tilladt"
         ]
@@ -215,11 +215,11 @@
       },
       {
         "k": "API-nøgler",
-        "v": "nøgler til dine forhandleres software: vises én gang og kan til enhver tid fornyes eller tilbagekaldes"
+        "v": "personlige adgangskoder til dine forhandleres software: vises én gang og kan til enhver tid fornyes eller tilbagekaldes"
       },
       {
         "k": "Automatisk upload",
-        "v": "nøgler til dine egne systemer og beskeder, når en forhandler beder om adgang eller en import er færdig"
+        "v": "din eksport hentes efter en tidsplan, og du får besked, når en forhandler anmoder om adgang, eller en import er færdig"
       },
       {
         "k": "Statistik",
@@ -232,7 +232,6 @@
     ],
     "nextTitle": "Næste skridt",
     "nextHosting": "Vælg hosting",
-    "nextAutomation": "Se automatiseringsopskrifterne",
     "labelNote": "Mangler der noget, som loven kræver på mærket, for eksempel fibersammensætningen eller materialerne i en sko, advarer Open Brand Exchange dig ved upload. En advarsel blokerer aldrig offentliggørelsen.",
     "bagsNote": "Kufferter og tasker har nu mål (H × B × D, vægt, volumen) og egenskaber (hjul, lås, aftagelig rem …), målt på samme måde af hvert brand.",
     "startEyebrow": "Start her",
@@ -248,21 +247,35 @@
       },
       {
         "h": "Upload eller automatiser",
-        "p": "Gem som CSV UTF-8, og upload filen med fotoene i din portal, eller lad portalen hente din eksport hver nat."
+        "p": "Gem filen i Excel som \"CSV UTF-8\", og upload den med fotoene i din forhandlerportal. Eller lad din forhandlerportal hente din eksport hver nat."
       },
       {
         "h": "Udgivet",
-        "p": "Dine forhandlere finder alt i din portal. Deres software modtager hver ændring automatisk. Uden beregning."
+        "p": "Dine forhandlere finder alt i din forhandlerportal, og deres software modtager hver ændring automatisk. Uden beregning."
       }
     ],
     "startTemplate": "Download Excel-skabelonen",
     "partnersTitle": "Eller arbejd med en partner",
     "partnersP": "En udbyder kan overtage hele processen. Photopilot tilbyder for eksempel en gratis portal med OBX-integrationen, fuld automatisering af processen og en skræddersyet integration med dit ERP.",
-    "partnersCta": "Se udbyderne"
+    "partnersCta": "Se udbyderne",
+    "waysTitle": "To måder at starte på, begge med en forhandlerportal",
+    "ways": [
+      {
+        "h": "Ingen forhandlerportal endnu?",
+        "p": "Brug den gratis forhandlerportal fra Open Brand Exchange, ved siden af dine nuværende systemer.",
+        "cta": "Kom i gang med din Excel-skabelon"
+      },
+      {
+        "h": "Har du allerede en forhandlerportal?",
+        "p": "Spørg din leverandør om understøttelse af Open Brand Exchange. Din forhandlerportal bliver, og den virker med standarden.",
+        "cta": "Det skal din leverandør vide"
+      }
+    ],
+    "nextTemplate": "Kom i gang med din Excel-skabelon"
   },
   "automation": {
     "h1": "Automatisering",
-    "lead": "Dit PIM, ERP, DAM eller en delt mappe har allerede data og billeder. Vælg den første opskrift, der passer: de virker med alle Open Brand Exchange-portaler.",
+    "lead": "Dit PIM, ERP, DAM eller en delt mappe forbliver kilden. Din forhandlerportal henter data og billeder automatisk, for eksempel hver nat, og gør dem tilgængelige for alle dine forhandlere.",
     "chooseTitle": "Hvilken opskrift passer til dig?",
     "head": [
       "Du har…",
@@ -352,11 +365,19 @@
     "apiMore": "Alle detaljer står i specifikationen:",
     "apiSpec": "Ingest API",
     "apiAuto": "automatiseringsopskrifter",
-    "apiSdk": "Go-SDK"
+    "apiSdk": "Go-SDK",
+    "heroTitle": "Automatiser. Arbejd videre, som du plejer.",
+    "heroChecks": [
+      "Intet nyt system at vedligeholde",
+      "Vælg selv hvordan: en mappe, en Excel-fil eller en automatisk forbindelse"
+    ],
+    "flowLabel": "Fra dine systemer til dine forhandlere",
+    "techEyebrow": "Til den person, der sætter det op",
+    "techIntro": "Opskrifterne nedenfor er til den person, der står for jeres systemer. Vil du hellere ikke sætte noget op? Start med Excel-skabelonen, eller spørg en partner."
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Én portal er én brandvirksomhed på én server. Du vælger, hvordan den drives, fra helt outsourcet til helt selv. Nedenfor fra det enkleste til det mest tekniske.",
+    "lead": "Hvert brand har sin egen forhandlerportal på sin egen server. Du vælger, hvordan den drives, fra helt outsourcet til helt selv.",
     "p1Title": "3. En partner hoster den for dig",
     "p1P": "Vil du helst ikke selv hoste? Partnere kan hoste og vedligeholde portalen for dig.",
     "fieldBased": "Hjemsted",
@@ -387,8 +408,8 @@
       "Tilføj den cron-adresse, installationen viser, som cronjob i dit webhotels kontrolpanel, hvert 5. minut. Portalen virker også uden."
     ],
     "phpDownload": "Download den nyeste udgivelse",
-    "p3Title": "3. Docker",
-    "p3P": "På din egen server eller i enhver sky, der kører containere. Én kommando:",
+    "p3Title": "3. Din egen server",
+    "p3P": "På din egen server eller hos en hvilken som helst cloududbyder. Det starter med én kommando:",
     "composeP": "Eller med HTTPS inkluderet via Caddy:",
     "envTitle": "Indstillinger",
     "envPublicUrl": "den offentlige adresse på din portal",
@@ -407,7 +428,7 @@
     "compareTitle": "Tre udgaver, én portal",
     "compareP": "De tre udgaver gør det samme og har samme administration og samme forhandlerportal. Vælg det, der passer til din hosting; du kan skifte senere.",
     "compareLink": "Se implementeringerne",
-    "heroTitle": "Din portal, hvor du vil.",
+    "heroTitle": "Din forhandlerportal, hvor du vil.",
     "heroLead": "Softwaren er gratis. Du vælger, hvor den kører, og du kan flytte når som helst.",
     "heroChecks": [
       "Gratis software, du betaler kun for hosting",
@@ -415,9 +436,9 @@
       "Den samme portal overalt, så du altid kan skifte",
       "Vil du helst ikke selv? En partner hoster den for dig"
     ],
-    "euCta": "Din portal i Europa",
+    "euCta": "Din forhandlerportal i Europa",
     "euTitle": "1. Din egen server i Europa (anbefalet)",
-    "euP": "En lille server hos en europæisk udbyder er nok for de fleste brands. Vejledningen nedenfor bruger Hetzner, med datacentre i Tyskland og Finland. Enhver server, der kører Docker, fungerer på samme måde.",
+    "euP": "En lille server hos en europæisk udbyder er nok for de fleste brands. Vores vejledning bruger Hetzner, med datacentre i Tyskland og Finland.",
     "euSteps": [
       "Opret en server hos Hetzner i Nürnberg, Falkenstein eller Helsinki, med backup slået til.",
       "Peg dit domæne, for eksempel images.ditbrand.dk, på serveren.",
@@ -432,11 +453,13 @@
     "webP": "PHP-udgaven kører på et almindeligt europæisk webhotel med PHP og en database, for eksempel hos TransIP, Strato eller OVHcloud. Uden kommandoer:",
     "altTitle": "4. Andre clouds",
     "altP": "Den samme portal kører også på Cloudflare Workers og på Google Cloud Run. Vælg en region i Europa, hvis tjenesten tilbyder en.",
-    "partnerLink": "Se partnere"
+    "partnerLink": "Se partnere",
+    "techTitle": "Tekniske detaljer til din it-afdeling",
+    "techLead": "Kommandoer, indstillinger og installationsvejledninger til den person, der sætter serveren op."
   },
   "retailers": {
     "h1": "For forhandlere",
-    "lead": "Brands, der bruger Open Brand Exchange, leverer deres billeder og varedata i ét ensartet format. Du skal kun modtage dem, uden beregning: i hvert brands portal i din browser eller via én API direkte i din software.",
+    "lead": "Brands, der bruger Open Brand Exchange, leverer deres billeder og varedata på én ensartet måde. Du modtager dem uden beregning: i brandets portal eller automatisk i din egen software.",
     "portalTitle": "Hvad en brandportal tilbyder",
     "portalP": "Hvert brand driver sin egen portal med sit eget navn på, for eksempel \"Kestrel · {portal}\".",
     "portal": [
@@ -466,11 +489,11 @@
       }
     ],
     "apiTitle": "En API-nøgle til jeres software",
-    "apiP": "Henter dit PIM, kassesystem eller din webshop billeder automatisk? Så anmod om en API-nøgle til den software. Softwaren henter først det fulde sæt og derefter kun ændringerne, også brandets tilbagetrækninger. Billederne kobles til dine varer via EAN.",
-    "apiDev": "Til din udvikler: et eksempel.",
+    "apiP": "Din webshop, dit PIM eller dit kassesystem kan hente alt automatisk, koblet til dine varer via EAN. Anmod om en API-nøgle til det i brandets portal: en personlig adgangskode til din software.",
+    "apiDev": "Information til din udvikler",
     "toolsTitle": "Hvilken software der virker med det",
-    "toolsP": "Open Brand Exchange er en åben standard, som al software kan understøtte. Photopilot bygger den ind i sin software til forhandlere. Andre leverandører kan gøre det samme. Der kræves ingen bestemt software: en browser er tilstrækkelig.",
-    "toolsLink": "Specifikation for udviklere",
+    "toolsP": "Al software kan understøtte den åbne standard; Photopilot bygger den ind i sin software til forhandlere. Der kræves ingen bestemt software: en browser er nok.",
+    "toolsLink": "Information til softwareleverandører",
     "findTitle": "Find et brand",
     "findP": "Brands, der vælger at blive vist, står i oversigten. Et brand kan også give dig adressen på sin portal direkte.",
     "findLink": "Gå til brandoversigten",
@@ -482,7 +505,7 @@
     "label": {
       "eyebrow": "Varedata",
       "title": "Oplysningerne fra vaskemærket følger med hver vare.",
-      "p": "Materialesammensætning pr. del, vaskeanvisninger i mærkets rækkefølge og oprindelsesland hører til hver vare, sammen med EAN for hver størrelse. Din webshop kan vise dem som tekst eller som vaskesymboler i sin egen stil. Felterne følger EU's regler for tekstilmærkning og vaskekoderne i ISO 3758, så de senere også kan bruges i et digitalt produktpas.",
+      "p": "Materialesammensætning pr. del, vaskeanvisninger i mærkets rækkefølge og oprindelsesland følger med hver vare, sammen med EAN for hver størrelse. Din webshop viser dem som tekst eller som vaskesymboler efter EU's regler for mærkning og vaskekoderne i ISO 3758.",
       "points": [
         "Sammensætning pr. del (yderstof, for, fyld, sål) med procenter",
         "Vaskeanvisninger som standardkoder, i mærkets rækkefølge",
@@ -498,7 +521,6 @@
       "origin": "Fremstillet i",
       "sizes": "Størrelser og EAN",
       "size": "Størrelse",
-      "codeLabel": "Den samme vare i API'et",
       "fibres": {
         "recycled_polyester": "genanvendt polyester",
         "polyamide": "polyamid",
@@ -569,8 +591,9 @@
     "howTitle": "Sådan modtager du det",
     "how": [
       "I din browser: søg i brandets portal, indsæt en liste med EAN'er og download billeder og artikeldata.",
-      "Automatisk: din webshop, dit PIM eller din POS-software henter alt via ét API, det samme for alle brands."
-    ]
+      "Automatisk: din webshop, dit PIM eller dit kassesystem henter selv alt, på samme måde for alle brands."
+    ],
+    "benefitsCta": "Find et brand i oversigten"
   },
   "switchKit": {
     "subject": "Jeres produktbilleder og varedata via Open Brand Exchange?",
@@ -637,7 +660,48 @@
     ],
     "contribute": "Bidrag sker via pull requests på spec-repositoriet.",
     "governanceLink": "Hvordan beslutninger træffes",
-    "quickstart": "Kom hurtigt i gang: OBX på 10 minutter"
+    "quickstart": "Kom hurtigt i gang: OBX på 10 minutter",
+    "repos": [
+      {
+        "name": "spec",
+        "d": "Specifikationen, skemaer og testdata"
+      },
+      {
+        "name": "obx-go",
+        "d": "Go SDK, obx-værktøjet og konformitetstesten"
+      },
+      {
+        "name": "node-ts",
+        "d": "Portal til Cloudflare Workers"
+      },
+      {
+        "name": "node-go",
+        "d": "Portal til Docker og Google Cloud Run"
+      },
+      {
+        "name": "node-php",
+        "d": "Portal til almindelig webhosting"
+      },
+      {
+        "name": "admin-ui",
+        "d": "Webgrænsefladen i alle portaler"
+      }
+    ],
+    "promptTitle": "Byg det med din AI-assistent",
+    "promptP": "Kopiér en prompt ind i Claude, ChatGPT eller Cursor, udfyld delen i parentes, og lad assistenten skrive kode efter specifikationen.",
+    "prompts": [
+      {
+        "h": "Eksportér fra dit system",
+        "note": "Til brands og leverandører af ERP og PIM: products.csv og billednavne."
+      },
+      {
+        "h": "Læs OBX ind i din software",
+        "note": "Til leverandører af webshop-, PIM- og kassesoftware: ændringsfeedet og billeder."
+      }
+    ],
+    "title": "Open source, på GitHub.",
+    "reposTitle": "Repositories",
+    "reposP": "Alt er open source på GitHub: specifikationen, den fælles kode og de tre portaludgaver."
   },
   "directory": {
     "h1": "Brandoversigt",
@@ -702,7 +766,7 @@
       },
       {
         "q": "Har vi brug for en udvikler?",
-        "a": "Ikke til det grundlæggende. En portal installeres med ét klik, og en planlagt import fra en webadresse, SFTP-server eller bucket kræver ingen kode. En udvikler er en hjælp, hvis du vil koble dit PIM eller ERP direkte på."
+        "a": "Ikke til det grundlæggende: start med Excel-skabelonen, så kan din forhandlerportal hente din eksport hver nat uden kode. En udvikler hjælper kun, hvis du vil koble dit PIM eller ERP direkte på."
       },
       {
         "q": "Er det endnu en platform, vi skal være med på?",
@@ -730,7 +794,7 @@
       },
       {
         "q": "Er det klar?",
-        "a": "Ja, version 0.2: specifikationen, de tre portaler, kommandoen obx og overensstemmelsestjekket er udgivet og frie at bruge. Vi er i starten: de første brands kommer med nu."
+        "a": "Ja, version 0.2: specifikationen, de tre portaludgaver og værktøjerne er udgivet og frie at bruge. Vi er i starten: de første brands kommer med nu."
       },
       {
         "q": "Hvem står bag?",
@@ -856,15 +920,15 @@
     "brandsFlow": [
       {
         "h": "Dine systemer",
-        "p": "PIM, ERP eller en mappe"
+        "p": "PIM, ERP, DAM eller en mappe"
       },
       {
-        "h": "Din portal",
-        "p": "dit navn, dit domæne"
+        "h": "Din forhandlerportal",
+        "p": "på den åbne standard, med dit navn"
       },
       {
         "h": "Dine forhandlere",
-        "p": "i browseren og via API'et"
+        "p": "i browseren og i deres egen software"
       }
     ],
     "retailersH1": "Alle brands' billeder og varedata, altid på samme måde",
@@ -879,7 +943,7 @@
       },
       {
         "h": "Din butik",
-        "p": "download eller API, matchet på EAN"
+        "p": "download eller automatisk, koblet via EAN"
       }
     ],
     "statusTitle": "Hvad er klar, og hvad kommer",
@@ -889,8 +953,8 @@
     "comingBadge": "Snart",
     "brandsReady": [
       "Din egen portal med administration, på 25 sprog, på dit eget domæne",
-      "Import af CSV og fotos manuelt eller efter plan fra en webadresse, SFTP eller S3",
-      "Værktøjet obx og opskrifter til cron, GitHub Actions, n8n, Make og Zapier",
+      "Upload din Excel-eksport og dine fotos manuelt, eller få dem hentet hver nat",
+      "Automatisk levering fra dit PIM, ERP eller en delt mappe",
       "Adgangsanmodninger, invitationer og API-nøgler til dine forhandleres software",
       "Tre udgaver: Cloudflare, Google Cloud & Docker og almindeligt webhotel"
     ],
@@ -903,7 +967,7 @@
       "Anmod om adgang og log ind på et brands portal",
       "Søg, filtrér og indsæt din EAN-liste for at se, hvad der findes, og hvad der mangler",
       "Download fotos som zip og varedata som regneark",
-      "En API-nøgle til jeres software: først alt, derefter kun ændringerne",
+      "En API-nøgle til jeres software, så den selv modtager nye og ændrede produkter",
       "Brugsrettigheder, embargo og AI-oprindelse ved hvert billede"
     ],
     "retailersComing": [
@@ -920,7 +984,6 @@
   "site": {
     "nav": {
       "start": "Kom i gang som brand",
-      "docs": "Dokumentation",
       "preview": "Version 0.2"
     },
     "footer": {
@@ -941,8 +1004,7 @@
       "portalArticle": "En vare i portalen: billeder pr. farve, valget mellem original, web og kvadratisk ved download, og EAN for hver størrelse.",
       "adminOverview": "Oversigten i brandets administration: første skridt, katalogtal, adgangsanmodninger og forhandlernes seneste downloads.",
       "adminCatalog": "Kataloget i brandets administration: otte udgivne varer med størrelser og billeder.",
-      "adminStats": "Statistik i brandets administration: downloads, billeder og de mest aktive forhandlere over 30 dage.",
-      "adminAutomation": "Automatisk upload i brandets administration: færdige opskrifter til obx-værktøjet, cron, GitHub Actions og mere."
+      "adminStats": "Statistik i brandets administration: downloads, billeder og de mest aktive forhandlere over 30 dage."
     },
     "home": {
       "eyebrow": "Åben standard · Gratis software",
@@ -953,7 +1015,7 @@
       "proof": [
         {
           "v": "Åben",
-          "l": "standard, CC-BY-4.0"
+          "l": "standard, fri for alle"
         },
         {
           "v": "3",
@@ -961,7 +1023,7 @@
         },
         {
           "v": "1",
-          "l": "API for alle brands"
+          "l": "format for alle brands"
         },
         {
           "v": "25",
@@ -972,12 +1034,11 @@
           "l": "i licens"
         }
       ],
-      "codeCaption": "Det, en forhandlers software modtager",
       "videoTitle": "Se, hvordan det virker",
       "videoNote": "På engelsk, med engelske undertekster.",
       "flowEyebrow": "Sådan virker det",
       "flowTitle": "Når alle parter strukturerer data på samme måde, har alle parter gavn af det.",
-      "flowLead": "Hos næsten enhver forhandler kopierer nogen regneark og taster produktdata ind igen for hvert brand, under tidspres ved hver ny kollektion. En fælles standard fjerner det arbejde. Den implementeres én gang og gavner alle parter i årevis. Tid til bedre arbejde.",
+      "flowLead": "Hos mange forhandlere taster nogen produktdata ind igen for hvert brand, under tidspres ved hver ny kollektion. En fælles standard fjerner det arbejde, for alle parter og i mange år.",
       "flowCaption": "Det, et brand lægger ind, den åbne standard i midten, og det, forhandlerne får ud.",
       "flow": {
         "inTitle": "Ind",
@@ -1004,9 +1065,9 @@
       },
       "pillars": [
         {
-          "eyebrow": "Portal",
-          "h": "En portal til dine forhandleres indkøbere.",
-          "p": "Indkøbere logger ind på din portal, indsætter EAN-numrene fra deres ordre og downloader præcis det, de skal bruge: ét foto, én vare eller en zip med et helt udvalg.",
+          "eyebrow": "Forhandlerportal",
+          "h": "Din forhandlerportal, til dine forhandleres indkøbere.",
+          "p": "Indkøbere logger ind i din forhandlerportal, indsætter EAN-numrene fra deres ordre og downloader præcis det, de skal bruge: ét foto, én vare eller en zip med et helt udvalg.",
           "items": [
             "Søg og filtrér efter brand, sæson, produkttype og farve",
             "Indsæt en EAN-liste for at se, hvad der er tilgængeligt, og hvad der mangler",
@@ -1016,33 +1077,33 @@
           "link": "Se den fra forhandlerens side"
         },
         {
-          "eyebrow": "API",
-          "h": "Ét API, det samme for alle brands.",
-          "p": "Forhandlernes software henter det fulde sæt én gang og derefter kun ændringerne, også tilbagetrækninger. Hvert billede indeholder brugsrettigheder, embargodato og AI-oprindelse.",
+          "eyebrow": "Deres software",
+          "h": "Direkte ind i forhandlerens webshop.",
+          "p": "En forhandlers webshop, PIM eller kassesystem kan modtage dine produkter automatisk, også varer, du trækker tilbage. Hvert billede har sine brugsrettigheder og sin embargodato med.",
           "items": [
-            "Først en fuld kopi, derefter kun ændringerne",
-            "Opslag på EAN, koblet til den rigtige vare og størrelse",
-            "Web-, kvadratiske og miniatureversioner; originaler, når du tillader det",
-            "En softwareleverandør implementerer det én gang, og det virker med alle brands"
+            "Nye og ændrede produkter kommer af sig selv",
+            "Koblet til den rigtige vare og størrelse via EAN",
+            "Billeder i web-, kvadratisk og miniaturestørrelse; originaler, når du tillader det",
+            "Software, der understøtter standarden, virker med alle brands"
           ],
-          "link": "Læs API-referencen"
+          "link": "Sådan modtager forhandlere det"
         },
         {
           "eyebrow": "Dine systemer",
           "h": "Din nuværende arbejdsgang bevares.",
-          "p": "Standarden fastlægger, hvordan forhandlere henter indhold. Hvordan dit indhold kommer ind i portalen, vælger du selv: en natlig import fra en webadresse, SFTP eller S3, en eksportmappe eller kommandolinjeværktøjet obx.",
+          "p": "Start med Excel-skabelonen, eller lad dine egne systemer levere. Din forhandlerportal kan hente din eksport hver nat, så nye kollektioner kommer online uden manuelt arbejde.",
           "items": [
-            "Natlig import fra en webadresse, SFTP eller S3, uden kode",
-            "obx-værktøjet til Windows, macOS og Linux sender kun ændringer",
-            "Opskrifter til cron, GitHub Actions, n8n, Make og Zapier",
-            "Ét CSV-format og én navneregel for fotos"
+            "Start med Excel-skabelonen, uden software",
+            "Dit PIM, ERP eller en delt mappe kan levere hver nat",
+            "Kun det, der er ændret, sendes, så opdateringer går hurtigt",
+            "Én klar opbygning af data og én navneregel for fotos"
           ],
-          "link": "Se automatiseringsopskrifterne"
+          "link": "Kom i gang med din Excel-skabelon"
         }
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Kør den, hvor du vil. Betal kun for hosting.",
-      "editionsLead": "Tre udgaver af den samme portal. De taler det samme API, så du kan skifte mellem dem.",
+      "editionsLead": "Tre udgaver af den samme forhandlerportal. De virker på samme måde, så du kan til enhver tid skifte fra den ene til den anden.",
       "editionsLink": "Sammenlign hostingmulighederne",
       "editionFields": [
         "Kører på",
@@ -1054,7 +1115,7 @@
         {
           "tag": "Anbefalet",
           "name": "Din egen server i Europa",
-          "runs": "En server hos en europæisk udbyder som Hetzner (Tyskland), med Docker",
+          "runs": "En server hos en europæisk udbyder som Hetzner (Tyskland)",
           "need": "En server og et domænenavn",
           "setup": "Én kommando, derefter opsætningsguiden",
           "cost": "Den server, du lejer",
@@ -1094,15 +1155,15 @@
       "trust": [
         {
           "h": "Åben specifikation",
-          "p": "Version 0.2, under CC-BY-4.0. Alle må implementere den, også til kommercielle formål."
+          "p": "Version 0.2. En åben specifikation, som alle må bruge, også kommercielt."
         },
         {
           "h": "Dine data forbliver dine",
           "p": "Et brand kan til enhver tid eksportere alle sine data og billeder og skifte til en anden udbyder eller selv hoste det."
         },
         {
-          "h": "Open source-licenser",
-          "p": "SDK'et, obx-værktøjet og webgrænsefladen er Apache-2.0. De tre portaludgaver er AGPL-3.0, så forbedringer forbliver åbne."
+          "h": "Open source-software",
+          "p": "Alle kan bruge softwaren, se den efter og forbedre den. Forbedringer af portalerne forbliver åbne for alle."
         },
         {
           "h": "En fond under stiftelse",
@@ -1118,19 +1179,10 @@
         }
       ],
       "trustLink": "Læs, hvordan det styres",
-      "devEyebrow": "For udviklere",
-      "devTitle": "Open source, på GitHub.",
-      "devP": "OpenAPI 3.1, JSON Schemas, et fiktivt testbrand og færdig software. Enhver HTTP-klient virker.",
-      "devLinks": [
-        "API-reference",
-        "Specifikationen på GitHub",
-        "Go SDK og obx-værktøjet",
-        "Fejlkoder"
-      ],
       "faqTitle": "Det spørger brands først om",
       "faqLink": "Alle spørgsmål",
-      "closingTitle": "Lad forhandlere hente dit indhold direkte.",
-      "closingP": "Sæt din egen portal op. Eller fortæl os om dine systemer og forhandlere, og bidrag til den første udgivelse.",
+      "closingTitle": "Din forhandlerportal, på den åbne standard.",
+      "closingP": "Start med den gratis forhandlerportal og din Excel-fil. Eller fortæl os om dine systemer og forhandlere, og vær med til at forme den første version.",
       "closingMail": "Skriv til os",
       "rolesEyebrow": "Hvem gør hvad",
       "rolesTitle": "Brands udgiver. Forhandlere modtager. Software forbinder.",
@@ -1138,7 +1190,7 @@
       "roles": [
         {
           "h": "Brands",
-          "p": "Udgiv én gang, til alle forhandlere.",
+          "p": "Din forhandlerportal, på den åbne standard.",
           "items": [
             "Gratis software eller en udbyder, der håndterer hele processen",
             "Start fra din egen Excel-fil eller dit system",
@@ -1167,8 +1219,8 @@
           "items": [
             "Brandportaler, B2B- og billedportaler, DAM'er",
             "ERP-, PIM-, webshop- og kassesoftware",
-            "Ét åbent API, gratis at bruge",
-            "Først en fuld kopi, derefter kun ændringerne",
+            "Én åben standard, gratis at bruge",
+            "Nye og ændrede produkter kommer automatisk",
             "Gratis mærkat »Kompatibel med Open Brand Exchange«"
           ],
           "cta": "Forbind dit system"
@@ -1176,11 +1228,11 @@
       ],
       "portalsEyebrow": "Åben for alle portaler",
       "portalsTitle": "Eksisterende portaler kan forbindes til standarden.",
-      "portalsLead": "Alle parter kan tilslutte sig: brands, forhandlere, portaler og ERP-, PIM- og DAM-software. Ethvert system, der taler standarden, virker sammen med ethvert andet system, der også gør.",
+      "portalsLead": "Brands, forhandlere, portaler og ERP-, PIM- og DAM-software kan alle tilslutte sig. Alle systemer, der understøtter standarden, virker med hinanden.",
       "portalTypes": [
         {
           "h": "Brand- og B2B-portaler",
-          "p": "Tilføj OBX API'et ved siden af dine eksisterende tjenester, så dine brands når alle forhandlersystemer."
+          "p": "Tilbyd standarden ved siden af dine eksisterende tjenester, så dine brands når alle forhandleres systemer."
         },
         {
           "h": "Billedportaler og DAM'er",
@@ -1191,52 +1243,13 @@
           "p": "Udgiv fibersammensætning, vaskeanvisninger, størrelser og EAN'er direkte fra det system, hvor de ligger."
         }
       ],
-      "portalsCta": "Sådan forbinder du",
+      "portalsCta": "Sådan deltager du",
       "heroChecks": [
         "Åben og uden profitformål, gratis at bruge",
         "Alle dine forhandlere på én gang",
         "Starter fra dit eget Excel eller system",
         "Billeder med brugsrettigheder",
         "Dine data forbliver dine"
-      ],
-      "devRepos": [
-        {
-          "name": "spec",
-          "d": "Specifikationen, skemaer og testdata"
-        },
-        {
-          "name": "obx-go",
-          "d": "Go SDK, obx-værktøjet og konformitetstesten"
-        },
-        {
-          "name": "node-ts",
-          "d": "Portal til Cloudflare Workers"
-        },
-        {
-          "name": "node-go",
-          "d": "Portal til Docker og Google Cloud Run"
-        },
-        {
-          "name": "node-php",
-          "d": "Portal til almindelig webhosting"
-        },
-        {
-          "name": "admin-ui",
-          "d": "Webgrænsefladen i alle portaler"
-        }
-      ],
-      "devQuickstart": "OBX på 10 minutter",
-      "promptTitle": "Byg det med din AI-assistent",
-      "promptP": "Kopiér en prompt ind i Claude, ChatGPT eller Cursor, udfyld delen i parentes, og lad assistenten skrive kode efter specifikationen.",
-      "prompts": [
-        {
-          "h": "Eksportér fra dit system",
-          "note": "Til brands og leverandører af ERP og PIM: products.csv og billednavne."
-        },
-        {
-          "h": "Læs OBX ind i din software",
-          "note": "Til leverandører af webshop-, PIM- og kassesoftware: ændringsfeedet og billeder."
-        }
       ],
       "scopeLabel": "Kategorier",
       "scopeNow": "Version 0.2: mode, sko, tasker og kufferter",
@@ -1253,10 +1266,11 @@
         "Åben og uden profitformål: valgfrie partnerbidrag dækker kun fondens omkostninger."
       ],
       "portalsExample": "Photopilot implementerer for eksempel Open Brand Exchange og betjener begge sider: brands (portal, automatisering, ERP-integration, fotografering) og forhandlere (modtagelse og behandling af produktindhold).",
-      "ownershipNote": "I princippet tilhører portalen brandet: din egen portal og dine egne data, på din egen hosting, for eksempel i EU hos Hetzner, eller hostet for dig."
+      "ownershipNote": "Forhandlerportalen tilhører brandet: dine egne data, på din egen hosting i EU, eller hostet for dig.",
+      "fairCta": "Find en partner"
     },
     "pages": {
-      "brandsH1": "Sæt det op én gang. For alle forhandlere på én gang.",
+      "brandsH1": "Din forhandlerportal, på den åbne standard.",
       "retailersSoftware": "Til din software",
       "hostingEditions": "De tre udgaver"
     }

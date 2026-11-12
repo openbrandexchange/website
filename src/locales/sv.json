@@ -28,7 +28,7 @@
     "automation": "Automatisering",
     "hosting": "Hosting",
     "retailers": "För återförsäljare",
-    "developers": "Utvecklare",
+    "developers": "För utvecklare",
     "directory": "Varumärkeskatalog",
     "downloads": "Nedladdningar",
     "faq": "Vanliga frågor",
@@ -45,22 +45,22 @@
     },
     "brands": {
       "title": "För varumärken",
-      "description": "En portal med ditt varumärke för återförsäljare, ett standard-API och automatisk publicering från ditt PIM, ERP eller mappar. Gratis att driva själv, eller via en leverantör."
+      "description": "Din bildbank, på den öppna standarden: återförsäljare söker och laddar ner dina bilder och din produktdata, och deras programvara tar emot allt automatiskt. Gratis att driva själv, eller via en partner."
     },
     "automation": {
       "title": "Automatisering",
-      "description": "Publicera automatiskt: schemalagda importer, verktyget obx, cron, GitHub Actions, n8n, Make, Zapier eller curl. Recept att kopiera."
+      "description": "Fortsätt arbeta som du gör i dag: din bildbank hämtar data och bilder automatiskt från ditt PIM, ERP, DAM eller en delad mapp. Med recept för den som sätter upp det."
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Från enklast till mest tekniskt: en leverantör, ett klick på Cloudflare, Google Cloud Run eller vanligt webbhotell, eller Docker."
+      "description": "Din bildbank där du vill: driftad av en partner, på din egen server i Europa, på ett vanligt webbhotell eller i ett annat moln."
     },
     "retailers": {
       "title": "För återförsäljare",
-      "description": "Vad en varumärkesportal erbjuder, API-åtkomst för din egen programvara och ett färdigt mejl till varumärken som inte deltar än."
+      "description": "Komplett produktinnehåll från varje deltagande varumärke, kostnadsfritt: i varumärkets portal i din webbläsare, eller automatiskt i din webbutik, ditt PIM eller ditt kassasystem."
     },
     "developers": {
-      "title": "Utvecklare",
+      "title": "För utvecklare",
       "description": "Specifikationen, de tre API:erna, SDK och kommandoradsverktyg, konformitetstesterna och implementationerna."
     },
     "directory": {
@@ -98,25 +98,25 @@
   },
   "home": {
     "eyebrow": "En öppen standard för varumärken",
-    "h1": "Ett ställe och ett API för alla dina återförsäljare",
-    "lead": "Open Brand Exchange är ett kostnadsfritt, öppet sätt att leverera dina färdiga produktbilder och din artikeldata till dina återförsäljare. De får en portal hos dig, deras system får ett standard-API och du publicerar automatiskt från dina egna system.",
+    "h1": "Din bildbank, på den öppna standarden",
+    "lead": "Open Brand Exchange ger dina återförsäljare en bildbank med ditt namn på, där de söker och laddar ner bilder och artikeldata. Eftersom den bygger på den öppna standarden kan deras programvara också ta emot allt automatiskt.",
     "ctaBrands": "Så fungerar det för varumärken",
     "ctaRetailers": "Jag är återförsäljare",
     "howTitle": "Så fungerar det",
     "steps": [
       {
-        "h": "Sätt upp din portal",
-        "p": "Låt en leverantör sköta den, eller kör den själv gratis med ett klick eller ett kommando.",
+        "h": "Sätt upp din bildbank",
+        "p": "Använd den kostnadsfria bildbanken, driftad av en partner eller av dig själv. Har du redan en bildbank? Fråga din leverantör om stöd.",
         "link": "Hostingalternativ"
       },
       {
-        "h": "Publicera automatiskt",
-        "p": "En CSV-fil och bilder med ett fast namn. Ditt PIM, ERP eller en vanlig mapp levererar dem varje natt, helt utan handpåläggning.",
-        "link": "Automatisering"
+        "h": "Lägg till dina produkter",
+        "p": "Fyll i Excel-mallen, eller låt ditt PIM, ERP eller en delad mapp leverera varje natt, utan handpåläggning.",
+        "link": "Excel-mallen"
       },
       {
         "h": "Återförsäljarna tar det därifrån",
-        "p": "Återförsäljare loggar in, klistrar in sin EAN-lista och laddar ner. Deras system hämtar samma innehåll via standard-API:et.",
+        "p": "Återförsäljare loggar in, klistrar in sin EAN-lista och laddar ner. Deras programvara tar emot samma innehåll automatiskt.",
         "link": "För återförsäljare"
       }
     ],
@@ -155,11 +155,11 @@
   },
   "brands": {
     "h1": "För varumärken",
-    "lead": "Återförsäljare behöver dina bilder och din artikeldata, kopplade till sina egna artiklar. Med Open Brand Exchange sätter du upp det en gång, för alla återförsäljare samtidigt.",
+    "lead": "Dina återförsäljare söker i din bildbank och laddar ner bilder och produktdata, med åtkomst per återförsäljare. Eftersom den bygger på den öppna standarden kan deras programvara också ta emot allt automatiskt.",
     "blocks": [
       {
-        "h": "En portal för dina återförsäljare",
-        "p": "Din portal har ditt namn och din profil: ”Kestrel · {portal}”, valfritt på din egen domän. Återförsäljare ansöker om åtkomst. Du godkänner eller avslår varje ansökan.",
+        "h": "En bildbank med ditt namn på",
+        "p": "Din bildbank bär ditt namn: ”Kestrel · {portal}”, på din egen domän om du vill. Återförsäljare ansöker om åtkomst, och du bestämmer för varje återförsäljare.",
         "items": [
           "Sök och filtrera på varumärke, säsong, kollektion och produkttyp",
           "Klistra in en lista med EAN och se vad som finns och vad som saknas",
@@ -169,31 +169,31 @@
         ]
       },
       {
-        "h": "Ett standard-API för deras system",
-        "p": "Återförsäljare som använder programvara får en API-nyckel. Deras kassa, PIM eller e-handelssystem hämtar hela uppsättningen en gång och därefter bara ändringarna.",
+        "h": "Direkt in i deras webbutik",
+        "p": "Återförsäljare kan låta sin webbutik, sitt PIM eller sitt kassasystem ta emot dina produkter automatiskt. För det begär de en API-nyckel i din bildbank: ett personligt lösenord för deras programvara.",
         "items": [
-          "Sökning på EAN, så att bilderna kopplas till rätt artikel och storlek",
-          "Ändringar levereras automatiskt, även tillbakadraganden",
-          "Användningsrättigheter, embargo och AI-ursprung ingår för varje bild",
-          "En implementation fungerar med alla varumärken som använder Open Brand Exchange"
+          "Kopplade till rätt artikel och storlek via EAN",
+          "Ändringar kommer in av sig själva, även artiklar som du drar tillbaka",
+          "Användningsrättigheter, embargodatum och om AI har använts, med varje bild",
+          "Programvara som stöder standarden fungerar med alla varumärken"
         ]
       },
       {
         "h": "Automatisk uppladdning",
-        "p": "Din portal hämtar din export automatiskt, eller så levererar dina egna system den.",
+        "p": "Din bildbank hämtar dina produkter själv, till exempel varje natt. Nya kollektioner kommer ut snabbare, utan handpåläggning.",
         "items": [
-          "Schemalagd import från en webbadress, SFTP-server eller S3-bucket, utan kod",
-          "En mapp som publiceras automatiskt med verktyget obx",
-          "Recept för cron, GitHub Actions, n8n, Make och Zapier",
-          "Ett CSV-format och en namnregel för bilder: KO-1001_NVY_1.jpg"
+          "Varje natt från exporten i ditt PIM eller ERP, utan extra programvara",
+          "Eller från en delad mapp: det som sparas där publiceras",
+          "Bara det som ändrats skickas, så uppdateringar går snabbt",
+          "En tydlig struktur för datan och en namnregel för bilder, till exempel KO-1001_NVY_1.jpg"
         ]
       },
       {
         "h": "Du förblir ägare",
-        "p": "Open Brand Exchange är en standard, inte en plattform. Du driver din egen portal, eller så driver en leverantör den åt dig.",
+        "p": "Open Brand Exchange är en standard, inte en plattform. Du driver din egen bildbank, eller så driver en partner den åt dig.",
         "items": [
           "Att köra det själv är gratis: programvaran är öppen källkod",
-          "Eller lägg ut det på en leverantör, och byt leverantör när som helst",
+          "Eller överlåt det till en partner, och byt partner när som helst",
           "Du ser vem som laddar ner vad, per återförsäljare",
           "Du bestämmer vem som får åtkomst, till vilka varumärken och om original är tillåtna"
         ]
@@ -215,11 +215,11 @@
       },
       {
         "k": "API-nycklar",
-        "v": "nycklar för dina återförsäljares programvara: visas en gång, kan förnyas eller återkallas när som helst"
+        "v": "personliga lösenord för dina återförsäljares programvara: visas en gång, kan förnyas eller återkallas när som helst"
       },
       {
         "k": "Automatisk uppladdning",
-        "v": "nycklar för dina egna system och aviseringar när en återförsäljare ansöker om åtkomst eller en import är klar"
+        "v": "din export hämtas enligt schema, och ett meddelande när en återförsäljare ansöker om åtkomst eller en import är klar"
       },
       {
         "k": "Statistik",
@@ -232,7 +232,6 @@
     ],
     "nextTitle": "Nästa steg",
     "nextHosting": "Välj hosting",
-    "nextAutomation": "Se automatiseringsrecepten",
     "labelNote": "Saknas något som lagen kräver på etiketten, till exempel fibersammansättningen eller materialen i en sko, varnar Open Brand Exchange dig vid uppladdningen. En varning stoppar aldrig publiceringen.",
     "bagsNote": "Resväskor och väskor har nu mått (H × B × D, vikt, volym) och egenskaper (hjul, lås, avtagbar rem …), som varje varumärke mäter på samma sätt.",
     "startEyebrow": "Börja här",
@@ -248,21 +247,35 @@
       },
       {
         "h": "Ladda upp eller automatisera",
-        "p": "Spara som CSV UTF-8 och ladda upp den med bilderna i din portal, eller låt portalen hämta din export varje natt."
+        "p": "Spara den i Excel som ”CSV UTF-8” och ladda upp den med bilderna i din bildbank. Eller låt din bildbank hämta din export varje natt."
       },
       {
         "h": "Publicerat",
-        "p": "Dina återförsäljare hittar allt i din portal. Deras programvara tar emot varje ändring automatiskt. Kostnadsfritt."
+        "p": "Dina återförsäljare hittar allt i din bildbank, och deras programvara tar emot varje ändring automatiskt. Kostnadsfritt."
       }
     ],
     "startTemplate": "Ladda ner Excel-mallen",
     "partnersTitle": "Eller arbeta med en partner",
     "partnersP": "En leverantör kan ta över hela processen. Photopilot erbjuder till exempel en gratis portal med OBX-kopplingen, full automatisering av processen och en skräddarsydd integration med ditt ERP.",
-    "partnersCta": "Se leverantörerna"
+    "partnersCta": "Se leverantörerna",
+    "waysTitle": "Två sätt att börja, båda med en bildbank",
+    "ways": [
+      {
+        "h": "Ingen bildbank än?",
+        "p": "Använd Open Brand Exchanges kostnadsfria bildbank, bredvid dina nuvarande system.",
+        "cta": "Kom igång med din Excel-mall"
+      },
+      {
+        "h": "Har du redan en bildbank?",
+        "p": "Fråga din leverantör om stöd för Open Brand Exchange. Din bildbank finns kvar och fungerar med standarden.",
+        "cta": "Det här behöver din leverantör veta"
+      }
+    ],
+    "nextTemplate": "Kom igång med din Excel-mall"
   },
   "automation": {
     "h1": "Automatisering",
-    "lead": "Ditt PIM, ERP, DAM eller en delad mapp har redan data och bilder. Välj det första receptet som passar: alla fungerar med alla Open Brand Exchange-portaler.",
+    "lead": "Ditt PIM, ERP, DAM eller din delade mapp förblir källan. Din bildbank hämtar data och bilder automatiskt, till exempel varje natt, och gör dem tillgängliga för alla dina återförsäljare.",
     "chooseTitle": "Vilket recept passar dig?",
     "head": [
       "Du har…",
@@ -352,11 +365,19 @@
     "apiMore": "Alla detaljer finns i specifikationen:",
     "apiSpec": "Ingest API",
     "apiAuto": "automatiseringsrecept",
-    "apiSdk": "Go-SDK"
+    "apiSdk": "Go-SDK",
+    "heroTitle": "Automatisera. Fortsätt arbeta som du gör i dag.",
+    "heroChecks": [
+      "Inget nytt system att underhålla",
+      "Välj själv hur: en mapp, en Excel-fil eller en automatisk koppling"
+    ],
+    "flowLabel": "Från dina system till dina återförsäljare",
+    "techEyebrow": "För den som sätter upp det",
+    "techIntro": "Recepten nedan är för den som sköter dina system. Vill du hellre inte sätta upp något? Börja med Excel-mallen, eller fråga en partner."
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "En portal är ett varumärkesföretag på en server. Du väljer hur den körs, från helt utlagd till helt egen. Nedan från enklast till mest tekniskt.",
+    "lead": "Varje varumärke har sin egen bildbank, på sin egen server. Du väljer hur den drivs, från helt utlagd till helt i egen regi.",
     "p1Title": "3. En partner driftar den åt dig",
     "p1P": "Vill du hellre inte drifta själv? Partner kan drifta och underhålla portalen åt dig.",
     "fieldBased": "Säte",
@@ -387,8 +408,8 @@
       "Lägg in cron-adressen som installationen visar som ett cron-jobb i webbhotellets kontrollpanel, var 5:e minut. Portalen fungerar även utan."
     ],
     "phpDownload": "Ladda ner den senaste versionen",
-    "p3Title": "3. Docker",
-    "p3P": "På din egen server eller i vilket moln som helst som kör containrar. Ett kommando:",
+    "p3Title": "3. Din egen server",
+    "p3P": "På din egen server eller hos valfri molnleverantör. Den startar med ett enda kommando:",
     "composeP": "Eller med HTTPS inbyggt, via Caddy:",
     "envTitle": "Inställningar",
     "envPublicUrl": "den publika adressen till din portal",
@@ -407,7 +428,7 @@
     "compareTitle": "Tre utgåvor, en portal",
     "compareP": "De tre utgåvorna gör samma sak och har samma administration och samma återförsäljarportal. Välj det som passar din hosting; du kan byta senare.",
     "compareLink": "Se implementationerna",
-    "heroTitle": "Din portal, där du vill.",
+    "heroTitle": "Din bildbank, där du vill.",
     "heroLead": "Programvaran är gratis. Du väljer var den körs, och du kan flytta när som helst.",
     "heroChecks": [
       "Gratis programvara, du betalar bara för hosting",
@@ -415,9 +436,9 @@
       "Samma portal överallt, så du kan alltid byta",
       "Vill du hellre slippa? En partner driftar den åt dig"
     ],
-    "euCta": "Din portal i Europa",
+    "euCta": "Din bildbank i Europa",
     "euTitle": "1. Din egen server i Europa (rekommenderas)",
-    "euP": "En liten server hos en europeisk leverantör räcker för de flesta varumärken. Guiden nedan använder Hetzner, med datacenter i Tyskland och Finland. Alla servrar som kör Docker fungerar på samma sätt.",
+    "euP": "En liten server hos en europeisk leverantör räcker för de flesta varumärken. Vår guide använder Hetzner, med datacenter i Tyskland och Finland.",
     "euSteps": [
       "Skapa en server hos Hetzner i Nürnberg, Falkenstein eller Helsingfors, med säkerhetskopior påslagna.",
       "Peka din domän, till exempel bilder.dittvarumarke.se, mot servern.",
@@ -432,11 +453,13 @@
     "webP": "PHP-utgåvan körs på vanliga europeiska webbhotell med PHP och en databas, till exempel hos TransIP, Strato eller OVHcloud. Inga kommandon behövs:",
     "altTitle": "4. Andra moln",
     "altP": "Samma portal körs även på Cloudflare Workers och Google Cloud Run. Välj en region i Europa där tjänsten erbjuder det.",
-    "partnerLink": "Se partner"
+    "partnerLink": "Se partner",
+    "techTitle": "Tekniska detaljer för din IT-avdelning",
+    "techLead": "Kommandon, inställningar och installationsguider för den som sätter upp servern."
   },
   "retailers": {
     "h1": "För återförsäljare",
-    "lead": "Varumärken som använder Open Brand Exchange levererar sina bilder och sin artikeldata i ett enhetligt format. Du behöver bara ta emot dem, kostnadsfritt: i varje varumärkes portal i din webbläsare, eller via ett enda API direkt i din programvara.",
+    "lead": "Varumärken som använder Open Brand Exchange levererar sina bilder och sin artikeldata på ett enhetligt sätt. Du tar emot dem kostnadsfritt: i varumärkets portal, eller automatiskt i din egen programvara.",
     "portalTitle": "Vad en varumärkesportal erbjuder",
     "portalP": "Varje varumärke har sin egen portal med sitt eget namn, till exempel ”Kestrel · {portal}”.",
     "portal": [
@@ -466,11 +489,11 @@
       }
     ],
     "apiTitle": "En API-nyckel för ert system",
-    "apiP": "Hämtar ditt PIM, kassasystem eller e-handelssystem bilder automatiskt? Ansök då om en API-nyckel för det. Programvaran hämtar först hela uppsättningen och sedan bara ändringarna, även varumärkets tillbakadraganden. Bilderna kopplas till dina artiklar via EAN.",
-    "apiDev": "För din utvecklare: ett exempel.",
+    "apiP": "Din webbutik, ditt PIM eller ditt kassasystem kan hämta allt automatiskt, kopplat till dina artiklar via EAN. Begär en API-nyckel för det i varumärkets portal: ett personligt lösenord för din programvara.",
+    "apiDev": "Information till din utvecklare",
     "toolsTitle": "Vilken programvara som fungerar med det",
-    "toolsP": "Open Brand Exchange är en öppen standard som alla system kan stödja. Photopilot bygger in den i sin programvara för återförsäljare. Andra leverantörer kan göra detsamma. Ingen särskild programvara krävs: det räcker med en webbläsare.",
-    "toolsLink": "Specifikation för utvecklare",
+    "toolsP": "All programvara kan stödja den öppna standarden; Photopilot bygger in den i sin programvara för återförsäljare. Ingen särskild programvara krävs: det räcker med en webbläsare.",
+    "toolsLink": "Information för programvaruleverantörer",
     "findTitle": "Hitta ett varumärke",
     "findP": "Varumärken som väljer att synas finns i varumärkeskatalogen. Ett varumärke kan också ge dig adressen till sin portal direkt.",
     "findLink": "Till varumärkeskatalogen",
@@ -482,7 +505,7 @@
     "label": {
       "eyebrow": "Artikeldata",
       "title": "Informationen från tvättlappen ingår i varje artikel.",
-      "p": "Materialsammansättning per del, tvättråd i samma ordning som på lappen och tillverkningsland ingår i varje artikel, tillsammans med EAN för varje storlek. Din butik kan visa dem som text eller som tvättsymboler i sin egen stil. Fälten följer EU:s regler för textilmärkning och skötselkoderna i ISO 3758, så de kan även användas i ett digitalt produktpass längre fram.",
+      "p": "Materialsammansättning per del, tvättråd i samma ordning som på lappen och tillverkningsland följer med varje artikel, tillsammans med EAN för varje storlek. Din webbutik visar dem som text eller som tvättsymboler, enligt EU:s märkningsregler och skötselkoderna i ISO 3758.",
       "points": [
         "Materialsammansättning per del (yttertyg, foder, fyllning, sula) med procent",
         "Tvättråd som standardkoder, i samma ordning som på lappen",
@@ -498,7 +521,6 @@
       "origin": "Tillverkad i",
       "sizes": "Storlekar och EAN",
       "size": "Storlek",
-      "codeLabel": "Samma artikel i API:et",
       "fibres": {
         "recycled_polyester": "återvunnen polyester",
         "polyamide": "polyamid",
@@ -569,8 +591,9 @@
     "howTitle": "Så får du det",
     "how": [
       "I webbläsaren: sök i varumärkets portal, klistra in en lista med EAN och ladda ner bilder och artikeldata.",
-      "Automatiskt: din webbutik, ditt PIM eller ditt kassasystem hämtar allt via ett API, detsamma för alla varumärken."
-    ]
+      "Automatiskt: din webbutik, ditt PIM eller ditt kassasystem hämtar allt själv, på samma sätt för alla varumärken."
+    ],
+    "benefitsCta": "Hitta ett varumärke i katalogen"
   },
   "switchKit": {
     "subject": "Era produktbilder och er artikeldata via Open Brand Exchange?",
@@ -637,7 +660,48 @@
     ],
     "contribute": "Bidrag görs via pull requests i spec-repot.",
     "governanceLink": "Hur beslut fattas",
-    "quickstart": "Snabbstart: OBX på 10 minuter"
+    "quickstart": "Snabbstart: OBX på 10 minuter",
+    "repos": [
+      {
+        "name": "spec",
+        "d": "Specifikationen, scheman och testdata"
+      },
+      {
+        "name": "obx-go",
+        "d": "Go SDK, verktyget obx och konformitetstestet"
+      },
+      {
+        "name": "node-ts",
+        "d": "Portal för Cloudflare Workers"
+      },
+      {
+        "name": "node-go",
+        "d": "Portal för Docker och Google Cloud Run"
+      },
+      {
+        "name": "node-php",
+        "d": "Portal för vanligt webbhotell"
+      },
+      {
+        "name": "admin-ui",
+        "d": "Webbgränssnittet för alla portaler"
+      }
+    ],
+    "promptTitle": "Bygg det med din AI-assistent",
+    "promptP": "Kopiera en prompt till Claude, ChatGPT eller Cursor, fyll i delen inom hakparentes och låt assistenten skriva kod enligt specifikationen.",
+    "prompts": [
+      {
+        "h": "Exportera från ditt system",
+        "note": "För varumärken samt ERP- och PIM-leverantörer: products.csv och bildnamn."
+      },
+      {
+        "h": "Läs in OBX i din programvara",
+        "note": "För leverantörer av webbutiks-, PIM- och kassaprogramvara: ändringsflödet och bilderna."
+      }
+    ],
+    "title": "Öppen källkod, på GitHub.",
+    "reposTitle": "Repon",
+    "reposP": "Allt är öppen källkod på GitHub: specifikationen, den gemensamma koden och de tre portalutgåvorna."
   },
   "directory": {
     "h1": "Varumärkeskatalog",
@@ -702,7 +766,7 @@
       },
       {
         "q": "Behöver vi en utvecklare?",
-        "a": "Inte för grunderna. En portal installeras med ett klick, och en schemalagd import från en webbadress, SFTP-server eller bucket kräver ingen kod. En utvecklare hjälper om du vill koppla ditt PIM eller ERP direkt."
+        "a": "Inte för grunderna: börja med Excel-mallen, så kan din bildbank hämta din export varje natt utan kod. En utvecklare behövs bara om du vill koppla ditt PIM eller ERP direkt."
       },
       {
         "q": "Är det ännu en plattform vi måste vara med på?",
@@ -730,7 +794,7 @@
       },
       {
         "q": "Är det klart?",
-        "a": "Ja, version 0.2: specifikationen, de tre portalerna, kommandot obx och konformitetskontrollen är släppta och fria att använda. Vi är i början: de första varumärkena ansluter nu."
+        "a": "Ja, version 0.2: specifikationen, de tre portalutgåvorna och verktygen är släppta och fria att använda. Vi är i början: de första varumärkena ansluter nu."
       },
       {
         "q": "Vem ligger bakom?",
@@ -856,15 +920,15 @@
     "brandsFlow": [
       {
         "h": "Dina system",
-        "p": "PIM, ERP eller en mapp"
+        "p": "PIM, ERP, DAM eller en mapp"
       },
       {
-        "h": "Din portal",
-        "p": "ditt namn, din domän"
+        "h": "Din bildbank",
+        "p": "på den öppna standarden, med ditt namn"
       },
       {
         "h": "Dina återförsäljare",
-        "p": "i webbläsaren och via API:t"
+        "p": "i webbläsaren och i sin egen programvara"
       }
     ],
     "retailersH1": "Varje varumärkes bilder och artikeldata, alltid på samma sätt",
@@ -879,7 +943,7 @@
       },
       {
         "h": "Din butik",
-        "p": "nedladdning eller API, kopplat via EAN"
+        "p": "nedladdning eller automatiskt, kopplat via EAN"
       }
     ],
     "statusTitle": "Vad som är klart och vad som kommer",
@@ -889,8 +953,8 @@
     "comingBadge": "Snart",
     "brandsReady": [
       "Din egen portal med administration, på 25 språk, på din egen domän",
-      "Import av CSV och bilder för hand eller enligt schema från en webbadress, SFTP eller S3",
-      "Verktyget obx och recept för cron, GitHub Actions, n8n, Make och Zapier",
+      "Ladda upp din Excel-export och dina bilder för hand, eller låt dem hämtas varje natt",
+      "Automatisk leverans från ditt PIM, ERP eller en delad mapp",
       "Åtkomstförfrågningar, inbjudningar och API-nycklar för dina återförsäljares system",
       "Tre utgåvor: Cloudflare, Google Cloud & Docker och vanligt webbhotell"
     ],
@@ -903,7 +967,7 @@
       "Begär åtkomst och logga in på ett varumärkes portal",
       "Sök, filtrera och klistra in din EAN-lista för att se vad som finns och vad som saknas",
       "Ladda ner bilder som zip och artikeldata som kalkylblad",
-      "En API-nyckel för ert system: först allt, sedan bara ändringarna",
+      "En API-nyckel för ert system, så att det tar emot nya och ändrade produkter av sig själv",
       "Användningsrätter, embargo och AI-ursprung vid varje bild"
     ],
     "retailersComing": [
@@ -920,7 +984,6 @@
   "site": {
     "nav": {
       "start": "Kom igång som varumärke",
-      "docs": "Dokumentation",
       "preview": "Version 0.2"
     },
     "footer": {
@@ -941,8 +1004,7 @@
       "portalArticle": "En artikel i portalen: bilder per färg, valet mellan original, webb och kvadratiskt vid nedladdning, och EAN för varje storlek.",
       "adminOverview": "Översikten i varumärkets administration: första stegen, katalogsiffror, åtkomstansökningar och återförsäljarnas senaste nedladdningar.",
       "adminCatalog": "Katalogen i varumärkets administration: åtta publicerade artiklar med storlekar och bilder.",
-      "adminStats": "Statistik i varumärkets administration: nedladdningar, bilder och de mest aktiva återförsäljarna under 30 dagar.",
-      "adminAutomation": "Automatisk uppladdning i varumärkets administration: färdiga recept för verktyget obx, cron, GitHub Actions med mera."
+      "adminStats": "Statistik i varumärkets administration: nedladdningar, bilder och de mest aktiva återförsäljarna under 30 dagar."
     },
     "home": {
       "eyebrow": "Öppen standard · Gratis programvara",
@@ -953,7 +1015,7 @@
       "proof": [
         {
           "v": "Öppen",
-          "l": "standard, CC-BY-4.0"
+          "l": "standard, fri för alla"
         },
         {
           "v": "3",
@@ -961,7 +1023,7 @@
         },
         {
           "v": "1",
-          "l": "API för alla varumärken"
+          "l": "format för alla varumärken"
         },
         {
           "v": "25",
@@ -972,12 +1034,11 @@
           "l": "i licensavgift"
         }
       ],
-      "codeCaption": "Det här får en återförsäljares system",
       "videoTitle": "Se hur det fungerar",
       "videoNote": "På engelska, med engelsk text.",
       "flowEyebrow": "Så fungerar det",
       "flowTitle": "När alla parter strukturerar data på samma sätt gynnas alla parter.",
-      "flowLead": "Hos nästan varje återförsäljare finns någon som kopierar kalkylblad och skriver in produktdata på nytt för varje varumärke, under tidspress vid varje ny kollektion. En gemensam standard tar bort det arbetet. Den införs en gång och gynnar alla parter i åratal. Tid för bättre arbete.",
+      "flowLead": "Hos många återförsäljare skriver någon in produktdata på nytt för varje varumärke, under tidspress vid varje ny kollektion. En gemensam standard tar bort det arbetet, för alla parter och i åratal.",
       "flowCaption": "Det ett varumärke lägger in, den öppna standarden i mitten och det återförsäljarna får ut.",
       "flow": {
         "inTitle": "In",
@@ -1004,9 +1065,9 @@
       },
       "pillars": [
         {
-          "eyebrow": "Portal",
-          "h": "En portal för inköparna hos dina återförsäljare.",
-          "p": "Inköpare loggar in i din portal, klistrar in EAN-koderna från sin order och laddar ner exakt det de behöver: en bild, en artikel eller en zip med ett helt urval.",
+          "eyebrow": "Bildbank",
+          "h": "Din bildbank, för inköparna hos dina återförsäljare.",
+          "p": "Inköpare loggar in i din bildbank, klistrar in EAN-koderna från sin order och laddar ner exakt det de behöver: en bild, en artikel eller en zip med ett helt urval.",
           "items": [
             "Sök och filtrera på varumärke, säsong, produkttyp och färg",
             "Klistra in en EAN-lista för att se vad som finns och vad som saknas",
@@ -1016,33 +1077,33 @@
           "link": "Se den från återförsäljarens sida"
         },
         {
-          "eyebrow": "API",
-          "h": "Ett API, samma för alla varumärken.",
-          "p": "Återförsäljarnas programvara hämtar hela uppsättningen en gång och sedan bara ändringarna, även tillbakadraganden. Varje bild innehåller användningsrättigheter, embargodatum och AI-ursprung.",
+          "eyebrow": "Deras programvara",
+          "h": "Direkt in i återförsäljarens webbutik.",
+          "p": "En återförsäljares webbutik, PIM eller kassasystem kan ta emot dina produkter automatiskt, även artiklar som du drar tillbaka. Varje bild har sina användningsrättigheter och sitt embargodatum med sig.",
           "items": [
-            "Först en fullständig kopia, sedan bara ändringarna",
-            "Sökning på EAN, kopplad till rätt artikel och storlek",
-            "Webb-, kvadratiska och miniatyrversioner; original när du tillåter det",
-            "En programvaruleverantör implementerar den en gång, och den fungerar med alla varumärken"
+            "Nya och ändrade produkter kommer in av sig själva",
+            "Kopplade till rätt artikel och storlek via EAN",
+            "Bilder i webb-, kvadratiskt och miniatyrformat; original när du tillåter det",
+            "Programvara som stöder standarden fungerar med alla varumärken"
           ],
-          "link": "Läs API-referensen"
+          "link": "Så tar återförsäljare emot det"
         },
         {
           "eyebrow": "Dina system",
           "h": "Ditt nuvarande arbetssätt består.",
-          "p": "Standarden definierar hur återförsäljare hämtar innehåll. Hur ditt innehåll kommer in i portalen väljer du själv: en nattlig import från en webbadress, SFTP eller S3, en exportmapp eller kommandoradsverktyget obx.",
+          "p": "Börja med Excel-mallen, eller låt dina egna system leverera. Din bildbank kan hämta din export varje natt, så att nya kollektioner kommer ut på nätet utan handpåläggning.",
           "items": [
-            "Nattlig import från en webbadress, SFTP eller S3, utan kod",
-            "Verktyget obx för Windows, macOS och Linux skickar bara det som ändrats",
-            "Recept för cron, GitHub Actions, n8n, Make och Zapier",
-            "Ett CSV-format och en namnregel för bilder"
+            "Börja med Excel-mallen, ingen extra programvara behövs",
+            "Ditt PIM, ERP eller en delad mapp kan leverera varje natt",
+            "Bara det som ändrats skickas, så uppdateringar går snabbt",
+            "En tydlig struktur för datan och en namnregel för bilder"
           ],
-          "link": "Se automatiseringsrecepten"
+          "link": "Kom igång med din Excel-mall"
         }
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Kör den där du vill. Betala bara för hosting.",
-      "editionsLead": "Tre utgåvor av samma portal. De talar samma API, så du kan byta mellan dem.",
+      "editionsLead": "Tre utgåvor av samma bildbank. De fungerar på samma sätt, så du kan när som helst byta från den ena till den andra.",
       "editionsLink": "Jämför hostingalternativen",
       "editionFields": [
         "Körs på",
@@ -1054,7 +1115,7 @@
         {
           "tag": "Rekommenderas",
           "name": "Din egen server i Europa",
-          "runs": "En server hos en europeisk leverantör som Hetzner (Tyskland), med Docker",
+          "runs": "En server hos en europeisk leverantör som Hetzner (Tyskland)",
           "need": "En server och ett domännamn",
           "setup": "Ett kommando, sedan installationsguiden",
           "cost": "Servern du hyr",
@@ -1094,15 +1155,15 @@
       "trust": [
         {
           "h": "Öppen specifikation",
-          "p": "Version 0.2, under CC-BY-4.0. Alla får implementera den, även för kommersiellt bruk."
+          "p": "Version 0.2. En öppen specifikation som alla får använda, även kommersiellt."
         },
         {
           "h": "Din data förblir din",
           "p": "Ett varumärke kan när som helst exportera all sin data och alla bilder, och byta till en annan leverantör eller drifta det själv."
         },
         {
-          "h": "Öppna licenser",
-          "p": "SDK:t, verktyget obx och webbgränssnittet är Apache-2.0. De tre portalutgåvorna är AGPL-3.0, så förbättringar förblir öppna."
+          "h": "Programvara med öppen källkod",
+          "p": "Alla kan använda programvaran, granska den och förbättra den. Förbättringar av portalerna förblir öppna för alla."
         },
         {
           "h": "En stiftelse under bildande",
@@ -1118,19 +1179,10 @@
         }
       ],
       "trustLink": "Läs hur det styrs",
-      "devEyebrow": "För utvecklare",
-      "devTitle": "Öppen källkod, på GitHub.",
-      "devP": "OpenAPI 3.1, JSON Schemas, ett fiktivt testvarumärke och färdig programvara. Alla HTTP-klienter fungerar.",
-      "devLinks": [
-        "API-referens",
-        "Specifikationen på GitHub",
-        "Go SDK och verktyget obx",
-        "Felkoder"
-      ],
       "faqTitle": "Det varumärken frågar först",
       "faqLink": "Alla frågor",
-      "closingTitle": "Låt återförsäljare hämta ditt innehåll direkt.",
-      "closingP": "Sätt upp din egen portal. Eller berätta om dina system och återförsäljare, och bidra till den första versionen.",
+      "closingTitle": "Din bildbank, på den öppna standarden.",
+      "closingP": "Börja med den kostnadsfria bildbanken och din Excel-fil. Eller berätta om dina system och återförsäljare, och var med och forma den första versionen.",
       "closingMail": "Mejla oss",
       "rolesEyebrow": "Vem gör vad",
       "rolesTitle": "Varumärken publicerar. Återförsäljare tar emot. Programvaran kopplar ihop.",
@@ -1138,7 +1190,7 @@
       "roles": [
         {
           "h": "Varumärken",
-          "p": "Publicera en gång, för alla återförsäljare.",
+          "p": "Din bildbank, på den öppna standarden.",
           "items": [
             "Gratis programvara, eller en leverantör som hanterar hela processen",
             "Utgå från din egen Excelfil eller ditt system",
@@ -1167,8 +1219,8 @@
           "items": [
             "Varumärkesportaler, B2B- och bildportaler, DAM-system",
             "ERP-, PIM-, webbutiks- och kassaprogramvara",
-            "Ett öppet API, gratis att använda",
-            "Först en fullständig kopia, sedan bara ändringarna",
+            "En öppen standard, gratis att använda",
+            "Nya och ändrade produkter kommer in automatiskt",
             "Gratis märkning ”Kompatibel med Open Brand Exchange”"
           ],
           "cta": "Koppla ditt system"
@@ -1176,11 +1228,11 @@
       ],
       "portalsEyebrow": "Öppen för alla portaler",
       "portalsTitle": "Befintliga portaler kan anslutas till standarden.",
-      "portalsLead": "Alla parter kan ansluta: varumärken, återförsäljare, portaler samt ERP-, PIM- och DAM-programvara. Varje system som talar standarden fungerar med alla andra system som också gör det.",
+      "portalsLead": "Varumärken, återförsäljare, portaler samt ERP-, PIM- och DAM-programvara kan alla ansluta. Varje system som stöder standarden fungerar med alla andra.",
       "portalTypes": [
         {
           "h": "Varumärkes- och B2B-portaler",
-          "p": "Lägg till OBX-API:et bredvid dina befintliga tjänster, så når dina varumärken alla återförsäljarsystem."
+          "p": "Erbjud standarden bredvid dina befintliga tjänster, så når dina varumärken varje återförsäljares system."
         },
         {
           "h": "Bildportaler och DAM-system",
@@ -1191,52 +1243,13 @@
           "p": "Publicera fibersammansättning, tvättråd, storlekar och EAN direkt från systemet där de finns."
         }
       ],
-      "portalsCta": "Så kopplar du",
+      "portalsCta": "Så deltar du",
       "heroChecks": [
         "Öppet och utan vinstsyfte, gratis att använda",
         "Alla dina återförsäljare på en gång",
         "Utgår från din egen Excel eller ditt system",
         "Bilder med användningsrättigheter",
         "Din data förblir din"
-      ],
-      "devRepos": [
-        {
-          "name": "spec",
-          "d": "Specifikationen, scheman och testdata"
-        },
-        {
-          "name": "obx-go",
-          "d": "Go SDK, verktyget obx och konformitetstestet"
-        },
-        {
-          "name": "node-ts",
-          "d": "Portal för Cloudflare Workers"
-        },
-        {
-          "name": "node-go",
-          "d": "Portal för Docker och Google Cloud Run"
-        },
-        {
-          "name": "node-php",
-          "d": "Portal för vanligt webbhotell"
-        },
-        {
-          "name": "admin-ui",
-          "d": "Webbgränssnittet för alla portaler"
-        }
-      ],
-      "devQuickstart": "OBX på 10 minuter",
-      "promptTitle": "Bygg det med din AI-assistent",
-      "promptP": "Kopiera en prompt till Claude, ChatGPT eller Cursor, fyll i delen inom hakparentes och låt assistenten skriva kod enligt specifikationen.",
-      "prompts": [
-        {
-          "h": "Exportera från ditt system",
-          "note": "För varumärken samt ERP- och PIM-leverantörer: products.csv och bildnamn."
-        },
-        {
-          "h": "Läs in OBX i din programvara",
-          "note": "För leverantörer av webbutiks-, PIM- och kassaprogramvara: ändringsflödet och bilderna."
-        }
       ],
       "scopeLabel": "Kategorier",
       "scopeNow": "Version 0.2: kläder, skor, väskor och resväskor",
@@ -1253,10 +1266,11 @@
         "Öppet och utan vinstsyfte: valfria partneravgifter täcker bara stiftelsens kostnader."
       ],
       "portalsExample": "Photopilot implementerar till exempel Open Brand Exchange och betjänar båda sidor: varumärken (portal, automatisering, ERP-integration, fotografering) och återförsäljare (mottagning och hantering av produktinnehåll).",
-      "ownershipNote": "I princip tillhör portalen varumärket: din egen portal och dina egna data, på din egen hosting, till exempel i EU hos Hetzner, eller hostad åt dig."
+      "ownershipNote": "Bildbanken tillhör varumärket: dina egna data, på din egen hosting i EU, eller driftad åt dig.",
+      "fairCta": "Hitta en partner"
     },
     "pages": {
-      "brandsH1": "Sätt upp det en gång. För alla återförsäljare samtidigt.",
+      "brandsH1": "Din bildbank, på den öppna standarden.",
       "retailersSoftware": "För ditt system",
       "hostingEditions": "De tre utgåvorna"
     }

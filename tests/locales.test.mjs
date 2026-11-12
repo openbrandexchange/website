@@ -98,7 +98,7 @@ for (const lang of langs) {
 
 test('brand- and retailer-facing copy avoids protocol terms', () => {
   // The developers page and the API labels may name the APIs; everything else speaks plain language.
-  const technical = /^(developers\.|site\.home\.(dev|prompt)|automation\.(api|apiSpec|apiSdk|apiMore)|meta\.developers\.)/;
+  const technical = /^(developers\.|automation\.(api|apiSpec|apiSdk|apiMore)|meta\.developers\.)/;
   const banned = /(?<![\w-])(node|nodes|ingest|tombstones?|cursor|grants?|GTIN|client credentials)(?![\w-])/i;
   for (const lang of langs) {
     for (const [path, value] of flatten(load(lang))) {

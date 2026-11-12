@@ -1,0 +1,34 @@
+---
+// The two ways for a brand to start, both with an image portal: the free OBX portal, or the
+// image portal the brand already has, once its vendor supports the standard.
+import Icon from './Icon.astro';
+import { messages, url, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+  /** Heading level of the title; the two ways sit one level below. */
+  level?: 2 | 3;
+}
+const { lang, level = 3 } = Astro.props;
+const c = messages[lang].brands;
+const Title = `h${level}` as 'h2' | 'h3';
+const Item = `h${level + 1}` as 'h3' | 'h4';
+const links = [url(lang, 'brands', '#start'), url(lang, 'partners')];
+---
+
+<div class="ways">
+  <Title id="ways" class="ways-title">{c.waysTitle}</Title>
+  <ul class="features ways-list">
+    {
+      c.ways.map((w, i) => (
+        <li>
+          <Item>{w.h}</Item>
+          <p>{w.p}</p>
+          <p class="ways-cta">
+            <a class="link-arrow" href={links[i]}>{w.cta} <Icon name="arrow" class="arrow" /></a>
+          </p>
+        </li>
+      ))
+    }
+  </ul>
+</div>

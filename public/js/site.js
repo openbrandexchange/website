@@ -14,6 +14,20 @@
       });
     }
 
+    // A link to something inside a closed <details> (the technical details on the hosting page)
+    // opens it, so the target is visible.
+    var openTarget = function () {
+      var id = decodeURIComponent(location.hash.slice(1));
+      var el = id && document.getElementById(id);
+      var box = el && el.closest('details');
+      if (box && !box.open) {
+        box.open = true;
+        el.scrollIntoView();
+      }
+    };
+    openTarget();
+    window.addEventListener('hashchange', openTarget);
+
     // Copy buttons on code and text blocks.
     var labels = document.body.dataset;
     var status = document.createElement('p');

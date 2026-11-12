@@ -169,62 +169,6 @@ export const conformance = `obx-conformance all --url http://localhost:8080 --se
 obx-conformance protocol --url https://brands.kestrel.example --client-id obxc_… --client-secret obxs_…
 obx-conformance mock                                              # a mock server that passes everything`;
 
-// Short samples for the marketing pages (highlighted by src/lib/highlight.ts). Shapes follow the
-// spec's fixtures (fixtures/examples/ChangesPage.live.json, fixtures/expected/asset-ai-generated.json).
-export const heroChanges = `{
-  "phase": "live",
-  "changes": [
-    { "seq": 1042, "op": "delete",
-      "type": "asset",
-      "external_id": "KO-1001_NVY_2" },
-    { "seq": 1043, "op": "upsert",
-      "type": "variant",
-      "external_id": "2000100101025",
-      "data": { "size": "M", … } }
-  ],
-  "has_more": false
-}`;
-
-export const assetChange = `{
-  "seq": 1051, "type": "asset", "op": "upsert",
-  "external_id": "KO-1003_RST_3",
-  "data": {
-    "role": "model",
-    "color_code": "RST",
-    "rights": {
-      "license": "retailer-use",
-      "channels": ["webshop", "marketplace", "social"],
-      "embargo_until": null
-    },
-    "provenance": { "ai_generated": true, "source": "generated" },
-    "renditions": {
-      "web":    { "width": 1200, "height": 1500 },
-      "square": { "width": 1500, "height": 1500 },
-      "thumb":  { "width": 480,  "height": 600 }
-    }
-  }
-}`;
-
-export const pushTerminal = `$ obx push ./export
-Publishing to brands.kestrel.example (Kestrel, Kestrel Trail)
-images: 27 checked, 3 uploaded (4.2 MB) in 3s
-Done: rows: 40, images: 27 → new: 2 · updated: 3 · unchanged: 35`;
-
-export const pushAction = `# .github/workflows/publish.yml
-on:
-  push:
-    paths: ["export/**"]
-jobs:
-  publish:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: openbrandexchange/obx-go/push-action@v0
-        with:
-          url: \${{ secrets.OBX_URL }}
-          token: \${{ secrets.OBX_TOKEN }}
-          folder: export`;
-
 export const discovery = `$ curl https://brands.kestrel.example/.well-known/obx`;
 export const discoveryResponse = `{
   "obx_version": "0.2",

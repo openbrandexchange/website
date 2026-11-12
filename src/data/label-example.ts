@@ -21,22 +21,3 @@ export const labelExample = {
     { size: 'L', gtin: '02000200101031' },
   ],
 } as const;
-
-/** The fields as a retailer's software receives them from GET /obx/v1/products/{id}, one line per
- * part, care code and size so the example stays short. */
-const line = (v: unknown) => JSON.stringify(v).replace(/,"/g, ', "').replace(/":/g, '": ').replace(/\{"/g, '{ "').replace(/\}/g, ' }').replace(/ \},\{/g, ' }, {');
-export const labelJson = [
-  '{',
-  `  "style_number": "${labelExample.styleNumber}",`,
-  '  "materials": [',
-  labelExample.materials.map((m) => `    ${line(m)}`).join(',\n'),
-  '  ],',
-  '  "care": [',
-  labelExample.care.map((code) => `    ${line({ code, text: null })}`).join(',\n'),
-  '  ],',
-  `  "country_of_origin": "${labelExample.countryOfOrigin}",`,
-  '  "variants": [',
-  labelExample.variants.map((v) => `    ${line({ size: v.size, gtin: v.gtin, color: { code: labelExample.colourCode } })}`).join(',\n'),
-  '  ]',
-  '}',
-].join('\n');

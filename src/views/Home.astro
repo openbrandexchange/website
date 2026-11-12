@@ -1,15 +1,13 @@
 ---
 import Screenshot from '../components/Screenshot.astro';
-import CodeWindow from '../components/CodeWindow.astro';
 import Flow from '../components/Flow.astro';
 import Editions from '../components/Editions.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Icon from '../components/Icon.astro';
-import { format, messages, repo, specDoc, url, type Lang } from '../i18n';
-import Code from '../components/Code.astro';
-import { prompts } from '../data/prompts';
+import Ways from '../components/Ways.astro';
+import { format, messages, url, type Lang } from '../i18n';
 import { orgVars, HELLO_EMAIL, SECURITY_EMAIL } from '../lib/org';
-import { assetChange, pushAction, pushTerminal, DEMO_URL } from '../data/snippets';
+import { DEMO_URL } from '../data/snippets';
 
 interface Props {
   lang: Lang;
@@ -18,13 +16,12 @@ const { lang } = Astro.props;
 const t = messages[lang];
 const h = t.site.home;
 const vars = { ...orgVars(lang), email: SECURITY_EMAIL, portal: t.portalWord };
-const pillarLinks = [url(lang, 'retailers'), '/reference/', url(lang, 'automation')];
-const devLinks = ['/reference/', repo('spec'), repo('obx-go'), '/errors/'];
+const pillarLinks = [url(lang, 'retailers'), url(lang, 'retailers', '#api'), url(lang, 'brands', '#start')];
 const faq = t.faq.items.slice(0, 4);
 // "Publish once. Every retailer gets it.": the second sentence in a softer tone, on its own line.
 const split = h.h1.search(/[.!?]\s/);
 const h1 = split > 0 ? [h.h1.slice(0, split + 1) + ' ', h.h1.slice(split + 2)] : [h.h1, ''];
-const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'developers')];
+const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'partners')];
 // The explainer video (public/video/, website/video/) is off the home page until a new version is
 // ready; the three-block diagram takes its place in the hero.
 ---
@@ -74,6 +71,7 @@ const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'devel
       <h2 id="flow-title">{h.flowTitle}</h2>
       <p class="lead">{h.flowLead}</p>
     </header>
+    <div data-reveal="2"><Ways lang={lang} /></div>
   </div>
 </section>
 
@@ -99,13 +97,8 @@ const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'devel
           </div>
           <div class="split-visual" data-reveal="2">
             {i === 0 && <Screenshot name="portal-ean" lang={lang} alt={t.site.shots.portalEan} sizes="(min-width: 1024px) 700px, calc(100vw - 32px)" />}
-            {i === 1 && <CodeWindow code={assetChange} lang="json" title="GET /obx/v1/changes" label="Asset" />}
-            {i === 2 && (
-              <div class="stack">
-                <CodeWindow code={pushTerminal} lang="shell" title="Terminal" />
-                <CodeWindow code={pushAction} lang="yaml" title="publish.yml" label="GitHub Action" />
-              </div>
-            )}
+            {i === 1 && <Screenshot name="portal-article" lang={lang} alt={t.site.shots.portalArticle} sizes="(min-width: 1024px) 700px, calc(100vw - 32px)" />}
+            {i === 2 && <Screenshot name="admin-catalog" lang={lang} alt={t.site.shots.adminCatalog} sizes="(min-width: 1024px) 700px, calc(100vw - 32px)" />}
           </div>
         </article>
       ))
@@ -152,6 +145,7 @@ const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'devel
     </div>
     <div class="split-visual">
       <ul class="checks">{h.fairItems.map((item) => <li>{item}</li>)}</ul>
+      <p class="actions"><a class="link-arrow" href={url(lang, 'hosting', '#providers')}>{h.fairCta} <Icon name="arrow" class="arrow" /></a></p>
     </div>
   </div>
 </section>
@@ -175,7 +169,7 @@ const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'devel
     </ul>
     <p class="small muted portals-example">{h.portalsExample}</p>
     <p class="actions">
-      <a class="button primary" href={url(lang, 'developers')}>{h.portalsCta} <Icon name="arrow" class="arrow" /></a>
+      <a class="button primary" href={url(lang, 'partners')}>{h.portalsCta} <Icon name="arrow" class="arrow" /></a>
     </p>
   </div>
 </section>
@@ -189,6 +183,9 @@ const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'devel
       <p>{h.ownershipNote}</p>
     </header>
     <div data-reveal="2"><Editions lang={lang} /></div>
+    <p class="actions">
+      <a class="button secondary" href={url(lang, 'hosting')}>{h.editionsLink} <Icon name="arrow" class="arrow" /></a>
+    </p>
   </div>
 </section>
 
@@ -215,65 +212,13 @@ const roleLinks = [url(lang, 'brands'), url(lang, 'retailers'), url(lang, 'devel
   </div>
 </section>
 
-<section class="band" aria-labelledby="dev-title">
-  <div class="wrap">
-    <div class="split">
-      <div class="split-copy" data-reveal>
-        <p class="eyebrow">{h.devEyebrow}</p>
-        <h2 id="dev-title">{h.devTitle}</h2>
-        <p>{h.devP}</p>
-        <ul class="link-list">
-          <li>
-            <a href={specDoc('docs/quickstart.md')}>{h.devQuickstart} <Icon name="arrow" class="arrow" /></a>
-          </li>
-          {
-            h.devLinks.map((label, i) => (
-              <li>
-                <a href={devLinks[i]}>
-                  {label} <Icon name="arrow" class="arrow" />
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div class="split-visual" data-reveal="2">
-        <ul class="repo-list">
-          {
-            h.devRepos.map((r) => (
-              <li>
-                <a href={repo(r.name)}>
-                  <span class="repo-name">openbrandexchange/{r.name}</span>
-                  <span class="repo-d">{r.d}</span>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-    </div>
-    <div class="prompts" data-reveal="2">
-      <h3 id="prompt-title">{h.promptTitle}</h3>
-      <p>{h.promptP}</p>
-      <div class="cards two">
-        {
-          h.prompts.map((pr, i) => (
-            <div class="prompt">
-              <Code code={prompts[i]} label={`${pr.h} · ${pr.note}`} lang="text" />
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="band band-alt" aria-labelledby="faq-title">
   <div class="wrap split">
     <header class="split-copy" data-reveal>
       <p class="eyebrow">{t.nav.faq}</p>
       <h2 id="faq-title">{h.faqTitle}</h2>
-      <a class="link-arrow" href={url(lang, 'faq')}>{h.faqLink} <Icon name="arrow" class="arrow" /></a>
+      <p><a class="link-arrow" href={url(lang, 'faq')}>{h.faqLink} <Icon name="arrow" class="arrow" /></a></p>
+      <p class="small"><a class="link-arrow" href={url(lang, 'developers')}>{t.nav.developers} <Icon name="arrow" class="arrow" /></a></p>
     </header>
     <div class="split-visual faq-list" data-reveal="2">
       {

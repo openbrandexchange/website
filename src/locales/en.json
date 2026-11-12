@@ -28,7 +28,7 @@
     "automation": "Automation",
     "hosting": "Hosting",
     "retailers": "For retailers",
-    "developers": "Developers",
+    "developers": "For developers",
     "directory": "Directory",
     "downloads": "Downloads",
     "faq": "FAQ",
@@ -45,22 +45,22 @@
     },
     "brands": {
       "title": "For brands",
-      "description": "A branded portal for retailers, a standard API, and automatic publishing from your PIM, ERP or folders. Free to self-host, or available through a provider."
+      "description": "Your image portal, on the open standard: retailers search and download your images and product data, and their software receives everything automatically. Free to host yourself, or through a partner."
     },
     "automation": {
       "title": "Automation",
-      "description": "Publish automatically: scheduled imports, the obx tool, cron, GitHub Actions, n8n, Make, Zapier or curl. Recipes to copy and paste."
+      "description": "Keep working the way you do now: your image portal picks up data and images from your PIM, ERP, DAM or a shared folder automatically. With recipes for the person who sets it up."
     },
     "hosting": {
       "title": "Hosting",
-      "description": "From simplest to hands-on: a provider, one click on Cloudflare, Google Cloud Run or ordinary web hosting, or Docker."
+      "description": "Your image portal wherever you like: hosted by a partner, on your own server in Europe, on ordinary web hosting or on another cloud."
     },
     "retailers": {
       "title": "For retailers",
-      "description": "What a brand portal offers, API access for your own software, and a ready-made email for brands that do not participate yet."
+      "description": "Complete product content from every participating brand, free of charge: in the brand's portal in your browser, or automatically in your webshop, PIM or POS software."
     },
     "developers": {
-      "title": "Developers",
+      "title": "For developers",
       "description": "The specification, the three APIs, the SDK and command-line tool, the conformance suite and the implementations."
     },
     "directory": {
@@ -98,25 +98,25 @@
   },
   "home": {
     "eyebrow": "An open standard for brands",
-    "h1": "One place and one API for all your retailers",
-    "lead": "Open Brand Exchange is a free, open way to deliver your final product images and article data to your retailers. Your retailers get a portal with you, their software gets a standard API, and you publish automatically from your own systems.",
+    "h1": "Your image portal, on the open standard",
+    "lead": "Open Brand Exchange gives your retailers an image portal with your name on it, where they search and download images and article data. Because it is built on the open standard, their software can also receive everything automatically.",
     "ctaBrands": "How it works for brands",
     "ctaRetailers": "I am a retailer",
     "howTitle": "How it works",
     "steps": [
       {
-        "h": "Set up your portal",
-        "p": "Have a provider run it, or host it yourself for free with one click or one command.",
+        "h": "Set up your image portal",
+        "p": "Use the free image portal, hosted by a partner or by yourself. Already have an image portal? Ask your vendor about support.",
         "link": "Hosting options"
       },
       {
-        "h": "Publish automatically",
-        "p": "One CSV file and photos with a fixed name. Your PIM, ERP or a plain folder delivers them every night, with no manual work.",
-        "link": "Automation"
+        "h": "Add your products",
+        "p": "Fill in the Excel template, or let your PIM, ERP or a shared folder deliver every night, with no manual work.",
+        "link": "The Excel template"
       },
       {
         "h": "Your retailers take it from there",
-        "p": "Retailers log in, paste their EAN list and download. Their software fetches the same content through the standard API.",
+        "p": "Retailers log in, paste their EAN list and download. Their software receives the same content automatically.",
         "link": "For retailers"
       }
     ],
@@ -155,11 +155,11 @@
   },
   "brands": {
     "h1": "For brands",
-    "lead": "Retailers need your images and article data, linked to their own articles. With Open Brand Exchange you set this up once, for all retailers at the same time.",
+    "lead": "Your retailers search your image portal and download images and product data, with access per retailer. Because it is built on the open standard, their software can also receive everything automatically.",
     "blocks": [
       {
-        "h": "A portal for your retailers",
-        "p": "Your portal carries your name and branding: \"Kestrel · {portal}\", optionally on your own domain. Retailers request access. You approve or reject each request.",
+        "h": "An image portal with your name on it",
+        "p": "Your image portal carries your name: “Kestrel · {portal}”, on your own domain if you like. Retailers request access, and you decide per retailer.",
         "items": [
           "Search and filter by brand, season, collection and product type",
           "Paste a list of EANs and see what is available and what is missing",
@@ -169,31 +169,31 @@
         ]
       },
       {
-        "h": "A standard API for their software",
-        "p": "Retailers who use software receive an API key. Their POS, PIM or shop software retrieves the full set once, then only the changes.",
+        "h": "Straight into their webshop",
+        "p": "Retailers can let their webshop, PIM or POS software receive your products automatically. For that they request an API key in your image portal: a personal password for their software.",
         "items": [
-          "Lookup by EAN, so images are linked to the correct article and size",
-          "Changes are delivered automatically, including withdrawals",
-          "Usage rights, embargo and AI provenance are included with every image",
-          "One implementation works with every brand that uses Open Brand Exchange"
+          "Matched to the right article and size by EAN",
+          "Changes arrive by themselves, including items you withdraw",
+          "Usage rights, embargo date and whether AI was used, with every image",
+          "Software that supports the standard works with every brand"
         ]
       },
       {
         "h": "Automatic upload",
-        "p": "Your portal retrieves your export automatically, or your own systems deliver it.",
+        "p": "Your image portal collects your products by itself, for example every night. New collections go online sooner, without manual work.",
         "items": [
-          "Scheduled import from a web address, SFTP server or S3 bucket, no code",
-          "A folder that is published automatically with the obx tool",
-          "Recipes for cron, GitHub Actions, n8n, Make and Zapier",
-          "One CSV format and one naming rule for photos: KO-1001_NVY_1.jpg"
+          "Every night from the export of your PIM or ERP, without extra software",
+          "Or from a shared folder: whatever is saved there is published",
+          "Only what changed is sent, so updates are quick",
+          "One clear layout for the data and one naming rule for photos, such as KO-1001_NVY_1.jpg"
         ]
       },
       {
         "h": "You remain the owner",
-        "p": "Open Brand Exchange is a standard, not a platform. You run your own portal, or a provider runs it for you.",
+        "p": "Open Brand Exchange is a standard, not a platform. You run your own image portal, or a partner runs it for you.",
         "items": [
           "Hosting it yourself is free: the software is open source",
-          "Or outsource it to a provider, and switch providers at any time",
+          "Or leave it to a partner, and switch partners at any time",
           "See who downloads what, per retailer",
           "You decide who gets access, to which brands, and whether originals are allowed"
         ]
@@ -215,11 +215,11 @@
       },
       {
         "k": "API keys",
-        "v": "keys for your retailers' software: shown once, can be renewed or revoked at any time"
+        "v": "personal passwords for your retailers' software: shown once, renewable or revocable at any time"
       },
       {
         "k": "Automatic upload",
-        "v": "keys for your own systems, and notifications when a retailer requests access or an import finishes"
+        "v": "your export collected on a schedule, and a message when a retailer requests access or an import finishes"
       },
       {
         "k": "Statistics",
@@ -232,7 +232,6 @@
     ],
     "nextTitle": "Next step",
     "nextHosting": "Choose how to host it",
-    "nextAutomation": "See the automation recipes",
     "labelNote": "When something the law requires on the label is missing, such as the fibre composition or the materials of a shoe, Open Brand Exchange warns you at upload. A warning never blocks publishing.",
     "bagsNote": "Luggage and bags now carry measurements (H × W × D, weight, volume) and features (wheels, lock, detachable strap …), measured the same way by every brand.",
     "startEyebrow": "Start here",
@@ -248,21 +247,35 @@
       },
       {
         "h": "Upload or automate",
-        "p": "Save as CSV UTF-8 and upload it in your portal with the photos, or let the portal fetch your export every night."
+        "p": "Save it in Excel as “CSV UTF-8” and upload it with the photos in your image portal. Or let your image portal collect your export every night."
       },
       {
         "h": "Published",
-        "p": "Your retailers find everything in your portal. Their software receives every change automatically. Free of charge."
+        "p": "Your retailers find everything in your image portal, and their software receives every change automatically. Free of charge."
       }
     ],
     "startTemplate": "Download the Excel template",
     "partnersTitle": "Or work with a partner",
     "partnersP": "A provider can take over the entire process. Photopilot, for example, offers a free portal with the OBX connection, full automation of the process and a custom integration with your ERP.",
-    "partnersCta": "See the providers"
+    "partnersCta": "See the providers",
+    "waysTitle": "Two ways to start, both with an image portal",
+    "ways": [
+      {
+        "h": "No image portal yet?",
+        "p": "Use the free Open Brand Exchange image portal, next to your current systems.",
+        "cta": "Get started with your Excel template"
+      },
+      {
+        "h": "Already have an image portal?",
+        "p": "Ask your vendor about support for Open Brand Exchange. Your image portal stays, and works with the standard.",
+        "cta": "What your vendor needs to know"
+      }
+    ],
+    "nextTemplate": "Get started with your Excel template"
   },
   "automation": {
     "h1": "Automation",
-    "lead": "Your PIM, ERP, DAM or a shared folder already has the data and the photos. Pick the first recipe that fits: they work with every Open Brand Exchange portal.",
+    "lead": "Your PIM, ERP, DAM or shared folder stays the source. Your image portal picks up the data and images automatically, for example every night, and makes them available to all your retailers.",
     "chooseTitle": "Which recipe fits you?",
     "head": [
       "You have…",
@@ -352,11 +365,19 @@
     "apiMore": "Every detail is in the specification:",
     "apiSpec": "Ingest API",
     "apiAuto": "automation recipes",
-    "apiSdk": "Go SDK"
+    "apiSdk": "Go SDK",
+    "heroTitle": "Automate. Keep working the way you do now.",
+    "heroChecks": [
+      "No new system to maintain",
+      "Choose how: a folder, an Excel file, or an automatic link"
+    ],
+    "flowLabel": "From your systems to your retailers",
+    "techEyebrow": "For the person who sets it up",
+    "techIntro": "The recipes below are for the person who manages your systems. Prefer not to set anything up? Start with the Excel template, or ask a partner."
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "One portal is one brand company on one server. You choose how to run it, from fully outsourced to fully yourself. Below, from simplest to most hands-on.",
+    "lead": "Each brand has its own image portal, on its own server. You choose how to run it, from fully outsourced to fully yourself.",
     "p1Title": "3. A partner hosts it for you",
     "p1P": "Rather not host it yourself? Partners can host and maintain the portal for you.",
     "fieldBased": "Based in",
@@ -387,8 +408,8 @@
       "Add the cron address the installer shows as a cron job in your hosting control panel, every 5 minutes. Without it the portal still works."
     ],
     "phpDownload": "Download the latest release",
-    "p3Title": "3. Docker",
-    "p3P": "On your own server or on any cloud that runs containers. One command:",
+    "p3Title": "3. Your own server",
+    "p3P": "On your own server or with any cloud provider. It starts with one command:",
     "composeP": "Or with HTTPS included, through Caddy:",
     "envTitle": "Settings",
     "envPublicUrl": "the public address of your portal",
@@ -407,7 +428,7 @@
     "compareTitle": "Three editions, one portal",
     "compareP": "The three editions do the same thing and have the same admin and retailer portal. Choose what fits your hosting; you can switch later.",
     "compareLink": "See the implementations",
-    "heroTitle": "Your portal, wherever you like.",
+    "heroTitle": "Your image portal, wherever you like.",
     "heroLead": "The software is free. You choose where it runs, and you can move at any time.",
     "heroChecks": [
       "Free software, you only pay for hosting",
@@ -415,9 +436,9 @@
       "The same portal everywhere, so you can always switch",
       "Prefer not to do it yourself? A partner hosts it for you"
     ],
-    "euCta": "Your portal in Europe",
+    "euCta": "Your image portal in Europe",
     "euTitle": "1. Your own server in Europe (recommended)",
-    "euP": "A small server at a European provider is enough for most brands. The guide below uses Hetzner, with data centres in Germany and Finland. Any server that runs Docker works the same way.",
+    "euP": "A small server at a European provider is enough for most brands. Our guide uses Hetzner, with data centres in Germany and Finland.",
     "euSteps": [
       "Create a server at Hetzner in Nuremberg, Falkenstein or Helsinki, with backups switched on.",
       "Point your domain, for example images.yourbrand.com, at the server.",
@@ -432,11 +453,13 @@
     "webP": "The PHP edition runs on ordinary European web hosting with PHP and a database, for example at TransIP, Strato or OVHcloud. No commands needed:",
     "altTitle": "4. Other clouds",
     "altP": "The same portal also runs on Cloudflare Workers and on Google Cloud Run. Choose a region in Europe where the service offers one.",
-    "partnerLink": "See partners"
+    "partnerLink": "See partners",
+    "techTitle": "Technical details for your IT team",
+    "techLead": "Commands, settings and installation guides for the person who sets up the server."
   },
   "retailers": {
     "h1": "For retailers",
-    "lead": "Brands that use Open Brand Exchange deliver their images and article data in one consistent format. You only need to receive them, free of charge: in each brand's portal in your browser, or through one API directly in your software.",
+    "lead": "Brands that use Open Brand Exchange deliver their images and article data in one consistent way. You receive them free of charge: in the brand's portal, or automatically in your own software.",
     "portalTitle": "What a brand portal offers",
     "portalP": "Every brand runs its own portal, with its own name on it: for example \"Kestrel · {portal}\".",
     "portal": [
@@ -466,11 +489,11 @@
       }
     ],
     "apiTitle": "An API key for your software",
-    "apiP": "Does your PIM, POS or shop software retrieve images automatically? Then request an API key for it. The software first retrieves the full set, then only the changes, including withdrawals by the brand. Images are matched to your articles by EAN.",
-    "apiDev": "For your developer: an example.",
+    "apiP": "Your webshop, PIM or POS software can fetch everything automatically, matched to your articles by EAN. Request an API key for it in the brand's portal: a personal password for your software.",
+    "apiDev": "Information for your developer",
     "toolsTitle": "Which software works with it",
-    "toolsP": "Open Brand Exchange is an open standard that any software can support. Photopilot is building it into its software for retailers. Other vendors can do the same. No specific software is required: a browser is sufficient.",
-    "toolsLink": "Specification for developers",
+    "toolsP": "Any software can support the open standard; Photopilot is building it into its software for retailers. No specific software is required: a browser is enough.",
+    "toolsLink": "Information for software vendors",
     "findTitle": "Finding a brand",
     "findP": "Brands that choose to be listed appear in the directory. A brand can also give you the address of its portal directly.",
     "findLink": "Go to the directory",
@@ -482,7 +505,7 @@
     "label": {
       "eyebrow": "Article data",
       "title": "Care label information is included with every article.",
-      "p": "Composition per part, care instructions in label order and the country of origin are part of every article, next to the EAN of each size. Your shop can display them as text or as care symbols in its own style. The fields follow the EU textile labelling rules and the ISO 3758 care codes, so they can also feed a digital product passport later.",
+      "p": "Composition per part, care instructions in label order and the country of origin come with every article, next to the EAN of each size. Your webshop shows them as text or as care symbols, following the EU labelling rules and the ISO 3758 care codes.",
       "points": [
         "Composition per part (outer, lining, filling, sole) with percentages",
         "Care instructions as standard codes, in the order of the label",
@@ -498,7 +521,6 @@
       "origin": "Made in",
       "sizes": "Sizes and EAN",
       "size": "Size",
-      "codeLabel": "The same article in the API",
       "fibres": {
         "recycled_polyester": "recycled polyester",
         "polyamide": "polyamide",
@@ -569,8 +591,9 @@
     "howTitle": "How you receive it",
     "how": [
       "In your browser: search the brand's portal, paste a list of EANs and download images and article data.",
-      "Automatically: your webshop, PIM or POS software fetches everything through one API, the same for every brand."
-    ]
+      "Automatically: your webshop, PIM or POS software fetches everything by itself, the same way for every brand."
+    ],
+    "benefitsCta": "Find a brand in the directory"
   },
   "switchKit": {
     "subject": "Your product images and article data through Open Brand Exchange?",
@@ -637,7 +660,48 @@
     ],
     "contribute": "Contributions go through pull requests on the spec repository.",
     "governanceLink": "How decisions are made",
-    "quickstart": "Quickstart: OBX in 10 minutes"
+    "quickstart": "Quickstart: OBX in 10 minutes",
+    "repos": [
+      {
+        "name": "spec",
+        "d": "The specification, schemas and test data"
+      },
+      {
+        "name": "obx-go",
+        "d": "Go SDK, the obx tool and the conformance test"
+      },
+      {
+        "name": "node-ts",
+        "d": "Portal for Cloudflare Workers"
+      },
+      {
+        "name": "node-go",
+        "d": "Portal for Docker and Google Cloud Run"
+      },
+      {
+        "name": "node-php",
+        "d": "Portal for ordinary web hosting"
+      },
+      {
+        "name": "admin-ui",
+        "d": "The web interface of every portal"
+      }
+    ],
+    "promptTitle": "Build it with your AI assistant",
+    "promptP": "Copy a prompt into Claude, ChatGPT or Cursor, complete the part in brackets, and have the assistant write code against the specification.",
+    "prompts": [
+      {
+        "h": "Export from your system",
+        "note": "For brands, ERP and PIM vendors: products.csv and image names."
+      },
+      {
+        "h": "Read OBX in your software",
+        "note": "For webshop, PIM and POS vendors: the change feed and images."
+      }
+    ],
+    "title": "Open source, on GitHub.",
+    "reposTitle": "Repositories",
+    "reposP": "Everything is open source on GitHub: the specification, the shared code and the three portal editions."
   },
   "directory": {
     "h1": "Directory",
@@ -702,7 +766,7 @@
       },
       {
         "q": "Do we need a developer?",
-        "a": "Not for the basics. You can install a portal with one click, and a scheduled import from a web address, SFTP server or bucket needs no code. A developer helps if you want to connect your PIM or ERP directly."
+        "a": "Not for the basics: start with the Excel template, and your image portal can collect your export every night without code. A developer only helps if you want to connect your PIM or ERP directly."
       },
       {
         "q": "Is this another platform we have to join?",
@@ -730,7 +794,7 @@
       },
       {
         "q": "Is it ready?",
-        "a": "Yes, version 0.2: the specification, the three portals, the obx command and the conformance check are released and free to use. It is early days: the first brands are joining now."
+        "a": "Yes, version 0.2: the specification, the three portal editions and the tools are released and free to use. It is early days: the first brands are joining now."
       },
       {
         "q": "Who is behind it?",
@@ -856,15 +920,15 @@
     "brandsFlow": [
       {
         "h": "Your systems",
-        "p": "PIM, ERP or a folder"
+        "p": "PIM, ERP, DAM or a folder"
       },
       {
-        "h": "Your portal",
-        "p": "your name, your domain"
+        "h": "Your image portal",
+        "p": "on the open standard, with your name"
       },
       {
         "h": "Your retailers",
-        "p": "in the browser and through the API"
+        "p": "in the browser and in their own software"
       }
     ],
     "retailersH1": "Every brand's images and article data, in one consistent way",
@@ -879,7 +943,7 @@
       },
       {
         "h": "Your store",
-        "p": "download or API, matched by EAN"
+        "p": "download or automatic, matched by EAN"
       }
     ],
     "statusTitle": "What is ready, and what is coming",
@@ -889,8 +953,8 @@
     "comingBadge": "Coming",
     "brandsReady": [
       "Your own portal with an admin, in 25 languages, on your own domain",
-      "Import a CSV and photos by hand, or on a schedule from a web address, SFTP or S3",
-      "The obx tool and recipes for cron, GitHub Actions, n8n, Make and Zapier",
+      "Upload your Excel export and photos by hand, or have them collected every night",
+      "Automatic delivery from your PIM, ERP or a shared folder",
       "Access requests, invitations and API keys for your retailers' software",
       "Three editions: Cloudflare, Google Cloud & Docker, and ordinary web hosting"
     ],
@@ -903,7 +967,7 @@
       "Request access and sign in to a brand's portal",
       "Search, filter and paste your EAN list to see what is there and what is missing",
       "Download photos as a zip and article data as a spreadsheet",
-      "An API key for your software: everything once, then only the changes",
+      "An API key for your software, so it receives new and changed products by itself",
       "Usage rights, embargo and AI provenance with every image"
     ],
     "retailersComing": [
@@ -920,7 +984,6 @@
   "site": {
     "nav": {
       "start": "Start as a brand",
-      "docs": "Documentation",
       "preview": "Version 0.2"
     },
     "footer": {
@@ -941,8 +1004,7 @@
       "portalArticle": "An article in the brand portal: images per colour, the download choice between original, web and square, and the EAN of every size.",
       "adminOverview": "The overview of the brand admin: first steps, catalog counts, access requests and recent downloads by retailers.",
       "adminCatalog": "The catalog in the brand admin: eight published articles with their sizes and images.",
-      "adminStats": "Statistics in the brand admin: downloads, images and the most active retailers over 30 days.",
-      "adminAutomation": "Automatic upload in the brand admin: ready-made recipes for the obx tool, cron, GitHub Actions and more."
+      "adminStats": "Statistics in the brand admin: downloads, images and the most active retailers over 30 days."
     },
     "home": {
       "eyebrow": "Open standard · Free software",
@@ -953,7 +1015,7 @@
       "proof": [
         {
           "v": "Open",
-          "l": "standard, CC-BY-4.0"
+          "l": "standard, free for anyone"
         },
         {
           "v": "3",
@@ -961,7 +1023,7 @@
         },
         {
           "v": "1",
-          "l": "API for every brand"
+          "l": "format for every brand"
         },
         {
           "v": "25",
@@ -972,12 +1034,11 @@
           "l": "licence fee"
         }
       ],
-      "codeCaption": "What a retailer's software receives",
       "videoTitle": "See how it works",
       "videoNote": "Captioned, so it can be followed without sound.",
       "flowEyebrow": "How it works",
       "flowTitle": "When every party structures data the same way, every party benefits.",
-      "flowLead": "At almost every retailer, someone copies spreadsheets and retypes product data for each brand, under time pressure with every new collection. A shared standard removes that work. It is implemented once and benefits every party for years. Time for better work.",
+      "flowLead": "At many retailers, someone retypes product data for every brand, under time pressure with each new collection. A shared standard removes that work, for every party, for years.",
       "flowCaption": "What a brand puts in, the open standard in the middle, and what retailers get out.",
       "flow": {
         "inTitle": "In",
@@ -1004,9 +1065,9 @@
       },
       "pillars": [
         {
-          "eyebrow": "Portal",
-          "h": "A portal for your retailers' buyers.",
-          "p": "Buyers log in to your portal, paste the EANs from their order and download exactly what they need: one photo, one article or a zip of a whole selection.",
+          "eyebrow": "Image portal",
+          "h": "Your image portal, for your retailers' buyers.",
+          "p": "Buyers log in to your image portal, paste the EANs from their order and download exactly what they need: one photo, one article or a zip of a whole selection.",
           "items": [
             "Search and filter by brand, season, product type and colour",
             "Paste an EAN list to see what is available and what is missing",
@@ -1016,33 +1077,33 @@
           "link": "View it from the retailer's side"
         },
         {
-          "eyebrow": "API",
-          "h": "One API, the same for every brand.",
-          "p": "Retailers' software retrieves the full set once, then only the changes, including withdrawals. Every image includes its usage rights, embargo date and AI provenance.",
+          "eyebrow": "Their software",
+          "h": "Straight into the retailer's webshop.",
+          "p": "A retailer's webshop, PIM or POS software can receive your products automatically, including items you withdraw. Every image carries its usage rights and embargo date.",
           "items": [
-            "A full copy first, then only the changes",
-            "Lookup by EAN, matched to the right article and size",
-            "Web, square and thumbnail versions; originals when you allow them",
-            "A software vendor implements it once, and it works with every brand"
+            "New and changed products arrive by themselves",
+            "Matched to the right article and size by EAN",
+            "Images in web, square and thumbnail sizes; originals when you allow them",
+            "Software that supports the standard works with every brand"
           ],
-          "link": "Read the API reference"
+          "link": "How retailers receive it"
         },
         {
           "eyebrow": "Your systems",
           "h": "Your current way of working stays in place.",
-          "p": "The standard defines how retailers retrieve content. How your content enters the portal is your choice: a nightly import from a web address, SFTP or S3, an export folder, or the obx command-line tool.",
+          "p": "Start with the Excel template, or let your own systems deliver. Your image portal can collect your export every night, so new collections go online without manual work.",
           "items": [
-            "Nightly import from a web address, SFTP or S3, no code needed",
-            "The obx tool for Windows, macOS and Linux sends only what changed",
-            "Recipes for cron, GitHub Actions, n8n, Make and Zapier",
-            "One CSV layout and one naming rule for photos"
+            "Start with the Excel template, no software needed",
+            "Your PIM, ERP or a shared folder can deliver every night",
+            "Only what changed is sent, so updates are quick",
+            "One clear layout for the data and one naming rule for photos"
           ],
-          "link": "See the automation recipes"
+          "link": "Get started with your Excel template"
         }
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Run it where you want. Pay only for hosting.",
-      "editionsLead": "Three editions of the same portal. They speak the same API, so you can move from one to another.",
+      "editionsLead": "Three editions of the same image portal. They work the same way, so you can move from one to another at any time.",
       "editionsLink": "Compare the hosting options",
       "editionFields": [
         "Runs on",
@@ -1054,7 +1115,7 @@
         {
           "tag": "Recommended",
           "name": "Your own server in Europe",
-          "runs": "A server at a European provider such as Hetzner (Germany), with Docker",
+          "runs": "A server at a European provider such as Hetzner (Germany)",
           "need": "A server and a domain name",
           "setup": "One command, then the setup wizard",
           "cost": "The server you rent",
@@ -1094,15 +1155,15 @@
       "trust": [
         {
           "h": "Open specification",
-          "p": "Version 0.2, under CC-BY-4.0. Anyone may implement it, including for commercial use."
+          "p": "Version 0.2. An open specification that anyone may use, including commercially."
         },
         {
           "h": "Your data stays yours",
           "p": "A brand can export all its data and images at any time, move to another provider or host it itself."
         },
         {
-          "h": "Open-source licences",
-          "p": "The SDK, the obx tool and the web interface are Apache-2.0. The three portal editions are AGPL-3.0, so improvements stay open."
+          "h": "Open-source software",
+          "p": "Anyone can use the software, inspect it and improve it. Improvements to the portals stay open for everyone."
         },
         {
           "h": "A foundation in formation",
@@ -1118,19 +1179,10 @@
         }
       ],
       "trustLink": "Read how it is governed",
-      "devEyebrow": "For developers",
-      "devTitle": "Open source, on GitHub.",
-      "devP": "OpenAPI 3.1, JSON Schemas, a fictional test brand and ready-made software. Any HTTP client works.",
-      "devLinks": [
-        "API reference",
-        "Specification on GitHub",
-        "Go SDK and obx tool",
-        "Error codes"
-      ],
       "faqTitle": "Questions brands ask first",
       "faqLink": "All questions",
-      "closingTitle": "Let retailers retrieve your content directly.",
-      "closingP": "Set up your own portal. Or tell us about your systems and retailers, and contribute to the first release.",
+      "closingTitle": "Your image portal, on the open standard.",
+      "closingP": "Start with the free image portal and your Excel file. Or tell us about your systems and retailers, and help shape the first release.",
       "closingMail": "Email us",
       "rolesEyebrow": "Who does what",
       "rolesTitle": "Brands publish. Retailers receive. Software connects.",
@@ -1138,7 +1190,7 @@
       "roles": [
         {
           "h": "Brands",
-          "p": "Publish once, for every retailer.",
+          "p": "Your image portal, on the open standard.",
           "items": [
             "Free software, or a provider that handles the full process",
             "Start from your own Excel file or system",
@@ -1167,8 +1219,8 @@
           "items": [
             "Brand portals, B2B and image portals, DAMs",
             "ERP, PIM, webshop and POS software",
-            "One open API, free to use",
-            "A full copy first, then only the changes",
+            "One open standard, free to use",
+            "New and changed products arrive automatically",
             "Free label “Compatible with Open Brand Exchange”"
           ],
           "cta": "Connect your system"
@@ -1176,11 +1228,11 @@
       ],
       "portalsEyebrow": "Open to every portal",
       "portalsTitle": "Existing portals can connect to the standard.",
-      "portalsLead": "Every party can connect: brands, retailers, portals, and ERP, PIM and DAM software. Any system that speaks the standard works with every other system that does too.",
+      "portalsLead": "Brands, retailers, portals, and ERP, PIM and DAM software can all connect. Every system that supports the standard works with every other one.",
       "portalTypes": [
         {
           "h": "Brand and B2B portals",
-          "p": "Add the OBX API alongside your existing services, so your brands reach every retailer system."
+          "p": "Offer the standard next to your existing services, so your brands reach every retailer's systems."
         },
         {
           "h": "Image portals and DAMs",
@@ -1191,52 +1243,13 @@
           "p": "Publish fibre composition, care, sizes and EANs straight from the system that holds them."
         }
       ],
-      "portalsCta": "How to connect",
+      "portalsCta": "How to take part",
       "heroChecks": [
         "Open and non-profit, free to use",
         "All your retailers at once",
         "Start from your own Excel or system",
         "Images with usage rights",
         "Your data stays yours"
-      ],
-      "devRepos": [
-        {
-          "name": "spec",
-          "d": "The specification, schemas and test data"
-        },
-        {
-          "name": "obx-go",
-          "d": "Go SDK, the obx tool and the conformance test"
-        },
-        {
-          "name": "node-ts",
-          "d": "Portal for Cloudflare Workers"
-        },
-        {
-          "name": "node-go",
-          "d": "Portal for Docker and Google Cloud Run"
-        },
-        {
-          "name": "node-php",
-          "d": "Portal for ordinary web hosting"
-        },
-        {
-          "name": "admin-ui",
-          "d": "The web interface of every portal"
-        }
-      ],
-      "devQuickstart": "OBX in 10 minutes",
-      "promptTitle": "Build it with your AI assistant",
-      "promptP": "Copy a prompt into Claude, ChatGPT or Cursor, complete the part in brackets, and have the assistant write code against the specification.",
-      "prompts": [
-        {
-          "h": "Export from your system",
-          "note": "For brands, ERP and PIM vendors: products.csv and image names."
-        },
-        {
-          "h": "Read OBX in your software",
-          "note": "For webshop, PIM and POS vendors: the change feed and images."
-        }
       ],
       "scopeLabel": "Categories",
       "scopeNow": "Version 0.2: fashion, shoes, bags and luggage",
@@ -1253,10 +1266,11 @@
         "Open and non-profit: optional partner fees only cover the foundation's costs."
       ],
       "portalsExample": "For example, Photopilot implements Open Brand Exchange and serves both sides: brands (portal, automation, ERP integration, photography) and retailers (receiving and processing product content).",
-      "ownershipNote": "In principle the portal belongs to the brand: your own portal and your own data, on your own hosting, for example in the EU at Hetzner, or hosted for you."
+      "ownershipNote": "The image portal belongs to the brand: your own data, on your own hosting in the EU, or hosted for you.",
+      "fairCta": "Find a partner"
     },
     "pages": {
-      "brandsH1": "Set it up once. For every retailer at the same time.",
+      "brandsH1": "Your image portal, on the open standard.",
       "retailersSoftware": "For your software",
       "hostingEditions": "The three editions"
     }

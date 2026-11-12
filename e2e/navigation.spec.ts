@@ -154,3 +154,31 @@ test('the home hero shows how it works in three blocks, and no video while it is
     await expect(page.locator('.home-hero video')).toHaveCount(0);
   }
 });
+
+test('brand and retailer pages show no technical material; it lives under For developers', async ({ page, isMobile }) => {
+  const technical = /github|curl|openapi|webhook|docker|obx tool|obx-tool|conformance|json|\bGET \//i;
+  for (const path of ['/en/', '/en/for-brands/', '/en/for-retailers/', '/nl/', '/nl/for-brands/', '/nl/for-retailers/']) {
+    await page.goto(path);
+    const text = await page.locator('main').innerText();
+    expect(text.match(technical)?.[0], path).toBeUndefined();
+    expect(await page.locator('main a[href*="github.com"]').count(), `${path}: GitHub links`).toBe(0);
+  }
+  await page.goto('/en/');
+  if (isMobile) await page.getByRole('button', { name: 'Menu' }).click();
+  const nav = page.getByRole('navigation', { name: 'Main menu' });
+  await expect(nav.getByRole('link', { name: 'For developers' })).toBeVisible();
+  await expect(nav.getByRole('link', { name: 'Automation' })).toHaveCount(0);
+  await page.goto('/en/developers/');
+  await expect(page.locator('#prompts ~ * pre, .prompt pre').first()).toBeAttached();
+  await expect(page.locator('.repo-list a[href*="github.com/openbrandexchange/spec"]')).toHaveCount(1);
+});
+
+test('the hosting page keeps the commands in a collapsed section for the IT team, opened by a link', async ({ page }) => {
+  await page.goto('/en/hosting/');
+  const details = page.locator('details#technical');
+  await expect(details).not.toHaveAttribute('open', '');
+  await expect(page.locator('section[aria-labelledby="docker"] pre').first()).toBeHidden();
+  await page.locator('a[href="#technical"]').first().click();
+  await expect(details).toHaveAttribute('open', '');
+  await expect(page.locator('section[aria-labelledby="docker"] pre').first()).toBeVisible();
+});

@@ -28,7 +28,7 @@
     "automation": "Automatización",
     "hosting": "Alojamiento",
     "retailers": "Para distribuidores",
-    "developers": "Desarrolladores",
+    "developers": "Para desarrolladores",
     "directory": "Directorio",
     "downloads": "Descargas",
     "faq": "Preguntas frecuentes",
@@ -45,22 +45,22 @@
     },
     "brands": {
       "title": "Para marcas",
-      "description": "Un portal con tu marca para distribuidores, una API estándar y publicación automática desde tu PIM, ERP o carpetas. Gratuito si lo alojas tú mismo, o disponible a través de un proveedor."
+      "description": "Tu portal para distribuidores, con el estándar abierto: los distribuidores buscan y descargan tus imágenes y datos de producto, y su software lo recibe todo automáticamente. Gratis si lo alojas tú, o a través de un socio."
     },
     "automation": {
       "title": "Automatización",
-      "description": "Publica automáticamente: importaciones programadas, la herramienta obx, cron, GitHub Actions, n8n, Make, Zapier o curl. Recetas para copiar y pegar."
+      "description": "Sigue trabajando como hasta ahora: tu portal para distribuidores recoge automáticamente los datos y las imágenes de tu PIM, ERP, DAM o de una carpeta compartida. Con recetas para la persona que lo configura."
     },
     "hosting": {
       "title": "Alojamiento",
-      "description": "De lo más sencillo a lo más técnico: un proveedor, un clic en Cloudflare, Google Cloud Run o alojamiento web normal, o Docker."
+      "description": "Tu portal para distribuidores donde quieras: alojado por un socio, en tu propio servidor en Europa, en un alojamiento web normal o en otra nube."
     },
     "retailers": {
       "title": "Para distribuidores",
-      "description": "Qué ofrece el portal de una marca, acceso API para tu propio software y un correo listo para las marcas que aún no participan."
+      "description": "Contenido de producto completo de cada marca participante, sin coste: en el portal de la marca desde tu navegador, o automáticamente en tu tienda online, PIM o TPV."
     },
     "developers": {
-      "title": "Desarrolladores",
+      "title": "Para desarrolladores",
       "description": "La especificación, las tres API, el SDK y la herramienta de línea de comandos, las pruebas de conformidad y las implementaciones."
     },
     "directory": {
@@ -98,25 +98,25 @@
   },
   "home": {
     "eyebrow": "Un estándar abierto para marcas",
-    "h1": "Un solo lugar y una sola API para todos tus distribuidores",
-    "lead": "Open Brand Exchange es una forma gratuita y abierta de entregar tus imágenes de producto definitivas y los datos de tus artículos a tus distribuidores. Ellos tienen un portal contigo, su software una API estándar, y tú publicas automáticamente desde tus propios sistemas.",
+    "h1": "Tu portal para distribuidores, con el estándar abierto",
+    "lead": "Open Brand Exchange da a tus distribuidores un portal con tu nombre, donde buscan y descargan imágenes y datos de artículos. Como se basa en el estándar abierto, su software también puede recibirlo todo automáticamente.",
     "ctaBrands": "Cómo funciona para marcas",
     "ctaRetailers": "Soy distribuidor",
     "howTitle": "Cómo funciona",
     "steps": [
       {
-        "h": "Pon en marcha tu portal",
-        "p": "Deja que un proveedor lo gestione o alójalo tú mismo gratis con un clic o un comando.",
+        "h": "Configura tu portal para distribuidores",
+        "p": "Usa el portal para distribuidores gratuito, alojado por un socio o por ti. ¿Ya tienes uno? Pregunta a tu proveedor por la compatibilidad.",
         "link": "Opciones de alojamiento"
       },
       {
-        "h": "Publica automáticamente",
-        "p": "Un archivo CSV y fotos con un nombre fijo. Tu PIM, tu ERP o una simple carpeta los entrega cada noche, sin trabajo manual.",
-        "link": "Automatización"
+        "h": "Añade tus productos",
+        "p": "Rellena la plantilla de Excel, o deja que tu PIM, ERP o una carpeta compartida entregue los datos cada noche, sin trabajo manual.",
+        "link": "La plantilla de Excel"
       },
       {
         "h": "Tus distribuidores hacen el resto",
-        "p": "Los distribuidores inician sesión, pegan su lista de EAN y descargan. Su software obtiene el mismo contenido a través de la API estándar.",
+        "p": "Los distribuidores inician sesión, pegan su lista de EAN y descargan. Su software recibe el mismo contenido automáticamente.",
         "link": "Para distribuidores"
       }
     ],
@@ -155,11 +155,11 @@
   },
   "brands": {
     "h1": "Para marcas",
-    "lead": "Los distribuidores necesitan tus imágenes y datos de artículos, vinculados a sus propios artículos. Con Open Brand Exchange lo configuras una vez, para todos los distribuidores a la vez.",
+    "lead": "Tus distribuidores buscan en tu portal para distribuidores y descargan imágenes y datos de producto, con acceso por distribuidor. Como se basa en el estándar abierto, su software también puede recibirlo todo automáticamente.",
     "blocks": [
       {
-        "h": "Un portal para tus distribuidores",
-        "p": "Tu portal lleva tu nombre y tu imagen: «Kestrel · {portal}», opcionalmente en tu propio dominio. Los distribuidores solicitan acceso. Tú apruebas o rechazas cada solicitud.",
+        "h": "Un portal para distribuidores con tu nombre",
+        "p": "Tu portal para distribuidores lleva tu nombre: «Kestrel · {portal}», en tu propio dominio si quieres. Los distribuidores solicitan acceso y tú decides para cada uno.",
         "items": [
           "Buscar y filtrar por marca, temporada, colección y tipo de producto",
           "Pegar una lista de EAN y ver qué está disponible y qué falta",
@@ -169,31 +169,31 @@
         ]
       },
       {
-        "h": "Una API estándar para su software",
-        "p": "Los distribuidores que usan software reciben una clave API. Su TPV, PIM o tienda online obtiene el conjunto completo una vez y después solo los cambios.",
+        "h": "Directamente en su tienda online",
+        "p": "Los distribuidores pueden hacer que su tienda online, PIM o TPV reciba tus productos automáticamente. Para ello solicitan una clave API en tu portal para distribuidores: una contraseña personal para su software.",
         "items": [
-          "Consulta por EAN, para que las imágenes se asocien al artículo y la talla correctos",
-          "Los cambios se entregan automáticamente, incluidas las retiradas",
-          "Los derechos de uso, el embargo y el origen IA se incluyen con cada imagen",
-          "Una sola implementación funciona con todas las marcas que usan Open Brand Exchange"
+          "Asociados por EAN al artículo y la talla correctos",
+          "Los cambios llegan solos, también los artículos que retiras",
+          "Derechos de uso, fecha de embargo y si se ha usado IA, con cada imagen",
+          "El software compatible con el estándar funciona con todas las marcas"
         ]
       },
       {
         "h": "Subida automática",
-        "p": "Tu portal obtiene tu exportación automáticamente, o tus propios sistemas la envían.",
+        "p": "Tu portal para distribuidores recoge tus productos por sí solo, por ejemplo cada noche. Las nuevas colecciones se publican antes, sin trabajo manual.",
         "items": [
-          "Importación programada desde una dirección web, un servidor SFTP o un bucket S3, sin código",
-          "Una carpeta que se publica automáticamente con la herramienta obx",
-          "Recetas para cron, GitHub Actions, n8n, Make y Zapier",
-          "Un formato CSV y una regla de nombres para las fotos: KO-1001_NVY_1.jpg"
+          "Cada noche desde la exportación de tu PIM o ERP, sin software adicional",
+          "O desde una carpeta compartida: lo que se guarda allí se publica",
+          "Solo se envía lo que ha cambiado, así que las actualizaciones son rápidas",
+          "Una estructura clara para los datos y una regla de nombres para las fotos, como KO-1001_NVY_1.jpg"
         ]
       },
       {
         "h": "Sigues siendo el propietario",
-        "p": "Open Brand Exchange es un estándar, no una plataforma. Gestionas tu propio portal, o un proveedor lo gestiona por ti.",
+        "p": "Open Brand Exchange es un estándar, no una plataforma. Gestionas tu propio portal para distribuidores, o un socio lo gestiona por ti.",
         "items": [
           "Alojarlo tú mismo es gratis: el software es de código abierto",
-          "O lo externalizas a un proveedor y cambias de proveedor en cualquier momento",
+          "O déjalo en manos de un socio y cambia de socio cuando quieras",
           "Ves quién descarga qué, por distribuidor",
           "Tú decides quién accede, a qué marcas y si se permiten los originales"
         ]
@@ -215,11 +215,11 @@
       },
       {
         "k": "Claves API",
-        "v": "claves para el software de tus distribuidores: se muestran una vez y se pueden renovar o revocar en cualquier momento"
+        "v": "contraseñas personales para el software de tus distribuidores: se muestran una vez y se pueden renovar o revocar en cualquier momento"
       },
       {
         "k": "Subida automática",
-        "v": "claves para tus propios sistemas y avisos cuando un distribuidor solicita acceso o termina una importación"
+        "v": "tu exportación se recoge según un calendario, y recibes un aviso cuando un distribuidor solicita acceso o termina una importación"
       },
       {
         "k": "Estadísticas",
@@ -232,7 +232,6 @@
     ],
     "nextTitle": "Siguiente paso",
     "nextHosting": "Elige cómo alojarlo",
-    "nextAutomation": "Ver las recetas de automatización",
     "labelNote": "Si falta algo que la ley exige en la etiqueta, como la composición de fibras o los materiales de un zapato, Open Brand Exchange te avisa al subir los datos. Un aviso nunca impide publicar.",
     "bagsNote": "Las maletas y los bolsos incluyen ahora medidas (alto × ancho × fondo, peso, capacidad) y características (ruedas, cierre, correa desmontable…), que todas las marcas miden de la misma manera.",
     "startEyebrow": "Empieza aquí",
@@ -248,21 +247,35 @@
       },
       {
         "h": "Sube o automatiza",
-        "p": "Guarda como CSV UTF-8 y súbelo a tu portal junto con las fotos, o deja que el portal recoja tu exportación cada noche."
+        "p": "Guárdalo en Excel como «CSV UTF-8» y súbelo con las fotos a tu portal para distribuidores. O deja que tu portal recoja tu exportación cada noche."
       },
       {
         "h": "Publicado",
-        "p": "Tus distribuidores encuentran todo en tu portal. Su software recibe cada cambio automáticamente. Sin coste."
+        "p": "Tus distribuidores encuentran todo en tu portal para distribuidores, y su software recibe cada cambio automáticamente. Sin coste."
       }
     ],
     "startTemplate": "Descargar la plantilla de Excel",
     "partnersTitle": "O trabaja con un socio",
     "partnersP": "Un proveedor puede encargarse de todo el proceso. Photopilot, por ejemplo, ofrece un portal gratuito con la conexión OBX, la automatización completa del proceso y una integración a medida con tu ERP.",
-    "partnersCta": "Ver los proveedores"
+    "partnersCta": "Ver los proveedores",
+    "waysTitle": "Dos formas de empezar, ambas con un portal para distribuidores",
+    "ways": [
+      {
+        "h": "¿Aún no tienes portal para distribuidores?",
+        "p": "Usa el portal para distribuidores gratuito de Open Brand Exchange, junto a tus sistemas actuales.",
+        "cta": "Empieza con tu plantilla de Excel"
+      },
+      {
+        "h": "¿Ya tienes un portal para distribuidores?",
+        "p": "Pregunta a tu proveedor por la compatibilidad con Open Brand Exchange. Tu portal se queda y funciona con el estándar.",
+        "cta": "Lo que tu proveedor debe saber"
+      }
+    ],
+    "nextTemplate": "Empieza con tu plantilla de Excel"
   },
   "automation": {
     "h1": "Automatización",
-    "lead": "Tu PIM, ERP, DAM o una carpeta compartida ya tiene los datos y las fotos. Elige la primera receta que encaje: todas funcionan con cualquier portal de Open Brand Exchange.",
+    "lead": "Tu PIM, ERP, DAM o carpeta compartida sigue siendo la fuente. Tu portal para distribuidores recoge los datos y las imágenes automáticamente, por ejemplo cada noche, y los pone a disposición de todos tus distribuidores.",
     "chooseTitle": "¿Qué receta te encaja?",
     "head": [
       "Tienes…",
@@ -352,11 +365,19 @@
     "apiMore": "Todos los detalles están en la especificación:",
     "apiSpec": "Ingest API",
     "apiAuto": "recetas de automatización",
-    "apiSdk": "SDK de Go"
+    "apiSdk": "SDK de Go",
+    "heroTitle": "Automatiza. Sigue trabajando como hasta ahora.",
+    "heroChecks": [
+      "Ningún sistema nuevo que mantener",
+      "Elige cómo: una carpeta, un archivo de Excel o una conexión automática"
+    ],
+    "flowLabel": "De tus sistemas a tus distribuidores",
+    "techEyebrow": "Para la persona que lo configura",
+    "techIntro": "Las recetas de abajo son para la persona que gestiona tus sistemas. ¿Prefieres no configurar nada? Empieza con la plantilla de Excel, o pide ayuda a un socio."
   },
   "hosting": {
     "h1": "Alojamiento",
-    "lead": "Un portal es una empresa de marca en un servidor. Tú eliges cómo gestionarlo, desde totalmente externalizado hasta hacerlo todo tú. Abajo, de lo más sencillo a lo más técnico.",
+    "lead": "Cada marca tiene su propio portal para distribuidores, en su propio servidor. Tú eliges cómo gestionarlo, desde totalmente externalizado hasta hacerlo todo tú.",
     "p1Title": "3. Un socio lo aloja por ti",
     "p1P": "¿Prefieres no alojarlo tú? Los socios pueden alojar y mantener el portal por ti.",
     "fieldBased": "Con sede en",
@@ -387,8 +408,8 @@
       "Añade la dirección cron que muestra el instalador como tarea cron en el panel de tu alojamiento, cada 5 minutos. Sin ella el portal también funciona."
     ],
     "phpDownload": "Descargar la última versión",
-    "p3Title": "3. Docker",
-    "p3P": "En tu propio servidor o en cualquier nube que ejecute contenedores. Un comando:",
+    "p3Title": "3. Tu propio servidor",
+    "p3P": "En tu propio servidor o con cualquier proveedor de nube. Se pone en marcha con un solo comando:",
     "composeP": "O con HTTPS incluido, mediante Caddy:",
     "envTitle": "Ajustes",
     "envPublicUrl": "la dirección pública de tu portal",
@@ -407,7 +428,7 @@
     "compareTitle": "Tres ediciones, un portal",
     "compareP": "Las tres ediciones hacen lo mismo y comparten la misma administración y el mismo portal para distribuidores. Elige la que encaje con tu alojamiento; puedes cambiar más adelante.",
     "compareLink": "Ver las implementaciones",
-    "heroTitle": "Tu portal, donde quieras.",
+    "heroTitle": "Tu portal para distribuidores, donde quieras.",
     "heroLead": "El software es gratuito. Tú eliges dónde se ejecuta y puedes cambiarlo en cualquier momento.",
     "heroChecks": [
       "Software gratuito, solo pagas el alojamiento",
@@ -415,9 +436,9 @@
       "El mismo portal en todas partes, así que siempre puedes cambiar",
       "¿Prefieres no hacerlo tú? Un socio lo aloja por ti"
     ],
-    "euCta": "Tu portal en Europa",
+    "euCta": "Tu portal para distribuidores en Europa",
     "euTitle": "1. Tu propio servidor en Europa (recomendado)",
-    "euP": "Para la mayoría de las marcas basta con un servidor pequeño en un proveedor europeo. La guía de abajo usa Hetzner, con centros de datos en Alemania y Finlandia. Cualquier servidor con Docker funciona igual.",
+    "euP": "Para la mayoría de las marcas basta con un servidor pequeño en un proveedor europeo. Nuestra guía usa Hetzner, con centros de datos en Alemania y Finlandia.",
     "euSteps": [
       "Crea un servidor en Hetzner en Núremberg, Falkenstein o Helsinki, con las copias de seguridad activadas.",
       "Apunta tu dominio, por ejemplo images.tumarca.es, al servidor.",
@@ -432,11 +453,13 @@
     "webP": "La edición PHP funciona en un alojamiento web europeo normal con PHP y una base de datos, por ejemplo en TransIP, Strato u OVHcloud. Sin comandos:",
     "altTitle": "4. Otras nubes",
     "altP": "El mismo portal también funciona en Cloudflare Workers y en Google Cloud Run. Elige una región en Europa si el servicio la ofrece.",
-    "partnerLink": "Ver socios"
+    "partnerLink": "Ver socios",
+    "techTitle": "Detalles técnicos para tu equipo de TI",
+    "techLead": "Comandos, ajustes y guías de instalación para la persona que configura el servidor."
   },
   "retailers": {
     "h1": "Para distribuidores",
-    "lead": "Las marcas que usan Open Brand Exchange entregan sus imágenes y datos de artículos en un formato uniforme. Tú solo tienes que recibirlos, sin coste: en el portal de cada marca desde tu navegador, o a través de una API directamente en tu software.",
+    "lead": "Las marcas que usan Open Brand Exchange entregan sus imágenes y datos de artículos de una forma uniforme. Tú los recibes sin coste: en el portal de la marca, o automáticamente en tu propio software.",
     "portalTitle": "Qué ofrece el portal de una marca",
     "portalP": "Cada marca gestiona su propio portal, con su propio nombre: por ejemplo «Kestrel · {portal}».",
     "portal": [
@@ -466,11 +489,11 @@
       }
     ],
     "apiTitle": "Una clave API para tu software",
-    "apiP": "¿Tu PIM, TPV o tienda online obtiene las imágenes automáticamente? Entonces solicita una clave API para ese software. El software obtiene primero el conjunto completo y después solo los cambios, incluidas las retiradas por parte de la marca. Las imágenes se asocian a tus artículos por EAN.",
-    "apiDev": "Para tu desarrollador: un ejemplo.",
+    "apiP": "Tu tienda online, PIM o TPV puede obtenerlo todo automáticamente, asociado a tus artículos por EAN. Solicita para ello una clave API en el portal de la marca: una contraseña personal para tu software.",
+    "apiDev": "Información para tu desarrollador",
     "toolsTitle": "Qué software funciona con él",
-    "toolsP": "Open Brand Exchange es un estándar abierto que cualquier software puede admitir. Photopilot lo está incorporando a su software para distribuidores. Otros proveedores pueden hacer lo mismo. No se requiere ningún software concreto: basta con un navegador.",
-    "toolsLink": "Especificación para desarrolladores",
+    "toolsP": "Cualquier software puede ser compatible con el estándar abierto; Photopilot lo está integrando en su software para distribuidores. No se necesita ningún software concreto: basta con un navegador.",
+    "toolsLink": "Información para fabricantes de software",
     "findTitle": "Encontrar una marca",
     "findP": "Las marcas que eligen figurar aparecen en el directorio. Una marca también puede darte directamente la dirección de su portal.",
     "findLink": "Ir al directorio",
@@ -482,7 +505,7 @@
     "label": {
       "eyebrow": "Datos de artículo",
       "title": "La información de la etiqueta de cuidado se incluye con cada artículo.",
-      "p": "La composición por partes, las instrucciones de cuidado en el orden de la etiqueta y el país de origen forman parte de cada artículo, junto al EAN de cada talla. Tu tienda puede mostrarlos como texto o como símbolos de cuidado, con su propio estilo. Los campos siguen las normas de la UE sobre etiquetado textil y los códigos de cuidado de la ISO 3758, por lo que más adelante también pueden alimentar un pasaporte digital de producto.",
+      "p": "La composición por partes, las instrucciones de cuidado en el orden de la etiqueta y el país de origen acompañan a cada artículo, junto al EAN de cada talla. Tu tienda online los muestra como texto o como símbolos de cuidado, según las normas de la UE sobre etiquetado y los códigos de cuidado de la ISO 3758.",
       "points": [
         "Composición por partes (tejido exterior, forro, relleno, suela) con porcentajes",
         "Instrucciones de cuidado como códigos estándar, en el orden de la etiqueta",
@@ -498,7 +521,6 @@
       "origin": "Fabricado en",
       "sizes": "Tallas y EAN",
       "size": "Talla",
-      "codeLabel": "El mismo artículo en la API",
       "fibres": {
         "recycled_polyester": "poliéster reciclado",
         "polyamide": "poliamida",
@@ -569,8 +591,9 @@
     "howTitle": "Cómo lo recibes",
     "how": [
       "En tu navegador: busca en el portal de la marca, pega una lista de EAN y descarga imágenes y datos de artículos.",
-      "De forma automática: tu tienda online, PIM o TPV obtiene todo mediante una sola API, la misma para todas las marcas."
-    ]
+      "Automáticamente: tu tienda online, PIM o TPV lo obtiene todo por sí solo, de la misma forma para todas las marcas."
+    ],
+    "benefitsCta": "Busca una marca en el directorio"
   },
   "switchKit": {
     "subject": "¿Vuestras imágenes de producto y datos de artículos a través de Open Brand Exchange?",
@@ -637,7 +660,48 @@
     ],
     "contribute": "Las contribuciones se hacen mediante pull requests en el repositorio spec.",
     "governanceLink": "Cómo se toman las decisiones",
-    "quickstart": "Inicio rápido: OBX en 10 minutos"
+    "quickstart": "Inicio rápido: OBX en 10 minutos",
+    "repos": [
+      {
+        "name": "spec",
+        "d": "La especificación, los esquemas y los datos de prueba"
+      },
+      {
+        "name": "obx-go",
+        "d": "Go SDK, la herramienta obx y la prueba de conformidad"
+      },
+      {
+        "name": "node-ts",
+        "d": "Portal para Cloudflare Workers"
+      },
+      {
+        "name": "node-go",
+        "d": "Portal para Docker y Google Cloud Run"
+      },
+      {
+        "name": "node-php",
+        "d": "Portal para alojamiento web normal"
+      },
+      {
+        "name": "admin-ui",
+        "d": "La interfaz web de cada portal"
+      }
+    ],
+    "promptTitle": "Constrúyelo con tu asistente de IA",
+    "promptP": "Copia un prompt en Claude, ChatGPT o Cursor, completa la parte entre corchetes y deja que el asistente escriba código según la especificación.",
+    "prompts": [
+      {
+        "h": "Exportar desde tu sistema",
+        "note": "Para marcas y proveedores de ERP y PIM: products.csv y nombres de imágenes."
+      },
+      {
+        "h": "Leer OBX en tu software",
+        "note": "Para proveedores de software de tienda online, PIM y TPV: el feed de cambios y las imágenes."
+      }
+    ],
+    "title": "Código abierto, en GitHub.",
+    "reposTitle": "Repositorios",
+    "reposP": "Todo es de código abierto en GitHub: la especificación, el código compartido y las tres ediciones del portal."
   },
   "directory": {
     "h1": "Directorio",
@@ -702,7 +766,7 @@
       },
       {
         "q": "¿Necesitamos un desarrollador?",
-        "a": "No para lo básico. Un portal se instala con un clic, y una importación programada desde una dirección web, un servidor SFTP o un bucket no requiere código. Un desarrollador ayuda si quieres conectar directamente tu PIM o ERP."
+        "a": "No para lo básico: empieza con la plantilla de Excel, y tu portal para distribuidores puede recoger tu exportación cada noche sin código. Un desarrollador solo es útil si quieres conectar directamente tu PIM o ERP."
       },
       {
         "q": "¿Es otra plataforma a la que tenemos que unirnos?",
@@ -730,7 +794,7 @@
       },
       {
         "q": "¿Está listo?",
-        "a": "Sí, la versión 0.2: la especificación, los tres portales, el comando obx y la comprobación de conformidad están publicados y son de uso libre. Estamos al principio: las primeras marcas se están uniendo ahora."
+        "a": "Sí, la versión 0.2: la especificación, las tres ediciones del portal y las herramientas están publicadas y son de uso libre. Estamos al principio: las primeras marcas se están uniendo ahora."
       },
       {
         "q": "¿Quién está detrás?",
@@ -856,15 +920,15 @@
     "brandsFlow": [
       {
         "h": "Tus sistemas",
-        "p": "PIM, ERP o una carpeta"
+        "p": "PIM, ERP, DAM o una carpeta"
       },
       {
-        "h": "Tu portal",
-        "p": "tu nombre, tu dominio"
+        "h": "Tu portal para distribuidores",
+        "p": "con el estándar abierto, con tu nombre"
       },
       {
         "h": "Tus distribuidores",
-        "p": "en el navegador y a través de la API"
+        "p": "en el navegador y en su propio software"
       }
     ],
     "retailersH1": "Las imágenes y los datos de artículo de cada marca, siempre de la misma forma",
@@ -879,7 +943,7 @@
       },
       {
         "h": "Tu tienda",
-        "p": "descarga o API, vinculado por EAN"
+        "p": "descarga o automático, asociado por EAN"
       }
     ],
     "statusTitle": "Qué está listo y qué está por llegar",
@@ -889,8 +953,8 @@
     "comingBadge": "Pronto",
     "brandsReady": [
       "Tu propio portal con administración, en 25 idiomas, en tu propio dominio",
-      "Importar un CSV y fotos a mano, o de forma programada desde una dirección web, SFTP o S3",
-      "La herramienta obx y recetas para cron, GitHub Actions, n8n, Make y Zapier",
+      "Sube tu exportación de Excel y tus fotos a mano, o haz que se recojan cada noche",
+      "Entrega automática desde tu PIM, ERP o una carpeta compartida",
       "Solicitudes de acceso, invitaciones y claves API para el software de tus distribuidores",
       "Tres ediciones: Cloudflare, Google Cloud & Docker y alojamiento web normal"
     ],
@@ -903,7 +967,7 @@
       "Solicitar acceso e iniciar sesión en el portal de una marca",
       "Buscar, filtrar y pegar tu lista de EAN para ver qué hay y qué falta",
       "Descargar fotos en un zip y datos de artículo como hoja de cálculo",
-      "Una clave API para tu software: primero todo y después solo los cambios",
+      "Una clave API para tu software, para que reciba por sí solo los productos nuevos y modificados",
       "Derechos de uso, embargo y procedencia de IA con cada imagen"
     ],
     "retailersComing": [
@@ -920,7 +984,6 @@
   "site": {
     "nav": {
       "start": "Empieza como marca",
-      "docs": "Documentación",
       "preview": "Versión 0.2"
     },
     "footer": {
@@ -941,8 +1004,7 @@
       "portalArticle": "Un artículo en el portal de la marca: imágenes por color, descarga en original, web o cuadrada, y el EAN de cada talla.",
       "adminOverview": "La vista general de la administración de la marca: primeros pasos, cifras del catálogo, solicitudes de acceso y descargas recientes de distribuidores.",
       "adminCatalog": "El catálogo en la administración de la marca: ocho artículos publicados con sus tallas e imágenes.",
-      "adminStats": "Estadísticas en la administración de la marca: descargas, imágenes y los distribuidores más activos en 30 días.",
-      "adminAutomation": "Subida automática en la administración de la marca: recetas listas para la herramienta obx, cron, GitHub Actions y más."
+      "adminStats": "Estadísticas en la administración de la marca: descargas, imágenes y los distribuidores más activos en 30 días."
     },
     "home": {
       "eyebrow": "Estándar abierto · Software libre",
@@ -953,7 +1015,7 @@
       "proof": [
         {
           "v": "Abierto",
-          "l": "estándar, CC-BY-4.0"
+          "l": "estándar, libre para todos"
         },
         {
           "v": "3",
@@ -961,7 +1023,7 @@
         },
         {
           "v": "1",
-          "l": "API para cada marca"
+          "l": "formato para todas las marcas"
         },
         {
           "v": "25",
@@ -972,12 +1034,11 @@
           "l": "en licencias"
         }
       ],
-      "codeCaption": "Lo que recibe el software de un distribuidor",
       "videoTitle": "Mira cómo funciona",
       "videoNote": "En inglés, con subtítulos en inglés.",
       "flowEyebrow": "Cómo funciona",
       "flowTitle": "Cuando todas las partes estructuran los datos de la misma manera, todas se benefician.",
-      "flowLead": "En casi todos los distribuidores, alguien copia hojas de cálculo y vuelve a teclear los datos de producto de cada marca, con prisas en cada nueva colección. Un estándar común elimina ese trabajo. Se implementa una vez y beneficia a todas las partes durante años. Es hora de trabajar mejor.",
+      "flowLead": "En muchos distribuidores, alguien vuelve a teclear los datos de producto de cada marca, con prisas en cada nueva colección. Un estándar común elimina ese trabajo, para todas las partes y durante años.",
       "flowCaption": "Lo que aporta una marca, el estándar abierto en el centro y lo que reciben los distribuidores.",
       "flow": {
         "inTitle": "Entrada",
@@ -1004,9 +1065,9 @@
       },
       "pillars": [
         {
-          "eyebrow": "Portal",
-          "h": "Un portal para los compradores de tus distribuidores.",
-          "p": "Los compradores inician sesión, pegan los EAN de su pedido y descargan justo lo que necesitan: una foto, un artículo o un zip con toda una selección.",
+          "eyebrow": "Portal para distribuidores",
+          "h": "Tu portal para distribuidores, para los compradores de tus distribuidores.",
+          "p": "Los compradores inician sesión en tu portal para distribuidores, pegan los EAN de su pedido y descargan exactamente lo que necesitan: una foto, un artículo o un zip con toda una selección.",
           "items": [
             "Busca y filtra por marca, temporada, tipo de producto y color",
             "Pega una lista de EAN para ver qué está disponible y qué falta",
@@ -1016,33 +1077,33 @@
           "link": "Verlo desde el lado del distribuidor"
         },
         {
-          "eyebrow": "API",
-          "h": "Una API, la misma para todas las marcas.",
-          "p": "El software de los distribuidores obtiene el conjunto completo una vez y después solo los cambios, incluidas las retiradas. Cada imagen incluye sus derechos de uso, su fecha de embargo y su origen IA.",
+          "eyebrow": "Su software",
+          "h": "Directamente en la tienda online del distribuidor.",
+          "p": "La tienda online, el PIM o el TPV de un distribuidor puede recibir tus productos automáticamente, también los artículos que retiras. Cada imagen lleva sus derechos de uso y su fecha de embargo.",
           "items": [
-            "Primero una copia completa, después solo los cambios",
-            "Búsqueda por EAN, vinculada al artículo y la talla correctos",
-            "Versiones web, cuadrada y miniatura; originales si lo permites",
-            "Un fabricante de software lo implementa una vez y funciona con todas las marcas"
+            "Los productos nuevos y modificados llegan solos",
+            "Asociados por EAN al artículo y la talla correctos",
+            "Imágenes en tamaño web, cuadrado y miniatura; originales si lo permites",
+            "El software compatible con el estándar funciona con todas las marcas"
           ],
-          "link": "Lee la referencia de la API"
+          "link": "Cómo lo reciben los distribuidores"
         },
         {
           "eyebrow": "Tus sistemas",
           "h": "Tu forma de trabajar actual se mantiene.",
-          "p": "El estándar define cómo obtienen el contenido los distribuidores. Cómo llega tu contenido al portal lo eliges tú: una importación nocturna desde una dirección web, SFTP o S3, una carpeta de exportación o la herramienta de línea de comandos obx.",
+          "p": "Empieza con la plantilla de Excel, o deja que tus propios sistemas entreguen los datos. Tu portal para distribuidores puede recoger tu exportación cada noche, para que las nuevas colecciones se publiquen sin trabajo manual.",
           "items": [
-            "Importación nocturna desde una dirección web, SFTP o S3, sin código",
-            "La herramienta obx para Windows, macOS y Linux solo envía lo que ha cambiado",
-            "Recetas para cron, GitHub Actions, n8n, Make y Zapier",
-            "Un único formato CSV y una única regla de nombres para las fotos"
+            "Empieza con la plantilla de Excel, sin necesidad de software",
+            "Tu PIM, ERP o una carpeta compartida puede entregar los datos cada noche",
+            "Solo se envía lo que ha cambiado, así que las actualizaciones son rápidas",
+            "Una estructura clara para los datos y una regla de nombres para las fotos"
           ],
-          "link": "Ver las recetas de automatización"
+          "link": "Empieza con tu plantilla de Excel"
         }
       ],
       "editionsEyebrow": "Alojamiento",
       "editionsTitle": "Donde tú quieras. Solo pagas el alojamiento.",
-      "editionsLead": "Tres ediciones del mismo portal. Hablan la misma API, así que puedes pasar de una a otra.",
+      "editionsLead": "Tres ediciones del mismo portal para distribuidores. Funcionan igual, así que puedes pasar de una a otra en cualquier momento.",
       "editionsLink": "Compara las opciones de alojamiento",
       "editionFields": [
         "Funciona en",
@@ -1054,7 +1115,7 @@
         {
           "tag": "Recomendado",
           "name": "Tu propio servidor en Europa",
-          "runs": "Un servidor en un proveedor europeo como Hetzner (Alemania), con Docker",
+          "runs": "Un servidor en un proveedor europeo como Hetzner (Alemania)",
           "need": "Un servidor y un nombre de dominio",
           "setup": "Un comando y después el asistente",
           "cost": "El servidor que alquilas",
@@ -1094,15 +1155,15 @@
       "trust": [
         {
           "h": "Especificación abierta",
-          "p": "Versión 0.2, bajo CC-BY-4.0. Cualquiera puede implementarla, también con fines comerciales."
+          "p": "Versión 0.2. Una especificación abierta que cualquiera puede usar, también con fines comerciales."
         },
         {
           "h": "Tus datos siguen siendo tuyos",
           "p": "Una marca puede exportar en cualquier momento todos sus datos e imágenes y pasarse a otro proveedor o alojarlo ella misma."
         },
         {
-          "h": "Licencias de código abierto",
-          "p": "El SDK, la herramienta obx y la interfaz web son Apache-2.0. Las tres ediciones del portal son AGPL-3.0, así que las mejoras siguen siendo abiertas."
+          "h": "Software de código abierto",
+          "p": "Cualquiera puede usar el software, revisarlo y mejorarlo. Las mejoras de los portales siguen abiertas para todos."
         },
         {
           "h": "Una fundación en constitución",
@@ -1118,19 +1179,10 @@
         }
       ],
       "trustLink": "Descubre cómo se gobierna",
-      "devEyebrow": "Para desarrolladores",
-      "devTitle": "Código abierto, en GitHub.",
-      "devP": "OpenAPI 3.1, JSON Schemas, una marca de prueba ficticia y software listo para usar. Sirve cualquier cliente HTTP.",
-      "devLinks": [
-        "Referencia de la API",
-        "Especificación en GitHub",
-        "Go SDK y herramienta obx",
-        "Códigos de error"
-      ],
       "faqTitle": "Lo que las marcas preguntan primero",
       "faqLink": "Todas las preguntas",
-      "closingTitle": "Permite que los distribuidores obtengan tu contenido directamente.",
-      "closingP": "Configura tu propio portal. O cuéntanos cuáles son tus sistemas y tus distribuidores, y contribuye a la primera versión.",
+      "closingTitle": "Tu portal para distribuidores, con el estándar abierto.",
+      "closingP": "Empieza con el portal para distribuidores gratuito y tu archivo de Excel. O cuéntanos tus sistemas y tus distribuidores, y ayúdanos a dar forma a la primera versión.",
       "closingMail": "Escríbenos",
       "rolesEyebrow": "Quién hace qué",
       "rolesTitle": "Las marcas publican. Los distribuidores reciben. El software conecta.",
@@ -1138,7 +1190,7 @@
       "roles": [
         {
           "h": "Marcas",
-          "p": "Publica una vez, para cada distribuidor.",
+          "p": "Tu portal para distribuidores, con el estándar abierto.",
           "items": [
             "Software gratuito, o un proveedor que gestiona todo el proceso",
             "Parte de tu propio archivo Excel o sistema",
@@ -1167,8 +1219,8 @@
           "items": [
             "Portales de marca, B2B y de imágenes, DAM",
             "Software de ERP, PIM, tienda online y TPV",
-            "Una API abierta, de uso gratuito",
-            "Primero una copia completa, después solo los cambios",
+            "Un estándar abierto, de uso gratuito",
+            "Los productos nuevos y modificados llegan automáticamente",
             "Sello gratuito «Compatible con Open Brand Exchange»"
           ],
           "cta": "Conecta tu sistema"
@@ -1176,11 +1228,11 @@
       ],
       "portalsEyebrow": "Abierto a cualquier portal",
       "portalsTitle": "Los portales existentes pueden conectarse al estándar.",
-      "portalsLead": "Cualquier parte puede conectarse: marcas, distribuidores, portales y software ERP, PIM y DAM. Cualquier sistema que hable el estándar funciona con cualquier otro sistema que también lo hable.",
+      "portalsLead": "Pueden conectarse marcas, distribuidores, portales y software ERP, PIM y DAM. Cada sistema compatible con el estándar funciona con todos los demás.",
       "portalTypes": [
         {
           "h": "Portales de marca y B2B",
-          "p": "Añade la API de OBX junto a tus servicios actuales, para que tus marcas lleguen a todos los sistemas de los distribuidores."
+          "p": "Ofrece el estándar junto a tus servicios actuales, para que tus marcas lleguen a los sistemas de cada distribuidor."
         },
         {
           "h": "Portales de imágenes y DAM",
@@ -1191,52 +1243,13 @@
           "p": "Publica composición de fibras, instrucciones de cuidado, tallas y EAN directamente desde el sistema donde están."
         }
       ],
-      "portalsCta": "Cómo conectar",
+      "portalsCta": "Cómo participar",
       "heroChecks": [
         "Abierto y sin ánimo de lucro, de uso gratuito",
         "Todos tus distribuidores a la vez",
         "Parte de tu propio Excel o sistema",
         "Imágenes con derechos de uso incluidos",
         "Tus datos siguen siendo tuyos"
-      ],
-      "devRepos": [
-        {
-          "name": "spec",
-          "d": "La especificación, los esquemas y los datos de prueba"
-        },
-        {
-          "name": "obx-go",
-          "d": "Go SDK, la herramienta obx y la prueba de conformidad"
-        },
-        {
-          "name": "node-ts",
-          "d": "Portal para Cloudflare Workers"
-        },
-        {
-          "name": "node-go",
-          "d": "Portal para Docker y Google Cloud Run"
-        },
-        {
-          "name": "node-php",
-          "d": "Portal para alojamiento web normal"
-        },
-        {
-          "name": "admin-ui",
-          "d": "La interfaz web de cada portal"
-        }
-      ],
-      "devQuickstart": "OBX en 10 minutos",
-      "promptTitle": "Constrúyelo con tu asistente de IA",
-      "promptP": "Copia un prompt en Claude, ChatGPT o Cursor, completa la parte entre corchetes y deja que el asistente escriba código según la especificación.",
-      "prompts": [
-        {
-          "h": "Exportar desde tu sistema",
-          "note": "Para marcas y proveedores de ERP y PIM: products.csv y nombres de imágenes."
-        },
-        {
-          "h": "Leer OBX en tu software",
-          "note": "Para proveedores de software de tienda online, PIM y TPV: el feed de cambios y las imágenes."
-        }
       ],
       "scopeLabel": "Categorías",
       "scopeNow": "Versión 0.2: moda, calzado, bolsos y maletas",
@@ -1253,10 +1266,11 @@
         "Abierto y sin ánimo de lucro: las cuotas opcionales de socios solo cubren los costes de la fundación."
       ],
       "portalsExample": "Por ejemplo, Photopilot implementa Open Brand Exchange y atiende a ambas partes: marcas (portal, automatización, integración con ERP, fotografía) y distribuidores (recepción y procesamiento de contenido de producto).",
-      "ownershipNote": "En principio el portal pertenece a la marca: tu propio portal y tus propios datos, en tu propio alojamiento, por ejemplo en la UE con Hetzner, o alojado por otros para ti."
+      "ownershipNote": "El portal para distribuidores pertenece a la marca: tus propios datos, en tu propio alojamiento en la UE, o alojado por otros para ti.",
+      "fairCta": "Encuentra un socio"
     },
     "pages": {
-      "brandsH1": "Configúralo una vez. Para todos tus distribuidores a la vez.",
+      "brandsH1": "Tu portal para distribuidores, con el estándar abierto.",
       "retailersSoftware": "Para tu software",
       "hostingEditions": "Las tres ediciones"
     }

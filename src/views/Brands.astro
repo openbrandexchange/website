@@ -1,12 +1,12 @@
 ---
 import PageHero from '../components/PageHero.astro';
 import Screenshot from '../components/Screenshot.astro';
-import CodeWindow from '../components/CodeWindow.astro';
+import Ways from '../components/Ways.astro';
 import Icon from '../components/Icon.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { format, messages, url, type Lang } from '../i18n';
-import { assetChange } from '../data/snippets';
 import { TEMPLATE } from '../lib/template';
+import { DEMO_URL } from '../data/snippets';
 
 interface Props {
   lang: Lang;
@@ -20,13 +20,19 @@ const ids = ['portal', 'api', 'automate', 'own'];
 
 <PageHero eyebrow={t.nav.brands} title={t.site.pages.brandsH1} lead={c.lead}>
   <Fragment slot="actions">
-    <a class="button primary lg" href={url(lang, 'hosting')}>{c.nextHosting} <Icon name="arrow" class="arrow" /></a>
-    <a class="button secondary lg" href={url(lang, 'automation')}>{c.nextAutomation}</a>
+    <a class="button primary lg" href="#start">{c.nextTemplate} <Icon name="arrow" class="arrow" /></a>
+    <a class="button secondary lg" href={DEMO_URL}>{t.demo.link}</a>
   </Fragment>
   <Screenshot slot="visual" name="admin-overview" lang={lang} alt={shots.adminOverview} sizes="(min-width: 1024px) 820px, calc(100vw - 32px)" eager />
 </PageHero>
 
-<section class="band" aria-labelledby="start">
+<section class="band" aria-labelledby="ways">
+  <div class="wrap">
+    <Ways lang={lang} level={2} />
+  </div>
+</section>
+
+<section class="band band-alt" aria-labelledby="start">
   <div class="wrap">
     <header class="section-head">
       <p class="eyebrow">{c.startEyebrow}</p>
@@ -44,12 +50,11 @@ const ids = ['portal', 'api', 'automate', 'own'];
     </ol>
     <p class="actions">
       <a class="button primary" href={TEMPLATE} download>{c.startTemplate} <Icon name="arrow" class="arrow" /></a>
-      <a class="button secondary" href={url(lang, 'automation')}>{c.nextAutomation}</a>
     </p>
   </div>
 </section>
 
-<section class="band band-alt" aria-labelledby="partner-help">
+<section class="band" aria-labelledby="partner-help">
   <div class="wrap split even top">
     <div class="split-copy">
       <h2 id="partner-help">{c.partnersTitle}</h2>
@@ -61,7 +66,7 @@ const ids = ['portal', 'api', 'automate', 'own'];
   </div>
 </section>
 
-<section class="band">
+<section class="band band-alt">
   <div class="wrap">
     {
       c.blocks.map((b, i) => (
@@ -80,8 +85,8 @@ const ids = ['portal', 'api', 'automate', 'own'];
           </div>
           <div class="split-visual" data-reveal="2">
             {i === 0 && <Screenshot name="portal-article" lang={lang} alt={shots.portalArticle} sizes="(min-width: 1024px) 700px, calc(100vw - 32px)" />}
-            {i === 1 && <CodeWindow code={assetChange} lang="json" title="GET /obx/v1/changes" label="Asset" />}
-            {i === 2 && <Screenshot name="admin-automation" lang={lang} alt={shots.adminAutomation} sizes="(min-width: 1024px) 700px, calc(100vw - 32px)" />}
+            {i === 1 && <Screenshot name="portal-ean" lang={lang} alt={shots.portalEan} sizes="(min-width: 1024px) 700px, calc(100vw - 32px)" />}
+            {i === 2 && <Screenshot name="admin-catalog" lang={lang} alt={shots.adminCatalog} sizes="(min-width: 1024px) 700px, calc(100vw - 32px)" />}
             {i === 3 && <Screenshot name="admin-stats" lang={lang} alt={shots.adminStats} sizes="(min-width: 1024px) 700px, calc(100vw - 32px)" />}
           </div>
         </article>
@@ -90,7 +95,7 @@ const ids = ['portal', 'api', 'automate', 'own'];
   </div>
 </section>
 
-<section class="band band-alt" aria-labelledby="admin">
+<section class="band" aria-labelledby="admin">
   <div class="wrap split even">
     <div class="split-copy" data-reveal>
       <h2 id="admin">{c.adminTitle}</h2>
@@ -109,7 +114,7 @@ const ids = ['portal', 'api', 'automate', 'own'];
       <p>{c.bagsNote}</p>
     </div>
     <div class="split-visual" data-reveal="2">
-      <Screenshot name="admin-catalog" lang={lang} alt={shots.adminCatalog} sizes="(min-width: 1024px) 620px, calc(100vw - 32px)" />
+      <Screenshot name="portal-catalog" lang={lang} alt={shots.portalCatalog} sizes="(min-width: 1024px) 620px, calc(100vw - 32px)" />
     </div>
   </div>
 </section>
@@ -118,6 +123,6 @@ const ids = ['portal', 'api', 'automate', 'own'];
   lang={lang}
   id="next"
   title={c.nextTitle}
-  primary={{ href: url(lang, 'hosting'), label: c.nextHosting }}
-  secondary={{ href: url(lang, 'automation'), label: c.nextAutomation }}
+  primary={{ href: TEMPLATE, label: c.nextTemplate, download: true }}
+  secondary={{ href: DEMO_URL, label: t.demo.link }}
 />

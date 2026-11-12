@@ -12,19 +12,21 @@ const t = messages[lang];
 const f = t.site.footer;
 const page = (p: PageKey) => ({ href: url(lang, p), label: t.nav[p as keyof typeof t.nav] });
 const columns = [
-  { title: f.product, links: [page('brands'), page('retailers'), page('automation'), page('hosting'), page('partners'), page('directory')] },
+  { title: f.product, links: [page('brands'), page('retailers'), page('hosting'), page('partners'), page('directory')] },
   {
     title: f.developers,
     links: [
       page('developers'),
+      page('automation'),
       { href: url(lang, 'check'), label: t.check.linkLabel },
       { href: '/reference/', label: f.reference },
       { href: '/errors/', label: f.errors },
       { href: repo('spec'), label: f.spec },
       { href: repo('obx-go'), label: f.sdk },
+      { href: repo(''), label: t.common.footerSource },
     ],
   },
-  { title: f.project, links: [page('governance'), page('faq'), page('downloads'), { href: repo(''), label: t.common.footerSource }] },
+  { title: f.project, links: [page('governance'), page('faq'), page('downloads')] },
   { title: f.legal, links: [page('imprint'), page('privacy'), page('cookies')] },
 ];
 ---

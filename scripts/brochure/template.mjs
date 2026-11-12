@@ -201,8 +201,8 @@ export function brandsHtml(lang, t = loadMessages(lang)) {
 <section class="page">
   ${statusBlock(t, b.brandsReady, b.brandsComing)}
   <div><h2>${esc(t.brands.nextTitle)}</h2><dl class="facts next">
+    <dt>${esc(t.brands.nextTemplate)}</dt><dd>${pageUrl(lang, 'for-brands')}#start</dd>
     <dt>${esc(t.brands.nextHosting)}</dt><dd>${pageUrl(lang, 'hosting')}</dd>
-    <dt>${esc(t.brands.nextAutomation)}</dt><dd>${pageUrl(lang, 'automation')}</dd>
     <dt>${esc(t.nav.developers)}</dt><dd>${pageUrl(lang, 'developers')}</dd>
   </dl></div>
   ${cta(t, lang, b.ctaBrands)}

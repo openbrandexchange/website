@@ -50,10 +50,10 @@ const env: [string, string][] = [
     <ol class="steps steps-row steps-three">
       {c.euSteps.map((step) => <li>{step}</li>)}
     </ol>
-    <p class="actions">
-      <a class="button primary" href={repo('node-go', '/blob/main/docs/hosting/hetzner.md')}>{c.euGuide} <Icon name="arrow" class="arrow" /></a>
-    </p>
     <p class="note">{c.euData}</p>
+    <p class="actions">
+      <a class="link-arrow" href="#technical">{c.techTitle} <Icon name="arrow" class="arrow" /></a>
+    </p>
   </div>
 </section>
 
@@ -62,7 +62,7 @@ const env: [string, string][] = [
     <DocSection id="web-hosting" title={c.webTitle}>
       <p>{c.webP}</p>
       <ol>{c.phpSteps.map((st) => <li>{st}</li>)}</ol>
-      <p class="small"><a href={repo('node-php', '/releases/latest')}>{c.phpDownload}</a> · <a href={repo('node-php')}>openbrandexchange/node-php</a></p>
+      <p class="small"><a href={repo('node-php', '/releases/latest')}>{c.phpDownload}</a></p>
     </DocSection>
     <DocSection id="providers" title={c.p1Title}>
       <p>{c.p1P} <a href={url(lang, 'partners')}>{c.partnerLink}</a></p>
@@ -77,49 +77,12 @@ const env: [string, string][] = [
       <h2 id="other-clouds">{c.altTitle}</h2>
       <p class="lead">{c.altP}</p>
     </header>
-    <DocSection id="cloudflare" title={t.common.editionCloudflare}>
-      <p>{c.cfP}</p>
-      <p>
-        <a class="button primary" href="https://deploy.workers.cloudflare.com/?url=https://github.com/openbrandexchange/node-ts">{c.cfButton}</a>
-      </p>
-      <p class="small"><a href={repo('node-ts')}>openbrandexchange/node-ts</a></p>
-    </DocSection>
-
-    <DocSection id="cloud-run" title={t.common.editionGoogle}>
-      <p>{c.runP}</p>
-      <Code code={s.cloudRun} />
-      <p class="small"><a href={repo('node-go')}>openbrandexchange/node-go</a> · <a href="#docker">Docker</a></p>
-    </DocSection>
-
+    <p><a class="link-arrow" href="#technical">{c.techTitle} <Icon name="arrow" class="arrow" /></a></p>
   </div>
 </section>
 
-<section class="band">
+<section class="band band-alt">
   <div class="wrap">
-    <DocSection id="docker" title={c.p3Title.replace(/^\d+\.\s*/, '')}>
-      <p>{c.p3P}</p>
-      <Code code={s.dockerRun} />
-      <p>{c.composeP}</p>
-      <Code label="compose.yaml" code={s.dockerCompose} />
-      <h3>{c.envTitle}</h3>
-      <div class="table-scroll">
-        <table>
-          <tbody>
-            {
-              env.map(([k, v]) => (
-                <tr>
-                  <th scope="row">
-                    <code>{k}</code>
-                  </th>
-                  <td>{v}</td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
-      </div>
-    </DocSection>
-
     <DocSection id="first-start" title={c.firstTitle}>
       <ol>{c.first.map((f) => <li>{f}</li>)}</ol>
       <p class="muted">{c.firstWhy}</p>
@@ -132,5 +95,57 @@ const env: [string, string][] = [
     <DocSection id="editions" title={c.compareTitle}>
       <p>{c.compareP} <a href={url(lang, 'developers', '#implementations')}>{c.compareLink}</a>.</p>
     </DocSection>
+  </div>
+</section>
+
+<section class="band" aria-labelledby="technical-title">
+  <div class="wrap">
+    <details class="tech-details" id="technical">
+      <summary><span id="technical-title">{c.techTitle}</span></summary>
+      <p class="tech-lead">{c.techLead}</p>
+
+      <DocSection id="hetzner" title={c.euTitle.replace(/^\d+\.\s*/, '').replace(/\s*\(.*\)$/, '')}>
+        <p><a href={repo('node-go', '/blob/main/docs/hosting/hetzner.md')}>{c.euGuide}</a></p>
+        <p class="small"><a href={repo('node-php')}>openbrandexchange/node-php</a> · <a href={repo('node-go')}>openbrandexchange/node-go</a></p>
+      </DocSection>
+
+      <DocSection id="cloudflare" title={t.common.editionCloudflare}>
+        <p>{c.cfP}</p>
+        <p>
+          <a class="button primary" href="https://deploy.workers.cloudflare.com/?url=https://github.com/openbrandexchange/node-ts">{c.cfButton}</a>
+        </p>
+        <p class="small"><a href={repo('node-ts')}>openbrandexchange/node-ts</a></p>
+      </DocSection>
+
+      <DocSection id="cloud-run" title={t.common.editionGoogle}>
+        <p>{c.runP}</p>
+        <Code code={s.cloudRun} />
+        <p class="small"><a href={repo('node-go')}>openbrandexchange/node-go</a> · <a href="#docker">Docker</a></p>
+      </DocSection>
+
+      <DocSection id="docker" title="Docker">
+        <p>{c.p3P}</p>
+        <Code code={s.dockerRun} />
+        <p>{c.composeP}</p>
+        <Code label="compose.yaml" code={s.dockerCompose} />
+        <h3>{c.envTitle}</h3>
+        <div class="table-scroll">
+          <table>
+            <tbody>
+              {
+                env.map(([k, v]) => (
+                  <tr>
+                    <th scope="row">
+                      <code>{k}</code>
+                    </th>
+                    <td>{v}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </DocSection>
+    </details>
   </div>
 </section>

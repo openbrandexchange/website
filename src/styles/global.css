@@ -2788,3 +2788,71 @@ input[type='search'] {
     padding-left: 0;
   }
 }
+
+/* The two ways to start (home, for brands). */
+.ways {
+  margin-top: var(--s-7);
+}
+.ways-title {
+  margin: 0 0 var(--s-5);
+}
+h3.ways-title {
+  font-size: 1.125rem;
+}
+.ways-list h3,
+.ways-list h4 {
+  display: flex;
+  gap: 0.6rem;
+  margin: 0 0 var(--s-2);
+  font-size: 1.0625rem;
+}
+.ways-list h3::before,
+.ways-list h4::before {
+  content: '✓';
+  color: var(--accent-fg);
+  font-weight: 700;
+}
+/* The three-block diagram on the automation page: only titles and one line, no lists. */
+.systems-flow .flow-col .flow-lead {
+  margin-bottom: 0;
+}
+
+/* Technical material on plain pages: collapsed until someone asks for it. */
+.tech-details {
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+}
+.tech-details > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  padding: var(--s-5) 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.25rem;
+  font-weight: 650;
+}
+.tech-details > summary::-webkit-details-marker {
+  display: none;
+}
+.tech-details > summary::after {
+  content: '+';
+  flex: none;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.tech-details[open] > summary::after {
+  content: '−';
+}
+.tech-details > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+.tech-details > .tech-lead {
+  max-width: 44rem;
+  color: var(--fg-2);
+}
+.ways-cta {
+  margin-top: var(--s-3);
+}

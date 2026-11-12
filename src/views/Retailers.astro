@@ -4,10 +4,10 @@ import PageHero from '../components/PageHero.astro';
 import Screenshot from '../components/Screenshot.astro';
 import Icon from '../components/Icon.astro';
 import { format, messages, nativeNames, url, type Lang } from '../i18n';
-import { retailerCurl } from '../data/snippets';
 import { switchKit, switchKitPath } from '../lib/switch-kit';
 import { countryName } from '../lib/names';
-import { labelExample, labelJson } from '../data/label-example';
+import { labelExample } from '../data/label-example';
+import { DEMO_URL } from '../data/snippets';
 
 interface Props {
   lang: Lang;
@@ -30,8 +30,8 @@ if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });
 
 <PageHero eyebrow={t.nav.retailers} title={t.brochure.retailersH1} lead={c.lead}>
   <Fragment slot="actions">
-    <a class="button primary lg" href={url(lang, 'directory')}>{c.findLink} <Icon name="arrow" class="arrow" /></a>
-    <a class="button secondary lg" href="#api">{c.apiTitle}</a>
+    <a class="button primary lg" href={DEMO_URL}>{t.demo.link} <Icon name="arrow" class="arrow" /></a>
+    <a class="button secondary lg" href={url(lang, 'directory')}>{c.findLink}</a>
   </Fragment>
   <Screenshot slot="visual" name="portal-article" lang={lang} alt={t.site.shots.portalArticle} sizes="(min-width: 1024px) 820px, calc(100vw - 32px)" eager />
 </PageHero>
@@ -41,6 +41,7 @@ if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });
     <div class="split-copy">
       <h2 id="benefits">{c.benefitsTitle}</h2>
       <ul class="checks">{c.benefits.map((b) => <li>{b}</li>)}</ul>
+      <p class="actions"><a class="button primary" href={url(lang, 'directory')}>{c.benefitsCta} <Icon name="arrow" class="arrow" /></a></p>
     </div>
     <div class="split-visual">
       <h3>{c.howTitle}</h3>
@@ -97,7 +98,7 @@ if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });
             <dt>{lb.care}</dt>
             <dd>
               <ol class="care-steps">
-                {labelExample.care.map((code) => <li>{care(code)} <code>{code}</code></li>)}
+                {labelExample.care.map((code) => <li>{care(code)}</li>)}
               </ol>
             </dd>
             <dt>{lb.origin}</dt>
@@ -105,13 +106,12 @@ if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });
             <dt>{lb.sizes}</dt>
             <dd>
               {labelExample.variants.map((v) => (
-                <span class="care-line">{lb.size} {v.size}: <code>{v.gtin}</code></span>
+                <span class="care-line">{lb.size} {v.size}: {v.gtin}</span>
               ))}
             </dd>
           </dl>
         </div>
       </figure>
-      <Code label={lb.codeLabel} code={labelJson} />
     </div>
   </div>
   <div class="wrap law" data-reveal>
@@ -138,15 +138,14 @@ if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });
 </section>
 
 <section class="band band-ink" aria-labelledby="api">
-  <div class="wrap split">
+  <div class="wrap split even top">
     <div class="split-copy" data-reveal>
       <p class="eyebrow">{t.site.pages.retailersSoftware}</p>
       <h2 id="api">{c.apiTitle}</h2>
-      <p>{c.apiP}</p>
-      <p class="muted">{c.apiDev}</p>
     </div>
     <div class="split-visual" data-reveal="2">
-      <Code code={retailerCurl} />
+      <p class="lead">{c.apiP}</p>
+      <p class="small"><a class="link-arrow" href={url(lang, 'developers')}>{c.apiDev} <Icon name="arrow" class="arrow" /></a></p>
     </div>
   </div>
 </section>

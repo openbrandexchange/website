@@ -6,6 +6,7 @@ import CodeWindow from '../components/CodeWindow.astro';
 import Icon from '../components/Icon.astro';
 import { messages, repo, specDoc, url, type Lang } from '../i18n';
 import { retailerCurl, conformance, discovery, discoveryResponse, demoCurl, DEMO_URL, DEMO_CLIENT_ID, DEMO_CLIENT_SECRET } from '../data/snippets';
+import { prompts } from '../data/prompts';
 
 interface Props {
   lang: Lang;
@@ -39,7 +40,7 @@ const docs = [
 ];
 ---
 
-<PageHero eyebrow={t.nav.developers} title={t.site.home.devTitle} lead={c.lead}>
+<PageHero eyebrow={t.nav.developers} title={c.title} lead={c.lead}>
   <Fragment slot="actions">
     <a class="button primary lg" href="/reference/">{t.site.footer.reference} <Icon name="arrow" class="arrow" /></a>
     <a class="button secondary lg" href={repo('spec')}>{t.site.footer.spec}</a>
@@ -58,6 +59,22 @@ const docs = [
         <a href={repo('spec')}>openbrandexchange/spec</a> · <a href={specDoc('docs/protocol.md')}>{c.specStart}</a> ·
         <a href={specDoc('docs/quickstart.md')}>{c.quickstart}</a>
       </p>
+    </DocSection>
+
+    <DocSection id="repositories" title={c.reposTitle}>
+      <p>{c.reposP}</p>
+      <ul class="repo-list">
+        {
+          c.repos.map((r) => (
+            <li>
+              <a href={repo(r.name)}>
+                <span class="repo-name">openbrandexchange/{r.name}</span>
+                <span class="repo-d">{r.d}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
     </DocSection>
 
     <DocSection id="apis" title={c.apisTitle}>
@@ -112,6 +129,23 @@ const docs = [
 </section>
 
 <section class="band band-alt">
+  <div class="wrap">
+    <DocSection id="prompts" title={c.promptTitle}>
+      <p>{c.promptP}</p>
+      <div class="cards two">
+        {
+          c.prompts.map((pr, i) => (
+            <div class="prompt">
+              <Code code={prompts[i]} label={`${pr.h} · ${pr.note}`} lang="text" />
+            </div>
+          ))
+        }
+      </div>
+    </DocSection>
+  </div>
+</section>
+
+<section class="band">
   <div class="wrap">
     <DocSection id="implementations" title={c.implTitle}>
       <div class="table-scroll">

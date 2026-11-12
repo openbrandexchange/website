@@ -1,19 +1,19 @@
 ---
 // The closing band of a page: a headline with actions at the left, the three steps at the right.
 import Icon from './Icon.astro';
-import { messages, url, type Lang, type PageKey } from '../i18n';
+import { messages, url, type Lang } from '../i18n';
 
 interface Props {
   lang: Lang;
   id: string;
   title: string;
   text?: string;
-  primary: { href: string; label: string };
+  primary: { href: string; label: string; download?: boolean };
   secondary: { href: string; label: string };
 }
 const { lang, id, title, text, primary, secondary } = Astro.props;
 const t = messages[lang];
-const stepPages: PageKey[] = ['hosting', 'automation', 'retailers'];
+const stepLinks = [url(lang, 'hosting'), url(lang, 'brands', '#start'), url(lang, 'retailers')];
 ---
 
 <section class="band band-ink grid-bg cta-band" aria-labelledby={id}>
@@ -22,7 +22,7 @@ const stepPages: PageKey[] = ['hosting', 'automation', 'retailers'];
       <h2 id={id}>{title}</h2>
       {text && <p>{text}</p>}
       <div class="actions">
-        <a class="button primary lg" href={primary.href}>{primary.label} <Icon name="arrow" class="arrow" /></a>
+        <a class="button primary lg" href={primary.href} download={primary.download || undefined}>{primary.label} <Icon name="arrow" class="arrow" /></a>
         <a class="button secondary lg" href={secondary.href}>{secondary.label}</a>
       </div>
     </div>
@@ -32,7 +32,7 @@ const stepPages: PageKey[] = ['hosting', 'automation', 'retailers'];
           <li>
             <h3>{st.h}</h3>
             <p>
-              {st.p} <a href={url(lang, stepPages[i])}>{st.link}</a>
+              {st.p} <a href={stepLinks[i]}>{st.link}</a>
             </p>
           </li>
         ))

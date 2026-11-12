@@ -45,19 +45,19 @@
     },
     "brands": {
       "title": "Pro značky",
-      "description": "Portál pod vaší značkou pro prodejce, standardní API a automatické publikování z PIM, ERP nebo složek. Zdarma při vlastním provozu, nebo dostupné přes poskytovatele."
+      "description": "Váš portál pro prodejce na otevřeném standardu: prodejci vyhledávají a stahují vaše fotografie a produktová data a jejich software dostává vše automaticky. Zdarma při vlastním provozu, nebo přes partnera."
     },
     "automation": {
       "title": "Automatizace",
-      "description": "Publikujte automaticky: plánované importy, nástroj obx, cron, GitHub Actions, n8n, Make, Zapier nebo curl. Návody ke zkopírování."
+      "description": "Pracujte dál jako dosud: váš portál pro prodejce si automaticky převezme data a fotografie z vašeho PIM, ERP, DAM nebo ze sdílené složky. S návody pro toho, kdo to nastavuje."
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Od nejjednoduššího po nejtechničtější: poskytovatel, jedno kliknutí na Cloudflare, Google Cloud Run nebo běžný webhosting, případně Docker."
+      "description": "Váš portál pro prodejce, kde chcete: u partnera, na vlastním serveru v Evropě, na běžném webhostingu nebo v jiném cloudu."
     },
     "retailers": {
       "title": "Pro prodejce",
-      "description": "Co nabízí portál značky, přístup k API pro váš vlastní software a hotový e-mail pro značky, které se zatím neúčastní."
+      "description": "Kompletní produktový obsah od každé zapojené značky, zdarma: v portálu značky ve vašem prohlížeči, nebo automaticky ve vašem e-shopu, PIM nebo pokladním systému."
     },
     "developers": {
       "title": "Pro vývojáře",
@@ -98,25 +98,25 @@
   },
   "home": {
     "eyebrow": "Otevřený standard pro značky",
-    "h1": "Jedno místo a jedno API pro všechny vaše prodejce",
-    "lead": "Open Brand Exchange je bezplatný a otevřený způsob, jak předávat finální produktové fotografie a data o zboží vašim prodejcům. Prodejci získají portál u vás, jejich systémy standardní API a vy publikujete automaticky ze svých vlastních systémů.",
+    "h1": "Váš portál pro prodejce, na otevřeném standardu",
+    "lead": "Open Brand Exchange dává vašim prodejcům portál s vaším jménem, kde vyhledávají a stahují fotografie a data o zboží. Protože stojí na otevřeném standardu, může jejich software také dostávat vše automaticky.",
     "ctaBrands": "Jak to funguje pro značky",
     "ctaRetailers": "Jsem prodejce",
     "howTitle": "Jak to funguje",
     "steps": [
       {
-        "h": "Spusťte svůj portál",
-        "p": "Svěřte ho poskytovateli, nebo ho provozujte sami zdarma, jedním kliknutím či jedním příkazem.",
+        "h": "Nastavte svůj portál pro prodejce",
+        "p": "Použijte bezplatný portál pro prodejce, provozovaný partnerem nebo vámi. Už portál máte? Zeptejte se svého dodavatele na podporu.",
         "link": "Možnosti hostingu"
       },
       {
-        "h": "Publikujte automaticky",
-        "p": "Jeden soubor CSV a fotografie s pevným názvem. Váš PIM, ERP nebo obyčejná složka je dodá každou noc, bez ruční práce.",
-        "link": "Automatizace"
+        "h": "Přidejte své produkty",
+        "p": "Vyplňte šablonu v Excelu, nebo nechte své PIM, ERP či sdílenou složku doručovat každou noc, bez ruční práce.",
+        "link": "Šablona v Excelu"
       },
       {
         "h": "Zbytek zvládnou prodejci",
-        "p": "Prodejci se přihlásí, vloží seznam EAN a stáhnou si, co potřebují. Jejich systémy získají stejný obsah přes standardní API.",
+        "p": "Prodejci se přihlásí, vloží seznam EAN a stáhnou si, co potřebují. Jejich software dostane stejný obsah automaticky.",
         "link": "Pro prodejce"
       }
     ],
@@ -155,11 +155,11 @@
   },
   "brands": {
     "h1": "Pro značky",
-    "lead": "Prodejci potřebují vaše fotografie a data o zboží, propojené s jejich vlastními položkami. S Open Brand Exchange to nastavíte jednou, pro všechny prodejce současně.",
+    "lead": "Vaši prodejci vyhledávají ve vašem portálu pro prodejce a stahují fotografie a produktová data, s přístupem pro každého prodejce zvlášť. Protože stojí na otevřeném standardu, může jejich software také dostávat vše automaticky.",
     "blocks": [
       {
-        "h": "Portál pro vaše prodejce",
-        "p": "Váš portál nese vaše jméno a vizuální styl: „Kestrel · {portal}“, volitelně na vlastní doméně. Prodejci žádají o přístup. Každou žádost schválíte, nebo zamítnete.",
+        "h": "Portál pro prodejce s vaším jménem",
+        "p": "Váš portál pro prodejce nese vaše jméno: „Kestrel · {portal}“, volitelně na vlastní doméně. Prodejci žádají o přístup a vy rozhodujete u každého prodejce.",
         "items": [
           "Hledání a filtrování podle značky, sezóny, kolekce a typu produktu",
           "Vložení seznamu EAN a přehled, co je k dispozici a co chybí",
@@ -169,31 +169,31 @@
         ]
       },
       {
-        "h": "Standardní API pro jejich systémy",
-        "p": "Prodejci, kteří používají software, dostanou API klíč. Jejich pokladna, PIM nebo e-shop stáhne kompletní sadu jednou a potom už jen změny.",
+        "h": "Přímo do jejich e-shopu",
+        "p": "Prodejci mohou nechat svůj e-shop, PIM nebo pokladní systém dostávat vaše produkty automaticky. K tomu si ve vašem portálu pro prodejce vyžádají API klíč: osobní heslo pro svůj software.",
         "items": [
-          "Vyhledávání podle EAN, aby se fotografie přiřadily ke správné položce a velikosti",
-          "Změny se doručují automaticky, včetně stažení z nabídky",
-          "Užívací práva, embargo a původ AI jsou součástí každé fotografie",
-          "Jedna implementace funguje s každou značkou, která používá Open Brand Exchange"
+          "Podle EAN přiřazené ke správné položce a velikosti",
+          "Změny přicházejí samy, včetně položek, které stáhnete z nabídky",
+          "Užívací práva, datum embarga a informace, zda byla použita AI, u každé fotografie",
+          "Software, který podporuje standard, funguje s každou značkou"
         ]
       },
       {
         "h": "Automatické nahrávání",
-        "p": "Portál si váš export stahuje automaticky, nebo ho dodávají vaše vlastní systémy.",
+        "p": "Váš portál pro prodejce si vaše produkty převezme sám, například každou noc. Nové kolekce jsou online dříve, bez ruční práce.",
         "items": [
-          "Plánovaný import z webové adresy, serveru SFTP nebo bucketu S3, bez kódu",
-          "Složka, která se automaticky publikuje nástrojem obx",
-          "Návody pro cron, GitHub Actions, n8n, Make a Zapier",
-          "Jeden formát CSV a jedno pravidlo pro názvy fotek: KO-1001_NVY_1.jpg"
+          "Každou noc z exportu vašeho PIM nebo ERP, bez dalšího softwaru",
+          "Nebo ze sdílené složky: co se tam uloží, to se zveřejní",
+          "Posílá se jen to, co se změnilo, takže aktualizace jsou rychlé",
+          "Jedno jasné uspořádání dat a jedno pravidlo pro názvy fotografií, například KO-1001_NVY_1.jpg"
         ]
       },
       {
         "h": "Zůstáváte vlastníkem",
-        "p": "Open Brand Exchange je standard, ne platforma. Provozujete vlastní portál, nebo ho za vás provozuje poskytovatel.",
+        "p": "Open Brand Exchange je standard, ne platforma. Svůj portál pro prodejce provozujete sami, nebo ho za vás provozuje partner.",
         "items": [
           "Vlastní provoz je zdarma: software je open source",
-          "Nebo provoz svěřte poskytovateli a poskytovatele kdykoli změňte",
+          "Nebo to svěřte partnerovi a partnera kdykoli změňte",
           "Vidíte, kdo co stahuje, podle prodejců",
           "Vy rozhodujete, kdo získá přístup, k jakým značkám a zda jsou povoleny originály"
         ]
@@ -215,11 +215,11 @@
       },
       {
         "k": "API klíče",
-        "v": "klíče pro software vašich prodejců: zobrazí se jednou a lze je kdykoli obnovit nebo zrušit"
+        "v": "osobní hesla pro software vašich prodejců: zobrazí se jednou a lze je kdykoli obnovit nebo zrušit"
       },
       {
         "k": "Automatické nahrávání",
-        "v": "klíče pro vaše systémy a oznámení, když prodejce požádá o přístup nebo skončí import"
+        "v": "váš export se přebírá podle plánu a dostanete zprávu, když prodejce požádá o přístup nebo když skončí import"
       },
       {
         "k": "Statistiky",
@@ -232,7 +232,6 @@
     ],
     "nextTitle": "Další krok",
     "nextHosting": "Vyberte hosting",
-    "nextAutomation": "Prohlédněte si návody na automatizaci",
     "labelNote": "Pokud chybí něco, co zákon na etiketě vyžaduje, třeba vlákenné složení nebo materiály boty, Open Brand Exchange vás při nahrání upozorní. Upozornění nikdy nebrání zveřejnění.",
     "bagsNote": "Kufry a tašky mají nyní rozměry (V × Š × H, hmotnost, objem) a vlastnosti (kolečka, zámek, odnímatelný popruh…), které každá značka měří stejně.",
     "startEyebrow": "Začněte zde",
@@ -248,21 +247,35 @@
       },
       {
         "h": "Nahrajte nebo automatizujte",
-        "p": "Uložte jako CSV UTF-8 a nahrajte soubor s fotkami na svůj portál, nebo nechte portál každou noc stáhnout váš export."
+        "p": "Uložte soubor v Excelu jako „CSV UTF-8“ a nahrajte ho s fotografiemi do svého portálu pro prodejce. Nebo nechte portál každou noc převzít váš export."
       },
       {
         "h": "Publikováno",
-        "p": "Vaši prodejci najdou vše na vašem portálu. Jejich software dostává každou změnu automaticky. Bez poplatků."
+        "p": "Vaši prodejci najdou vše ve vašem portálu pro prodejce a jejich software dostane každou změnu automaticky. Zdarma."
       }
     ],
     "startTemplate": "Stáhnout šablonu pro Excel",
     "partnersTitle": "Nebo spolupracujte s partnerem",
     "partnersP": "Celý proces může převzít poskytovatel. Například Photopilot nabízí bezplatný portál s propojením na OBX, plnou automatizaci procesu a propojení s vaším ERP na míru.",
-    "partnersCta": "Zobrazit poskytovatele"
+    "partnersCta": "Zobrazit poskytovatele",
+    "waysTitle": "Dva způsoby, jak začít, oba s portálem pro prodejce",
+    "ways": [
+      {
+        "h": "Ještě nemáte portál pro prodejce?",
+        "p": "Použijte bezplatný portál pro prodejce od Open Brand Exchange, vedle svých současných systémů.",
+        "cta": "Začněte se šablonou v Excelu"
+      },
+      {
+        "h": "Už máte portál pro prodejce?",
+        "p": "Zeptejte se svého dodavatele na podporu Open Brand Exchange. Váš portál pro prodejce zůstane a bude fungovat se standardem.",
+        "cta": "Co potřebuje vědět váš dodavatel"
+      }
+    ],
+    "nextTemplate": "Začněte se šablonou v Excelu"
   },
   "automation": {
     "h1": "Automatizace",
-    "lead": "Váš PIM, ERP, DAM nebo sdílená složka už data i fotografie má. Vyberte první návod, který sedí: všechny fungují s každým portálem Open Brand Exchange.",
+    "lead": "Vaše PIM, ERP, DAM nebo sdílená složka zůstává zdrojem. Váš portál pro prodejce si data a fotografie převezme automaticky, například každou noc, a zpřístupní je všem vašim prodejcům.",
     "chooseTitle": "Který návod se vám hodí?",
     "head": [
       "Máte…",
@@ -352,11 +365,19 @@
     "apiMore": "Všechny podrobnosti jsou ve specifikaci:",
     "apiSpec": "Ingest API",
     "apiAuto": "návody na automatizaci",
-    "apiSdk": "Go SDK"
+    "apiSdk": "Go SDK",
+    "heroTitle": "Automatizujte. Pracujte dál jako dosud.",
+    "heroChecks": [
+      "Žádný nový systém, o který se musíte starat",
+      "Vyberte si způsob: složka, soubor v Excelu nebo automatické propojení"
+    ],
+    "flowLabel": "Z vašich systémů k vašim prodejcům",
+    "techEyebrow": "Pro toho, kdo to nastavuje",
+    "techIntro": "Návody níže jsou pro toho, kdo spravuje vaše systémy. Nechcete nic nastavovat? Začněte se šablonou v Excelu, nebo se obraťte na partnera."
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Jeden portál je jedna značková firma na jednom serveru. Vy volíte, jak ho provozovat, od úplného outsourcingu po úplně vlastní provoz. Níže od nejjednoduššího po nejtechničtější.",
+    "lead": "Každá značka má svůj vlastní portál pro prodejce na vlastním serveru. Vy volíte, jak ho provozovat, od úplného outsourcingu po úplně vlastní provoz.",
     "p1Title": "3. Partner ho hostuje za vás",
     "p1P": "Nechcete hostovat sami? Partneři mohou portál hostovat a spravovat za vás.",
     "fieldBased": "Sídlo",
@@ -387,8 +408,8 @@
       "Adresu pro cron, kterou instalátor ukáže, přidejte jako úlohu cron v ovládacím panelu hostingu, každých 5 minut. I bez ní portál funguje."
     ],
     "phpDownload": "Stáhnout nejnovější vydání",
-    "p3Title": "3. Docker",
-    "p3P": "Na vlastním serveru nebo v jakémkoli cloudu, který spouští kontejnery. Jeden příkaz:",
+    "p3Title": "3. Váš vlastní server",
+    "p3P": "Na vlastním serveru nebo u libovolného cloudového poskytovatele. Spustíte ho jedním příkazem:",
     "composeP": "Nebo rovnou s HTTPS přes Caddy:",
     "envTitle": "Nastavení",
     "envPublicUrl": "veřejná adresa vašeho portálu",
@@ -407,7 +428,7 @@
     "compareTitle": "Tři edice, jeden portál",
     "compareP": "Tři edice dělají totéž a mají stejnou administraci i stejný portál pro prodejce. Zvolte tu, která sedí k vašemu hostingu; změnit ji můžete později.",
     "compareLink": "Zobrazit implementace",
-    "heroTitle": "Váš portál, kde chcete.",
+    "heroTitle": "Váš portál pro prodejce, kde chcete.",
     "heroLead": "Software je zdarma. Vy volíte, kde běží, a kdykoli se můžete přestěhovat.",
     "heroChecks": [
       "Software zdarma, platíte jen za hosting",
@@ -415,9 +436,9 @@
       "Všude stejný portál, takže můžete kdykoli přejít jinam",
       "Nechcete to dělat sami? Partner ho hostuje za vás"
     ],
-    "euCta": "Váš portál v Evropě",
+    "euCta": "Váš portál pro prodejce v Evropě",
     "euTitle": "1. Vlastní server v Evropě (doporučeno)",
-    "euP": "Většině značek stačí malý server u evropského poskytovatele. Návod níže používá Hetzner s datovými centry v Německu a Finsku. Stejně funguje jakýkoli server, na kterém běží Docker.",
+    "euP": "Pro většinu značek stačí malý server u evropského poskytovatele. Náš návod používá Hetzner s datovými centry v Německu a Finsku.",
     "euSteps": [
       "Vytvořte server u Hetzneru v Norimberku, Falkensteinu nebo Helsinkách se zapnutými zálohami.",
       "Nasměrujte svou doménu, například images.vaseznacka.cz, na server.",
@@ -432,11 +453,13 @@
     "webP": "Edice pro PHP běží na běžném evropském webhostingu s PHP a databází, například u TransIP, Strato nebo OVHcloud. Bez příkazů:",
     "altTitle": "4. Jiné cloudy",
     "altP": "Stejný portál běží také na Cloudflare Workers a na Google Cloud Run. Pokud služba nabízí region v Evropě, zvolte ho.",
-    "partnerLink": "Zobrazit partnery"
+    "partnerLink": "Zobrazit partnery",
+    "techTitle": "Technické podrobnosti pro vaše IT",
+    "techLead": "Příkazy, nastavení a instalační návody pro toho, kdo server nastavuje."
   },
   "retailers": {
     "h1": "Pro prodejce",
-    "lead": "Značky, které používají Open Brand Exchange, dodávají své fotografie a data o zboží v jednom jednotném formátu. Vy je pouze přijímáte, zdarma: v portálu každé značky ve svém prohlížeči, nebo přes jedno API přímo ve svém softwaru.",
+    "lead": "Značky, které používají Open Brand Exchange, dodávají své fotografie a data o zboží jednotným způsobem. Dostáváte je zdarma: v portálu značky, nebo automaticky ve svém vlastním softwaru.",
     "portalTitle": "Co nabízí portál značky",
     "portalP": "Každá značka provozuje vlastní portál pod svým jménem, například „Kestrel · {portal}“.",
     "portal": [
@@ -466,11 +489,11 @@
       }
     ],
     "apiTitle": "API klíč pro váš software",
-    "apiP": "Stahuje váš PIM, pokladní systém nebo e-shop fotografie automaticky? Pak pro tento software požádejte o API klíč. Software nejprve stáhne kompletní sadu a potom jen změny, včetně stažení z nabídky ze strany značky. Fotografie se k vašim položkám přiřazují podle EAN.",
-    "apiDev": "Pro vašeho vývojáře: příklad.",
+    "apiP": "Váš e-shop, PIM nebo pokladní systém si může vše stahovat automaticky, přiřazené k vašemu zboží podle EAN. Vyžádejte si k tomu v portálu značky API klíč: osobní heslo pro váš software.",
+    "apiDev": "Informace pro vašeho vývojáře",
     "toolsTitle": "Jaký software s tím funguje",
-    "toolsP": "Open Brand Exchange je otevřený standard, který může podporovat jakýkoli software. Photopilot ho zabudovává do svého softwaru pro prodejce. Ostatní dodavatelé mohou udělat totéž. Žádný konkrétní software není potřeba: postačí prohlížeč.",
-    "toolsLink": "Specifikace pro vývojáře",
+    "toolsP": "Otevřený standard může podporovat jakýkoli software; Photopilot ho zabudovává do svého softwaru pro prodejce. Žádný konkrétní software není potřeba: stačí prohlížeč.",
+    "toolsLink": "Informace pro dodavatele softwaru",
     "findTitle": "Jak najít značku",
     "findP": "Značky, které se rozhodnou být uvedeny, najdete v adresáři. Značka vám také může adresu svého portálu sdělit přímo.",
     "findLink": "Přejít na seznam značek",
@@ -482,7 +505,7 @@
     "label": {
       "eyebrow": "Data o zboží",
       "title": "Údaje z etikety s pokyny k údržbě jsou součástí každého artiklu.",
-      "p": "Složení podle částí, pokyny k údržbě v pořadí podle etikety a země původu jsou součástí každého artiklu, spolu s EAN každé velikosti. Váš e-shop je může zobrazit jako text nebo jako symboly údržby ve vlastním stylu. Pole odpovídají pravidlům EU pro označování textilií a kódům údržby podle ISO 3758, takže později mohou sloužit i jako podklad pro digitální pas výrobku.",
+      "p": "Složení podle částí, pokyny k údržbě v pořadí podle etikety a země původu jsou součástí každého artiklu, spolu s EAN každé velikosti. Váš e-shop je zobrazí jako text nebo jako symboly údržby, podle pravidel EU pro označování a kódů údržby podle ISO 3758.",
       "points": [
         "Složení podle částí (vrchový materiál, podšívka, výplň, podrážka) v procentech",
         "Pokyny k údržbě jako standardní kódy, v pořadí podle etikety",
@@ -498,7 +521,6 @@
       "origin": "Země původu",
       "sizes": "Velikosti a EAN",
       "size": "Velikost",
-      "codeLabel": "Stejný artikl v API",
       "fibres": {
         "recycled_polyester": "recyklovaný polyester",
         "polyamide": "polyamid",
@@ -569,8 +591,9 @@
     "howTitle": "Jak to získáte",
     "how": [
       "V prohlížeči: vyhledejte v portálu značky, vložte seznam EAN a stáhněte obrázky a údaje o artiklech.",
-      "Automaticky: váš e-shop, PIM nebo pokladní software si vše stáhne přes jediné API, stejné pro každou značku."
-    ]
+      "Automaticky: váš e-shop, PIM nebo pokladní systém si vše stáhne sám, pro každou značku stejným způsobem."
+    ],
+    "benefitsCta": "Najděte značku v adresáři"
   },
   "switchKit": {
     "subject": "Vaše produktové fotografie a data o zboží přes Open Brand Exchange?",
@@ -637,7 +660,48 @@
     ],
     "contribute": "Příspěvky probíhají přes pull requesty v repozitáři spec.",
     "governanceLink": "Jak se přijímají rozhodnutí",
-    "quickstart": "Rychlý start: OBX za 10 minut"
+    "quickstart": "Rychlý start: OBX za 10 minut",
+    "repos": [
+      {
+        "name": "spec",
+        "d": "Specifikace, schémata a testovací data"
+      },
+      {
+        "name": "obx-go",
+        "d": "Go SDK, nástroj obx a test shody"
+      },
+      {
+        "name": "node-ts",
+        "d": "Portál pro Cloudflare Workers"
+      },
+      {
+        "name": "node-go",
+        "d": "Portál pro Docker a Google Cloud Run"
+      },
+      {
+        "name": "node-php",
+        "d": "Portál pro běžný webhosting"
+      },
+      {
+        "name": "admin-ui",
+        "d": "Webové rozhraní každého portálu"
+      }
+    ],
+    "promptTitle": "Postavte to se svým AI asistentem",
+    "promptP": "Zkopírujte prompt do Claude, ChatGPT nebo Cursor, doplňte část v závorkách a nechte asistenta napsat kód podle specifikace.",
+    "prompts": [
+      {
+        "h": "Export z vašeho systému",
+        "note": "Pro značky a dodavatele ERP a PIM: products.csv a názvy obrázků."
+      },
+      {
+        "h": "Načtení OBX do vašeho softwaru",
+        "note": "Pro dodavatele e-shopů, PIM a pokladního softwaru: feed změn a obrázky."
+      }
+    ],
+    "title": "Open source, na GitHubu.",
+    "reposTitle": "Repozitáře",
+    "reposP": "Vše je open source na GitHubu: specifikace, sdílený kód a tři edice portálu."
   },
   "directory": {
     "h1": "Seznam značek",
@@ -702,7 +766,7 @@
       },
       {
         "q": "Potřebujeme vývojáře?",
-        "a": "Pro základy ne. Portál nainstalujete jedním kliknutím a plánovaný import z webové adresy, serveru SFTP nebo bucketu nevyžaduje žádný kód. Vývojář pomůže, pokud chcete přímo napojit PIM nebo ERP."
+        "a": "Pro základy ne: začněte se šablonou v Excelu a váš portál pro prodejce si může každou noc převzít váš export bez kódu. Vývojář pomůže jen tehdy, když chcete napojit své PIM nebo ERP přímo."
       },
       {
         "q": "Je to další platforma, ke které se musíme přidat?",
@@ -730,7 +794,7 @@
       },
       {
         "q": "Je to hotové?",
-        "a": "Ano, verze 0.2: specifikace, tři portály, příkaz obx a kontrola shody jsou vydané a volně k použití. Jsme na začátku: první značky se připojují právě teď."
+        "a": "Ano, verze 0.2: specifikace, tři edice portálu a nástroje jsou vydané a volně k použití. Jsme na začátku: první značky se připojují právě teď."
       },
       {
         "q": "Kdo za tím stojí?",
@@ -856,15 +920,15 @@
     "brandsFlow": [
       {
         "h": "Vaše systémy",
-        "p": "PIM, ERP nebo složka"
+        "p": "PIM, ERP, DAM nebo složka"
       },
       {
-        "h": "Váš portál",
-        "p": "vaše jméno, vaše doména"
+        "h": "Váš portál pro prodejce",
+        "p": "na otevřeném standardu, s vaším jménem"
       },
       {
         "h": "Vaši prodejci",
-        "p": "v prohlížeči i přes API"
+        "p": "v prohlížeči i ve vlastním softwaru"
       }
     ],
     "retailersH1": "Fotografie a data o zboží každé značky, vždy stejným způsobem",
@@ -879,7 +943,7 @@
       },
       {
         "h": "Váš obchod",
-        "p": "stažení nebo API, spárováno podle EAN"
+        "p": "stažení nebo automaticky, přiřazeno podle EAN"
       }
     ],
     "statusTitle": "Co je hotové a co přijde",
@@ -889,8 +953,8 @@
     "comingBadge": "Brzy",
     "brandsReady": [
       "Vlastní portál se správou, ve 25 jazycích, na vaší vlastní doméně",
-      "Import CSV a fotografií ručně nebo podle plánu z webové adresy, SFTP nebo S3",
-      "Nástroj obx a recepty pro cron, GitHub Actions, n8n, Make a Zapier",
+      "Nahrajte export z Excelu a fotografie ručně, nebo je nechte převzít každou noc",
+      "Automatické doručování z vašeho PIM, ERP nebo sdílené složky",
       "Žádosti o přístup, pozvánky a API klíče pro software vašich prodejců",
       "Tři edice: Cloudflare, Google Cloud & Docker a běžný webhosting"
     ],
@@ -903,7 +967,7 @@
       "Požádat o přístup a přihlásit se do portálu značky",
       "Hledat, filtrovat a vložit seznam EAN, abyste viděli, co je k dispozici a co chybí",
       "Stáhnout fotografie jako zip a data o zboží jako tabulku",
-      "API klíč pro váš software: nejdřív vše, pak už jen změny",
+      "API klíč pro váš software, aby nové a změněné produkty dostával sám",
       "Užívací práva, embargo a původ AI u každého obrázku"
     ],
     "retailersComing": [
@@ -920,7 +984,6 @@
   "site": {
     "nav": {
       "start": "Začít jako značka",
-      "docs": "Dokumentace",
       "preview": "Verze 0.2"
     },
     "footer": {
@@ -941,8 +1004,7 @@
       "portalArticle": "Položka v portálu: fotografie pro každou barvu, volba stažení (originál, web nebo čtverec) a EAN každé velikosti.",
       "adminOverview": "Přehled v administraci značky: první kroky, počty v katalogu, žádosti o přístup a poslední stahování prodejců.",
       "adminCatalog": "Katalog v administraci značky: osm publikovaných položek s velikostmi a fotografiemi.",
-      "adminStats": "Statistiky v administraci značky: stahování, fotografie a nejaktivnější prodejci za 30 dní.",
-      "adminAutomation": "Automatické nahrávání v administraci značky: hotové návody pro nástroj obx, cron, GitHub Actions a další."
+      "adminStats": "Statistiky v administraci značky: stahování, fotografie a nejaktivnější prodejci za 30 dní."
     },
     "home": {
       "eyebrow": "Otevřený standard · Software zdarma",
@@ -953,7 +1015,7 @@
       "proof": [
         {
           "v": "Otevřený",
-          "l": "standard, CC-BY-4.0"
+          "l": "standard, volně pro každého"
         },
         {
           "v": "3",
@@ -961,7 +1023,7 @@
         },
         {
           "v": "1",
-          "l": "API pro každou značku"
+          "l": "formát pro každou značku"
         },
         {
           "v": "25",
@@ -972,12 +1034,11 @@
           "l": "licenční poplatky"
         }
       ],
-      "codeCaption": "Co dostane software prodejce",
       "videoTitle": "Podívejte se, jak to funguje",
       "videoNote": "V angličtině, s anglickými titulky.",
       "flowEyebrow": "Jak to funguje",
       "flowTitle": "Když všechny strany strukturují data stejně, mají z toho užitek všechny strany.",
-      "flowLead": "Téměř u každého prodejce někdo kopíruje tabulky a znovu přepisuje produktová data pro každou značku, pod časovým tlakem u každé nové kolekce. Společný standard tuto práci odstraňuje. Zavádí se jednou a všem stranám přináší užitek po léta. Čas na lepší práci.",
+      "flowLead": "U mnoha prodejců někdo znovu přepisuje produktová data pro každou značku, pod časovým tlakem u každé nové kolekce. Společný standard tuto práci odstraní, pro všechny strany a na roky.",
       "flowCaption": "Co značka vloží, otevřený standard uprostřed a co prodejci dostanou.",
       "flow": {
         "inTitle": "Vstup",
@@ -1004,9 +1065,9 @@
       },
       "pillars": [
         {
-          "eyebrow": "Portál",
-          "h": "Portál pro nákupčí vašich prodejců.",
-          "p": "Nákupčí se přihlásí do vašeho portálu, vloží kódy EAN z objednávky a stáhnou přesně to, co potřebují: jednu fotku, jednu položku nebo ZIP s celým výběrem.",
+          "eyebrow": "Portál pro prodejce",
+          "h": "Váš portál pro prodejce, pro nákupčí vašich prodejců.",
+          "p": "Nákupčí se přihlásí do vašeho portálu pro prodejce, vloží EAN ze své objednávky a stáhnou přesně to, co potřebují: jednu fotografii, jednu položku nebo zip s celým výběrem.",
           "items": [
             "Hledání a filtry podle značky, sezóny, typu produktu a barvy",
             "Vložte seznam EAN a zjistěte, co je k dispozici a co chybí",
@@ -1016,33 +1077,33 @@
           "link": "Zobrazit z pohledu prodejce"
         },
         {
-          "eyebrow": "API",
-          "h": "Jedno API, pro každou značku stejné.",
-          "p": "Software prodejců stáhne kompletní sadu jednou a potom jen změny, včetně stažení z nabídky. Každá fotografie obsahuje užívací práva, datum embarga a původ AI.",
+          "eyebrow": "Jejich software",
+          "h": "Přímo do e-shopu prodejce.",
+          "p": "E-shop, PIM nebo pokladní systém prodejce může vaše produkty dostávat automaticky, včetně položek, které stáhnete z nabídky. Každá fotografie nese svá užívací práva a datum embarga.",
           "items": [
-            "Nejdřív úplná kopie, pak jen změny",
-            "Vyhledání podle EAN, přiřazené ke správné položce a velikosti",
-            "Webová, čtvercová a náhledová verze; originály, pokud je povolíte",
-            "Dodavatel softwaru ho implementuje jednou a funguje s každou značkou"
+            "Nové a změněné produkty přicházejí samy",
+            "Podle EAN přiřazené ke správné položce a velikosti",
+            "Fotografie ve webové, čtvercové a náhledové velikosti; originály, pokud je povolíte",
+            "Software, který podporuje standard, funguje s každou značkou"
           ],
-          "link": "Přečtěte si referenci API"
+          "link": "Jak to prodejci dostávají"
         },
         {
           "eyebrow": "Vaše systémy",
           "h": "Váš současný způsob práce zůstává zachován.",
-          "p": "Standard určuje, jak si prodejci obsah stahují. Jak se váš obsah dostane do portálu, je na vás: noční import z webové adresy, SFTP nebo S3, exportní složka nebo nástroj obx pro příkazovou řádku.",
+          "p": "Začněte s šablonou v Excelu, nebo nechte doručovat vaše vlastní systémy. Váš portál pro prodejce si může každou noc převzít váš export, takže nové kolekce jsou online bez ruční práce.",
           "items": [
-            "Noční import z webové adresy, SFTP nebo S3, bez kódu",
-            "Nástroj obx pro Windows, macOS a Linux posílá jen změny",
-            "Návody pro cron, GitHub Actions, n8n, Make a Zapier",
-            "Jeden formát CSV a jedno pravidlo pro názvy fotografií"
+            "Začněte s šablonou v Excelu, bez dalšího softwaru",
+            "Vaše PIM, ERP nebo sdílená složka může doručovat každou noc",
+            "Posílá se jen to, co se změnilo, takže aktualizace jsou rychlé",
+            "Jedno jasné uspořádání dat a jedno pravidlo pro názvy fotografií"
           ],
-          "link": "Prohlédněte si návody na automatizaci"
+          "link": "Začněte se šablonou v Excelu"
         }
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Provozujte, kde chcete. Plaťte jen hosting.",
-      "editionsLead": "Tři edice stejného portálu. Mluví stejným API, takže můžete přejít z jedné na druhou.",
+      "editionsLead": "Tři edice téhož portálu pro prodejce. Fungují stejně, takže můžete kdykoli přejít z jedné na druhou.",
       "editionsLink": "Porovnat možnosti hostingu",
       "editionFields": [
         "Běží na",
@@ -1054,7 +1115,7 @@
         {
           "tag": "Doporučeno",
           "name": "Vlastní server v Evropě",
-          "runs": "Server u evropského poskytovatele, například Hetzner (Německo), s Dockerem",
+          "runs": "Server u evropského poskytovatele, například Hetzner (Německo)",
           "need": "Server a doménové jméno",
           "setup": "Jeden příkaz, pak průvodce nastavením",
           "cost": "Server, který si pronajímáte",
@@ -1094,15 +1155,15 @@
       "trust": [
         {
           "h": "Otevřená specifikace",
-          "p": "Verze 0.2, pod licencí CC-BY-4.0. Implementovat ji smí kdokoli, i pro komerční účely."
+          "p": "Verze 0.2. Otevřená specifikace, kterou smí používat kdokoli, i komerčně."
         },
         {
           "h": "Vaše data zůstávají vaše",
           "p": "Značka může kdykoli exportovat všechna svá data a obrázky a přejít k jinému poskytovateli nebo si vše provozovat sama."
         },
         {
-          "h": "Open-source licence",
-          "p": "SDK, nástroj obx a webové rozhraní jsou pod Apache-2.0. Tři edice portálu jsou pod AGPL-3.0, takže vylepšení zůstávají otevřená."
+          "h": "Software s otevřeným zdrojovým kódem",
+          "p": "Software může kdokoli používat, prověřit a vylepšit. Vylepšení portálů zůstávají otevřená pro všechny."
         },
         {
           "h": "Nadace v založení",
@@ -1118,19 +1179,10 @@
         }
       ],
       "trustLink": "Jak je projekt spravován",
-      "devEyebrow": "Pro vývojáře",
-      "devTitle": "Open source, na GitHubu.",
-      "devP": "OpenAPI 3.1, JSON Schemas, fiktivní testovací značka a hotový software. Funguje jakýkoli HTTP klient.",
-      "devLinks": [
-        "Reference API",
-        "Specifikace na GitHubu",
-        "Go SDK a nástroj obx",
-        "Chybové kódy"
-      ],
       "faqTitle": "Na co se značky ptají nejdřív",
       "faqLink": "Všechny dotazy",
-      "closingTitle": "Umožněte prodejcům stahovat váš obsah přímo.",
-      "closingP": "Zřiďte si vlastní portál. Nebo nám popište své systémy a prodejce a přispějte k prvnímu vydání.",
+      "closingTitle": "Váš portál pro prodejce, na otevřeném standardu.",
+      "closingP": "Začněte s bezplatným portálem pro prodejce a svým souborem v Excelu. Nebo nám řekněte o svých systémech a prodejcích a pomozte utvářet první verzi.",
       "closingMail": "Napište nám",
       "rolesEyebrow": "Kdo co dělá",
       "rolesTitle": "Značky publikují. Prodejci přijímají. Software propojuje.",
@@ -1138,7 +1190,7 @@
       "roles": [
         {
           "h": "Značky",
-          "p": "Jednou publikovat, pro každého prodejce.",
+          "p": "Váš portál pro prodejce, na otevřeném standardu.",
           "items": [
             "Bezplatný software, nebo poskytovatel, který zajistí celý proces",
             "Začněte u vlastního souboru Excel nebo systému",
@@ -1167,8 +1219,8 @@
           "items": [
             "Portály značek, B2B a obrazové portály, DAM",
             "Software pro ERP, PIM, e-shop a pokladnu",
-            "Jedno otevřené API, zdarma k použití",
-            "Nejdřív úplná kopie, potom jen změny",
+            "Jeden otevřený standard, k použití zdarma",
+            "Nové a změněné produkty přicházejí automaticky",
             "Bezplatné označení „Kompatibilní s Open Brand Exchange“"
           ],
           "cta": "Připojte svůj systém"
@@ -1176,11 +1228,11 @@
       ],
       "portalsEyebrow": "Otevřené každému portálu",
       "portalsTitle": "Stávající portály lze připojit ke standardu.",
-      "portalsLead": "Připojit se může každá strana: značky, prodejci, portály i software pro ERP, PIM a DAM. Každý systém, který mluví standardem, funguje s každým dalším systémem, který jím mluví také.",
+      "portalsLead": "Připojit se mohou značky, prodejci, portály i software pro ERP, PIM a DAM. Každý systém, který podporuje standard, funguje se všemi ostatními.",
       "portalTypes": [
         {
           "h": "Portály značek a B2B portály",
-          "p": "Přidejte OBX API ke svým stávajícím službám, aby se vaše značky dostaly do každého systému prodejců."
+          "p": "Nabídněte standard vedle svých stávajících služeb, aby vaše značky dosáhly do systémů každého prodejce."
         },
         {
           "h": "Obrazové portály a DAM",
@@ -1191,52 +1243,13 @@
           "p": "Publikujte vlákenné složení, pokyny k údržbě, velikosti a EAN přímo ze systému, kde jsou uložené."
         }
       ],
-      "portalsCta": "Jak se připojit",
+      "portalsCta": "Jak se zapojit",
       "heroChecks": [
         "Otevřené a bez účelu zisku, zdarma k použití",
         "Všichni vaši prodejci najednou",
         "Začíná u vašeho Excelu nebo systému",
         "Obrázky včetně užívacích práv",
         "Vaše data zůstávají vaše"
-      ],
-      "devRepos": [
-        {
-          "name": "spec",
-          "d": "Specifikace, schémata a testovací data"
-        },
-        {
-          "name": "obx-go",
-          "d": "Go SDK, nástroj obx a test shody"
-        },
-        {
-          "name": "node-ts",
-          "d": "Portál pro Cloudflare Workers"
-        },
-        {
-          "name": "node-go",
-          "d": "Portál pro Docker a Google Cloud Run"
-        },
-        {
-          "name": "node-php",
-          "d": "Portál pro běžný webhosting"
-        },
-        {
-          "name": "admin-ui",
-          "d": "Webové rozhraní každého portálu"
-        }
-      ],
-      "devQuickstart": "OBX za 10 minut",
-      "promptTitle": "Postavte to se svým AI asistentem",
-      "promptP": "Zkopírujte prompt do Claude, ChatGPT nebo Cursor, doplňte část v závorkách a nechte asistenta napsat kód podle specifikace.",
-      "prompts": [
-        {
-          "h": "Export z vašeho systému",
-          "note": "Pro značky a dodavatele ERP a PIM: products.csv a názvy obrázků."
-        },
-        {
-          "h": "Načtení OBX do vašeho softwaru",
-          "note": "Pro dodavatele e-shopů, PIM a pokladního softwaru: feed změn a obrázky."
-        }
       ],
       "scopeLabel": "Kategorie",
       "scopeNow": "Verze 0.2: oblečení, obuv, tašky a zavazadla",
@@ -1253,10 +1266,11 @@
         "Otevřené a bez účelu zisku: nepovinné partnerské příspěvky pokrývají jen náklady nadace."
       ],
       "portalsExample": "Například Photopilot implementuje Open Brand Exchange a obsluhuje obě strany: značky (portál, automatizace, integrace s ERP, fotografie) a prodejce (příjem a zpracování produktového obsahu).",
-      "ownershipNote": "V zásadě portál patří značce: váš vlastní portál a vaše vlastní data, na vašem vlastním hostingu, například v EU u Hetzneru, nebo hostované za vás."
+      "ownershipNote": "Portál pro prodejce patří značce: vaše vlastní data, na vašem vlastním hostingu v EU, nebo hostované za vás.",
+      "fairCta": "Najít partnera"
     },
     "pages": {
-      "brandsH1": "Nastavte jednou. Pro všechny prodejce najednou.",
+      "brandsH1": "Váš portál pro prodejce, na otevřeném standardu.",
       "retailersSoftware": "Pro váš software",
       "hostingEditions": "Tři edice"
     }
