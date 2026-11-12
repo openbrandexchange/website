@@ -26,7 +26,8 @@ interface Props {
 
 const { lang, page } = Astro.props;
 const t = messages[lang];
-const m = t.meta[page];
+// The check page keeps its strings (title and description too) in its own locale section.
+const m = page === 'check' ? t.check.meta : t.meta[page];
 const title = page === 'home' ? m.title : `${m.title} · Open Brand Exchange`;
 const site = Astro.site!.toString().replace(/\/$/, '');
 const canonical = site + url(lang, page);

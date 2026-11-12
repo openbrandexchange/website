@@ -66,7 +66,7 @@ test('the mobile menu toggles and reports its state', async ({ page, isMobile })
 test('no page in any language scrolls sideways on a phone', async ({ page, isMobile }) => {
   test.skip(!isMobile, 'phone only');
   test.setTimeout(180_000);
-  const slugs = ['', 'for-brands/', 'automation/', 'hosting/', 'partners/', 'for-retailers/', 'developers/', 'directory/', 'downloads/', 'faq/', 'governance/', 'privacy/', 'cookies/', 'imprint/'];
+  const slugs = ['', 'for-brands/', 'automation/', 'hosting/', 'partners/', 'for-retailers/', 'developers/', 'check/', 'directory/', 'downloads/', 'faq/', 'governance/', 'privacy/', 'cookies/', 'imprint/'];
   const wide: string[] = [];
   for (const lang of langs) {
     for (const slug of slugs) {

@@ -1,0 +1,146 @@
+---
+// The online OBX compatibility check: a static form and an empty result area. /js/check.js runs
+// the check against /api/check, streams the results in and renders a stored report (?r=<id>).
+// Honesty rule: the page only ever says "passes the online compatibility check", never that a
+// portal is compatible; that needs the full conformance test (see the partners page).
+import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
+import { messages, url, type Lang } from '../i18n';
+import { CHECK_API, SPEC_TEST_URL, TURNSTILE_SCRIPT, TURNSTILE_SITE_KEY } from '../data/check';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = messages[lang];
+const c = t.check;
+const conformance = url(lang, 'developers', '#conformance');
+
+// Everything the script needs to write, in this page's language.
+const { meta: _meta, about: _about, ...strings } = c;
+const config = JSON.stringify({
+  lang,
+  api: CHECK_API,
+  spec: SPEC_TEST_URL,
+  confirm: url(lang, 'partners', '#test'),
+  share: url(lang, 'check'),
+  copy: t.common.copy,
+  copied: t.common.copied,
+  t: strings,
+});
+const tiers = ['local', 'api_key', 'fixtures', 'other'] as const;
+---
+
+<PageHero eyebrow={c.eyebrow} title={c.h1} lead={c.lead} />
+
+<section class="band" aria-labelledby="check-form-title">
+  <div class="wrap split even top">
+    <div class="split-copy">
+      <h2 id="check-form-title">{c.formTitle}</h2>
+      <form
+        class="check-form"
+        method="post"
+        action={CHECK_API}
+        novalidate
+        data-check-form
+        data-config={config}
+        data-sitekey={TURNSTILE_SITE_KEY}
+        data-turnstile-src={TURNSTILE_SCRIPT}
+      >
+        <noscript>
+          <p class="note">{c.noscript} <a href={conformance}>{c.fullRun}</a></p>
+        </noscript>
+        <div class="field">
+          <label for="check-url">{c.urlLabel}</label>
+          <p id="check-url-hint" class="field-hint">{c.urlHint}</p>
+          <input
+            id="check-url"
+            name="url"
+            type="url"
+            inputmode="url"
+            autocomplete="url"
+            spellcheck="false"
+            required
+            placeholder="https://"
+            aria-describedby="check-url-hint check-url-error"
+          />
+          <p id="check-url-error" class="field-error" hidden></p>
+        </div>
+        <fieldset class="field-group">
+          <legend>{c.keyLegend}</legend>
+          <p id="check-key-hint" class="field-hint">{c.keyHint}</p>
+          <div class="field">
+            <label for="check-client-id">{c.clientIdLabel}</label>
+            <input
+              id="check-client-id"
+              name="client_id"
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              aria-describedby="check-key-hint check-key-error"
+            />
+          </div>
+          <div class="field">
+            <label for="check-client-secret">{c.clientSecretLabel}</label>
+            <input
+              id="check-client-secret"
+              name="client_secret"
+              type="password"
+              autocomplete="off"
+              spellcheck="false"
+              aria-describedby="check-key-hint check-key-error"
+            />
+          </div>
+          <p id="check-key-error" class="field-error" hidden></p>
+        </fieldset>
+        <div class="check-robot" data-check-turnstile></div>
+        <p class="actions">
+          <button class="button primary lg" type="submit" disabled data-check-submit>{c.submit}</button>
+        </p>
+        <div class="check-error" role="alert" tabindex="-1" data-check-error hidden></div>
+      </form>
+    </div>
+    <aside class="split-visual card" aria-labelledby="check-about">
+      <h2 id="check-about" class="card-title">{c.aboutTitle}</h2>
+      <ul class="checks">
+        {c.about.map((item) => <li>{item}</li>)}
+      </ul>
+      <p><a class="link-arrow" href={conformance}>{c.fullRun} <Icon name="arrow" class="arrow" /></a></p>
+    </aside>
+  </div>
+</section>
+
+<section class="band band-alt" aria-labelledby="check-results-title" data-check-results hidden>
+  <div class="wrap check-results">
+    <h2 id="check-results-title" tabindex="-1">{c.resultsTitle}</h2>
+    <p class="check-progress" role="status" aria-live="polite" data-check-status></p>
+    <div class="check-summary" tabindex="-1" data-check-summary hidden></div>
+    <dl class="check-meta" data-check-meta hidden></dl>
+    <div class="check-share" data-check-share hidden>
+      <h3>{c.shareTitle}</h3>
+      <label for="check-share-link">{c.shareLabel}</label>
+      <div class="check-share-row">
+        <input id="check-share-link" type="text" readonly aria-describedby="check-share-note" data-check-share-link />
+        <button class="button secondary" type="button" data-check-copy>{t.common.copy}</button>
+      </div>
+      <p id="check-share-note" class="small muted" data-check-share-note>{c.shareP}</p>
+    </div>
+    <div class="check-group" data-group="ran" hidden>
+      <h3>{c.ranTitle}</h3>
+      <ol class="check-list" data-list="ran"></ol>
+    </div>
+    <div class="check-group" data-group="skipped" hidden>
+      <h3>{c.skippedTitle}</h3>
+      {
+        tiers.map((tier) => (
+          <div class="check-tier" data-group={tier} hidden>
+            <p class="check-tier-note">{c.tiers[tier]}</p>
+            <ol class="check-list" data-list={tier}></ol>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script src="/js/check.js" defer is:inline></script>

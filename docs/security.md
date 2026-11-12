@@ -13,7 +13,7 @@ publish, the scripts we run in visitors' browsers, and the deploy pipeline.
 
 | Header | Value | Why |
 |---|---|---|
-| Content-Security-Policy | `default-src 'self'`, scripts only from the site and (if statistics are on) `static.cloudflareinsights.com`, no inline script or style, `frame-ancestors 'none'`, `object-src 'none'`, `base-uri 'self'`, `form-action 'self'` | nothing but our own files runs; the tests fail on any inline script or style attribute and on any CSP violation in the browser |
+| Content-Security-Policy | `default-src 'self'`, scripts only from the site, (if statistics are on) `static.cloudflareinsights.com` and Cloudflare Turnstile (`challenges.cloudflare.com`, script and frame, loaded on the online check page only), no inline script or style, `frame-ancestors 'none'`, `object-src 'none'`, `base-uri 'self'`, `form-action 'self'` | nothing but our own files runs; the tests fail on any inline script or style attribute and on any CSP violation in the browser |
 | Strict-Transport-Security | `max-age=31536000; includeSubDomains` | HTTPS only, also on subdomains; not preloaded, so it can still be undone |
 | X-Frame-Options / frame-ancestors | `DENY` / `'none'` | no clickjacking |
 | Referrer-Policy | `strict-origin-when-cross-origin` | other sites see at most our origin |

@@ -1,0 +1,10 @@
+# Cloudflare Pages configuration for openbrandexchange.com (npm run deploy). With this file the
+# project's bindings live here, not in the dashboard.
+name = "openbrandexchange"
+pages_build_output_dir = "./dist"
+compatibility_date = "2026-09-29"
+
+# /api/check calls the online compatibility check (obx-go deploy/checker).
+[[services]]
+binding = "CHECKER"
+service = "obx-checker"

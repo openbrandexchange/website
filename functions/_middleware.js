@@ -7,7 +7,7 @@
 
 /** The page slugs of src/i18n.ts (tests/site.test.mjs checks they match). */
 export const PAGE_SLUGS = [
-  'for-brands', 'automation', 'hosting', 'partners', 'for-retailers', 'developers', 'directory',
+  'for-brands', 'automation', 'hosting', 'partners', 'for-retailers', 'developers', 'check', 'directory',
   'downloads', 'faq', 'governance', 'privacy', 'cookies', 'imprint',
 ];
 const LANGS = [

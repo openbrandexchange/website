@@ -8,7 +8,7 @@ import { checkSite } from '../tools/check-links.mjs';
 
 const dist = new URL('../dist/', import.meta.url);
 const read = (path) => readFileSync(new URL(path, dist), 'utf8');
-const slugs = ['', 'for-brands/', 'automation/', 'hosting/', 'partners/', 'for-retailers/', 'developers/', 'directory/', 'downloads/', 'faq/', 'governance/', 'privacy/', 'cookies/', 'imprint/'];
+const slugs = ['', 'for-brands/', 'automation/', 'hosting/', 'partners/', 'for-retailers/', 'developers/', 'check/', 'directory/', 'downloads/', 'faq/', 'governance/', 'privacy/', 'cookies/', 'imprint/'];
 const built = existsSync(new URL('index.html', dist));
 
 test('every page exists in every language, with the right lang, canonical and hreflang set', { skip: !built && 'dist/ not built' }, () => {

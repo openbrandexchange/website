@@ -17,6 +17,7 @@ const columns = [
     title: f.developers,
     links: [
       page('developers'),
+      { href: url(lang, 'check'), label: t.check.linkLabel },
       { href: '/reference/', label: f.reference },
       { href: '/errors/', label: f.errors },
       { href: repo('spec'), label: f.spec },
