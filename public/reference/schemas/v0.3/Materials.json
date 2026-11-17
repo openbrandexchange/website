@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://openbrandexchange.com/schemas/v0.3/Materials.json",
+  "title": "Materials",
+  "description": "Fibre composition per part (textile labelling regulation / DPP ready). Parts, materials and qualifiers are terms: a stable `code` and its `name` per language. For a code in the vocabulary of the specification (vocabularies/*.json) a node returns the vocabulary's name; for another code the name it was given, or null. A language without a name is omitted, never an empty string.",
+  "type": "array",
+  "$defs": {
+    "term": {
+      "type": "object",
+      "description": "A stable code with its name per language. On write paths `name` may be omitted; responses always include it (null when unknown).",
+      "properties": {
+        "code": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]{0,63}$"
+        },
+        "name": {
+          "anyOf": [
+            {
+              "$ref": "LocalizedText.json"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "code"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^x-[a-z0-9]+-[a-z0-9_-]+$": true
+      }
+    }
+  },
+  "items": {
+    "type": "object",
+    "properties": {
+      "part": {
+        "allOf": [
+          {
+            "$ref": "#/$defs/term"
+          }
+        ],
+        "description": "Part of the article. Codes in vocabularies/parts.json: main, outer, lining, filling, padding, trim, pocket_lining, shell (luggage), handle, strap, and for footwear upper, sole, insole. 'main' when the product has one composition; its name is null. Unknown codes are allowed.",
+        "examples": [
+          {
+            "code": "main",
+            "name": null
+          },
+          {
+            "code": "lining",
+            "name": {
+              "en": "Lining",
+              "nl": "Voering",
+              "de": "Futter",
+              "fr": "Doublure"
+            }
+          }
+        ]
+      },
+      "fibers": {
+        "type": "array",
+        "minItems": 1,
+        "description": "The percentages of one part SHOULD sum to 100 when every fibre states one; a fibre without a percentage has `percentage` null.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "material": {
+              "allOf": [
+                {
+                  "$ref": "#/$defs/term"
+                }
+              ],
+              "description": "Material code: the English textile fibre name of Annex I of Reg. (EU) 1007/2011 in lowercase with _ (linen for flax), e.g. cotton, wool, polyester, polyamide, elastane, viscose, lyocell; the list with names is vocabularies/materials.json. Recycled or organic content is a qualifier, not a material."
+            },
+            "percentage": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "exclusiveMinimum": 0,
+              "maximum": 100,
+              "description": "Share of the part in percent, or null when the brand does not state one (leather on a bag, a trim, a composition without percentages). Responses always include the property; on write it may be left out (= null)."
+            },
+            "qualifier": {
+              "deprecated": true,
+              "writeOnly": true,
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/term"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Deprecated, write paths only: the single qualifier of drafts of 0.3. A node reads it as `qualifiers: [it]` when `qualifiers` is absent (null = none; when both are present `qualifiers` wins) and warns `qualifier_deprecated`. A response never contains it."
+            },
+            "qualifiers": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/term"
+              },
+              "description": "What the fibre is, apart from which fibre, in the order the brand states it: organic, in_conversion, recycled, pre_consumer, post_consumer, regenerative (vocabularies/qualifiers.json; unknown codes are allowed, a code appears at most once). Empty = none. A node returns [] when the fibre has none; on write the property may be left out (= none)."
+            }
+          },
+          "required": [
+            "material"
+          ],
+          "additionalProperties": false,
+          "patternProperties": {
+            "^x-[a-z0-9]+-[a-z0-9_-]+$": true
+          }
+        }
+      }
+    },
+    "required": [
+      "part",
+      "fibers"
+    ],
+    "additionalProperties": false,
+    "patternProperties": {
+      "^x-[a-z0-9]+-[a-z0-9_-]+$": true
+    }
+  }
+}

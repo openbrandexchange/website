@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, etusivu",
     "copy": "Kopioi",
     "copied": "Kopioitu",
-    "draft": "Versio 0.2 on julkaistu. Määrittely ja ohjelmisto ovat vapaasti käytettävissä.",
+    "draft": "Versio 0.3 on julkaistu. Määrittely ja ohjelmisto ovat vapaasti käytettävissä.",
     "footerAbout": "Maksuton ja avoin tapa brändeille jakaa tuotekuvat ja tuotetiedot jälleenmyyjilleen.",
     "footerMore": "Lisää",
     "footerSource": "Lähdekoodi ja määrittely",
@@ -156,7 +156,7 @@
         "p": "Yksi julkaisu kaikille jälleenmyyjille. Ei enää tiedostonsiirtoja, zip-sähköposteja eikä erillistä integraatiota jokaiselle kaupalle."
       }
     ],
-    "status": "Open Brand Exchange on alussa. Määrittelyn ja ohjelmiston versio 0.2 on julkaistu ja vapaasti käytettävissä. Emme näytä asiakkaita tai lukuja, joita ei vielä ole.",
+    "status": "Open Brand Exchange on alussa. Määrittelyn ja ohjelmiston versio 0.3 on julkaistu ja vapaasti käytettävissä. Emme näytä asiakkaita tai lukuja, joita ei vielä ole.",
     "statusLink": "Lue, miten sitä hallinnoidaan"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "Pesulapun tiedot sisältyvät jokaiseen tuotteeseen.",
       "p": "Materiaalikoostumus osittain, hoito-ohjeet pesulapun järjestyksessä ja valmistusmaa tulevat jokaisen tuotteen mukana, jokaisen koon EAN-koodin rinnalla. Verkkokauppasi näyttää ne tekstinä tai hoito-ohjemerkkeinä EU:n merkintäsääntöjen ja ISO 3758 -hoito-ohjekoodien mukaisesti.",
       "points": [
-        "Materiaalit osittain (päällinen, vuori, täyte, pohja) prosentteina",
+        "Materiaalit osittain (päällinen, vuori, täyte, pohja) prosentteina sekä kuiduittain tieto siitä, onko kuitu kierrätetty, luomu tai vastaava",
         "Hoito-ohjeet vakiokoodeina pesulapun järjestyksessä",
         "Valmistusmaa sekä jokaisen koon ja värin EAN"
       ],
@@ -629,7 +629,7 @@
     "h1": "Kehittäjille",
     "lead": "Open Brand Exchange on määrittely, jossa on kolme APIa, JSON Schemat, testidata ja yhdenmukaisuustestit. Määrittely on lähde; toteutukset seuraavat sitä.",
     "specTitle": "Määrittely",
-    "specP": "Versio 0.2. OpenAPI 3.1, JSON Schema 2020-12, esimerkit ja kuvitteellinen testibrändi Kestrel Outfitters. Lisenssi CC-BY-4.0: vapaasti toteutettavissa, myös kaupallisesti.",
+    "specP": "Versio 0.3. OpenAPI 3.1, JSON Schema 2020-12, esimerkit ja kuvitteellinen testibrändi Kestrel Outfitters. Lisenssi CC-BY-4.0: vapaasti toteutettavissa, myös kaupallisesti.",
     "specStart": "Aloita tiedostosta protocol.md",
     "apisTitle": "Kolme APIa",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: tavallinen webhotelli",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Rakennatko oman toteutuksen tai asiakkaan? Kerro siitä issuella tai pull requestilla; se lisätään taulukkoon, kun se läpäisee yhdenmukaisuustestit.",
     "docsTitle": "Dokumentit",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Avointa lähdekoodia, GitHubissa.",
     "reposTitle": "Repositoriot",
-    "reposP": "Kaikki on avointa lähdekoodia GitHubissa: määrittely, yhteinen koodi ja kolme portaaliversiota."
+    "reposP": "Kaikki on avointa lähdekoodia GitHubissa: määrittely, yhteinen koodi ja kolme portaaliversiota.",
+    "newTitle": "Uutta versiossa 0.3",
+    "newItems": [
+      "Materiaalit ja hoito-ohjeet ovat koodeja, joilla on nimet englanniksi, hollanniksi, saksaksi ja ranskaksi. Ne tulevat yhteisistä sanastoista osoitteessa /vocabularies/v0.3/.",
+      "Useita kestävyysväitteitä kuitua kohden: kierrätetty, luomu, siirtymävaiheessa, pre-consumer, post-consumer ja regeneratiivinen. Tiedostossa esimerkiksi: 100% polyester (recycled) (post_consumer).",
+      "Pysyvät varianttitunnisteet: oletuksena tuotenumero, väri ja koko, ei koskaan EAN. EAN voi siis tulla tai muuttua myöhemmin ilman, että syntyy uusi variantti.",
+      "Laajennukset: omat x-<vendor>-<name>-kenttäsi tallennetaan ja palautetaan, eikä tuntematon kenttä koskaan kaada kirjoitusta.",
+      "Uudet koodit: virhe idempotency_key_reused sekä varoitukset material_unknown ja qualifier_deprecated. Jokaisella koodilla on oma sivunsa polussa /errors/.",
+      "Versiosta 0.3 alkaen /obx/v1-polun nykyiset rakenteet muuttuvat vain lisäyksin. Suunnitteilla versioon 0.4: koti ja urheilu, haku ja suodattimet sekä paremmat webhookit."
+    ],
+    "newLink": "Koko muutosloki"
   },
   "directory": {
     "h1": "Brändihakemisto",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Onko se valmis?",
-        "a": "Kyllä, versio 0.2: määrittely, kolme portaaliversiota ja työkalut on julkaistu ja vapaasti käytettävissä. Olemme alussa: ensimmäiset brändit liittyvät nyt."
+        "a": "Kyllä, versio 0.3: määrittely, kolme portaaliversiota ja työkalut on julkaistu ja vapaasti käytettävissä. Olemme alussa: ensimmäiset brändit liittyvät nyt."
       },
       {
         "q": "Kuka sen takana on?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "Mikä on valmista ja mitä on tulossa",
-    "readyTitle": "Valmiina versiossa 0.2",
+    "readyTitle": "Valmiina versiossa 0.3",
     "comingTitle": "Tulossa",
     "readyBadge": "Valmis",
     "comingBadge": "Pian",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Kysyttävää, tai haluatko mukaan alusta asti?",
     "ctaBrands": "Etsimme brändejä, jotka haluavat olla muokkaamassa ensimmäistä versiota: mitä järjestelmiä käytät, ja kuinka monta jälleenmyyjää palvelet? Kirjoita meille.",
     "ctaRetailers": "Etsimme jälleenmyyjiä, jotka haluavat olla muokkaamassa ensimmäistä versiota: mitkä brändit haluaisit yhdistää, ja mitä ohjelmistoa käytät? Kirjoita meille.",
-    "footer": "Kohdan ”Tulossa” toiminnot ovat kehitteillä. Versio 0.2, {date}."
+    "footer": "Kohdan ”Tulossa” toiminnot ovat kehitteillä. Versio 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Aloita brändinä",
-      "preview": "Versio 0.2"
+      "preview": "Versio 0.3"
     },
     "footer": {
       "tagline": "Avoin standardi tuotekuvien ja tuotetietojen jakamiseen brändien ja jälleenmyyjien välillä.",
@@ -1022,7 +1032,7 @@
       "errors": "Virhekoodit",
       "spec": "Määrittely",
       "sdk": "Go SDK ja obx-työkalu",
-      "status": "Versio 0.2 on julkaistu vaatteille, kengille, laukuille ja matkalaukuille. Määrittely ja ohjelmisto ovat vapaasti käytettävissä."
+      "status": "Versio 0.3 on julkaistu vaatteille, kengille, laukuille ja matkalaukuille. Määrittely ja ohjelmisto ovat vapaasti käytettävissä."
     },
     "shots": {
       "portalCatalog": "Kuvitteellisen Kestrel-brändin jälleenmyyjäportaali jälleenmyyjän näkökulmasta: kahdeksan tuotetta ja suodattimet brändin, tuotetyypin ja värin mukaan.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Avoin määrittely",
-          "p": "Versio 0.2. Avoin määrittely, jota kuka tahansa saa käyttää, myös kaupallisesti."
+          "p": "Versio 0.3. Avoin määrittely, jota kuka tahansa saa käyttää, myös kaupallisesti."
         },
         {
           "h": "Tietosi pysyvät sinun",
@@ -1278,8 +1288,8 @@
         "Tietosi pysyvät sinun"
       ],
       "scopeLabel": "Kategoriat",
-      "scopeNow": "Versio 0.2: vaatteet, kengät, laukut ja matkalaukut",
-      "scopeNext": "Koti ja urheilu: kehitteillä versioon 0.3",
+      "scopeNow": "Versio 0.3: vaatteet, kengät, laukut ja matkalaukut",
+      "scopeNext": "Koti ja urheilu: kehitteillä versioon 0.4",
       "fairEyebrow": "Reilu hinnoittelu",
       "fairTitle": "Maksa palveluista, älä pääsystä omiin tietoihisi.",
       "fairLead": "Tuotetietojen vaihtamisen ei pitäisi maksaa mitään brändiä tai jälleenmyyjää kohden.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "Tuotteiden haku viivakoodilla (EAN) antaa odotetun vastauksen; liian monta koodia kerralla hylätään.",
       "P-CAT-4": "Tuotteet, joita jälleenmyyjä ei saa nähdä, vastaavat ”ei löytynyt”, joten niiden olemassaoloa ei paljasteta.",
       "P-CAT-5": "Matkalaukkujen, laukkujen ja kenkien testituotteet tulevat ulos täsmälleen odotetuilla tuotetiedoilla: materiaalit, mitat, ominaisuudet ja sertifikaatit.",
-      "P-CAT-6": "Jokaisella tuotteella on version 0.2 tuotetiedot oikeassa muodossa, ja materiaaleilla ja hoito-ohjemerkeillä on oikeat nimet.",
+      "P-CAT-6": "Jokaisella tuotteella on version 0.3 tuotetiedot oikeassa muodossa, ja materiaaleilla ja hoito-ohjemerkeillä on oikeat nimet.",
       "P-MEDIA-1": "Testikuvissa on odotetut tiedot, kuten tieto tekoälyn käytöstä, julkaisuvapautuksen päivät ja alkuperäisen puuttuminen.",
       "P-MEDIA-2": "Jokainen kuvatiedosto vastaa tarkistussummaansa ja tukee välimuistia, osittaisia latauksia ja väliaikaisia linkkejä.",
       "P-MEDIA-3": "Alkuperäiset tiedostot toimitetaan muuttamattomina; verkko- ja pikkukuvaversioilla on oikea koko ja muoto, eikä niitä koskaan suurenneta.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "Portaali kertoo ohjelmistolle pyyntörajansa ja ilmoittaa liian monen pyynnön jälkeen, milloin yrittää uudelleen.",
       "P-EXP-1": "Täysi vienti (zip-tiedosto, jossa on luettelo tiedostoista ja tarkistussummista) on täydellinen ja oikea.",
       "P-HOOK-1": "Portaali lähettää allekirjoitettuja ilmoituksia (webhookit) ja hylkää turvattomat kohteet.",
-      "P-USE-1": "Portaali vastaanottaa jälleenmyyjien käyttöraportit ja laskee ne."
+      "P-USE-1": "Portaali vastaanottaa jälleenmyyjien käyttöraportit ja laskee ne.",
+      "P-FEED-7": "Kun portaali päivitetään uuteen versioon, vanhat sijainnit muutossyötteessä vanhenevat. Jälleenmyyjän ohjelmisto aloittaa silloin alusta täydellä kopiolla uudessa muodossa."
     }
   },
   "demo": {

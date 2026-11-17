@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, paġna ewlenija",
     "copy": "Ikkopja",
     "copied": "Ikkupjat",
-    "draft": "Il-verżjoni 0.2 ħarġet. L-ispeċifikazzjoni u s-software huma ħielsa biex tużahom.",
+    "draft": "Il-verżjoni 0.3 ħarġet. L-ispeċifikazzjoni u s-software huma ħielsa biex tużahom.",
     "footerAbout": "Mod b'xejn u miftuħ għall-marki biex jaqsmu ritratti tal-prodotti u data tal-oġġetti mal-bejjiegħa tagħhom.",
     "footerMore": "Aktar",
     "footerSource": "Kodiċi sors u speċifikazzjoni",
@@ -156,7 +156,7 @@
         "p": "Pubblikazzjoni waħda għall-bejjiegħa kollha tiegħek. Ma jkunx hemm aktar trasferimenti ta' fajls, emails b'zips jew integrazzjoni separata għal kull ħanut."
       }
     ],
-    "status": "Open Brand Exchange għadu fil-bidu. Il-verżjoni 0.2 tal-ispeċifikazzjoni u tas-software ħarġet u hija ħielsa biex tużaha. Ma nurux klijenti jew numri li għadhom ma jeżistux.",
+    "status": "Open Brand Exchange għadu fil-bidu. Il-verżjoni 0.3 tal-ispeċifikazzjoni u tas-software ħarġet u hija ħielsa biex tużaha. Ma nurux klijenti jew numri li għadhom ma jeżistux.",
     "statusLink": "Aqra kif huwa ggvernat"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "L-informazzjoni tat-tikketta tal-kura hija inkluża ma' kull oġġett.",
       "p": "Il-kompożizzjoni għal kull parti, l-istruzzjonijiet tal-kura fl-ordni tat-tikketta u l-pajjiż tal-oriġini jiġu ma' kull oġġett, flimkien mal-EAN ta' kull daqs. Il-ħanut online tiegħek jurihom bħala test jew bħala simboli tal-kura, skont ir-regoli tal-UE dwar it-tikkettar u l-kodiċijiet tal-kura ISO 3758.",
       "points": [
-        "Kompożizzjoni għal kull parti (barra, bitana, mili, qiegħ) b'perċentwali",
+        "Kompożizzjoni għal kull parti (barra, bitana, mili, qiegħ) b'perċentwali, u għal kull fibra jekk hijiex riċiklata, organika jew simili",
         "Struzzjonijiet tal-ħasil bħala kodiċijiet standard, fl-ordni tat-tikketta",
         "Pajjiż tal-oriġini u l-EAN ta' kull daqs u kulur"
       ],
@@ -629,7 +629,7 @@
     "h1": "Għall-iżviluppaturi",
     "lead": "Open Brand Exchange hija speċifikazzjoni bi tliet APIs, JSON Schemas, data tat-test u testijiet ta' konformità. L-ispeċifikazzjoni hija s-sors tal-verità; l-implimentazzjonijiet isegwuha.",
     "specTitle": "L-ispeċifikazzjoni",
-    "specP": "Verżjoni 0.2. OpenAPI 3.1, JSON Schema 2020-12, eżempji u marka tat-test fittizja, Kestrel Outfitters. Liċenzja CC-BY-4.0: ħielsa biex tiġi implimentata, anke kummerċjalment.",
+    "specP": "Verżjoni 0.3. OpenAPI 3.1, JSON Schema 2020-12, eżempji u marka tat-test fittizja, Kestrel Outfitters. Liċenzja CC-BY-4.0: ħielsa biex tiġi implimentata, anke kummerċjalment.",
     "specStart": "Ibda bi protocol.md",
     "apisTitle": "Tliet APIs",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: web hosting normali",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Qed tibni l-implimentazzjoni jew il-client tiegħek? Għarrafna b'issue jew pull request, u tidħol f'din it-tabella hekk kif tgħaddi mit-testijiet ta' konformità.",
     "docsTitle": "Dokumenti",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Open source, fuq GitHub.",
     "reposTitle": "Repożitorji",
-    "reposP": "Kollox huwa open source fuq GitHub: l-ispeċifikazzjoni, il-kodiċi komuni u t-tliet edizzjonijiet tal-portal."
+    "reposP": "Kollox huwa open source fuq GitHub: l-ispeċifikazzjoni, il-kodiċi komuni u t-tliet edizzjonijiet tal-portal.",
+    "newTitle": "X'hemm ġdid fil-verżjoni 0.3",
+    "newItems": [
+      "Il-materjali u l-kura huma kodiċijiet b'ismijiet bl-Ingliż, bl-Olandiż, bil-Ġermaniż u bil-Franċiż, minn vokabularji komuni ppubblikati f'/vocabularies/v0.3/.",
+      "Diversi stqarrijiet ta' sostenibbiltà għal kull fibra: riċiklata, organika, f'konverżjoni, ta' qabel il-konsum, ta' wara l-konsum u riġenerattiva. F'fajl, pereżempju: 100% polyester (recycled) (post_consumer).",
+      "IDs stabbli għall-varjanti: b'mod standard in-numru tal-mudell, il-kulur u d-daqs, qatt l-EAN. Hekk EAN jista' jasal jew jinbidel aktar tard mingħajr ma jinħoloq varjant ġdid.",
+      "Estensjonijiet: l-oqsma tiegħek stess x-<vendor>-<name> jinħażnu u jintbagħtu lura, u qasam mhux magħruf qatt ma jġiegħel kitba tfalli.",
+      "Kodiċijiet ġodda: l-iżball idempotency_key_reused u t-twissijiet material_unknown u qualifier_deprecated. Kull kodiċi għandu l-paġna tiegħu taħt /errors/.",
+      "Mill-0.3 'il quddiem, l-istrutturi eżistenti taħt /obx/v1 jinbidlu biss b'żidiet. Ippjanat għall-0.4: dar u sport, tfittxija u filtri, u webhooks aħjar."
+    ],
+    "newLink": "Il-lista sħiħa tal-bidliet"
   },
   "directory": {
     "h1": "Direttorju tal-marki",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Huwa lest?",
-        "a": "Iva, il-verżjoni 0.2: l-ispeċifikazzjoni, it-tliet edizzjonijiet tal-portal u l-għodod ħarġu u huma ħielsa biex tużahom. Għadna fil-bidu: l-ewwel marki qed jingħaqdu issa."
+        "a": "Iva, il-verżjoni 0.3: l-ispeċifikazzjoni, it-tliet edizzjonijiet tal-portal u l-għodod ħarġu u huma ħielsa biex tużahom. Għadna fil-bidu: l-ewwel marki qed jingħaqdu issa."
       },
       {
         "q": "Min hemm warajh?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "X'hemm lest, u x'ġej",
-    "readyTitle": "Lest fil-verżjoni 0.2",
+    "readyTitle": "Lest fil-verżjoni 0.3",
     "comingTitle": "Ġej",
     "readyBadge": "Lest",
     "comingBadge": "Dalwaqt",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Għandek mistoqsijiet, jew trid tieħu sehem mill-bidu?",
     "ctaBrands": "Qed infittxu marki li jridu jgħinu jsawru l-ewwel verżjoni: liema sistemi tuża, u kemm-il bejjiegħ taqdi? Iktbilna.",
     "ctaRetailers": "Qed infittxu bejjiegħa li jridu jgħinu jsawru l-ewwel verżjoni: liema marki tixtieq tqabbad, u liema software tuża? Iktbilna.",
-    "footer": "Il-funzjonijiet taħt “Ġej” għadhom qed jiġu żviluppati. Verżjoni 0.2, {date}."
+    "footer": "Il-funzjonijiet taħt “Ġej” għadhom qed jiġu żviluppati. Verżjoni 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Ibda bħala marka",
-      "preview": "Verżjoni 0.2"
+      "preview": "Verżjoni 0.3"
     },
     "footer": {
       "tagline": "L-istandard miftuħ biex jinqasmu ritratti tal-prodotti u data tal-oġġetti bejn marki u bejjiegħa.",
@@ -1022,7 +1032,7 @@
       "errors": "Kodiċi tal-iżbalji",
       "spec": "Speċifikazzjoni",
       "sdk": "Go SDK u l-għodda obx",
-      "status": "Il-verżjoni 0.2 ħarġet, għall-ħwejjeġ, iż-żraben, il-basktijiet u l-bagalji. L-ispeċifikazzjoni u s-software huma ħielsa għall-użu."
+      "status": "Il-verżjoni 0.3 ħarġet, għall-ħwejjeġ, iż-żraben, il-basktijiet u l-bagalji. L-ispeċifikazzjoni u s-software huma ħielsa għall-użu."
     },
     "shots": {
       "portalCatalog": "Il-portal tal-marka fittizja Kestrel kif jarah bejjiegħ: tmien oġġetti b'filtri għall-marka, it-tip ta' prodott u l-kulur.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Speċifikazzjoni miftuħa",
-          "p": "Verżjoni 0.2. Speċifikazzjoni miftuħa li kulħadd jista' juża, anke għal skopijiet kummerċjali."
+          "p": "Verżjoni 0.3. Speċifikazzjoni miftuħa li kulħadd jista' juża, anke għal skopijiet kummerċjali."
         },
         {
           "h": "Id-data tiegħek tibqa' tiegħek",
@@ -1278,8 +1288,8 @@
         "Id-data tiegħek tibqa' tiegħek"
       ],
       "scopeLabel": "Kategoriji",
-      "scopeNow": "Verżjoni 0.2: ħwejjeġ, żraben, basktijiet u bagalji",
-      "scopeNext": "Dar u sport: qed jiġu żviluppati għall-0.3",
+      "scopeNow": "Verżjoni 0.3: ħwejjeġ, żraben, basktijiet u bagalji",
+      "scopeNext": "Dar u sport: qed jiġu żviluppati għall-0.4",
       "fairEyebrow": "Prezzijiet ġusti",
       "fairTitle": "Ħallas għas-servizzi, mhux għall-aċċess għad-data tiegħek.",
       "fairLead": "L-iskambju tad-data tal-prodotti m'għandu jiswa xejn għal kull marka jew għal kull bejjiegħ.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "It-tiftix tal-prodotti bil-barcode (EAN) jagħti t-tweġiba mistennija; wisq kodiċi f'daqqa jiġu rrifjutati.",
       "P-CAT-4": "Il-prodotti li bejjiegħ ma jistax jara jwieġbu “ma nstabx”, biex l-eżistenza tagħhom ma tinkixifx.",
       "P-CAT-5": "Il-prodotti tat-test għal bagalji, basktijiet u żraben joħorġu eżattament bid-data tal-oġġetti mistennija: materjali, qisien, karatteristiċi u ċertifikazzjonijiet.",
-      "P-CAT-6": "Kull prodott għandu d-data tal-oġġetti tal-verżjoni 0.2 fil-forma t-tajba, bl-ismijiet it-tajba għall-materjali u s-simboli tal-kura.",
+      "P-CAT-6": "Kull prodott għandu d-data tal-oġġetti tal-verżjoni 0.3 fil-forma t-tajba, bl-ismijiet it-tajba għall-materjali u s-simboli tal-kura.",
       "P-MEDIA-1": "Ir-ritratti tat-test iġorru l-informazzjoni mistennija, bħall-oriġini tal-IA, id-dati tal-embargo u n-nuqqas ta' oriġinali.",
       "P-MEDIA-2": "Kull fajl tar-ritratti jaqbel mal-checksum tiegħu u jappoġġja caching, tniżżil parzjali u links temporanji.",
       "P-MEDIA-3": "Il-fajls oriġinali jitwasslu mingħajr bidla; il-verżjonijiet web u żgħar għandhom id-daqs u l-format it-tajba u qatt ma jitkabbru.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "Il-portal jgħid lis-software x'inhuma l-limiti tat-talbiet tiegħu, u meta għandu jerġa' jipprova wara wisq talbiet.",
       "P-EXP-1": "Esportazzjoni sħiħa (fajl zip b'lista ta' fajls u checksums) hija kompluta u korretta.",
       "P-HOOK-1": "Il-portal jibgħat notifiki ffirmati (webhooks) u jirrifjuta destinazzjonijiet mhux siguri.",
-      "P-USE-1": "Il-portal jaċċetta rapporti tal-użu mill-bejjiegħa u jgħoddhom."
+      "P-USE-1": "Il-portal jaċċetta rapporti tal-użu mill-bejjiegħa u jgħoddhom.",
+      "P-FEED-7": "Wara li l-portal jiġi aġġornat għal verżjoni ġdida, il-pożizzjonijiet il-qodma fil-feed tal-bidliet jiskadu. Is-softwer tal-bejjiegħ imbagħad jerġa' jibda b'kopja sħiħa fil-format il-ġdid."
     }
   },
   "demo": {

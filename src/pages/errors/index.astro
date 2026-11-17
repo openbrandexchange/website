@@ -7,7 +7,7 @@ import { specDoc } from '../../i18n';
 const parts = (text: string) => text.split('`').map((s, i) => ({ s, code: i % 2 === 1 }));
 ---
 
-<Reference title="Error codes" description="The problem types of the Open Brand Exchange APIs: every obx_error with its HTTP status and meaning, and the label completeness warnings." path="/errors/">
+<Reference title="Error codes" description="The problem types of the Open Brand Exchange APIs: every obx_error with its HTTP status and meaning, and the warning codes." path="/errors/">
   <section class="hero">
     <div class="wrap">
       <h1>Error codes</h1>
@@ -44,9 +44,10 @@ const parts = (text: string) => text.split('`').map((s, i) => ({ s, code: i % 2 
   </section>
   <section class="section" aria-labelledby="warnings">
     <div class="wrap">
-      <h2 id="warnings">Label completeness warnings</h2>
+      <h2 id="warnings">Warnings</h2>
       <p class="prose">
-        Since version 0.2, imports and the Ingest API warn when a product misses what its label needs under EU law. The code
+        Imports and the Ingest API warn when a product misses what its label needs under EU law, when a material code is
+        not in the vocabulary, and when a fibre is written in the old draft form. The code
         is in <code>obx_error</code> of an import row with <code>severity: warning</code>, and in
         <code>warning_details</code> of an Ingest result. A warning never blocks a write or publishing. Software must ignore
         warning codes it does not know.
@@ -68,7 +69,8 @@ const parts = (text: string) => text.split('`').map((s, i) => ({ s, code: i % 2 
         </table>
       </div>
       <p class="prose">
-        Source: rule 10 of <a href={specDoc('docs/import-format.md#label-completeness')}>import-format.md</a>.
+        Source: rule 10 and §1.4 of <a href={specDoc('docs/import-format.md#label-completeness')}>import-format.md</a>, and
+        <a href={specDoc('docs/ingest.md')}>ingest.md §3.1</a>.
       </p>
     </div>
   </section>

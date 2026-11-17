@@ -21,20 +21,21 @@ const plain = (text: string) => text.replace(/`/g, '');
 const description =
   entry.kind === 'error'
     ? `Open Brand Exchange error ${code} (HTTP ${entry.status}): ${plain(entry.meaning)}.`
-    : `Open Brand Exchange label completeness warning ${code}: ${plain(entry.when)}. A warning never blocks publishing.`;
+    : `Open Brand Exchange ${entry.label ? 'label completeness ' : ''}warning ${code}: ${plain(entry.when)}. A warning never blocks publishing.`;
+const warningKind = entry.kind === 'warning' && entry.label ? 'Label completeness warning' : 'Warning';
 ---
 
 <Reference title={code} description={description} path={`/errors/${code}/`}>
   <section class="hero">
     <div class="wrap">
-      <p class="muted small"><a href={entry.kind === 'error' ? '/errors/' : '/errors/#warnings'}>{entry.kind === 'error' ? 'Error codes' : 'Label completeness warnings'}</a></p>
+      <p class="muted small"><a href={entry.kind === 'error' ? '/errors/' : '/errors/#warnings'}>{entry.kind === 'error' ? 'Error codes' : 'Warnings'}</a></p>
       <h1><code>{code}</code></h1>
       {
         entry.kind === 'error' ? (
           <p class="lead">{parts(entry.meaning).map((p) => (p.code ? <code>{p.s}</code> : p.s))}.</p>
         ) : (
           <p class="lead">
-            Label completeness warning: {parts(entry.when).map((p) => (p.code ? <code>{p.s}</code> : p.s))}. It never blocks
+            {warningKind}: {parts(entry.when).map((p) => (p.code ? <code>{p.s}</code> : p.s))}. It never blocks
             the import, the write or publishing.
           </p>
         )
@@ -64,19 +65,27 @@ const description =
             <dl>
               <dt>Column</dt>
               <dd><code>{entry.column}</code></dd>
-              <dt>Why (legal basis)</dt>
+              <dt>{entry.label ? 'Why (legal basis)' : 'What it means'}</dt>
               <dd>{parts(entry.why).map((p) => (p.code ? <code>{p.s}</code> : p.s))}</dd>
               <dt>Where it appears</dt>
               <dd>
                 In <code>obx_error</code> of an import row with <code>severity: warning</code>, and in{' '}
-                <code>warning_details</code> of an Ingest result (since version 0.2).
+                <code>warning_details</code> of an Ingest result.
               </dd>
             </dl>
-            <p>
-              The product is written and published as usual. See rule 10 of{' '}
-              <a href={specDoc('docs/import-format.md#label-completeness')}>import-format.md</a> and the legal basis table in{' '}
-              <a href={specDoc('docs/protocol.md#legal-basis')}>protocol.md §5.9.7</a>.
-            </p>
+            {
+              entry.label ? (
+                <p>
+                  The product is written and published as usual. See rule 10 of{' '}
+                  <a href={specDoc(entry.doc)}>import-format.md</a> and the legal basis table in{' '}
+                  <a href={specDoc('docs/protocol.md#legal-basis')}>protocol.md §5.9.7</a>.
+                </p>
+              ) : (
+                <p>
+                  The product is written and published as usual. See <a href={specDoc(entry.doc)}>{entry.doc.replace(/^docs\/|#.*$/g, '')}</a>.
+                </p>
+              )
+            }
           </>
         )
       }

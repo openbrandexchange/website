@@ -62,6 +62,14 @@ const docs = [
       </p>
     </DocSection>
 
+    <DocSection id="new" title={c.newTitle}>
+      <ul>{c.newItems.map((item) => <li>{item}</li>)}</ul>
+      <p>
+        <a href={specDoc('CHANGELOG.md')}>{c.newLink}</a> · <a href="/vocabularies/v0.3/materials.json">/vocabularies/v0.3/</a> ·
+        <a href="/errors/">/errors/</a>
+      </p>
+    </DocSection>
+
     <DocSection id="repositories" title={c.reposTitle}>
       <p>{c.reposP}</p>
       <ul class="repo-list">

@@ -1,10 +1,10 @@
 # Open Brand Exchange
 
-> Open Brand Exchange (OBX) is the open standard and free software for brands and retailers to share product photos and article data. Each brand publishes its content in its own portal. Retailers get it in the browser, as a zip or spreadsheet, or straight into their own software (webshop, PIM, ERP, POS) through one standard API. Brands keep their own data and can move or export it at any time. Version 0.2 covers fashion, shoes, bags and luggage; home and sport are in development for 0.3.
+> Open Brand Exchange (OBX) is the open standard and free software for brands and retailers to share product photos and article data. Each brand publishes its content in its own portal. Retailers get it in the browser, as a zip or spreadsheet, or straight into their own software (webshop, PIM, ERP, POS) through one standard API. Brands keep their own data and can move or export it at any time. Version 0.3 covers fashion, shoes, bags and luggage; home and sport are in development for 0.4.
 
 Key facts:
 
-- Specification: version 0.2, OpenAPI 3.1 and JSON Schema, licensed CC-BY-4.0. Anyone may implement it, commercially too.
+- Specification: version 0.3, OpenAPI 3.1 and JSON Schema, licensed CC-BY-4.0. Anyone may implement it, commercially too.
 - Software: three portal editions under AGPL-3.0: Go (Docker, any server; the recommended setup is a server in the EU, for example at Hetzner in Germany or Finland), PHP (ordinary web hosting) and Cloudflare Workers. The Go SDK, the `obx` command-line tool and the admin web interface are Apache-2.0.
 - Conformance: the open-source test `obx-conformance` runs 61 automated checks in four profiles (protocol, ingest, portal, security). Testing and the label "Compatible with Open Brand Exchange" are free.
 - Official partners: a paid listing on the website. Proposed annual fees, which apply only once the foundation is registered: €0 for one person, €500, €2,500 or €10,000 by company size. The same criteria apply to everyone, starting with a passed conformance test. Partners have no more say in the standard than anyone else.
@@ -27,7 +27,8 @@ Key facts:
 - [Developers](https://openbrandexchange.com/en/developers/): the specification, the APIs, the SDK and the conformance test
 - [API reference](https://openbrandexchange.com/reference/): OpenAPI reference of the protocol
 - [Error codes](https://openbrandexchange.com/errors/): every error code with its meaning
-- [JSON Schemas](https://openbrandexchange.com/schemas/v0.2/): the schemas at the path of their $id
+- [JSON Schemas](https://openbrandexchange.com/schemas/v0.3/): the schemas at the path of their $id
+- [Vocabularies](https://openbrandexchange.com/vocabularies/v0.3/materials.json): material, part, qualifier and care codes with their names (also parts.json, qualifiers.json, care.json)
 
 ## For portals and providers
 

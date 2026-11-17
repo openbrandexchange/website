@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, sākumlapa",
     "copy": "Kopēt",
     "copied": "Nokopēts",
-    "draft": "Versija 0.2 ir izlaista. Specifikācija un programmatūra ir brīvi izmantojamas.",
+    "draft": "Versija 0.3 ir izlaista. Specifikācija un programmatūra ir brīvi izmantojamas.",
     "footerAbout": "Bezmaksas, atvērts veids, kā zīmoli var kopīgot produktu attēlus un preču datus ar saviem tirgotājiem.",
     "footerMore": "Vairāk",
     "footerSource": "Pirmkods un specifikācija",
@@ -156,7 +156,7 @@
         "p": "Viena publikācija visiem tirgotājiem. Vairs nekādu failu sūtīšanu, e-pastu ar zip arhīviem un atsevišķu integrāciju katram veikalam."
       }
     ],
-    "status": "Open Brand Exchange ir pašā sākumā. Specifikācijas un programmatūras versija 0.2 ir izlaista un brīvi izmantojama. Mēs nerādām klientus vai skaitļus, kuru vēl nav.",
+    "status": "Open Brand Exchange ir pašā sākumā. Specifikācijas un programmatūras versija 0.3 ir izlaista un brīvi izmantojama. Mēs nerādām klientus vai skaitļus, kuru vēl nav.",
     "statusLink": "Uzziniet, kā tas tiek pārvaldīts"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "Kopšanas etiķetes informācija ir iekļauta katrai precei.",
       "p": "Sastāvs pa daļām, kopšanas norādījumi etiķetes secībā un izcelsmes valsts ir pievienoti katrai precei, līdzās katra izmēra EAN. Jūsu interneta veikals tos rāda kā tekstu vai kopšanas simbolus, atbilstoši ES marķēšanas noteikumiem un ISO 3758 kopšanas kodiem.",
       "points": [
-        "Sastāvs pa daļām (virsmateriāls, odere, pildījums, zole) ar procentiem",
+        "Sastāvs pa daļām (virsmateriāls, odere, pildījums, zole) ar procentiem un katrai šķiedrai norāde, vai tā ir pārstrādāta, bioloģiska vai tamlīdzīga",
         "Kopšanas norādījumi kā standarta kodi, etiķetes secībā",
         "Izcelsmes valsts un katra izmēra un krāsas EAN"
       ],
@@ -629,7 +629,7 @@
     "h1": "Izstrādātājiem",
     "lead": "Open Brand Exchange ir specifikācija ar trim API, JSON shēmām, testa datiem un atbilstības testiem. Specifikācija ir patiesības avots; implementācijas tai seko.",
     "specTitle": "Specifikācija",
-    "specP": "Versija 0.2. OpenAPI 3.1, JSON Schema 2020-12, piemēri un izdomāts testa zīmols Kestrel Outfitters. Licence CC-BY-4.0: brīvi implementējama, arī komerciāli.",
+    "specP": "Versija 0.3. OpenAPI 3.1, JSON Schema 2020-12, piemēri un izdomāts testa zīmols Kestrel Outfitters. Licence CC-BY-4.0: brīvi implementējama, arī komerciāli.",
     "specStart": "Sāciet ar protocol.md",
     "apisTitle": "Trīs API",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: parasta tīmekļa mitināšana",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Veidojat savu implementāciju vai klientu? Paziņojiet ar issue vai pull request; tā nonāks šajā tabulā, tiklīdz izturēs atbilstības testus.",
     "docsTitle": "Dokumenti",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Atvērtais kods, GitHub.",
     "reposTitle": "Repozitoriji",
-    "reposP": "Viss ir atvērtā koda GitHub: specifikācija, kopīgais kods un trīs portāla izdevumi."
+    "reposP": "Viss ir atvērtā koda GitHub: specifikācija, kopīgais kods un trīs portāla izdevumi.",
+    "newTitle": "Jaunumi versijā 0.3",
+    "newItems": [
+      "Materiāli un kopšana ir kodi ar nosaukumiem angļu, nīderlandiešu, vācu un franču valodā. Tie nāk no kopīgām vārdnīcām, kas publicētas /vocabularies/v0.3/.",
+      "Vairāki ilgtspējas apgalvojumi katrai šķiedrai: pārstrādāta, bioloģiska, pārejas periodā, pirms patēriņa, pēc patēriņa un reģeneratīva. Failā, piemēram: 100% polyester (recycled) (post_consumer).",
+      "Stabili variantu ID: pēc noklusējuma modeļa numurs, krāsa un izmērs, nekad EAN. Tā EAN var parādīties vai mainīties vēlāk, neradot jaunu variantu.",
+      "Paplašinājumi: jūsu pašu lauki x-<vendor>-<name> tiek saglabāti un atgriezti, un nezināms lauks nekad neizraisa ieraksta kļūmi.",
+      "Jauni kodi: kļūda idempotency_key_reused un brīdinājumi material_unknown un qualifier_deprecated. Katram kodam ir sava lapa sadaļā /errors/.",
+      "No 0.3 esošās struktūras sadaļā /obx/v1 mainās tikai ar papildinājumiem. Versijai 0.4 plānots: mājas un sports, meklēšana un filtri, kā arī labāki webhooks."
+    ],
+    "newLink": "Pilns izmaiņu žurnāls"
   },
   "directory": {
     "h1": "Zīmolu saraksts",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Vai tas ir gatavs?",
-        "a": "Jā, versija 0.2: specifikācija, trīs portāla izdevumi un rīki ir izlaisti un brīvi izmantojami. Esam pašā sākumā: pirmie zīmoli pievienojas tagad."
+        "a": "Jā, versija 0.3: specifikācija, trīs portāla izdevumi un rīki ir izlaisti un brīvi izmantojami. Esam pašā sākumā: pirmie zīmoli pievienojas tagad."
       },
       {
         "q": "Kas ir aiz tā?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "Kas ir gatavs un kas vēl būs",
-    "readyTitle": "Gatavs versijā 0.2",
+    "readyTitle": "Gatavs versijā 0.3",
     "comingTitle": "Drīzumā",
     "readyBadge": "Gatavs",
     "comingBadge": "Drīzumā",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Jautājumi, vai vēlaties piedalīties no paša sākuma?",
     "ctaBrands": "Meklējam zīmolus, kas vēlas veidot pirmo versiju: kādas sistēmas izmantojat un cik tirgotājus apkalpojat? Rakstiet mums.",
     "ctaRetailers": "Meklējam tirgotājus, kas vēlas veidot pirmo versiju: kurus zīmolus vēlaties pieslēgt un kādu programmatūru izmantojat? Rakstiet mums.",
-    "footer": "Sadaļas “Drīzumā” funkcijas tiek izstrādātas. Versija 0.2, {date}."
+    "footer": "Sadaļas “Drīzumā” funkcijas tiek izstrādātas. Versija 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Sāciet kā zīmols",
-      "preview": "Versija 0.2"
+      "preview": "Versija 0.3"
     },
     "footer": {
       "tagline": "Atvērtais standarts produktu attēlu un preču datu kopīgošanai starp zīmoliem un tirgotājiem.",
@@ -1022,7 +1032,7 @@
       "errors": "Kļūdu kodi",
       "spec": "Specifikācija",
       "sdk": "Go SDK un rīks obx",
-      "status": "Versija 0.2 ir izlaista apģērbiem, apaviem, somām un čemodāniem. Specifikācija un programmatūra ir brīvi izmantojamas."
+      "status": "Versija 0.3 ir izlaista apģērbiem, apaviem, somām un čemodāniem. Specifikācija un programmatūra ir brīvi izmantojamas."
     },
     "shots": {
       "portalCatalog": "Izdomātā zīmola Kestrel portāls, kā to redz tirgotājs: astoņas preces ar filtriem pēc zīmola, produkta veida un krāsas.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Atvērta specifikācija",
-          "p": "Versija 0.2. Atvērta specifikācija, ko ikviens drīkst izmantot, arī komerciāli."
+          "p": "Versija 0.3. Atvērta specifikācija, ko ikviens drīkst izmantot, arī komerciāli."
         },
         {
           "h": "Jūsu dati paliek jūsu",
@@ -1278,8 +1288,8 @@
         "Jūsu dati paliek jūsu"
       ],
       "scopeLabel": "Kategorijas",
-      "scopeNow": "Versija 0.2: apģērbi, apavi, somas un čemodāni",
-      "scopeNext": "Mājai un sportam: izstrādē versijai 0.3",
+      "scopeNow": "Versija 0.3: apģērbi, apavi, somas un čemodāni",
+      "scopeNext": "Mājai un sportam: izstrādē versijai 0.4",
       "fairEyebrow": "Godīgas cenas",
       "fairTitle": "Maksājiet par pakalpojumiem, nevis par piekļuvi saviem datiem.",
       "fairLead": "Produktu datu apmaiņai nevajadzētu maksāt neko ne zīmolam, ne tirgotājam.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "Produktu meklēšana pēc svītrkoda (EAN) dod gaidīto atbildi; pārāk daudz kodu vienlaikus tiek noraidīti.",
       "P-CAT-4": "Produkti, ko tirgotājs nedrīkst redzēt, atbild “nav atrasts”, tāpēc to esamība netiek atklāta.",
       "P-CAT-5": "Testa produkti koferiem, somām un apaviem tiek atgriezti tieši ar gaidītajiem preču datiem: materiāliem, izmēriem, īpašībām un sertifikātiem.",
-      "P-CAT-6": "Katram produktam ir 0.2 versijas preču dati pareizā formā, ar pareiziem materiālu un kopšanas simbolu nosaukumiem.",
+      "P-CAT-6": "Katram produktam ir 0.3 versijas preču dati pareizā formā, ar pareiziem materiālu un kopšanas simbolu nosaukumiem.",
       "P-MEDIA-1": "Testa attēlos ir gaidītā informācija, piemēram, MI izcelsme, embargo datumi un oriģināla neesamība.",
       "P-MEDIA-2": "Katrs attēla fails atbilst savai kontrolsummai un atbalsta kešošanu, daļējas lejupielādes un pagaidu saites.",
       "P-MEDIA-3": "Oriģinālie faili tiek piegādāti nemainīti; tīmekļa un sīktēlu versijām ir pareizs izmērs un formāts, un tās nekad netiek palielinātas.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "Portāls paziņo programmatūrai savus pieprasījumu limitus un norāda, kad mēģināt vēlreiz pēc pārāk daudziem pieprasījumiem.",
       "P-EXP-1": "Pilns eksports (zip fails ar failu sarakstu un kontrolsummām) ir pilnīgs un pareizs.",
       "P-HOOK-1": "Portāls sūta parakstītus paziņojumus (webhooks) un noraida nedrošus galamērķus.",
-      "P-USE-1": "Portāls pieņem tirgotāju lietošanas pārskatus un tos saskaita."
+      "P-USE-1": "Portāls pieņem tirgotāju lietošanas pārskatus un tos saskaita.",
+      "P-FEED-7": "Kad portāls tiek atjaunināts uz jaunu versiju, vecās pozīcijas izmaiņu plūsmā zaudē derīgumu. Tirgotāja programmatūra tad sāk no jauna ar pilnu kopiju jaunajā formātā."
     }
   },
   "demo": {

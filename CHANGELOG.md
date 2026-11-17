@@ -6,6 +6,17 @@ its texts; the repository itself is versioned with [Semantic Versioning](https:/
 ## [Unreleased]
 
 ### Added
+- Specification 0.3.0 (2026-11-17): the schemas at `/schemas/v0.3/` (0.1 and 0.2 are withdrawn by the
+  spec; their paths redirect to 0.3), the vocabularies at `/vocabularies/v0.3/`, the 0.3 API
+  reference, templates and glossary; `/errors/` has `idempotency_key_reused` and the warnings
+  `material_unknown` and `qualifier_deprecated` (`sync:spec` adds those two from the spec's prose,
+  as they are not in the label table). Every "version 0.2" text says 0.3, "home and sport" moved to
+  0.4, the developers page lists what is new in 0.3, the online check names P-FEED-7, the retailers
+  label example and the snippets use the 0.3 shapes (material and qualifiers per fibre, stable
+  variant ids). Brochures regenerated. In all 25 languages.
+- Press kit (`/<lang>/press/`) with the "Works with Open Brand Exchange" / "OBX compatible" badges,
+  "Get involved" on the governance and developers pages, concrete hosting steps; the website is no
+  longer openly licensed (see LICENSE).
 - Specification 0.2 (2026-11-12): the schemas are served at `/schemas/v0.2/` next to the frozen
   `/schemas/v0.1/`; the API reference is the 0.2 one; `/errors/` and its pages include the label
   completeness warnings `fibre_composition_missing`, `animal_origin_unknown`,

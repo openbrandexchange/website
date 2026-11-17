@@ -35,12 +35,12 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
    challenges a visitor) and an imprint. They are written for the site as it is: no forms,
    accounts or tracking. They are not legal advice: have them reviewed before the launch.
 7. **Status wording.** Since the launch on 2026-11-12 the header pill (`site.nav.preview`, with
-   `common.draft` as its full text, and the short "v0.2" in `src/layouts/Base.astro`), the footer
+   `common.draft` as its full text, and the short "v0.3" in `src/layouts/Base.astro`), the footer
    (`site.footer.status`), the home page (`home.status`, the governance "Open specification" card),
    the developers page (`developers.specP`, `developers.statusDraft`) and the FAQ ("Is it ready?") say
    which version is out and free to use; since spec 0.2.0 (released 2026-11-12, the same day as 0.1.0)
-   that is version 0.2. The brochures split "ready in version 0.2" from "coming next" and end with
-   "Version 0.2, <month year>" (`EDITION` in `scripts/brochure/template.mjs`). Change these texts in
+   that is version 0.3 (spec 0.3.0, 2026-11-17). The brochures split "ready in version 0.3" from "coming next" and end with
+   "Version 0.3, <month year>" (`EDITION` in `scripts/brochure/template.mjs`). Change these texts in
    all languages, then rebuild the brochures, with every new version; keep the wording, change only
    the number.
 8. **Brochures.** Brands and retailers, all 25 languages, generated from the site's own locale
@@ -79,7 +79,7 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
     (`scripts/screenshots/garments.mjs`); admin-ui and its data are not changed. The recipes
     screen shows the fictional portal address instead of the local server.
 16. **Header fits on one row** from 1280 px in every language; below that the menu button takes
-    over. The status pill shows "v0.2" and, on very wide screens, its full label, except in the
+    over. The status pill shows "v0.3" and, on very wide screens, its full label, except in the
     languages where the label would not fit (listed in `global.css`). An end-to-end test measures
     the header in all 25 languages; shorten a label rather than loosening the test.
 17. **Explainer video** (`video/`, Remotion, its own package). One beat per point, timed by the
@@ -109,12 +109,12 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
     `labelWarning` texts; the numbers are never changed. The brands page says the same in one sentence
     (`brands.labelNote`), next to `brands.bagsNote` on luggage and bag measurements and features.
 19. **Schemas and error pages per version.** `npm run sync:spec` copies every version under the
-    spec's `site/schemas/` (the current v0.2 and the frozen v0.1) to `public/schemas/`, so every
+    spec's `site/schemas/` (only the current version, v0.3; 0.1 and 0.2 are withdrawn and redirect) to `public/schemas/`, so every
     `$id` resolves, and refuses to run when the current version is missing. `/errors/` lists the
     `obx_error` codes of protocol.md and, since 0.2, the label completeness warnings of
     import-format.md rule 10 (`fibre_composition_missing`, `animal_origin_unknown`,
     `footwear_materials_missing`, `fibre_percentages_not_100`), each with its own page. The
-    directory is validated against the current (v0.2) Directory schema.
+    directory is validated against the current Directory schema (functions/schema-version.js).
 
 ## Open points (tracked here, not in the code)
 

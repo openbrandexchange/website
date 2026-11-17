@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, home",
     "copy": "Copy",
     "copied": "Copied",
-    "draft": "Version 0.2 is out. The specification and the software are free to use.",
+    "draft": "Version 0.3 is out. The specification and the software are free to use.",
     "footerAbout": "A free, open way for brands to share product images and article data with their retailers.",
     "footerMore": "More",
     "footerSource": "Source code and specification",
@@ -156,7 +156,7 @@
         "p": "One publication for all your retailers. No more file transfers, emails with zips or a separate integration per store."
       }
     ],
-    "status": "Open Brand Exchange is at the start. Version 0.2 of the specification and the software is out and free to use. We do not show customers or numbers that do not exist yet.",
+    "status": "Open Brand Exchange is at the start. Version 0.3 of the specification and the software is out and free to use. We do not show customers or numbers that do not exist yet.",
     "statusLink": "Read how it is governed"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "Care label information is included with every article.",
       "p": "Composition per part, care instructions in label order and the country of origin come with every article, next to the EAN of each size. Your webshop shows them as text or as care symbols, following the EU labelling rules and the ISO 3758 care codes.",
       "points": [
-        "Composition per part (outer, lining, filling, sole) with percentages",
+        "Composition per part (outer, lining, filling, sole) with percentages, and per fibre whether it is recycled, organic or similar",
         "Care instructions as standard codes, in the order of the label",
         "Country of origin and the EAN of every size and colour"
       ],
@@ -629,7 +629,7 @@
     "h1": "Developers",
     "lead": "Open Brand Exchange is a specification with three APIs, JSON Schemas, test data and a conformance suite. The specification is the source of truth; the implementations follow it.",
     "specTitle": "The specification",
-    "specP": "Version 0.2. OpenAPI 3.1, JSON Schema 2020-12, examples and a fictional test brand, Kestrel Outfitters. Licensed CC-BY-4.0: free to implement, commercially too.",
+    "specP": "Version 0.3. OpenAPI 3.1, JSON Schema 2020-12, examples and a fictional test brand, Kestrel Outfitters. Licensed CC-BY-4.0: free to implement, commercially too.",
     "specStart": "Start with protocol.md",
     "apisTitle": "Three APIs",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: ordinary web hosting",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Building your own implementation or consumer? Let us know with an issue or pull request, and it goes into this table once it passes the conformance suite.",
     "docsTitle": "Documents",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Open source, on GitHub.",
     "reposTitle": "Repositories",
-    "reposP": "Everything is open source on GitHub: the specification, the shared code and the three portal editions."
+    "reposP": "Everything is open source on GitHub: the specification, the shared code and the three portal editions.",
+    "newTitle": "New in version 0.3",
+    "newItems": [
+      "Materials and care are codes with names in English, Dutch, German and French, from shared vocabularies published at /vocabularies/v0.3/.",
+      "Several sustainability claims per fibre: recycled, organic, in conversion, pre-consumer, post-consumer and regenerative. In a file, for example: 100% polyester (recycled) (post_consumer).",
+      "Stable variant ids: by default the style number, colour and size, never the EAN, so an EAN can arrive or change later without creating a new variant.",
+      "Extensions: your own x-<vendor>-<name> fields are stored and returned, and an unknown field never makes a write fail.",
+      "New codes: the error idempotency_key_reused, and the warnings material_unknown and qualifier_deprecated. Each code has its own page under /errors/.",
+      "From 0.3 on, existing shapes under /obx/v1 only change by addition. Planned for 0.4: home and sport, search and filters, and better webhooks."
+    ],
+    "newLink": "Full changelog"
   },
   "directory": {
     "h1": "Directory",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Is it ready?",
-        "a": "Yes, version 0.2: the specification, the three portal editions and the tools are released and free to use. It is early days: the first brands are joining now."
+        "a": "Yes, version 0.3: the specification, the three portal editions and the tools are released and free to use. It is early days: the first brands are joining now."
       },
       {
         "q": "Who is behind it?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "What is ready, and what is coming",
-    "readyTitle": "Ready in version 0.2",
+    "readyTitle": "Ready in version 0.3",
     "comingTitle": "Coming next",
     "readyBadge": "Ready",
     "comingBadge": "Coming",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Questions, or want to take part from the start?",
     "ctaBrands": "We are looking for brands that want to help shape the first version: which systems do you use, and how many retailers do you serve? Email us.",
     "ctaRetailers": "We are looking for retailers who want to help shape the first version: which brands would you like to connect, and which software do you use? Email us.",
-    "footer": "Features under \"Coming next\" are in development. Version 0.2, {date}."
+    "footer": "Features under \"Coming next\" are in development. Version 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Start as a brand",
-      "preview": "Version 0.2"
+      "preview": "Version 0.3"
     },
     "footer": {
       "tagline": "The open standard for sharing product images and article data between brands and retailers.",
@@ -1022,7 +1032,7 @@
       "errors": "Error codes",
       "spec": "Specification",
       "sdk": "Go SDK and obx tool",
-      "status": "Version 0.2 is out, for fashion, shoes, bags and luggage. The specification and the software are free to use."
+      "status": "Version 0.3 is out, for fashion, shoes, bags and luggage. The specification and the software are free to use."
     },
     "shots": {
       "portalCatalog": "The brand portal of the fictional brand Kestrel as a retailer sees it: eight articles with filters for brand, product type and colour.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Open specification",
-          "p": "Version 0.2. An open specification that anyone may use, including commercially."
+          "p": "Version 0.3. An open specification that anyone may use, including commercially."
         },
         {
           "h": "Your data stays yours",
@@ -1278,8 +1288,8 @@
         "Your data stays yours"
       ],
       "scopeLabel": "Categories",
-      "scopeNow": "Version 0.2: fashion, shoes, bags and luggage",
-      "scopeNext": "Home and sport: in development for 0.3",
+      "scopeNow": "Version 0.3: fashion, shoes, bags and luggage",
+      "scopeNext": "Home and sport: in development for 0.4",
       "fairEyebrow": "Fair pricing",
       "fairTitle": "Pay for services, not for access to your own data.",
       "fairLead": "Exchanging product data should not cost anything per brand or per retailer.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "Looking up products by barcode (EAN) gives the expected answer; too many codes at once are refused.",
       "P-CAT-4": "Products a retailer may not see answer “not found”, so their existence is not revealed.",
       "P-CAT-5": "Test products for luggage, bags and shoes come out with exactly the expected article data: materials, measurements, features and certifications.",
-      "P-CAT-6": "Every product has the article data of version 0.2 in the right shape, with the right names for materials and care symbols.",
+      "P-CAT-6": "Every product has the article data of version 0.3 in the right shape, with the right names for materials and care symbols.",
       "P-MEDIA-1": "The test images carry the expected information, such as AI provenance, embargo dates and the absence of an original.",
       "P-MEDIA-2": "Every image file matches its checksum and supports caching, partial downloads and temporary links.",
       "P-MEDIA-3": "Original files are delivered unchanged; web and thumbnail versions have the right size and format and are never enlarged.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "The portal tells software its request limits, and says when to retry after too many requests.",
       "P-EXP-1": "A full export (a zip file with a list of files and checksums) is complete and correct.",
       "P-HOOK-1": "The portal sends signed notifications (webhooks) and refuses unsafe destinations.",
-      "P-USE-1": "The portal accepts usage reports from retailers and counts them."
+      "P-USE-1": "The portal accepts usage reports from retailers and counts them.",
+      "P-FEED-7": "After the portal is upgraded to a new version, old positions in the change feed expire, so the retailer's software starts again with a complete copy in the new format."
     }
   },
   "demo": {

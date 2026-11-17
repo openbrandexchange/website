@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, forside",
     "copy": "Kopier",
     "copied": "Kopiert",
-    "draft": "Versjon 0.2 er utgitt. Spesifikasjonen og programvaren er fri å bruke.",
+    "draft": "Versjon 0.3 er utgitt. Spesifikasjonen og programvaren er fri å bruke.",
     "footerAbout": "En gratis, åpen måte for merkevarer å dele produktbilder og artikkeldata med forhandlerne sine.",
     "footerMore": "Mer",
     "footerSource": "Kildekode og spesifikasjon",
@@ -156,7 +156,7 @@
         "p": "Én publisering for alle forhandlerne dine. Slutt på filoverføringer, e-post med zip-filer og egne integrasjoner per butikk."
       }
     ],
-    "status": "Open Brand Exchange er i startfasen. Versjon 0.2 av spesifikasjonen og programvaren er utgitt og fri å bruke. Vi viser ikke kunder eller tall som ikke finnes ennå.",
+    "status": "Open Brand Exchange er i startfasen. Versjon 0.3 av spesifikasjonen og programvaren er utgitt og fri å bruke. Vi viser ikke kunder eller tall som ikke finnes ennå.",
     "statusLink": "Les hvordan det styres"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "Informasjonen fra vaskelappen følger med hver artikkel.",
       "p": "Materialsammensetning per del, vaskeanvisning i samme rekkefølge som på lappen og produksjonsland følger med hver artikkel, sammen med EAN for hver størrelse. Nettbutikken viser dem som tekst eller som vaskesymboler, i tråd med EUs merkeregler og vaskekodene i ISO 3758.",
       "points": [
-        "Materialsammensetning per del (ytterstoff, fôr, fyll, såle) med prosent",
+        "Materialsammensetning per del (ytterstoff, fôr, fyll, såle) med prosent, og per fiber om den er resirkulert, økologisk eller lignende",
         "Vaskeanvisning som standardkoder, i samme rekkefølge som på lappen",
         "Produksjonsland og EAN for hver størrelse og farge"
       ],
@@ -629,7 +629,7 @@
     "h1": "Utviklere",
     "lead": "Open Brand Exchange er en spesifikasjon med tre API-er, JSON Schemas, testdata og samsvarstester. Spesifikasjonen er kilden; implementasjonene følger den.",
     "specTitle": "Spesifikasjonen",
-    "specP": "Versjon 0.2. OpenAPI 3.1, JSON Schema 2020-12, eksempler og en fiktiv testmerkevare, Kestrel Outfitters. Lisens CC-BY-4.0: fritt å implementere, også kommersielt.",
+    "specP": "Versjon 0.3. OpenAPI 3.1, JSON Schema 2020-12, eksempler og en fiktiv testmerkevare, Kestrel Outfitters. Lisens CC-BY-4.0: fritt å implementere, også kommersielt.",
     "specStart": "Start med protocol.md",
     "apisTitle": "Tre API-er",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: vanlig webhotell",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Bygger du din egen implementasjon eller klient? Gi beskjed med et issue eller en pull request; den kommer i tabellen så snart den består samsvarstestene.",
     "docsTitle": "Dokumenter",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Åpen kildekode, på GitHub.",
     "reposTitle": "Repositorier",
-    "reposP": "Alt er åpen kildekode på GitHub: spesifikasjonen, den delte koden og de tre portalutgavene."
+    "reposP": "Alt er åpen kildekode på GitHub: spesifikasjonen, den delte koden og de tre portalutgavene.",
+    "newTitle": "Nytt i versjon 0.3",
+    "newItems": [
+      "Materialer og vaskeråd er koder med navn på engelsk, nederlandsk, tysk og fransk, fra felles vokabularer publisert på /vocabularies/v0.3/.",
+      "Flere bærekraftspåstander per fiber: resirkulert, økologisk, under omlegging, pre-consumer, post-consumer og regenerativ. I en fil for eksempel: 100% polyester (recycled) (post_consumer).",
+      "Stabile variant-ID-er: som standard varenummer, farge og størrelse, aldri EAN. En EAN kan dermed komme eller endres senere uten at det oppstår en ny variant.",
+      "Utvidelser: dine egne x-<vendor>-<name>-felt lagres og returneres, og et ukjent felt får aldri en skriving til å feile.",
+      "Nye koder: feilen idempotency_key_reused og varslene material_unknown og qualifier_deprecated. Hver kode har sin egen side under /errors/.",
+      "Fra og med 0.3 endres eksisterende strukturer under /obx/v1 bare ved tillegg. Planlagt for 0.4: hjem og sport, søk og filtre, og bedre webhooks."
+    ],
+    "newLink": "Fullstendig endringslogg"
   },
   "directory": {
     "h1": "Merkevareoversikt",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Er det klart?",
-        "a": "Ja, versjon 0.2: spesifikasjonen, de tre portalutgavene og verktøyene er utgitt og fri å bruke. Vi er i startfasen: de første merkevarene blir med nå."
+        "a": "Ja, versjon 0.3: spesifikasjonen, de tre portalutgavene og verktøyene er utgitt og fri å bruke. Vi er i startfasen: de første merkevarene blir med nå."
       },
       {
         "q": "Hvem står bak?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "Hva som er klart, og hva som kommer",
-    "readyTitle": "Klart i versjon 0.2",
+    "readyTitle": "Klart i versjon 0.3",
     "comingTitle": "Kommer snart",
     "readyBadge": "Klart",
     "comingBadge": "Snart",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Spørsmål, eller vil du være med fra starten?",
     "ctaBrands": "Vi ser etter merkevarer som vil være med å forme den første versjonen: hvilke systemer bruker du, og hvor mange forhandlere betjener du? Skriv til oss.",
     "ctaRetailers": "Vi ser etter forhandlere som vil være med å forme den første versjonen: hvilke merkevarer vil du koble til, og hvilken programvare bruker du? Skriv til oss.",
-    "footer": "Funksjoner under «Kommer snart» er under utvikling. Versjon 0.2, {date}."
+    "footer": "Funksjoner under «Kommer snart» er under utvikling. Versjon 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Kom i gang som merkevare",
-      "preview": "Versjon 0.2"
+      "preview": "Versjon 0.3"
     },
     "footer": {
       "tagline": "Den åpne standarden for deling av produktbilder og artikkeldata mellom merkevarer og forhandlere.",
@@ -1022,7 +1032,7 @@
       "errors": "Feilkoder",
       "spec": "Spesifikasjon",
       "sdk": "Go SDK og obx-verktøyet",
-      "status": "Versjon 0.2 er ute, for klær, sko, vesker og bagasje. Spesifikasjonen og programvaren er fri til bruk."
+      "status": "Versjon 0.3 er ute, for klær, sko, vesker og bagasje. Spesifikasjonen og programvaren er fri til bruk."
     },
     "shots": {
       "portalCatalog": "Forhandlerportalen til den fiktive merkevaren Kestrel, slik en forhandler ser den: åtte artikler med filtre for merkevare, produkttype og farge.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Åpen spesifikasjon",
-          "p": "Versjon 0.2. En åpen spesifikasjon som alle kan bruke, også kommersielt."
+          "p": "Versjon 0.3. En åpen spesifikasjon som alle kan bruke, også kommersielt."
         },
         {
           "h": "Dataene dine forblir dine",
@@ -1278,8 +1288,8 @@
         "Dataene dine forblir dine"
       ],
       "scopeLabel": "Kategorier",
-      "scopeNow": "Versjon 0.2: klær, sko, vesker og bagasje",
-      "scopeNext": "Hjem og sport: under utvikling for 0.3",
+      "scopeNow": "Versjon 0.3: klær, sko, vesker og bagasje",
+      "scopeNext": "Hjem og sport: under utvikling for 0.4",
       "fairEyebrow": "Rettferdige priser",
       "fairTitle": "Betal for tjenester, ikke for tilgang til dine egne data.",
       "fairLead": "Å utveksle produktdata bør ikke koste noe per merkevare eller per forhandler.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "Oppslag av produkter på strekkode (EAN) gir forventet svar; for mange koder på én gang avvises.",
       "P-CAT-4": "Produkter en forhandler ikke får se, svarer «ikke funnet», slik at det ikke avsløres at de finnes.",
       "P-CAT-5": "Testprodukter for bagasje, vesker og sko kommer ut med nøyaktig de forventede artikkeldataene: materialer, mål, egenskaper og sertifiseringer.",
-      "P-CAT-6": "Hvert produkt har artikkeldataene fra versjon 0.2 i riktig form, med riktige navn for materialer og vaskesymboler.",
+      "P-CAT-6": "Hvert produkt har artikkeldataene fra versjon 0.3 i riktig form, med riktige navn for materialer og vaskesymboler.",
       "P-MEDIA-1": "Testbildene har den forventede informasjonen, som KI-opprinnelse, embargodatoer og at det ikke finnes noen original.",
       "P-MEDIA-2": "Hver bildefil stemmer med sjekksummen sin og støtter mellomlagring, delvise nedlastinger og midlertidige lenker.",
       "P-MEDIA-3": "Originalfiler leveres uendret; web- og miniatyrversjoner har riktig størrelse og format og blir aldri forstørret.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "Portalen forteller programvare hvilke grenser den har for forespørsler, og sier når det skal prøves igjen etter for mange forespørsler.",
       "P-EXP-1": "En fullstendig eksport (en zip-fil med en liste over filer og sjekksummer) er komplett og korrekt.",
       "P-HOOK-1": "Portalen sender signerte varsler (webhooks) og avviser usikre mottakere.",
-      "P-USE-1": "Portalen tar imot bruksrapporter fra forhandlere og teller dem."
+      "P-USE-1": "Portalen tar imot bruksrapporter fra forhandlere og teller dem.",
+      "P-FEED-7": "Når portalen oppgraderes til en ny versjon, utløper gamle posisjoner i endringsfeeden. Forhandlerens programvare starter da på nytt med en fullstendig kopi i det nye formatet."
     }
   },
   "demo": {

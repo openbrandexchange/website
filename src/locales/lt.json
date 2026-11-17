@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, pradžia",
     "copy": "Kopijuoti",
     "copied": "Nukopijuota",
-    "draft": "Išleista versija 0.2. Specifikacija ir programinė įranga naudojamos laisvai.",
+    "draft": "Išleista versija 0.3. Specifikacija ir programinė įranga naudojamos laisvai.",
     "footerAbout": "Nemokamas ir atviras būdas prekių ženklams dalytis produktų nuotraukomis ir prekių duomenimis su savo pardavėjais.",
     "footerMore": "Daugiau",
     "footerSource": "Išeities kodas ir specifikacija",
@@ -156,7 +156,7 @@
         "p": "Vienas publikavimas visiems pardavėjams. Jokių failų siuntimų, laiškų su zip archyvais ir atskirų integracijų kiekvienai parduotuvei."
       }
     ],
-    "status": "Open Brand Exchange tik pradeda. Išleista specifikacijos ir programinės įrangos versija 0.2, ja galima laisvai naudotis. Nerodome klientų ar skaičių, kurių dar nėra.",
+    "status": "Open Brand Exchange tik pradeda. Išleista specifikacijos ir programinės įrangos versija 0.3, ja galima laisvai naudotis. Nerodome klientų ar skaičių, kurių dar nėra.",
     "statusLink": "Skaitykite, kaip jis valdomas"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "Priežiūros etiketės informacija pateikiama su kiekviena preke.",
       "p": "Sudėtis pagal dalis, priežiūros nurodymai etiketės tvarka ir kilmės šalis pateikiami su kiekviena preke, kartu su kiekvieno dydžio EAN. Jūsų internetinė parduotuvė juos rodo tekstu arba priežiūros simboliais, pagal ES ženklinimo taisykles ir ISO 3758 priežiūros kodus.",
       "points": [
-        "Sudėtis pagal dalis (pagrindinis audinys, pamušalas, užpildas, padas) su procentais",
+        "Sudėtis pagal dalis (pagrindinis audinys, pamušalas, užpildas, padas) su procentais ir kiekvienam pluoštui nurodyta, ar jis perdirbtas, ekologiškas ar panašiai",
         "Priežiūros nurodymai standartiniais kodais, etiketės tvarka",
         "Kilmės šalis ir kiekvieno dydžio bei spalvos EAN"
       ],
@@ -629,7 +629,7 @@
     "h1": "Kūrėjams",
     "lead": "Open Brand Exchange yra specifikacija su trimis API, JSON schemomis, bandomaisiais duomenimis ir atitikties testais. Specifikacija yra tiesos šaltinis; įgyvendinimai jos laikosi.",
     "specTitle": "Specifikacija",
-    "specP": "Versija 0.2. OpenAPI 3.1, JSON Schema 2020-12, pavyzdžiai ir išgalvotas bandomasis prekės ženklas Kestrel Outfitters. Licencija CC-BY-4.0: laisvai įgyvendinama, taip pat komerciškai.",
+    "specP": "Versija 0.3. OpenAPI 3.1, JSON Schema 2020-12, pavyzdžiai ir išgalvotas bandomasis prekės ženklas Kestrel Outfitters. Licencija CC-BY-4.0: laisvai įgyvendinama, taip pat komerciškai.",
     "specStart": "Pradėkite nuo protocol.md",
     "apisTitle": "Trys API",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: įprastas interneto talpinimas",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Kuriate savo įgyvendinimą ar klientą? Praneškite per issue ar pull request; jis pateks į šią lentelę, kai išlaikys atitikties testus.",
     "docsTitle": "Dokumentai",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Atvirasis kodas, GitHub.",
     "reposTitle": "Saugyklos",
-    "reposP": "Viskas yra atvirojo kodo GitHub: specifikacija, bendras kodas ir trys portalo leidimai."
+    "reposP": "Viskas yra atvirojo kodo GitHub: specifikacija, bendras kodas ir trys portalo leidimai.",
+    "newTitle": "Kas nauja 0.3 versijoje",
+    "newItems": [
+      "Medžiagos ir priežiūra yra kodai su pavadinimais anglų, olandų, vokiečių ir prancūzų kalbomis iš bendrų žodynų, paskelbtų adresu /vocabularies/v0.3/.",
+      "Keli tvarumo teiginiai kiekvienam pluoštui: perdirbtas, ekologiškas, pereinamojo laikotarpio, iki vartojimo, po vartojimo ir regeneracinis. Faile, pavyzdžiui: 100% polyester (recycled) (post_consumer).",
+      "Stabilūs variantų ID: numatytai modelio numeris, spalva ir dydis, niekada EAN. Taip EAN gali atsirasti ar pasikeisti vėliau, nesukuriant naujo varianto.",
+      "Plėtiniai: jūsų pačių laukai x-<vendor>-<name> išsaugomi ir grąžinami, o nežinomas laukas niekada nesukelia įrašymo klaidos.",
+      "Nauji kodai: klaida idempotency_key_reused ir įspėjimai material_unknown bei qualifier_deprecated. Kiekvienas kodas turi savo puslapį skiltyje /errors/.",
+      "Nuo 0.3 esamos struktūros skiltyje /obx/v1 keičiamos tik papildant. 0.4 versijoje planuojama: namai ir sportas, paieška ir filtrai bei geresni webhooks."
+    ],
+    "newLink": "Visas pakeitimų žurnalas"
   },
   "directory": {
     "h1": "Prekių ženklų sąrašas",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Ar tai paruošta?",
-        "a": "Taip, versija 0.2: specifikacija, trys portalo leidimai ir įrankiai išleisti, jais galima laisvai naudotis. Esame pradžioje: pirmieji prekių ženklai prisijungia dabar."
+        "a": "Taip, versija 0.3: specifikacija, trys portalo leidimai ir įrankiai išleisti, jais galima laisvai naudotis. Esame pradžioje: pirmieji prekių ženklai prisijungia dabar."
       },
       {
         "q": "Kas už to stovi?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "Kas paruošta ir kas bus",
-    "readyTitle": "Paruošta versijoje 0.2",
+    "readyTitle": "Paruošta versijoje 0.3",
     "comingTitle": "Netrukus",
     "readyBadge": "Paruošta",
     "comingBadge": "Netrukus",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Turite klausimų ar norite dalyvauti nuo pradžių?",
     "ctaBrands": "Ieškome prekių ženklų, norinčių kurti pirmąją versiją kartu: kokias sistemas naudojate ir kiek pardavėjų aptarnaujate? Parašykite mums.",
     "ctaRetailers": "Ieškome pardavėjų, norinčių kurti pirmąją versiją kartu: kokius prekių ženklus norėtumėte prijungti ir kokią programinę įrangą naudojate? Parašykite mums.",
-    "footer": "Skiltyje „Netrukus“ nurodytos funkcijos kuriamos. Versija 0.2, {date}."
+    "footer": "Skiltyje „Netrukus“ nurodytos funkcijos kuriamos. Versija 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Esu prekės ženklas",
-      "preview": "Versija 0.2"
+      "preview": "Versija 0.3"
     },
     "footer": {
       "tagline": "Atviras standartas produktų nuotraukoms ir prekių duomenims dalytis tarp prekių ženklų ir pardavėjų.",
@@ -1022,7 +1032,7 @@
       "errors": "Klaidų kodai",
       "spec": "Specifikacija",
       "sdk": "Go SDK ir įrankis obx",
-      "status": "Išleista versija 0.2, skirta drabužiams, avalynei, rankinėms ir lagaminams. Specifikacija ir programinė įranga naudojamos laisvai."
+      "status": "Išleista versija 0.3, skirta drabužiams, avalynei, rankinėms ir lagaminams. Specifikacija ir programinė įranga naudojamos laisvai."
     },
     "shots": {
       "portalCatalog": "Išgalvoto prekės ženklo Kestrel portalas taip, kaip jį mato pardavėjas: aštuonios prekės su filtrais pagal prekės ženklą, produkto tipą ir spalvą.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Atvira specifikacija",
-          "p": "Versija 0.2. Atvira specifikacija, kurią gali naudoti bet kas, taip pat komerciniais tikslais."
+          "p": "Versija 0.3. Atvira specifikacija, kurią gali naudoti bet kas, taip pat komerciniais tikslais."
         },
         {
           "h": "Jūsų duomenys lieka jūsų",
@@ -1278,8 +1288,8 @@
         "Jūsų duomenys lieka jūsų"
       ],
       "scopeLabel": "Kategorijos",
-      "scopeNow": "Versija 0.2: drabužiai, avalynė, rankinės ir lagaminai",
-      "scopeNext": "Namai ir sportas: kuriama versijai 0.3",
+      "scopeNow": "Versija 0.3: drabužiai, avalynė, rankinės ir lagaminai",
+      "scopeNext": "Namai ir sportas: kuriama versijai 0.4",
       "fairEyebrow": "Sąžiningos kainos",
       "fairTitle": "Mokate už paslaugas, ne už prieigą prie savo duomenų.",
       "fairLead": "Keistis produktų duomenimis neturėtų kainuoti nieko nei prekės ženklui, nei pardavėjui.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "Produktų paieška pagal brūkšninį kodą (EAN) duoda tikėtiną atsakymą; per daug kodų vienu metu atmetama.",
       "P-CAT-4": "Produktai, kurių pardavėjas negali matyti, atsako „nerasta“, todėl jų egzistavimas neatskleidžiamas.",
       "P-CAT-5": "Bandomieji lagaminų, krepšių ir batų produktai pateikiami lygiai su tikėtinais prekių duomenimis: medžiagomis, išmatavimais, savybėmis ir sertifikatais.",
-      "P-CAT-6": "Kiekvienas produktas turi 0.2 versijos prekių duomenis tinkamu pavidalu, su tinkamais medžiagų ir priežiūros simbolių pavadinimais.",
+      "P-CAT-6": "Kiekvienas produktas turi 0.3 versijos prekių duomenis tinkamu pavidalu, su tinkamais medžiagų ir priežiūros simbolių pavadinimais.",
       "P-MEDIA-1": "Bandomosiose nuotraukose yra tikėtina informacija, pavyzdžiui, DI kilmė, embargo datos ir originalo nebuvimas.",
       "P-MEDIA-2": "Kiekvienas nuotraukos failas atitinka savo kontrolinę sumą ir palaiko podėlį, dalinius atsisiuntimus ir laikinas nuorodas.",
       "P-MEDIA-3": "Originalūs failai pateikiami nepakeisti; žiniatinklio ir miniatiūrų versijos yra tinkamo dydžio ir formato ir niekada nedidinamos.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "Portalas praneša programinei įrangai savo užklausų ribas ir nurodo, kada bandyti vėl po per didelio užklausų skaičiaus.",
       "P-EXP-1": "Pilnas eksportas (zip failas su failų sąrašu ir kontrolinėmis sumomis) yra išsamus ir teisingas.",
       "P-HOOK-1": "Portalas siunčia pasirašytus pranešimus (webhooks) ir atmeta nesaugius gavėjus.",
-      "P-USE-1": "Portalas priima pardavėjų naudojimo ataskaitas ir jas suskaičiuoja."
+      "P-USE-1": "Portalas priima pardavėjų naudojimo ataskaitas ir jas suskaičiuoja.",
+      "P-FEED-7": "Atnaujinus portalą į naują versiją, senos pozicijos pakeitimų sraute nebegalioja. Tada pardavėjo programinė įranga pradeda iš naujo nuo visos kopijos nauju formatu."
     }
   },
   "demo": {

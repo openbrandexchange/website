@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, accueil",
     "copy": "Copier",
     "copied": "Copié",
-    "draft": "La version 0.2 est publiée. La spécification et le logiciel sont libres d’utilisation.",
+    "draft": "La version 0.3 est publiée. La spécification et le logiciel sont libres d’utilisation.",
     "footerAbout": "Une manière ouverte et gratuite pour les marques de partager leurs visuels produits et leurs données articles avec leurs revendeurs.",
     "footerMore": "Plus",
     "footerSource": "Code source et spécification",
@@ -156,7 +156,7 @@
         "p": "Une seule publication pour tous vos revendeurs. Fini les transferts de fichiers, les e-mails avec des zips et une intégration par magasin."
       }
     ],
-    "status": "Open Brand Exchange n'en est qu'au début. La version 0.2 de la spécification et du logiciel est publiée et libre d’utilisation. Nous ne montrons pas de clients ni de chiffres qui n'existent pas encore.",
+    "status": "Open Brand Exchange n'en est qu'au début. La version 0.3 de la spécification et du logiciel est publiée et libre d’utilisation. Nous ne montrons pas de clients ni de chiffres qui n'existent pas encore.",
     "statusLink": "Découvrir comment il est gouverné"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "Les informations de l'étiquette d'entretien sont fournies avec chaque article.",
       "p": "La composition par partie, les consignes d'entretien dans l'ordre de l'étiquette et le pays d'origine accompagnent chaque article, avec l'EAN de chaque taille. Votre boutique les affiche en texte ou en symboles d'entretien, selon les règles européennes d'étiquetage et les codes d'entretien de la norme ISO 3758.",
       "points": [
-        "Composition par partie (tissu principal, doublure, garnissage, semelle) avec pourcentages",
+        "Composition par partie (tissu principal, doublure, garnissage, semelle) avec pourcentages, et pour chaque fibre si elle est recyclée, biologique ou autre",
         "Consignes d'entretien sous forme de codes standard, dans l'ordre de l'étiquette",
         "Pays de fabrication et EAN de chaque taille et couleur"
       ],
@@ -629,7 +629,7 @@
     "h1": "Développeurs",
     "lead": "Open Brand Exchange est une spécification avec trois API, des schémas JSON, des données de test et des tests de conformité. La spécification fait foi ; les implémentations la suivent.",
     "specTitle": "La spécification",
-    "specP": "Version 0.2. OpenAPI 3.1, JSON Schema 2020-12, des exemples et une marque de test fictive, Kestrel Outfitters. Licence CC-BY-4.0 : libre à implémenter, y compris commercialement.",
+    "specP": "Version 0.3. OpenAPI 3.1, JSON Schema 2020-12, des exemples et une marque de test fictive, Kestrel Outfitters. Licence CC-BY-4.0 : libre à implémenter, y compris commercialement.",
     "specStart": "Commencez par protocol.md",
     "apisTitle": "Trois API",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP : hébergement web classique",
       "TypeScript : Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Vous développez votre propre implémentation ou un client ? Faites-le savoir par une issue ou une pull request ; elle rejoindra ce tableau dès qu'elle réussira les tests de conformité.",
     "docsTitle": "Documents",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Open source, sur GitHub.",
     "reposTitle": "Dépôts",
-    "reposP": "Tout est open source sur GitHub : la spécification, le code commun et les trois éditions du portail."
+    "reposP": "Tout est open source sur GitHub : la spécification, le code commun et les trois éditions du portail.",
+    "newTitle": "Nouveautés de la version 0.3",
+    "newItems": [
+      "Les matières et l'entretien sont des codes avec des libellés en anglais, néerlandais, allemand et français, issus de vocabulaires partagés publiés sur /vocabularies/v0.3/.",
+      "Plusieurs allégations environnementales par fibre : recyclée, biologique, en conversion, pré-consommation, post-consommation et régénératrice. Dans un fichier, par exemple : 100% polyester (recycled) (post_consumer).",
+      "Identifiants de variante stables : par défaut la référence, la couleur et la taille, jamais l'EAN. Un EAN peut donc arriver ou changer plus tard sans créer de nouvelle variante.",
+      "Extensions : vos propres champs x-<vendor>-<name> sont enregistrés et renvoyés, et un champ inconnu ne fait jamais échouer une écriture.",
+      "Nouveaux codes : l'erreur idempotency_key_reused et les avertissements material_unknown et qualifier_deprecated. Chaque code a sa propre page sous /errors/.",
+      "À partir de la 0.3, les structures existantes sous /obx/v1 ne changent que par ajout. Prévu pour la 0.4 : maison et sport, recherche et filtres, et de meilleurs webhooks."
+    ],
+    "newLink": "Journal des modifications complet"
   },
   "directory": {
     "h1": "Annuaire",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Est-ce prêt ?",
-        "a": "Oui, version 0.2 : la spécification, les trois éditions du portail et les outils sont publiés et libres d'utilisation. Nous n'en sommes qu'au début : les premières marques nous rejoignent maintenant."
+        "a": "Oui, version 0.3 : la spécification, les trois éditions du portail et les outils sont publiés et libres d'utilisation. Nous n'en sommes qu'au début : les premières marques nous rejoignent maintenant."
       },
       {
         "q": "Qui est derrière ?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "Ce qui est prêt, et ce qui arrive",
-    "readyTitle": "Prêt dans la version 0.2",
+    "readyTitle": "Prêt dans la version 0.3",
     "comingTitle": "À venir",
     "readyBadge": "Prêt",
     "comingBadge": "Bientôt",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Des questions, ou envie de participer dès le début ?",
     "ctaBrands": "Nous cherchons des marques qui veulent façonner la première version : quels systèmes utilisez-vous, et combien de revendeurs servez-vous ? Écrivez-nous.",
     "ctaRetailers": "Nous cherchons des revendeurs qui veulent façonner la première version : quelles marques voulez-vous connecter, et quel logiciel utilisez-vous ? Écrivez-nous.",
-    "footer": "Les fonctions sous « À venir » sont en développement. Version 0.2, {date}."
+    "footer": "Les fonctions sous « À venir » sont en développement. Version 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Pour les marques",
-      "preview": "Version 0.2"
+      "preview": "Version 0.3"
     },
     "footer": {
       "tagline": "Le standard ouvert pour partager visuels produits et données articles entre marques et revendeurs.",
@@ -1022,7 +1032,7 @@
       "errors": "Codes d'erreur",
       "spec": "Spécification",
       "sdk": "SDK Go et outil obx",
-      "status": "La version 0.2 est publiée, pour la mode, les chaussures, les sacs et la bagagerie. La spécification et le logiciel sont libres d’utilisation."
+      "status": "La version 0.3 est publiée, pour la mode, les chaussures, les sacs et la bagagerie. La spécification et le logiciel sont libres d’utilisation."
     },
     "shots": {
       "portalCatalog": "Le portail de la marque fictive Kestrel, vu par un revendeur : huit articles, avec des filtres par marque, type de produit et couleur.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Spécification ouverte",
-          "p": "Version 0.2. Une spécification ouverte que chacun peut utiliser, y compris à des fins commerciales."
+          "p": "Version 0.3. Une spécification ouverte que chacun peut utiliser, y compris à des fins commerciales."
         },
         {
           "h": "Vos données restent les vôtres",
@@ -1278,8 +1288,8 @@
         "Vos données restent les vôtres"
       ],
       "scopeLabel": "Catégories",
-      "scopeNow": "Version 0.2 : mode, chaussures, sacs et bagagerie",
-      "scopeNext": "Maison et sport : en développement pour la 0.3",
+      "scopeNow": "Version 0.3 : mode, chaussures, sacs et bagagerie",
+      "scopeNext": "Maison et sport : en développement pour la 0.4",
       "fairEyebrow": "Des prix justes",
       "fairTitle": "Payez des services, pas l'accès à vos propres données.",
       "fairLead": "Échanger des données produit ne devrait rien coûter par marque ni par revendeur.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "La recherche d'articles par code-barres (EAN) donne la réponse attendue ; trop de codes à la fois sont refusés.",
       "P-CAT-4": "Les articles qu'un revendeur ne peut pas voir répondent « introuvable », pour ne pas révéler leur existence.",
       "P-CAT-5": "Les articles de test de bagagerie, de maroquinerie et de chaussures ressortent avec exactement les données articles attendues : matières, dimensions, caractéristiques et certifications.",
-      "P-CAT-6": "Chaque article a les données articles de la version 0.2 sous la bonne forme, avec les bons noms pour les matières et les symboles d'entretien.",
+      "P-CAT-6": "Chaque article a les données articles de la version 0.3 sous la bonne forme, avec les bons noms pour les matières et les symboles d'entretien.",
       "P-MEDIA-1": "Les visuels de test portent les informations attendues, comme la provenance IA, les dates d'embargo et l'absence d'original.",
       "P-MEDIA-2": "Chaque fichier image correspond à sa somme de contrôle et prend en charge la mise en cache, les téléchargements partiels et les liens temporaires.",
       "P-MEDIA-3": "Les fichiers originaux sont livrés sans modification ; les versions web et miniatures ont la bonne taille et le bon format, et ne sont jamais agrandies.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "Le portail indique aux logiciels ses limites de requêtes et précise quand réessayer après trop de requêtes.",
       "P-EXP-1": "Un export complet (un fichier zip avec une liste de fichiers et de sommes de contrôle) est complet et correct.",
       "P-HOOK-1": "Le portail envoie des notifications signées (webhooks) et refuse les destinations non sûres.",
-      "P-USE-1": "Le portail accepte les rapports d'utilisation des revendeurs et les comptabilise."
+      "P-USE-1": "Le portail accepte les rapports d'utilisation des revendeurs et les comptabilise.",
+      "P-FEED-7": "Après la mise à niveau du portail vers une nouvelle version, les anciennes positions dans le flux de changements expirent. Le logiciel du revendeur repart alors d'une copie complète au nouveau format."
     }
   },
   "demo": {

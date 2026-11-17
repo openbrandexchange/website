@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, kezdőlap",
     "copy": "Másolás",
     "copied": "Másolva",
-    "draft": "Megjelent a 0.2-es verzió. A specifikáció és a szoftver szabadon használható.",
+    "draft": "Megjelent a 0.3-es verzió. A specifikáció és a szoftver szabadon használható.",
     "footerAbout": "Ingyenes, nyílt módszer, amellyel a márkák megoszthatják termékfotóikat és cikkadataikat viszonteladóikkal.",
     "footerMore": "Továbbiak",
     "footerSource": "Forráskód és specifikáció",
@@ -156,7 +156,7 @@
         "p": "Egyetlen közzététel minden viszonteladónak. Nincs több fájlküldés, zipes e-mail és külön integráció minden üzlethez."
       }
     ],
-    "status": "Az Open Brand Exchange az út elején jár. Megjelent a specifikáció és a szoftver 0.2-es verziója, és szabadon használható. Nem mutatunk olyan ügyfeleket vagy számokat, amelyek még nem léteznek.",
+    "status": "Az Open Brand Exchange az út elején jár. Megjelent a specifikáció és a szoftver 0.3-es verziója, és szabadon használható. Nem mutatunk olyan ügyfeleket vagy számokat, amelyek még nem léteznek.",
     "statusLink": "Olvassa el, hogyan irányítják"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "A kezelési címke adatai minden cikkhez mellékelve vannak.",
       "p": "Az anyagösszetétel részenként, a kezelési útmutató a címke sorrendjében és a származási ország minden cikkhez megérkezik, az egyes méretek EAN-kódja mellett. Webáruháza szövegként vagy kezelési jelekként jeleníti meg őket, az uniós címkézési szabályok és az ISO 3758 kezelési kódok szerint.",
       "points": [
-        "Anyagösszetétel részenként (külső anyag, bélés, töltet, talp), százalékkal",
+        "Anyagösszetétel részenként (külső anyag, bélés, töltet, talp), százalékkal, és szálanként az is, hogy újrahasznosított, bio vagy hasonló",
         "Kezelési útmutató szabványos kódokkal, a címke sorrendjében",
         "Származási ország és minden méret és szín EAN-kódja"
       ],
@@ -629,7 +629,7 @@
     "h1": "Fejlesztőknek",
     "lead": "Az Open Brand Exchange egy specifikáció három API-val, JSON-sémákkal, tesztadatokkal és megfelelőségi tesztekkel. A specifikáció a mérvadó; az implementációk ezt követik.",
     "specTitle": "A specifikáció",
-    "specP": "0.2-es verzió. OpenAPI 3.1, JSON Schema 2020-12, példák és egy kitalált tesztmárka, a Kestrel Outfitters. Licenc CC-BY-4.0: szabadon implementálható, üzleti célra is.",
+    "specP": "0.3-es verzió. OpenAPI 3.1, JSON Schema 2020-12, példák és egy kitalált tesztmárka, a Kestrel Outfitters. Licenc CC-BY-4.0: szabadon implementálható, üzleti célra is.",
     "specStart": "Kezdje a protocol.md fájllal",
     "apisTitle": "Három API",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: hagyományos webtárhely",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Saját implementációt vagy klienst épít? Jelezze issue-ban vagy pull requestben; amint átmegy a megfelelőségi teszteken, bekerül ebbe a táblázatba.",
     "docsTitle": "Dokumentumok",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Nyílt forráskód, a GitHubon.",
     "reposTitle": "Tárolók",
-    "reposP": "Minden nyílt forráskódú a GitHubon: a specifikáció, a közös kód és a három portálkiadás."
+    "reposP": "Minden nyílt forráskódú a GitHubon: a specifikáció, a közös kód és a három portálkiadás.",
+    "newTitle": "Újdonságok a 0.3-as verzióban",
+    "newItems": [
+      "Az anyag- és ápolási adatok kódok angol, holland, német és francia nevekkel. Közös szótárakból származnak, amelyek a /vocabularies/v0.3/ címen érhetők el.",
+      "Szálanként több fenntarthatósági állítás: újrahasznosított, bio, átállás alatti, fogyasztás előtti, fogyasztás utáni és regeneratív. Egy fájlban például: 100% polyester (recycled) (post_consumer).",
+      "Stabil változatazonosítók: alapértelmezés szerint a modellszám, a szín és a méret, soha nem az EAN. Így az EAN később is megérkezhet vagy változhat anélkül, hogy új változat jönne létre.",
+      "Bővítmények: a saját x-<vendor>-<name> mezőit a rendszer eltárolja és visszaadja, egy ismeretlen mező pedig soha nem hiúsít meg egy írást.",
+      "Új kódok: az idempotency_key_reused hiba, valamint a material_unknown és a qualifier_deprecated figyelmeztetés. Minden kódnak saját oldala van a /errors/ alatt.",
+      "A 0.3-tól kezdve a /obx/v1 alatti meglévő struktúrák csak bővüléssel változnak. A 0.4-re tervezett: otthon és sport, keresés és szűrők, valamint jobb webhookok."
+    ],
+    "newLink": "Teljes változásnapló"
   },
   "directory": {
     "h1": "Márkajegyzék",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Kész van?",
-        "a": "Igen, a 0.2-es verzió: a specifikáció, a három portálkiadás és az eszközök megjelentek, és szabadon használhatók. Még az elején járunk: az első márkák most csatlakoznak."
+        "a": "Igen, a 0.3-es verzió: a specifikáció, a három portálkiadás és az eszközök megjelentek, és szabadon használhatók. Még az elején járunk: az első márkák most csatlakoznak."
       },
       {
         "q": "Ki áll mögötte?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "Mi van kész, és mi jön még",
-    "readyTitle": "Kész a 0.2-es verzióban",
+    "readyTitle": "Kész a 0.3-es verzióban",
     "comingTitle": "Hamarosan",
     "readyBadge": "Kész",
     "comingBadge": "Hamarosan",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Kérdése van, vagy az elejétől részt venne?",
     "ctaBrands": "Olyan márkákat keresünk, akik szívesen formálják az első verziót: milyen rendszereket használ, és hány viszonteladót szolgál ki? Írjon nekünk.",
     "ctaRetailers": "Olyan viszonteladókat keresünk, akik szívesen formálják az első verziót: mely márkákat kapcsolná be, és milyen szoftvert használ? Írjon nekünk.",
-    "footer": "A „Hamarosan” alatti funkciók fejlesztés alatt állnak. 0.2-es verzió, {date}."
+    "footer": "A „Hamarosan” alatti funkciók fejlesztés alatt állnak. 0.3-es verzió, {date}."
   },
   "site": {
     "nav": {
       "start": "Kezdés márkaként",
-      "preview": "0.2-es verzió"
+      "preview": "0.3-es verzió"
     },
     "footer": {
       "tagline": "A nyílt szabvány termékfotók és cikkadatok megosztására márkák és viszonteladók között.",
@@ -1022,7 +1032,7 @@
       "errors": "Hibakódok",
       "spec": "Specifikáció",
       "sdk": "Go SDK és obx eszköz",
-      "status": "Megjelent a 0.2-es verzió ruházathoz, cipőkhöz, táskákhoz és bőröndökhöz. A specifikáció és a szoftver szabadon használható."
+      "status": "Megjelent a 0.3-es verzió ruházathoz, cipőkhöz, táskákhoz és bőröndökhöz. A specifikáció és a szoftver szabadon használható."
     },
     "shots": {
       "portalCatalog": "A kitalált Kestrel márka portálja egy viszonteladó szemével: nyolc cikk márka, terméktípus és szín szerinti szűrőkkel.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Nyílt specifikáció",
-          "p": "0.2-es verzió. Nyílt specifikáció, amelyet bárki használhat, üzleti célra is."
+          "p": "0.3-es verzió. Nyílt specifikáció, amelyet bárki használhat, üzleti célra is."
         },
         {
           "h": "Az adatai az Önéi maradnak",
@@ -1278,8 +1288,8 @@
         "Az adatai az Önéi maradnak"
       ],
       "scopeLabel": "Kategóriák",
-      "scopeNow": "0.2-es verzió: ruházat, cipők, táskák és bőröndök",
-      "scopeNext": "Lakás és sport: fejlesztés alatt a 0.3-hoz",
+      "scopeNow": "0.3-es verzió: ruházat, cipők, táskák és bőröndök",
+      "scopeNext": "Lakás és sport: fejlesztés alatt a 0.4-hoz",
       "fairEyebrow": "Méltányos árak",
       "fairTitle": "Szolgáltatásokért fizessen, ne a saját adataihoz való hozzáférésért.",
       "fairLead": "A termékadatok cseréje nem kerülhet pénzbe márkánként vagy kereskedőnként.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "A termékek vonalkód (EAN) szerinti keresése a várt választ adja; a túl sok egyszerre megadott kódot elutasítja.",
       "P-CAT-4": "Azok a termékek, amelyeket a viszonteladó nem láthat, „nem található” választ adnak, így létezésük nem derül ki.",
       "P-CAT-5": "A bőrönd-, táska- és cipőtesztermékek pontosan a várt cikkadatokkal jelennek meg: anyagok, méretek, jellemzők és tanúsítványok.",
-      "P-CAT-6": "Minden termék rendelkezik a 0.2-es verzió cikkadataival a megfelelő formában, az anyagok és ápolási jelek megfelelő neveivel.",
+      "P-CAT-6": "Minden termék rendelkezik a 0.3-es verzió cikkadataival a megfelelő formában, az anyagok és ápolási jelek megfelelő neveivel.",
       "P-MEDIA-1": "A tesztképek a várt információkat hordozzák, például az MI-eredetet, az embargó dátumát és az eredeti hiányát.",
       "P-MEDIA-2": "Minden képfájl megfelel az ellenőrzőösszegének, és támogatja a gyorsítótárazást, a részleges letöltést és az ideiglenes hivatkozásokat.",
       "P-MEDIA-3": "Az eredeti fájlokat változatlanul szállítja; a webes és bélyegkép-változatok mérete és formátuma megfelelő, és soha nincsenek felnagyítva.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "A portál közli a szoftverekkel a kéréskorlátait, és túl sok kérés után megmondja, mikor lehet újrapróbálkozni.",
       "P-EXP-1": "A teljes export (egy zip-fájl a fájlok és ellenőrzőösszegek listájával) hiánytalan és helyes.",
       "P-HOOK-1": "A portál aláírt értesítéseket (webhookokat) küld, és elutasítja a nem biztonságos célcímeket.",
-      "P-USE-1": "A portál fogadja a viszonteladók használati jelentéseit, és összesíti őket."
+      "P-USE-1": "A portál fogadja a viszonteladók használati jelentéseit, és összesíti őket.",
+      "P-FEED-7": "Amikor a portál új verzióra frissül, a változásfolyam régi pozíciói lejárnak. A viszonteladó szoftvere így elölről kezdi, egy teljes másolattal az új formátumban."
     }
   },
   "demo": {

@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, pagina principală",
     "copy": "Copiază",
     "copied": "Copiat",
-    "draft": "Versiunea 0.2 a fost lansată. Specificația și software-ul sunt libere de folosit.",
+    "draft": "Versiunea 0.3 a fost lansată. Specificația și software-ul sunt libere de folosit.",
     "footerAbout": "O modalitate gratuită și deschisă prin care mărcile partajează imagini de produs și date despre articole cu comercianții lor.",
     "footerMore": "Mai mult",
     "footerSource": "Cod sursă și specificație",
@@ -156,7 +156,7 @@
         "p": "O singură publicare pentru toți comercianții. Gata cu transferurile de fișiere, e-mailurile cu arhive zip și integrările separate pentru fiecare magazin."
       }
     ],
-    "status": "Open Brand Exchange este la început. Versiunea 0.2 a specificației și a software-ului a fost lansată și este liberă de folosit. Nu arătăm clienți sau cifre care încă nu există.",
+    "status": "Open Brand Exchange este la început. Versiunea 0.3 a specificației și a software-ului a fost lansată și este liberă de folosit. Nu arătăm clienți sau cifre care încă nu există.",
     "statusLink": "Citiți cum este guvernat"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "Informațiile de pe eticheta de întreținere sunt incluse la fiecare articol.",
       "p": "Compoziția pe părți, instrucțiunile de întreținere în ordinea de pe etichetă și țara de origine însoțesc fiecare articol, alături de codul EAN al fiecărei mărimi. Magazinul dvs. online le afișează ca text sau ca simboluri de întreținere, conform regulilor UE de etichetare și codurilor de întreținere ISO 3758.",
       "points": [
-        "Compoziția pe părți (exterior, căptușeală, umplutură, talpă), cu procente",
+        "Compoziția pe părți (exterior, căptușeală, umplutură, talpă), cu procente, iar pentru fiecare fibră dacă este reciclată, organică sau similar",
         "Instrucțiuni de întreținere sub formă de coduri standard, în ordinea de pe etichetă",
         "Țara de origine și codul EAN al fiecărei mărimi și culori"
       ],
@@ -629,7 +629,7 @@
     "h1": "Pentru dezvoltatori",
     "lead": "Open Brand Exchange este o specificație cu trei API-uri, scheme JSON, date de test și teste de conformitate. Specificația este sursa de adevăr; implementările o urmează.",
     "specTitle": "Specificația",
-    "specP": "Versiunea 0.2. OpenAPI 3.1, JSON Schema 2020-12, exemple și o marcă de test fictivă, Kestrel Outfitters. Licență CC-BY-4.0: liber de implementat, inclusiv comercial.",
+    "specP": "Versiunea 0.3. OpenAPI 3.1, JSON Schema 2020-12, exemple și o marcă de test fictivă, Kestrel Outfitters. Licență CC-BY-4.0: liber de implementat, inclusiv comercial.",
     "specStart": "Începeți cu protocol.md",
     "apisTitle": "Trei API-uri",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: găzduire web obișnuită",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Construiți propria implementare sau un client? Anunțați-ne printr-un issue sau pull request; intră în acest tabel după ce trece testele de conformitate.",
     "docsTitle": "Documente",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Open source, pe GitHub.",
     "reposTitle": "Depozite de cod",
-    "reposP": "Totul este open source pe GitHub: specificația, codul comun și cele trei ediții ale portalului."
+    "reposP": "Totul este open source pe GitHub: specificația, codul comun și cele trei ediții ale portalului.",
+    "newTitle": "Ce este nou în versiunea 0.3",
+    "newItems": [
+      "Materialele și îngrijirea sunt coduri cu denumiri în engleză, neerlandeză, germană și franceză, din vocabulare comune publicate la /vocabularies/v0.3/.",
+      "Mai multe declarații de sustenabilitate pentru fiecare fibră: reciclat, organic, în conversie, pre-consum, post-consum și regenerativ. Într-un fișier, de exemplu: 100% polyester (recycled) (post_consumer).",
+      "ID-uri stabile pentru variante: implicit numărul modelului, culoarea și mărimea, niciodată EAN-ul. Astfel, un EAN poate apărea sau se poate schimba mai târziu fără să se creeze o variantă nouă.",
+      "Extensii: câmpurile proprii x-<vendor>-<name> sunt stocate și returnate, iar un câmp necunoscut nu face niciodată ca o scriere să eșueze.",
+      "Coduri noi: eroarea idempotency_key_reused și avertismentele material_unknown și qualifier_deprecated. Fiecare cod are propria pagină sub /errors/.",
+      "Începând cu 0.3, structurile existente din /obx/v1 se schimbă doar prin adăugare. Planificat pentru 0.4: casă și sport, căutare și filtre, plus webhookuri mai bune."
+    ],
+    "newLink": "Lista completă a modificărilor"
   },
   "directory": {
     "h1": "Lista mărcilor",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Este gata?",
-        "a": "Da, versiunea 0.2: specificația, cele trei ediții ale portalului și instrumentele au fost lansate și sunt libere de folosit. Suntem la început: primele mărci se alătură acum."
+        "a": "Da, versiunea 0.3: specificația, cele trei ediții ale portalului și instrumentele au fost lansate și sunt libere de folosit. Suntem la început: primele mărci se alătură acum."
       },
       {
         "q": "Cine se află în spate?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "Ce este gata și ce urmează",
-    "readyTitle": "Gata în versiunea 0.2",
+    "readyTitle": "Gata în versiunea 0.3",
     "comingTitle": "Urmează",
     "readyBadge": "Gata",
     "comingBadge": "În curând",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Întrebări sau vreți să participați de la început?",
     "ctaBrands": "Căutăm mărci care vor să contribuie la prima versiune: ce sisteme folosiți și câți comercianți deserviți? Scrieți-ne.",
     "ctaRetailers": "Căutăm comercianți care vor să contribuie la prima versiune: ce mărci vreți să conectați și ce software folosiți? Scrieți-ne.",
-    "footer": "Funcțiile de la „Urmează” sunt în dezvoltare. Versiunea 0.2, {date}."
+    "footer": "Funcțiile de la „Urmează” sunt în dezvoltare. Versiunea 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Începeți ca marcă",
-      "preview": "Versiunea 0.2"
+      "preview": "Versiunea 0.3"
     },
     "footer": {
       "tagline": "Standardul deschis pentru partajarea imaginilor de produs și a datelor despre articole între mărci și comercianți.",
@@ -1022,7 +1032,7 @@
       "errors": "Coduri de eroare",
       "spec": "Specificație",
       "sdk": "Go SDK și instrumentul obx",
-      "status": "Versiunea 0.2 a fost lansată, pentru modă, încălțăminte, genți și bagaje. Specificația și software-ul sunt libere de folosit."
+      "status": "Versiunea 0.3 a fost lansată, pentru modă, încălțăminte, genți și bagaje. Specificația și software-ul sunt libere de folosit."
     },
     "shots": {
       "portalCatalog": "Portalul mărcii fictive Kestrel, așa cum îl vede un comerciant: opt articole cu filtre după marcă, tip de produs și culoare.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Specificație deschisă",
-          "p": "Versiunea 0.2. O specificație deschisă pe care oricine o poate folosi, inclusiv în scop comercial."
+          "p": "Versiunea 0.3. O specificație deschisă pe care oricine o poate folosi, inclusiv în scop comercial."
         },
         {
           "h": "Datele rămân ale dvs.",
@@ -1278,8 +1288,8 @@
         "Datele rămân ale dvs."
       ],
       "scopeLabel": "Categorii",
-      "scopeNow": "Versiunea 0.2: modă, încălțăminte, genți și bagaje",
-      "scopeNext": "Casă și sport: în dezvoltare pentru 0.3",
+      "scopeNow": "Versiunea 0.3: modă, încălțăminte, genți și bagaje",
+      "scopeNext": "Casă și sport: în dezvoltare pentru 0.4",
       "fairEyebrow": "Prețuri corecte",
       "fairTitle": "Plătiți pentru servicii, nu pentru accesul la propriile date.",
       "fairLead": "Schimbul de date despre produse nu ar trebui să coste nimic per marcă sau per comerciant.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "Căutarea produselor după cod de bare (EAN) dă răspunsul așteptat; prea multe coduri deodată sunt refuzate.",
       "P-CAT-4": "Produsele pe care un comerciant nu le poate vedea răspund „negăsit”, astfel încât existența lor nu este dezvăluită.",
       "P-CAT-5": "Produsele de test pentru bagaje, genți și încălțăminte ies exact cu datele de articol așteptate: materiale, dimensiuni, caracteristici și certificări.",
-      "P-CAT-6": "Fiecare produs are datele de articol ale versiunii 0.2 în forma corectă, cu denumirile corecte pentru materiale și simbolurile de îngrijire.",
+      "P-CAT-6": "Fiecare produs are datele de articol ale versiunii 0.3 în forma corectă, cu denumirile corecte pentru materiale și simbolurile de îngrijire.",
       "P-MEDIA-1": "Fotografiile de test conțin informațiile așteptate, cum ar fi proveniența IA, datele de embargo și lipsa unui original.",
       "P-MEDIA-2": "Fiecare fișier de imagine corespunde sumei sale de control și acceptă cache, descărcări parțiale și linkuri temporare.",
       "P-MEDIA-3": "Fișierele originale sunt livrate nemodificate; versiunile web și miniaturile au dimensiunea și formatul corecte și nu sunt niciodată mărite.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "Portalul comunică software-ului limitele de cereri și spune când să reîncerce după prea multe cereri.",
       "P-EXP-1": "Un export complet (un fișier zip cu o listă de fișiere și sume de control) este complet și corect.",
       "P-HOOK-1": "Portalul trimite notificări semnate (webhooks) și refuză destinațiile nesigure.",
-      "P-USE-1": "Portalul acceptă rapoarte de utilizare de la comercianți și le numără."
+      "P-USE-1": "Portalul acceptă rapoarte de utilizare de la comercianți și le numără.",
+      "P-FEED-7": "După ce portalul trece la o versiune nouă, pozițiile vechi din fluxul de modificări expiră. Software-ul comerciantului o ia atunci de la capăt cu o copie completă în noul format."
     }
   },
   "demo": {

@@ -1,0 +1,59 @@
+{
+  "description": "Qualifier codes of a fibre in `materials`: what the fibre is, apart from which fibre. A fibre can have several (`recycled` + `post_consumer`, `organic` + `regenerative`). A label shows the names next to the material (\"Polyester (Recycled, Post-consumer)\"). New codes are added here by pull request (a minor spec change, see docs/vocabularies.md); nodes accept unknown codes.",
+  "entries": [
+    {
+      "code": "organic",
+      "name": {
+        "en": "Organic",
+        "nl": "Biologisch",
+        "de": "Bio",
+        "fr": "Biologique"
+      }
+    },
+    {
+      "code": "in_conversion",
+      "name": {
+        "en": "In conversion",
+        "nl": "In omschakeling",
+        "de": "In Umstellung",
+        "fr": "En conversion"
+      }
+    },
+    {
+      "code": "recycled",
+      "name": {
+        "en": "Recycled",
+        "nl": "Gerecycled",
+        "de": "Recycelt",
+        "fr": "Recyclé"
+      }
+    },
+    {
+      "code": "pre_consumer",
+      "name": {
+        "en": "Pre-consumer",
+        "nl": "Pre-consumer",
+        "de": "Pre-Consumer",
+        "fr": "Pré-consommation"
+      }
+    },
+    {
+      "code": "post_consumer",
+      "name": {
+        "en": "Post-consumer",
+        "nl": "Post-consumer",
+        "de": "Post-Consumer",
+        "fr": "Post-consommation"
+      }
+    },
+    {
+      "code": "regenerative",
+      "name": {
+        "en": "Regenerative",
+        "nl": "Regeneratief",
+        "de": "Regenerativ",
+        "fr": "Régénératif"
+      }
+    }
+  ]
+}

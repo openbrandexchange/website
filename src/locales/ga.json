@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, leathanach baile",
     "copy": "Cóipeáil",
     "copied": "Cóipeáilte",
-    "draft": "Tá leagan 0.2 eisithe. Tá an tsonraíocht agus na bogearraí saor le húsáid.",
+    "draft": "Tá leagan 0.3 eisithe. Tá an tsonraíocht agus na bogearraí saor le húsáid.",
     "footerAbout": "Bealach saor in aisce agus oscailte do bhrandaí íomhánna táirgí agus sonraí earraí a roinnt lena gcuid miondíoltóirí.",
     "footerMore": "Tuilleadh",
     "footerSource": "Cód foinseach agus sonraíocht",
@@ -156,7 +156,7 @@
         "p": "Foilseachán amháin do do mhiondíoltóirí go léir. Deireadh le haistrithe comhad, ríomhphoist le zipeanna agus comhtháthú ar leith do gach siopa."
       }
     ],
-    "status": "Tá Open Brand Exchange ag an tús. Tá leagan 0.2 den sonraíocht agus de na bogearraí eisithe agus saor le húsáid. Ní thaispeánaimid custaiméirí ná figiúirí nach bhfuil ann fós.",
+    "status": "Tá Open Brand Exchange ag an tús. Tá leagan 0.3 den sonraíocht agus de na bogearraí eisithe agus saor le húsáid. Ní thaispeánaimid custaiméirí ná figiúirí nach bhfuil ann fós.",
     "statusLink": "Léigh conas a rialaítear é"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "Cuirtear eolas an lipéid cúraim san áireamh le gach earra.",
       "p": "Tagann an comhdhéanamh de réir coda, na treoracha cúraim in ord an lipéid agus an tír thionscnaimh le gach earra, in éineacht le EAN gach méide. Taispeánann do shiopa gréasáin iad mar théacs nó mar shiombailí cúraim, de réir rialacha lipéadaithe an AE agus cóid chúraim ISO 3758.",
       "points": [
-        "Comhdhéanamh de réir coda (seachtrach, líneáil, líonadh, bonn) le céatadáin",
+        "Comhdhéanamh de réir coda (seachtrach, líneáil, líonadh, bonn) le céatadáin, agus do gach snáithín cé acu atá sé athchúrsáilte, orgánach nó a leithéid",
         "Treoracha cúraim mar chóid chaighdeánacha, in ord an lipéid",
         "Tír thionscnaimh agus EAN gach méide agus datha"
       ],
@@ -629,7 +629,7 @@
     "h1": "Do fhorbróirí",
     "lead": "Is sonraíocht é Open Brand Exchange le trí API, JSON Schemas, sonraí tástála agus tástálacha comhréireachta. Is í an tsonraíocht an fhoinse fírinne; leanann na cur chun feidhme í.",
     "specTitle": "An tsonraíocht",
-    "specP": "Leagan 0.2. OpenAPI 3.1, JSON Schema 2020-12, samplaí agus branda tástála bréige, Kestrel Outfitters. Ceadúnas CC-BY-4.0: saor le cur chun feidhme, go tráchtála freisin.",
+    "specP": "Leagan 0.3. OpenAPI 3.1, JSON Schema 2020-12, samplaí agus branda tástála bréige, Kestrel Outfitters. Ceadúnas CC-BY-4.0: saor le cur chun feidhme, go tráchtála freisin.",
     "specStart": "Tosaigh le protocol.md",
     "apisTitle": "Trí API",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: gnáth-óstáil ghréasáin",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Ag tógáil do chur chun feidhme nó do chliant féin? Cuir in iúl dúinn le issue nó pull request, agus rachaidh sé sa tábla seo a luaithe a éiríonn leis sna tástálacha comhréireachta.",
     "docsTitle": "Doiciméid",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Foinse oscailte, ar GitHub.",
     "reposTitle": "Stórtha",
-    "reposP": "Tá gach rud ina fhoinse oscailte ar GitHub: an tsonraíocht, an cód comhroinnte agus na trí eagrán den tairseach."
+    "reposP": "Tá gach rud ina fhoinse oscailte ar GitHub: an tsonraíocht, an cód comhroinnte agus na trí eagrán den tairseach.",
+    "newTitle": "Nua i leagan 0.3",
+    "newItems": [
+      "Is cóid iad ábhair agus cúram, le hainmneacha i mBéarla, in Ollainnis, i nGearmáinis agus i bhFraincis, ó fhoclóirí comhroinnte atá foilsithe ag /vocabularies/v0.3/.",
+      "Roinnt éileamh inbhuanaitheachta in aghaidh an tsnáithín: athchúrsáilte, orgánach, faoi thiontú, réamhthomhaltóra, iarthomhaltóra agus athghiniúnach. I gcomhad, mar shampla: 100% polyester (recycled) (post_consumer).",
+      "Aitheantais chobhsaí do mhalairtí: de réir réamhshocraithe, uimhir an stíle, an dath agus an méid, ach ní an EAN riamh. Mar sin is féidir le EAN teacht nó athrú níos déanaí gan malairt nua a chruthú.",
+      "Síntí: stóráiltear agus seoltar ar ais do réimsí féin x-<vendor>-<name>, agus ní theipeann ar scríobh riamh mar gheall ar réimse anaithnid.",
+      "Cóid nua: an earráid idempotency_key_reused agus na rabhaidh material_unknown agus qualifier_deprecated. Tá a leathanach féin faoi /errors/ ag gach cód.",
+      "Ó 0.3 ar aghaidh, ní athraítear na cruthanna atá ann faoi /obx/v1 ach trí rudaí a chur leo. Beartaithe do 0.4: baile agus spórt, cuardach agus scagairí, agus webhooks níos fearr."
+    ],
+    "newLink": "Liosta iomlán na n-athruithe"
   },
   "directory": {
     "h1": "Eolaire brandaí",
@@ -820,7 +830,7 @@
       },
       {
         "q": "An bhfuil sé réidh?",
-        "a": "Tá, leagan 0.2: tá an tsonraíocht, na trí eagrán den tairseach agus na huirlisí eisithe agus saor le húsáid. Is luath sa lá é: tá na chéad bhrandaí ag teacht isteach anois."
+        "a": "Tá, leagan 0.3: tá an tsonraíocht, na trí eagrán den tairseach agus na huirlisí eisithe agus saor le húsáid. Is luath sa lá é: tá na chéad bhrandaí ag teacht isteach anois."
       },
       {
         "q": "Cé atá taobh thiar de?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "Cad atá réidh, agus cad atá le teacht",
-    "readyTitle": "Réidh i leagan 0.2",
+    "readyTitle": "Réidh i leagan 0.3",
     "comingTitle": "Le teacht",
     "readyBadge": "Réidh",
     "comingBadge": "Go luath",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Ceisteanna, nó ar mhaith leat a bheith páirteach ón tús?",
     "ctaBrands": "Táimid ag lorg brandaí ar mian leo an chéad leagan a mhúnlú: cé na córais a úsáideann tú, agus cé mhéad miondíoltóir a fhreastalaíonn tú? Scríobh chugainn.",
     "ctaRetailers": "Táimid ag lorg miondíoltóirí ar mian leo an chéad leagan a mhúnlú: cé na brandaí ar mhaith leat a nascadh, agus cé na bogearraí a úsáideann tú? Scríobh chugainn.",
-    "footer": "Tá na feidhmeanna faoi “Le teacht” á bhforbairt. Leagan 0.2, {date}."
+    "footer": "Tá na feidhmeanna faoi “Le teacht” á bhforbairt. Leagan 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Tosaigh mar bhranda",
-      "preview": "Leagan 0.2"
+      "preview": "Leagan 0.3"
     },
     "footer": {
       "tagline": "An caighdeán oscailte chun íomhánna táirgí agus sonraí earraí a roinnt idir brandaí agus miondíoltóirí.",
@@ -1022,7 +1032,7 @@
       "errors": "Cóid earráide",
       "spec": "Sonraíocht",
       "sdk": "Go SDK agus an uirlis obx",
-      "status": "Tá leagan 0.2 eisithe, d'éadaí, bróga, málaí agus bagáiste. Tá an tsonraíocht agus na bogearraí saor le húsáid."
+      "status": "Tá leagan 0.3 eisithe, d'éadaí, bróga, málaí agus bagáiste. Tá an tsonraíocht agus na bogearraí saor le húsáid."
     },
     "shots": {
       "portalCatalog": "Tairseach an bhranda fhicseanúil Kestrel mar a fheiceann miondíoltóir í: ocht n-earra le scagairí de réir branda, cineál táirge agus datha.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Sonraíocht oscailte",
-          "p": "Leagan 0.2. Sonraíocht oscailte ar féidir le duine ar bith í a úsáid, go tráchtála freisin."
+          "p": "Leagan 0.3. Sonraíocht oscailte ar féidir le duine ar bith í a úsáid, go tráchtála freisin."
         },
         {
           "h": "Is leatsa do shonraí i gcónaí",
@@ -1278,8 +1288,8 @@
         "Is leatsa do shonraí i gcónaí"
       ],
       "scopeLabel": "Catagóirí",
-      "scopeNow": "Leagan 0.2: éadaí, bróga, málaí agus bagáiste",
-      "scopeNext": "Baile agus spórt: á bhforbairt do 0.3",
+      "scopeNow": "Leagan 0.3: éadaí, bróga, málaí agus bagáiste",
+      "scopeNext": "Baile agus spórt: á bhforbairt do 0.4",
       "fairEyebrow": "Praghsáil chothrom",
       "fairTitle": "Íoc as seirbhísí, ní as rochtain ar do shonraí féin.",
       "fairLead": "Níor cheart go gcosnódh malartú sonraí táirge aon rud in aghaidh an bhranda ná in aghaidh an mhiondíoltóra.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "Tugann cuardach táirgí de réir barrachóid (EAN) an freagra a bhfuiltear ag súil leis; diúltaítear do an iomarca cóid in éineacht.",
       "P-CAT-4": "Freagraíonn táirgí nach bhfuil cead ag miondíoltóir a fheiceáil “gan aimsiú”, ionas nach nochtar go bhfuil siad ann.",
       "P-CAT-5": "Tagann táirgí tástála do bhagáiste, do mhálaí agus do bhróga amach leis na sonraí earraí go díreach a bhfuiltear ag súil leo: ábhair, tomhais, gnéithe agus deimhnithe.",
-      "P-CAT-6": "Tá sonraí earraí leagan 0.2 ag gach táirge sa chruth ceart, leis na hainmneacha cearta d'ábhair agus do shiombailí cúraim.",
+      "P-CAT-6": "Tá sonraí earraí leagan 0.3 ag gach táirge sa chruth ceart, leis na hainmneacha cearta d'ábhair agus do shiombailí cúraim.",
       "P-MEDIA-1": "Tá an fhaisnéis a bhfuiltear ag súil léi ar na híomhánna tástála, mar shampla bunús IS, dátaí lánchoisc agus easpa bunleagain.",
       "P-MEDIA-2": "Meaitseálann gach comhad íomhá a sheiceáil-suim agus tacaíonn sé le taisceadh, íoslódálacha páirteacha agus naisc shealadacha.",
       "P-MEDIA-3": "Seachadtar bunchomhaid gan athrú; tá an méid agus an fhormáid cheart ag leaganacha gréasáin agus mionsamhla agus ní mhéadaítear riamh iad.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "Insíonn an tairseach do bhogearraí a teorainneacha iarratas, agus deir sí cathain triail eile a bhaint as tar éis an iomarca iarratas.",
       "P-EXP-1": "Tá easpórtáil iomlán (comhad zip le liosta comhad agus seiceáil-suimeanna) iomlán agus ceart.",
       "P-HOOK-1": "Seolann an tairseach fógraí sínithe (webhooks) agus diúltaíonn sí do cheann scríbe neamhshábháilte.",
-      "P-USE-1": "Glacann an tairseach le tuarascálacha úsáide ó mhiondíoltóirí agus comhaireann sí iad."
+      "P-USE-1": "Glacann an tairseach le tuarascálacha úsáide ó mhiondíoltóirí agus comhaireann sí iad.",
+      "P-FEED-7": "Nuair a uasghrádaítear an tairseach go leagan nua, téann seanionaid san fhotha athruithe in éag. Tosaíonn bogearraí an mhiondíoltóra arís ansin le cóip iomlán san fhormáid nua."
     }
   },
   "demo": {

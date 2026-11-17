@@ -250,22 +250,26 @@ test('every error code has a page at its problem type URL, with its HTTP status'
     assert.doesNotMatch(html, /<style[\s>]|\sstyle="/, `${e.code}: inline style`);
     assert.doesNotMatch(html, /[\w.+-]+@(?!openbrandexchange\.com)[\w-]+\.[\w.]+/, `${e.code}: e-mail address outside openbrandexchange.com`);
   }
-  for (const w of ['fibre_composition_missing', 'animal_origin_unknown', 'footwear_materials_missing', 'fibre_percentages_not_100']) {
-    assert.ok(warnings.some((x) => x.code === w), `warning ${w} (spec 0.2)`);
+  for (const w of ['fibre_composition_missing', 'animal_origin_unknown', 'footwear_materials_missing', 'fibre_percentages_not_100', 'material_unknown', 'qualifier_deprecated']) {
+    assert.ok(warnings.some((x) => x.code === w), `warning ${w} (spec 0.3)`);
   }
+  assert.ok(errors.some((e) => e.code === 'idempotency_key_reused' && e.status === '409'), 'idempotency_key_reused (spec 0.3)');
 });
 
 test('the schemas are served at the address of their $id, and the API reference with them', { skip: !built && 'dist/ not built' }, () => {
   // Only the current version is served; older version paths redirect (functions/_middleware.js).
   const versions = readdirSync(new URL('schemas/', dist)).filter((d) => /^v\d+\.\d+$/.test(d));
-  assert.deepEqual(versions, ['v0.2']);
+  assert.deepEqual(versions, ['v0.3']);
   for (const v of versions) {
     const files = readdirSync(new URL(`schemas/${v}/`, dist)).filter((f) => f.endsWith('.json'));
     assert.ok(files.length >= 40, `${v}: ${files.length} schemas`);
     for (const f of files) assert.equal(JSON.parse(read(`schemas/${v}/${f}`)).$id, `https://openbrandexchange.com/schemas/${v}/${f}`);
   }
   for (const f of ['Measurements.json', 'Features.json', 'FootwearMaterials.json', 'Certifications.json']) {
-    assert.ok(existsSync(new URL(`schemas/v0.2/${f}`, dist)), `the 0.2 schema ${f}`);
+    assert.ok(existsSync(new URL(`schemas/v0.3/${f}`, dist)), `the 0.3 schema ${f}`);
+  }
+  for (const f of ['materials.json', 'qualifiers.json', 'parts.json', 'care.json']) {
+    assert.ok(JSON.parse(read(`vocabularies/v0.3/${f}`)).entries.length > 0, `the 0.3 vocabulary ${f}`);
   }
   for (const page of ['index', 'protocol', 'ingest', 'admin']) {
     assert.match(read(`reference/${page}.html`), /<meta http-equiv="Content-Security-Policy"/, `reference/${page}.html has its own policy`);

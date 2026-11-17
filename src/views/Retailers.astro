@@ -21,8 +21,9 @@ const lb = c.label;
 const law = lb.law;
 const lawKind = ['mandatory', 'mandatory', 'mandatory', 'voluntary', 'voluntary', 'voluntary', 'coming'] as const;
 const parts: Record<string, string> = { outer: lb.outer, lining: lb.lining };
-// Spec 0.2: recycled content is a property of the fibre; the label text has its own wording for it.
-const fibre = (f: { fiber: string; recycled?: boolean }) => (lb.fibres as Record<string, string>)[f.recycled ? `recycled_${f.fiber}` : f.fiber] ?? f.fiber;
+// Spec 0.3: recycled content is a qualifier of the fibre; the label text has its own wording for it.
+const fibre = (f: { material: string; qualifiers: readonly string[] }) =>
+  (lb.fibres as Record<string, string>)[f.qualifiers.includes('recycled') ? `recycled_${f.material}` : f.material] ?? f.material;
 const care = (code: string) => (lb.careText as Record<string, string>)[code] ?? code;
 const kits: { lang: Lang; label: string }[] = [{ lang, label: nativeNames[lang] }];
 if (lang !== 'en') kits.push({ lang: 'en', label: c.kitEnglish });

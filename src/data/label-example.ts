@@ -1,16 +1,17 @@
 // The care-label example on the retailers page: product KT-2001 of the spec's fictional test
-// brand (spec fixtures/kestrel/products.csv). Keep it in step with the fixture.
+// brand (spec fixtures/kestrel/products.csv), in the 0.3 shape: a fibre is a material code with a list of
+// qualifiers (recycled, organic, …). Keep it in step with the fixture.
 export const labelExample = {
   styleNumber: 'KT-2001',
   colourCode: 'BLK',
   countryOfOrigin: 'VN',
   materials: [
-    { part: 'outer', fibers: [{ fiber: 'polyester', percentage: 100, recycled: true }] },
+    { part: 'outer', fibers: [{ material: 'polyester', percentage: 100, qualifiers: ['recycled'] }] },
     {
       part: 'lining',
       fibers: [
-        { fiber: 'polyamide', percentage: 88 },
-        { fiber: 'elastane', percentage: 12 },
+        { material: 'polyamide', percentage: 88, qualifiers: [] },
+        { material: 'elastane', percentage: 12, qualifiers: [] },
       ],
     },
   ],

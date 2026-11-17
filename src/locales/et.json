@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, avaleht",
     "copy": "Kopeeri",
     "copied": "Kopeeritud",
-    "draft": "Versioon 0.2 on avaldatud. Spetsifikatsioon ja tarkvara on vabalt kasutatavad.",
+    "draft": "Versioon 0.3 on avaldatud. Spetsifikatsioon ja tarkvara on vabalt kasutatavad.",
     "footerAbout": "Tasuta ja avatud viis, kuidas kaubamärgid saavad tootefotosid ja tooteandmeid oma edasimüüjatega jagada.",
     "footerMore": "Veel",
     "footerSource": "Lähtekood ja spetsifikatsioon",
@@ -156,7 +156,7 @@
         "p": "Üks avaldamine kõigile edasimüüjatele. Enam ei ole failiedastusi, zip-failidega e-kirju ega eraldi liidest iga poe jaoks."
       }
     ],
-    "status": "Open Brand Exchange on alguses. Spetsifikatsiooni ja tarkvara versioon 0.2 on avaldatud ja vabalt kasutatav. Me ei näita kliente ega numbreid, mida veel pole.",
+    "status": "Open Brand Exchange on alguses. Spetsifikatsiooni ja tarkvara versioon 0.3 on avaldatud ja vabalt kasutatav. Me ei näita kliente ega numbreid, mida veel pole.",
     "statusLink": "Lugege, kuidas seda juhitakse"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "Hooldusetiketi andmed on lisatud igale tootele.",
       "p": "Koostis osade kaupa, hooldusjuhised etiketi järjekorras ja päritoluriik on iga toote juures, koos iga suuruse EAN-iga. Teie e-pood näitab neid tekstina või hooldussümbolitena, ELi märgistamise reeglite ja ISO 3758 hooldustähiste järgi.",
       "points": [
-        "Koostis osade kaupa (pealismaterjal, vooder, täidis, tald) protsentidega",
+        "Koostis osade kaupa (pealismaterjal, vooder, täidis, tald) protsentidega ning iga kiu kohta, kas see on ringlussevõetud, mahe või muu sarnane",
         "Hooldusjuhised standardkoodidena, etiketi järjekorras",
         "Päritoluriik ning iga suuruse ja värvi EAN"
       ],
@@ -629,7 +629,7 @@
     "h1": "Arendajatele",
     "lead": "Open Brand Exchange on spetsifikatsioon kolme API, JSON-skeemide, testandmete ja vastavustestidega. Spetsifikatsioon on tõe allikas; teostused järgivad seda.",
     "specTitle": "Spetsifikatsioon",
-    "specP": "Versioon 0.2. OpenAPI 3.1, JSON Schema 2020-12, näited ja väljamõeldud testkaubamärk Kestrel Outfitters. Litsents CC-BY-4.0: vabalt teostatav, ka äriliselt.",
+    "specP": "Versioon 0.3. OpenAPI 3.1, JSON Schema 2020-12, näited ja väljamõeldud testkaubamärk Kestrel Outfitters. Litsents CC-BY-4.0: vabalt teostatav, ka äriliselt.",
     "specStart": "Alustage failist protocol.md",
     "apisTitle": "Kolm API-t",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: tavaline veebimajutus",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Ehitate oma teostust või klienti? Andke teada issue või pull requesti kaudu; see lisatakse tabelisse, kui see läbib vastavustestid.",
     "docsTitle": "Dokumendid",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Avatud lähtekood, GitHubis.",
     "reposTitle": "Hoidlad",
-    "reposP": "Kõik on GitHubis avatud lähtekoodiga: spetsifikatsioon, ühine kood ja kolm portaali väljaannet."
+    "reposP": "Kõik on GitHubis avatud lähtekoodiga: spetsifikatsioon, ühine kood ja kolm portaali väljaannet.",
+    "newTitle": "Uut versioonis 0.3",
+    "newItems": [
+      "Materjalid ja hooldus on koodid, mille nimetused on inglise, hollandi, saksa ja prantsuse keeles. Need pärinevad ühistest sõnastikest, mis on avaldatud aadressil /vocabularies/v0.3/.",
+      "Iga kiu kohta mitu jätkusuutlikkuse väidet: ringlussevõetud, mahe, üleminekuperioodis, tarbimiseelne, tarbimisjärgne ja regeneratiivne. Failis näiteks: 100% polyester (recycled) (post_consumer).",
+      "Stabiilsed variandi ID-d: vaikimisi mudeli number, värv ja suurus, mitte kunagi EAN. Nii võib EAN lisanduda või muutuda hiljem, ilma et tekiks uus variant.",
+      "Laiendused: teie oma väljad x-<vendor>-<name> salvestatakse ja tagastatakse ning tundmatu väli ei põhjusta kunagi kirjutamise ebaõnnestumist.",
+      "Uued koodid: viga idempotency_key_reused ning hoiatused material_unknown ja qualifier_deprecated. Igal koodil on oma leht jaotises /errors/.",
+      "Alates versioonist 0.3 muutuvad olemasolevad struktuurid jaotises /obx/v1 ainult lisamise teel. Versiooni 0.4 plaanis: kodu ja sport, otsing ja filtrid ning paremad webhookid."
+    ],
+    "newLink": "Täielik muudatuste logi"
   },
   "directory": {
     "h1": "Kaubamärkide loend",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Kas see on valmis?",
-        "a": "Jah, versioon 0.2: spetsifikatsioon, kolm portaali väljaannet ja tööriistad on avaldatud ja vabalt kasutatavad. Oleme alguses: esimesed kaubamärgid liituvad praegu."
+        "a": "Jah, versioon 0.3: spetsifikatsioon, kolm portaali väljaannet ja tööriistad on avaldatud ja vabalt kasutatavad. Oleme alguses: esimesed kaubamärgid liituvad praegu."
       },
       {
         "q": "Kes on selle taga?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "Mis on valmis ja mis tuleb",
-    "readyTitle": "Valmis versioonis 0.2",
+    "readyTitle": "Valmis versioonis 0.3",
     "comingTitle": "Tulemas",
     "readyBadge": "Valmis",
     "comingBadge": "Varsti",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Küsimusi või soovite algusest peale kaasa lüüa?",
     "ctaBrands": "Otsime kaubamärke, kes tahavad esimest versiooni kujundada: milliseid süsteeme kasutate ja mitut edasimüüjat teenindate? Kirjutage meile.",
     "ctaRetailers": "Otsime edasimüüjaid, kes tahavad esimest versiooni kujundada: milliseid kaubamärke soovite ühendada ja millist tarkvara kasutate? Kirjutage meile.",
-    "footer": "Jaotise „Tulemas” funktsioonid on arendamisel. Versioon 0.2, {date}."
+    "footer": "Jaotise „Tulemas” funktsioonid on arendamisel. Versioon 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Alustage kaubamärgina",
-      "preview": "Versioon 0.2"
+      "preview": "Versioon 0.3"
     },
     "footer": {
       "tagline": "Avatud standard tootefotode ja tooteandmete jagamiseks kaubamärkide ja edasimüüjate vahel.",
@@ -1022,7 +1032,7 @@
       "errors": "Veakoodid",
       "spec": "Spetsifikatsioon",
       "sdk": "Go SDK ja tööriist obx",
-      "status": "Versioon 0.2 on avaldatud rõivastele, jalatsitele, kottidele ja reisikohvritele. Spetsifikatsioon ja tarkvara on vabalt kasutatavad."
+      "status": "Versioon 0.3 on avaldatud rõivastele, jalatsitele, kottidele ja reisikohvritele. Spetsifikatsioon ja tarkvara on vabalt kasutatavad."
     },
     "shots": {
       "portalCatalog": "Väljamõeldud kaubamärgi Kestrel edasimüüjate portaal edasimüüja pilgu läbi: kaheksa toodet ning filtrid kaubamärgi, tootetüübi ja värvi järgi.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Avatud spetsifikatsioon",
-          "p": "Versioon 0.2. Avatud spetsifikatsioon, mida igaüks võib kasutada, ka ärilisel eesmärgil."
+          "p": "Versioon 0.3. Avatud spetsifikatsioon, mida igaüks võib kasutada, ka ärilisel eesmärgil."
         },
         {
           "h": "Teie andmed jäävad teile",
@@ -1278,8 +1288,8 @@
         "Teie andmed jäävad teile"
       ],
       "scopeLabel": "Kategooriad",
-      "scopeNow": "Versioon 0.2: rõivad, jalatsid, kotid ja reisikohvrid",
-      "scopeNext": "Kodu ja sport: arenduses versiooni 0.3 jaoks",
+      "scopeNow": "Versioon 0.3: rõivad, jalatsid, kotid ja reisikohvrid",
+      "scopeNext": "Kodu ja sport: arenduses versiooni 0.4 jaoks",
       "fairEyebrow": "Õiglane hinnastamine",
       "fairTitle": "Makske teenuste eest, mitte juurdepääsu eest oma andmetele.",
       "fairLead": "Tooteandmete vahetamine ei tohiks maksta midagi kaubamärgi ega jaemüüja kohta.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "Toodete otsimine vöötkoodi (EAN) järgi annab oodatud vastuse; liiga palju koode korraga lükatakse tagasi.",
       "P-CAT-4": "Tooted, mida edasimüüja ei tohi näha, vastavad „ei leitud”, nii et nende olemasolu ei avaldata.",
       "P-CAT-5": "Kohvrite, kottide ja jalanõude testtooted tulevad välja täpselt oodatud tooteandmetega: materjalid, mõõdud, omadused ja sertifikaadid.",
-      "P-CAT-6": "Igal tootel on versiooni 0.2 tooteandmed õiges kujus, materjalide ja hooldussümbolite õigete nimetustega.",
+      "P-CAT-6": "Igal tootel on versiooni 0.3 tooteandmed õiges kujus, materjalide ja hooldussümbolite õigete nimetustega.",
       "P-MEDIA-1": "Testpiltidel on oodatud teave, näiteks tehisintellekti päritolu, embargo kuupäevad ja originaali puudumine.",
       "P-MEDIA-2": "Iga pildifail vastab oma kontrollsummale ning toetab vahemällu salvestamist, osalist allalaadimist ja ajutisi linke.",
       "P-MEDIA-3": "Originaalfailid edastatakse muutmata; veebi- ja pisipildiversioonidel on õige suurus ja vorming ning neid ei suurendata kunagi.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "Portaal teatab tarkvarale oma päringupiirangud ja ütleb pärast liiga paljusid päringuid, millal uuesti proovida.",
       "P-EXP-1": "Täielik eksport (zip-fail failide ja kontrollsummade loendiga) on terviklik ja õige.",
       "P-HOOK-1": "Portaal saadab allkirjastatud teavitusi (webhookid) ja keeldub ebaturvalistest sihtkohtadest.",
-      "P-USE-1": "Portaal võtab edasimüüjatelt vastu kasutusaruandeid ja loeb need kokku."
+      "P-USE-1": "Portaal võtab edasimüüjatelt vastu kasutusaruandeid ja loeb need kokku.",
+      "P-FEED-7": "Kui portaal uuendatakse uuele versioonile, aeguvad vanad positsioonid muudatuste voos. Edasimüüja tarkvara alustab siis uuesti täieliku koopiaga uues vormingus."
     }
   },
   "demo": {

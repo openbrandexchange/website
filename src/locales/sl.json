@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, domača stran",
     "copy": "Kopiraj",
     "copied": "Kopirano",
-    "draft": "Različica 0.2 je izdana. Specifikacija in programska oprema sta prosto na voljo za uporabo.",
+    "draft": "Različica 0.3 je izdana. Specifikacija in programska oprema sta prosto na voljo za uporabo.",
     "footerAbout": "Brezplačen in odprt način, da znamke svojim trgovcem delijo fotografije izdelkov in podatke o artiklih.",
     "footerMore": "Več",
     "footerSource": "Izvorna koda in specifikacija",
@@ -156,7 +156,7 @@
         "p": "Ena objava za vse trgovce. Konec prenosov datotek, e-sporočil z arhivi zip in ločene integracije za vsako trgovino."
       }
     ],
-    "status": "Open Brand Exchange je na začetku. Različica 0.2 specifikacije in programske opreme je izdana in prosto na voljo za uporabo. Ne kažemo strank ali številk, ki jih še ni.",
+    "status": "Open Brand Exchange je na začetku. Različica 0.3 specifikacije in programske opreme je izdana in prosto na voljo za uporabo. Ne kažemo strank ali številk, ki jih še ni.",
     "statusLink": "Preberite, kako se upravlja"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "Podatki z etikete za vzdrževanje so priloženi vsakemu artiklu.",
       "p": "Surovinska sestava po delih, navodila za vzdrževanje v vrstnem redu z etikete in država porekla so del vsakega artikla, poleg EAN vsake velikosti. Vaša spletna trgovina jih prikaže kot besedilo ali kot simbole za vzdrževanje, v skladu s pravili EU za označevanje in kodami za vzdrževanje ISO 3758.",
       "points": [
-        "Surovinska sestava po delih (zunanji del, podloga, polnilo, podplat) z odstotki",
+        "Surovinska sestava po delih (zunanji del, podloga, polnilo, podplat) z odstotki in za vsako vlakno podatek, ali je reciklirano, ekološko ali podobno",
         "Navodila za vzdrževanje kot standardne kode, v vrstnem redu z etikete",
         "Država porekla in EAN vsake velikosti in barve"
       ],
@@ -629,7 +629,7 @@
     "h1": "Za razvijalce",
     "lead": "Open Brand Exchange je specifikacija s tremi API-ji, shemami JSON, testnimi podatki in testi skladnosti. Specifikacija je vir resnice; implementacije ji sledijo.",
     "specTitle": "Specifikacija",
-    "specP": "Različica 0.2. OpenAPI 3.1, JSON Schema 2020-12, primeri in izmišljena testna znamka Kestrel Outfitters. Licenca CC-BY-4.0: prosto za implementacijo, tudi komercialno.",
+    "specP": "Različica 0.3. OpenAPI 3.1, JSON Schema 2020-12, primeri in izmišljena testna znamka Kestrel Outfitters. Licenca CC-BY-4.0: prosto za implementacijo, tudi komercialno.",
     "specStart": "Začnite s protocol.md",
     "apisTitle": "Trije API-ji",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: običajno spletno gostovanje",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Gradite lastno implementacijo ali odjemalca? Sporočite nam prek issue ali pull request; v tabelo pride, ko opravi teste skladnosti.",
     "docsTitle": "Dokumenti",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Odprta koda, na GitHubu.",
     "reposTitle": "Repozitoriji",
-    "reposP": "Vse je odprtokodno na GitHubu: specifikacija, skupna koda in tri izdaje portala."
+    "reposP": "Vse je odprtokodno na GitHubu: specifikacija, skupna koda in tri izdaje portala.",
+    "newTitle": "Novo v različici 0.3",
+    "newItems": [
+      "Materiali in nega so kode z imeni v angleščini, nizozemščini, nemščini in francoščini. Prihajajo iz skupnih besednjakov, objavljenih na /vocabularies/v0.3/.",
+      "Več trajnostnih trditev za vsako vlakno: reciklirano, ekološko, v preusmeritvi, pred potrošnjo, po potrošnji in regenerativno. V datoteki na primer: 100% polyester (recycled) (post_consumer).",
+      "Stabilni ID-ji variant: privzeto številka modela, barva in velikost, nikoli EAN. Tako lahko EAN pride ali se spremeni pozneje, ne da bi nastala nova varianta.",
+      "Razširitve: vaša lastna polja x-<vendor>-<name> se shranijo in vrnejo, neznano polje pa nikoli ne povzroči neuspešnega zapisa.",
+      "Nove kode: napaka idempotency_key_reused ter opozorili material_unknown in qualifier_deprecated. Vsaka koda ima svojo stran pod /errors/.",
+      "Od 0.3 naprej se obstoječe oblike pod /obx/v1 spreminjajo samo z dodajanjem. Načrtovano za 0.4: dom in šport, iskanje in filtri ter boljši webhooki."
+    ],
+    "newLink": "Celoten seznam sprememb"
   },
   "directory": {
     "h1": "Seznam znamk",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Je že pripravljeno?",
-        "a": "Da, različica 0.2: specifikacija, tri izdaje portala in orodja so izdani in prosto na voljo za uporabo. Smo na začetku: prve znamke se pridružujejo zdaj."
+        "a": "Da, različica 0.3: specifikacija, tri izdaje portala in orodja so izdani in prosto na voljo za uporabo. Smo na začetku: prve znamke se pridružujejo zdaj."
       },
       {
         "q": "Kdo stoji za tem?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "Kaj je pripravljeno in kaj prihaja",
-    "readyTitle": "Pripravljeno v različici 0.2",
+    "readyTitle": "Pripravljeno v različici 0.3",
     "comingTitle": "Prihaja",
     "readyBadge": "Pripravljeno",
     "comingBadge": "Kmalu",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Imate vprašanja ali želite sodelovati od začetka?",
     "ctaBrands": "Iščemo znamke, ki želijo sooblikovati prvo različico: katere sisteme uporabljate in koliko trgovcev oskrbujete? Pišite nam.",
     "ctaRetailers": "Iščemo trgovce, ki želijo sooblikovati prvo različico: katere znamke želite povezati in katero programsko opremo uporabljate? Pišite nam.",
-    "footer": "Funkcije pod »Prihaja« so v razvoju. Različica 0.2, {date}."
+    "footer": "Funkcije pod »Prihaja« so v razvoju. Različica 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Začnite kot znamka",
-      "preview": "Različica 0.2"
+      "preview": "Različica 0.3"
     },
     "footer": {
       "tagline": "Odprti standard za izmenjavo fotografij izdelkov in podatkov o artiklih med znamkami in trgovci.",
@@ -1022,7 +1032,7 @@
       "errors": "Kode napak",
       "spec": "Specifikacija",
       "sdk": "Go SDK in orodje obx",
-      "status": "Različica 0.2 je izdana, za oblačila, obutev, torbe in prtljago. Specifikacija in programska oprema sta prosto na voljo za uporabo."
+      "status": "Različica 0.3 je izdana, za oblačila, obutev, torbe in prtljago. Specifikacija in programska oprema sta prosto na voljo za uporabo."
     },
     "shots": {
       "portalCatalog": "Portal izmišljene znamke Kestrel, kot ga vidi trgovec: osem artiklov s filtri po znamki, vrsti izdelka in barvi.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Odprta specifikacija",
-          "p": "Različica 0.2. Odprta specifikacija, ki jo lahko uporablja vsakdo, tudi komercialno."
+          "p": "Različica 0.3. Odprta specifikacija, ki jo lahko uporablja vsakdo, tudi komercialno."
         },
         {
           "h": "Vaši podatki ostanejo vaši",
@@ -1278,8 +1288,8 @@
         "Vaši podatki ostanejo vaši"
       ],
       "scopeLabel": "Kategorije",
-      "scopeNow": "Različica 0.2: oblačila, obutev, torbe in prtljaga",
-      "scopeNext": "Dom in šport: v razvoju za 0.3",
+      "scopeNow": "Različica 0.3: oblačila, obutev, torbe in prtljaga",
+      "scopeNext": "Dom in šport: v razvoju za 0.4",
       "fairEyebrow": "Poštene cene",
       "fairTitle": "Plačate storitve, ne dostopa do lastnih podatkov.",
       "fairLead": "Izmenjava podatkov o izdelkih ne bi smela stati nič na znamko ali na trgovca.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "Iskanje izdelkov po črtni kodi (EAN) da pričakovan odgovor; preveč kod hkrati je zavrnjenih.",
       "P-CAT-4": "Izdelki, ki jih trgovec ne sme videti, odgovorijo »ni najdeno«, tako da njihov obstoj ni razkrit.",
       "P-CAT-5": "Testni izdelki za prtljago, torbe in obutev imajo natanko pričakovane podatke o artiklu: materiale, mere, lastnosti in certifikate.",
-      "P-CAT-6": "Vsak izdelek ima podatke o artiklu različice 0.2 v pravilni obliki, s pravilnimi imeni materialov in simbolov za nego.",
+      "P-CAT-6": "Vsak izdelek ima podatke o artiklu različice 0.3 v pravilni obliki, s pravilnimi imeni materialov in simbolov za nego.",
       "P-MEDIA-1": "Testne fotografije vsebujejo pričakovane podatke, kot so izvor UI, datumi embarga in odsotnost izvirnika.",
       "P-MEDIA-2": "Vsaka datoteka fotografije se ujema s svojo kontrolno vsoto in podpira predpomnjenje, delne prenose in začasne povezave.",
       "P-MEDIA-3": "Izvirne datoteke so dostavljene nespremenjene; spletne različice in sličice imajo pravo velikost in obliko in niso nikoli povečane.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "Portal programski opremi sporoči svoje omejitve zahtev in pove, kdaj poskusiti znova po preveč zahtevah.",
       "P-EXP-1": "Celoten izvoz (datoteka zip s seznamom datotek in kontrolnih vsot) je popoln in pravilen.",
       "P-HOOK-1": "Portal pošilja podpisana obvestila (webhooke) in zavrne nevarne cilje.",
-      "P-USE-1": "Portal sprejema poročila o uporabi od trgovcev in jih šteje."
+      "P-USE-1": "Portal sprejema poročila o uporabi od trgovcev in jih šteje.",
+      "P-FEED-7": "Ko portal nadgradijo na novo različico, stari položaji v viru sprememb potečejo. Programska oprema trgovca zato začne znova s popolno kopijo v novi obliki."
     }
   },
   "demo": {

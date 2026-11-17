@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, úvodní stránka",
     "copy": "Kopírovat",
     "copied": "Zkopírováno",
-    "draft": "Verze 0.2 je venku. Specifikace i software jsou volně k použití.",
+    "draft": "Verze 0.3 je venku. Specifikace i software jsou volně k použití.",
     "footerAbout": "Bezplatný a otevřený způsob, jak značky sdílejí produktové obrázky a data o zboží se svými prodejci.",
     "footerMore": "Další",
     "footerSource": "Zdrojový kód a specifikace",
@@ -156,7 +156,7 @@
         "p": "Jedna publikace pro všechny prodejce. Konec přenosů souborů, e-mailů se zipy a zvláštní integrace pro každý obchod."
       }
     ],
-    "status": "Open Brand Exchange je na začátku. Verze 0.2 specifikace a softwaru je vydaná a volně k použití. Neukazujeme zákazníky ani čísla, která zatím neexistují.",
+    "status": "Open Brand Exchange je na začátku. Verze 0.3 specifikace a softwaru je vydaná a volně k použití. Neukazujeme zákazníky ani čísla, která zatím neexistují.",
     "statusLink": "Přečtěte si, jak je spravován"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "Údaje z etikety s pokyny k údržbě jsou součástí každého artiklu.",
       "p": "Složení podle částí, pokyny k údržbě v pořadí podle etikety a země původu jsou součástí každého artiklu, spolu s EAN každé velikosti. Váš e-shop je zobrazí jako text nebo jako symboly údržby, podle pravidel EU pro označování a kódů údržby podle ISO 3758.",
       "points": [
-        "Složení podle částí (vrchový materiál, podšívka, výplň, podrážka) v procentech",
+        "Složení podle částí (vrchový materiál, podšívka, výplň, podrážka) v procentech a u každého vlákna, zda je recyklované, organické nebo podobně",
         "Pokyny k údržbě jako standardní kódy, v pořadí podle etikety",
         "Země původu a EAN každé velikosti a barvy"
       ],
@@ -629,7 +629,7 @@
     "h1": "Pro vývojáře",
     "lead": "Open Brand Exchange je specifikace se třemi API, schématy JSON, testovacími daty a testy shody. Specifikace je zdrojem pravdy; implementace se jí řídí.",
     "specTitle": "Specifikace",
-    "specP": "Verze 0.2. OpenAPI 3.1, JSON Schema 2020-12, příklady a fiktivní testovací značka Kestrel Outfitters. Licence CC-BY-4.0: volně implementovatelné, i komerčně.",
+    "specP": "Verze 0.3. OpenAPI 3.1, JSON Schema 2020-12, příklady a fiktivní testovací značka Kestrel Outfitters. Licence CC-BY-4.0: volně implementovatelné, i komerčně.",
     "specStart": "Začněte souborem protocol.md",
     "apisTitle": "Tři API",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: běžný webhosting",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Stavíte vlastní implementaci nebo klienta? Dejte vědět přes issue nebo pull request; do tabulky se dostane, jakmile projde testy shody.",
     "docsTitle": "Dokumenty",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Open source, na GitHubu.",
     "reposTitle": "Repozitáře",
-    "reposP": "Vše je open source na GitHubu: specifikace, sdílený kód a tři edice portálu."
+    "reposP": "Vše je open source na GitHubu: specifikace, sdílený kód a tři edice portálu.",
+    "newTitle": "Novinky ve verzi 0.3",
+    "newItems": [
+      "Materiály a pokyny k údržbě jsou kódy s názvy v angličtině, nizozemštině, němčině a francouzštině, ze sdílených slovníků zveřejněných na /vocabularies/v0.3/.",
+      "Více údajů o udržitelnosti pro každé vlákno: recyklované, organické, v přechodném období, pre-consumer, post-consumer a regenerativní. V souboru například: 100% polyester (recycled) (post_consumer).",
+      "Stabilní ID variant: ve výchozím stavu číslo modelu, barva a velikost, nikdy EAN. EAN tak může přibýt nebo se změnit později, aniž by vznikla nová varianta.",
+      "Rozšíření: vaše vlastní pole x-<vendor>-<name> se uloží a vrátí a neznámé pole nikdy nezpůsobí selhání zápisu.",
+      "Nové kódy: chyba idempotency_key_reused a varování material_unknown a qualifier_deprecated. Každý kód má vlastní stránku pod /errors/.",
+      "Od verze 0.3 se stávající struktury pod /obx/v1 mění jen přidáváním. Plán pro 0.4: domov a sport, vyhledávání a filtry a lepší webhooky."
+    ],
+    "newLink": "Kompletní seznam změn"
   },
   "directory": {
     "h1": "Seznam značek",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Je to hotové?",
-        "a": "Ano, verze 0.2: specifikace, tři edice portálu a nástroje jsou vydané a volně k použití. Jsme na začátku: první značky se připojují právě teď."
+        "a": "Ano, verze 0.3: specifikace, tři edice portálu a nástroje jsou vydané a volně k použití. Jsme na začátku: první značky se připojují právě teď."
       },
       {
         "q": "Kdo za tím stojí?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "Co je hotové a co přijde",
-    "readyTitle": "Hotovo ve verzi 0.2",
+    "readyTitle": "Hotovo ve verzi 0.3",
     "comingTitle": "Připravujeme",
     "readyBadge": "Hotovo",
     "comingBadge": "Brzy",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Máte otázky nebo chcete být u toho od začátku?",
     "ctaBrands": "Hledáme značky, které chtějí spoluutvářet první verzi: jaké systémy používáte a kolik prodejců obsluhujete? Napište nám.",
     "ctaRetailers": "Hledáme prodejce, kteří chtějí spoluutvářet první verzi: jaké značky chcete propojit a jaký software používáte? Napište nám.",
-    "footer": "Funkce v části „Připravujeme“ jsou ve vývoji. Verze 0.2, {date}."
+    "footer": "Funkce v části „Připravujeme“ jsou ve vývoji. Verze 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Začít jako značka",
-      "preview": "Verze 0.2"
+      "preview": "Verze 0.3"
     },
     "footer": {
       "tagline": "Otevřený standard pro sdílení produktových obrázků a dat o zboží mezi značkami a prodejci.",
@@ -1022,7 +1032,7 @@
       "errors": "Chybové kódy",
       "spec": "Specifikace",
       "sdk": "Go SDK a nástroj obx",
-      "status": "Verze 0.2 je venku, pro oblečení, obuv, tašky a zavazadla. Specifikace i software jsou volně k použití."
+      "status": "Verze 0.3 je venku, pro oblečení, obuv, tašky a zavazadla. Specifikace i software jsou volně k použití."
     },
     "shots": {
       "portalCatalog": "Portál fiktivní značky Kestrel očima prodejce: osm položek s filtry podle značky, typu produktu a barvy.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Otevřená specifikace",
-          "p": "Verze 0.2. Otevřená specifikace, kterou smí používat kdokoli, i komerčně."
+          "p": "Verze 0.3. Otevřená specifikace, kterou smí používat kdokoli, i komerčně."
         },
         {
           "h": "Vaše data zůstávají vaše",
@@ -1278,8 +1288,8 @@
         "Vaše data zůstávají vaše"
       ],
       "scopeLabel": "Kategorie",
-      "scopeNow": "Verze 0.2: oblečení, obuv, tašky a zavazadla",
-      "scopeNext": "Domov a sport: ve vývoji pro 0.3",
+      "scopeNow": "Verze 0.3: oblečení, obuv, tašky a zavazadla",
+      "scopeNext": "Domov a sport: ve vývoji pro 0.4",
       "fairEyebrow": "Férové ceny",
       "fairTitle": "Plaťte za služby, ne za přístup ke svým vlastním datům.",
       "fairLead": "Výměna produktových dat by neměla nic stát za značku ani za prodejce.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "Vyhledání produktů podle čárového kódu (EAN) dává očekávanou odpověď; příliš mnoho kódů najednou je odmítnuto.",
       "P-CAT-4": "Produkty, které prodejce nesmí vidět, odpovídají „nenalezeno“, takže jejich existence není prozrazena.",
       "P-CAT-5": "Testovací produkty pro zavazadla, tašky a obuv vyjdou přesně s očekávanými daty o zboží: materiály, rozměry, vlastnosti a certifikace.",
-      "P-CAT-6": "Každý produkt má data o zboží verze 0.2 ve správném tvaru, se správnými názvy materiálů a symbolů údržby.",
+      "P-CAT-6": "Každý produkt má data o zboží verze 0.3 ve správném tvaru, se správnými názvy materiálů a symbolů údržby.",
       "P-MEDIA-1": "Testovací obrázky nesou očekávané údaje, například původ AI, data embarga a to, že originál chybí.",
       "P-MEDIA-2": "Každý soubor obrázku odpovídá svému kontrolnímu součtu a podporuje cache, částečné stahování a dočasné odkazy.",
       "P-MEDIA-3": "Originální soubory se doručují beze změny; webové verze a náhledy mají správnou velikost a formát a nikdy se nezvětšují.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "Portál sděluje softwaru své limity požadavků a po příliš mnoha požadavcích řekne, kdy to zkusit znovu.",
       "P-EXP-1": "Úplný export (soubor zip se seznamem souborů a kontrolních součtů) je kompletní a správný.",
       "P-HOOK-1": "Portál posílá podepsaná oznámení (webhooky) a odmítá nebezpečné cíle.",
-      "P-USE-1": "Portál přijímá zprávy o používání od prodejců a počítá je."
+      "P-USE-1": "Portál přijímá zprávy o používání od prodejců a počítá je.",
+      "P-FEED-7": "Po upgradu portálu na novou verzi vyprší staré pozice v kanálu změn. Software prodejce pak začne znovu s úplnou kopií v novém formátu."
     }
   },
   "demo": {

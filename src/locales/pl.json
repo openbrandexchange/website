@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, strona główna",
     "copy": "Kopiuj",
     "copied": "Skopiowano",
-    "draft": "Wersja 0.2 jest już wydana. Specyfikacja i oprogramowanie są do swobodnego użytku.",
+    "draft": "Wersja 0.3 jest już wydana. Specyfikacja i oprogramowanie są do swobodnego użytku.",
     "footerAbout": "Bezpłatny, otwarty sposób, w jaki marki mogą dzielić się zdjęciami produktów i danymi artykułów ze swoimi sprzedawcami.",
     "footerMore": "Więcej",
     "footerSource": "Kod źródłowy i specyfikacja",
@@ -156,7 +156,7 @@
         "p": "Jedna publikacja dla wszystkich sprzedawców. Koniec z przesyłaniem plików, e-mailami z archiwami zip i osobną integracją dla każdego sklepu."
       }
     ],
-    "status": "Open Brand Exchange jest na początku drogi. Wersja 0.2 specyfikacji i oprogramowania jest już wydana i do swobodnego użytku. Nie pokazujemy klientów ani liczb, których jeszcze nie ma.",
+    "status": "Open Brand Exchange jest na początku drogi. Wersja 0.3 specyfikacji i oprogramowania jest już wydana i do swobodnego użytku. Nie pokazujemy klientów ani liczb, których jeszcze nie ma.",
     "statusLink": "Zobacz, jak jest zarządzany"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "Informacje z metki są dołączone do każdego artykułu.",
       "p": "Skład według części, zalecenia konserwacji w kolejności z metki i kraj pochodzenia są dołączone do każdego artykułu, obok kodu EAN każdego rozmiaru. Twój sklep internetowy pokazuje je jako tekst lub symbole konserwacji, zgodnie z unijnymi przepisami o etykietowaniu i kodami konserwacji ISO 3758.",
       "points": [
-        "Skład według części (wierzch, podszewka, wypełnienie, podeszwa) z procentami",
+        "Skład według części (wierzch, podszewka, wypełnienie, podeszwa) z procentami, a dla każdego włókna informacja, czy pochodzi z recyklingu, jest organiczne lub podobne",
         "Zalecenia konserwacji jako standardowe kody, w kolejności z metki",
         "Kraj pochodzenia i EAN każdego rozmiaru i koloru"
       ],
@@ -629,7 +629,7 @@
     "h1": "Dla programistów",
     "lead": "Open Brand Exchange to specyfikacja z trzema API, schematami JSON, danymi testowymi i testami zgodności. Specyfikacja jest źródłem prawdy; implementacje za nią podążają.",
     "specTitle": "Specyfikacja",
-    "specP": "Wersja 0.2. OpenAPI 3.1, JSON Schema 2020-12, przykłady i fikcyjna marka testowa Kestrel Outfitters. Licencja CC-BY-4.0: swobodna implementacja, także komercyjna.",
+    "specP": "Wersja 0.3. OpenAPI 3.1, JSON Schema 2020-12, przykłady i fikcyjna marka testowa Kestrel Outfitters. Licencja CC-BY-4.0: swobodna implementacja, także komercyjna.",
     "specStart": "Zacznij od protocol.md",
     "apisTitle": "Trzy API",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: zwykły hosting WWW",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Tworzysz własną implementację lub klienta? Daj znać przez issue lub pull request; trafi do tej tabeli, gdy przejdzie testy zgodności.",
     "docsTitle": "Dokumenty",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Open source, na GitHubie.",
     "reposTitle": "Repozytoria",
-    "reposP": "Wszystko jest open source na GitHubie: specyfikacja, wspólny kod i trzy edycje portalu."
+    "reposP": "Wszystko jest open source na GitHubie: specyfikacja, wspólny kod i trzy edycje portalu.",
+    "newTitle": "Nowości w wersji 0.3",
+    "newItems": [
+      "Materiały i zalecenia pielęgnacji to kody z nazwami po angielsku, niderlandzku, niemiecku i francusku, ze wspólnych słowników opublikowanych pod /vocabularies/v0.3/.",
+      "Kilka deklaracji ekologicznych dla każdego włókna: z recyklingu, organiczne, w okresie konwersji, pre-consumer, post-consumer i regeneratywne. W pliku na przykład: 100% polyester (recycled) (post_consumer).",
+      "Stabilne identyfikatory wariantów: domyślnie numer modelu, kolor i rozmiar, nigdy EAN. Dzięki temu EAN może pojawić się lub zmienić później bez tworzenia nowego wariantu.",
+      "Rozszerzenia: twoje własne pola x-<vendor>-<name> są zapisywane i zwracane, a nieznane pole nigdy nie powoduje błędu zapisu.",
+      "Nowe kody: błąd idempotency_key_reused oraz ostrzeżenia material_unknown i qualifier_deprecated. Każdy kod ma własną stronę pod /errors/.",
+      "Od wersji 0.3 istniejące struktury pod /obx/v1 zmieniają się tylko przez dodawanie. Plan na 0.4: dom i sport, wyszukiwanie i filtry oraz lepsze webhooki."
+    ],
+    "newLink": "Pełna lista zmian"
   },
   "directory": {
     "h1": "Katalog marek",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Czy to już gotowe?",
-        "a": "Tak, wersja 0.2: specyfikacja, trzy edycje portalu i narzędzia są wydane i do swobodnego użytku. Jesteśmy na początku: pierwsze marki dołączają teraz."
+        "a": "Tak, wersja 0.3: specyfikacja, trzy edycje portalu i narzędzia są wydane i do swobodnego użytku. Jesteśmy na początku: pierwsze marki dołączają teraz."
       },
       {
         "q": "Kto za tym stoi?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "Co jest gotowe, a co nadchodzi",
-    "readyTitle": "Gotowe w wersji 0.2",
+    "readyTitle": "Gotowe w wersji 0.3",
     "comingTitle": "W kolejnych krokach",
     "readyBadge": "Gotowe",
     "comingBadge": "Wkrótce",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Pytania albo chcesz być od początku?",
     "ctaBrands": "Szukamy marek, które chcą współtworzyć pierwszą wersję: jakich systemów używasz i ilu sprzedawców obsługujesz? Napisz do nas.",
     "ctaRetailers": "Szukamy sprzedawców, którzy chcą współtworzyć pierwszą wersję: jakie marki chcesz podłączyć i jakiego oprogramowania używasz? Napisz do nas.",
-    "footer": "Funkcje z sekcji „W kolejnych krokach” są w przygotowaniu. Wersja 0.2, {date}."
+    "footer": "Funkcje z sekcji „W kolejnych krokach” są w przygotowaniu. Wersja 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Zacznij jako marka",
-      "preview": "Wersja 0.2"
+      "preview": "Wersja 0.3"
     },
     "footer": {
       "tagline": "Otwarty standard wymiany zdjęć produktów i danych artykułów między markami a sprzedawcami.",
@@ -1022,7 +1032,7 @@
       "errors": "Kody błędów",
       "spec": "Specyfikacja",
       "sdk": "Go SDK i narzędzie obx",
-      "status": "Wersja 0.2 jest dostępna dla odzieży, obuwia, torebek i bagażu. Specyfikacja i oprogramowanie są do swobodnego użytku."
+      "status": "Wersja 0.3 jest dostępna dla odzieży, obuwia, torebek i bagażu. Specyfikacja i oprogramowanie są do swobodnego użytku."
     },
     "shots": {
       "portalCatalog": "Portal fikcyjnej marki Kestrel oczami sprzedawcy: osiem artykułów z filtrami według marki, typu produktu i koloru.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Otwarta specyfikacja",
-          "p": "Wersja 0.2. Otwarta specyfikacja, z której każdy może korzystać, także komercyjnie."
+          "p": "Wersja 0.3. Otwarta specyfikacja, z której każdy może korzystać, także komercyjnie."
         },
         {
           "h": "Twoje dane pozostają Twoje",
@@ -1278,8 +1288,8 @@
         "Twoje dane pozostają Twoje"
       ],
       "scopeLabel": "Kategorie",
-      "scopeNow": "Wersja 0.2: odzież, obuwie, torebki i bagaż",
-      "scopeNext": "Dom i sport: w przygotowaniu dla 0.3",
+      "scopeNow": "Wersja 0.3: odzież, obuwie, torebki i bagaż",
+      "scopeNext": "Dom i sport: w przygotowaniu dla 0.4",
       "fairEyebrow": "Uczciwe ceny",
       "fairTitle": "Płać za usługi, nie za dostęp do własnych danych.",
       "fairLead": "Wymiana danych produktowych nie powinna nic kosztować ani markę, ani sprzedawcę.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "Wyszukiwanie produktów po kodzie kreskowym (EAN) daje oczekiwaną odpowiedź; zbyt wiele kodów naraz jest odrzucanych.",
       "P-CAT-4": "Produkty, których sprzedawca nie może widzieć, odpowiadają „nie znaleziono”, więc ich istnienie nie zostaje ujawnione.",
       "P-CAT-5": "Produkty testowe z kategorii walizki, torby i buty mają dokładnie oczekiwane dane artykułów: materiały, wymiary, cechy i certyfikaty.",
-      "P-CAT-6": "Każdy produkt ma dane artykułów w wersji 0.2 we właściwej postaci, z właściwymi nazwami materiałów i symboli pielęgnacji.",
+      "P-CAT-6": "Każdy produkt ma dane artykułów w wersji 0.3 we właściwej postaci, z właściwymi nazwami materiałów i symboli pielęgnacji.",
       "P-MEDIA-1": "Zdjęcia testowe zawierają oczekiwane informacje, takie jak pochodzenie z AI, daty embarga i brak oryginału.",
       "P-MEDIA-2": "Każdy plik zdjęcia zgadza się ze swoją sumą kontrolną i obsługuje buforowanie, częściowe pobieranie oraz tymczasowe linki.",
       "P-MEDIA-3": "Pliki oryginalne są dostarczane bez zmian; wersje webowe i miniatury mają właściwy rozmiar i format i nigdy nie są powiększane.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "Portal informuje oprogramowanie o swoich limitach żądań i podaje, kiedy ponowić próbę po zbyt wielu żądaniach.",
       "P-EXP-1": "Pełny eksport (plik zip z listą plików i sumami kontrolnymi) jest kompletny i poprawny.",
       "P-HOOK-1": "Portal wysyła podpisane powiadomienia (webhooki) i odrzuca niebezpieczne miejsca docelowe.",
-      "P-USE-1": "Portal przyjmuje raporty użycia od sprzedawców i je zlicza."
+      "P-USE-1": "Portal przyjmuje raporty użycia od sprzedawców i je zlicza.",
+      "P-FEED-7": "Po aktualizacji portalu do nowej wersji stare pozycje w kanale zmian wygasają. Oprogramowanie sprzedawcy zaczyna wtedy od nowa od pełnej kopii w nowym formacie."
     }
   },
   "demo": {

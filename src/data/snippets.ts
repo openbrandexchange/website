@@ -67,9 +67,10 @@ Content-Type: application/json
 {"style_number": "KO-1001",
  "name": {"en": "Merino Crew Sweater", "nl": "Merino trui met ronde hals"},
  "item_type": "sweater", "season": "AW26",
- "materials": [{"part": "main", "fibers": [{"fiber": "merino_wool", "percentage": 100}]}]}`;
+ "materials": [{"part": {"code": "main"},
+                "fibers": [{"material": {"code": "merino_wool"}, "percentage": 100, "qualifiers": []}]}]}`;
 
-export const httpVariant = `PUT {OBX_URL}/obx/v1/ingest/variants/2000100101025
+export const httpVariant = `PUT {OBX_URL}/obx/v1/ingest/variants/KO-1001-NVY-M
 Authorization: Bearer obxi_…
 Content-Type: application/json
 
@@ -112,7 +113,7 @@ done
 # 2. One batch of up to 1000 operations (NDJSON), processed in order.
 cat > batch.ndjson <<'EOF'
 {"op":"upsert","kind":"product","external_id":"KO-1001","data":{"style_number":"KO-1001","name":{"en":"Merino Crew Sweater"}}}
-{"op":"upsert","kind":"variant","external_id":"2000100101025","data":{"product_external_id":"KO-1001","gtin":"2000100101025","color":{"code":"NVY"},"size":"M"}}
+{"op":"upsert","kind":"variant","external_id":"KO-1001-NVY-M","data":{"product_external_id":"KO-1001","gtin":"2000100101025","color":{"code":"NVY"},"size":"M"}}
 {"op":"unpublish","kind":"product","external_id":"KO-0999"}
 EOF
 curl -s -X POST -H "$AUTH" -H 'Content-Type: application/x-ndjson' \\
@@ -199,7 +200,8 @@ obx-conformance mock                                              # a mock serve
 
 export const discovery = `$ curl https://brands.kestrel.example/.well-known/obx`;
 export const discoveryResponse = `{
-  "obx_version": "0.2",
+  "obx_version": "0.3",
+  "spec_version": "0.3.0",
   "publisher": { "name": "Kestrel Outfitters" },
   "api_base": "https://brands.kestrel.example/obx/v1",
   "portal_url": "https://brands.kestrel.example/",

@@ -9,7 +9,8 @@ export const exportPrompt = `You are helping me connect our system to Open Brand
 Read these first:
 - Import format: ${SPEC}/docs/import-format.md
 - Example data (fictional brand Kestrel): ${SPEC}/fixtures/kestrel/products.csv
-- JSON Schemas: https://openbrandexchange.com/schemas/v0.2/
+- JSON Schemas: https://openbrandexchange.com/schemas/v0.3/
+- Codes with their names (materials, qualifiers, care): https://openbrandexchange.com/vocabularies/v0.3/
 
 Our system: [name, version, database or API, programming language].
 

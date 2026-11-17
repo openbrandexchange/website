@@ -9,7 +9,7 @@
     "home": "Open Brand Exchange, homepage",
     "copy": "Kopieer",
     "copied": "Gekopieerd",
-    "draft": "Versie 0.2 is uit. De specificatie en de software zijn vrij te gebruiken.",
+    "draft": "Versie 0.3 is uit. De specificatie en de software zijn vrij te gebruiken.",
     "footerAbout": "Een gratis, open manier voor merken om productbeelden en artikeldata met hun retailers te delen.",
     "footerMore": "Meer",
     "footerSource": "Broncode en specificatie",
@@ -156,7 +156,7 @@
         "p": "Eén publicatie voor al je retailers. Geen WeTransfers, mails met zips of een aparte koppeling per winkel meer."
       }
     ],
-    "status": "Open Brand Exchange staat aan het begin. Versie 0.2 van de specificatie en de software is uit en vrij te gebruiken. We tonen geen klanten of cijfers die er nog niet zijn.",
+    "status": "Open Brand Exchange staat aan het begin. Versie 0.3 van de specificatie en de software is uit en vrij te gebruiken. We tonen geen klanten of cijfers die er nog niet zijn.",
     "statusLink": "Lees hoe het wordt bestuurd"
   },
   "brands": {
@@ -533,7 +533,7 @@
       "title": "De gegevens van het waslabel horen bij elk artikel.",
       "p": "Samenstelling per onderdeel, wasvoorschriften in de volgorde van het label en het land van herkomst horen bij elk artikel, naast de EAN van elke maat. Je webshop toont ze als tekst of als wassymbolen, volgens de Europese etiketteringsregels en de ISO 3758-wascodes.",
       "points": [
-        "Samenstelling per onderdeel (buitenstof, voering, vulling, zool) met percentages",
+        "Samenstelling per onderdeel (buitenstof, voering, vulling, zool) met percentages, en per vezel of die gerecycled, biologisch of iets vergelijkbaars is",
         "Wasvoorschriften als standaardcodes, in de volgorde van het label",
         "Land van herkomst en de EAN van elke maat en kleur"
       ],
@@ -629,7 +629,7 @@
     "h1": "Ontwikkelaars",
     "lead": "Open Brand Exchange is een specificatie met drie API's, JSON Schema's, testdata en een conformancetest. De specificatie is de bron; de implementaties volgen haar.",
     "specTitle": "De specificatie",
-    "specP": "Versie 0.2. OpenAPI 3.1, JSON Schema 2020-12, voorbeelden en een fictief testmerk, Kestrel Outfitters. Licentie CC-BY-4.0: vrij te implementeren, ook commercieel.",
+    "specP": "Versie 0.3. OpenAPI 3.1, JSON Schema 2020-12, voorbeelden en een fictief testmerk, Kestrel Outfitters. Licentie CC-BY-4.0: vrij te implementeren, ook commercieel.",
     "specStart": "Begin bij protocol.md",
     "apisTitle": "Drie API's",
     "apisHead": [
@@ -672,7 +672,7 @@
       "PHP: gewone webhosting",
       "TypeScript: Cloudflare Workers"
     ],
-    "statusDraft": "0.2",
+    "statusDraft": "0.3",
     "implP": "Bouw je zelf een implementatie of een afnemer? Laat het weten met een issue of pull request; hij komt in deze tabel zodra hij de conformancetest haalt.",
     "docsTitle": "Documenten",
     "docs": [
@@ -727,7 +727,17 @@
     ],
     "title": "Open source, op GitHub.",
     "reposTitle": "Repository's",
-    "reposP": "Alles is open source op GitHub: de specificatie, de gedeelde code en de drie portaaledities."
+    "reposP": "Alles is open source op GitHub: de specificatie, de gedeelde code en de drie portaaledities.",
+    "newTitle": "Nieuw in versie 0.3",
+    "newItems": [
+      "Materialen en wasvoorschriften zijn codes met namen in het Engels, Nederlands, Duits en Frans, uit gedeelde vocabulaires op /vocabularies/v0.3/.",
+      "Meerdere duurzaamheidsclaims per vezel: gerecycled, biologisch, in omschakeling, pre-consumer, post-consumer en regeneratief. In een bestand bijvoorbeeld: 100% polyester (recycled) (post_consumer).",
+      "Stabiele variant-id's: standaard het stijlnummer, de kleur en de maat, nooit de EAN. Een EAN kan dus later komen of wijzigen zonder dat er een nieuwe variant ontstaat.",
+      "Extensies: je eigen x-<vendor>-<name>-velden worden opgeslagen en teruggegeven, en een onbekend veld laat een schrijfactie nooit mislukken.",
+      "Nieuwe codes: de fout idempotency_key_reused en de waarschuwingen material_unknown en qualifier_deprecated. Elke code heeft een eigen pagina onder /errors/.",
+      "Vanaf 0.3 veranderen bestaande structuren onder /obx/v1 alleen nog door toevoegingen. Gepland voor 0.4: wonen en sport, zoeken en filters, en betere webhooks."
+    ],
+    "newLink": "Volledige changelog"
   },
   "directory": {
     "h1": "Merkenlijst",
@@ -820,7 +830,7 @@
       },
       {
         "q": "Is het klaar?",
-        "a": "Ja, versie 0.2: de specificatie, de drie portaaledities en de tools zijn uitgebracht en vrij te gebruiken. We staan aan het begin: de eerste merken sluiten nu aan."
+        "a": "Ja, versie 0.3: de specificatie, de drie portaaledities en de tools zijn uitgebracht en vrij te gebruiken. We staan aan het begin: de eerste merken sluiten nu aan."
       },
       {
         "q": "Wie zit erachter?",
@@ -973,7 +983,7 @@
       }
     ],
     "statusTitle": "Wat klaar is, en wat eraan komt",
-    "readyTitle": "Klaar in versie 0.2",
+    "readyTitle": "Klaar in versie 0.3",
     "comingTitle": "Komt hierna",
     "readyBadge": "Klaar",
     "comingBadge": "Binnenkort",
@@ -1005,12 +1015,12 @@
     "ctaTitle": "Vragen, of vanaf het begin meedoen?",
     "ctaBrands": "We zoeken merken die de eerste versie mee willen vormgeven: welke systemen gebruik je, en hoeveel retailers bedien je? Mail ons.",
     "ctaRetailers": "We zoeken retailers die de eerste versie mee willen vormgeven: welke merken wil je koppelen, en welke software gebruik je? Mail ons.",
-    "footer": "Functies onder „Komt hierna” zijn in ontwikkeling. Versie 0.2, {date}."
+    "footer": "Functies onder „Komt hierna” zijn in ontwikkeling. Versie 0.3, {date}."
   },
   "site": {
     "nav": {
       "start": "Start als merk",
-      "preview": "Versie 0.2"
+      "preview": "Versie 0.3"
     },
     "footer": {
       "tagline": "De open standaard voor het delen van productbeelden en artikeldata tussen merken en retailers.",
@@ -1022,7 +1032,7 @@
       "errors": "Foutcodes",
       "spec": "Specificatie",
       "sdk": "Go-SDK en obx-tool",
-      "status": "Versie 0.2 is uit, voor mode, schoenen, tassen en koffers. De specificatie en de software zijn vrij te gebruiken."
+      "status": "Versie 0.3 is uit, voor mode, schoenen, tassen en koffers. De specificatie en de software zijn vrij te gebruiken."
     },
     "shots": {
       "portalCatalog": "De beeldbank van het fictieve merk Kestrel zoals een retailer hem ziet: acht artikelen met filters op merk, producttype en kleur.",
@@ -1181,7 +1191,7 @@
       "trust": [
         {
           "h": "Open specificatie",
-          "p": "Versie 0.2. Een open specificatie die iedereen mag gebruiken, ook commercieel."
+          "p": "Versie 0.3. Een open specificatie die iedereen mag gebruiken, ook commercieel."
         },
         {
           "h": "Je data blijft van jou",
@@ -1278,8 +1288,8 @@
         "Je data blijft van jou"
       ],
       "scopeLabel": "Categorieën",
-      "scopeNow": "Versie 0.2: mode, schoenen, tassen en koffers",
-      "scopeNext": "Wonen en sport: in ontwikkeling voor 0.3",
+      "scopeNow": "Versie 0.3: mode, schoenen, tassen en koffers",
+      "scopeNext": "Wonen en sport: in ontwikkeling voor 0.4",
       "fairEyebrow": "Eerlijke prijzen",
       "fairTitle": "Betaal voor diensten, niet voor toegang tot je eigen data.",
       "fairLead": "Productdata uitwisselen hoort niets te kosten per merk of per retailer.",
@@ -1498,7 +1508,7 @@
       "P-CAT-3": "Producten opzoeken op barcode (EAN) geeft het verwachte antwoord; te veel codes tegelijk worden geweigerd.",
       "P-CAT-4": "Producten die een winkel niet mag zien, antwoorden met „niet gevonden”, zodat niet uitlekt dat ze bestaan.",
       "P-CAT-5": "Testproducten voor koffers, tassen en schoenen komen eruit met precies de verwachte artikelgegevens: materialen, maten, kenmerken en certificeringen.",
-      "P-CAT-6": "Elk product heeft de artikelgegevens van versie 0.2 in de juiste vorm, met de juiste namen voor materialen en wassymbolen.",
+      "P-CAT-6": "Elk product heeft de artikelgegevens van versie 0.3 in de juiste vorm, met de juiste namen voor materialen en wassymbolen.",
       "P-MEDIA-1": "De testbeelden bevatten de verwachte informatie, zoals AI-herkomst, embargodata en het ontbreken van een origineel.",
       "P-MEDIA-2": "Elk beeldbestand klopt met zijn controlegetal en ondersteunt caching, gedeeltelijk downloaden en tijdelijke links.",
       "P-MEDIA-3": "Originele bestanden komen ongewijzigd door; web- en miniatuurversies hebben de juiste grootte en vorm en worden nooit vergroot.",
@@ -1506,7 +1516,8 @@
       "P-RATE-1": "Het portal vertelt software zijn limieten voor verzoeken, en zegt wanneer het opnieuw kan na te veel verzoeken.",
       "P-EXP-1": "Een volledige export (een zipbestand met een lijst van bestanden en controlegetallen) is compleet en klopt.",
       "P-HOOK-1": "Het portal verstuurt ondertekende meldingen (webhooks) en weigert onveilige bestemmingen.",
-      "P-USE-1": "Het portal neemt gebruiksmeldingen van winkels aan en telt ze."
+      "P-USE-1": "Het portal neemt gebruiksmeldingen van winkels aan en telt ze.",
+      "P-FEED-7": "Na een upgrade van het portaal naar een nieuwe versie vervallen oude posities in de wijzigingenlijst. De software van de winkel begint dan opnieuw met een volledige kopie in het nieuwe formaat."
     }
   },
   "demo": {
