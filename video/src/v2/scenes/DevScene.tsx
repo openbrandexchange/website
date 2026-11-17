@@ -6,7 +6,7 @@ import { clamp, Icon, Kicker, lift, Product, PRODUCT_KEYS, useRise, useStage } f
 
 export type DevTimes = { start: number; assistant: number; months: number };
 
-/** A step of the afternoon: framed while it happens, quieter once the next one starts. */
+/** A step of the work: framed while it happens, quieter once the next one starts. */
 const Panel = ({ title, from, next, children, style }: { title: string; from: number; next: number; children: ReactNode; style?: CSSProperties }) => {
   const frame = useCurrentFrame();
   const rise = useRise();
@@ -156,7 +156,7 @@ const Portal = ({ names, at }: { names: string[]; at: number }) => {
   );
 };
 
-/** A developer at a brand links the ERP to the format in an afternoon, with an AI assistant and the ready-made prompt. */
+/** A developer at a brand links the ERP to the format in a few days, with an AI assistant and the ready-made prompt. */
 export const DevScene = ({ ui, names, t }: { ui: Ui["dev"]; names: string[]; t: DevTimes }) => {
   const frame = useCurrentFrame();
   const rise = useRise();
