@@ -21,7 +21,8 @@
     "inDevelopment": "In sviluppo",
     "available": "Disponibile",
     "footerContact": "Contatti",
-    "madeInEu": "Prodotto nell'UE"
+    "madeInEu": "Prodotto nell'UE",
+    "footerDiscuss": "Partecipa alla discussione"
   },
   "nav": {
     "brands": "Per i brand",
@@ -1535,7 +1536,7 @@
     "formatsNote": "Ogni badge è disponibile in SVG, nitido a qualsiasi dimensione e ideale per il web, e in PNG a dimensione normale e doppia.",
     "rulesTitle": "Come usare i badge",
     "rules": [
-      "Solo per un prodotto o servizio che supera la suite di conformità pubblica per la versione attuale dello standard. Esegui tu stesso obx-conformance, oppure usa la verifica online.",
+      "Solo per un prodotto o servizio che ha superato l'intera suite di conformità, con il verdetto CONFORMANT, per la versione attuale dello standard: esegui obx-conformance all, oppure usa la GitHub Action. La verifica online è solo un primo test rapido e non restituisce mai CONFORMANT.",
       "Indica la versione che hai testato e ripeti il test quando esce una nuova versione. Se il tuo prodotto non lo supera più, togli il badge.",
       "Usa i file così come sono. Non cambiare colori, testo o proporzioni, e non unire il badge a un altro logo.",
       "Il badge dice che il tuo prodotto funziona con lo standard. Non significa che la fondazione approvi, certifichi o raccomandi il tuo prodotto o la tua azienda.",
@@ -1544,6 +1545,33 @@
     "checkLink": "Apri la verifica online",
     "partnersLink": "Compatibile o partner ufficiale",
     "contactTitle": "Contatti stampa",
-    "contactP": "Sei un giornalista e hai una domanda, o ti serve una citazione o un file a risoluzione più alta? Scrivici."
+    "contactP": "Sei un giornalista e hai una domanda, o ti serve una citazione o un file a risoluzione più alta? Scrivici.",
+    "suiteLink": "Come eseguire l'intera suite"
+  },
+  "getInvolved": {
+    "title": "Partecipa",
+    "lead": "Lo standard nasce in pubblico e chiunque può partecipare. Non serve saper programmare: se lavori per un brand o un rivenditore, raccontaci quali problemi incontri, cosa manca e cosa funziona.",
+    "items": [
+      {
+        "h": "Discussioni",
+        "p": "Fai una domanda, condividi un'idea o commenta una proposta per la prossima versione. È il punto di partenza migliore.",
+        "cta": "Vai alle discussioni"
+      },
+      {
+        "h": "Issue e pull request",
+        "p": "Per una modifica concreta: un errore nella specifica, un campo mancante, un esempio migliore. Apri una issue, oppure proponi tu stesso la modifica con una pull request.",
+        "cta": "Apri una issue"
+      },
+      {
+        "h": "E-mail",
+        "p": "Per una domanda che preferisci non fare in pubblico.",
+        "cta": "Scrivici"
+      },
+      {
+        "h": "Resta aggiornato",
+        "p": "Segui il repository della specifica su GitHub (Watch → Custom → Releases) e saprai di ogni nuova versione.",
+        "cta": "Segui il repository"
+      }
+    ]
   }
 }

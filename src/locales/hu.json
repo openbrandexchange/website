@@ -21,7 +21,8 @@
     "inDevelopment": "Fejlesztés alatt",
     "available": "Elérhető",
     "footerContact": "Kapcsolat",
-    "madeInEu": "Az EU-ban készült"
+    "madeInEu": "Az EU-ban készült",
+    "footerDiscuss": "Csatlakozzon a beszélgetéshez"
   },
   "nav": {
     "brands": "Márkáknak",
@@ -1535,7 +1536,7 @@
     "formatsNote": "Minden jelvény elérhető SVG-ben, amely bármilyen méretben éles és weben a legjobb, valamint PNG-ben normál és dupla méretben.",
     "rulesTitle": "A jelvények használata",
     "rules": [
-      "Csak olyan termékhez vagy szolgáltatáshoz, amely átmegy a szabvány aktuális verziójának nyilvános megfelelőségi tesztjén. Futtassa le saját maga az obx-conformance tesztet, vagy használja az online ellenőrzést.",
+      "Csak olyan termékhez vagy szolgáltatáshoz, amely a szabvány aktuális verziójára átmegy a teljes megfelelőségi teszten, CONFORMANT eredménnyel. Futtassa az obx-conformance all parancsot, vagy használja a GitHub actiont. Az online ellenőrzés csak egy gyors első teszt, és soha nem ad CONFORMANT eredményt.",
       "Adja meg a tesztelt verziót, és új verzió megjelenésekor teszteljen újra. Ha a terméke már nem megy át, vegye le a jelvényt.",
       "A fájlokat változtatás nélkül használja. Ne módosítsa a színeket, a szöveget vagy az arányokat, és ne vonja össze a jelvényt más logóval.",
       "A jelvény azt jelzi, hogy a terméke működik a szabvánnyal. Nem jelenti azt, hogy az alapítvány támogatja, tanúsítja vagy ajánlja a termékét vagy a cégét.",
@@ -1544,6 +1545,33 @@
     "checkLink": "Az online ellenőrzés megnyitása",
     "partnersLink": "Kompatibilis vagy hivatalos partner",
     "contactTitle": "Sajtókapcsolat",
-    "contactP": "Újságíróként kérdése van, vagy idézetre, illetve nagyobb felbontású fájlra van szüksége? Írjon nekünk e-mailt."
+    "contactP": "Újságíróként kérdése van, vagy idézetre, illetve nagyobb felbontású fájlra van szüksége? Írjon nekünk e-mailt.",
+    "suiteLink": "Hogyan futtassa a teljes megfelelőségi tesztet"
+  },
+  "getInvolved": {
+    "title": "Vegyen részt",
+    "lead": "A szabvány nyilvánosan alakul, és bárki részt vehet benne. Nem kell kódot írnia: ha egy márkánál vagy egy viszonteladónál dolgozik, mondja el, mibe ütközik, mi hiányzik és mi működik.",
+    "items": [
+      {
+        "h": "Beszélgetések",
+        "p": "Tegyen fel kérdést, ossza meg ötletét, vagy szóljon hozzá egy javaslathoz a következő verzióhoz. Itt érdemes kezdeni.",
+        "cta": "A beszélgetések megnyitása"
+      },
+      {
+        "h": "Issue-k és pull requestek",
+        "p": "Konkrét változtatáshoz: hiba a specifikációban, hiányzó mező, jobb példa. Nyisson egy issue-t, vagy javasolja a változtatást saját maga egy pull requestben.",
+        "cta": "Issue nyitása"
+      },
+      {
+        "h": "E-mail",
+        "p": "Olyan kérdéshez, amelyet nem szeretne nyilvánosan feltenni.",
+        "cta": "Írjon nekünk"
+      },
+      {
+        "h": "Legyen naprakész",
+        "p": "Kövesse a spec tárolót a GitHubon (Watch → Custom → Releases), és minden új verzióról értesül.",
+        "cta": "A tároló követése"
+      }
+    ]
   }
 }

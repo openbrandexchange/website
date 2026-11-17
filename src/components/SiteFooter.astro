@@ -26,7 +26,7 @@ const columns = [
       { href: repo(''), label: t.common.footerSource },
     ],
   },
-  { title: f.project, links: [page('governance'), page('faq'), page('downloads'), page('press')] },
+  { title: f.project, links: [page('governance'), { href: repo('spec', '/discussions'), label: t.common.footerDiscuss }, page('faq'), page('downloads'), page('press')] },
   { title: f.legal, links: [page('imprint'), page('privacy'), page('cookies')] },
 ];
 ---

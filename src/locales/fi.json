@@ -21,7 +21,8 @@
     "inDevelopment": "Kehitteillä",
     "available": "Saatavilla",
     "footerContact": "Yhteystiedot",
-    "madeInEu": "Valmistettu EU:ssa"
+    "madeInEu": "Valmistettu EU:ssa",
+    "footerDiscuss": "Osallistu keskusteluun"
   },
   "nav": {
     "brands": "Brändeille",
@@ -1535,7 +1536,7 @@
     "formatsNote": "Jokainen merkki on saatavilla SVG-muodossa, joka pysyy terävänä kaikissa kooissa ja sopii parhaiten verkkoon, sekä PNG-muodossa normaalikokoisena ja kaksinkertaisena.",
     "rulesTitle": "Näin käytät merkkejä",
     "rules": [
-      "Vain tuotteelle tai palvelulle, joka läpäisee standardin nykyisen version julkisen yhteensopivuustestin. Aja obx-conformance itse tai käytä verkkotarkistusta.",
+      "Vain tuotteelle tai palvelulle, joka on läpäissyt standardin nykyisen version koko yhteensopivuustestin tuloksella CONFORMANT. Aja obx-conformance all tai käytä GitHub Actionia. Verkkotarkistus on vain nopea ensimmäinen testi, eikä se koskaan anna tulosta CONFORMANT.",
       "Mainitse testaamasi versio ja testaa uudelleen, kun uusi versio julkaistaan. Jos tuotteesi ei enää läpäise testiä, poista merkki.",
       "Käytä tiedostoja sellaisinaan. Älä muuta värejä, tekstiä tai mittasuhteita äläkä yhdistä merkkiä toiseen logoon.",
       "Merkki kertoo, että tuotteesi toimii standardin kanssa. Se ei tarkoita, että säätiö tukisi, sertifioisi tai suosittelisi tuotettasi tai yritystäsi.",
@@ -1544,6 +1545,33 @@
     "checkLink": "Avaa verkkotarkistus",
     "partnersLink": "Yhteensopiva tai virallinen kumppani",
     "contactTitle": "Mediayhteydet",
-    "contactP": "Onko sinulla toimittajana kysyttävää, tai tarvitsetko lainauksen tai tiedoston suuremmalla tarkkuudella? Lähetä meille sähköpostia."
+    "contactP": "Onko sinulla toimittajana kysyttävää, tai tarvitsetko lainauksen tai tiedoston suuremmalla tarkkuudella? Lähetä meille sähköpostia.",
+    "suiteLink": "Näin ajat koko testin"
+  },
+  "getInvolved": {
+    "title": "Osallistu",
+    "lead": "Standardia kehitetään avoimesti, ja kuka tahansa voi osallistua. Koodaustaitoja ei tarvita. Jos työskentelet brändillä tai jälleenmyyjällä, kerro meille, mihin törmäät, mitä puuttuu ja mikä toimii.",
+    "items": [
+      {
+        "h": "Keskustelut",
+        "p": "Kysy, jaa idea tai kommentoi seuraavan version ehdotusta. Paras paikka aloittaa.",
+        "cta": "Avaa keskustelut"
+      },
+      {
+        "h": "Issuet ja pull requestit",
+        "p": "Konkreettista muutosta varten: virhe määrittelyssä, puuttuva kenttä, parempi esimerkki. Avaa issue tai ehdota muutosta itse pull requestilla.",
+        "cta": "Avaa issue"
+      },
+      {
+        "h": "Sähköposti",
+        "p": "Kysymyksille, joita et halua esittää julkisesti.",
+        "cta": "Lähetä sähköpostia"
+      },
+      {
+        "h": "Pysy ajan tasalla",
+        "p": "Seuraa määrittelyn repositoriota GitHubissa (Watch → Custom → Releases), niin kuulet jokaisesta uudesta versiosta.",
+        "cta": "Seuraa repositoriota"
+      }
+    ]
   }
 }

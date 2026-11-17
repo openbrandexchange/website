@@ -1,6 +1,7 @@
 ---
 import PageHero from '../components/PageHero.astro';
 import DocSection from '../components/DocSection.astro';
+import GetInvolved from '../components/GetInvolved.astro';
 import { format, messages, specDoc, url, type Lang } from '../i18n';
 import { orgVars } from '../lib/org';
 
@@ -34,5 +35,6 @@ const c = messages[lang].governance;
       </div>
       <p><a href={specDoc('docs/governance.md')}>{c.specLink}</a></p>
     </DocSection>
+    <GetInvolved lang={lang} />
   </div>
 </section>

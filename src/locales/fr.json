@@ -21,7 +21,8 @@
     "inDevelopment": "En développement",
     "available": "Disponible",
     "footerContact": "Contact",
-    "madeInEu": "Fabriqué dans l'UE"
+    "madeInEu": "Fabriqué dans l'UE",
+    "footerDiscuss": "Participer à la discussion"
   },
   "nav": {
     "brands": "Pour les marques",
@@ -1535,7 +1536,7 @@
     "formatsNote": "Chaque badge existe en SVG, net à toutes les tailles et idéal pour le web, et en PNG en taille normale et double.",
     "rulesTitle": "Comment utiliser les badges",
     "rules": [
-      "Uniquement pour un produit ou un service qui réussit la suite de conformité publique de la version actuelle du standard. Lancez obx-conformance vous-même, ou utilisez la vérification en ligne.",
+      "Uniquement pour un produit ou un service qui a réussi la suite de conformité complète, avec le verdict CONFORMANT, pour la version actuelle du standard : lancez obx-conformance all, ou utilisez la GitHub Action. La vérification en ligne n'est qu'un premier test rapide et ne donne jamais CONFORMANT.",
       "Indiquez la version testée, et testez à nouveau à chaque nouvelle version. Si votre produit ne réussit plus les tests, retirez le badge.",
       "Utilisez les fichiers tels quels. Ne modifiez ni les couleurs, ni le texte, ni les proportions, et ne combinez pas le badge avec un autre logo.",
       "Le badge indique que votre produit fonctionne avec le standard. Il ne signifie pas que la fondation approuve, certifie ou recommande votre produit ou votre entreprise.",
@@ -1544,6 +1545,33 @@
     "checkLink": "Ouvrir la vérification en ligne",
     "partnersLink": "Compatible ou partenaire officiel",
     "contactTitle": "Contact presse",
-    "contactP": "Vous êtes journaliste et avez une question, besoin d'une citation ou d'un fichier en plus haute résolution ? Écrivez-nous."
+    "contactP": "Vous êtes journaliste et avez une question, besoin d'une citation ou d'un fichier en plus haute résolution ? Écrivez-nous.",
+    "suiteLink": "Comment lancer la suite complète"
+  },
+  "getInvolved": {
+    "title": "Participer",
+    "lead": "Le standard se construit en public, et tout le monde peut y participer. Pas besoin de savoir coder : si vous travaillez pour une marque ou un revendeur, dites-nous ce qui vous bloque, ce qui manque et ce qui fonctionne.",
+    "items": [
+      {
+        "h": "Discussions",
+        "p": "Posez une question, partagez une idée ou commentez une proposition pour la prochaine version. C'est le meilleur point de départ.",
+        "cta": "Voir les discussions"
+      },
+      {
+        "h": "Issues et pull requests",
+        "p": "Pour un changement précis : une erreur dans la spécification, un champ manquant, un meilleur exemple. Ouvrez une issue, ou proposez vous-même le changement dans une pull request.",
+        "cta": "Ouvrir une issue"
+      },
+      {
+        "h": "E-mail",
+        "p": "Pour une question que vous préférez ne pas poser en public.",
+        "cta": "Nous écrire"
+      },
+      {
+        "h": "Rester informé",
+        "p": "Suivez le dépôt de la spécification sur GitHub (Watch → Custom → Releases) pour être averti de chaque nouvelle version.",
+        "cta": "Suivre le dépôt"
+      }
+    ]
   }
 }

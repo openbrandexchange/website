@@ -1,0 +1,31 @@
+---
+// "Get involved": how anyone, coders or not, takes part in the standard. Shown on the governance and
+// developers pages; the footer links the discussions too.
+import DocSection from './DocSection.astro';
+import { messages, repo, type Lang } from '../i18n';
+import { HELLO_EMAIL } from '../lib/org';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const g = messages[lang].getInvolved;
+const hrefs = [repo('spec', '/discussions'), repo('spec', '/issues/new/choose'), `mailto:${HELLO_EMAIL}`, repo('spec')];
+---
+
+<DocSection id="get-involved" title={g.title}>
+  <p>{g.lead}</p>
+  <ul class="involved">
+    {
+      g.items.map((item, i) => (
+        <li>
+          <h3>{item.h}</h3>
+          <p>{item.p}</p>
+          <p>
+            <a href={hrefs[i]}>{i === 2 ? HELLO_EMAIL : item.cta}</a>
+          </p>
+        </li>
+      ))
+    }
+  </ul>
+</DocSection>

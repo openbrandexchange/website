@@ -2,6 +2,7 @@
 import Code from '../components/Code.astro';
 import PageHero from '../components/PageHero.astro';
 import DocSection from '../components/DocSection.astro';
+import GetInvolved from '../components/GetInvolved.astro';
 import CodeWindow from '../components/CodeWindow.astro';
 import Icon from '../components/Icon.astro';
 import { messages, repo, specDoc, url, type Lang } from '../i18n';
@@ -191,5 +192,6 @@ const docs = [
       </ul>
       <p>{c.contribute} <a href={url(lang, 'governance')}>{c.governanceLink}</a>.</p>
     </DocSection>
+    <GetInvolved lang={lang} />
   </div>
 </section>

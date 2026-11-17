@@ -2895,3 +2895,23 @@ h3.ways-title {
 .badge-files {
   padding-bottom: var(--s-3);
 }
+
+/* Get involved: the four routes, side by side where there is room. */
+.involved {
+  list-style: none;
+  padding: 0;
+  margin: var(--s-4) 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: var(--s-4);
+}
+.involved li {
+  border-top: 2px solid var(--fg);
+  padding-top: var(--s-3);
+}
+.involved h3 {
+  margin: 0 0 var(--s-2);
+}
+.involved p {
+  margin: 0 0 var(--s-2);
+}
