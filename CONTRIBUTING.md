@@ -28,20 +28,30 @@ Style: short sentences, plain words, no protocol terms on brand and retailer pag
 list them), examples with the fictional *Kestrel Outfitters* and `.example` domains. Never put
 real customer data in examples.
 
-## Sign your commits (DCO)
+## Sign your commits, and the rights in your contribution
 
-Contributions are accepted under the [Developer Certificate of Origin 1.1](https://developercertificate.org/).
-By signing off you certify that you wrote the change or otherwise have the right to submit it
-under this repository's licences (code MIT, content CC-BY-4.0). Add a `Signed-off-by` line to
-every commit:
+This website is not openly licensed: its code, design and texts are copyright of the Open Brand
+Exchange Foundation (in formation), all rights reserved (see [LICENSE](LICENSE)). The repository is
+public so that anyone can read it and suggest improvements.
+
+By submitting a contribution (a pull request, a patch, an issue with text or code to use) you
+confirm that you wrote it or otherwise have the right to submit it, and you grant the publisher of
+this website, and the Open Brand Exchange Foundation once it is registered, a perpetual, worldwide,
+free, non-exclusive and irrevocable licence to use, change, publish and relicense your
+contribution as part of the website or otherwise. You keep the copyright in your contribution.
+Changes to files that come from the specification (see [NOTICE](NOTICE)) belong in the
+[spec repository](https://github.com/openbrandexchange/spec), under its CC-BY-4.0 licence.
+
+Add a `Signed-off-by` line to every commit to confirm this
+([Developer Certificate of Origin 1.1](https://developercertificate.org/) for the origin of the
+change, the paragraph above for the rights):
 
 ```sh
 git commit -s -m "Fix the Danish cookie statement"
 # Signed-off-by: Your Name <you@example.org>
 ```
 
-Use your real name and an address you can be reached at. There is no contributor licence
-agreement: you keep the copyright in your contribution. Pull requests with unsigned commits
+Use your real name and an address you can be reached at. Pull requests with unsigned commits
 cannot be merged; `git rebase --signoff main` fixes an existing branch.
 
 ## Deploying

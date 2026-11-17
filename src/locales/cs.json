@@ -13,7 +13,7 @@
     "footerAbout": "Bezplatný a otevřený způsob, jak značky sdílejí produktové obrázky a data o zboží se svými prodejci.",
     "footerMore": "Další",
     "footerSource": "Zdrojový kód a specifikace",
-    "footerLicence": "Tento web: obsah CC-BY-4.0, kód MIT.",
+    "footerLicence": "© 2026 {foundation}. Všechna práva vyhrazena. Specifikace je pod licencí CC-BY-4.0.",
     "editionCloudflare": "Portál pro Cloudflare",
     "editionGoogle": "Portál pro Google Cloud a Docker",
     "editionHosting": "Portál pro webhosting",
@@ -36,7 +36,8 @@
     "privacy": "Soukromí",
     "imprint": "Tiráž",
     "cookies": "Cookies",
-    "partners": "Partneři"
+    "partners": "Partneři",
+    "press": "Pro média a odznaky"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Staňte se partnerem",
       "description": "Bezplatný test shody a označení „Kompatibilní s Open Brand Exchange“, nebo zápis jako oficiální partner od 500 € ročně."
+    },
+    "press": {
+      "title": "Pro média a odznaky",
+      "description": "Open Brand Exchange v jednom odstavci, jak psát název a odznaky pro produkty, které se standardem fungují."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "Stáhnout nejnovější vydání",
     "p3Title": "3. Váš vlastní server",
-    "p3P": "Na vlastním serveru nebo u libovolného cloudového poskytovatele. Spustíte ho jedním příkazem:",
-    "composeP": "Nebo rovnou s HTTPS přes Caddy:",
+    "p3P": "Už provozujete vlastní reverzní proxy? Pak spusťte jen zveřejněný image a nasměrujte proxy na port 8080:",
     "envTitle": "Nastavení",
     "envPublicUrl": "veřejná adresa vašeho portálu",
-    "envSecretKey": "dlouhý náhodný klíč (openssl rand -hex 32); dobře ho uschovejte",
+    "envSecretKey": "dlouhý náhodný klíč (openssl rand -base64 48). Uložte si kopii do správce hesel: jakmile portál obsahuje data, klíč už nejde změnit",
     "envSetupCode": "volitelně: předem zvolený instalační kód",
     "envPort": "port, výchozí 8080",
     "firstTitle": "Po instalaci: první spuštění",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Vytvořte server u Hetzneru v Norimberku, Falkensteinu nebo Helsinkách se zapnutými zálohami.",
       "Nasměrujte svou doménu, například images.vaseznacka.cz, na server.",
-      "Nainstalujte Docker a spusťte portál jedním příkazem. HTTPS se nastaví automaticky.",
+      "Nainstalujte Docker a spusťte portál několika příkazy. HTTPS se nastaví automaticky.",
       "Otevřete svou doménu a projděte průvodce nastavením.",
       "Volitelně: ukládejte obrázky do Hetzner Object Storage ve stejné lokalitě.",
-      "Naplánujte noční zálohu. Aktualizace je jeden příkaz."
+      "Naplánujte noční zálohu a zkopírujte ji mimo server. Aktualizace jsou dva příkazy."
     ],
     "euGuide": "Krok za krokem: váš portál u Hetzneru",
     "euData": "Když jsou server i úložiště v lokalitě v EU, jsou váš katalog, obrázky i databáze uloženy v EU.",
@@ -455,7 +459,28 @@
     "altP": "Stejný portál běží také na Cloudflare Workers a na Google Cloud Run. Pokud služba nabízí region v Evropě, zvolte ho.",
     "partnerLink": "Zobrazit partnery",
     "techTitle": "Technické podrobnosti pro vaše IT",
-    "techLead": "Příkazy, nastavení a instalační návody pro toho, kdo server nastavuje."
+    "techLead": "Příkazy, nastavení a instalační návody pro toho, kdo server nastavuje.",
+    "costTitle": "Kolik to zhruba stojí",
+    "costItems": [
+      "Vlastní server v EU: zhruba 5 až 15 € měsíčně za malý server s automatickými zálohami u poskytovatele, jako je Hetzner. Fotografie na vlastním disku serveru nic navíc nestojí; objektové úložiště pro velký archiv přidá několik eur měsíčně za terabajt.",
+      "Běžný webhosting: tarif, který už platíte, pokud má PHP 8.2 nebo novější.",
+      "Cloudflare Workers: 5 dolarů měsíčně za Workers Paid plus úložiště R2 za zhruba 1,50 dolaru měsíčně za 100 GB fotografií. Poplatky za stahování nejsou.",
+      "Partner: jeho vlastní cena. Zeptejte se, co zahrnuje: aktualizace, zálohy, vlastní doménu a export všech dat, pokud odejdete.",
+      "Váš vlastní čas: napoprvé počítejte s půl dnem až dnem, včetně domény a zkušební obnovy zálohy, a pak zhruba s hodinou měsíčně na aktualizace a kontrolu záloh."
+    ],
+    "costNote": "Orientační ceny z listopadu 2026 bez DPH. Než se rozhodnete, ověřte si aktuální ceny poskytovatele.",
+    "stepsTitle": "Krok za krokem na novém serveru",
+    "stepsP": "Na novém serveru s Ubuntu s otevřenými porty 22, 80 a 443, na který už míří záznamy A a AAAA vaší domény. Je to stejné nastavení jako v návodu pro Hetzner: sestaví nejnovější vydání portálu a předřadí mu Caddy pro HTTPS.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy si vyžádá certifikát Let's Encrypt, jakmile vaše doména míří na server, automaticky ho obnovuje a přesměrovává http na https. Certifikát nepřišel? Ověřte pomocí dig, že doména ukazuje adresu serveru, a že porty 80 a 443 jsou ve firewallu otevřené.",
+    "backupTitle": "Zálohy",
+    "backupP": "Zapněte zálohy serveru u svého poskytovatele a přidejte noční zálohu portálu, kterou zároveň kopírujete mimo server. OBX_SECRET_KEY uchovávejte zvlášť ve správci hesel: bez něj nejde zálohu úplně obnovit. Jednou si obnovu vyzkoušejte, ať víte, že funguje.",
+    "updateTitle": "Aktualizace",
+    "updateP": "Udělejte zálohu a přečtěte si poznámky k vydání. Pak si stáhněte nové vydání a znovu ho sestavte; databáze se při startu portálu aktualizuje sama.",
+    "cfCliP": "Nebo z vlastního počítače pomocí Bun a nástroje Wrangler:",
+    "cfDomainP": "Vlastní doména: přidejte ji v Workers & Pages → váš Worker → Settings → Domains & Routes (doména musí být v Cloudflare), nastavte OBX_PUBLIC_URL na tuto adresu a nasaďte znovu.",
+    "cfBackupP": "Zálohy: s Workers Paid uchovává D1 historii databáze za 30 dní (Time Travel). Chcete-li kopii mimo Cloudflare, databázi pravidelně exportujte. Obrázky jsou v R2; bucket zkopírujete libovolným nástrojem pro S3.",
+    "cfUpdateP": "Aktualizace: slučte nové vydání do své kopie repozitáře a pushněte; Cloudflare ho znovu nasadí."
   },
   "retailers": {
     "h1": "Pro prodejce",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Kdo rozhoduje",
-        "p": "Dokud neexistují tři nezávislé implementace, které projdou testy shody, rozhoduje o změnách po veřejné diskusi zakladatel. Poté převezme řízení řídicí skupina s jedním místem pro každého implementátora a nejméně jednou značkou a jedním prodejcem."
+        "p": "Dokud neexistují alespoň tři skutečně nezávislé implementace, rozhoduje o změnách po veřejné diskusi zakladatel. Nezávislé znamená, že je vytvářejí a udržují organizace, které nejsou propojené mezi sebou ani se zakladatelem; referenční implementace se nepočítají. Každá musí projít úplným testem shody a být v produkčním provozu alespoň rok a dohromady musí sloužit alespoň deseti značkám a pěti prodejcům. Teprve potom převezme řízení řídicí skupina s jedním místem pro každého implementátora, alespoň dvěma značkami a dvěma prodejci a se zakladatelem, dokud předsedá správní radě."
       },
       {
         "h": "Jak probíhají změny",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Licence",
-        "p": "Specifikace a obsah tohoto webu jsou pod licencí CC-BY-4.0. SDK, nástroj obx a sdílené webové rozhraní jsou pod licencí Apache-2.0. Tři edice portálu jsou pod licencí AGPL-3.0, aby vylepšení zůstala otevřená. Kód tohoto webu je pod licencí MIT."
+        "p": "Specifikace je pod licencí CC-BY-4.0. SDK, nástroj obx a sdílené webové rozhraní jsou pod licencí Apache-2.0. Tři edice portálu jsou pod licencí AGPL-3.0, takže jejich vylepšení zůstávají otevřená. Tento web nemá otevřenou licenci: k jeho kódu, designu a textům jsou vyhrazena všechna práva. Soubory ze specifikace, které web poskytuje, například schémata, šablony a příklady, si ponechávají licenci CC-BY-4.0."
       }
     ],
     "nameTitle": "O názvu",
@@ -891,7 +916,7 @@
     "securityLabel": "Bezpečnostní problémy",
     "securityNote": "Zranitelnosti hlaste důvěrně na tuto adresu, ne ve veřejném issue.",
     "contentTitle": "Obsah a licence",
-    "contentP": "Tento web píšeme pečlivě, přesto může obsahovat chyby. V technických otázkách je rozhodující specifikace. Texty lze znovu použít pod licencí CC BY 4.0 s uvedením autora; kód tohoto webu je pod licencí MIT."
+    "contentP": "Tento web píšeme pečlivě, přesto může obsahovat chyby. V technických otázkách je rozhodující specifikace. Kód, design a texty tohoto webu jsou chráněny autorským právem a všechna práva jsou vyhrazena, proto je prosím nekopírujte. Můžete odkazovat na kteroukoli stránku, citovat krátkou pasáž s odkazem na zdroj a sdílet brožury a odznaky v nezměněné podobě. Soubory ze specifikace (schémata, šablony, příklady) zůstávají pod licencí CC-BY-4.0."
   },
   "cookies": {
     "h1": "Prohlášení o cookies",
@@ -1117,8 +1142,8 @@
           "name": "Vlastní server v Evropě",
           "runs": "Server u evropského poskytovatele, například Hetzner (Německo)",
           "need": "Server a doménové jméno",
-          "setup": "Jeden příkaz, pak průvodce nastavením",
-          "cost": "Server, který si pronajímáte",
+          "setup": "Pár příkazů, pak průvodce nastavením",
+          "cost": "Zhruba 5 až 15 € měsíčně za malý server se zálohami",
           "cta": "Nastavit v Evropě"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "Evropský webhosting s PHP a databází, například TransIP, Strato nebo OVHcloud",
           "need": "Program pro FTP",
           "setup": "Nahrajte ZIP, pak spusťte instalátor",
-          "cost": "Hosting, který už platíte",
+          "cost": "Hosting, který už platíte (PHP 8.2 nebo novější)",
           "cta": "Nainstalovat na webhosting"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers nebo Google Cloud Run",
           "need": "Účet Cloudflare nebo Google Cloud",
           "setup": "Jedno kliknutí nebo jeden skript",
-          "cost": "Ceny služby podle využití",
+          "cost": "Cloudflare: 5 dolarů měsíčně plus úložiště. Google Cloud: podle využití",
           "cta": "Nastavit v jiném cloudu"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "Ukázkový portál má veřejný testovací klíč, který umí jen číst. Katalog je smyšlený a každou hodinu se obnoví, takže rychlý start funguje hned.",
     "devKey": "Veřejný testovací klíč (jen pro čtení)",
     "devOpen": "Otevřít ukázkový portál"
+  },
+  "press": {
+    "h1": "Pro média a odznaky",
+    "lead": "Open Brand Exchange v jednom odstavci, jak psát název a odznaky pro produkty, které se standardem fungují.",
+    "aboutTitle": "Open Brand Exchange v jednom odstavci",
+    "aboutP": "Open Brand Exchange je bezplatný otevřený standard pro sdílení produktových dat a produktových fotografií mezi značkami a prodejci. Značka zveřejní svou kolekci jednou, v jednom standardním formátu, a každý prodejce ji dostane přímo do svého e-shopu, PIM, pokladního systému nebo ERP, případně si ji stáhne z portálu značky. Standard je neziskový a vydává ho {foundation}.",
+    "nameTitle": "Název",
+    "nameP": "Poprvé pište celý název „Open Brand Exchange“, dále stačí „OBX“. Název označuje standard, ne firmu ani produkt.",
+    "badgesTitle": "Odznaky pro kompatibilní produkty",
+    "badgesP": "Prochází váš portál, PIM, ERP, e-shopová platforma nebo služba testem shody? Pak můžete používat jeden z těchto odznaků. Jsou zdarma a pro všechny implementátory stejné.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Čtvercový, pro malé plochy",
+    "horizontal": "Vodorovný",
+    "stacked": "Nad sebou",
+    "light": "Na světlé pozadí",
+    "dark": "Na tmavé pozadí",
+    "formatsNote": "Každý odznak je k dispozici jako SVG, ostré v každé velikosti a nejvhodnější pro web, a jako PNG v běžné a dvojnásobné velikosti.",
+    "rulesTitle": "Jak odznaky používat",
+    "rules": [
+      "Jen pro produkt nebo službu, které projdou veřejným testem shody pro aktuální verzi standardu. Spusťte obx-conformance sami nebo použijte online kontrolu.",
+      "Uveďte verzi, kterou jste testovali, a po vydání nové verze testujte znovu. Pokud váš produkt už neprojde, odznak odstraňte.",
+      "Používejte soubory tak, jak jsou. Neměňte barvy, text ani proporce a nespojujte odznak s jiným logem.",
+      "Odznak říká, že váš produkt se standardem funguje. Neznamená, že nadace váš produkt nebo vaši firmu podporuje, certifikuje nebo doporučuje.",
+      "Kolem odznaku nechte volné místo alespoň v polovině jeho výšky a kde to jde, odkažte z něj na openbrandexchange.com."
+    ],
+    "checkLink": "Otevřít online kontrolu",
+    "partnersLink": "Kompatibilní nebo oficiální partner",
+    "contactTitle": "Kontakt pro média",
+    "contactP": "Máte jako novinář dotaz nebo potřebujete citaci či soubor ve vyšším rozlišení? Napište nám e-mail."
   }
 }

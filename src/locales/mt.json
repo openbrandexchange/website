@@ -13,7 +13,7 @@
     "footerAbout": "Mod b'xejn u miftuħ għall-marki biex jaqsmu ritratti tal-prodotti u data tal-oġġetti mal-bejjiegħa tagħhom.",
     "footerMore": "Aktar",
     "footerSource": "Kodiċi sors u speċifikazzjoni",
-    "footerLicence": "Dan is-sit: kontenut CC-BY-4.0, kodiċi MIT.",
+    "footerLicence": "© 2026 {foundation}. Id-drittijiet kollha riżervati. L-ispeċifikazzjoni hija CC-BY-4.0.",
     "editionCloudflare": "Portal għal Cloudflare",
     "editionGoogle": "Portal għal Google Cloud u Docker",
     "editionHosting": "Portal għal web hosting",
@@ -36,7 +36,8 @@
     "privacy": "Privatezza",
     "imprint": "Informazzjoni dwar il-pubblikatur",
     "cookies": "Cookies",
-    "partners": "Sħab"
+    "partners": "Sħab",
+    "press": "Kit għall-istampa u tikketti"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Issir sieħeb",
       "description": "Test ta' konformità b'xejn u t-tikketta “Kompatibbli ma' Open Brand Exchange”, jew post fil-lista bħala sieħeb uffiċjali minn €500 fis-sena."
+    },
+    "press": {
+      "title": "Kit għall-istampa u tikketti",
+      "description": "Open Brand Exchange f'paragrafu wieħed, kif tikteb l-isem, u t-tikketti għall-prodotti li jaħdmu mal-istandard."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "Niżżel l-aħħar ħarġa",
     "p3Title": "3. Is-server tiegħek",
-    "p3P": "Fuq is-server tiegħek jew ma' kwalunkwe fornitur tal-cloud. Tibda b'kmand wieħed:",
-    "composeP": "Jew b'HTTPS inkluż, permezz ta' Caddy:",
+    "p3P": "Diġà tħaddem reverse proxy tiegħek? Allura ibda biss l-image ippubblikata u ipponta l-proxy lejn il-port 8080:",
     "envTitle": "Settings",
     "envPublicUrl": "l-indirizz pubbliku tal-portal tiegħek",
-    "envSecretKey": "ċavetta twila kkawżali (openssl rand -hex 32); żommha f'post sigur",
+    "envSecretKey": "ċavetta twila kkawżali (openssl rand -base64 48). Żomm kopja fil-password manager tiegħek: ma tistax tinbidel ladarba jkun hemm id-data",
     "envSetupCode": "mhux obbligatorju: kodiċi tas-setup li tagħżel minn qabel",
     "envPort": "port, 8080 awtomatikament",
     "firstTitle": "Wara l-installazzjoni: l-ewwel bidu",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Oħloq server ma' Hetzner f'Nuremberg, Falkenstein jew Helsinki, bil-backups mixgħula.",
       "Ipponta d-dominju tiegħek, pereżempju images.yourbrand.mt, lejn is-server.",
-      "Installa Docker u ibda l-portal b'kmand wieħed. L-HTTPS jiġi rranġat awtomatikament.",
+      "Installa Docker u ibda l-portal bi ftit kmandi. L-HTTPS jiġi rranġat awtomatikament.",
       "Iftaħ id-dominju tiegħek u lesti l-wizard tas-setup.",
       "Mhux obbligatorju: żomm l-immaġini f'Hetzner Object Storage, fl-istess post.",
-      "Ippjana backup kull lejl. L-aġġornamenti huma kmand wieħed."
+      "Ippjana backup kull lejl u kkopjah barra mis-server. L-aġġornament jieħu żewġ kmandi."
     ],
     "euGuide": "Gwida pass pass: il-portal tiegħek fuq Hetzner",
     "euData": "Bis-server u l-ħażna f'post fl-UE, il-katalgu, l-immaġini u d-database tiegħek jinżammu fl-UE.",
@@ -455,7 +459,28 @@
     "altP": "L-istess portal jaħdem ukoll fuq Cloudflare Workers u fuq Google Cloud Run. Agħżel reġjun fl-Ewropa, jekk is-servizz joffri wieħed.",
     "partnerLink": "Ara s-sħab",
     "techTitle": "Dettalji tekniċi għat-tim tal-IT tiegħek",
-    "techLead": "Kmandi, settings u gwidi tal-installazzjoni għal min iwaqqaf is-server."
+    "techLead": "Kmandi, settings u gwidi tal-installazzjoni għal min iwaqqaf is-server.",
+    "costTitle": "Bejn wieħed u ieħor, kemm jiswa",
+    "costItems": [
+      "Is-server tiegħek fl-UE: madwar €5 sa €15 fix-xahar għal server żgħir b'backups awtomatiċi, ma' fornitur bħal Hetzner. Ir-ritratti fuq id-diska tas-server stess ma jiswew xejn żejjed; object storage għal arkivju kbir iżid ftit ewro fix-xahar għal kull terabyte.",
+      "Web hosting ordinarju: il-pakkett li diġà tħallas għalih, sakemm ikollu PHP 8.2 jew aktar ġdid.",
+      "Cloudflare Workers: 5 dollari fix-xahar għal Workers Paid, flimkien mal-ħażna R2 b'madwar 1.50 dollari fix-xahar għal kull 100 GB ta' ritratti. M'hemmx ħlasijiet għat-tniżżil.",
+      "Sieħeb: il-prezz tiegħu. Staqsi x'jinkludi: aġġornamenti, backups, id-dominju tiegħek, u l-esportazzjoni ta' kollox jekk titlaq.",
+      "Il-ħin tiegħek: ippjana nofs jum sa jum sħiħ l-ewwel darba, inkluż id-dominju u test biex tirrestawra backup, u madwar siegħa fix-xahar għall-aġġornamenti u biex tiċċekkja l-backups."
+    ],
+    "costNote": "Prezzijiet indikattivi ta' Novembru 2026, mingħajr VAT. Iċċekkja l-prezzijiet attwali tal-fornitur qabel tagħżel.",
+    "stepsTitle": "Pass pass fuq server ġdid",
+    "stepsP": "Fuq server ġdid Ubuntu bil-portijiet 22, 80 u 443 miftuħa, u bir-records A u AAAA tad-dominju tiegħek diġà jippuntaw lejh. Din hija l-istess konfigurazzjoni tal-gwida ta' Hetzner: tibni l-aħħar ħarġa tal-portal u tpoġġi Caddy quddiemu għall-HTTPS.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy jitlob ċertifikat Let's Encrypt hekk kif id-dominju tiegħek jippunta lejn is-server, iġeddu awtomatikament u jibgħat http lejn https. M'hemmx ċertifikat? Iċċekkja b'dig li d-dominju juri l-indirizz tas-server, u li l-portijiet 80 u 443 huma miftuħa fil-firewall.",
+    "backupTitle": "Backups",
+    "backupP": "Ixgħel il-backups tas-server tal-fornitur tiegħek, u żid backup tal-portal kull lejl li tikkopja wkoll barra mis-server. Żomm OBX_SECRET_KEY separatament, f'password manager: mingħajrha backup ma jistax jiġi rrestawrat kollu. Ipprova restore darba, biex tkun taf li jaħdem.",
+    "updateTitle": "Aġġornamenti",
+    "updateP": "Agħmel backup u aqra n-noti tal-ħarġa. Imbagħad agħmel checkout tal-ħarġa l-ġdida u erġa' ibni; id-database tiġi aġġornata waħedha meta jibda l-portal.",
+    "cfCliP": "Jew mill-kompjuter tiegħek, b'Bun u l-għodda Wrangler:",
+    "cfDomainP": "Id-dominju tiegħek: żidu taħt Workers & Pages → il-Worker tiegħek → Settings → Domains & Routes (id-dominju jrid ikun fuq Cloudflare), issettja OBX_PUBLIC_URL għal dak l-indirizz u erġa' agħmel deploy.",
+    "cfBackupP": "Backups: fuq Workers Paid, D1 iżomm 30 jum ta' storja tad-database (Time Travel). Għal kopja barra minn Cloudflare, esporta d-database regolarment. L-immaġini jinsabu f'R2; ikkopja l-bucket bi kwalunkwe għodda S3.",
+    "cfUpdateP": "Aġġornamenti: għaqqad il-ħarġa l-ġdida fil-kopja tiegħek tar-repository u agħmel push; Cloudflare jerġa' jagħmel deploy."
   },
   "retailers": {
     "h1": "Għall-bejjiegħa",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Min jiddeċiedi",
-        "p": "Sakemm ikun hemm tliet implimentazzjonijiet indipendenti li jgħaddu mis-sett ta' testijiet ta' konformità, il-fundatur jiddeċiedi dwar il-bidliet, wara diskussjoni pubblika. Wara dan jieħu f'idejh grupp ta' tmexxija, b'siġġu wieħed għal kull min jimplimenta u mill-inqas marka waħda u bejjiegħ wieħed."
+        "p": "Sakemm ikun hemm mill-inqas tliet implimentazzjonijiet tassew indipendenti, il-fundatur jiddeċiedi dwar il-bidliet, wara diskussjoni pubblika. Indipendenti tfisser mibnija u miżmuma minn organizzazzjonijiet li m'għandhomx rabta ma' xulxin jew mal-fundatur; l-implimentazzjonijiet ta' referenza ma jgħoddux. Kull waħda trid tgħaddi mis-sett sħiħ ta' testijiet ta' konformità u tkun ilha tintuża fil-produzzjoni għal mill-inqas sena, u flimkien iridu jservu mill-inqas għaxar marki u ħames bejjiegħa. Imbagħad biss jieħu f'idejh grupp ta' tmexxija, b'siġġu wieħed għal kull min jimplimenta, mill-inqas żewġ marki u żewġ bejjiegħa, u l-fundatur sakemm ikun president tal-bord."
       },
       {
         "h": "Kif isiru l-bidliet",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Liċenzji",
-        "p": "L-ispeċifikazzjoni u l-kontenut ta' dan is-sit huma CC-BY-4.0. L-SDK, l-għodda obx u l-interfaċċa web kondiviża huma Apache-2.0. It-tliet edizzjonijiet tal-portal huma AGPL-3.0, biex it-titjib jibqa' miftuħ. Il-kodiċi ta' dan is-sit huwa MIT."
+        "p": "L-ispeċifikazzjoni hija CC-BY-4.0. L-SDK, l-għodda obx u l-interfaċċa web kondiviża huma Apache-2.0. It-tliet edizzjonijiet tal-portal huma AGPL-3.0, biex it-titjib fihom jibqa' miftuħ. Dan is-sit web m'għandux liċenzja miftuħa: il-kodiċi, id-disinn u t-testi tiegħu huma kollha bid-drittijiet riżervati. Il-fajls tal-ispeċifikazzjoni li jservi, bħall-iskemi, il-mudelli u l-eżempji, iżommu l-liċenzja CC-BY-4.0 tagħhom."
       }
     ],
     "nameTitle": "Dwar l-isem",
@@ -891,7 +916,7 @@
     "securityLabel": "Problemi ta' sigurtà",
     "securityNote": "Irrapporta l-vulnerabbiltajiet b'mod kunfidenzjali lil dan l-indirizz, mhux f'issue pubbliku.",
     "contentTitle": "Kontenut u liċenzji",
-    "contentP": "Niktbu dan is-sit b'attenzjoni, iżda jista' jkun fih żbalji. Għad-dettalji tekniċi, l-ispeċifikazzjoni hija dik li tgħodd. It-testi jistgħu jerġgħu jintużaw taħt CC BY 4.0 b'attribuzzjoni; il-kodiċi ta' dan is-sit huwa taħt il-liċenzja MIT."
+    "contentP": "Niktbu dan is-sit b'attenzjoni, iżda jista' jkun fih żbalji. Għad-dettalji tekniċi, l-ispeċifikazzjoni hija dik li tgħodd. Il-kodiċi, id-disinn u t-testi ta' dan is-sit huma protetti bid-drittijiet tal-awtur, bid-drittijiet kollha riżervati, għalhekk jekk jogħġbok tikkopjahomx. Tista' tagħmel link għal kwalunkwe paġna, tikkwota silta qasira b'link għas-sors, u taqsam il-brochures u t-tikketti mingħajr bidliet. Il-fajls tal-ispeċifikazzjoni (skemi, mudelli, eżempji) jibqgħu CC-BY-4.0."
   },
   "cookies": {
     "h1": "Dikjarazzjoni dwar il-cookies",
@@ -1117,8 +1142,8 @@
           "name": "Is-server tiegħek fl-Ewropa",
           "runs": "Server ma' fornitur Ewropew bħal Hetzner (il-Ġermanja)",
           "need": "Server u isem ta' dominju",
-          "setup": "Kmand wieħed, imbagħad il-wizard tas-setup",
-          "cost": "Is-server li tikri",
+          "setup": "Ftit kmandi, imbagħad il-wizard tas-setup",
+          "cost": "Madwar €5 sa €15 fix-xahar għal server żgħir b'backups",
           "cta": "Installa fl-Ewropa"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "Web hosting Ewropew b'PHP u database, bħal TransIP, Strato jew OVHcloud",
           "need": "Programm FTP",
           "setup": "Tella' zip, imbagħad l-installatur",
-          "cost": "Il-hosting li diġà tħallas għalih",
+          "cost": "Il-hosting li diġà tħallas għalih (PHP 8.2 jew aktar ġdid)",
           "cta": "Installa fuq web hosting"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers, jew Google Cloud Run",
           "need": "Kont ta' Cloudflare jew Google Cloud",
           "setup": "Klikk waħda jew script wieħed",
-          "cost": "Il-prezzijiet tal-użu tas-servizz",
+          "cost": "Cloudflare: 5 dollari fix-xahar flimkien mal-ħażna. Google Cloud: skont l-użu",
           "cta": "Installa fuq cloud ieħor"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "Il-portal tad-demo għandu ċavetta tat-test pubblika li tista' taqra biss. Il-katalgu huwa fittizju u jerġa' lura għall-bidu kull siegħa, għalhekk il-gwida tal-bidu taħdem minnufih.",
     "devKey": "Ċavetta tat-test pubblika (qari biss)",
     "devOpen": "Iftaħ il-portal tad-demo"
+  },
+  "press": {
+    "h1": "Kit għall-istampa u tikketti",
+    "lead": "Open Brand Exchange f'paragrafu wieħed, kif tikteb l-isem, u t-tikketti għall-prodotti li jaħdmu mal-istandard.",
+    "aboutTitle": "Open Brand Exchange f'paragrafu wieħed",
+    "aboutP": "Open Brand Exchange huwa standard miftuħ u b'xejn biex id-data tal-prodotti u r-ritratti tal-prodotti jinqasmu bejn il-marki u l-bejjiegħa. Marka tippubblika l-kollezzjoni tagħha darba, f'format standard wieħed, u kull bejjiegħ jirċeviha dritt fil-webshop, il-PIM, il-POS jew l-ERP tiegħu, jew iniżżilha mill-portal tal-marka. L-istandard huwa mingħajr skop ta' qligħ u jiġi ppubblikat f'isem il-{foundation}.",
+    "nameTitle": "L-isem",
+    "nameP": "L-ewwel darba ikteb “Open Brand Exchange” sħiħ; wara dan “OBX” huwa tajjeb. L-isem jirreferi għall-istandard, mhux għal kumpanija jew prodott.",
+    "badgesTitle": "Tikketti għal prodotti kompatibbli",
+    "badgesP": "Il-portal, il-PIM, l-ERP, il-pjattaforma tal-webshop jew is-servizz tiegħek jgħaddi mis-sett ta' testijiet ta' konformità? Allura tista' turi waħda minn dawn it-tikketti. Huma b'xejn, u l-istess għal kull min jimplimenta.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Kwadra, għal spazji żgħar",
+    "horizontal": "Orizzontali",
+    "stacked": "F'saffi",
+    "light": "Għal sfondi ċari",
+    "dark": "Għal sfondi skuri",
+    "formatsNote": "Kull tikketta tiġi bħala SVG, ċara f'kull daqs u l-aħjar għall-web, u bħala PNG f'daqs normali u doppju.",
+    "rulesTitle": "Kif tuża t-tikketti",
+    "rules": [
+      "Biss għal prodott jew servizz li jgħaddi mis-sett pubbliku ta' testijiet ta' konformità għall-verżjoni attwali tal-istandard. Ħaddem obx-conformance int stess, jew uża l-verifika online.",
+      "Semmi l-verżjoni li ttestjajt, u erġa' ttestja meta toħroġ verżjoni ġdida. Jekk il-prodott tiegħek ma jibqax jgħaddi, neħħi t-tikketta.",
+      "Uża l-fajls kif inhuma. Tbiddilx il-kuluri, il-kliem jew il-proporzjonijiet, u tgħaqqadx it-tikketta ma' logo ieħor.",
+      "It-tikketta tgħid li l-prodott tiegħek jaħdem mal-istandard. Ma tfissirx li l-fondazzjoni tappoġġja, tiċċertifika jew tirrakkomanda l-prodott jew il-kumpanija tiegħek.",
+      "Ħalli ftit spazju madwar it-tikketta, mill-inqas nofs l-għoli tagħha, u fejn tista' agħmel link għal openbrandexchange.com."
+    ],
+    "checkLink": "Iftaħ il-verifika online",
+    "partnersLink": "Kompatibbli jew sieħeb uffiċjali",
+    "contactTitle": "Kuntatt għall-istampa",
+    "contactP": "Ġurnalist b'mistoqsija, jew għandek bżonn kwotazzjoni jew fajl b'riżoluzzjoni ogħla? Ibgħatilna email."
   }
 }

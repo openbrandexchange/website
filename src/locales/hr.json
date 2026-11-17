@@ -13,7 +13,7 @@
     "footerAbout": "Besplatan i otvoren način na koji marke dijele fotografije proizvoda i podatke o artiklima sa svojim trgovcima.",
     "footerMore": "Više",
     "footerSource": "Izvorni kod i specifikacija",
-    "footerLicence": "Ova web-stranica: sadržaj CC-BY-4.0, kod MIT.",
+    "footerLicence": "© 2026 {foundation}. Sva prava pridržana. Specifikacija je pod licencijom CC-BY-4.0.",
     "editionCloudflare": "Portal za Cloudflare",
     "editionGoogle": "Portal za Google Cloud i Docker",
     "editionHosting": "Portal za web hosting",
@@ -36,7 +36,8 @@
     "privacy": "Privatnost",
     "imprint": "Impresum",
     "cookies": "Kolačići",
-    "partners": "Partneri"
+    "partners": "Partneri",
+    "press": "Za medije i značke"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Postanite partner",
       "description": "Besplatan test sukladnosti i oznaka „Kompatibilno s Open Brand Exchangeom” ili navođenje kao službeni partner od 500 € godišnje."
+    },
+    "press": {
+      "title": "Za medije i značke",
+      "description": "Open Brand Exchange u jednom odlomku, kako pisati naziv i značke za proizvode koji rade sa standardom."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "Preuzmi najnovije izdanje",
     "p3Title": "3. Vlastiti poslužitelj",
-    "p3P": "Na vlastitom poslužitelju ili kod bilo kojeg pružatelja usluga u oblaku. Počinje jednom naredbom:",
-    "composeP": "Ili odmah s HTTPS-om, putem Caddyja:",
+    "p3P": "Već imate vlastiti obrnuti proxy (reverse proxy)? Onda pokrenite samo objavljeni image i usmjerite proxy na port 8080:",
     "envTitle": "Postavke",
     "envPublicUrl": "javna adresa vašeg portala",
-    "envSecretKey": "dugačak nasumičan ključ (openssl rand -hex 32); dobro ga čuvajte",
+    "envSecretKey": "dugačak nasumičan ključ (openssl rand -base64 48). Kopiju spremite u upravitelj lozinki: kad u portalu postoje podaci, ključ se više ne može promijeniti",
     "envSetupCode": "neobavezno: unaprijed odabrani instalacijski kod",
     "envPort": "port, zadano 8080",
     "firstTitle": "Nakon instalacije: prvo pokretanje",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Izradite poslužitelj kod Hetznera u Nürnbergu, Falkensteinu ili Helsinkiju, s uključenim sigurnosnim kopijama.",
       "Usmjerite svoju domenu, na primjer images.vasamarka.hr, na poslužitelj.",
-      "Instalirajte Docker i pokrenite portal jednom naredbom. HTTPS se postavlja automatski.",
+      "Instalirajte Docker i pokrenite portal s nekoliko naredbi. HTTPS se postavlja automatski.",
       "Otvorite svoju domenu i prođite kroz čarobnjak za postavljanje.",
       "Neobavezno: slike čuvajte u Hetzner Object Storage, na istoj lokaciji.",
-      "Zakažite noćnu sigurnosnu kopiju. Ažuriranje je jedna naredba."
+      "Zakažite noćnu sigurnosnu kopiju i kopirajte je izvan poslužitelja. Ažuriranje su dvije naredbe."
     ],
     "euGuide": "Vodič korak po korak: vaš portal kod Hetznera",
     "euData": "Kad su poslužitelj i pohrana na lokaciji u EU-u, vaš katalog, slike i baza podataka pohranjeni su u EU-u.",
@@ -455,7 +459,28 @@
     "altP": "Isti portal radi i na Cloudflare Workers i na Google Cloud Runu. Odaberite regiju u Europi ako je usluga nudi.",
     "partnerLink": "Pogledajte partnere",
     "techTitle": "Tehnički detalji za vaš IT tim",
-    "techLead": "Naredbe, postavke i upute za instalaciju za osobu koja postavlja poslužitelj."
+    "techLead": "Naredbe, postavke i upute za instalaciju za osobu koja postavlja poslužitelj.",
+    "costTitle": "Koliko otprilike košta",
+    "costItems": [
+      "Vlastiti poslužitelj u EU-u: oko 5 do 15 € mjesečno za mali poslužitelj s automatskim sigurnosnim kopijama, kod pružatelja kao što je Hetzner. Fotografije na vlastitom disku poslužitelja ne koštaju ništa dodatno; objektna pohrana za veliku arhivu dodaje nekoliko eura mjesečno po terabajtu.",
+      "Običan web hosting: paket koji već plaćate, ako ima PHP 8.2 ili noviji.",
+      "Cloudflare Workers: 5 dolara mjesečno za Workers Paid, plus R2 pohrana po cijeni od oko 1,50 dolara mjesečno za 100 GB fotografija. Naknada za preuzimanje nema.",
+      "Partner: njegova vlastita cijena. Pitajte što je uključeno: ažuriranja, sigurnosne kopije, vlastita domena i izvoz svih podataka ako odete.",
+      "Vaše vrijeme: prvi put računajte s pola dana do dan, uključujući domenu i probni povrat sigurnosne kopije, a zatim s oko sat vremena mjesečno za ažuriranja i provjeru sigurnosnih kopija."
+    ],
+    "costNote": "Okvirne cijene iz studenoga 2026., bez PDV-a. Prije odabira provjerite aktualne cijene pružatelja.",
+    "stepsTitle": "Korak po korak na novom poslužitelju",
+    "stepsP": "Na novom Ubuntu poslužitelju s otvorenim portovima 22, 80 i 443, na koji već upućuju A i AAAA zapisi vaše domene. Ovo je isto postavljanje kao u vodiču za Hetzner: gradi najnovije izdanje portala i ispred njega postavlja Caddy za HTTPS.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy zatraži Let's Encrypt certifikat čim vaša domena upućuje na poslužitelj, automatski ga obnavlja i preusmjerava http na https. Nema certifikata? Naredbom dig provjerite prikazuje li domena adresu poslužitelja te jesu li portovi 80 i 443 otvoreni u vatrozidu.",
+    "backupTitle": "Sigurnosne kopije",
+    "backupP": "Uključite sigurnosne kopije poslužitelja kod svog pružatelja i dodajte noćnu sigurnosnu kopiju portala koju kopirate i izvan poslužitelja. OBX_SECRET_KEY čuvajte odvojeno, u upravitelju lozinki: bez njega se sigurnosna kopija ne može u potpunosti vratiti. Jednom isprobajte povrat kako biste znali da radi.",
+    "updateTitle": "Ažuriranja",
+    "updateP": "Napravite sigurnosnu kopiju i pročitajte bilješke uz izdanje. Zatim dohvatite novo izdanje i ponovno ga izgradite; baza podataka ažurira se sama kad se portal pokrene.",
+    "cfCliP": "Ili s vlastitog računala, s alatima Bun i Wrangler:",
+    "cfDomainP": "Vlastita domena: dodajte je pod Workers & Pages → vaš Worker → Settings → Domains & Routes (domena mora biti na Cloudflareu), postavite OBX_PUBLIC_URL na tu adresu i ponovno objavite.",
+    "cfBackupP": "Sigurnosne kopije: uz Workers Paid D1 čuva 30 dana povijesti baze podataka (Time Travel). Za kopiju izvan Cloudflarea redovito izvozite bazu podataka. Slike su u R2; bucket kopirajte bilo kojim S3 alatom.",
+    "cfUpdateP": "Ažuriranja: spojite novo izdanje u svoju kopiju repozitorija i napravite push; Cloudflare ga ponovno objavljuje."
   },
   "retailers": {
     "h1": "Za trgovce",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Tko odlučuje",
-        "p": "Dok ne postoje tri neovisne implementacije koje prolaze testove sukladnosti, o promjenama nakon javne rasprave odlučuje osnivač. Nakon toga upravljanje preuzima upravljačka skupina, s jednim mjestom po implementatoru te barem jednom markom i jednim trgovcem."
+        "p": "Dok ne postoje barem tri doista neovisne implementacije, o promjenama nakon javne rasprave odlučuje osnivač. Neovisne znači da ih razvijaju i održavaju organizacije koje nisu povezane međusobno ni s osnivačem; referentne implementacije se ne računaju. Svaka mora proći cijeli test sukladnosti i biti u produkcijskoj upotrebi najmanje godinu dana, a zajedno moraju služiti najmanje deset marki i pet trgovaca. Tek tada upravljanje preuzima upravljačka skupina, s jednim mjestom po implementatoru, najmanje dvije marke i dva trgovca te osnivačem dok je predsjednik upravnog odbora."
       },
       {
         "h": "Kako se unose promjene",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Licence",
-        "p": "Specifikacija i sadržaj ove stranice su pod licencom CC-BY-4.0. SDK, alat obx i zajedničko web sučelje su pod licencom Apache-2.0. Tri izdanja portala su pod licencom AGPL-3.0, kako bi poboljšanja ostala otvorena. Kod ove stranice je pod licencom MIT."
+        "p": "Specifikacija je pod licencijom CC-BY-4.0. SDK, alat obx i zajedničko web sučelje pod licencijom su Apache-2.0. Tri izdanja portala pod licencijom su AGPL-3.0, pa njihova poboljšanja ostaju otvorena. Ova stranica nema otvorenu licenciju: sva prava na njezin kod, dizajn i tekstove su pridržana. Datoteke iz specifikacije koje stranica isporučuje, poput shema, predložaka i primjera, zadržavaju licenciju CC-BY-4.0."
       }
     ],
     "nameTitle": "O nazivu",
@@ -891,7 +916,7 @@
     "securityLabel": "Sigurnosni problemi",
     "securityNote": "Ranjivosti prijavite povjerljivo na ovu adresu, a ne u javnom issueu.",
     "contentTitle": "Sadržaj i licencije",
-    "contentP": "Ovu stranicu pišemo pažljivo, ali može sadržavati pogreške. Za tehničke pojedinosti mjerodavna je specifikacija. Tekstovi se smiju ponovno upotrijebiti pod licencijom CC BY 4.0 uz navođenje autora; kod ove stranice je pod licencijom MIT."
+    "contentP": "Ovu stranicu pišemo pažljivo, ali može sadržavati pogreške. Za tehničke pojedinosti mjerodavna je specifikacija. Kod, dizajn i tekstovi ove stranice zaštićeni su autorskim pravom i sva su prava pridržana, pa ih molimo ne kopirajte. Smijete postaviti poveznicu na bilo koju stranicu, citirati kratak odlomak uz poveznicu na izvor te dijeliti brošure i značke u neizmijenjenom obliku. Datoteke iz specifikacije (sheme, predlošci, primjeri) ostaju pod licencijom CC-BY-4.0."
   },
   "cookies": {
     "h1": "Izjava o kolačićima",
@@ -1117,8 +1142,8 @@
           "name": "Vlastiti poslužitelj u Europi",
           "runs": "Poslužitelj kod europskog pružatelja usluge kao što je Hetzner (Njemačka)",
           "need": "Poslužitelj i naziv domene",
-          "setup": "Jedna naredba, zatim čarobnjak za postavljanje",
-          "cost": "Poslužitelj koji iznajmljujete",
+          "setup": "Nekoliko naredbi, zatim čarobnjak za postavljanje",
+          "cost": "Oko 5 do 15 € mjesečno za mali poslužitelj sa sigurnosnim kopijama",
           "cta": "Instaliraj u Europi"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "Europski web hosting s PHP-om i bazom podataka, kao što su TransIP, Strato ili OVHcloud",
           "need": "FTP program",
           "setup": "Učitajte ZIP, zatim pokrenite instalacijski program",
-          "cost": "Hosting koji već plaćate",
+          "cost": "Hosting koji već plaćate (PHP 8.2 ili noviji)",
           "cta": "Instaliraj na web hosting"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers ili Google Cloud Run",
           "need": "Cloudflare ili Google Cloud račun",
           "setup": "Jedan klik ili jedna skripta",
-          "cost": "Cijene korištenja usluge",
+          "cost": "Cloudflare: 5 dolara mjesečno plus pohrana. Google Cloud: prema korištenju",
           "cta": "Instaliraj na drugi oblak"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "Demo portal ima javni testni ključ koji može samo čitati. Katalog je izmišljen i vraća se na početno stanje svakih sat vremena, pa brzi početak odmah radi.",
     "devKey": "Javni testni ključ (samo čitanje)",
     "devOpen": "Otvori demo portal"
+  },
+  "press": {
+    "h1": "Za medije i značke",
+    "lead": "Open Brand Exchange u jednom odlomku, kako pisati naziv i značke za proizvode koji rade sa standardom.",
+    "aboutTitle": "Open Brand Exchange u jednom odlomku",
+    "aboutP": "Open Brand Exchange besplatan je i otvoren standard za razmjenu podataka o proizvodima i fotografija proizvoda između marki i trgovaca. Marka svoju kolekciju objavi jednom, u jednom standardnom formatu, a svaki je trgovac dobiva izravno u svoju web-trgovinu, PIM, blagajnički sustav ili ERP ili je preuzima s portala marke. Standard je neprofitan i objavljuje se u ime {foundation}.",
+    "nameTitle": "Naziv",
+    "nameP": "Prvi put napišite puni naziv „Open Brand Exchange”, a nakon toga dovoljno je „OBX”. Naziv označava standard, a ne tvrtku ili proizvod.",
+    "badgesTitle": "Značke za kompatibilne proizvode",
+    "badgesP": "Prolazi li vaš portal, PIM, ERP, platforma za web-trgovinu ili usluga test sukladnosti? Onda smijete prikazati jednu od ovih znački. Besplatne su i jednake za sve implementatore.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Kvadratna, za mala mjesta",
+    "horizontal": "Vodoravna",
+    "stacked": "Okomita",
+    "light": "Za svijetle pozadine",
+    "dark": "Za tamne pozadine",
+    "formatsNote": "Svaka značka dostupna je kao SVG, oštra u svakoj veličini i najbolja za web, te kao PNG u običnoj i dvostrukoj veličini.",
+    "rulesTitle": "Kako koristiti značke",
+    "rules": [
+      "Samo za proizvod ili uslugu koji prolaze javni test sukladnosti za trenutačnu verziju standarda. Sami pokrenite obx-conformance ili upotrijebite online provjeru.",
+      "Navedite verziju koju ste testirali i testirajte ponovno kad izađe nova verzija. Ako vaš proizvod više ne prolazi, uklonite značku.",
+      "Koristite datoteke onakve kakve jesu. Ne mijenjajte boje, tekst ni proporcije i ne spajajte značku s drugim logotipom.",
+      "Značka govori da vaš proizvod radi sa standardom. Ne znači da zaklada podržava, certificira ili preporučuje vaš proizvod ili vašu tvrtku.",
+      "Oko značke ostavite prazan prostor, barem pola njezine visine, i gdje god možete, povežite je na openbrandexchange.com."
+    ],
+    "checkLink": "Otvori online provjeru",
+    "partnersLink": "Kompatibilni ili službeni partner",
+    "contactTitle": "Kontakt za medije",
+    "contactP": "Novinar ste i imate pitanje ili trebate izjavu ili datoteku veće razlučivosti? Pišite nam e-poštom."
   }
 }

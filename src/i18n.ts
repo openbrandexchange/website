@@ -32,7 +32,8 @@ export type PageKey =
   | 'governance'
   | 'privacy'
   | 'cookies'
-  | 'imprint';
+  | 'imprint'
+  | 'press';
 
 // One English slug per page for every language: short, stable URLs that never need translating.
 export const slugs: Record<PageKey, string> = {
@@ -51,6 +52,7 @@ export const slugs: Record<PageKey, string> = {
   privacy: 'privacy',
   cookies: 'cookies',
   imprint: 'imprint',
+  press: 'press',
 };
 
 export const pageKeys = Object.keys(slugs) as PageKey[];

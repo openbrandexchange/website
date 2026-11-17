@@ -8,7 +8,7 @@ import { checkSite } from '../tools/check-links.mjs';
 
 const dist = new URL('../dist/', import.meta.url);
 const read = (path) => readFileSync(new URL(path, dist), 'utf8');
-const slugs = ['', 'for-brands/', 'automation/', 'hosting/', 'partners/', 'for-retailers/', 'developers/', 'check/', 'directory/', 'downloads/', 'faq/', 'governance/', 'privacy/', 'cookies/', 'imprint/'];
+const slugs = ['', 'for-brands/', 'automation/', 'hosting/', 'partners/', 'for-retailers/', 'developers/', 'check/', 'directory/', 'downloads/', 'faq/', 'governance/', 'privacy/', 'cookies/', 'imprint/', 'press/'];
 const built = existsSync(new URL('index.html', dist));
 
 test('every page exists in every language, with the right lang, canonical and hreflang set', { skip: !built && 'dist/ not built' }, () => {
@@ -224,7 +224,11 @@ test('the Docker steps work when copied: the setup code is read from the log on 
   // The node logs to standard error; "docker logs obx | grep" would find nothing.
   assert.ok(html.includes('docker logs obx 2>&1 | grep -i "setup code"'), 'setup code from both streams');
   assert.doesNotMatch(html, /OBX_SECRET_KEY="\$\(openssl/, 'a key generated inline cannot be kept');
-  assert.ok(html.includes('OBX_TRUST_PROXY: "true"'), 'behind Caddy the node trusts its X-Forwarded-For');
+  assert.ok(html.includes('-e OBX_TRUST_PROXY=true'), 'behind a proxy the node trusts its X-Forwarded-For');
+  // The server steps follow node-go's own docker-compose.yml (the node service "node", Caddy for HTTPS).
+  assert.ok(html.includes('docker compose logs node | grep "setup code"'), 'setup code from the compose service');
+  assert.ok(html.includes('git checkout "$(git describe --tags --abbrev=0)"'), 'the latest release, not main');
+  assert.ok(html.includes('node-go backup --to /data/backups/'), 'nightly backup with node-go backup');
   assert.ok(html.includes('DRY_RUN=1 ./deploy/cloudrun.sh'), 'Cloud Run dry run');
 });
 

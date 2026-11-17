@@ -128,36 +128,64 @@ curl -s -H "Authorization: Bearer $TOKEN" -X POST -H 'Content-Type: application/
 # or let the obx tool keep a copy in a folder, only fetching what changed:
 OBX_CLIENT_ID=$CLIENT_ID OBX_CLIENT_SECRET=$CLIENT_SECRET obx pull $HOST --out ./kestrel`;
 
-export const dockerRun = `openssl rand -hex 32 > obx-secret.key      # once; keep this file safe, with your backups
+export const dockerRun = `openssl rand -base64 48 | tr -d '\\n' > obx-secret.key   # once; keep a copy in your password manager
 docker run -d --name obx --restart unless-stopped \\
-  -p 8080:8080 -v obx-data:/data \\
-  -e OBX_PUBLIC_URL=https://brands.example.com \\
+  -p 127.0.0.1:8080:8080 -v obx-data:/data \\
+  -e OBX_PUBLIC_URL=https://images.yourbrand.com \\
   -e OBX_SECRET_KEY="$(cat obx-secret.key)" \\
+  -e OBX_TRUST_PROXY=true \\
   ghcr.io/openbrandexchange/node-go
 
 docker logs obx 2>&1 | grep -i "setup code"      # the one-time code for the first-run wizard`;
 
-export const dockerCompose = `# compose.yaml: the node behind Caddy, which gets an HTTPS certificate by itself.
-services:
-  obx:
-    image: ghcr.io/openbrandexchange/node-go
-    restart: unless-stopped
-    environment:
-      OBX_PUBLIC_URL: https://brands.example.com
-      OBX_SECRET_KEY: \${OBX_SECRET_KEY}      # openssl rand -hex 32, keep it safe
-      OBX_TRUST_PROXY: "true"               # every request comes through Caddy (rate limits per visitor)
-    volumes:
-      - obx-data:/data
-  caddy:
-    image: caddy:2
-    restart: unless-stopped
-    ports: ["80:80", "443:443"]
-    command: caddy reverse-proxy --from brands.example.com --to obx:8080
-    volumes:
-      - caddy-data:/data
-volumes:
-  obx-data:
-  caddy-data:`;
+// The same steps as node-go/docs/hosting/hetzner.md and docker.md: the repository's docker-compose.yml
+// (the portal plus Caddy for HTTPS, checked end to end in node-go's CI), on a new Ubuntu server.
+export const vpsSteps = `# 1. On the server, once: Docker (skip on Hetzner's "Docker CE" image)
+ssh root@<server-ip>
+curl -fsSL https://get.docker.com | sh
+
+# 2. The portal, at its latest release
+git clone https://github.com/openbrandexchange/node-go /opt/node-go && cd /opt/node-go
+git checkout "$(git describe --tags --abbrev=0)"
+
+# 3. Settings: your domain, an address for Let's Encrypt, and the secret key
+cp .env.example .env
+sed -i "s|^DOMAIN=.*|DOMAIN=images.yourbrand.com|" .env
+nano .env                         # ADMIN_EMAIL: your address, Let's Encrypt writes to it about the certificate
+sed -i "s|^OBX_SECRET_KEY=.*|OBX_SECRET_KEY=$(openssl rand -base64 48 | tr -d '\\n')|" .env
+chmod 600 .env
+grep OBX_SECRET_KEY .env          # copy this line into your password manager now
+
+# 4. Start (the first build takes a few minutes), then get the one-time setup code
+docker compose up -d
+docker compose logs node | grep "setup code"
+# open https://images.yourbrand.com and complete the setup wizard`;
+
+export const vpsBackup = `# crontab -e (as root): a consistent copy every night at 02:30, the last 14 kept on the server
+30 2 * * * cd /opt/node-go && docker compose exec -T node node-go backup --to /data/backups/$(date +\\%F) && docker compose exec -T node find /data/backups -mindepth 1 -maxdepth 1 -mtime +14 -exec rm -rf {} +
+
+# copy one off the server now and then (or sync it to a bucket)
+docker compose cp node:/data/backups/2026-11-17 ./portal-backup-2026-11-17
+
+# restore into the portal's volume (stop it first)
+docker compose stop node
+docker compose run --rm node restore --from /data/backups/2026-11-17 --force
+docker compose up -d`;
+
+export const vpsUpdate = `cd /opt/node-go
+docker compose exec -T node node-go backup --to /data/backups/before-update-$(date +%F)
+git fetch --tags && git checkout "$(git describe --tags --abbrev=0 origin/main)"
+docker compose up -d --build      # the database migrates itself on start`;
+
+export const cfCli = `git clone https://github.com/openbrandexchange/node-ts && cd node-ts
+bun install
+bunx wrangler login
+bunx wrangler secret put OBX_SECRET_KEY      # paste the output of: openssl rand -base64 48
+bunx wrangler secret put OBX_SETUP_CODE      # a code you choose, for the setup wizard
+bun run deploy                               # Worker + D1 database + R2 bucket + cron, then the tables
+
+# backups outside Cloudflare: export the database regularly
+bunx wrangler d1 export brand-portal-db --remote --output=portal-$(date +%F).sql`;
 
 export const cloudRun = `git clone https://github.com/openbrandexchange/node-go
 cd node-go

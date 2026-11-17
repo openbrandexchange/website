@@ -13,7 +13,7 @@
     "footerAbout": "Tasuta ja avatud viis, kuidas kaubamärgid saavad tootefotosid ja tooteandmeid oma edasimüüjatega jagada.",
     "footerMore": "Veel",
     "footerSource": "Lähtekood ja spetsifikatsioon",
-    "footerLicence": "See veebisait: sisu CC-BY-4.0, kood MIT.",
+    "footerLicence": "© 2026 {foundation}. Kõik õigused kaitstud. Spetsifikatsioon on CC-BY-4.0 litsentsiga.",
     "editionCloudflare": "Portaal Cloudflare'ile",
     "editionGoogle": "Portaal Google Cloudile ja Dockerile",
     "editionHosting": "Portaal veebimajutusele",
@@ -36,7 +36,8 @@
     "privacy": "Privaatsus",
     "imprint": "Impressum",
     "cookies": "Küpsised",
-    "partners": "Partnerid"
+    "partners": "Partnerid",
+    "press": "Pressimaterjalid ja märgised"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Hakake partneriks",
       "description": "Tasuta vastavustest ja märgis „Ühilduv Open Brand Exchange'iga” või ametliku partnerina loetelus alates 500 € aastas."
+    },
+    "press": {
+      "title": "Pressimaterjalid ja märgised",
+      "description": "Open Brand Exchange ühes lõigus, kuidas nime kirjutada ja märgised toodetele, mis töötavad standardiga."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "Laadi alla uusim väljalase",
     "p3Title": "3. Teie oma server",
-    "p3P": "Teie oma serveris või mis tahes pilveteenuse pakkuja juures. Alustamiseks piisab ühest käsust:",
-    "composeP": "Või kohe HTTPS-iga, Caddy kaudu:",
+    "p3P": "Kas teil on juba oma pöördpuhverserver (reverse proxy)? Siis käivitage ainult avaldatud tõmmis ja suunake puhverserver pordile 8080:",
     "envTitle": "Seaded",
     "envPublicUrl": "teie portaali avalik aadress",
-    "envSecretKey": "pikk juhuslik võti (openssl rand -hex 32); hoidke seda hoolikalt",
+    "envSecretKey": "pikk juhuslik võti (openssl rand -base64 48). Hoidke koopiat oma paroolihalduris: kui andmed on olemas, ei saa võtit enam muuta",
     "envSetupCode": "valikuline: eelnevalt valitud seadistuskood",
     "envPort": "port, vaikimisi 8080",
     "firstTitle": "Pärast paigaldamist: esimene käivitus",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Looge Hetzneris server Nürnbergis, Falkensteinis või Helsingis, varukoopiad sisse lülitatud.",
       "Suunake oma domeen, näiteks images.teiebrand.ee, serverile.",
-      "Paigaldage Docker ja käivitage portaal ühe käsuga. HTTPS seadistatakse automaatselt.",
+      "Paigaldage Docker ja käivitage portaal mõne käsuga. HTTPS seadistatakse automaatselt.",
       "Avage oma domeen ja läbige seadistusviisard.",
       "Valikuline: hoidke pilte Hetzner Object Storage'is, samas asukohas.",
-      "Ajastage igaöine varukoopia. Uuendamine on üks käsk."
+      "Ajastage igaöine varukoopia ja kopeerige see serverist välja. Uuendamiseks piisab kahest käsust."
     ],
     "euGuide": "Samm-sammult juhend: teie portaal Hetzneris",
     "euData": "Kui server ja salvestus asuvad ELi asukohas, hoitakse teie kataloogi, pilte ja andmebaasi ELis.",
@@ -455,7 +459,28 @@
     "altP": "Sama portaal töötab ka Cloudflare Workersil ja Google Cloud Runis. Valige Euroopa piirkond, kui teenus seda pakub.",
     "partnerLink": "Vaadake partnereid",
     "techTitle": "Tehnilised üksikasjad teie IT-meeskonnale",
-    "techLead": "Käsud, seaded ja paigaldusjuhendid inimesele, kes serveri seadistab."
+    "techLead": "Käsud, seaded ja paigaldusjuhendid inimesele, kes serveri seadistab.",
+    "costTitle": "Ligikaudsed kulud",
+    "costItems": [
+      "Oma server ELis: umbes 5–15 € kuus väikese automaatsete varukoopiatega serveri eest, näiteks Hetzneris. Fotod serveri enda kettal ei maksa midagi lisaks; objektisalvestus suure arhiivi jaoks lisab mõne euro kuus terabaidi kohta.",
+      "Tavaline veebimajutus: pakett, mille eest juba maksate, kui sellel on PHP 8.2 või uuem.",
+      "Cloudflare Workers: Workers Paid maksab 5 dollarit kuus, lisaks R2 salvestus umbes 1,50 dollarit kuus 100 GB fotode kohta. Allalaadimistasusid ei ole.",
+      "Partner: partneri enda hind. Küsige, mis selle sisse kuulub: uuendused, varukoopiad, oma domeen ja kogu sisu eksport, kui lahkute.",
+      "Teie enda aeg: esimesel korral arvestage pool päeva kuni päev, sealhulgas domeen ja varukoopia proovitaastamine, ning umbes tund kuus uuendusteks ja varukoopiate kontrolliks."
+    ],
+    "costNote": "Ligikaudsed hinnad 2026. aasta novembri seisuga, käibemaksuta. Enne valimist kontrollige teenusepakkuja kehtivaid hindu.",
+    "stepsTitle": "Samm-sammult uues serveris",
+    "stepsP": "Uues Ubuntu serveris, kus pordid 22, 80 ja 443 on avatud ning teie domeeni A- ja AAAA-kirjed juba sellele osutavad. See on sama seadistus nagu Hetzneri juhendis: see ehitab portaali uusima väljalaske ja paneb HTTPS-i jaoks selle ette Caddy.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy taotleb Let's Encrypti sertifikaadi kohe, kui teie domeen osutab serverile, uuendab seda automaatselt ja suunab http päringud https-ile. Sertifikaati pole? Kontrollige käsuga dig, et domeen näitab serveri aadressi ja et pordid 80 ja 443 on tulemüüris avatud.",
+    "backupTitle": "Varukoopiad",
+    "backupP": "Lülitage sisse teenusepakkuja serveri varukoopiad ja lisage igaöine portaali varukoopia, mille kopeerite ka serverist välja. Hoidke OBX_SECRET_KEY eraldi, paroolihalduris: ilma selleta ei saa varukoopiat täielikult taastada. Proovige taastamist üks kord läbi, et teaksite, et see töötab.",
+    "updateTitle": "Uuendused",
+    "updateP": "Tehke varukoopia ja lugege väljalaskemärkmeid. Seejärel võtke kasutusele uus väljalase ja ehitage portaal uuesti; andmebaas uueneb portaali käivitumisel ise.",
+    "cfCliP": "Või oma arvutist, Buni ja tööriistaga Wrangler:",
+    "cfDomainP": "Oma domeen: lisage see menüüs Workers & Pages → teie Worker → Settings → Domains & Routes (domeen peab olema Cloudflare'is), määrake OBX_PUBLIC_URL sellele aadressile ja paigaldage uuesti.",
+    "cfBackupP": "Varukoopiad: Workers Paidiga hoiab D1 andmebaasi ajalugu 30 päeva (Time Travel). Cloudflare'ist väljaspool asuva koopia jaoks eksportige andmebaasi regulaarselt. Pildid on R2-s; kopeerige bucket mis tahes S3-tööriistaga.",
+    "cfUpdateP": "Uuendused: liitke uus väljalase oma repositooriumi koopiaga ja tehke push; Cloudflare paigaldab selle uuesti."
   },
   "retailers": {
     "h1": "Edasimüüjatele",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Kes otsustab",
-        "p": "Kuni pole kolme sõltumatut teostust, mis läbivad vastavustestid, otsustab muudatuste üle pärast avalikku arutelu asutaja. Seejärel võtab juhtimise üle juhtrühm, kus on üks koht iga teostaja kohta ning vähemalt üks kaubamärk ja üks edasimüüja."
+        "p": "Kuni pole vähemalt kolme tõeliselt sõltumatut teostust, otsustab muudatuste üle pärast avalikku arutelu asutaja. Sõltumatu tähendab, et teostuse on loonud ja seda haldab organisatsioon, mis ei ole seotud teiste teostajate ega asutajaga; viiteteostusi ei arvestata. Iga teostus peab läbima kogu vastavustestide komplekti ja olema tootmises kasutusel vähemalt aasta ning kokku peavad need teenindama vähemalt kümmet kaubamärki ja viit edasimüüjat. Alles siis võtab juhtimise üle juhtrühm, kus on üks koht iga teostaja kohta, vähemalt kaks kaubamärki ja kaks edasimüüjat ning asutaja, seni kuni ta on juhatuse esimees."
       },
       {
         "h": "Kuidas muudatusi tehakse",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Litsentsid",
-        "p": "Spetsifikatsioon ja selle saidi sisu on CC-BY-4.0 litsentsiga. SDK, tööriist obx ja ühine veebiliides on Apache-2.0 litsentsiga. Kolm portaali väljaannet on AGPL-3.0 litsentsiga, et täiustused jääksid avatuks. Selle saidi kood on MIT litsentsiga."
+        "p": "Spetsifikatsioon on CC-BY-4.0 litsentsiga. SDK, tööriist obx ja ühine veebiliides on Apache-2.0 litsentsiga. Kolm portaali väljaannet on AGPL-3.0 litsentsiga, et täiustused jääksid avatuks. See veebisait ei ole avatud litsentsiga: selle kood, kujundus ja tekstid on kaitstud, kõik õigused on reserveeritud. Spetsifikatsiooni failid, mida sait jagab, näiteks skeemid, mallid ja näited, jäävad CC-BY-4.0 litsentsi alla."
       }
     ],
     "nameTitle": "Nimest",
@@ -891,7 +916,7 @@
     "securityLabel": "Turvaprobleemid",
     "securityNote": "Teatage haavatavustest konfidentsiaalselt sellel aadressil, mitte avalikus issue's.",
     "contentTitle": "Sisu ja litsentsid",
-    "contentP": "Kirjutame seda saiti hoolikalt, kuid see võib sisaldada vigu. Tehnilistes üksikasjades on määrav spetsifikatsioon. Tekste võib taaskasutada CC BY 4.0 litsentsi alusel autorit viidates; selle saidi kood on MIT-litsentsiga."
+    "contentP": "Kirjutame seda saiti hoolikalt, kuid see võib sisaldada vigu. Tehnilistes üksikasjades on määrav spetsifikatsioon. Selle saidi kood, kujundus ja tekstid on autoriõigusega kaitstud ja kõik õigused on reserveeritud, seega palun ärge neid kopeerige. Võite viidata igale lehele, tsiteerida lühikest lõiku koos lingiga allikale ning jagada brošüüre ja märgiseid muutmata kujul. Spetsifikatsiooni failid (skeemid, mallid, näited) jäävad CC-BY-4.0 litsentsi alla."
   },
   "cookies": {
     "h1": "Küpsiste teave",
@@ -1117,8 +1142,8 @@
           "name": "Oma server Euroopas",
           "runs": "Server Euroopa teenusepakkuja juures, näiteks Hetzneris (Saksamaa)",
           "need": "Server ja domeeninimi",
-          "setup": "Üks käsk, seejärel seadistusviisard",
-          "cost": "Server, mida rendite",
+          "setup": "Mõni käsk, seejärel seadistusviisard",
+          "cost": "Umbes 5–15 € kuus väikese varukoopiatega serveri eest",
           "cta": "Seadistage Euroopas"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "Euroopa veebimajutus PHP ja andmebaasiga, näiteks TransIP, Strato või OVHcloud",
           "need": "FTP-programm",
           "setup": "Laadige üles zip, seejärel paigaldaja",
-          "cost": "Majutus, mille eest juba maksate",
+          "cost": "Majutus, mille eest juba maksate (PHP 8.2 või uuem)",
           "cta": "Seadistage veebimajutuses"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers või Google Cloud Run",
           "need": "Cloudflare'i või Google Cloudi konto",
           "setup": "Üks klõps või üks skript",
-          "cost": "Teenuse kasutushinnad",
+          "cost": "Cloudflare: 5 dollarit kuus pluss salvestus. Google Cloud: kasutuse järgi",
           "cta": "Seadistage muus pilves"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "Demoportaalil on avalik testvõti, mis saab ainult lugeda. Kataloog on väljamõeldud ja lähtestatakse iga tund, nii et kiirjuhend töötab kohe.",
     "devKey": "Avalik testvõti (ainult lugemiseks)",
     "devOpen": "Ava demoportaal"
+  },
+  "press": {
+    "h1": "Pressimaterjalid ja märgised",
+    "lead": "Open Brand Exchange ühes lõigus, kuidas nime kirjutada ja märgised toodetele, mis töötavad standardiga.",
+    "aboutTitle": "Open Brand Exchange ühes lõigus",
+    "aboutP": "Open Brand Exchange on tasuta avatud standard tooteandmete ja tootefotode jagamiseks kaubamärkide ja edasimüüjate vahel. Kaubamärk avaldab oma kollektsiooni üks kord, ühes standardvormingus, ja iga edasimüüja saab selle otse oma e-poodi, PIM-i, kassasüsteemi või ERP-i või laadib selle alla kaubamärgi portaalist. Standard on mittetulunduslik ja see avaldatakse sihtasutuse {foundation} nimel.",
+    "nameTitle": "Nimi",
+    "nameP": "Esimesel korral kirjutage „Open Brand Exchange” välja täies pikkuses, edaspidi sobib „OBX”. Nimi tähistab standardit, mitte ettevõtet ega toodet.",
+    "badgesTitle": "Märgised ühilduvatele toodetele",
+    "badgesP": "Kas teie portaal, PIM, ERP, e-poe platvorm või teenus läbib vastavustestid? Siis võite kasutada üht neist märgistest. Need on tasuta ja kõigile teostajatele samad.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Ruudukujuline, väikesesse kohta",
+    "horizontal": "Horisontaalne",
+    "stacked": "Kahel real",
+    "light": "Heledale taustale",
+    "dark": "Tumedale taustale",
+    "formatsNote": "Iga märgis on olemas SVG-vormingus, mis on terav igas suuruses ja sobib veebi jaoks kõige paremini, ning PNG-vormingus tavalises ja kahekordses suuruses.",
+    "rulesTitle": "Kuidas märgiseid kasutada",
+    "rules": [
+      "Ainult tootele või teenusele, mis läbib standardi kehtiva versiooni avalikud vastavustestid. Käivitage ise obx-conformance või kasutage veebipõhist kontrolli.",
+      "Märkige testitud versioon ja testige uuesti, kui ilmub uus versioon. Kui teie toode enam teste ei läbi, eemaldage märgis.",
+      "Kasutage faile sellisena, nagu need on. Ärge muutke värve, teksti ega proportsioone ja ärge ühendage märgist mõne teise logoga.",
+      "Märgis ütleb, et teie toode töötab standardiga. See ei tähenda, et sihtasutus teie toodet või ettevõtet toetab, sertifitseerib või soovitab.",
+      "Jätke märgise ümber vaba ruumi, vähemalt pool selle kõrgusest, ja võimaluse korral linkige see aadressile openbrandexchange.com."
+    ],
+    "checkLink": "Ava veebipõhine kontroll",
+    "partnersLink": "Ühilduv või ametlik partner",
+    "contactTitle": "Pressikontakt",
+    "contactP": "Ajakirjaniku küsimus või vajate tsitaati või suurema eraldusvõimega faili? Kirjutage meile."
   }
 }

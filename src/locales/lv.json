@@ -13,7 +13,7 @@
     "footerAbout": "Bezmaksas, atvērts veids, kā zīmoli var kopīgot produktu attēlus un preču datus ar saviem tirgotājiem.",
     "footerMore": "Vairāk",
     "footerSource": "Pirmkods un specifikācija",
-    "footerLicence": "Šī tīmekļa vietne: saturs CC-BY-4.0, kods MIT.",
+    "footerLicence": "© 2026 {foundation}. Visas tiesības aizsargātas. Specifikācijai ir CC-BY-4.0 licence.",
     "editionCloudflare": "Portāls Cloudflare",
     "editionGoogle": "Portāls Google Cloud un Docker",
     "editionHosting": "Portāls tīmekļa mitināšanai",
@@ -36,7 +36,8 @@
     "privacy": "Privātums",
     "imprint": "Izdevēja informācija",
     "cookies": "Sīkdatnes",
-    "partners": "Partneri"
+    "partners": "Partneri",
+    "press": "Preses materiāli un zīmes"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Kļūstiet par partneri",
       "description": "Bezmaksas atbilstības tests un zīme „Saderīgs ar Open Brand Exchange” vai vieta oficiālo partneru sarakstā no 500 € gadā."
+    },
+    "press": {
+      "title": "Preses materiāli un zīmes",
+      "description": "Open Brand Exchange vienā rindkopā, kā rakstīt nosaukumu un zīmes produktiem, kas darbojas ar standartu."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "Lejupielādēt jaunāko laidienu",
     "p3Title": "3. Jūsu serveris",
-    "p3P": "Jūsu serverī vai pie jebkura mākoņpakalpojumu sniedzēja. Sāk ar vienu komandu:",
-    "composeP": "Vai uzreiz ar HTTPS, izmantojot Caddy:",
+    "p3P": "Jau izmantojat savu reverso starpniekserveri (reverse proxy)? Tad palaidiet tikai publicēto Docker attēlu un novirziet starpniekserveri uz portu 8080:",
     "envTitle": "Iestatījumi",
     "envPublicUrl": "jūsu portāla publiskā adrese",
-    "envSecretKey": "gara nejauša atslēga (openssl rand -hex 32); glabājiet to droši",
+    "envSecretKey": "gara nejauša atslēga (openssl rand -base64 48). Saglabājiet kopiju paroļu pārvaldniekā: kad portālā ir dati, atslēgu vairs nevar mainīt",
     "envSetupCode": "pēc izvēles: iepriekš izvēlēts iestatīšanas kods",
     "envPort": "ports, pēc noklusējuma 8080",
     "firstTitle": "Pēc instalēšanas: pirmā palaišana",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Izveidojiet serveri pie Hetzner Nirnbergā, Falkenšteinā vai Helsinkos ar ieslēgtām rezerves kopijām.",
       "Novirziet savu domēnu, piemēram, images.jusuzimols.lv, uz serveri.",
-      "Instalējiet Docker un palaidiet portālu ar vienu komandu. HTTPS tiek iestatīts automātiski.",
+      "Instalējiet Docker un palaidiet portālu ar dažām komandām. HTTPS tiek iestatīts automātiski.",
       "Atveriet savu domēnu un izejiet cauri iestatīšanas vednim.",
       "Pēc izvēles: glabājiet attēlus Hetzner Object Storage tajā pašā atrašanās vietā.",
-      "Ieplānojiet nakts rezerves kopiju. Atjaunināšana ir viena komanda."
+      "Ieplānojiet nakts rezerves kopiju un nokopējiet to ārpus servera. Atjaunināšanai pietiek ar divām komandām."
     ],
     "euGuide": "Soli pa solim: jūsu portāls pie Hetzner",
     "euData": "Ja serveris un krātuve atrodas ES, jūsu katalogs, attēli un datubāze tiek glabāti ES.",
@@ -455,7 +459,28 @@
     "altP": "Tas pats portāls darbojas arī ar Cloudflare Workers un Google Cloud Run. Izvēlieties reģionu Eiropā, ja pakalpojums to piedāvā.",
     "partnerLink": "Skatīt partnerus",
     "techTitle": "Tehniskā informācija jūsu IT komandai",
-    "techLead": "Komandas, iestatījumi un instalēšanas rokasgrāmatas tam, kas iestata serveri."
+    "techLead": "Komandas, iestatījumi un instalēšanas rokasgrāmatas tam, kas iestata serveri.",
+    "costTitle": "Aptuvenās izmaksas",
+    "costItems": [
+      "Savs serveris ES: aptuveni 5–15 € mēnesī par nelielu serveri ar automātiskām rezerves kopijām, piemēram, pie Hetzner. Fotoattēli servera paša diskā neko papildus nemaksā; objektu krātuve lielam arhīvam pievieno dažus eiro mēnesī par terabaitu.",
+      "Parasta tīmekļa mitināšana: pakete, par kuru jau maksājat, ja tajā ir PHP 8.2 vai jaunāka versija.",
+      "Cloudflare Workers: 5 dolāri mēnesī par Workers Paid, plus R2 krātuve aptuveni 1,50 dolāri mēnesī par 100 GB fotoattēlu. Maksas par lejupielādēm nav.",
+      "Partneris: partnera paša cena. Pajautājiet, kas tajā ietilpst: atjauninājumi, rezerves kopijas, savs domēns un visa satura eksports, ja aiziesiet.",
+      "Jūsu laiks: pirmajā reizē rēķinieties ar pusdienu līdz dienai, ieskaitot domēnu un rezerves kopijas izmēģinājuma atjaunošanu, un ar aptuveni stundu mēnesī atjauninājumiem un rezerves kopiju pārbaudei."
+    ],
+    "costNote": "Orientējošas cenas 2026. gada novembrī, bez PVN. Pirms izvēles pārbaudiet pakalpojumu sniedzēja pašreizējās cenas.",
+    "stepsTitle": "Soli pa solim jaunā serverī",
+    "stepsP": "Jaunā Ubuntu serverī ar atvērtiem portiem 22, 80 un 443, uz kuru jau norāda jūsu domēna A un AAAA ieraksti. Tā ir tā pati konfigurācija kā Hetzner rokasgrāmatā: tā izveido jaunāko portāla laidienu un HTTPS nodrošināšanai novieto tā priekšā Caddy.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy pieprasa Let's Encrypt sertifikātu, tiklīdz jūsu domēns norāda uz serveri, automātiski to atjauno un novirza http uz https. Nav sertifikāta? Ar dig pārbaudiet, vai domēns rāda servera adresi un vai porti 80 un 443 ugunsmūrī ir atvērti.",
+    "backupTitle": "Rezerves kopijas",
+    "backupP": "Ieslēdziet pakalpojumu sniedzēja servera rezerves kopijas un pievienojiet nakts portāla rezerves kopiju, ko nokopējat arī ārpus servera. Glabājiet OBX_SECRET_KEY atsevišķi, paroļu pārvaldniekā: bez tās rezerves kopiju nevar pilnībā atjaunot. Vienreiz izmēģiniet atjaunošanu, lai zinātu, ka tā darbojas.",
+    "updateTitle": "Atjauninājumi",
+    "updateP": "Izveidojiet rezerves kopiju un izlasiet laidiena piezīmes. Pēc tam pārslēdzieties uz jauno laidienu un izveidojiet portālu no jauna; datubāze atjauninās pati, kad portāls startē.",
+    "cfCliP": "Vai no sava datora, ar Bun un rīku Wrangler:",
+    "cfDomainP": "Savs domēns: pievienojiet to sadaļā Workers & Pages → jūsu Worker → Settings → Domains & Routes (domēnam jābūt Cloudflare), iestatiet OBX_PUBLIC_URL uz šo adresi un izvietojiet vēlreiz.",
+    "cfBackupP": "Rezerves kopijas: ar Workers Paid D1 glabā datubāzes vēsturi 30 dienas (Time Travel). Lai kopija būtu arī ārpus Cloudflare, regulāri eksportējiet datubāzi. Attēli atrodas R2; nokopējiet bucket ar jebkuru S3 rīku.",
+    "cfUpdateP": "Atjauninājumi: sapludiniet jauno laidienu ar savu repozitorija kopiju un veiciet push; Cloudflare to izvieto vēlreiz."
   },
   "retailers": {
     "h1": "Tirgotājiem",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Kas lemj",
-        "p": "Kamēr nav trīs neatkarīgu ieviešanu, kas iztur atbilstības testus, par izmaiņām pēc publiskas diskusijas lemj dibinātājs. Pēc tam lēmumus pārņem vadības grupa ar vienu vietu katram ieviesējam un vismaz vienu zīmolu un vienu tirgotāju."
+        "p": "Kamēr nav vismaz trīs patiesi neatkarīgu ieviešanu, par izmaiņām pēc publiskas diskusijas lemj dibinātājs. Neatkarīga nozīmē, ka to izveido un uztur organizācija, kas nav saistīta ne ar pārējiem ieviesējiem, ne ar dibinātāju; atsauces ieviešanas netiek ieskaitītas. Katrai ieviešanai jāiztur pilns atbilstības testu komplekts un jābūt produkcijā vismaz gadu, un kopā tām jāapkalpo vismaz desmit zīmoli un pieci tirgotāji. Tikai tad lēmumus pārņem vadības grupa ar vienu vietu katram ieviesējam, vismaz diviem zīmoliem un diviem tirgotājiem, kā arī dibinātāju, kamēr viņš vada valdi."
       },
       {
         "h": "Kā notiek izmaiņas",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Licences",
-        "p": "Specifikācijai un šīs vietnes saturam ir CC-BY-4.0 licence. SDK, rīkam obx un kopīgajai tīmekļa saskarnei ir Apache-2.0 licence. Trīs portāla izdevumiem ir AGPL-3.0 licence, lai uzlabojumi paliktu atvērti. Šīs vietnes kodam ir MIT licence."
+        "p": "Specifikācijai ir CC-BY-4.0 licence. SDK, rīkam obx un kopīgajai tīmekļa saskarnei ir Apache-2.0 licence. Trīs portāla izdevumiem ir AGPL-3.0 licence, lai uzlabojumi paliktu atvērti. Šai vietnei nav atvērtas licences: tās kods, dizains un teksti ir aizsargāti, visas tiesības paturētas. Specifikācijas failiem, ko vietne piedāvā, piemēram, shēmām, veidnēm un piemēriem, saglabājas CC-BY-4.0 licence."
       }
     ],
     "nameTitle": "Par nosaukumu",
@@ -891,7 +916,7 @@
     "securityLabel": "Drošības problēmas",
     "securityNote": "Par ievainojamībām ziņojiet konfidenciāli uz šo adresi, nevis publiskā issue.",
     "contentTitle": "Saturs un licences",
-    "contentP": "Mēs rakstām šo vietni rūpīgi, taču tajā var būt kļūdas. Tehniskajās detaļās noteicošā ir specifikācija. Tekstus drīkst atkārtoti izmantot saskaņā ar CC BY 4.0 licenci, norādot autorību; šīs vietnes kods ir ar MIT licenci."
+    "contentP": "Mēs rakstām šo vietni rūpīgi, taču tajā var būt kļūdas. Tehniskajās detaļās noteicošā ir specifikācija. Šīs vietnes kodu, dizainu un tekstus aizsargā autortiesības, visas tiesības paturētas, tāpēc lūdzam tos nekopēt. Jūs drīkstat ievietot saiti uz jebkuru lapu, citēt īsu fragmentu ar saiti uz avotu un izplatīt brošūras un zīmes nemainītā veidā. Specifikācijas failiem (shēmām, veidnēm, piemēriem) saglabājas CC-BY-4.0 licence."
   },
   "cookies": {
     "h1": "Paziņojums par sīkdatnēm",
@@ -1117,8 +1142,8 @@
           "name": "Savs serveris Eiropā",
           "runs": "Serveris pie Eiropas pakalpojumu sniedzēja, piemēram, Hetzner (Vācija)",
           "need": "Serveri un domēna vārdu",
-          "setup": "Viena komanda, tad iestatīšanas vednis",
-          "cost": "Serveris, ko īrējat",
+          "setup": "Dažas komandas, tad iestatīšanas vednis",
+          "cost": "Aptuveni 5–15 € mēnesī par nelielu serveri ar rezerves kopijām",
           "cta": "Uzstādīt Eiropā"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "Eiropas tīmekļa mitināšana ar PHP un datubāzi, piemēram, TransIP, Strato vai OVHcloud",
           "need": "FTP programmu",
           "setup": "Augšupielādējiet zip, tad instalētājs",
-          "cost": "Mitināšana, par kuru jau maksājat",
+          "cost": "Mitināšana, par kuru jau maksājat (PHP 8.2 vai jaunāka)",
           "cta": "Uzstādīt tīmekļa mitināšanā"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers vai Google Cloud Run",
           "need": "Cloudflare vai Google Cloud kontu",
           "setup": "Viens klikšķis vai viens skripts",
-          "cost": "Pakalpojuma lietojuma cenas",
+          "cost": "Cloudflare: 5 dolāri mēnesī plus krātuve. Google Cloud: pēc lietojuma",
           "cta": "Uzstādīt citā mākonī"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "Demo portālam ir publiska testa atslēga, kas var tikai lasīt. Katalogs ir izdomāts un tiek atiestatīts katru stundu, tāpēc ātrā sākšana darbojas uzreiz.",
     "devKey": "Publiska testa atslēga (tikai lasīšanai)",
     "devOpen": "Atvērt demo portālu"
+  },
+  "press": {
+    "h1": "Preses materiāli un zīmes",
+    "lead": "Open Brand Exchange vienā rindkopā, kā rakstīt nosaukumu un zīmes produktiem, kas darbojas ar standartu.",
+    "aboutTitle": "Open Brand Exchange vienā rindkopā",
+    "aboutP": "Open Brand Exchange ir bezmaksas atvērts standarts produktu datu un produktu fotoattēlu apmaiņai starp zīmoliem un tirgotājiem. Zīmols publicē savu kolekciju vienreiz, vienā standarta formātā, un katrs tirgotājs to saņem tieši savā interneta veikalā, PIM, kases sistēmā vai ERP vai lejupielādē no zīmola portāla. Standarts ir bezpeļņas, un to publicē nodibinājuma {foundation} vārdā.",
+    "nameTitle": "Nosaukums",
+    "nameP": "Pirmajā reizē rakstiet pilnu nosaukumu „Open Brand Exchange“, pēc tam der arī „OBX“. Nosaukums apzīmē standartu, nevis uzņēmumu vai produktu.",
+    "badgesTitle": "Zīmes saderīgiem produktiem",
+    "badgesP": "Vai jūsu portāls, PIM, ERP, interneta veikala platforma vai pakalpojums iztur atbilstības testus? Tad jūs drīkstat izmantot kādu no šīm zīmēm. Tās ir bez maksas un visiem ieviesējiem vienādas.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Kvadrātveida, nelielām vietām",
+    "horizontal": "Horizontāla",
+    "stacked": "Divās rindās",
+    "light": "Gaišam fonam",
+    "dark": "Tumšam fonam",
+    "formatsNote": "Katra zīme ir pieejama SVG formātā, kas ir ass jebkurā izmērā un vislabāk der tīmeklim, un PNG formātā parastā un divkāršā izmērā.",
+    "rulesTitle": "Kā izmantot zīmes",
+    "rules": [
+      "Tikai produktam vai pakalpojumam, kas iztur standarta pašreizējās versijas publiskos atbilstības testus. Palaidiet obx-conformance paši vai izmantojiet tiešsaistes pārbaudi.",
+      "Norādiet pārbaudīto versiju un pārbaudiet atkārtoti, kad iznāk jauna versija. Ja jūsu produkts testus vairs neiztur, noņemiet zīmi.",
+      "Izmantojiet failus tādus, kādi tie ir. Nemainiet krāsas, tekstu vai proporcijas un neapvienojiet zīmi ar citu logotipu.",
+      "Zīme norāda, ka jūsu produkts darbojas ar standartu. Tā nenozīmē, ka nodibinājums atbalsta, sertificē vai iesaka jūsu produktu vai uzņēmumu.",
+      "Atstājiet ap zīmi brīvu vietu, vismaz pusi no tās augstuma, un, kur iespējams, pievienojiet saiti uz openbrandexchange.com."
+    ],
+    "checkLink": "Atvērt tiešsaistes pārbaudi",
+    "partnersLink": "Saderīgs vai oficiāls partneris",
+    "contactTitle": "Kontakti presei",
+    "contactP": "Jautājumi no žurnālistiem, vai vajadzīgs citāts vai fails ar augstāku izšķirtspēju? Rakstiet mums."
   }
 }

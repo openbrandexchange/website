@@ -13,7 +13,7 @@
     "footerAbout": "Una forma gratuita y abierta de que las marcas compartan imágenes de producto y datos de artículo con sus distribuidores.",
     "footerMore": "Más",
     "footerSource": "Código fuente y especificación",
-    "footerLicence": "Este sitio web: contenido CC-BY-4.0, código MIT.",
+    "footerLicence": "© 2026 {foundation}. Todos los derechos reservados. La especificación es CC-BY-4.0.",
     "editionCloudflare": "Portal para Cloudflare",
     "editionGoogle": "Portal para Google Cloud y Docker",
     "editionHosting": "Portal para alojamiento web",
@@ -36,7 +36,8 @@
     "privacy": "Privacidad",
     "imprint": "Aviso legal",
     "cookies": "Cookies",
-    "partners": "Socios"
+    "partners": "Socios",
+    "press": "Kit de prensa y sellos"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Hazte socio",
       "description": "Una prueba de conformidad gratuita y el sello «Compatible con Open Brand Exchange», o la inclusión como socio oficial desde 500 € al año."
+    },
+    "press": {
+      "title": "Kit de prensa y sellos",
+      "description": "Open Brand Exchange en un párrafo, cómo escribir el nombre y los sellos para productos que funcionan con el estándar."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "Descargar la última versión",
     "p3Title": "3. Tu propio servidor",
-    "p3P": "En tu propio servidor o con cualquier proveedor de nube. Se pone en marcha con un solo comando:",
-    "composeP": "O con HTTPS incluido, mediante Caddy:",
+    "p3P": "¿Ya tienes tu propio proxy inverso? Entonces inicia solo la imagen publicada y apunta el proxy al puerto 8080:",
     "envTitle": "Ajustes",
     "envPublicUrl": "la dirección pública de tu portal",
-    "envSecretKey": "una clave aleatoria larga (openssl rand -hex 32); guárdala bien",
+    "envSecretKey": "una clave aleatoria larga (openssl rand -base64 48). Guarda una copia en tu gestor de contraseñas: no se puede cambiar cuando ya hay datos",
     "envSetupCode": "opcional: un código de instalación elegido de antemano",
     "envPort": "puerto, 8080 por defecto",
     "firstTitle": "Tras la instalación: el primer arranque",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Crea un servidor en Hetzner en Núremberg, Falkenstein o Helsinki, con las copias de seguridad activadas.",
       "Apunta tu dominio, por ejemplo images.tumarca.es, al servidor.",
-      "Instala Docker e inicia el portal con un solo comando. HTTPS se configura automáticamente.",
+      "Instala Docker e inicia el portal con unos pocos comandos. HTTPS se configura automáticamente.",
       "Abre tu dominio y completa el asistente de configuración.",
       "Opcional: guarda las imágenes en Hetzner Object Storage, en la misma ubicación.",
-      "Programa una copia de seguridad nocturna. Actualizar es un solo comando."
+      "Programa una copia de seguridad nocturna y cópiala fuera del servidor. Actualizar son dos comandos."
     ],
     "euGuide": "Paso a paso: tu portal en Hetzner",
     "euData": "Con el servidor y el almacenamiento en una ubicación de la UE, tu catálogo, tus imágenes y tu base de datos se guardan en la UE.",
@@ -455,7 +459,28 @@
     "altP": "El mismo portal también funciona en Cloudflare Workers y en Google Cloud Run. Elige una región en Europa si el servicio la ofrece.",
     "partnerLink": "Ver socios",
     "techTitle": "Detalles técnicos para tu equipo de TI",
-    "techLead": "Comandos, ajustes y guías de instalación para la persona que configura el servidor."
+    "techLead": "Comandos, ajustes y guías de instalación para la persona que configura el servidor.",
+    "costTitle": "Cuánto cuesta, aproximadamente",
+    "costItems": [
+      "Tu propio servidor en la UE: unos 5 a 15 € al mes por un servidor pequeño con copias de seguridad automáticas, en un proveedor como Hetzner. Las fotos en el disco del propio servidor no cuestan nada más; el almacenamiento de objetos para un archivo grande suma unos pocos euros al mes por terabyte.",
+      "Alojamiento web normal: el paquete que ya pagas, siempre que tenga PHP 8.2 o superior.",
+      "Cloudflare Workers: 5 dólares al mes por Workers Paid, más el almacenamiento en R2, de unos 1,50 dólares al mes por cada 100 GB de fotos. No se cobra por las descargas.",
+      "Un socio: su propio precio. Pregunta qué incluye: actualizaciones, copias de seguridad, tu propio dominio y poder exportarlo todo si te vas.",
+      "Tu propio tiempo: calcula entre media jornada y una jornada la primera vez, incluidos el dominio y una restauración de prueba de una copia de seguridad. Después, alrededor de una hora al mes para actualizaciones y para revisar las copias."
+    ],
+    "costNote": "Precios orientativos de noviembre de 2026, sin IVA. Consulta los precios actuales del proveedor antes de elegir.",
+    "stepsTitle": "Paso a paso en un servidor nuevo",
+    "stepsP": "En un servidor Ubuntu nuevo con los puertos 22, 80 y 443 abiertos y con los registros A y AAAA de tu dominio apuntando ya a él. Es la misma configuración que la guía de Hetzner: compila la última versión del portal y pone Caddy delante para HTTPS.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy solicita un certificado de Let's Encrypt en cuanto tu dominio apunta al servidor, lo renueva automáticamente y redirige http a https. ¿No hay certificado? Comprueba con dig que el dominio devuelve la dirección del servidor y que los puertos 80 y 443 están abiertos en el cortafuegos.",
+    "backupTitle": "Copias de seguridad",
+    "backupP": "Activa las copias de seguridad del servidor en tu proveedor y añade una copia nocturna del portal que también guardes fuera del servidor. Guarda OBX_SECRET_KEY por separado, en un gestor de contraseñas: sin ella no se puede restaurar del todo una copia de seguridad. Prueba a restaurar una vez, para saber que funciona.",
+    "updateTitle": "Actualizaciones",
+    "updateP": "Haz una copia de seguridad y lee las notas de la versión. Después descarga la nueva versión y vuelve a compilar; la base de datos se actualiza sola cuando arranca el portal.",
+    "cfCliP": "O desde tu propio ordenador, con Bun y la herramienta Wrangler:",
+    "cfDomainP": "Tu propio dominio: añádelo en Workers & Pages → tu Worker → Settings → Domains & Routes (el dominio debe estar en Cloudflare), pon esa dirección en OBX_PUBLIC_URL y vuelve a desplegar.",
+    "cfBackupP": "Copias de seguridad: con Workers Paid, D1 guarda 30 días de historial de la base de datos (Time Travel). Para tener una copia fuera de Cloudflare, exporta la base de datos con regularidad. Las imágenes están en R2; copia el bucket con cualquier herramienta S3.",
+    "cfUpdateP": "Actualizaciones: fusiona la nueva versión en tu copia del repositorio y haz push; Cloudflare la vuelve a desplegar."
   },
   "retailers": {
     "h1": "Para distribuidores",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Quién decide",
-        "p": "Hasta que haya tres implementaciones independientes que superen la batería de conformidad, el fundador decide sobre los cambios, tras un debate público. Después toma el relevo un grupo directivo, con un puesto por implementador y al menos una marca y un distribuidor."
+        "p": "Hasta que haya al menos tres implementaciones realmente independientes, el fundador decide sobre los cambios, tras un debate público. Independientes significa desarrolladas y mantenidas por organizaciones sin vínculos entre sí ni con el fundador; las implementaciones de referencia no cuentan. Cada una debe superar la batería de conformidad completa y llevar al menos un año en producción, y entre todas deben dar servicio al menos a diez marcas y cinco distribuidores. Solo entonces toma el relevo un grupo directivo, con un puesto por implementador, al menos dos marcas y dos distribuidores, y el fundador mientras presida el patronato."
       },
       {
         "h": "Cómo se hacen los cambios",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Licencias",
-        "p": "La especificación y el contenido de este sitio son CC-BY-4.0. El SDK, la herramienta obx y la interfaz web compartida son Apache-2.0. Las tres ediciones del portal son AGPL-3.0, para que las mejoras sigan siendo abiertas. El código de este sitio es MIT."
+        "p": "La especificación es CC-BY-4.0. El SDK, la herramienta obx y la interfaz web compartida son Apache-2.0. Las tres ediciones del portal son AGPL-3.0, para que las mejoras sigan siendo abiertas. Este sitio web no tiene licencia abierta: su código, su diseño y sus textos tienen todos los derechos reservados. Los archivos de la especificación que publica, como los esquemas, las plantillas y los ejemplos, mantienen su licencia CC-BY-4.0."
       }
     ],
     "nameTitle": "Sobre el nombre",
@@ -891,7 +916,7 @@
     "securityLabel": "Problemas de seguridad",
     "securityNote": "Comunica las vulnerabilidades de forma confidencial a esta dirección, no en una incidencia pública.",
     "contentTitle": "Contenido y licencias",
-    "contentP": "Escribimos este sitio con cuidado, pero puede contener errores. Para los detalles técnicos, manda la especificación. Los textos pueden reutilizarse bajo CC BY 4.0 citando la fuente; el código de este sitio tiene licencia MIT."
+    "contentP": "Escribimos este sitio con cuidado, pero puede contener errores. Para los detalles técnicos, manda la especificación. El código, el diseño y los textos de este sitio están protegidos por derechos de autor, con todos los derechos reservados, así que no los copies. Puedes enlazar a cualquier página, citar un pasaje breve con un enlace a la fuente y compartir los folletos y los sellos sin modificarlos. Los archivos de la especificación (esquemas, plantillas, ejemplos) siguen siendo CC-BY-4.0."
   },
   "cookies": {
     "h1": "Declaración de cookies",
@@ -1117,8 +1142,8 @@
           "name": "Tu propio servidor en Europa",
           "runs": "Un servidor en un proveedor europeo como Hetzner (Alemania)",
           "need": "Un servidor y un nombre de dominio",
-          "setup": "Un comando y después el asistente",
-          "cost": "El servidor que alquilas",
+          "setup": "Unos pocos comandos y después el asistente",
+          "cost": "Unos 5 a 15 € al mes por un servidor pequeño con copias de seguridad",
           "cta": "Instalar en Europa"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "Alojamiento web europeo con PHP y una base de datos, como TransIP, Strato u OVHcloud",
           "need": "Un programa de FTP",
           "setup": "Sube un zip y ejecuta el instalador",
-          "cost": "El alojamiento que ya pagas",
+          "cost": "El alojamiento que ya pagas (PHP 8.2 o superior)",
           "cta": "Instalar en alojamiento web"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers o Google Cloud Run",
           "need": "Una cuenta de Cloudflare o de Google Cloud",
           "setup": "Un clic o un script",
-          "cost": "Las tarifas por uso del servicio",
+          "cost": "Cloudflare: 5 dólares al mes más el almacenamiento. Google Cloud: según el uso",
           "cta": "Instalar en otra nube"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "El portal de demostración tiene una clave de prueba pública que solo puede leer. Su catálogo es ficticio y se restablece cada hora, así que la guía rápida funciona al instante.",
     "devKey": "Clave de prueba pública (solo lectura)",
     "devOpen": "Abrir el portal de demostración"
+  },
+  "press": {
+    "h1": "Kit de prensa y sellos",
+    "lead": "Open Brand Exchange en un párrafo, cómo escribir el nombre y los sellos para productos que funcionan con el estándar.",
+    "aboutTitle": "Open Brand Exchange en un párrafo",
+    "aboutP": "Open Brand Exchange es un estándar abierto y gratuito para compartir datos y fotos de producto entre marcas y distribuidores. Una marca publica su colección una sola vez, en un formato estándar. Cada distribuidor la recibe directamente en su tienda online, PIM, TPV o ERP, o la descarga del portal para distribuidores de la marca. El estándar no tiene ánimo de lucro y se publica en nombre de la {foundation}.",
+    "nameTitle": "El nombre",
+    "nameP": "Escribe «Open Brand Exchange» completo la primera vez; después basta con «OBX». El nombre se refiere al estándar, no a una empresa ni a un producto.",
+    "badgesTitle": "Sellos para productos compatibles",
+    "badgesP": "¿Tu portal, PIM, ERP, plataforma de tienda online o servicio supera la batería de conformidad? Entonces puedes mostrar uno de estos sellos. Son gratuitos e iguales para todos los implementadores.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Cuadrado, para espacios pequeños",
+    "horizontal": "Horizontal",
+    "stacked": "Apilado",
+    "light": "Para fondos claros",
+    "dark": "Para fondos oscuros",
+    "formatsNote": "Cada sello está disponible en SVG, nítido a cualquier tamaño y la mejor opción para la web, y en PNG a tamaño normal y doble.",
+    "rulesTitle": "Cómo usar los sellos",
+    "rules": [
+      "Solo para un producto o servicio que supere la batería de conformidad pública de la versión actual del estándar. Ejecuta obx-conformance tú mismo o usa la comprobación online.",
+      "Indica la versión que has probado y vuelve a probar cuando salga una versión nueva. Si tu producto deja de superarla, retira el sello.",
+      "Usa los archivos tal como están. No cambies los colores, el texto ni las proporciones, y no combines el sello con otro logotipo.",
+      "El sello indica que tu producto funciona con el estándar. No significa que la fundación respalde, certifique o recomiende tu producto o tu empresa.",
+      "Deja espacio alrededor del sello, al menos la mitad de su altura, y enlázalo a openbrandexchange.com siempre que puedas."
+    ],
+    "checkLink": "Abrir la comprobación online",
+    "partnersLink": "Compatible o socio oficial",
+    "contactTitle": "Contacto de prensa",
+    "contactP": "¿Eres periodista y tienes una pregunta, o necesitas una cita o un archivo con más resolución? Escríbenos."
   }
 }

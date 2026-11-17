@@ -91,10 +91,15 @@ language; readers see their language, else English. They appear on /hosting and 
 - [docs/brochures.md](docs/brochures.md): how the PDFs and social images are made and checked
 - [docs/translations.md](docs/translations.md): languages, glossary, review status
 - [NOTES.md](NOTES.md): decisions and open points · [CHANGELOG.md](CHANGELOG.md)
-- [CONTRIBUTING.md](CONTRIBUTING.md) (DCO sign-off) · [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) · [SECURITY.md](SECURITY.md)
+- [CONTRIBUTING.md](CONTRIBUTING.md) (sign-off, rights in contributions) · [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) · [SECURITY.md](SECURITY.md)
 
 ## Licence
 
-Code MIT, content CC-BY-4.0. See [LICENSE](LICENSE), [LICENSE-CONTENT](LICENSE-CONTENT) and
-[NOTICE](NOTICE). The copyright and the name will be transferred to the Open Brand Exchange
-Foundation, a Dutch stichting that is being set up.
+Copyright © 2026 Open Brand Exchange Foundation (in formation). All rights reserved. The repository is
+public for transparency; no licence is granted to copy or reuse the site (see [LICENSE](LICENSE)).
+Exceptions with their own licence: files from the specification (schemas, API reference, templates,
+the Kestrel example) and the brand directory are CC-BY-4.0, third-party code and fonts keep theirs,
+and the badges and brochures may be shared unchanged. See [NOTICE](NOTICE) and
+[LICENSE-CONTENT](LICENSE-CONTENT). Contributions: [CONTRIBUTING.md](CONTRIBUTING.md). The copyright
+and the name will be transferred to the Open Brand Exchange Foundation, a Dutch stichting that is
+being set up.

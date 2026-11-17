@@ -13,7 +13,7 @@
     "footerAbout": "O modalitate gratuită și deschisă prin care mărcile partajează imagini de produs și date despre articole cu comercianții lor.",
     "footerMore": "Mai mult",
     "footerSource": "Cod sursă și specificație",
-    "footerLicence": "Acest site: conținut CC-BY-4.0, cod MIT.",
+    "footerLicence": "© 2026 {foundation}. Toate drepturile rezervate. Specificația este sub licența CC-BY-4.0.",
     "editionCloudflare": "Portal pentru Cloudflare",
     "editionGoogle": "Portal pentru Google Cloud și Docker",
     "editionHosting": "Portal pentru găzduire web",
@@ -36,7 +36,8 @@
     "privacy": "Confidențialitate",
     "imprint": "Informații legale",
     "cookies": "Cookie-uri",
-    "partners": "Parteneri"
+    "partners": "Parteneri",
+    "press": "Kit de presă și insigne"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Deveniți partener",
       "description": "Un test de conformitate gratuit și eticheta „Compatibil cu Open Brand Exchange”, sau listarea ca partener oficial de la 500 € pe an."
+    },
+    "press": {
+      "title": "Kit de presă și insigne",
+      "description": "Open Brand Exchange într-un paragraf, cum se scrie numele și insignele pentru produsele care funcționează cu standardul."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "Descărcați cea mai recentă versiune",
     "p3Title": "3. Propriul server",
-    "p3P": "Pe propriul server sau la orice furnizor de cloud. Pornește cu o singură comandă:",
-    "composeP": "Sau direct cu HTTPS, prin Caddy:",
+    "p3P": "Folosiți deja propriul reverse proxy? Atunci porniți doar imaginea publicată și direcționați proxy-ul către portul 8080:",
     "envTitle": "Setări",
     "envPublicUrl": "adresa publică a portalului",
-    "envSecretKey": "o cheie aleatorie lungă (openssl rand -hex 32); păstrați-o în siguranță",
+    "envSecretKey": "o cheie aleatorie lungă (openssl rand -base64 48). Păstrați o copie în managerul de parole: nu mai poate fi schimbată după ce există date",
     "envSetupCode": "opțional: un cod de configurare ales dinainte",
     "envPort": "port, implicit 8080",
     "firstTitle": "După instalare: prima pornire",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Creați un server la Hetzner în Nürnberg, Falkenstein sau Helsinki, cu copiile de rezervă activate.",
       "Direcționați domeniul, de exemplu imagini.marcavoastra.ro, către server.",
-      "Instalați Docker și porniți portalul cu o singură comandă. HTTPS se configurează automat.",
+      "Instalați Docker și porniți portalul cu câteva comenzi. HTTPS se configurează automat.",
       "Deschideți domeniul și parcurgeți asistentul de configurare.",
       "Opțional: păstrați imaginile în Hetzner Object Storage, în aceeași locație.",
-      "Programați o copie de rezervă în fiecare noapte. Actualizarea este o singură comandă."
+      "Programați o copie de rezervă în fiecare noapte și copiați-o în afara serverului. Actualizarea se face cu două comenzi."
     ],
     "euGuide": "Ghid pas cu pas: portalul dvs. la Hetzner",
     "euData": "Cu serverul și stocarea într-o locație din UE, catalogul, imaginile și baza de date sunt stocate în UE.",
@@ -455,7 +459,28 @@
     "altP": "Același portal rulează și pe Cloudflare Workers și pe Google Cloud Run. Alegeți o regiune în Europa, dacă serviciul o oferă.",
     "partnerLink": "Vedeți partenerii",
     "techTitle": "Detalii tehnice pentru echipa dvs. IT",
-    "techLead": "Comenzi, setări și ghiduri de instalare pentru persoana care configurează serverul."
+    "techLead": "Comenzi, setări și ghiduri de instalare pentru persoana care configurează serverul.",
+    "costTitle": "Cât costă, aproximativ",
+    "costItems": [
+      "Propriul server în UE: circa 5–15 € pe lună pentru un server mic cu copii de rezervă automate, la un furnizor precum Hetzner. Fotografiile stocate pe discul serverului nu costă nimic în plus; stocarea de obiecte pentru o arhivă mare adaugă câțiva euro pe lună pentru fiecare terabyte.",
+      "Găzduire web obișnuită: pachetul pe care îl plătiți deja, cu condiția să aibă PHP 8.2 sau mai nou.",
+      "Cloudflare Workers: 5 dolari pe lună pentru Workers Paid, plus stocare R2 de circa 1,50 dolari pe lună pentru 100 GB de fotografii. Nu există taxe pentru descărcări.",
+      "Un partener: prețul propriu. Întrebați ce include: actualizări, copii de rezervă, propriul domeniu și exportul complet dacă plecați.",
+      "Timpul dvs.: prima dată, socotiți între o jumătate de zi și o zi, inclusiv domeniul și o restaurare de probă a unei copii de rezervă, apoi circa o oră pe lună pentru actualizări și verificarea copiilor de rezervă."
+    ],
+    "costNote": "Prețuri orientative din noiembrie 2026, fără TVA. Verificați prețurile actuale ale furnizorului înainte să alegeți.",
+    "stepsTitle": "Pas cu pas, pe un server nou",
+    "stepsP": "Pe un server Ubuntu nou, cu porturile 22, 80 și 443 deschise și cu înregistrările A și AAAA ale domeniului deja direcționate către el. Este aceeași configurare ca în ghidul Hetzner: compilează cea mai recentă versiune a portalului și pune Caddy în fața lui pentru HTTPS.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy solicită un certificat Let's Encrypt imediat ce domeniul indică spre server, îl reînnoiește automat și redirecționează http către https. Nu aveți certificat? Verificați cu dig că domeniul afișează adresa serverului și că porturile 80 și 443 sunt deschise în firewall.",
+    "backupTitle": "Copii de rezervă",
+    "backupP": "Activați copiile de rezervă ale serverului oferite de furnizor și adăugați o copie de rezervă a portalului în fiecare noapte, pe care o copiați și în afara serverului. Păstrați OBX_SECRET_KEY separat, într-un manager de parole: fără ea, o copie de rezervă nu poate fi restaurată complet. Încercați o dată o restaurare, ca să știți că funcționează.",
+    "updateTitle": "Actualizări",
+    "updateP": "Faceți o copie de rezervă și citiți notele de versiune. Apoi treceți la noua versiune și reconstruiți; baza de date se actualizează singură la pornirea portalului.",
+    "cfCliP": "Sau de pe propriul calculator, cu Bun și instrumentul Wrangler:",
+    "cfDomainP": "Propriul domeniu: adăugați-l la Workers & Pages → Worker-ul dvs. → Settings → Domains & Routes (domeniul trebuie să fie pe Cloudflare), setați OBX_PUBLIC_URL la acea adresă și implementați din nou.",
+    "cfBackupP": "Copii de rezervă: cu Workers Paid, D1 păstrează 30 de zile de istoric al bazei de date (Time Travel). Pentru o copie în afara Cloudflare, exportați regulat baza de date. Imaginile sunt în R2; copiați bucket-ul cu orice instrument S3.",
+    "cfUpdateP": "Actualizări: integrați noua versiune în copia dvs. a repository-ului și faceți push; Cloudflare o implementează din nou."
   },
   "retailers": {
     "h1": "Pentru comercianți",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Cine decide",
-        "p": "Până când există trei implementări independente care trec suita de conformitate, fondatorul decide asupra modificărilor, după o discuție publică. Apoi preia un grup de coordonare, cu un loc pentru fiecare implementator și cel puțin o marcă și un comerciant."
+        "p": "Până când există cel puțin trei implementări cu adevărat independente, fondatorul decide asupra modificărilor, după o discuție publică. Independente înseamnă construite și întreținute de organizații care nu sunt legate între ele și nici de fondator; implementările de referință nu se pun la socoteală. Fiecare trebuie să treacă întreaga suită de conformitate și să fie în producție de cel puțin un an, iar împreună trebuie să deservească cel puțin zece mărci și cinci comercianți. Abia atunci preia un grup de coordonare, cu un loc pentru fiecare implementator, cel puțin două mărci și doi comercianți, precum și fondatorul, cât timp acesta conduce consiliul."
       },
       {
         "h": "Cum se fac modificările",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Licențe",
-        "p": "Specificația și conținutul acestui site sunt sub licența CC-BY-4.0. SDK-ul, instrumentul obx și interfața web comună sunt sub licența Apache-2.0. Cele trei ediții ale portalului sunt sub licența AGPL-3.0, pentru ca îmbunătățirile să rămână deschise. Codul acestui site este sub licența MIT."
+        "p": "Specificația este sub licența CC-BY-4.0. SDK-ul, instrumentul obx și interfața web comună sunt sub licența Apache-2.0. Cele trei ediții ale portalului sunt sub licența AGPL-3.0, pentru ca îmbunătățirile aduse lor să rămână deschise. Acest site nu are o licență deschisă: codul, designul și textele sale sunt protejate, cu toate drepturile rezervate. Fișierele din specificație pe care le oferă, precum schemele, șabloanele și exemplele, își păstrează licența CC-BY-4.0."
       }
     ],
     "nameTitle": "Despre nume",
@@ -891,7 +916,7 @@
     "securityLabel": "Probleme de securitate",
     "securityNote": "Raportați vulnerabilitățile confidențial la această adresă, nu într-un issue public.",
     "contentTitle": "Conținut și licențe",
-    "contentP": "Scriem acest site cu grijă, dar poate conține greșeli. Pentru detaliile tehnice, specificația are întâietate. Textele pot fi refolosite sub licența CC BY 4.0, cu atribuire; codul acestui site este sub licența MIT."
+    "contentP": "Scriem acest site cu grijă, dar poate conține greșeli. Pentru detaliile tehnice, specificația are întâietate. Codul, designul și textele acestui site sunt protejate prin drepturi de autor, cu toate drepturile rezervate, așa că vă rugăm să nu le copiați. Puteți pune un link către orice pagină, cita un scurt pasaj cu link către sursă și distribui broșurile și insignele fără modificări. Fișierele din specificație (scheme, șabloane, exemple) rămân sub licența CC-BY-4.0."
   },
   "cookies": {
     "h1": "Declarație privind cookie-urile",
@@ -1117,8 +1142,8 @@
           "name": "Propriul server în Europa",
           "runs": "Un server la un furnizor european precum Hetzner (Germania)",
           "need": "Un server și un nume de domeniu",
-          "setup": "O comandă, apoi asistentul de configurare",
-          "cost": "Serverul pe care îl închiriați",
+          "setup": "Câteva comenzi, apoi asistentul de configurare",
+          "cost": "Circa 5–15 € pe lună pentru un server mic cu copii de rezervă",
           "cta": "Configurați în Europa"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "Găzduire web europeană cu PHP și o bază de date, precum TransIP, Strato sau OVHcloud",
           "need": "Un program FTP",
           "setup": "Încărcați un zip, apoi rulați instalatorul",
-          "cost": "Găzduirea pe care o plătiți deja",
+          "cost": "Găzduirea pe care o plătiți deja (PHP 8.2 sau mai nou)",
           "cta": "Configurați pe găzduire web"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers sau Google Cloud Run",
           "need": "Un cont Cloudflare sau Google Cloud",
           "setup": "Un clic sau un script",
-          "cost": "Prețurile de utilizare ale serviciului",
+          "cost": "Cloudflare: 5 dolari pe lună plus stocarea. Google Cloud: în funcție de utilizare",
           "cta": "Configurați pe alt cloud"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "Portalul demo are o cheie de test publică ce poate doar citi. Catalogul este fictiv și se resetează în fiecare oră, așa că ghidul rapid funcționează imediat.",
     "devKey": "Cheie de test publică (doar citire)",
     "devOpen": "Deschideți portalul demo"
+  },
+  "press": {
+    "h1": "Kit de presă și insigne",
+    "lead": "Open Brand Exchange într-un paragraf, cum se scrie numele și insignele pentru produsele care funcționează cu standardul.",
+    "aboutTitle": "Open Brand Exchange într-un paragraf",
+    "aboutP": "Open Brand Exchange este un standard deschis și gratuit pentru schimbul de date și fotografii de produs între mărci și comercianți. O marcă își publică colecția o singură dată, într-un format standard, iar fiecare comerciant o primește direct în magazinul online, PIM, sistemul POS sau ERP sau o descarcă din portalul mărcii. Standardul este non-profit și este publicat în numele {foundation}.",
+    "nameTitle": "Numele",
+    "nameP": "Prima dată scrieți numele complet, „Open Brand Exchange”; după aceea puteți folosi „OBX”. Numele se referă la standard, nu la o companie sau la un produs.",
+    "badgesTitle": "Insigne pentru produsele compatibile",
+    "badgesP": "Portalul, PIM-ul, ERP-ul, platforma de magazin online sau serviciul dvs. trece suita de conformitate? Atunci puteți afișa una dintre aceste insigne. Sunt gratuite și aceleași pentru toți implementatorii.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Pătrată, pentru spații mici",
+    "horizontal": "Orizontală",
+    "stacked": "Pe două rânduri",
+    "light": "Pentru fundaluri deschise",
+    "dark": "Pentru fundaluri închise",
+    "formatsNote": "Fiecare insignă este disponibilă ca SVG, clară la orice dimensiune și cea mai bună pentru web, și ca PNG la dimensiune normală și dublă.",
+    "rulesTitle": "Cum folosiți insignele",
+    "rules": [
+      "Doar pentru un produs sau serviciu care trece suita publică de conformitate pentru versiunea curentă a standardului. Rulați singuri obx-conformance sau folosiți verificarea online.",
+      "Menționați versiunea pe care ați testat-o și testați din nou când apare o versiune nouă. Dacă produsul dvs. nu mai trece testele, scoateți insigna.",
+      "Folosiți fișierele așa cum sunt. Nu schimbați culorile, textul sau proporțiile și nu combinați insigna cu alt logo.",
+      "Insigna arată că produsul dvs. funcționează cu standardul. Nu înseamnă că fundația vă susține, certifică sau recomandă produsul sau compania.",
+      "Lăsați spațiu liber în jurul insignei, cel puțin jumătate din înălțimea ei, și puneți un link către openbrandexchange.com acolo unde puteți."
+    ],
+    "checkLink": "Deschideți verificarea online",
+    "partnersLink": "Compatibil sau partener oficial",
+    "contactTitle": "Contact pentru presă",
+    "contactP": "Sunteți jurnalist și aveți întrebări, sau aveți nevoie de un citat ori de un fișier la rezoluție mai mare? Scrieți-ne."
   }
 }

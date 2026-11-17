@@ -13,7 +13,7 @@
     "footerAbout": "Bealach saor in aisce agus oscailte do bhrandaí íomhánna táirgí agus sonraí earraí a roinnt lena gcuid miondíoltóirí.",
     "footerMore": "Tuilleadh",
     "footerSource": "Cód foinseach agus sonraíocht",
-    "footerLicence": "An suíomh gréasáin seo: ábhar CC-BY-4.0, cód MIT.",
+    "footerLicence": "© 2026 {foundation}. Gach ceart ar cosaint. Tá an tsonraíocht faoi CC-BY-4.0.",
     "editionCloudflare": "Tairseach do Cloudflare",
     "editionGoogle": "Tairseach do Google Cloud agus Docker",
     "editionHosting": "Tairseach d'óstáil gréasáin",
@@ -36,7 +36,8 @@
     "privacy": "Príobháideachas",
     "imprint": "Eolas an fhoilsitheora",
     "cookies": "Fianáin",
-    "partners": "Comhpháirtithe"
+    "partners": "Comhpháirtithe",
+    "press": "Pacáiste preasa agus suaitheantais"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Bí i do chomhpháirtí",
       "description": "Tástáil chomhréireachta saor in aisce agus an lipéad “Comhoiriúnach le Open Brand Exchange”, nó áit ar an liosta mar chomhpháirtí oifigiúil ó €500 sa bhliain."
+    },
+    "press": {
+      "title": "Pacáiste preasa agus suaitheantais",
+      "description": "Open Brand Exchange in alt amháin, conas an t-ainm a scríobh, agus na suaitheantais do tháirgí a oibríonn leis an gcaighdeán."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "Íoslódáil an eisiúint is déanaí",
     "p3Title": "3. Do fhreastalaí féin",
-    "p3P": "Ar do fhreastalaí féin nó le haon soláthraí néil. Tosaíonn sé le hordú amháin:",
-    "composeP": "Nó le HTTPS san áireamh, trí Caddy:",
+    "p3P": "An bhfuil do reverse proxy féin agat cheana? Ansin ná tosaigh ach an íomhá fhoilsithe agus dírigh an proxy ar phort 8080:",
     "envTitle": "Socruithe",
     "envPublicUrl": "seoladh poiblí do thairsí",
-    "envSecretKey": "eochair randamach fhada (openssl rand -hex 32); coinnigh slán í",
+    "envSecretKey": "eochair randamach fhada (openssl rand -base64 48). Coinnigh cóip i do bhainisteoir pasfhocal: ní féidir í a athrú nuair a bhíonn sonraí ann",
     "envSetupCode": "roghnach: cód socraithe a roghnaíonn tú roimh ré",
     "envPort": "port, 8080 de réir réamhshocraithe",
     "firstTitle": "Tar éis suiteála: an chéad tosú",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Cruthaigh freastalaí ag Hetzner in Nürnberg, Falkenstein nó Heilsincí, le cúltacaí casta air.",
       "Dírigh d'fhearann, mar shampla images.dobhranda.ie, ar an bhfreastalaí.",
-      "Suiteáil Docker agus tosaigh an tairseach le hordú amháin. Socraítear HTTPS go huathoibríoch.",
+      "Suiteáil Docker agus tosaigh an tairseach le cúpla ordú. Socraítear HTTPS go huathoibríoch.",
       "Oscail d'fhearann agus críochnaigh an draoi socraithe.",
       "Roghnach: coinnigh na híomhánna in Hetzner Object Storage, sa láthair chéanna.",
-      "Sceidealaigh cúltaca gach oíche. Is ordú amháin é nuashonrú."
+      "Sceidealaigh cúltaca gach oíche agus cóipeáil é amach ón bhfreastalaí. Is dhá ordú é nuashonrú."
     ],
     "euGuide": "Treoir céim ar chéim: do thairseach ar Hetzner",
     "euData": "Nuair atá an freastalaí agus an stóráil i láthair san AE, stóráiltear do chatalóg, d'íomhánna agus do bhunachar sonraí san AE.",
@@ -455,7 +459,28 @@
     "altP": "Ritheann an tairseach chéanna ar Cloudflare Workers agus ar Google Cloud Run freisin. Roghnaigh réigiún san Eoraip má thairgeann an tseirbhís ceann.",
     "partnerLink": "Féach ar chomhpháirtithe",
     "techTitle": "Sonraí teicniúla do d'fhoireann TF",
-    "techLead": "Orduithe, socruithe agus treoracha suiteála don duine a shocraíonn an freastalaí."
+    "techLead": "Orduithe, socruithe agus treoracha suiteála don duine a shocraíonn an freastalaí.",
+    "costTitle": "Cad a chosnaíonn sé, go garbh",
+    "costItems": [
+      "Do fhreastalaí féin san AE: thart ar €5 go €15 sa mhí do fhreastalaí beag le cúltacaí uathoibríocha, ag soláthraí ar nós Hetzner. Ní chosnaíonn grianghraif ar dhiosca an fhreastalaí féin aon rud breise; cuireann stóráil oibiachtaí do chartlann mhór cúpla euro sa mhí in aghaidh an teirebheart leis.",
+      "Gnáthóstáil ghréasáin: an pacáiste a íocann tú as cheana, chomh fada is go bhfuil PHP 8.2 nó níos nuaí air.",
+      "Cloudflare Workers: 5 dollar sa mhí do Workers Paid, móide stóráil R2 ar thart ar 1.50 dollar sa mhí in aghaidh 100 GB de ghrianghraif. Níl aon táillí íoslódála ann.",
+      "Comhpháirtí: a phraghas féin. Fiafraigh cad atá san áireamh: nuashonruithe, cúltacaí, d'fhearann féin, agus gach rud a easpórtáil má imíonn tú.",
+      "D'am féin: bíodh leathlá go lá iomlán agat an chéad uair, an fearann agus athchóiriú tástála ar chúltaca san áireamh, agus thart ar uair an chloig sa mhí do nuashonruithe agus chun na cúltacaí a sheiceáil."
+    ],
+    "costNote": "Praghsanna táscacha ó Shamhain 2026, gan CBL. Seiceáil praghsanna reatha an tsoláthraí sula roghnaíonn tú.",
+    "stepsTitle": "Céim ar chéim ar fhreastalaí nua",
+    "stepsP": "Ar fhreastalaí nua Ubuntu le poirt 22, 80 agus 443 oscailte, agus taifid A agus AAAA d'fhearainn dírithe air cheana. Is é seo an socrú céanna leis an treoir Hetzner: tógann sé an eisiúint is déanaí den tairseach agus cuireann sé Caddy os a chomhair le haghaidh HTTPS.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "Iarrann Caddy teastas Let's Encrypt chomh luath is a bhíonn d'fhearann dírithe ar an bhfreastalaí, athnuann sé go huathoibríoch é agus atreoraíonn sé http chuig https. Gan teastas? Seiceáil le dig go dtaispeánann an fearann seoladh an fhreastalaí, agus go bhfuil poirt 80 agus 443 oscailte sa bhalla dóiteáin.",
+    "backupTitle": "Cúltacaí",
+    "backupP": "Cas air cúltacaí freastalaí do sholáthraí, agus cuir cúltaca tairsí gach oíche leis a chóipeálann tú amach ón bhfreastalaí freisin. Coinnigh OBX_SECRET_KEY ar leith, i mbainisteoir pasfhocal: ní féidir cúltaca a athchóiriú go hiomlán gan é. Bain triail as athchóiriú uair amháin, ionas go mbeidh a fhios agat go n-oibríonn sé.",
+    "updateTitle": "Nuashonruithe",
+    "updateP": "Déan cúltaca agus léigh na nótaí eisiúna. Ansin déan checkout ar an eisiúint nua agus tóg arís é; nuashonraíonn an bunachar sonraí é féin nuair a thosaíonn an tairseach.",
+    "cfCliP": "Nó ó do ríomhaire féin, le Bun agus an uirlis Wrangler:",
+    "cfDomainP": "D'fhearann féin: cuir leis é faoi Workers & Pages → do Worker → Settings → Domains & Routes (caithfidh an fearann a bheith ar Cloudflare), socraigh OBX_PUBLIC_URL ar an seoladh sin agus imscar arís.",
+    "cfBackupP": "Cúltacaí: ar Workers Paid, coinníonn D1 stair 30 lá den bhunachar sonraí (Time Travel). Le haghaidh cóip lasmuigh de Cloudflare, easpórtáil an bunachar sonraí go rialta. Tá na híomhánna in R2; cóipeáil an buicéad le haon uirlis S3.",
+    "cfUpdateP": "Nuashonruithe: cumaisc an eisiúint nua isteach i do chóip den stór agus brúigh é; imscarann Cloudflare arís é."
   },
   "retailers": {
     "h1": "Do mhiondíoltóirí",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Cé a chinneann",
-        "p": "Go dtí go mbeidh trí chur i bhfeidhm neamhspleácha ann a théann tríd an tsraith tástálacha comhréireachta, is é an bunaitheoir a chinneann faoi athruithe, tar éis plé poiblí. Ina dhiaidh sin glacann grúpa stiúrtha seilbh, le suíochán amháin in aghaidh gach feidhmitheora agus brand amháin agus miondíoltóir amháin ar a laghad."
+        "p": "Go dtí go mbeidh trí chur i bhfeidhm fíorneamhspleácha ar a laghad ann, is é an bunaitheoir a chinneann faoi athruithe, tar éis plé poiblí. Ciallaíonn neamhspleách go dtógann agus go gcothaíonn eagraíochtaí iad nach bhfuil ceangailte lena chéile ná leis an mbunaitheoir; ní áirítear na cur i bhfeidhm tagartha. Caithfidh gach ceann acu an tsraith iomlán tástálacha comhréireachta a chur díobh agus a bheith i dtáirgeadh ar feadh bliana ar a laghad, agus le chéile caithfidh siad freastal ar dheich mbranda agus cúig mhiondíoltóir ar a laghad. Ní ghlacann grúpa stiúrtha seilbh go dtí sin, le suíochán amháin in aghaidh gach feidhmitheora, dhá bhranda agus dhá mhiondíoltóir ar a laghad, agus an bunaitheoir fad is atá sé ina chathaoirleach ar an mbord."
       },
       {
         "h": "Conas a dhéantar athruithe",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Ceadúnais",
-        "p": "Tá an tsonraíocht agus ábhar an tsuímh seo faoi CC-BY-4.0. Tá an SDK, an uirlis obx agus an comhéadan gréasáin comhroinnte faoi Apache-2.0. Tá na trí eagrán tairsí faoi AGPL-3.0, ionas go bhfanann feabhsuithe oscailte. Tá cód an tsuímh seo faoi MIT."
+        "p": "Tá an tsonraíocht faoi CC-BY-4.0. Tá an SDK, an uirlis obx agus an comhéadan gréasáin comhroinnte faoi Apache-2.0. Tá na trí eagrán tairsí faoi AGPL-3.0, ionas go bhfanann feabhsuithe orthu oscailte. Níl ceadúnas oscailte ar an suíomh gréasáin seo: tá gach ceart ar cosaint ar a chód, a dhearadh agus a théacsanna. Coinníonn comhaid ón tsonraíocht a sholáthraíonn sé, ar nós na scéimeanna, na dteimpléad agus na samplaí, a gceadúnas CC-BY-4.0."
       }
     ],
     "nameTitle": "Maidir leis an ainm",
@@ -891,7 +916,7 @@
     "securityLabel": "Fadhbanna slándála",
     "securityNote": "Tuairiscigh leochaileachtaí faoi rún chuig an seoladh seo, ní in issue poiblí.",
     "contentTitle": "Ábhar agus ceadúnais",
-    "contentP": "Scríobhaimid an suíomh seo go cúramach, ach d'fhéadfadh botúin a bheith ann. Maidir le sonraí teicniúla, is í an tsonraíocht an t-údarás. Is féidir na téacsanna a athúsáid faoi CC BY 4.0 le sannadh; tá cód an tsuímh seo faoi cheadúnas MIT."
+    "contentP": "Scríobhaimid an suíomh seo go cúramach, ach d'fhéadfadh botúin a bheith ann. Maidir le sonraí teicniúla, is í an tsonraíocht an t-údarás. Tá cód, dearadh agus téacsanna an tsuímh seo faoi chóipcheart, le gach ceart ar cosaint, mar sin ná cóipeáil iad le do thoil. Is féidir leat nasc a chur le haon leathanach, sliocht gearr a lua le nasc chuig an bhfoinse, agus na bróisiúir agus na suaitheantais a roinnt gan athrú. Fanann comhaid ón tsonraíocht (scéimeanna, teimpléid, samplaí) faoi CC-BY-4.0."
   },
   "cookies": {
     "h1": "Ráiteas faoi fhianáin",
@@ -1117,8 +1142,8 @@
           "name": "Do fhreastalaí féin san Eoraip",
           "runs": "Freastalaí ag soláthraí Eorpach ar nós Hetzner (an Ghearmáin)",
           "need": "Freastalaí agus ainm fearainn",
-          "setup": "Ordú amháin, ansin an draoi socraithe",
-          "cost": "An freastalaí a fhruilíonn tú",
+          "setup": "Cúpla ordú, ansin an draoi socraithe",
+          "cost": "Thart ar €5 go €15 sa mhí do fhreastalaí beag le cúltacaí",
           "cta": "Socraigh san Eoraip"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "Óstáil ghréasáin Eorpach le PHP agus bunachar sonraí, ar nós TransIP, Strato nó OVHcloud",
           "need": "Clár FTP",
           "setup": "Uaslódáil zip, ansin an suiteálaí",
-          "cost": "An óstáil a íocann tú as cheana",
+          "cost": "An óstáil a íocann tú as cheana (PHP 8.2 nó níos nuaí)",
           "cta": "Socraigh ar óstáil ghréasáin"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers, nó Google Cloud Run",
           "need": "Cuntas Cloudflare nó Google Cloud",
           "setup": "Cliceáil amháin nó script amháin",
-          "cost": "Praghsanna úsáide na seirbhíse",
+          "cost": "Cloudflare: 5 dollar sa mhí móide stóráil. Google Cloud: de réir úsáide",
           "cta": "Socraigh ar néal eile"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "Tá eochair tástála phoiblí ag an tairseach taispeántais nach féidir léi ach léamh. Is catalóg bréige í agus athshocraítear í gach uair an chloig, mar sin oibríonn an treoir thapa láithreach.",
     "devKey": "Eochair tástála phoiblí (léamh amháin)",
     "devOpen": "Oscail an tairseach taispeántais"
+  },
+  "press": {
+    "h1": "Pacáiste preasa agus suaitheantais",
+    "lead": "Open Brand Exchange in alt amháin, conas an t-ainm a scríobh, agus na suaitheantais do tháirgí a oibríonn leis an gcaighdeán.",
+    "aboutTitle": "Open Brand Exchange in alt amháin",
+    "aboutP": "Is caighdeán oscailte saor in aisce é Open Brand Exchange chun sonraí táirge agus grianghraif táirge a roinnt idir brandaí agus miondíoltóirí. Foilsíonn branda a bhailiúchán uair amháin, in aon fhormáid chaighdeánach amháin, agus faigheann gach miondíoltóir é díreach isteach ina shiopa gréasáin, ina PIM, ina POS nó ina ERP, nó íoslódálann sé ó thairseach an bhranda é. Is caighdeán neamhbhrabúis é agus foilsítear é thar ceann an {foundation}.",
+    "nameTitle": "An t-ainm",
+    "nameP": "Scríobh “Open Brand Exchange” ina iomláine an chéad uair; ina dhiaidh sin is leor “OBX”. Tagraíonn an t-ainm don chaighdeán, ní do chomhlacht ná do tháirge.",
+    "badgesTitle": "Suaitheantais do tháirgí comhoiriúnacha",
+    "badgesP": "An éiríonn le do thairseach, do PIM, do ERP, d'ardán siopa gréasáin nó do sheirbhís sa tsraith tástálacha comhréireachta? Más ea, is féidir leat ceann de na suaitheantais seo a thaispeáint. Tá siad saor in aisce, agus mar an gcéanna do gach feidhmitheoir.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Cearnógach, do spásanna beaga",
+    "horizontal": "Cothrománach",
+    "stacked": "Cruachta",
+    "light": "Do chúlraí éadroma",
+    "dark": "Do chúlraí dorcha",
+    "formatsNote": "Tá gach suaitheantas ar fáil mar SVG, géar ag aon mhéid agus is fearr don ghréasán, agus mar PNG ag gnáthmhéid agus ag méid dúbailte.",
+    "rulesTitle": "Conas na suaitheantais a úsáid",
+    "rules": [
+      "Do tháirge nó seirbhís amháin a éiríonn leis sa tsraith phoiblí tástálacha comhréireachta don leagan reatha den chaighdeán. Rith obx-conformance tú féin, nó úsáid an tseiceáil ar líne.",
+      "Luaigh an leagan a thástáil tú, agus tástáil arís nuair a thagann leagan nua amach. Mura n-éiríonn le do tháirge a thuilleadh, bain an suaitheantas anuas.",
+      "Úsáid na comhaid mar atá siad. Ná hathraigh na dathanna, an fhoclaíocht ná na comhréireanna, agus ná cumaisc an suaitheantas le lógó eile.",
+      "Deir an suaitheantas go n-oibríonn do tháirge leis an gcaighdeán. Ní chiallaíonn sé go dtacaíonn an fhondúireacht le do tháirge nó le do chomhlacht, go ndeimhníonn sí iad ná go molann sí iad.",
+      "Fág spás timpeall an tsuaitheantais, leath a airde ar a laghad, agus nasc é le openbrandexchange.com nuair is féidir."
+    ],
+    "checkLink": "Oscail an tseiceáil ar líne",
+    "partnersLink": "Comhoiriúnach nó comhpháirtí oifigiúil",
+    "contactTitle": "Teagmháil don phreas",
+    "contactP": "Ceist ó iriseoir, nó an bhfuil ráiteas nó comhad ag taifeach níos airde uait? Seol ríomhphost chugainn."
   }
 }

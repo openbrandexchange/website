@@ -83,6 +83,11 @@ const env: [string, string][] = [
 
 <section class="band band-alt">
   <div class="wrap">
+    <DocSection id="costs" title={c.costTitle}>
+      <ul>{c.costItems.map((item) => <li>{item}</li>)}</ul>
+      <p class="muted small">{c.costNote}</p>
+    </DocSection>
+
     <DocSection id="first-start" title={c.firstTitle}>
       <ol>{c.first.map((f) => <li>{f}</li>)}</ol>
       <p class="muted">{c.firstWhy}</p>
@@ -104,30 +109,23 @@ const env: [string, string][] = [
       <summary><span id="technical-title">{c.techTitle}</span></summary>
       <p class="tech-lead">{c.techLead}</p>
 
-      <DocSection id="hetzner" title={c.euTitle.replace(/^\d+\.\s*/, '').replace(/\s*\(.*\)$/, '')}>
+      <DocSection id="docker" title={c.euTitle.replace(/^\d+\.\s*/, '').replace(/\s*\(.*\)$/, '')}>
+        <h3>{c.stepsTitle}</h3>
+        <p>{c.stepsP}</p>
+        <Code code={s.vpsSteps} />
         <p><a href={repo('node-go', '/blob/main/docs/hosting/hetzner.md')}>{c.euGuide}</a></p>
-        <p class="small"><a href={repo('node-php')}>openbrandexchange/node-php</a> · <a href={repo('node-go')}>openbrandexchange/node-go</a></p>
-      </DocSection>
 
-      <DocSection id="cloudflare" title={t.common.editionCloudflare}>
-        <p>{c.cfP}</p>
-        <p>
-          <a class="button primary" href="https://deploy.workers.cloudflare.com/?url=https://github.com/openbrandexchange/node-ts">{c.cfButton}</a>
-        </p>
-        <p class="small"><a href={repo('node-ts')}>openbrandexchange/node-ts</a></p>
-      </DocSection>
+        <h3>{c.httpsTitle}</h3>
+        <p>{c.httpsP}</p>
 
-      <DocSection id="cloud-run" title={t.common.editionGoogle}>
-        <p>{c.runP}</p>
-        <Code code={s.cloudRun} />
-        <p class="small"><a href={repo('node-go')}>openbrandexchange/node-go</a> · <a href="#docker">Docker</a></p>
-      </DocSection>
+        <h3>{c.backupTitle}</h3>
+        <p>{c.backupP}</p>
+        <Code code={s.vpsBackup} />
 
-      <DocSection id="docker" title="Docker">
-        <p>{c.p3P}</p>
-        <Code code={s.dockerRun} />
-        <p>{c.composeP}</p>
-        <Code label="compose.yaml" code={s.dockerCompose} />
+        <h3>{c.updateTitle}</h3>
+        <p>{c.updateP}</p>
+        <Code code={s.vpsUpdate} />
+
         <h3>{c.envTitle}</h3>
         <div class="table-scroll">
           <table>
@@ -145,6 +143,29 @@ const env: [string, string][] = [
             </tbody>
           </table>
         </div>
+
+        <p>{c.p3P}</p>
+        <Code code={s.dockerRun} />
+        <p class="small"><a href={repo('node-go')}>openbrandexchange/node-go</a> · <a href={repo('node-php')}>openbrandexchange/node-php</a></p>
+      </DocSection>
+
+      <DocSection id="cloudflare" title={t.common.editionCloudflare}>
+        <p>{c.cfP}</p>
+        <p>
+          <a class="button primary" href="https://deploy.workers.cloudflare.com/?url=https://github.com/openbrandexchange/node-ts">{c.cfButton}</a>
+        </p>
+        <p>{c.cfCliP}</p>
+        <Code code={s.cfCli} />
+        <p>{c.cfDomainP}</p>
+        <p>{c.cfBackupP}</p>
+        <p>{c.cfUpdateP}</p>
+        <p class="small"><a href={repo('node-ts', '/blob/main/docs/hosting-cloudflare.md')}>openbrandexchange/node-ts · docs/hosting-cloudflare.md</a></p>
+      </DocSection>
+
+      <DocSection id="cloud-run" title={t.common.editionGoogle}>
+        <p>{c.runP}</p>
+        <Code code={s.cloudRun} />
+        <p class="small"><a href={repo('node-go')}>openbrandexchange/node-go</a> · <a href="#docker">Docker</a></p>
       </DocSection>
     </details>
   </div>

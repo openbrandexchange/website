@@ -1,34 +1,39 @@
 openbrandexchange.com: website of Open Brand Exchange
-Copyright 2026 Open Brand Exchange Foundation (in formation)
+Copyright © 2026 Open Brand Exchange Foundation (in formation). All rights reserved.
 
 Open Brand Exchange Foundation (in formation)
 Contact: hello@openbrandexchange.com
 
-The code of this website is licensed under the MIT License and its content
-(texts, brochures, the brand directory) under Creative Commons Attribution 4.0
-International (CC-BY-4.0); see LICENSE and LICENSE-CONTENT.
+The code, design and texts of this website (including the brochures, social images, video and
+badges) are not openly licensed; see LICENSE for what you may do with them. The brand directory
+(public/directory.json) is licensed under Creative Commons Attribution 4.0 International
+(CC-BY-4.0); see LICENSE-CONTENT.
 
 The copyright and the name "Open Brand Exchange" are to be transferred to the
 Open Brand Exchange Foundation, a Dutch stichting that is being set up; see
 https://github.com/openbrandexchange/spec/blob/main/docs/governance.md.
 
-Contributions by others remain the copyright of their authors and are licensed
-under the same licences (Developer Certificate of Origin).
+Contributions: see CONTRIBUTING.md.
 
-Third-party material:
-- The website serves, and the brochure PDFs and social images embed, the Inter
-  typeface by Rasmus Andersson (https://rsms.me/inter/), licensed under the SIL
-  Open Font License 1.1, via @fontsource-variable/inter (site) and
-  @fontsource/inter (brochures). The font files are unmodified.
+Material from the Open Brand Exchange specification
+(https://github.com/openbrandexchange/spec), licensed CC-BY-4.0 ("Open Brand Exchange
+specification, © Open Brand Exchange Foundation (in formation) and contributors, CC-BY-4.0"):
+- public/schemas/ (the JSON Schemas) and public/reference/ (the rendered API reference);
+- public/downloads/products.xlsx and public/downloads/assets.xlsx (spec/templates/);
+- public/downloads/kestrel-example.zip (spec/fixtures/kestrel/, the fictional Kestrel Outfitters);
+- src/data/errors.json (the error table) and src/data/glossary-publisher.json (docs/glossary.md).
+
+Other third-party material:
+- src/data/glossary.json is a copy of admin-ui/src/i18n/glossary.json
+  (https://github.com/openbrandexchange/admin-ui), Apache-2.0.
+- The website serves, and the brochure PDFs and social images embed, the Inter and Inter Tight
+  typefaces by Rasmus Andersson and the JetBrains Mono typeface, licensed under the SIL Open Font
+  License 1.1, via @fontsource packages. The font files are unmodified.
 - The product screenshots in src/assets/screens/ show the Open Brand Exchange
   admin-ui (Apache-2.0) with the spec's fictional brand Kestrel Outfitters;
   scripts/capture-screenshots.mjs regenerates them.
 - CODE_OF_CONDUCT.md is adapted from the Contributor Covenant 2.1
   (https://www.contributor-covenant.org), licensed under CC-BY-4.0.
-- public/schemas/ and public/reference/ contain the JSON Schemas and the
-  rendered API reference of the Open Brand Exchange
-  specification (https://github.com/openbrandexchange/spec), CC-BY-4.0;
-  src/data/errors.json is its error table. The reference pages include the
-  Redoc viewer (MIT, public/reference/assets/redoc.LICENSE).
+- The reference pages include the Redoc viewer (MIT, public/reference/assets/redoc.LICENSE).
 - The site is built with Astro (MIT). Nothing from its dependencies is shipped
-  except the generated pages and assets, and the Inter font files.
+  except the generated pages and assets, and the font files.

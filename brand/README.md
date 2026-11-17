@@ -164,3 +164,15 @@ python3 brand/src/build.py brand/src/mark-master.svg brand/src/icon-master.svg b
 
 Needs python3 with `fonttools` and `brotli`, `hb-shape` (harfbuzz) and `rsvg-convert` (librsvg). To change a
 repo description, edit `src/repos.json`. To change colours, edit the constants at the top of `src/build.py`.
+
+## Badges: "Works with Open Brand Exchange" / "OBX compatible"
+
+`public/badges/` (served at `https://openbrandexchange.com/badges/…`): horizontal, stacked and square badges,
+light and dark, as SVG and PNG (1× and 2×, `-2x.png`). Ink and paper only, so they do not depend on the colour
+choice above; text is outlined. One design for every implementer. The usage rules are on the press page
+(`/en/press/`): only for products that pass the conformance suite for the current version, unaltered,
+and without implying endorsement by the foundation.
+
+```sh
+python3 brand/src/badges.py brand/src/mark-master.svg public/badges
+```

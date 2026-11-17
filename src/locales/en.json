@@ -13,7 +13,7 @@
     "footerAbout": "A free, open way for brands to share product images and article data with their retailers.",
     "footerMore": "More",
     "footerSource": "Source code and specification",
-    "footerLicence": "This website: content CC-BY-4.0, code MIT.",
+    "footerLicence": "© 2026 {foundation}. All rights reserved. The specification is CC-BY-4.0.",
     "editionCloudflare": "Portal for Cloudflare",
     "editionGoogle": "Portal for Google Cloud & Docker",
     "editionHosting": "Portal for web hosting",
@@ -36,7 +36,8 @@
     "privacy": "Privacy",
     "imprint": "Imprint",
     "cookies": "Cookies",
-    "partners": "Partners"
+    "partners": "Partners",
+    "press": "Press kit and badges"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Become a partner",
       "description": "A free conformance test and the label “Compatible with Open Brand Exchange”, or a listing as official partner from €500 a year."
+    },
+    "press": {
+      "title": "Press kit and badges",
+      "description": "Open Brand Exchange in one paragraph, how to write the name, and the badges for products that work with the standard."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "Download the latest release",
     "p3Title": "3. Your own server",
-    "p3P": "On your own server or with any cloud provider. It starts with one command:",
-    "composeP": "Or with HTTPS included, through Caddy:",
+    "p3P": "Already running your own reverse proxy? Then start only the published image and point the proxy at port 8080:",
     "envTitle": "Settings",
     "envPublicUrl": "the public address of your portal",
-    "envSecretKey": "a long random key (openssl rand -hex 32); keep it safe",
+    "envSecretKey": "a long random key (openssl rand -base64 48). Keep a copy in your password manager: it cannot be changed once there is data",
     "envSetupCode": "optional: a setup code you choose in advance",
     "envPort": "port, 8080 by default",
     "firstTitle": "After installing: the first start",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Create a server at Hetzner in Nuremberg, Falkenstein or Helsinki, with backups switched on.",
       "Point your domain, for example images.yourbrand.com, at the server.",
-      "Install Docker and start the portal with one command. HTTPS is arranged automatically.",
+      "Install Docker and start the portal with a few commands. HTTPS is set up automatically.",
       "Open your domain and complete the setup wizard.",
       "Optional: keep the images in Hetzner Object Storage, in the same location.",
-      "Schedule a nightly backup. Updates are one command."
+      "Schedule a nightly backup and copy it off the server. Updating takes two commands."
     ],
     "euGuide": "Step-by-step guide: your portal on Hetzner",
     "euData": "With the server and storage in an EU location, your catalog, images and database are stored in the EU.",
@@ -455,7 +459,28 @@
     "altP": "The same portal also runs on Cloudflare Workers and on Google Cloud Run. Choose a region in Europe where the service offers one.",
     "partnerLink": "See partners",
     "techTitle": "Technical details for your IT team",
-    "techLead": "Commands, settings and installation guides for the person who sets up the server."
+    "techLead": "Commands, settings and installation guides for the person who sets up the server.",
+    "costTitle": "What it costs, roughly",
+    "costItems": [
+      "Your own server in the EU: about €5 to €15 a month for a small server with automatic backups, at a provider such as Hetzner. Photos on the server's own disk cost nothing extra; object storage for a large archive adds a few euros a month per terabyte.",
+      "Ordinary web hosting: the package you already pay for, as long as it has PHP 8.2 or newer.",
+      "Cloudflare Workers: 5 dollars a month for Workers Paid, plus R2 storage at about 1.50 dollars a month per 100 GB of photos. There are no download fees.",
+      "A partner: their own price. Ask what it includes: updates, backups, your own domain, and exporting everything if you leave.",
+      "Your own time: plan half a day to a day the first time, including the domain and a test restore of a backup, and about an hour a month for updates and checking the backups."
+    ],
+    "costNote": "Indicative prices from November 2026, excluding VAT. Check the provider's current prices before you choose.",
+    "stepsTitle": "Step by step on a new server",
+    "stepsP": "On a new Ubuntu server with ports 22, 80 and 443 open, and with your domain's A and AAAA records already pointing at it. This is the same setup as the Hetzner guide; it builds the latest release of the portal and puts Caddy in front of it for HTTPS.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy requests a Let's Encrypt certificate as soon as your domain points at the server, renews it automatically and redirects http to https. No certificate? Check with dig that the domain shows the server's address, and that ports 80 and 443 are open in the firewall.",
+    "backupTitle": "Backups",
+    "backupP": "Switch on your provider's server backups, and add a nightly portal backup that you also copy off the server. Keep OBX_SECRET_KEY separately, in a password manager: a backup cannot be fully restored without it. Try a restore once, so you know it works.",
+    "updateTitle": "Updates",
+    "updateP": "Make a backup and read the release notes. Then check out the new release and rebuild; the database updates itself when the portal starts.",
+    "cfCliP": "Or from your own computer, with Bun and the Wrangler tool:",
+    "cfDomainP": "Your own domain: add it under Workers & Pages → your Worker → Settings → Domains & Routes (the domain must be on Cloudflare), set OBX_PUBLIC_URL to that address and deploy again.",
+    "cfBackupP": "Backups: on Workers Paid, D1 keeps 30 days of database history (Time Travel). For a copy outside Cloudflare, export the database regularly. The images are in R2; copy the bucket with any S3 tool.",
+    "cfUpdateP": "Updates: merge the new release into your copy of the repository and push; Cloudflare deploys it again."
   },
   "retailers": {
     "h1": "For retailers",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Who decides",
-        "p": "Until there are three independent implementations that pass the conformance suite, the founder decides on changes, after public discussion. After that, a steering group takes over, with one seat per implementer and at least one brand and one retailer."
+        "p": "Until there are at least three truly independent implementations, the founder decides on changes, after public discussion. Independent means built and maintained by organisations that are not linked to each other or to the founder; the reference implementations don't count. Each must pass the full conformance suite and have been in production for at least a year, and together they must serve at least ten brands and five retailers. Only then does a steering group take over, with one seat per implementer, at least two brands and two retailers, and the founder while he chairs the board."
       },
       {
         "h": "How changes are made",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Licences",
-        "p": "The specification and the content of this site are CC-BY-4.0. The SDK, the obx tool and the shared web interface are Apache-2.0. The three portal editions are AGPL-3.0, so improvements to them stay open. The code of this site is MIT."
+        "p": "The specification is CC-BY-4.0. The SDK, the obx tool and the shared web interface are Apache-2.0. The three portal editions are AGPL-3.0, so improvements to them stay open. This website is not openly licensed: its code, design and texts are all rights reserved. Files from the specification that it serves, such as the schemas, templates and examples, keep their CC-BY-4.0 licence."
       }
     ],
     "nameTitle": "About the name",
@@ -891,7 +916,7 @@
     "securityLabel": "Security problems",
     "securityNote": "Please report vulnerabilities privately to this address, not in a public issue.",
     "contentTitle": "Content and licences",
-    "contentP": "We write this site with care, but it may contain mistakes. For technical details, the specification is authoritative. The texts may be reused under CC BY 4.0 with attribution; the code of this site is MIT-licensed."
+    "contentP": "We write this site with care, but it may contain mistakes. For technical details, the specification is authoritative. The code, design and texts of this site are protected by copyright, with all rights reserved, so please don't copy them. You may link to any page, quote a short passage with a link to the source, and share the brochures and the badges unchanged. Files from the specification (schemas, templates, examples) remain CC-BY-4.0."
   },
   "cookies": {
     "h1": "Cookie statement",
@@ -1117,8 +1142,8 @@
           "name": "Your own server in Europe",
           "runs": "A server at a European provider such as Hetzner (Germany)",
           "need": "A server and a domain name",
-          "setup": "One command, then the setup wizard",
-          "cost": "The server you rent",
+          "setup": "A few commands, then the setup wizard",
+          "cost": "About €5 to €15 a month for a small server with backups",
           "cta": "Set up in Europe"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "European web hosting with PHP and a database, such as TransIP, Strato or OVHcloud",
           "need": "An FTP program",
           "setup": "Upload a zip, then the installer",
-          "cost": "The hosting you already pay for",
+          "cost": "The hosting you already pay for (PHP 8.2 or newer)",
           "cta": "Set up on web hosting"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers, or Google Cloud Run",
           "need": "A Cloudflare or Google Cloud account",
           "setup": "One click or one script",
-          "cost": "The usage prices of the service",
+          "cost": "Cloudflare: 5 dollars a month plus storage. Google Cloud: by usage",
           "cta": "Set up on another cloud"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "The demo portal has a public test key that can only read. Its catalog is fictional and is reset every hour, so the quickstart works right away.",
     "devKey": "Public read-only test key",
     "devOpen": "Open the demo portal"
+  },
+  "press": {
+    "h1": "Press kit and badges",
+    "lead": "Open Brand Exchange in one paragraph, how to write the name, and the badges for products that work with the standard.",
+    "aboutTitle": "Open Brand Exchange in one paragraph",
+    "aboutP": "Open Brand Exchange is a free, open standard for sharing product data and product photos between brands and retailers. A brand publishes its collection once, in one standard format, and every retailer gets it straight into their webshop, PIM, POS or ERP, or downloads it from the brand's portal. The standard is non-profit and is published on behalf of the {foundation}.",
+    "nameTitle": "The name",
+    "nameP": "Write “Open Brand Exchange” in full the first time; after that “OBX” is fine. The name refers to the standard, not to a company or a product.",
+    "badgesTitle": "Badges for compatible products",
+    "badgesP": "Does your portal, PIM, ERP, webshop platform or service pass the conformance suite? Then you may show one of these badges. They are free, and the same for every implementer.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Square, for small spaces",
+    "horizontal": "Horizontal",
+    "stacked": "Stacked",
+    "light": "For light backgrounds",
+    "dark": "For dark backgrounds",
+    "formatsNote": "Every badge comes as SVG, sharp at any size and best for the web, and as PNG at normal and double size.",
+    "rulesTitle": "How to use the badges",
+    "rules": [
+      "Only for a product or service that passes the public conformance suite for the current version of the standard. Run obx-conformance yourself, or use the online check.",
+      "Mention the version you tested, and test again when a new version comes out. If your product no longer passes, take the badge down.",
+      "Use the files as they are. Don't change the colours, the wording or the proportions, and don't merge the badge with another logo.",
+      "The badge says that your product works with the standard. It does not mean that the foundation endorses, certifies or recommends your product or your company.",
+      "Leave some space around the badge, at least half its height, and link it to openbrandexchange.com where you can."
+    ],
+    "checkLink": "Open the online check",
+    "partnersLink": "Compatible or official partner",
+    "contactTitle": "Press contact",
+    "contactP": "Questions from journalists, or need a quote or a higher-resolution file? Email us."
   }
 }

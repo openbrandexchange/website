@@ -13,7 +13,7 @@
     "footerAbout": "Ett kostnadsfritt, öppet sätt för varumärken att dela produktbilder och artikeldata med sina återförsäljare.",
     "footerMore": "Mer",
     "footerSource": "Källkod och specifikation",
-    "footerLicence": "Den här webbplatsen: innehåll CC-BY-4.0, kod MIT.",
+    "footerLicence": "© 2026 {foundation}. Alla rättigheter förbehållna. Specifikationen är CC-BY-4.0.",
     "editionCloudflare": "Portal för Cloudflare",
     "editionGoogle": "Portal för Google Cloud och Docker",
     "editionHosting": "Portal för webbhotell",
@@ -36,7 +36,8 @@
     "privacy": "Integritet",
     "imprint": "Om webbplatsen",
     "cookies": "Kakor",
-    "partners": "Partner"
+    "partners": "Partner",
+    "press": "Pressmaterial och märken"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Bli partner",
       "description": "Ett kostnadsfritt konformitetstest och märkningen ”Kompatibel med Open Brand Exchange”, eller en plats som officiell partner från 500 € per år."
+    },
+    "press": {
+      "title": "Pressmaterial och märken",
+      "description": "Open Brand Exchange i ett stycke, hur du skriver namnet och märkena för produkter som fungerar med standarden."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "Ladda ner den senaste versionen",
     "p3Title": "3. Din egen server",
-    "p3P": "På din egen server eller hos valfri molnleverantör. Den startar med ett enda kommando:",
-    "composeP": "Eller med HTTPS inbyggt, via Caddy:",
+    "p3P": "Kör du redan en egen reverse proxy? Starta då bara den publicerade imagen och peka proxyn mot port 8080:",
     "envTitle": "Inställningar",
     "envPublicUrl": "den publika adressen till din portal",
-    "envSecretKey": "en lång slumpmässig nyckel (openssl rand -hex 32); förvara den säkert",
+    "envSecretKey": "en lång slumpmässig nyckel (openssl rand -base64 48). Spara en kopia i din lösenordshanterare: den går inte att ändra när det väl finns data",
     "envSetupCode": "valfritt: en installationskod som du väljer i förväg",
     "envPort": "port, 8080 som standard",
     "firstTitle": "Efter installationen: första starten",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Skapa en server hos Hetzner i Nürnberg, Falkenstein eller Helsingfors, med säkerhetskopior påslagna.",
       "Peka din domän, till exempel bilder.dittvarumarke.se, mot servern.",
-      "Installera Docker och starta portalen med ett kommando. HTTPS ordnas automatiskt.",
+      "Installera Docker och starta portalen med några kommandon. HTTPS ordnas automatiskt.",
       "Öppna din domän och gå igenom installationsguiden.",
       "Valfritt: lagra bilderna i Hetzner Object Storage, på samma plats.",
-      "Schemalägg en säkerhetskopia varje natt. Uppdateringar är ett kommando."
+      "Schemalägg en säkerhetskopia varje natt och kopiera den till en plats utanför servern. En uppdatering tar två kommandon."
     ],
     "euGuide": "Steg för steg: din portal hos Hetzner",
     "euData": "Med servern och lagringen på en plats inom EU lagras din katalog, dina bilder och din databas i EU.",
@@ -455,7 +459,28 @@
     "altP": "Samma portal körs även på Cloudflare Workers och Google Cloud Run. Välj en region i Europa där tjänsten erbjuder det.",
     "partnerLink": "Se partner",
     "techTitle": "Tekniska detaljer för din IT-avdelning",
-    "techLead": "Kommandon, inställningar och installationsguider för den som sätter upp servern."
+    "techLead": "Kommandon, inställningar och installationsguider för den som sätter upp servern.",
+    "costTitle": "Vad det ungefär kostar",
+    "costItems": [
+      "Din egen server i EU: cirka 5–15 € i månaden för en liten server med automatiska säkerhetskopior, hos en leverantör som Hetzner. Bilder på serverns egen disk kostar inget extra; objektlagring för ett stort arkiv kostar några euro till i månaden per terabyte.",
+      "Vanligt webbhotell: paketet du redan betalar för, så länge det har PHP 8.2 eller senare.",
+      "Cloudflare Workers: 5 dollar i månaden för Workers Paid, plus lagring i R2 för cirka 1,50 dollar i månaden per 100 GB bilder. Det finns inga avgifter för nedladdning.",
+      "En partner: deras eget pris. Fråga vad som ingår: uppdateringar, säkerhetskopior, din egen domän och export av allt om du lämnar.",
+      "Din egen tid: räkna med en halv till en hel dag första gången, inklusive domänen och en teståterställning av en säkerhetskopia. Därefter ungefär en timme i månaden för uppdateringar och kontroll av säkerhetskopiorna."
+    ],
+    "costNote": "Ungefärliga priser från november 2026, exklusive moms. Kontrollera leverantörens aktuella priser innan du väljer.",
+    "stepsTitle": "Steg för steg på en ny server",
+    "stepsP": "På en ny Ubuntu-server med portarna 22, 80 och 443 öppna, och där domänens A- och AAAA-poster redan pekar mot servern. Det är samma upplägg som i Hetzner-guiden: den bygger den senaste versionen av portalen och lägger Caddy framför för HTTPS.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy begär ett certifikat från Let's Encrypt så snart din domän pekar mot servern, förnyar det automatiskt och omdirigerar http till https. Inget certifikat? Kontrollera med kommandot dig att domänen visar serverns adress, och att portarna 80 och 443 är öppna i brandväggen.",
+    "backupTitle": "Säkerhetskopior",
+    "backupP": "Slå på leverantörens serversäkerhetskopior och lägg till en nattlig säkerhetskopia av portalen som du också kopierar bort från servern. Förvara OBX_SECRET_KEY separat, i en lösenordshanterare: utan den går en säkerhetskopia inte att återställa helt. Prova en återställning en gång, så att du vet att det fungerar.",
+    "updateTitle": "Uppdateringar",
+    "updateP": "Gör en säkerhetskopia och läs versionsinformationen. Checka sedan ut den nya versionen och bygg om; databasen uppdaterar sig själv när portalen startar.",
+    "cfCliP": "Eller från din egen dator, med Bun och verktyget Wrangler:",
+    "cfDomainP": "Egen domän: lägg till den under Workers & Pages → din Worker → Settings → Domains & Routes (domänen måste ligga hos Cloudflare), sätt OBX_PUBLIC_URL till den adressen och driftsätt igen.",
+    "cfBackupP": "Säkerhetskopior: med Workers Paid sparar D1 databashistorik i 30 dagar (Time Travel). Vill du ha en kopia utanför Cloudflare exporterar du databasen regelbundet. Bilderna ligger i R2; kopiera bucketen med valfritt S3-verktyg.",
+    "cfUpdateP": "Uppdateringar: slå ihop den nya versionen med din kopia av repot och pusha; Cloudflare driftsätter den igen."
   },
   "retailers": {
     "h1": "För återförsäljare",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Vem bestämmer",
-        "p": "Tills det finns tre oberoende implementationer som klarar överensstämmelsetesterna beslutar grundaren om ändringar, efter offentlig diskussion. Därefter tar en styrgrupp över, med en plats per implementatör och minst ett varumärke och en återförsäljare."
+        "p": "Tills det finns minst tre verkligt oberoende implementationer beslutar grundaren om ändringar, efter offentlig diskussion. Oberoende betyder byggda och underhållna av organisationer som inte har kopplingar till varandra eller till grundaren. Referensimplementationerna räknas inte. Var och en måste klara samtliga överensstämmelsetester och ha varit i produktion i minst ett år, och tillsammans måste de betjäna minst tio varumärken och fem återförsäljare. Först då tar en styrgrupp över, med en plats per implementatör, minst två varumärken och två återförsäljare, och grundaren så länge han är styrelsens ordförande."
       },
       {
         "h": "Hur ändringar görs",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Licenser",
-        "p": "Specifikationen och innehållet på den här webbplatsen är CC-BY-4.0. SDK:t, verktyget obx och det gemensamma webbgränssnittet är Apache-2.0. De tre portalutgåvorna är AGPL-3.0, så att förbättringar förblir öppna. Koden för den här webbplatsen är MIT."
+        "p": "Specifikationen är CC-BY-4.0. SDK:t, verktyget obx och det gemensamma webbgränssnittet är Apache-2.0. De tre portalutgåvorna är AGPL-3.0, så att förbättringar förblir öppna. Den här webbplatsen har ingen öppen licens: koden, designen och texterna är upphovsrättsskyddade, med alla rättigheter förbehållna. Filer från specifikationen som webbplatsen tillhandahåller, som scheman, mallar och exempel, behåller sin CC-BY-4.0-licens."
       }
     ],
     "nameTitle": "Om namnet",
@@ -891,7 +916,7 @@
     "securityLabel": "Säkerhetsproblem",
     "securityNote": "Rapportera sårbarheter konfidentiellt till den här adressen, inte i ett offentligt issue.",
     "contentTitle": "Innehåll och licenser",
-    "contentP": "Vi skriver den här webbplatsen noggrant, men den kan innehålla fel. I tekniska frågor är specifikationen avgörande. Texterna får återanvändas enligt CC BY 4.0 med angivande av källa; webbplatsens kod är MIT-licensierad."
+    "contentP": "Vi skriver den här webbplatsen noggrant, men den kan innehålla fel. I tekniska frågor är specifikationen avgörande. Webbplatsens kod, design och texter är upphovsrättsskyddade, med alla rättigheter förbehållna, så kopiera dem inte. Du får länka till vilken sida som helst, citera ett kort stycke med en länk till källan och dela broschyrerna och märkena oförändrade. Filer från specifikationen (scheman, mallar, exempel) är fortfarande CC-BY-4.0."
   },
   "cookies": {
     "h1": "Om kakor",
@@ -1117,8 +1142,8 @@
           "name": "Din egen server i Europa",
           "runs": "En server hos en europeisk leverantör som Hetzner (Tyskland)",
           "need": "En server och ett domännamn",
-          "setup": "Ett kommando, sedan installationsguiden",
-          "cost": "Servern du hyr",
+          "setup": "Några kommandon, sedan installationsguiden",
+          "cost": "Cirka 5–15 € i månaden för en liten server med säkerhetskopior",
           "cta": "Sätt upp i Europa"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "Europeiskt webbhotell med PHP och en databas, som TransIP, Strato eller OVHcloud",
           "need": "Ett FTP-program",
           "setup": "Ladda upp en zip, sedan installationsprogrammet",
-          "cost": "Webbhotellet du redan betalar för",
+          "cost": "Webbhotellet du redan betalar för (PHP 8.2 eller senare)",
           "cta": "Sätt upp på webbhotell"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers, eller Google Cloud Run",
           "need": "Ett Cloudflare- eller Google Cloud-konto",
           "setup": "Ett klick eller ett skript",
-          "cost": "Tjänstens användningspriser",
+          "cost": "Cloudflare: 5 dollar i månaden plus lagring. Google Cloud: efter användning",
           "cta": "Sätt upp i ett annat moln"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "Demoportalen har en offentlig testnyckel som bara kan läsa. Katalogen är fiktiv och återställs varje timme, så snabbstarten fungerar direkt.",
     "devKey": "Offentlig testnyckel (skrivskyddad)",
     "devOpen": "Öppna demoportalen"
+  },
+  "press": {
+    "h1": "Pressmaterial och märken",
+    "lead": "Open Brand Exchange i ett stycke, hur du skriver namnet och märkena för produkter som fungerar med standarden.",
+    "aboutTitle": "Open Brand Exchange i ett stycke",
+    "aboutP": "Open Brand Exchange är en kostnadsfri, öppen standard för att dela produktdata och produktbilder mellan varumärken och återförsäljare. Ett varumärke publicerar sin kollektion en gång, i ett standardformat. Varje återförsäljare får den direkt in i sin webbutik, sitt PIM, kassasystem eller ERP, eller laddar ner den från varumärkets återförsäljarportal. Standarden drivs utan vinstsyfte och ges ut på uppdrag av {foundation}.",
+    "nameTitle": "Namnet",
+    "nameP": "Skriv ut ”Open Brand Exchange” första gången; därefter går det bra med ”OBX”. Namnet syftar på standarden, inte på ett företag eller en produkt.",
+    "badgesTitle": "Märken för kompatibla produkter",
+    "badgesP": "Klarar din portal, ditt PIM, ERP, din e-handelsplattform eller tjänst konformitetstesterna? Då får du visa ett av de här märkena. De är gratis och likadana för alla implementatörer.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Kvadratiskt, för små ytor",
+    "horizontal": "Liggande",
+    "stacked": "Staplat",
+    "light": "För ljusa bakgrunder",
+    "dark": "För mörka bakgrunder",
+    "formatsNote": "Varje märke finns som SVG, skarpt i alla storlekar och bäst för webben, och som PNG i normal och dubbel storlek.",
+    "rulesTitle": "Så använder du märkena",
+    "rules": [
+      "Endast för en produkt eller tjänst som klarar de offentliga konformitetstesterna för den aktuella versionen av standarden. Kör obx-conformance själv, eller använd kontrollen online.",
+      "Ange vilken version du har testat, och testa igen när en ny version kommer. Om produkten inte längre klarar testerna tar du bort märket.",
+      "Använd filerna som de är. Ändra inte färgerna, texten eller proportionerna, och slå inte ihop märket med en annan logotyp.",
+      "Märket visar att din produkt fungerar med standarden. Det betyder inte att stiftelsen står bakom, certifierar eller rekommenderar din produkt eller ditt företag.",
+      "Lämna lite fritt utrymme runt märket, minst halva dess höjd, och länka det till openbrandexchange.com där det går."
+    ],
+    "checkLink": "Öppna kontrollen online",
+    "partnersLink": "Kompatibel eller officiell partner",
+    "contactTitle": "Presskontakt",
+    "contactP": "Är du journalist och har en fråga, eller behöver du ett citat eller en fil med högre upplösning? Mejla oss."
   }
 }

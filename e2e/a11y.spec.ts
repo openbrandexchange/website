@@ -3,7 +3,7 @@
 import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
-const pages = ['', 'for-brands/', 'automation/', 'hosting/', 'for-retailers/', 'developers/', 'directory/', 'downloads/', 'faq/', 'governance/', 'privacy/', 'cookies/', 'imprint/'];
+const pages = ['', 'for-brands/', 'automation/', 'hosting/', 'for-retailers/', 'developers/', 'directory/', 'downloads/', 'faq/', 'governance/', 'privacy/', 'cookies/', 'imprint/', 'press/'];
 const langs = ['en', 'el', 'bg'];
 
 for (const scheme of ['light', 'dark'] as const) {

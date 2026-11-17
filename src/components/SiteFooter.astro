@@ -1,8 +1,8 @@
 ---
 import Logo from './Logo.astro';
 import EuBadge from './EuBadge.astro';
-import { messages, repo, url, type Lang, type PageKey } from '../i18n';
-import { HELLO_EMAIL, initiativeLine } from '../lib/org';
+import { format, messages, repo, url, type Lang, type PageKey } from '../i18n';
+import { HELLO_EMAIL, initiativeLine, orgVars } from '../lib/org';
 
 interface Props {
   lang: Lang;
@@ -26,7 +26,7 @@ const columns = [
       { href: repo(''), label: t.common.footerSource },
     ],
   },
-  { title: f.project, links: [page('governance'), page('faq'), page('downloads')] },
+  { title: f.project, links: [page('governance'), page('faq'), page('downloads'), page('press')] },
   { title: f.legal, links: [page('imprint'), page('privacy'), page('cookies')] },
 ];
 ---
@@ -60,7 +60,7 @@ const columns = [
     <div class="footer-bottom">
       <p><a href={url(lang, 'imprint')}>{initiativeLine(lang)}</a></p>
       <p>{f.status}</p>
-      <p>{t.common.footerLicence}</p>
+      <p>{format(t.common.footerLicence, orgVars(lang))}</p>
     </div>
   </div>
 </footer>

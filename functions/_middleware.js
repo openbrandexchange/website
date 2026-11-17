@@ -10,7 +10,7 @@ import { CURRENT_SCHEMA_VERSION } from './schema-version.js';
 /** The page slugs of src/i18n.ts (tests/site.test.mjs checks they match). */
 export const PAGE_SLUGS = [
   'for-brands', 'automation', 'hosting', 'partners', 'for-retailers', 'developers', 'check', 'directory',
-  'downloads', 'faq', 'governance', 'privacy', 'cookies', 'imprint',
+  'downloads', 'faq', 'governance', 'privacy', 'cookies', 'imprint', 'press',
 ];
 const LANGS = [
   'bg', 'cs', 'da', 'de', 'el', 'en', 'es', 'et', 'fi', 'fr', 'ga', 'hr', 'hu',

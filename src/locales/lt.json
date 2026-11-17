@@ -13,7 +13,7 @@
     "footerAbout": "Nemokamas ir atviras būdas prekių ženklams dalytis produktų nuotraukomis ir prekių duomenimis su savo pardavėjais.",
     "footerMore": "Daugiau",
     "footerSource": "Išeities kodas ir specifikacija",
-    "footerLicence": "Ši svetainė: turinys CC-BY-4.0, kodas MIT.",
+    "footerLicence": "© 2026 {foundation}. Visos teisės saugomos. Specifikacijai taikoma CC-BY-4.0 licencija.",
     "editionCloudflare": "Portalas Cloudflare",
     "editionGoogle": "Portalas Google Cloud ir Docker",
     "editionHosting": "Portalas interneto talpinimui",
@@ -36,7 +36,8 @@
     "privacy": "Privatumas",
     "imprint": "Leidėjo informacija",
     "cookies": "Slapukai",
-    "partners": "Partneriai"
+    "partners": "Partneriai",
+    "press": "Spaudai ir ženklai"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Tapkite partneriu",
       "description": "Nemokamas atitikties testas ir ženklas „Suderinama su Open Brand Exchange“ arba vieta oficialių partnerių sąraše nuo 500 € per metus."
+    },
+    "press": {
+      "title": "Spaudai ir ženklai",
+      "description": "Open Brand Exchange vienoje pastraipoje, kaip rašyti pavadinimą ir ženklai produktams, kurie veikia su standartu."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "Atsisiųsti naujausią versiją",
     "p3Title": "3. Jūsų serveris",
-    "p3P": "Jūsų serveryje arba pas bet kurį debesijos paslaugų teikėją. Pradedama viena komanda:",
-    "composeP": "Arba iškart su HTTPS per Caddy:",
+    "p3P": "Jau naudojate savo atvirkštinį tarpinį serverį (reverse proxy)? Tada paleiskite tik paskelbtą atvaizdą ir nukreipkite tarpinį serverį į prievadą 8080:",
     "envTitle": "Nustatymai",
     "envPublicUrl": "viešas jūsų portalo adresas",
-    "envSecretKey": "ilgas atsitiktinis raktas (openssl rand -hex 32); saugokite jį",
+    "envSecretKey": "ilgas atsitiktinis raktas (openssl rand -base64 48). Kopiją laikykite slaptažodžių tvarkyklėje: kai jau yra duomenų, rakto pakeisti nebegalima",
     "envSetupCode": "neprivaloma: iš anksto pasirinktas diegimo kodas",
     "envPort": "prievadas, pagal numatymą 8080",
     "firstTitle": "Po diegimo: pirmasis paleidimas",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Sukurkite serverį pas Hetzner Niurnberge, Falkenšteine arba Helsinkyje, su įjungtomis atsarginėmis kopijomis.",
       "Nukreipkite savo domeną, pavyzdžiui, images.jusuzenklas.lt, į serverį.",
-      "Įdiekite Docker ir paleiskite portalą viena komanda. HTTPS sutvarkomas automatiškai.",
+      "Įdiekite Docker ir paleiskite portalą keliomis komandomis. HTTPS sutvarkomas automatiškai.",
       "Atidarykite savo domeną ir užbaikite sąrankos vedlį.",
       "Pasirinktinai: laikykite nuotraukas Hetzner Object Storage toje pačioje vietoje.",
-      "Suplanuokite naktinę atsarginę kopiją. Atnaujinimas yra viena komanda."
+      "Suplanuokite naktinę atsarginę kopiją ir nukopijuokite ją už serverio ribų. Atnaujinimui pakanka dviejų komandų."
     ],
     "euGuide": "Vadovas žingsnis po žingsnio: jūsų portalas pas Hetzner",
     "euData": "Kai serveris ir saugykla yra ES vietoje, jūsų katalogas, nuotraukos ir duomenų bazė saugomi ES.",
@@ -455,7 +459,28 @@
     "altP": "Tas pats portalas veikia ir Cloudflare Workers bei Google Cloud Run. Pasirinkite regioną Europoje, jei paslauga jį siūlo.",
     "partnerLink": "Žiūrėti partnerius",
     "techTitle": "Techninė informacija jūsų IT komandai",
-    "techLead": "Komandos, nustatymai ir diegimo vadovai tam, kas įrengia serverį."
+    "techLead": "Komandos, nustatymai ir diegimo vadovai tam, kas įrengia serverį.",
+    "costTitle": "Kiek tai apytiksliai kainuoja",
+    "costItems": [
+      "Nuosavas serveris ES: apie 5–15 € per mėnesį už nedidelį serverį su automatinėmis atsarginėmis kopijomis pas tokį teikėją kaip Hetzner. Nuotraukos paties serverio diske papildomai nekainuoja; objektų saugykla dideliam archyvui prideda kelis eurus per mėnesį už terabaitą.",
+      "Įprastas interneto talpinimas: planas, už kurį jau mokate, jei jame yra PHP 8.2 ar naujesnė.",
+      "Cloudflare Workers: 5 doleriai per mėnesį už Workers Paid ir R2 saugykla – apie 1,50 dolerio per mėnesį už 100 GB nuotraukų. Mokesčių už atsisiuntimus nėra.",
+      "Partneris: jo paties kaina. Paklauskite, kas į ją įeina: atnaujinimai, atsarginės kopijos, nuosavas domenas ir viso turinio eksportas, jei nuspręsite išeiti.",
+      "Jūsų laikas: pirmą kartą skirkite nuo pusės iki visos dienos, įskaitant domeną ir bandomąjį atsarginės kopijos atkūrimą, o vėliau apie valandą per mėnesį atnaujinimams ir atsarginių kopijų patikrinimui."
+    ],
+    "costNote": "Orientacinės 2026 m. lapkričio kainos be PVM. Prieš rinkdamiesi patikrinkite dabartines teikėjo kainas.",
+    "stepsTitle": "Žingsnis po žingsnio naujame serveryje",
+    "stepsP": "Naujame Ubuntu serveryje su atvirais 22, 80 ir 443 prievadais, kai jūsų domeno A ir AAAA įrašai jau nukreipti į jį. Tai ta pati sąranka kaip Hetzner vadove: ji sukompiliuoja naujausią portalo versiją ir prieš jį pastato Caddy, kuris rūpinasi HTTPS.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy paprašo Let's Encrypt sertifikato, kai tik jūsų domenas nukreipiamas į serverį, automatiškai jį atnaujina ir peradresuoja http į https. Sertifikato nėra? Su dig patikrinkite, ar domenas rodo serverio adresą, ir ar ugniasienėje atidaryti 80 ir 443 prievadai.",
+    "backupTitle": "Atsarginės kopijos",
+    "backupP": "Įjunkite teikėjo serverio atsargines kopijas ir pridėkite naktinę portalo atsarginę kopiją, kurią taip pat nukopijuokite už serverio ribų. OBX_SECRET_KEY laikykite atskirai, slaptažodžių tvarkyklėje: be jo atsarginės kopijos visiškai atkurti neįmanoma. Vieną kartą išbandykite atkūrimą, kad žinotumėte, jog jis veikia.",
+    "updateTitle": "Atnaujinimai",
+    "updateP": "Padarykite atsarginę kopiją ir perskaitykite versijos pastabas. Tada paimkite naują versiją ir sukompiliuokite iš naujo; duomenų bazė atsinaujina pati, kai paleidžiamas portalas.",
+    "cfCliP": "Arba iš savo kompiuterio, naudojant Bun ir įrankį Wrangler:",
+    "cfDomainP": "Nuosavas domenas: pridėkite jį skiltyje Workers & Pages → jūsų Worker → Settings → Domains & Routes (domenas turi būti Cloudflare), nustatykite OBX_PUBLIC_URL į tą adresą ir įdiekite iš naujo.",
+    "cfBackupP": "Atsarginės kopijos: su Workers Paid D1 saugo 30 dienų duomenų bazės istoriją (Time Travel). Jei norite kopijos už Cloudflare ribų, reguliariai eksportuokite duomenų bazę. Nuotraukos yra R2; nukopijuokite bucket bet kuriuo S3 įrankiu.",
+    "cfUpdateP": "Atnaujinimai: sujunkite naują versiją į savo repozitorijos kopiją ir atlikite push; Cloudflare ją įdiegia iš naujo."
   },
   "retailers": {
     "h1": "Pardavėjams",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Kas sprendžia",
-        "p": "Kol nėra trijų nepriklausomų įgyvendinimų, kurie išlaiko atitikties testus, dėl pakeitimų po viešos diskusijos sprendžia steigėjas. Vėliau sprendimus perima valdymo grupė, turinti po vieną vietą kiekvienam įgyvendintojui ir bent vieną prekės ženklą bei vieną pardavėją."
+        "p": "Kol nėra bent trijų tikrai nepriklausomų įgyvendinimų, dėl pakeitimų po viešos diskusijos sprendžia steigėjas. Nepriklausomi reiškia, kad juos kuria ir prižiūri organizacijos, nesusijusios nei tarpusavyje, nei su steigėju; etaloniniai įgyvendinimai nesiskaito. Kiekvienas turi išlaikyti visą atitikties testų rinkinį ir veikti gamyboje bent metus, o kartu jie turi aptarnauti bent dešimt prekių ženklų ir penkis pardavėjus. Tik tada sprendimus perima valdymo grupė: po vieną vietą kiekvienam įgyvendintojui, bent du prekių ženklai ir du pardavėjai, taip pat steigėjas, kol jis pirmininkauja valdybai."
       },
       {
         "h": "Kaip daromi pakeitimai",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Licencijos",
-        "p": "Specifikacijai ir šios svetainės turiniui taikoma CC-BY-4.0 licencija. SDK, įrankiui obx ir bendrai žiniatinklio sąsajai – Apache-2.0. Trims portalo leidimams – AGPL-3.0, kad patobulinimai liktų atviri. Šios svetainės kodui – MIT."
+        "p": "Specifikacijai taikoma CC-BY-4.0 licencija. SDK, įrankiui obx ir bendrai žiniatinklio sąsajai – Apache-2.0. Trims portalo leidimams – AGPL-3.0, kad jų patobulinimai liktų atviri. Ši svetainė nėra platinama pagal atvirą licenciją: jos kodas, dizainas ir tekstai saugomi visomis teisėmis. Svetainėje pateikiamiems specifikacijos failams, pavyzdžiui, schemoms, šablonams ir pavyzdžiams, ir toliau taikoma CC-BY-4.0 licencija."
       }
     ],
     "nameTitle": "Apie pavadinimą",
@@ -891,7 +916,7 @@
     "securityLabel": "Saugumo problemos",
     "securityNote": "Apie pažeidžiamumus praneškite konfidencialiai šiuo adresu, o ne viešame issue.",
     "contentTitle": "Turinys ir licencijos",
-    "contentP": "Šią svetainę rašome kruopščiai, tačiau joje gali būti klaidų. Techninėms detalėms lemiama yra specifikacija. Tekstus galima pakartotinai naudoti pagal CC BY 4.0 licenciją nurodant autorystę; šios svetainės kodas platinamas pagal MIT licenciją."
+    "contentP": "Šią svetainę rašome kruopščiai, tačiau joje gali būti klaidų. Techninėms detalėms lemiama yra specifikacija. Šios svetainės kodas, dizainas ir tekstai saugomi autorių teisių, visos teisės saugomos, todėl prašome jų nekopijuoti. Galite pateikti nuorodą į bet kurį puslapį, cituoti trumpą ištrauką su nuoroda į šaltinį ir dalytis brošiūromis bei ženklais jų nekeisdami. Specifikacijos failams (schemoms, šablonams, pavyzdžiams) ir toliau taikoma CC-BY-4.0 licencija."
   },
   "cookies": {
     "h1": "Pranešimas apie slapukus",
@@ -1117,8 +1142,8 @@
           "name": "Nuosavas serveris Europoje",
           "runs": "Serveris pas Europos paslaugų teikėją, pavyzdžiui, Hetzner (Vokietija)",
           "need": "Serverio ir domeno vardo",
-          "setup": "Viena komanda, tada sąrankos vedlys",
-          "cost": "Serveris, kurį nuomojatės",
+          "setup": "Kelios komandos, tada sąrankos vedlys",
+          "cost": "Apie 5–15 € per mėnesį už nedidelį serverį su atsarginėmis kopijomis",
           "cta": "Įdiegti Europoje"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "Europos interneto talpinimas su PHP ir duomenų baze, pavyzdžiui, TransIP, Strato ar OVHcloud",
           "need": "FTP programos",
           "setup": "Įkelkite zip, tada diegimo programa",
-          "cost": "Talpinimas, už kurį jau mokate",
+          "cost": "Talpinimas, už kurį jau mokate (PHP 8.2 ar naujesnė)",
           "cta": "Įdiegti interneto talpinime"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers arba Google Cloud Run",
           "need": "Cloudflare arba Google Cloud paskyros",
           "setup": "Vienas paspaudimas arba vienas scenarijus",
-          "cost": "Paslaugos naudojimo kainos",
+          "cost": "Cloudflare: 5 doleriai per mėnesį ir saugykla. Google Cloud: pagal naudojimą",
           "cta": "Įdiegti kitame debesyje"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "Demonstracinis portalas turi viešą bandomąjį raktą, kuris gali tik skaityti. Katalogas išgalvotas ir atkuriamas kas valandą, todėl greitoji pradžia veikia iškart.",
     "devKey": "Viešas bandomasis raktas (tik skaityti)",
     "devOpen": "Atidaryti demonstracinį portalą"
+  },
+  "press": {
+    "h1": "Spaudai ir ženklai",
+    "lead": "Open Brand Exchange vienoje pastraipoje, kaip rašyti pavadinimą ir ženklai produktams, kurie veikia su standartu.",
+    "aboutTitle": "Open Brand Exchange vienoje pastraipoje",
+    "aboutP": "Open Brand Exchange – nemokamas atviras standartas, skirtas keistis produktų duomenimis ir nuotraukomis tarp prekių ženklų ir pardavėjų. Prekės ženklas paskelbia savo kolekciją vieną kartą, vienu standartiniu formatu, o kiekvienas pardavėjas ją gauna tiesiai į savo internetinę parduotuvę, PIM, kasų sistemą ar ERP arba atsisiunčia iš prekės ženklo portalo. Standartas yra ne pelno siekiantis ir skelbiamas {foundation} vardu.",
+    "nameTitle": "Pavadinimas",
+    "nameP": "Pirmą kartą rašykite visą pavadinimą „Open Brand Exchange“, vėliau galima „OBX“. Pavadinimas reiškia standartą, o ne įmonę ar produktą.",
+    "badgesTitle": "Ženklai suderinamiems produktams",
+    "badgesP": "Jūsų portalas, PIM, ERP, internetinės parduotuvės platforma ar paslauga išlaiko atitikties testų rinkinį? Tada galite rodyti vieną iš šių ženklų. Jie nemokami ir vienodi visiems įgyvendintojams.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Kvadratinis, mažoms vietoms",
+    "horizontal": "Horizontalus",
+    "stacked": "Vertikalus",
+    "light": "Šviesiam fonui",
+    "dark": "Tamsiam fonui",
+    "formatsNote": "Kiekvienas ženklas pateikiamas SVG formatu, kuris ryškus bet kokio dydžio ir geriausiai tinka žiniatinkliui, taip pat PNG formatu įprasto ir dvigubo dydžio.",
+    "rulesTitle": "Kaip naudoti ženklus",
+    "rules": [
+      "Tik produktui ar paslaugai, kuri išlaiko viešą dabartinės standarto versijos atitikties testų rinkinį. Paleiskite obx-conformance patys arba naudokite internetinį patikrinimą.",
+      "Nurodykite versiją, kurią testavote, ir testuokite iš naujo, kai išeina nauja versija. Jei jūsų produktas nebeišlaiko testų, ženklą pašalinkite.",
+      "Naudokite failus tokius, kokie jie yra. Nekeiskite spalvų, teksto ar proporcijų ir nesujunkite ženklo su kitu logotipu.",
+      "Ženklas reiškia, kad jūsų produktas veikia su standartu. Jis nereiškia, kad fondas remia, sertifikuoja ar rekomenduoja jūsų produktą ar įmonę.",
+      "Palikite aplink ženklą laisvos vietos, bent pusę jo aukščio, ir, kur įmanoma, susiekite jį su openbrandexchange.com."
+    ],
+    "checkLink": "Atidaryti internetinį patikrinimą",
+    "partnersLink": "Suderinamas ar oficialus partneris",
+    "contactTitle": "Kontaktai spaudai",
+    "contactP": "Esate žurnalistas ir turite klausimų, jums reikia citatos ar didesnės raiškos failo? Parašykite mums."
   }
 }

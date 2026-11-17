@@ -13,7 +13,7 @@
     "footerAbout": "Ingyenes, nyílt módszer, amellyel a márkák megoszthatják termékfotóikat és cikkadataikat viszonteladóikkal.",
     "footerMore": "Továbbiak",
     "footerSource": "Forráskód és specifikáció",
-    "footerLicence": "Ez a weboldal: tartalom CC-BY-4.0, kód MIT.",
+    "footerLicence": "© 2026 {foundation}. Minden jog fenntartva. A specifikáció CC-BY-4.0 licencű.",
     "editionCloudflare": "Portál Cloudflare-re",
     "editionGoogle": "Portál Google Cloudra és Dockerre",
     "editionHosting": "Portál webtárhelyre",
@@ -36,7 +36,8 @@
     "privacy": "Adatvédelem",
     "imprint": "Impresszum",
     "cookies": "Sütik",
-    "partners": "Partnerek"
+    "partners": "Partnerek",
+    "press": "Sajtóanyag és jelvények"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Legyen partnerünk",
       "description": "Ingyenes megfelelőségi teszt és a „Kompatibilis az Open Brand Exchange-dzsel” címke, vagy hivatalos partnerként való megjelenés évi 500 €-tól."
+    },
+    "press": {
+      "title": "Sajtóanyag és jelvények",
+      "description": "Az Open Brand Exchange egy bekezdésben, a név helyes írása, valamint jelvények a szabvánnyal működő termékekhez."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "A legújabb kiadás letöltése",
     "p3Title": "3. Saját szerver",
-    "p3P": "Saját szerveren vagy bármely felhőszolgáltatónál. Egyetlen paranccsal indul:",
-    "composeP": "Vagy mindjárt HTTPS-sel, Caddyn keresztül:",
+    "p3P": "Már saját reverse proxyt használ? Akkor csak a közzétett image-et indítsa el, és irányítsa a proxyt a 8080-as portra:",
     "envTitle": "Beállítások",
     "envPublicUrl": "a portál nyilvános címe",
-    "envSecretKey": "hosszú véletlen kulcs (openssl rand -hex 32); őrizze biztonságban",
+    "envSecretKey": "hosszú véletlen kulcs (openssl rand -base64 48). Tartson egy példányt a jelszókezelőjében: ha már vannak adatok, a kulcs nem módosítható",
     "envSetupCode": "opcionális: előre választott telepítési kód",
     "envPort": "port, alapértelmezés szerint 8080",
     "firstTitle": "Telepítés után: az első indítás",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Hozzon létre egy szervert a Hetznernél Nürnbergben, Falkensteinben vagy Helsinkiben, bekapcsolt biztonsági mentéssel.",
       "Irányítsa domainjét, például images.markaja.hu, a szerverre.",
-      "Telepítse a Dockert, és indítsa el a portált egyetlen paranccsal. A HTTPS automatikusan beáll.",
+      "Telepítse a Dockert, és indítsa el a portált néhány paranccsal. A HTTPS automatikusan beáll.",
       "Nyissa meg a domainjét, és menjen végig a beállítási varázslón.",
       "Opcionális: tárolja a képeket a Hetzner Object Storage-ban, ugyanazon a helyszínen.",
-      "Ütemezzen éjszakai biztonsági mentést. A frissítés egyetlen parancs."
+      "Ütemezzen éjszakai biztonsági mentést, és másolja a szerveren kívülre. A frissítés két parancs."
     ],
     "euGuide": "Lépésről lépésre: az Ön portálja a Hetznernél",
     "euData": "Ha a szerver és a tárhely EU-s helyszínen van, katalógusát, képeit és adatbázisát az EU-ban tárolják.",
@@ -455,7 +459,28 @@
     "altP": "Ugyanez a portál a Cloudflare Workersen és a Google Cloud Runon is fut. Válasszon európai régiót, ha a szolgáltatás kínál ilyet.",
     "partnerLink": "Partnerek megtekintése",
     "techTitle": "Műszaki részletek az IT-csapatának",
-    "techLead": "Parancsok, beállítások és telepítési útmutatók annak, aki a szervert beállítja."
+    "techLead": "Parancsok, beállítások és telepítési útmutatók annak, aki a szervert beállítja.",
+    "costTitle": "Mennyibe kerül nagyjából",
+    "costItems": [
+      "Saját szerver az EU-ban: havi kb. 5–15 € egy kis szerverért automatikus biztonsági mentéssel, például a Hetznernél. A szerver saját lemezén tárolt fotók nem kerülnek többe; egy nagy archívum objektumtárhelye terabájtonként havi néhány euróval növeli a költséget.",
+      "Hagyományos webtárhely: a csomag, amelyért már most is fizet, ha PHP 8.2 vagy újabb verzió fut rajta.",
+      "Cloudflare Workers: havi 5 dollár a Workers Paid csomagért, plusz R2-tárhely, havonta kb. 1,50 dollár 100 GB fotónként. Letöltési díj nincs.",
+      "Partner: a partner saját ára. Kérdezze meg, mit tartalmaz: frissítéseket, biztonsági mentéseket, saját domaint, és minden adat exportálását, ha továbblép.",
+      "A saját ideje: első alkalommal számoljon fél–egy nappal, beleértve a domaint és egy biztonsági mentés próba-visszaállítását, utána havonta kb. egy órával a frissítésekre és a mentések ellenőrzésére."
+    ],
+    "costNote": "Tájékoztató árak 2026 novemberéből, áfa nélkül. Választás előtt ellenőrizze a szolgáltató aktuális árait.",
+    "stepsTitle": "Lépésről lépésre egy új szerveren",
+    "stepsP": "Egy új Ubuntu-szerveren, amelyen nyitva vannak a 22-es, 80-as és 443-as portok, és amelyre a domain A és AAAA rekordjai már mutatnak. Ez ugyanaz a beállítás, mint a Hetzner-útmutatóban: lefordítja a portál legújabb kiadását, és HTTPS-hez Caddy-t tesz elé.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "A Caddy Let's Encrypt-tanúsítványt kér, amint a domain a szerverre mutat, automatikusan megújítja, és a http-t https-re irányítja át. Nincs tanúsítvány? Ellenőrizze a dig paranccsal, hogy a domain a szerver címét mutatja-e, és hogy a 80-as és 443-as port nyitva van-e a tűzfalon.",
+    "backupTitle": "Biztonsági mentés",
+    "backupP": "Kapcsolja be a szolgáltató szervermentését, és állítson be egy éjszakai portálmentést is, amelyet a szerveren kívülre is átmásol. Az OBX_SECRET_KEY kulcsot tartsa külön, egy jelszókezelőben: nélküle a mentés nem állítható vissza teljesen. Egyszer próbálja ki a visszaállítást, hogy biztosan tudja: működik.",
+    "updateTitle": "Frissítések",
+    "updateP": "Készítsen mentést, és olvassa el a kiadási megjegyzéseket. Ezután töltse le az új kiadást, és fordítsa újra; az adatbázis a portál indulásakor magától frissül.",
+    "cfCliP": "Vagy a saját számítógépéről, a Bun és a Wrangler eszköz segítségével:",
+    "cfDomainP": "Saját domain: adja hozzá itt: Workers & Pages → az Ön Workere → Settings → Domains & Routes (a domainnek a Cloudflare-en kell lennie), állítsa az OBX_PUBLIC_URL értékét erre a címre, és telepítse újra.",
+    "cfBackupP": "Biztonsági mentés: Workers Paid csomaggal a D1 30 napnyi adatbázis-előzményt őriz meg (Time Travel). Ha a Cloudflare-en kívül is szeretne másolatot, rendszeresen exportálja az adatbázist. A képek az R2-ben vannak; a bucketet bármilyen S3-eszközzel átmásolhatja.",
+    "cfUpdateP": "Frissítések: olvassza be az új kiadást a repository saját példányába, és pusholja; a Cloudflare újra telepíti."
   },
   "retailers": {
     "h1": "Viszonteladóknak",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Ki dönt",
-        "p": "Amíg nincs három független implementáció, amely átmegy a megfelelőségi teszteken, a változtatásokról nyilvános vita után az alapító dönt. Ezután egy irányítócsoport veszi át a döntést, implementálónként egy hellyel, és legalább egy márkával és egy viszonteladóval."
+        "p": "Amíg nincs legalább három valóban független implementáció, a változtatásokról nyilvános vita után az alapító dönt. Független az az implementáció, amelyet olyan szervezet fejleszt és tart karban, amely nem kapcsolódik sem a többi implementálóhoz, sem az alapítóhoz; a referencia-implementációk nem számítanak. Mindegyiknek át kell mennie a teljes megfelelőségi teszten, és legalább egy éve éles üzemben kell lennie, együttesen pedig legalább tíz márkát és öt viszonteladót kell kiszolgálniuk. Csak ezután veszi át a döntést egy irányítócsoport, implementálónként egy hellyel, legalább két márkával és két viszonteladóval, valamint az alapítóval, amíg ő az igazgatótanács elnöke."
       },
       {
         "h": "Hogyan születnek a változások",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Licencek",
-        "p": "A specifikáció és ennek az oldalnak a tartalma CC-BY-4.0 licencű. Az SDK, az obx eszköz és a közös webes felület Apache-2.0 licencű. A három portálkiadás AGPL-3.0 licencű, hogy a fejlesztések nyíltak maradjanak. Ennek az oldalnak a kódja MIT licencű."
+        "p": "A specifikáció CC-BY-4.0 licencű. Az SDK, az obx eszköz és a közös webes felület Apache-2.0 licencű. A három portálkiadás AGPL-3.0 licencű, így a rajtuk végzett fejlesztések nyíltak maradnak. Ez a weboldal nem nyílt licencű: kódjára, dizájnjára és szövegeire minden jog fenntartva. Az oldal által kiszolgált, a specifikációból származó fájlok, például a sémák, sablonok és példák, megtartják CC-BY-4.0 licencüket."
       }
     ],
     "nameTitle": "A névről",
@@ -891,7 +916,7 @@
     "securityLabel": "Biztonsági problémák",
     "securityNote": "A sebezhetőségeket bizalmasan erre a címre jelentse, ne nyilvános issue-ban.",
     "contentTitle": "Tartalom és licencek",
-    "contentP": "Gondosan írjuk ezt az oldalt, de hibákat tartalmazhat. Műszaki részletekben a specifikáció a mérvadó. A szövegek a CC BY 4.0 licenc alapján, a forrás megjelölésével újra felhasználhatók; az oldal kódja MIT-licencű."
+    "contentP": "Gondosan írjuk ezt az oldalt, de hibákat tartalmazhat. Műszaki részletekben a specifikáció a mérvadó. Az oldal kódja, dizájnja és szövegei szerzői jogi védelem alatt állnak, minden jog fenntartva, ezért kérjük, ne másolja őket. Bármelyik oldalra hivatkozhat linkkel, rövid részletet idézhet a forrásra mutató linkkel, és változtatás nélkül megoszthatja a brosúrákat és a jelvényeket. A specifikációból származó fájlok (sémák, sablonok, példák) továbbra is CC-BY-4.0 licencűek."
   },
   "cookies": {
     "h1": "Sütinyilatkozat",
@@ -1117,8 +1142,8 @@
           "name": "Saját szerver Európában",
           "runs": "Szerver egy európai szolgáltatónál, például a Hetznernél (Németország)",
           "need": "Egy szerver és egy domainnév",
-          "setup": "Egy parancs, majd a beállítási varázsló",
-          "cost": "A bérelt szerver",
+          "setup": "Néhány parancs, majd a beállítási varázsló",
+          "cost": "Havi kb. 5–15 € egy kis szerverért biztonsági mentéssel",
           "cta": "Telepítés Európában"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "Európai webtárhely PHP-val és adatbázissal, például TransIP, Strato vagy OVHcloud",
           "need": "Egy FTP-program",
           "setup": "Töltsön fel egy ZIP-et, majd futtassa a telepítőt",
-          "cost": "A tárhely, amelyért már most is fizet",
+          "cost": "A tárhely, amelyért már most is fizet (PHP 8.2 vagy újabb)",
           "cta": "Telepítés webtárhelyre"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers vagy Google Cloud Run",
           "need": "Egy Cloudflare- vagy Google Cloud-fiók",
           "setup": "Egy kattintás vagy egy szkript",
-          "cost": "A szolgáltatás használati díjai",
+          "cost": "Cloudflare: havi 5 dollár plusz tárhely. Google Cloud: használat szerint",
           "cta": "Telepítés másik felhőbe"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "A demóportálnak van egy nyilvános, csak olvasni tudó tesztkulcsa. A katalógus kitalált, és óránként visszaáll, így a gyorsindító útmutató azonnal működik.",
     "devKey": "Nyilvános tesztkulcs (csak olvasás)",
     "devOpen": "Demóportál megnyitása"
+  },
+  "press": {
+    "h1": "Sajtóanyag és jelvények",
+    "lead": "Az Open Brand Exchange egy bekezdésben, a név helyes írása, valamint jelvények a szabvánnyal működő termékekhez.",
+    "aboutTitle": "Az Open Brand Exchange egy bekezdésben",
+    "aboutP": "Az Open Brand Exchange ingyenes, nyílt szabvány a termékadatok és termékfotók megosztására márkák és viszonteladók között. A márka egyszer, egyetlen szabványos formátumban teszi közzé a kollekcióját, és minden viszonteladó közvetlenül a saját webáruházába, PIM-, pénztár- vagy ERP-rendszerébe kapja meg, vagy letölti a márka portáljáról. A szabvány nonprofit, és a(z) {foundation} nevében jelenik meg.",
+    "nameTitle": "A név",
+    "nameP": "Először írja ki teljesen: „Open Brand Exchange”, utána elég az „OBX”. A név a szabványt jelöli, nem egy céget vagy terméket.",
+    "badgesTitle": "Jelvények kompatibilis termékekhez",
+    "badgesP": "Átmegy a portálja, PIM- vagy ERP-rendszere, webáruház-platformja vagy szolgáltatása a megfelelőségi teszten? Akkor megjelenítheti valamelyik jelvényt. Ingyenesek, és minden implementáló számára ugyanazok.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Négyzetes, kis helyekre",
+    "horizontal": "Vízszintes",
+    "stacked": "Egymás alatti",
+    "light": "Világos háttérre",
+    "dark": "Sötét háttérre",
+    "formatsNote": "Minden jelvény elérhető SVG-ben, amely bármilyen méretben éles és weben a legjobb, valamint PNG-ben normál és dupla méretben.",
+    "rulesTitle": "A jelvények használata",
+    "rules": [
+      "Csak olyan termékhez vagy szolgáltatáshoz, amely átmegy a szabvány aktuális verziójának nyilvános megfelelőségi tesztjén. Futtassa le saját maga az obx-conformance tesztet, vagy használja az online ellenőrzést.",
+      "Adja meg a tesztelt verziót, és új verzió megjelenésekor teszteljen újra. Ha a terméke már nem megy át, vegye le a jelvényt.",
+      "A fájlokat változtatás nélkül használja. Ne módosítsa a színeket, a szöveget vagy az arányokat, és ne vonja össze a jelvényt más logóval.",
+      "A jelvény azt jelzi, hogy a terméke működik a szabvánnyal. Nem jelenti azt, hogy az alapítvány támogatja, tanúsítja vagy ajánlja a termékét vagy a cégét.",
+      "Hagyjon szabad helyet a jelvény körül, legalább a magassága felét, és ahol lehet, linkelje az openbrandexchange.com oldalra."
+    ],
+    "checkLink": "Az online ellenőrzés megnyitása",
+    "partnersLink": "Kompatibilis vagy hivatalos partner",
+    "contactTitle": "Sajtókapcsolat",
+    "contactP": "Újságíróként kérdése van, vagy idézetre, illetve nagyobb felbontású fájlra van szüksége? Írjon nekünk e-mailt."
   }
 }

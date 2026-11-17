@@ -13,7 +13,7 @@
     "footerAbout": "Maksuton ja avoin tapa brändeille jakaa tuotekuvat ja tuotetiedot jälleenmyyjilleen.",
     "footerMore": "Lisää",
     "footerSource": "Lähdekoodi ja määrittely",
-    "footerLicence": "Tämä sivusto: sisältö CC-BY-4.0, koodi MIT.",
+    "footerLicence": "© 2026 {foundation}. Kaikki oikeudet pidätetään. Määrittelyn lisenssi on CC-BY-4.0.",
     "editionCloudflare": "Portaali Cloudflarelle",
     "editionGoogle": "Portaali Google Cloudille ja Dockerille",
     "editionHosting": "Portaali webhotelliin",
@@ -36,7 +36,8 @@
     "privacy": "Tietosuoja",
     "imprint": "Julkaisijatiedot",
     "cookies": "Evästeet",
-    "partners": "Kumppanit"
+    "partners": "Kumppanit",
+    "press": "Mediapaketti ja merkit"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Ryhdy kumppaniksi",
       "description": "Maksuton yhdenmukaisuustesti ja merkintä ”Yhteensopiva Open Brand Exchangen kanssa” tai paikka virallisena kumppanina alkaen 500 € vuodessa."
+    },
+    "press": {
+      "title": "Mediapaketti ja merkit",
+      "description": "Open Brand Exchange yhdessä kappaleessa, nimen oikea kirjoitusasu sekä merkit tuotteille, jotka toimivat standardin kanssa."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "Lataa uusin julkaisu",
     "p3Title": "3. Oma palvelimesi",
-    "p3P": "Omalla palvelimellasi tai minkä tahansa pilvipalvelun tarjoajan luona. Alkuun pääsee yhdellä komennolla:",
-    "composeP": "Tai HTTPS mukana Caddyn kautta:",
+    "p3P": "Onko sinulla jo oma käänteinen välityspalvelin? Käynnistä silloin vain julkaistu image ja ohjaa välityspalvelin porttiin 8080:",
     "envTitle": "Asetukset",
     "envPublicUrl": "portaalisi julkinen osoite",
-    "envSecretKey": "pitkä satunnainen avain (openssl rand -hex 32); säilytä se huolella",
+    "envSecretKey": "pitkä satunnainen avain (openssl rand -base64 48). Säilytä kopio salasanojen hallintaohjelmassa: avainta ei voi vaihtaa, kun portaalissa on dataa",
     "envSetupCode": "valinnainen: etukäteen valittu asennuskoodi",
     "envPort": "portti, oletuksena 8080",
     "firstTitle": "Asennuksen jälkeen: ensimmäinen käynnistys",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Luo palvelin Hetznerillä Nürnbergiin, Falkensteiniin tai Helsinkiin, varmuuskopiot päällä.",
       "Ohjaa verkkotunnuksesi, esimerkiksi images.brandisi.fi, palvelimelle.",
-      "Asenna Docker ja käynnistä portaali yhdellä komennolla. HTTPS järjestyy automaattisesti.",
+      "Asenna Docker ja käynnistä portaali muutamalla komennolla. HTTPS järjestyy automaattisesti.",
       "Avaa verkkotunnuksesi ja käy läpi käyttöönottoavustaja.",
       "Valinnainen: säilytä kuvat Hetzner Object Storagessa, samassa sijainnissa.",
-      "Ajasta yöllinen varmuuskopio. Päivitys on yksi komento."
+      "Ajasta yöllinen varmuuskopio ja kopioi se pois palvelimelta. Päivitys vaatii kaksi komentoa."
     ],
     "euGuide": "Vaiheittainen ohje: portaalisi Hetznerillä",
     "euData": "Kun palvelin ja tallennustila ovat EU-sijainnissa, luettelosi, kuvasi ja tietokantasi säilytetään EU:ssa.",
@@ -455,7 +459,28 @@
     "altP": "Sama portaali toimii myös Cloudflare Workersissa ja Google Cloud Runissa. Valitse Euroopassa sijaitseva alue, jos palvelu tarjoaa sellaisen.",
     "partnerLink": "Katso kumppanit",
     "techTitle": "Tekniset tiedot IT-tiimillesi",
-    "techLead": "Komennot, asetukset ja asennusohjeet sille, joka pystyttää palvelimen."
+    "techLead": "Komennot, asetukset ja asennusohjeet sille, joka pystyttää palvelimen.",
+    "costTitle": "Mitä se suunnilleen maksaa",
+    "costItems": [
+      "Oma palvelin EU:ssa: noin 5–15 € kuukaudessa pienestä palvelimesta automaattisine varmuuskopioineen esimerkiksi Hetzneriltä. Palvelimen omalla levyllä olevat kuvat eivät maksa mitään lisää; objektitallennus suurelle arkistolle maksaa muutaman euron lisää kuukaudessa teratavua kohden.",
+      "Tavallinen webhotelli: paketti, josta jo maksat, kunhan siinä on PHP 8.2 tai uudempi.",
+      "Cloudflare Workers: 5 dollaria kuukaudessa Workers Paid -tilauksesta sekä R2-tallennustila, noin 1,50 dollaria kuukaudessa 100 Gt:n kuvamäärää kohden. Latausmaksuja ei ole.",
+      "Kumppani: kumppanin oma hinta. Kysy, mitä siihen sisältyy: päivitykset, varmuuskopiot, oma verkkotunnus ja kaiken tiedon vienti, jos lopetat.",
+      "Oma aikasi: varaa ensimmäisellä kerralla puolesta päivästä päivään, mukaan lukien verkkotunnus ja varmuuskopion palautuksen testaus, ja noin tunti kuukaudessa päivityksiin ja varmuuskopioiden tarkistamiseen."
+    ],
+    "costNote": "Suuntaa antavat hinnat marraskuulta 2026, ilman arvonlisäveroa. Tarkista palveluntarjoajan ajantasaiset hinnat ennen valintaa.",
+    "stepsTitle": "Vaihe vaiheelta uudella palvelimella",
+    "stepsP": "Uudella Ubuntu-palvelimella, jossa portit 22, 80 ja 443 ovat auki ja verkkotunnuksesi A- ja AAAA-tietueet osoittavat jo palvelimeen. Tämä on sama kokoonpano kuin Hetzner-ohjeessa: se rakentaa portaalin uusimman julkaisun ja asettaa Caddyn sen eteen HTTPS:ää varten.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy hakee Let's Encrypt -varmenteen heti, kun verkkotunnuksesi osoittaa palvelimeen, uusii sen automaattisesti ja ohjaa http-liikenteen https:ään. Eikö varmennetta tule? Tarkista dig-komennolla, että verkkotunnus näyttää palvelimen osoitteen, ja että portit 80 ja 443 ovat auki palomuurissa.",
+    "backupTitle": "Varmuuskopiot",
+    "backupP": "Ota käyttöön palveluntarjoajan palvelinvarmuuskopiot ja lisää yöllinen portaalin varmuuskopio, jonka kopioit myös pois palvelimelta. Säilytä OBX_SECRET_KEY erikseen salasanojen hallintaohjelmassa: ilman sitä varmuuskopiota ei voi palauttaa kokonaan. Kokeile palautusta kerran, jotta tiedät sen toimivan.",
+    "updateTitle": "Päivitykset",
+    "updateP": "Ota varmuuskopio ja lue julkaisutiedot. Hae sitten uusi julkaisu ja rakenna uudelleen; tietokanta päivittyy itsestään, kun portaali käynnistyy.",
+    "cfCliP": "Tai omalta tietokoneeltasi Bunin ja Wrangler-työkalun avulla:",
+    "cfDomainP": "Oma verkkotunnus: lisää se kohdassa Workers & Pages → oma Workerisi → Settings → Domains & Routes (verkkotunnuksen on oltava Cloudflaressa), aseta OBX_PUBLIC_URL tähän osoitteeseen ja julkaise uudelleen.",
+    "cfBackupP": "Varmuuskopiot: Workers Paid -tilauksella D1 säilyttää tietokannan historian 30 päivän ajalta (Time Travel). Jos haluat kopion Cloudflaren ulkopuolelle, vie tietokanta säännöllisesti. Kuvat ovat R2:ssa; kopioi bucket millä tahansa S3-työkalulla.",
+    "cfUpdateP": "Päivitykset: yhdistä uusi julkaisu omaan kopioosi repositoriosta ja tee push; Cloudflare julkaisee sen uudelleen."
   },
   "retailers": {
     "h1": "Jälleenmyyjille",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Kuka päättää",
-        "p": "Kunnes on kolme riippumatonta toteutusta, jotka läpäisevät yhteensopivuustestit, muutoksista päättää perustaja julkisen keskustelun jälkeen. Sen jälkeen päätösvallan ottaa ohjausryhmä, jossa on yksi paikka kutakin toteuttajaa kohden sekä vähintään yksi brändi ja yksi jälleenmyyjä."
+        "p": "Kunnes on olemassa vähintään kolme aidosti riippumatonta toteutusta, muutoksista päättää perustaja julkisen keskustelun jälkeen. Riippumaton tarkoittaa, että toteutuksen rakentaa ja sitä ylläpitää organisaatio, joka ei ole sidoksissa muihin toteuttajiin eikä perustajaan; referenssitoteutuksia ei lasketa. Jokaisen toteutuksen on läpäistävä koko yhteensopivuustesti ja oltava tuotantokäytössä vähintään vuoden, ja yhdessä niiden on palveltava vähintään kymmentä brändiä ja viittä jälleenmyyjää. Vasta sitten päätösvallan ottaa ohjausryhmä, jossa on yksi paikka kutakin toteuttajaa kohden, vähintään kaksi brändiä ja kaksi jälleenmyyjää sekä perustaja niin kauan kuin hän toimii hallituksen puheenjohtajana."
       },
       {
         "h": "Miten muutokset tehdään",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Lisenssit",
-        "p": "Määrittely ja tämän sivuston sisältö ovat CC-BY-4.0. SDK, obx-työkalu ja yhteinen verkkokäyttöliittymä ovat Apache-2.0. Kolme portaaliversiota ovat AGPL-3.0, jotta parannukset pysyvät avoimina. Tämän sivuston koodi on MIT."
+        "p": "Määrittelyn lisenssi on CC-BY-4.0. SDK:n, obx-työkalun ja yhteisen verkkokäyttöliittymän lisenssi on Apache-2.0. Kolmen portaaliversion lisenssi on AGPL-3.0, joten niihin tehdyt parannukset pysyvät avoimina. Tällä sivustolla ei ole avointa lisenssiä: kaikki oikeudet sen koodiin, ulkoasuun ja teksteihin pidätetään. Sivuston jakamat määrittelyn tiedostot, kuten skeemat, mallipohjat ja esimerkit, säilyttävät CC-BY-4.0-lisenssinsä."
       }
     ],
     "nameTitle": "Nimestä",
@@ -891,7 +916,7 @@
     "securityLabel": "Tietoturvaongelmat",
     "securityNote": "Ilmoita haavoittuvuuksista luottamuksellisesti tähän osoitteeseen, älä julkisessa issuessa.",
     "contentTitle": "Sisältö ja lisenssit",
-    "contentP": "Kirjoitamme tätä sivustoa huolella, mutta siinä voi olla virheitä. Teknisissä yksityiskohdissa määrittely on ratkaiseva. Tekstejä saa käyttää uudelleen CC BY 4.0 -lisenssillä lähde mainiten; sivuston koodi on MIT-lisenssin alainen."
+    "contentP": "Kirjoitamme tätä sivustoa huolella, mutta siinä voi olla virheitä. Teknisissä yksityiskohdissa määrittely on ratkaiseva. Sivuston koodi, ulkoasu ja tekstit ovat tekijänoikeuden suojaamia, ja kaikki oikeudet pidätetään, joten älä kopioi niitä. Voit linkittää mille tahansa sivulle, lainata lyhyen katkelman linkin kera lähteeseen sekä jakaa esitteitä ja merkkejä muuttamattomina. Määrittelyn tiedostot (skeemat, mallipohjat, esimerkit) ovat edelleen CC-BY-4.0."
   },
   "cookies": {
     "h1": "Evästeseloste",
@@ -1117,8 +1142,8 @@
           "name": "Oma palvelin Euroopassa",
           "runs": "Palvelin eurooppalaiselta palveluntarjoajalta, kuten Hetzner (Saksa)",
           "need": "Palvelin ja verkkotunnus",
-          "setup": "Yksi komento, sitten käyttöönottoavustaja",
-          "cost": "Vuokraamasi palvelin",
+          "setup": "Muutama komento, sitten käyttöönottoavustaja",
+          "cost": "Noin 5–15 € kuukaudessa pienestä palvelimesta varmuuskopioineen",
           "cta": "Ota käyttöön Euroopassa"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "Eurooppalainen webhotelli, jossa on PHP ja tietokanta, kuten TransIP, Strato tai OVHcloud",
           "need": "FTP-ohjelma",
           "setup": "Lataa zip, sitten asennusohjelma",
-          "cost": "Webhotelli, josta jo maksat",
+          "cost": "Webhotelli, josta jo maksat (PHP 8.2 tai uudempi)",
           "cta": "Ota käyttöön webhotellissa"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers tai Google Cloud Run",
           "need": "Cloudflare- tai Google Cloud -tili",
           "setup": "Yksi klikkaus tai yksi skripti",
-          "cost": "Palvelun käyttöhinnat",
+          "cost": "Cloudflare: 5 dollaria kuukaudessa sekä tallennustila. Google Cloud: käytön mukaan",
           "cta": "Ota käyttöön toisessa pilvessä"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "Demoportaalissa on julkinen testiavain, joka voi vain lukea. Luettelo on kuvitteellinen ja palautetaan joka tunti, joten pikaopas toimii heti.",
     "devKey": "Julkinen testiavain (vain luku)",
     "devOpen": "Avaa demoportaali"
+  },
+  "press": {
+    "h1": "Mediapaketti ja merkit",
+    "lead": "Open Brand Exchange yhdessä kappaleessa, nimen oikea kirjoitusasu sekä merkit tuotteille, jotka toimivat standardin kanssa.",
+    "aboutTitle": "Open Brand Exchange yhdessä kappaleessa",
+    "aboutP": "Open Brand Exchange on maksuton ja avoin standardi tuotetietojen ja tuotekuvien jakamiseen brändien ja jälleenmyyjien välillä. Brändi julkaisee mallistonsa kerran, yhdessä vakiomuodossa, ja jokainen jälleenmyyjä saa sen suoraan verkkokauppaansa, PIM-, kassa- tai ERP-järjestelmäänsä tai lataa sen brändin portaalista. Standardi on voittoa tavoittelematon, ja sen julkaisee {foundation}.",
+    "nameTitle": "Nimi",
+    "nameP": "Kirjoita ensimmäisellä kerralla koko nimi ”Open Brand Exchange”, sen jälkeen ”OBX” riittää. Nimi tarkoittaa standardia, ei yritystä tai tuotetta.",
+    "badgesTitle": "Merkit yhteensopiville tuotteille",
+    "badgesP": "Läpäiseekö portaalisi, PIM- tai ERP-järjestelmäsi, verkkokauppa-alustasi tai palvelusi yhteensopivuustestin? Silloin voit käyttää jotakin näistä merkeistä. Ne ovat maksuttomia ja samat kaikille toteuttajille.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Neliö, pieniin tiloihin",
+    "horizontal": "Vaakamalli",
+    "stacked": "Pinottu",
+    "light": "Vaaleille taustoille",
+    "dark": "Tummille taustoille",
+    "formatsNote": "Jokainen merkki on saatavilla SVG-muodossa, joka pysyy terävänä kaikissa kooissa ja sopii parhaiten verkkoon, sekä PNG-muodossa normaalikokoisena ja kaksinkertaisena.",
+    "rulesTitle": "Näin käytät merkkejä",
+    "rules": [
+      "Vain tuotteelle tai palvelulle, joka läpäisee standardin nykyisen version julkisen yhteensopivuustestin. Aja obx-conformance itse tai käytä verkkotarkistusta.",
+      "Mainitse testaamasi versio ja testaa uudelleen, kun uusi versio julkaistaan. Jos tuotteesi ei enää läpäise testiä, poista merkki.",
+      "Käytä tiedostoja sellaisinaan. Älä muuta värejä, tekstiä tai mittasuhteita äläkä yhdistä merkkiä toiseen logoon.",
+      "Merkki kertoo, että tuotteesi toimii standardin kanssa. Se ei tarkoita, että säätiö tukisi, sertifioisi tai suosittelisi tuotettasi tai yritystäsi.",
+      "Jätä merkin ympärille tyhjää tilaa vähintään puolet sen korkeudesta ja linkitä se mahdollisuuksien mukaan osoitteeseen openbrandexchange.com."
+    ],
+    "checkLink": "Avaa verkkotarkistus",
+    "partnersLink": "Yhteensopiva tai virallinen kumppani",
+    "contactTitle": "Mediayhteydet",
+    "contactP": "Onko sinulla toimittajana kysyttävää, tai tarvitsetko lainauksen tai tiedoston suuremmalla tarkkuudella? Lähetä meille sähköpostia."
   }
 }

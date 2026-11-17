@@ -2859,3 +2859,39 @@ h3.ways-title {
 .ways-after-flow {
   margin-top: var(--s-7);
 }
+
+/* Press kit: the badges, each on the background it is made for. */
+.badge-grid {
+  list-style: none;
+  padding: 0;
+  margin: var(--s-4) 0 var(--s-6);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: var(--s-4);
+}
+.badge-item {
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.badge-preview {
+  display: grid;
+  place-items: center;
+  min-height: 9rem;
+  padding: var(--s-5) var(--s-4);
+  background: #f7f6f2;
+}
+.badge-dark .badge-preview {
+  background: #2a2926;
+}
+.badge-preview img {
+  max-width: 100%;
+  height: auto;
+}
+.badge-label,
+.badge-files {
+  margin: 0;
+  padding: var(--s-2) var(--s-4) 0;
+}
+.badge-files {
+  padding-bottom: var(--s-3);
+}

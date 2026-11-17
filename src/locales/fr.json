@@ -13,7 +13,7 @@
     "footerAbout": "Une manière ouverte et gratuite pour les marques de partager leurs visuels produits et leurs données articles avec leurs revendeurs.",
     "footerMore": "Plus",
     "footerSource": "Code source et spécification",
-    "footerLicence": "Ce site : contenu CC-BY-4.0, code MIT.",
+    "footerLicence": "© 2026 {foundation}. Tous droits réservés. La spécification est sous CC-BY-4.0.",
     "editionCloudflare": "Portail pour Cloudflare",
     "editionGoogle": "Portail pour Google Cloud et Docker",
     "editionHosting": "Portail pour hébergement web",
@@ -36,7 +36,8 @@
     "privacy": "Confidentialité",
     "imprint": "Mentions légales",
     "cookies": "Cookies",
-    "partners": "Partenaires"
+    "partners": "Partenaires",
+    "press": "Kit presse et badges"
   },
   "meta": {
     "home": {
@@ -94,6 +95,10 @@
     "partners": {
       "title": "Devenir partenaire",
       "description": "Un test de conformité gratuit et le label « Compatible avec Open Brand Exchange », ou une présence comme partenaire officiel à partir de 500 € par an."
+    },
+    "press": {
+      "title": "Kit presse et badges",
+      "description": "Open Brand Exchange en un paragraphe, comment écrire le nom, et les badges pour les produits qui fonctionnent avec le standard."
     }
   },
   "home": {
@@ -409,11 +414,10 @@
     ],
     "phpDownload": "Télécharger la dernière version",
     "p3Title": "3. Votre propre serveur",
-    "p3P": "Sur votre propre serveur ou chez n'importe quel fournisseur cloud. Tout commence par une seule commande :",
-    "composeP": "Ou avec HTTPS inclus, via Caddy :",
+    "p3P": "Vous avez déjà votre propre reverse proxy ? Démarrez alors uniquement l'image publiée et faites pointer le proxy vers le port 8080 :",
     "envTitle": "Paramètres",
     "envPublicUrl": "l'adresse publique de votre portail",
-    "envSecretKey": "une longue clé aléatoire (openssl rand -hex 32) ; conservez-la précieusement",
+    "envSecretKey": "une longue clé aléatoire (openssl rand -base64 48). Gardez-en une copie dans votre gestionnaire de mots de passe : elle ne peut plus être changée dès qu'il y a des données",
     "envSetupCode": "facultatif : un code d'installation choisi à l'avance",
     "envPort": "port, 8080 par défaut",
     "firstTitle": "Après l'installation : le premier démarrage",
@@ -442,10 +446,10 @@
     "euSteps": [
       "Créez un serveur chez Hetzner à Nuremberg, Falkenstein ou Helsinki, avec les sauvegardes activées.",
       "Faites pointer votre domaine, par exemple images.votremarque.fr, vers le serveur.",
-      "Installez Docker et démarrez le portail avec une seule commande. Le HTTPS est configuré automatiquement.",
+      "Installez Docker et démarrez le portail en quelques commandes. Le HTTPS est configuré automatiquement.",
       "Ouvrez votre domaine et suivez l'assistant de configuration.",
       "Facultatif : stockez les images dans Hetzner Object Storage, au même emplacement.",
-      "Planifiez une sauvegarde chaque nuit. Une mise à jour tient en une commande."
+      "Planifiez une sauvegarde chaque nuit et copiez-la hors du serveur. Une mise à jour tient en deux commandes."
     ],
     "euGuide": "Guide pas à pas : votre portail chez Hetzner",
     "euData": "Avec le serveur et le stockage dans un emplacement de l'UE, votre catalogue, vos images et votre base de données sont stockés dans l'UE.",
@@ -455,7 +459,28 @@
     "altP": "Le même portail fonctionne aussi sur Cloudflare Workers et sur Google Cloud Run. Choisissez une région en Europe lorsque le service en propose une.",
     "partnerLink": "Voir les partenaires",
     "techTitle": "Détails techniques pour votre équipe informatique",
-    "techLead": "Commandes, paramètres et guides d'installation pour la personne qui met en place le serveur."
+    "techLead": "Commandes, paramètres et guides d'installation pour la personne qui met en place le serveur.",
+    "costTitle": "Combien ça coûte, à peu près",
+    "costItems": [
+      "Votre propre serveur dans l'UE : environ 5 à 15 € par mois pour un petit serveur avec sauvegardes automatiques, chez un hébergeur comme Hetzner. Les photos sur le disque du serveur ne coûtent rien de plus ; un stockage objet pour une grande archive ajoute quelques euros par mois et par téraoctet.",
+      "Hébergement web classique : l'offre que vous payez déjà, à condition qu'elle propose PHP 8.2 ou plus récent.",
+      "Cloudflare Workers : 5 dollars par mois pour Workers Paid, plus le stockage R2 à environ 1,50 dollar par mois pour 100 Go de photos. Il n'y a pas de frais de téléchargement.",
+      "Un partenaire : son propre tarif. Demandez ce qui est inclus : mises à jour, sauvegardes, votre propre domaine, et l'export de toutes vos données si vous partez.",
+      "Votre temps : comptez une demi-journée à une journée la première fois, domaine et test de restauration d'une sauvegarde compris. Ensuite, environ une heure par mois pour les mises à jour et la vérification des sauvegardes."
+    ],
+    "costNote": "Prix indicatifs de novembre 2026, hors TVA. Vérifiez les tarifs actuels de l'hébergeur avant de choisir.",
+    "stepsTitle": "Pas à pas sur un nouveau serveur",
+    "stepsP": "Sur un nouveau serveur Ubuntu avec les ports 22, 80 et 443 ouverts, et les enregistrements A et AAAA de votre domaine pointant déjà vers lui. C'est la même configuration que dans le guide Hetzner : elle compile la dernière version du portail et place Caddy devant pour le HTTPS.",
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy demande un certificat Let's Encrypt dès que votre domaine pointe vers le serveur, le renouvelle automatiquement et redirige http vers https. Pas de certificat ? Vérifiez avec dig que le domaine renvoie l'adresse du serveur, et que les ports 80 et 443 sont ouverts dans le pare-feu.",
+    "backupTitle": "Sauvegardes",
+    "backupP": "Activez les sauvegardes serveur de votre hébergeur, et ajoutez une sauvegarde du portail chaque nuit, que vous copiez aussi hors du serveur. Conservez OBX_SECRET_KEY à part, dans un gestionnaire de mots de passe : sans elle, une sauvegarde ne peut pas être entièrement restaurée. Testez une restauration une fois, pour être sûr qu'elle fonctionne.",
+    "updateTitle": "Mises à jour",
+    "updateP": "Faites une sauvegarde et lisez les notes de version. Récupérez ensuite la nouvelle version et recompilez ; la base de données se met à jour d'elle-même au démarrage du portail.",
+    "cfCliP": "Ou depuis votre propre ordinateur, avec Bun et l'outil Wrangler :",
+    "cfDomainP": "Votre propre domaine : ajoutez-le sous Workers & Pages → votre Worker → Settings → Domains & Routes (le domaine doit être sur Cloudflare), définissez OBX_PUBLIC_URL sur cette adresse et redéployez.",
+    "cfBackupP": "Sauvegardes : avec Workers Paid, D1 conserve 30 jours d'historique de la base de données (Time Travel). Pour une copie hors de Cloudflare, exportez régulièrement la base de données. Les images sont dans R2 ; copiez le bucket avec n'importe quel outil S3.",
+    "cfUpdateP": "Mises à jour : fusionnez la nouvelle version dans votre copie du dépôt et poussez ; Cloudflare la redéploie."
   },
   "retailers": {
     "h1": "Pour les revendeurs",
@@ -816,7 +841,7 @@
     "sections": [
       {
         "h": "Qui décide",
-        "p": "Tant qu'il n'existe pas trois implémentations indépendantes qui réussissent la suite de conformité, le fondateur décide des changements, après discussion publique. Ensuite, un comité de pilotage prend le relais, avec un siège par implémenteur et au moins une marque et un revendeur."
+        "p": "Tant qu'il n'existe pas au moins trois implémentations vraiment indépendantes, le fondateur décide des changements, après discussion publique. Indépendantes signifie développées et maintenues par des organisations sans lien entre elles ni avec le fondateur ; les implémentations de référence ne comptent pas. Chacune doit réussir la suite de conformité complète et être en production depuis au moins un an, et ensemble elles doivent servir au moins dix marques et cinq revendeurs. Ce n'est qu'alors qu'un comité de pilotage prend le relais, avec un siège par implémenteur, au moins deux marques et deux revendeurs, et le fondateur tant qu'il préside le conseil d'administration."
       },
       {
         "h": "Comment les changements se font",
@@ -828,7 +853,7 @@
       },
       {
         "h": "Licences",
-        "p": "La spécification et le contenu de ce site sont sous CC-BY-4.0. Le SDK, l'outil obx et l'interface web partagée sont sous Apache-2.0. Les trois éditions du portail sont sous AGPL-3.0, pour que les améliorations restent ouvertes. Le code de ce site est sous MIT."
+        "p": "La spécification est sous CC-BY-4.0. Le SDK, l'outil obx et l'interface web partagée sont sous Apache-2.0. Les trois éditions du portail sont sous AGPL-3.0, pour que les améliorations restent ouvertes. Ce site n'est pas sous licence libre : son code, son design et ses textes sont protégés, tous droits réservés. Les fichiers de la spécification qu'il diffuse, comme les schémas, les modèles et les exemples, conservent leur licence CC-BY-4.0."
       }
     ],
     "nameTitle": "À propos du nom",
@@ -891,7 +916,7 @@
     "securityLabel": "Problèmes de sécurité",
     "securityNote": "Signalez les vulnérabilités de façon confidentielle à cette adresse, pas dans un ticket public.",
     "contentTitle": "Contenu et licences",
-    "contentP": "Nous rédigeons ce site avec soin, mais il peut contenir des erreurs. Pour les détails techniques, la spécification fait foi. Les textes peuvent être réutilisés sous CC BY 4.0 avec attribution ; le code de ce site est sous licence MIT."
+    "contentP": "Nous rédigeons ce site avec soin, mais il peut contenir des erreurs. Pour les détails techniques, la spécification fait foi. Le code, le design et les textes de ce site sont protégés par le droit d'auteur, tous droits réservés : merci de ne pas les copier. Vous pouvez faire un lien vers n'importe quelle page, citer un court passage avec un lien vers la source, et partager les brochures et les badges sans les modifier. Les fichiers de la spécification (schémas, modèles, exemples) restent sous CC-BY-4.0."
   },
   "cookies": {
     "h1": "Politique en matière de cookies",
@@ -1117,8 +1142,8 @@
           "name": "Votre propre serveur en Europe",
           "runs": "Un serveur chez un hébergeur européen comme Hetzner (Allemagne)",
           "need": "Un serveur et un nom de domaine",
-          "setup": "Une commande, puis l'assistant de configuration",
-          "cost": "Le serveur que vous louez",
+          "setup": "Quelques commandes, puis l'assistant de configuration",
+          "cost": "Environ 5 à 15 € par mois pour un petit serveur avec sauvegardes",
           "cta": "Installer en Europe"
         },
         {
@@ -1127,7 +1152,7 @@
           "runs": "Un hébergement web européen avec PHP et une base de données, comme TransIP, Strato ou OVHcloud",
           "need": "Un logiciel FTP",
           "setup": "Envoyez un zip, puis lancez l'installateur",
-          "cost": "L'hébergement que vous payez déjà",
+          "cost": "L'hébergement que vous payez déjà (PHP 8.2 ou plus récent)",
           "cta": "Installer sur un hébergement web"
         },
         {
@@ -1145,7 +1170,7 @@
           "runs": "Cloudflare Workers, ou Google Cloud Run",
           "need": "Un compte Cloudflare ou Google Cloud",
           "setup": "Un clic ou un script",
-          "cost": "Les tarifs d'usage du service",
+          "cost": "Cloudflare : 5 dollars par mois plus le stockage. Google Cloud : selon l'usage",
           "cta": "Installer sur un autre cloud"
         }
       ],
@@ -1490,5 +1515,35 @@
     "devP": "Le portail de démo a une clé de test publique qui ne peut que lire. Son catalogue est fictif et réinitialisé toutes les heures : le guide de démarrage fonctionne tout de suite.",
     "devKey": "Clé de test publique (lecture seule)",
     "devOpen": "Ouvrir le portail de démo"
+  },
+  "press": {
+    "h1": "Kit presse et badges",
+    "lead": "Open Brand Exchange en un paragraphe, comment écrire le nom, et les badges pour les produits qui fonctionnent avec le standard.",
+    "aboutTitle": "Open Brand Exchange en un paragraphe",
+    "aboutP": "Open Brand Exchange est un standard ouvert et gratuit pour échanger données et photos produit entre marques et revendeurs. Une marque publie sa collection une seule fois, dans un format standard. Chaque revendeur la reçoit directement dans sa boutique en ligne, son PIM, sa caisse ou son ERP, ou la télécharge depuis l'espace revendeurs de la marque. Le standard est à but non lucratif et publié au nom de l'{foundation}.",
+    "nameTitle": "Le nom",
+    "nameP": "Écrivez « Open Brand Exchange » en entier la première fois ; ensuite, « OBX » suffit. Le nom désigne le standard, pas une entreprise ni un produit.",
+    "badgesTitle": "Badges pour les produits compatibles",
+    "badgesP": "Votre portail, PIM, ERP, plateforme e-commerce ou service réussit la suite de conformité ? Vous pouvez alors afficher l'un de ces badges. Ils sont gratuits et identiques pour tous les implémenteurs.",
+    "worksWith": "Works with Open Brand Exchange",
+    "compatible": "OBX compatible",
+    "square": "Carré, pour les petits espaces",
+    "horizontal": "Horizontal",
+    "stacked": "Empilé",
+    "light": "Pour fonds clairs",
+    "dark": "Pour fonds sombres",
+    "formatsNote": "Chaque badge existe en SVG, net à toutes les tailles et idéal pour le web, et en PNG en taille normale et double.",
+    "rulesTitle": "Comment utiliser les badges",
+    "rules": [
+      "Uniquement pour un produit ou un service qui réussit la suite de conformité publique de la version actuelle du standard. Lancez obx-conformance vous-même, ou utilisez la vérification en ligne.",
+      "Indiquez la version testée, et testez à nouveau à chaque nouvelle version. Si votre produit ne réussit plus les tests, retirez le badge.",
+      "Utilisez les fichiers tels quels. Ne modifiez ni les couleurs, ni le texte, ni les proportions, et ne combinez pas le badge avec un autre logo.",
+      "Le badge indique que votre produit fonctionne avec le standard. Il ne signifie pas que la fondation approuve, certifie ou recommande votre produit ou votre entreprise.",
+      "Laissez de l'espace autour du badge, au moins la moitié de sa hauteur, et faites-le pointer vers openbrandexchange.com si possible."
+    ],
+    "checkLink": "Ouvrir la vérification en ligne",
+    "partnersLink": "Compatible ou partenaire officiel",
+    "contactTitle": "Contact presse",
+    "contactP": "Vous êtes journaliste et avez une question, besoin d'une citation ou d'un fichier en plus haute résolution ? Écrivez-nous."
   }
 }
