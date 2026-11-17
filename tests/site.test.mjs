@@ -216,7 +216,7 @@ test('the example files are one download in every language', { skip: !built && '
   const names = zip.toString('latin1');
   for (const f of ['kestrel-example/products.csv', 'kestrel-example/assets.csv', 'kestrel-example/images/KO-1001_NVY_1_front.png']) assert.ok(names.includes(f), f);
   assert.ok(!names.includes('images.json'), 'test metadata stays out');
-  for (const lang of langs) assert.ok(read(`${lang}/downloads/index.html`).includes('href="/downloads/kestrel-example.zip"'), `${lang}: link`);
+  for (const lang of langs) assert.ok(read(`${lang}/downloads/index.html`).includes('href="/downloads/kestrel-example.zip?v='), `${lang}: link`);
 });
 
 test('the Docker steps work when copied: the setup code is read from the log on stderr, the key is kept', { skip: !built && 'dist/ not built' }, () => {

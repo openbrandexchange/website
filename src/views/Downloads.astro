@@ -4,7 +4,7 @@ import { messages, nativeNames, repo, url, type Lang } from '../i18n';
 import { switchKitPath } from '../lib/switch-kit';
 import { brochurePath, type BrochureKind } from '../lib/brochures';
 import { langs } from '../i18n';
-import { TEMPLATE } from '../lib/template';
+import { EXAMPLE_ZIP, TEMPLATE } from '../lib/template';
 
 interface Props {
   lang: Lang;
@@ -68,7 +68,7 @@ const brochures: { kind: BrochureKind; title: string; p: string }[] = [
       <article class="card" aria-labelledby="examples">
         <h2 id="examples" class="card-title">{c.exampleTitle}</h2>
         <p>{c.exampleP}</p>
-        <p><a href="/downloads/kestrel-example.zip" download>{c.exampleZip}</a> · <a href={repo('spec', '/tree/main/fixtures/kestrel')}>{c.exampleLink}</a></p>
+        <p><a href={EXAMPLE_ZIP} download>{c.exampleZip}</a> · <a href={repo('spec', '/tree/main/fixtures/kestrel')}>{c.exampleLink}</a></p>
         <p class="small muted">{c.templateP}</p>
       </article>
     </div>

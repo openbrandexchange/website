@@ -32,8 +32,10 @@
 /vocabularies/*
   Cache-Control: public, max-age=3600
 
+# Brochures, templates and the example change with the texts and the spec: an hour, so a new
+# version reaches everyone the same day.
 /downloads/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=3600
 
 /video/*
   Cache-Control: public, max-age=604800
