@@ -36,7 +36,7 @@ jobs:
           ref: ${{ github.event.workflow_run.head_sha || github.sha }}
       - uses: oven-sh/setup-bun@v2
       # Node runs Astro and the node:test unit tests inside the deploy script's `bun run check`.
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
       - name: Deploy to Cloudflare Pages
