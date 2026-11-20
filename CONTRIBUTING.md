@@ -11,18 +11,18 @@ the standard are made is in the spec's [governance](https://github.com/openbrand
 ## Making a change
 
 ```sh
-npm ci
-npm run dev             # http://localhost:4321/
-npm run check           # directory, typecheck, build, links, unit and output tests
-npm run test:e2e        # Playwright + axe against dist/ (npx playwright install chromium once)
-npm run build:brochures # only when brochure texts or layout changed (needs Chrome)
+bun install
+bun run dev             # http://localhost:4321/
+bun run check           # directory, typecheck, build, links, unit and output tests
+bun run test:e2e        # Playwright + axe against dist/ (bunx playwright install chromium once)
+bun run build:brochures # only when brochure texts or layout changed (needs Chrome)
 ```
 
 Every visible text is in `src/locales/<lang>.json`. `en.json` is the source; change the same key
 in all 25 files in the same pull request. Words for the portal, API keys and automatic upload
 come from the glossary and are checked by the tests. The brochures are made from the same
-locale texts, so a text change can make `npm test` report stale PDFs: rebuild them with
-`npm run build:brochures -- --lang <lang>` and commit the PDFs.
+locale texts, so a text change can make `bun run test` report stale PDFs: rebuild them with
+`bun run build:brochures -- --lang <lang>` and commit the PDFs.
 
 Style: short sentences, plain words, no protocol terms on brand and retailer pages (the tests
 list them), examples with the fictional *Kestrel Outfitters* and `.example` domains. Never put

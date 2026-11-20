@@ -1,6 +1,6 @@
 """Generate the "Works with Open Brand Exchange" / "OBX compatible" badges.
 
-Usage (from the website repo root, after `npm ci` so the fonts exist):
+Usage (from the website repo root, after `bun install` so the fonts exist):
     python3 brand/src/badges.py brand/src/mark-master.svg public/badges
 Needs the same tools as build.py: fonttools + brotli, hb-shape, rsvg-convert.
 Every badge is drawn in ink and paper only (no accent colour), with all text converted to outlines,

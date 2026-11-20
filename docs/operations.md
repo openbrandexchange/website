@@ -9,9 +9,9 @@ the build green and the domain healthy.
 |---|---|
 | Site answers | `curl -sI https://openbrandexchange.com/en/` → `200`, with `content-security-policy` |
 | Directory for software | `curl -s https://openbrandexchange.com/directory.json` → JSON with `entries` |
-| Every page and link | `npm run check` (internal links and anchors, all 327 pages) |
+| Every page and link | `bun run check` (internal links and anchors, all 327 pages) |
 | External links | `node tools/check-links.mjs dist --external` lists them for a manual check |
-| Speed and accessibility | `npm run build && npm run lighthouse` (budgets below) |
+| Speed and accessibility | `bun run build && bun run lighthouse` (budgets below) |
 
 A free external uptime check (for example Cloudflare Health Checks or any uptime service) on
 `https://openbrandexchange.com/en/` is enough; alerts go to hello@openbrandexchange.com.
@@ -48,9 +48,9 @@ language choice in the visitor's own `localStorage`.
   30 days (spec docs/directory.md).
 - **Brochures:** the last page says "Version 0.3, <month year>". Bump `EDITION` in
   `scripts/brochure/template.mjs` when the content changes and rebuild.
-- **Specification:** after a spec change to its OpenAPI files, schemas or error table, run `npm run sync:spec` (it copies `site/` to `public/reference/`, the schemas to `public/schemas/` and the error codes to `src/data/errors.json`) and commit the result.
-- **Glossary:** after a glossary change in admin-ui or the spec, run `npm run sync:glossary`
-  and fix what `npm test` reports.
+- **Specification:** after a spec change to its OpenAPI files, schemas or error table, run `bun run sync:spec` (it copies `site/` to `public/reference/`, the schemas to `public/schemas/` and the error codes to `src/data/errors.json`) and commit the result.
+- **Glossary:** after a glossary change in admin-ui or the spec, run `bun run sync:glossary`
+  and fix what `bun run test` reports.
 - **Privacy and cookie statements:** when anything about hosting, statistics or contact changes,
   update the texts in all languages and `PRIVACY_UPDATED` in `src/lib/org-core.ts`.
 

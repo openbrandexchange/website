@@ -23,7 +23,7 @@ mkdirSync(out, { recursive: true });
 mkdirSync(".drafts", { recursive: true });
 const run = (command, args) => execFileSync(command, args, { stdio: "inherit" });
 
-run("npx", [
+run("bunx", [
   "remotion", "render", "src/index.ts", composition, master,
   `--props=${JSON.stringify({ locale })}`,
   "--codec=h264", "--crf=16", `--scale=${scale}`,

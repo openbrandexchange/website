@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Validates a directory.json against the OBX Directory schema (the copy the site publishes at
-// public/schemas/<current version>/, synced from the spec by npm run sync:spec) plus the listing rules from
+// public/schemas/<current version>/, synced from the spec by bun run sync:spec) plus the listing rules from
 // spec docs/directory.md:
 // unique ids, entries sorted by id, https discovery URLs ending in /.well-known/obx.
 // With --fetch it also asks every non-demo entry's discovery URL for its document.
@@ -47,7 +47,7 @@ export function checkDirectory(data, validate = loadValidator()) {
     if (u.pathname !== '/.well-known/obx') problems.push(`${e.id}: discovery_url must end in /.well-known/obx`);
     if (u.search || u.hash) problems.push(`${e.id}: discovery_url must not have a query or fragment`);
     const demo = e['x-obx-demo'] === true;
-    if (demo && !/\.example$/.test(u.hostname)) problems.push(`${e.id}: demo entries must use a .example host`);
+    if (demo && !u.hostname.endsWith('.example')) problems.push(`${e.id}: demo entries must use a .example host`);
     if (!demo && /\.(example|test|invalid|localhost)$/.test(u.hostname))
       problems.push(`${e.id}: reserved host names are only allowed for demo entries (x-obx-demo: true)`);
   }

@@ -34,10 +34,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: oven-sh/setup-bun@v2
+      # Node runs Astro and the node:test unit tests inside the deploy script's `bun run check`.
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
       - name: Deploy to Cloudflare Pages
         run: |
           if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then

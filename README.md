@@ -11,24 +11,26 @@ Contact: hello@openbrandexchange.com · security reports: security@openbrandexch
 ## Quickstart
 
 ```sh
-npm ci
-npm run dev          # http://localhost:4321/  (the home address picks your browser language)
-npm run check        # directory, typecheck, build, links, unit and output tests
+bun install
+bun run dev          # http://localhost:4321/  (the home address picks your browser language)
+bun run check        # directory, typecheck, build, links, unit and output tests
 ```
 
-Node 22.18 or newer. For the end-to-end tests, once: `npx playwright install chromium`, then
-`npm run build && npm run test:e2e`.
+Bun 1.3 or newer, and Node 22.18 or newer (Astro, the unit tests and Playwright run on Node).
+For the end-to-end tests, once: `bunx playwright install chromium`, then
+`bun run build && bun run test:e2e`.
 
 | Command | What it does |
 |---|---|
-| `npm run check` | validate `public/directory.json`, `astro check`, build `dist/`, check every internal link and anchor, run the unit and output tests |
-| `npm run test:e2e` | Playwright against `dist/` served with the real headers: axe on every page type (light and dark, Latin/Greek/Cyrillic), keyboard use, phone layout on all 325 pages, CSP |
-| `npm run lighthouse` | Lighthouse with budgets on four pages (needs Chrome) |
-| `npm run check:licenses` | licence policy for every dependency |
-| `npm run capture:screenshots` | regenerate the product screenshots in `src/assets/screens/` from `../admin-ui` in mock mode (en, nl, de, fr; other languages use English) |
-| `npm run build:brochures` | regenerate the 50 brochure PDFs and 25 social images (needs Chrome) |
-| `npm run sync:glossary` | copy the glossary from `../admin-ui` and `../spec` |
-| `npm run sync:spec` | copy the rendered API reference, the schemas and the error codes from `../spec` |
+| `bun run check` | validate `public/directory.json`, `astro check`, build `dist/`, check every internal link and anchor, run the unit and output tests |
+| `bun run lint` | oxlint over `src/`, `scripts/`, `tools/`, `tests/`, `functions/` and `e2e/` (part of `check`) |
+| `bun run test:e2e` | Playwright against `dist/` served with the real headers: axe on every page type (light and dark, Latin/Greek/Cyrillic), keyboard use, phone layout on all 325 pages, CSP |
+| `bun run lighthouse` | Lighthouse with budgets on four pages (needs Chrome) |
+| `bun run check:licenses` | licence policy for every dependency |
+| `bun run capture:screenshots` | regenerate the product screenshots in `src/assets/screens/` from `../admin-ui` in mock mode (en, nl, de, fr; other languages use English) |
+| `bun run build:brochures` | regenerate the 50 brochure PDFs and 25 social images (needs Chrome) |
+| `bun run sync:glossary` | copy the glossary from `../admin-ui` and `../spec` |
+| `bun run sync:spec` | copy the rendered API reference, the schemas and the error codes from `../spec` |
 | `sh scripts/deploy-cloudflare-pages.sh` | deploy (see [docs/deploying.md](docs/deploying.md)) |
 
 ## What is where
@@ -65,8 +67,8 @@ bg, cs, da, de, el, en, es, et, fi, fr, ga, hr, hu, it, lt, lv, mt, nb, nl, pl, 
 - No cookies. The language menu remembers a choice in `localStorage` only.
 
 To change a text: edit `en.json`, then the same key in the other 24 files, see
-[docs/translations.md](docs/translations.md). If it is used in a brochure, `npm test` then reports
-the PDF as stale: `npm run build:brochures -- --lang <lang>`.
+[docs/translations.md](docs/translations.md). If it is used in a brochure, `bun run test` then reports
+the PDF as stale: `bun run build:brochures -- --lang <lang>`.
 
 ## Getting a brand listed
 

@@ -1,6 +1,6 @@
 # Deploying
 
-The site is plain static files in `dist/` (Astro, `npm run build`). Production is
+The site is plain static files in `dist/` (Astro, `bun run build`). Production is
 **Cloudflare Pages**, project `openbrandexchange`, custom domain `openbrandexchange.com`.
 Any other static host works too; see the end of this page.
 
@@ -8,7 +8,7 @@ Any other static host works too; see the end of this page.
 
 `.github/workflows/deploy.yml` runs after the `ci` workflow succeeded on a push to `main`
 (and by hand via *Run workflow*). It checks out the exact commit CI tested, runs
-`scripts/deploy-cloudflare-pages.sh` (which runs `npm ci` and `npm run check` again) and uploads
+`scripts/deploy-cloudflare-pages.sh` (which runs `bun install` and `bun run check` again) and uploads
 `dist/` with Wrangler.
 
 One-time setup by the owner of the Cloudflare account:
@@ -36,7 +36,7 @@ Without the secrets the workflow only builds and checks, and says so in a notice
 ## By hand
 
 ```sh
-npx wrangler login                                    # once per machine
+bunx wrangler login                                   # once per machine
 sh scripts/deploy-cloudflare-pages.sh                 # production
 CF_PAGES_BRANCH=preview sh scripts/deploy-cloudflare-pages.sh   # preview URL, not production
 DRY_RUN=1 sh scripts/deploy-cloudflare-pages.sh       # build and check only

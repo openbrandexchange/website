@@ -18,7 +18,7 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
    and works on any static host; the Accept-Language parser in `i18n-core.ts` is tested and ready
    for an edge redirect if one is ever wanted.
 4. **Glossary.** Terms come from admin-ui (`src/data/glossary.json`), the publisher line from the
-   spec glossary (`src/data/glossary-publisher.json`); both are copied with `npm run sync:glossary`
+   spec glossary (`src/data/glossary-publisher.json`); both are copied with `bun run sync:glossary`
    and enforced by the locale tests for all 25 languages. Aligning with the glossary changed the
    Lithuanian portal word (Prekybininkų portalas), the Croatian "automatic upload" (Automatsko
    učitavanje) and the heading "API key for your software" in most languages.
@@ -74,7 +74,7 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
     navy. Still: no icons in circles, no gradient blobs.
 
 15. **Product screenshots** come from the real admin-ui in mock mode
-    (`npm run capture:screenshots`, en, nl, de and fr; other languages show English). For the
+    (`bun run capture:screenshots`, en, nl, de and fr; other languages show English). For the
     screenshots only, the spec's fixture swatches are redrawn as simple garment illustrations
     (`scripts/screenshots/garments.mjs`); admin-ui and its data are not changed. The recipes
     screen shows the fictional portal address instead of the local server.
@@ -83,9 +83,9 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
     languages where the label would not fit (listed in `global.css`). An end-to-end test measures
     the header in all 25 languages; shorten a label rather than loosening the test.
 17. **Explainer video** (`video/`, Remotion, its own package). One beat per point, timed by the
-    voice-over (ElevenLabs, `npm run voice:en` / `voice:nl`; cost logged in `video/.drafts/`), no
+    voice-over (ElevenLabs, `bun run voice:en` / `voice:nl`; cost logged in `video/.drafts/`), no
     music, captions burned in. It uses the real portal screenshots and draws everything else; facts
-    only (the label is spec fixture KT-2001, the suitcase KO-1008). `npm run render` writes
+    only (the label is spec fixture KT-2001, the suitcase KO-1008). `bun run render` writes
     `public/video/obx-{en,nl}.{mp4,webm,jpg}` and a 9:16 cut to `video/out/` (not committed). The
     home page shows Dutch for nl and English for every other language, with `preload="none"`, so
     nothing but the poster loads until the visitor presses play (an end-to-end test checks this).
@@ -96,8 +96,8 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
     everyone wins" → In → the open standard → Out → after → "implement once" → end card. Voice
     EN Alice (British, calm), NL Serge de Beer; DE and FR are caption-only cuts of the English voice
     (each caption has the same number of `|` chunks as the English line; chunk times come from the
-    ElevenLabs alignment, `npm run voice:v2:en` / `voice:v2:nl`). `npm run render:v2` writes
-    `video/out/v2/` (not committed); `npm run stills:v2 -- en 16x9` writes review stills.
+    ElevenLabs alignment, `bun run voice:v2:en` / `voice:v2:nl`). `bun run render:v2` writes
+    `video/out/v2/` (not committed); `bun run stills:v2 -- en 16x9` writes review stills.
 
 18. **What the law requires (spec 0.2).** The retailers page has a table under the care-label example
     (`retailers.label.law`) with what EU law makes mandatory (fibre composition per component, also
@@ -108,7 +108,7 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
     and a pointer, not legal advice. Citations use each language's official form, as in admin-ui's
     `labelWarning` texts; the numbers are never changed. The brands page says the same in one sentence
     (`brands.labelNote`), next to `brands.bagsNote` on luggage and bag measurements and features.
-19. **Schemas and error pages per version.** `npm run sync:spec` copies every version under the
+19. **Schemas and error pages per version.** `bun run sync:spec` copies every version under the
     spec's `site/schemas/` (only the current version, v0.3; 0.1 and 0.2 are withdrawn and redirect) to `public/schemas/`, so every
     `$id` resolves, and refuses to run when the current version is missing. `/errors/` lists the
     `obx_error` codes of protocol.md and, since 0.2, the label completeness warnings of
@@ -120,7 +120,7 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
 
 - **Old style in generated media.** The brochures (`scripts/brochure/template.mjs`), the social images
   in `public/og/` and the explainer video still use the cobalt mark and Inter. Rebuild them in the
-  Label style (`npm run build:brochures`, the OG script, `video/`).
+  Label style (`bun run build:brochures`, the OG script, `video/`).
 
 - **Native review of 21 languages.** en, nl, de and fr were written with extra care; the other 21
   are complete and on-glossary but machine-quality. Irish (ga) and Maltese (mt) first.

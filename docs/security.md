@@ -46,7 +46,7 @@ on its behalf, may request a listing; a maintainer reviews every pull request.
 ## Supply chain
 
 - Dependencies are build tools only; nothing from `node_modules` is shipped except what Astro
-  generates from our own code. `npm audit --omit=dev` must be clean in CI.
+  generates from our own code. `bun audit --production` must be clean in CI.
 - `tools/check-licenses.mjs` enforces a licence policy on every installed package.
 - GitHub Actions use pinned major versions from GitHub (`actions/*`) only; Dependabot updates
   them. The deploy token is scoped to Cloudflare Pages edit on one account and is available

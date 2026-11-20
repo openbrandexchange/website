@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 
-// End-to-end checks against the built site (npm run build first; CI does).
+// End-to-end checks against the built site (bun run build first; CI does).
 // Served by tools/serve-dist.mjs, which applies _headers and _redirects like Cloudflare Pages.
 export default defineConfig({
   testDir: 'e2e',
@@ -17,7 +17,7 @@ export default defineConfig({
     { name: 'phone', use: { ...devices['Pixel 7'] } },
   ],
   webServer: {
-    command: 'node tools/serve-dist.mjs dist 4321',
+    command: 'bun tools/serve-dist.mjs dist 4321',
     url: 'http://127.0.0.1:4321/en/',
     reuseExistingServer: !process.env.CI,
     timeout: 60_000,

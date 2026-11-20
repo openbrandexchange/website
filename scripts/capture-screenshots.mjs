@@ -11,7 +11,7 @@
 // logs in as the demo retailer and the demo brand admin and writes 2× WebP screenshots to
 // src/assets/screens/<lang>/<name>.webp. Pages fall back to English for other languages.
 import { execFileSync } from 'node:child_process';
-import { cpSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { createServer } from 'node:http';
 import { tmpdir } from 'node:os';
 import { extname, join, resolve } from 'node:path';
@@ -36,7 +36,7 @@ if (!existsSync(join(adminUi, 'package.json'))) {
 const tmp = mkdtempSync(join(tmpdir(), 'obx-screens-'));
 const site = join(tmp, 'site');
 console.log('building admin-ui (mock mode)…');
-execFileSync('npx', ['vite', 'build', '--mode', 'mock', '--outDir', site, '--emptyOutDir', '--logLevel', 'warn'], { cwd: adminUi, stdio: 'inherit' });
+execFileSync('bunx', ['vite', 'build', '--mode', 'mock', '--outDir', site, '--emptyOutDir', '--logLevel', 'warn'], { cwd: adminUi, stdio: 'inherit' });
 
 const browser = await chromium.launch();
 

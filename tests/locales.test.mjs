@@ -45,7 +45,7 @@ test('every locale other than English is actually translated', () => {
   for (const lang of langs.filter((l) => l !== 'en')) {
     const map = new Map(flatten(load(lang)));
     const same = enFlat.filter(([p, v]) => typeof v === 'string' && v.length > 20 && map.get(p) === v);
-    const long = enFlat.filter(([p, v]) => typeof v === 'string' && v.length > 20);
+    const long = enFlat.filter(([, v]) => typeof v === 'string' && v.length > 20);
     assert.ok(same.length / long.length < 0.1, `${lang}: ${same.length} of ${long.length} longer strings are still English, e.g. ${same.slice(0, 3).map(([p]) => p).join(', ')}`);
   }
 });

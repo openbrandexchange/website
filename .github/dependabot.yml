@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: npm
+  - package-ecosystem: bun
     directory: /
     schedule:
       interval: weekly
@@ -10,7 +10,7 @@ updates:
       astro:
         patterns: ['astro', '@astrojs/*']
       test-tools:
-        patterns: ['@playwright/test', '@axe-core/*', 'typescript', 'ajv', 'ajv-formats']
+        patterns: ['@playwright/test', '@axe-core/*', 'typescript', 'ajv', 'ajv-formats', 'oxlint']
     # A new font version changes every brochure: bump it on purpose and rebuild the PDFs.
     ignore:
       - dependency-name: '@fontsource/inter'

@@ -1,6 +1,6 @@
 """Generate the OBX brand kit from the two masters.
 
-Usage (from the website repo root, after `npm ci` so the fonts exist):
+Usage (from the website repo root, after `bun install` so the fonts exist):
     python3 brand/src/build.py brand/src/mark-master.svg brand/src/icon-master.svg brand
 Needs: python3 + fonttools + brotli, hb-shape (harfbuzz), rsvg-convert (librsvg).
 All text is converted to outlines, so the outputs have no font dependency.

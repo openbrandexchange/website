@@ -8,7 +8,7 @@
     "voice:en": "python3 scripts/voiceover.py src/copy/en.json public/voice/en --language en",
     "voice:nl": "python3 scripts/voiceover.py src/copy/nl.json public/voice/nl --language nl",
     "render": "node scripts/render.mjs en && node scripts/render.mjs nl && node scripts/render.mjs en --portrait && node scripts/render.mjs nl --portrait",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "oxlint --type-aware --type-check src",
     "stills": "node scripts/stills.mjs",
     "voice:v2:en": "python3 scripts/voiceover.py src/v2/copy/en.json public/voice-v2/en --language en --timestamps --voice Xb7hH8MSUJpSbSDYk0k2 --speed 1.15 --tempo 1.08",
     "render:v2": "node scripts/render-v2.mjs",
@@ -24,6 +24,8 @@
     "@remotion/bundler": "4.0.538",
     "@remotion/renderer": "4.0.538",
     "@types/react": "19.3.0",
+    "oxlint": "^1.94.0",
+    "oxlint-tsgolint": "^7.0.2007",
     "typescript": "6.0.3"
   },
   "overrides": {

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Lighthouse on a few representative pages of the built site, with budgets.
-//   npm run build && npm run lighthouse          (CHROME_PATH may point at Chrome)
+//   bun run build && bun run lighthouse          (CHROME_PATH may point at Chrome)
 // Serves dist/ with tools/serve-dist.mjs (real _headers), runs the mobile preset, prints the
 // scores and fails when a category drops below its budget.
 import { spawn, execFileSync } from 'node:child_process';
@@ -20,13 +20,13 @@ try {
   // Warm-up run, not scored: the first Lighthouse run after the server and Chrome start reports a
   // ~2 s unattributable long task on whichever page comes first (measured 2026-11-12: /en/ scored
   // 73 when first and 99 when second, with identical assets).
-  execFileSync('npx', ['--yes', 'lighthouse@12', `http://127.0.0.1:${port}${pages[0]}`, '--quiet', '--output=json', '--output-path=.cache/lighthouse/warmup.json', '--chrome-flags=--headless=new --no-sandbox'], {
+  execFileSync('bunx', ['lighthouse@12', `http://127.0.0.1:${port}${pages[0]}`, '--quiet', '--output=json', '--output-path=.cache/lighthouse/warmup.json', '--chrome-flags=--headless=new --no-sandbox'], {
     stdio: 'ignore',
     env: { ...process.env, ...(chrome ? { CHROME_PATH: chrome } : {}) },
   });
   for (const page of pages) {
     const out = `.cache/lighthouse/${page.replace(/\//g, '_') || 'root'}.json`;
-    execFileSync('npx', ['--yes', 'lighthouse@12', `http://127.0.0.1:${port}${page}`, '--quiet', '--output=json', `--output-path=${out}`, '--chrome-flags=--headless=new --no-sandbox'], {
+    execFileSync('bunx', ['lighthouse@12', `http://127.0.0.1:${port}${page}`, '--quiet', '--output=json', `--output-path=${out}`, '--chrome-flags=--headless=new --no-sandbox'], {
       stdio: 'inherit',
       env: { ...process.env, ...(chrome ? { CHROME_PATH: chrome } : {}) },
     });

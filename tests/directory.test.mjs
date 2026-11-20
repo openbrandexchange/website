@@ -28,7 +28,7 @@ test('a normal entry is accepted', () => {
 });
 
 test('missing required fields are rejected by the schema', () => {
-  const { brands, ...noBrands } = entry();
+  const { brands: _brands, ...noBrands } = entry();
   assert.match(checkDirectory(dir([noBrands]), validate).join('\n'), /schema/);
 });
 

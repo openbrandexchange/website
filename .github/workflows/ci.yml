@@ -14,25 +14,27 @@ concurrency:
 
 jobs:
   check:
-    name: validate, typecheck, build, links, tests
+    name: validate, lint, typecheck, build, links, tests
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      # Node runs Astro, the node:test unit tests and Playwright (engines: node >= 22.18; the
+      # runner's default Node is older). Bun installs and runs the scripts.
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci
-      # Directory schema + listing rules, astro check, build, internal links, unit and output tests
+      - run: bun install --frozen-lockfile
+      # Directory schema + listing rules, oxlint, astro check, build, internal links, unit and output tests
       # (locales complete and on-glossary, brochures present and not stale, built pages).
-      - run: npm run check
+      - run: bun run check
       - name: Dependency licences
-        run: npm run check:licenses
+        run: bun run check:licenses
       - name: Dependency audit (what ships)
-        run: npm audit --omit=dev --audit-level=low
+        run: bun audit --production --audit-level=low
       - name: Dependency audit (build tools, report only)
-        run: npm audit --audit-level=high || true
+        run: bun audit --audit-level=high || true
       - uses: actions/upload-artifact@v4
         with:
           name: dist
@@ -46,17 +48,19 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      # Node runs Astro, the node:test unit tests and Playwright (engines: node >= 22.18; the
+      # runner's default Node is older). Bun installs and runs the scripts.
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci
+      - run: bun install --frozen-lockfile
       - uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
-      - run: npx playwright install --with-deps chromium
-      - run: npm run test:e2e
+      - run: bunx playwright install --with-deps chromium
+      - run: bun run test:e2e
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
@@ -71,17 +75,19 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+      # Node runs Astro, the node:test unit tests and Playwright (engines: node >= 22.18; the
+      # runner's default Node is older). Bun installs and runs the scripts.
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci
+      - run: bun install --frozen-lockfile
       - uses: actions/download-artifact@v4
         with:
           name: dist
           path: dist
       # ubuntu-latest ships Google Chrome.
-      - run: CHROME_PATH="$(command -v google-chrome)" npm run lighthouse
+      - run: CHROME_PATH="$(command -v google-chrome)" bun run lighthouse
 
   directory-reachable:
     name: listed portals answer
@@ -90,10 +96,7 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --frozen-lockfile
       # New or changed directory entries: ask each listed portal for its discovery document.
-      - run: node tools/validate-directory.mjs public/directory.json --fetch
+      - run: bun tools/validate-directory.mjs public/directory.json --fetch

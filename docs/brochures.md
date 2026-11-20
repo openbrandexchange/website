@@ -18,9 +18,9 @@ line from the glossary.
 ## Building
 
 ```sh
-npm run build:brochures                  # everything (about 20 seconds)
-npm run build:brochures -- --lang el,bg  # only some languages
-CHROME_PATH=/path/to/chrome npm run build:brochures
+bun run build:brochures                  # everything (about 20 seconds)
+bun run build:brochures -- --lang el,bg  # only some languages
+CHROME_PATH=/path/to/chrome bun run build:brochures
 ```
 
 The script (`scripts/build-brochures.mjs`) uses the installed Google Chrome (the macOS path by
@@ -32,7 +32,7 @@ Cyrillic), and:
   never cut off silently;
 - writes `public/downloads/manifest.json` with an input hash and page count per file.
 
-`npm test` fails when a PDF is missing, has the wrong page count, uses any font other than Inter
+`bun run test` fails when a PDF is missing, has the wrong page count, uses any font other than Inter
 (a sign that a glyph fell back to a system font), or is stale (its texts or layout changed but it
 was not rebuilt).
 

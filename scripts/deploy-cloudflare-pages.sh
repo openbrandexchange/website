@@ -1,7 +1,7 @@
 #!/bin/sh
 # Deploy openbrandexchange.com to Cloudflare Pages.
 #
-# Needs Node 22+ and either `npx wrangler login` once on this machine, or CLOUDFLARE_API_TOKEN
+# Needs Bun and Node 22.18+ and either `bunx wrangler login` once on this machine, or CLOUDFLARE_API_TOKEN
 # (scope: Account > Cloudflare Pages > Edit) + CLOUDFLARE_ACCOUNT_ID in the environment.
 #
 #   sh scripts/deploy-cloudflare-pages.sh                        # production (branch main)
@@ -14,15 +14,15 @@ set -eu
 
 PROJECT="${CF_PAGES_PROJECT:-openbrandexchange}"
 BRANCH="${CF_PAGES_BRANCH:-main}"
-WRANGLER="npx --yes wrangler@4"
+WRANGLER="bunx wrangler@4"
 
 cd "$(dirname "$0")/.."
 
 echo "==> Installing dependencies"
-npm ci
+bun install --frozen-lockfile
 
 echo "==> Validating, type-checking, building, checking links and running tests"
-npm run check
+bun run check
 
 if [ "${DRY_RUN:-0}" = "1" ]; then
   echo "==> DRY_RUN=1: built and checked dist/, not deploying."

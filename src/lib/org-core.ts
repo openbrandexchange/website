@@ -15,9 +15,6 @@ interface OrgMessages {
   org: { inFormation: string };
 }
 
-const fill = (template: string, vars: Record<string, string>) =>
-  template.replace(/\{(\w+)\}/g, (whole, key: string) => (key in vars ? vars[key] : whole));
-
 /** "Open Brand Exchange Foundation (in oprichting)": the name is never translated, the status is. */
 export function foundationName(m: OrgMessages): string {
   return `${FOUNDATION} (${m.org.inFormation})`;

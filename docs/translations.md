@@ -16,11 +16,11 @@ pt, ro, sk, sl, sv. English is the source. Every text is in `src/locales/<lang>.
   with "(in formation)" translated and the name never translated.
 
 To change a glossary word, change it in admin-ui (terms) or the spec (publisher line), then run
-`npm run sync:glossary` here and fix what `npm test` reports.
+`bun run sync:glossary` here and fix what `bun run test` reports.
 
 ## Quality
 
 en, nl, de and fr were written with extra care. The other 21 languages are complete but need a
 native review before a launch campaign in that market, Irish (ga) and Maltese (mt) first. Use the
 *Translation* issue template for corrections. After changing texts, rebuild the brochures for that
-language (`npm run build:brochures -- --lang <lang>`).
+language (`bun run build:brochures -- --lang <lang>`).

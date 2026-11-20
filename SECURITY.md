@@ -10,7 +10,7 @@ repositories, but you may report them to the same address.
 - **Never** report a vulnerability in a public issue, pull request or discussion.
 - Include what is affected (page, file, header or commit), what an attacker can do, the steps
   to reproduce, and whether you want to be credited.
-- Test only against your own copy of the site (`npm run build && node tools/serve-dist.mjs`).
+- Test only against your own copy of the site (`bun run build && node tools/serve-dist.mjs`).
   Do not run load tests or scanners against openbrandexchange.com.
 
 Examples of what we want to hear about: a way to run script on the site despite the

@@ -158,7 +158,7 @@ the `<img>` PNG is the fallback.
 ## Regenerating
 
 ```sh
-# from the website repo root, after npm ci (fonts come from @fontsource-variable)
+# from the website repo root, after bun install (fonts come from @fontsource-variable)
 python3 brand/src/build.py brand/src/mark-master.svg brand/src/icon-master.svg brand
 ```
 

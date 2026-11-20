@@ -2,13 +2,13 @@
 // Render the brochures (public/downloads/{brands,retailers}-<lang>.pdf) and the social preview
 // images (public/og/<lang>.jpg) for all 25 languages with headless Chrome.
 //
-//   npm run build:brochures                 # everything
-//   npm run build:brochures -- --lang el,bg # only these languages
-//   CHROME_PATH=/path/to/chrome npm run build:brochures
+//   bun run build:brochures                 # everything
+//   bun run build:brochures -- --lang el,bg # only these languages
+//   CHROME_PATH=/path/to/chrome bun run build:brochures
 //
 // Uses the installed Google Chrome (macOS default path below), else Playwright's Chromium.
 // Fails when any page overflows its A4 sheet, so a longer translation never gets cut off.
-// Writes public/downloads/manifest.json with an input hash per file; `npm test` fails when a
+// Writes public/downloads/manifest.json with an input hash per file; `bun run test` fails when a
 // text changed but the PDFs were not rebuilt.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { chromium } from '@playwright/test';

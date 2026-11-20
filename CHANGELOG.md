@@ -36,6 +36,9 @@ its texts; the repository itself is versioned with [Semantic Versioning](https:/
 - Provider logos on /hosting (light and dark version).
 
 ### Changed
+- Bun instead of npm: `bun install` with `bun.lock` (also in `video/`), `bun run` scripts, `bun audit`
+  in CI, Dependabot on the bun ecosystem. oxlint (`bun run lint`, part of `check`) over the site's
+  code; `video/` type-checks with oxlint instead of tsc. Astro 7.4.13 (security advisories).
 - Version 0.2: the status pill ("v0.2"), footer, home page, developers page, FAQ and brochures say
   that version 0.2 is out, in all 25 languages; brochures and social images rebuilt; the discovery
   example shows `"obx_version": "0.2"`; the directory is validated against the 0.2 schema.
