@@ -35,7 +35,7 @@ jobs:
         run: bun audit --production --audit-level=low
       - name: Dependency audit (build tools, report only)
         run: bun audit --audit-level=high || true
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: dist
           path: dist
@@ -61,7 +61,7 @@ jobs:
           path: dist
       - run: bunx playwright install --with-deps chromium
       - run: bun run test:e2e
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: playwright-report
