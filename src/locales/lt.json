@@ -15,14 +15,14 @@
     "footerSource": "Išeities kodas ir specifikacija",
     "footerLicence": "© 2026 {foundation}. Visos teisės saugomos. Specifikacijai taikoma CC-BY-4.0 licencija.",
     "editionCloudflare": "Portalas Cloudflare",
-    "editionGoogle": "Portalas Google Cloud ir Docker",
     "editionHosting": "Portalas interneto talpinimui",
     "yes": "Taip",
     "inDevelopment": "Kuriama",
     "available": "Prieinama",
     "footerContact": "Kontaktai",
     "madeInEu": "Pagaminta ES",
-    "footerDiscuss": "Prisijunkite prie diskusijos"
+    "footerDiscuss": "Prisijunkite prie diskusijos",
+    "editionServer": "Portalas nuosavam serveriui"
   },
   "nav": {
     "brands": "Prekių ženklams",
@@ -55,7 +55,7 @@
     },
     "hosting": {
       "title": "Talpinimas",
-      "description": "Jūsų nuotraukų portalas ten, kur norite: talpinamas partnerio, jūsų serveryje Europoje, įprastame interneto talpinime ar kitame debesyje."
+      "description": "Jūsų nuotraukų portalas ten, kur norite: jūsų serveryje viena komanda, Cloudflare Workers, įprastame interneto talpinime arba talpinamas partnerio."
     },
     "retailers": {
       "title": "Pardavėjams",
@@ -350,7 +350,7 @@
     "cliExit": "Išėjimo kodas 0 = viskas gerai, 2 = baigta, bet kai kuriose eilutėse buvo klaidų (jos išvardytos), 1 = nepavyko.",
     "cliGet": "Atsisiųsti obx",
     "watchTitle": "2. Aplankas, kuris publikuoja save: obx watch",
-    "watchP": "Leiskite PIM, ERP ar kolegai įrašyti eksportus į aplanką. obx watch publikuoja, kai tik kas nors pasikeičia, ir praleidžia nepakitusias nuotraukas. Paleiskite kaip paslaugą arba su Docker:",
+    "watchP": "Leiskite PIM, ERP sistemai ar kolegai įrašyti eksportus į aplanką. obx watch paskelbia vos tik kas nors pasikeičia ir praleidžia nepasikeitusias nuotraukas. Paleiskite jį kaip paslaugą, pavyzdžiui, su systemd Linux sistemoje:",
     "cronTitle": "3. cron arba Windows Užduočių planuoklis",
     "cronLinux": "Linux arba macOS",
     "cronWindows": "Windows (PowerShell, vieną kartą)",
@@ -383,8 +383,8 @@
   },
   "hosting": {
     "h1": "Talpinimas",
-    "lead": "Kiekvienas prekės ženklas turi savo nuotraukų portalą savo serveryje. Jūs renkatės, kaip jį valdyti, nuo visiško perdavimo iki visiškai savarankiško.",
-    "p1Title": "3. Partneris talpina už jus",
+    "lead": "Kiekvienas prekės ženklas turi savo nuotraukų portalą. Įdiekite jį savo serveryje viena komanda, paleiskite Cloudflare Workers, įkelkite į įprastą interneto talpinimą arba leiskite jį talpinti partneriui.",
+    "p1Title": "4. Partneris talpina už jus",
     "p1P": "Nenorite talpinti patys? Partneriai gali talpinti ir prižiūrėti portalą už jus.",
     "fieldBased": "Buveinė",
     "fieldLanguages": "Kalbos",
@@ -399,11 +399,8 @@
       "savo kainas ir sąlygas skelbiate savo svetainėje"
     ],
     "listHow": "Būti suderinamam nemokama; vieta šiame sąraše yra oficialios partnerystės dalis.",
-    "p2Title": "2. Vienu paspaudimu",
-    "p2P": "Nuosavas portalas jūsų paskyroje, nevaldant serverio.",
     "cfP": "Veikia Cloudflare Workers, su D1 kaip duomenų baze ir R2 vaizdams. Spustelėkite mygtuką, prisijunkite prie Cloudflare ir sekite žingsnius. Kasdien naudojamam portalui reikia plano Workers Paid (5 doleriai per mėnesį); nemokamo plano užtenka tik apsidairyti. Jūsų nuotraukų žiniatinklio versijas kuria jūsų naršyklė ir įrankis obx.",
     "cfButton": "Įdiegti Cloudflare",
-    "runP": "Scenarijus, kuris įdiegia jūsų portalą Google Cloud Run. Jums reikia Google Cloud paskyros ir įrankio gcloud.",
     "phpP": "Interneto talpinimui, kurį galbūt jau turite, su PHP ir duomenų baze. Jokių komandų:",
     "phpSteps": [
       "Atsisiųskite obx-portal-php-<version>.zip iš naujausios versijos.",
@@ -414,17 +411,10 @@
       "Diegimo programos parodytą cron adresą įtraukite kaip cron užduotį prieglobos valdymo skydelyje, kas 5 minutes. Portalas veikia ir be jo."
     ],
     "phpDownload": "Atsisiųsti naujausią versiją",
-    "p3Title": "3. Jūsų serveris",
-    "p3P": "Jau naudojate savo atvirkštinį tarpinį serverį (reverse proxy)? Tada paleiskite tik paskelbtą atvaizdą ir nukreipkite tarpinį serverį į prievadą 8080:",
-    "envTitle": "Nustatymai",
-    "envPublicUrl": "viešas jūsų portalo adresas",
-    "envSecretKey": "ilgas atsitiktinis raktas (openssl rand -base64 48). Kopiją laikykite slaptažodžių tvarkyklėje: kai jau yra duomenų, rakto pakeisti nebegalima",
-    "envSetupCode": "neprivaloma: iš anksto pasirinktas diegimo kodas",
-    "envPort": "prievadas, pagal numatymą 8080",
     "firstTitle": "Po diegimo: pirmasis paleidimas",
     "first": [
       "Atidarykite savo portalo adresą naršyklėje.",
-      "Įveskite vienkartinį diegimo kodą. Jis yra žurnale pirmojo paleidimo metu (Portalas interneto talpinimui: faile data/SETUP-CODE.txt, o diegimo programa jį įrašo už jus) arba jį nustatote iš anksto su OBX_SETUP_CODE.",
+      "Įveskite vienkartinį diegimo kodą. Diegimo programa jūsų serveryje jį parodo pabaigoje. Kitu atveju jis yra žurnale pirmojo paleidimo metu (Portalas interneto talpinimui: faile data/SETUP-CODE.txt, o diegimo programa jį įrašo už jus) arba jį nustatote iš anksto su OBX_SETUP_CODE.",
       "Įveskite savo įmonę ir pirmąjį prekės ženklą ir pasirinkite savo slaptažodį. Numatytojo slaptažodžio niekada nėra."
     ],
     "firstWhy": "Diegimo kodas užtikrina, kad niekas kitas negalėtų perimti ką tik įdiegto portalo.",
@@ -434,54 +424,108 @@
     "compareP": "Trys leidimai daro tą patį ir turi tą patį administravimą bei tą patį prekybininkų portalą. Pasirinkite tą, kuris tinka jūsų talpinimui; pakeisti galėsite vėliau.",
     "compareLink": "Peržiūrėti įgyvendinimus",
     "heroTitle": "Jūsų nuotraukų portalas ten, kur norite.",
-    "heroLead": "Programinė įranga nemokama. Jūs renkatės, kur ji veikia, ir galite persikelti bet kada.",
+    "heroLead": "Programinė įranga nemokama. Paprasčiausia – nedidelis nuosavas serveris ir viena komanda. Persikelti galite bet kada.",
     "heroChecks": [
       "Nemokama programinė įranga, mokate tik už talpinimą",
-      "Rekomenduojama: Europoje, pavyzdžiui, pas Hetzner (Vokietija)",
+      "Viena komanda įdiegia portalą su HTTPS",
       "Visur tas pats portalas, todėl visada galite pereiti",
       "Nenorite patys? Partneris jį talpins už jus"
     ],
-    "euCta": "Jūsų nuotraukų portalas Europoje",
-    "euTitle": "1. Nuosavas serveris Europoje (rekomenduojama)",
-    "euP": "Daugumai prekių ženklų pakanka nedidelio serverio pas Europos paslaugų teikėją. Mūsų vadove naudojamas Hetzner, kurio duomenų centrai yra Vokietijoje ir Suomijoje.",
-    "euSteps": [
-      "Sukurkite serverį pas Hetzner Niurnberge, Falkenšteine arba Helsinkyje, su įjungtomis atsarginėmis kopijomis.",
-      "Nukreipkite savo domeną, pavyzdžiui, images.jusuzenklas.lt, į serverį.",
-      "Įdiekite Docker ir paleiskite portalą keliomis komandomis. HTTPS sutvarkomas automatiškai.",
-      "Atidarykite savo domeną ir užbaikite sąrankos vedlį.",
-      "Pasirinktinai: laikykite nuotraukas Hetzner Object Storage toje pačioje vietoje.",
-      "Suplanuokite naktinę atsarginę kopiją ir nukopijuokite ją už serverio ribų. Atnaujinimui pakanka dviejų komandų."
-    ],
-    "euGuide": "Vadovas žingsnis po žingsnio: jūsų portalas pas Hetzner",
-    "euData": "Kai serveris ir saugykla yra ES vietoje, jūsų katalogas, nuotraukos ir duomenų bazė saugomi ES.",
-    "webTitle": "2. Įprastas interneto talpinimas",
+    "webTitle": "3. Įprastas interneto talpinimas",
     "webP": "PHP versija veikia įprastame Europos interneto talpinime su PHP ir duomenų baze, pavyzdžiui, pas TransIP, Strato ar OVHcloud. Jokių komandų:",
-    "altTitle": "4. Kiti debesys",
-    "altP": "Tas pats portalas veikia ir Cloudflare Workers bei Google Cloud Run. Pasirinkite regioną Europoje, jei paslauga jį siūlo.",
     "partnerLink": "Žiūrėti partnerius",
     "techTitle": "Techninė informacija jūsų IT komandai",
-    "techLead": "Komandos, nustatymai ir diegimo vadovai tam, kas įrengia serverį.",
+    "techLead": "Diegimo programos parinktys, failai, atsarginės kopijos ir atnaujinimai tam, kas įrengia serverį.",
     "costTitle": "Kiek tai apytiksliai kainuoja",
     "costItems": [
       "Nuosavas serveris ES: apie 5–15 € per mėnesį už nedidelį serverį su automatinėmis atsarginėmis kopijomis pas tokį teikėją kaip Hetzner. Nuotraukos paties serverio diske papildomai nekainuoja; objektų saugykla dideliam archyvui prideda kelis eurus per mėnesį už terabaitą.",
       "Įprastas interneto talpinimas: planas, už kurį jau mokate, jei jame yra PHP 8.2 ar naujesnė.",
       "Cloudflare Workers: 5 doleriai per mėnesį už Workers Paid ir R2 saugykla – apie 1,50 dolerio per mėnesį už 100 GB nuotraukų. Mokesčių už atsisiuntimus nėra.",
       "Partneris: jo paties kaina. Paklauskite, kas į ją įeina: atnaujinimai, atsarginės kopijos, nuosavas domenas ir viso turinio eksportas, jei nuspręsite išeiti.",
-      "Jūsų laikas: pirmą kartą skirkite nuo pusės iki visos dienos, įskaitant domeną ir bandomąjį atsarginės kopijos atkūrimą, o vėliau apie valandą per mėnesį atnaujinimams ir atsarginių kopijų patikrinimui."
+      "Jūsų laikas: pirmą kartą skirkite valandą ar dvi, įskaitant domeną ir bandomąjį atsarginės kopijos atkūrimą, o vėliau apie valandą per mėnesį atnaujinimams ir atsarginių kopijų patikrinimui."
     ],
     "costNote": "Orientacinės 2026 m. lapkričio kainos be PVM. Prieš rinkdamiesi patikrinkite dabartines teikėjo kainas.",
-    "stepsTitle": "Žingsnis po žingsnio naujame serveryje",
-    "stepsP": "Naujame Ubuntu serveryje su atvirais 22, 80 ir 443 prievadais, kai jūsų domeno A ir AAAA įrašai jau nukreipti į jį. Tai ta pati sąranka kaip Hetzner vadove: ji sukompiliuoja naujausią portalo versiją ir prieš jį pastato Caddy, kuris rūpinasi HTTPS.",
     "httpsTitle": "HTTPS",
-    "httpsP": "Caddy paprašo Let's Encrypt sertifikato, kai tik jūsų domenas nukreipiamas į serverį, automatiškai jį atnaujina ir peradresuoja http į https. Sertifikato nėra? Su dig patikrinkite, ar domenas rodo serverio adresą, ir ar ugniasienėje atidaryti 80 ir 443 prievadai.",
+    "httpsP": "Go versija pati paprašo Let's Encrypt sertifikato, kai tik jūsų domenas nukreipiamas į serverį, automatiškai jį atnaujina ir peradresuoja http į https. TypeScript versija daro tą patį per Caddy, kurį įdiegia diegimo programa. Sertifikato nėra? Su dig patikrinkite, ar domenas rodo serverio adresą ir ar 80 bei 443 prievadai atidaryti.",
     "backupTitle": "Atsarginės kopijos",
-    "backupP": "Įjunkite teikėjo serverio atsargines kopijas ir pridėkite naktinę portalo atsarginę kopiją, kurią taip pat nukopijuokite už serverio ribų. OBX_SECRET_KEY laikykite atskirai, slaptažodžių tvarkyklėje: be jo atsarginės kopijos visiškai atkurti neįmanoma. Vieną kartą išbandykite atkūrimą, kad žinotumėte, jog jis veikia.",
+    "backupP": "Įjunkite teikėjo serverio atsargines kopijas ir pridėkite naktinę portalo atsarginę kopiją, kurią taip pat nukopijuokite už serverio ribų. Slaptąjį raktą laikykite atskirai, slaptažodžių tvarkyklėje: tai OBX_SECRET_KEY nustatymų faile arba secret.key duomenų aplanke. Be jo atsarginės kopijos visiškai atkurti neįmanoma. Vieną kartą išbandykite atkūrimą, kad žinotumėte, jog jis veikia.",
     "updateTitle": "Atnaujinimai",
-    "updateP": "Padarykite atsarginę kopiją ir perskaitykite versijos pastabas. Tada paimkite naują versiją ir sukompiliuokite iš naujo; duomenų bazė atsinaujina pati, kai paleidžiamas portalas.",
+    "updateP": "Padarykite atsarginę kopiją ir perskaitykite leidimo pastabas. Tada dar kartą paleiskite tą pačią diegimo komandą: ji įdiegia naujausią leidimą, išsaugo jūsų nustatymus ir duomenis ir iš naujo paleidžia portalą. Duomenų bazė atsinaujina pati paleidimo metu.",
     "cfCliP": "Arba iš savo kompiuterio, naudojant Bun ir įrankį Wrangler:",
-    "cfDomainP": "Nuosavas domenas: pridėkite jį skiltyje Workers & Pages → jūsų Worker → Settings → Domains & Routes (domenas turi būti Cloudflare), nustatykite OBX_PUBLIC_URL į tą adresą ir įdiekite iš naujo.",
     "cfBackupP": "Atsarginės kopijos: su Workers Paid D1 saugo 30 dienų duomenų bazės istoriją (Time Travel). Jei norite kopijos už Cloudflare ribų, reguliariai eksportuokite duomenų bazę. Nuotraukos yra R2; nukopijuokite bucket bet kuriuo S3 įrankiu.",
-    "cfUpdateP": "Atnaujinimai: sujunkite naują versiją į savo repozitorijos kopiją ir atlikite push; Cloudflare ją įdiegia iš naujo."
+    "cfUpdateP": "Atnaujinimai: sujunkite naują versiją į savo repozitorijos kopiją ir atlikite push; Cloudflare ją įdiegia iš naujo.",
+    "installCta": "Įdiegti savo serveryje",
+    "exampleDomain": "portal.jusuzenklas.lt",
+    "ownTitle": "1. Nuosavas serveris (rekomenduojama)",
+    "ownP": "Išsinuomokite nedidelį Linux serverį, nukreipkite į jį savo domeną ir paleiskite vieną komandą. Diegimo programa atsisiunčia portalą, gauna nemokamą HTTPS sertifikatą iš Let's Encrypt ir paleidžia portalą kaip paslaugą, kuri po perkrovimo vėl pasileidžia pati.",
+    "needTitle": "Ko jums reikia",
+    "needItems": [
+      "Linux serverio (VPS) su Ubuntu 22.04 ar 24.04, Debian 12 ar 13 ar panašia sistema. Pradžiai pakanka 1 GB atminties. Tinka bet kuris teikėjas, pavyzdžiui, Hetzner Cloud, DigitalOcean, TransIP VPS ar Scaleway.",
+      "Viešo IPv4 adreso (IPv6 nebūtinas) su atidarytais 80 ir 443 prievadais.",
+      "Domeno ar subdomeno portalui, pavyzdžiui, portal.jusuzenklas.lt."
+    ],
+    "ownStepsTitle": "Trys žingsniai",
+    "ownSteps": [
+      "Sukurkite serverį ir užsirašykite jo IP adresą.",
+      "Vienu DNS įrašu nukreipkite portal.jusuzenklas.lt į serverį (žr. toliau).",
+      "Prisijunkite prie serverio per SSH ir paleiskite šią komandą su savo adresu:"
+    ],
+    "ownDone": "Baigusi diegimo programa parodo jūsų portalo adresą ir vienkartinį diegimo kodą. Atidarykite adresą, įveskite kodą ir užbaikite sąrankos vedlį. Norėdami vėliau atnaujinti, paleiskite tą pačią komandą dar kartą: jūsų nustatymai ir duomenys išlieka.",
+    "ownTs": "Taip įdiegiama Go versija – Portalas nuosavam serveriui. TypeScript versijai prie tos pačios komandos pridėkite --edition ts.",
+    "ownEu": "Pasirinkite duomenų centrą ES, ir jūsų katalogas, nuotraukos bei duomenų bazė liks ES.",
+    "dnsTitle": "DNS: nukreipkite domeną į serverį",
+    "dnsP": "Pridėkite vieną įrašą pas įmonę, kuri tvarko jūsų domeną:",
+    "dnsHead": [
+      "Tipas",
+      "Pavadinimas",
+      "Reikšmė"
+    ],
+    "dnsAaaaType": "AAAA (tik jei serveris turi IPv6)",
+    "dnsAValue": "jūsų serverio IPv4 adresas, pavyzdžiui, 203.0.113.10",
+    "dnsAaaaValue": "jūsų serverio IPv6 adresas",
+    "dnsNameNote": "“portal” sukuria adresą portal.jusuzenklas.lt; jei norite, pasirinkite kitą žodį. TTL palikite numatytąjį (arba 1 valandą).",
+    "dnsWhere": "Kur spustelėti (pavadinimai gali šiek tiek skirtis):",
+    "dnsPaths": [
+      "Valdymo skydelis → Domenai → jūsų domenas → DNS → pridėti įrašą.",
+      "Mijn Hostnet → Domeinnamen → jūsų domenas → DNS beheren → pridėti įrašą.",
+      "Domenai → Tvarkyti domeną → krumpliaračio piktograma → DNS → A įrašas → Tvarkyti.",
+      "Valdymo skydelis → DNS nustatymai → DNS įrašai → Sukurti naują įrašą.",
+      "jūsų domenas → DNS → Records → Add record. Proxy status nustatykite į DNS only (pilkas debesėlis), kad portalas gautų savo sertifikatą. Vėliau norite oranžinio debesėlio? Pirmiausia nustatykite SSL/TLS į Full (strict).",
+      "Mano produktai → jūsų domenas → DNS → Tvarkyti DNS → Pridėti naują įrašą."
+    ],
+    "dnsCheckTitle": "Patikrinkite",
+    "dnsCheckP": "Jūsų kompiuteryje tai turi parodyti serverio adresą (arba naudokite internetinį DNS tikrinimo įrankį, pavyzdžiui, dnschecker.org):",
+    "dnsWait": "Paprastai tai užtrunka 5–60 minučių, kartais kelias valandas. Diegimo programa tai irgi patikrina ir pasako, ko dar trūksta.",
+    "optionsTitle": "Diegimo programos parinktys",
+    "options": [
+      "portalo adresas, pavyzdžiui, portal.jusuzenklas.lt (privaloma)",
+      "el. pašto adresas, skirtas Let's Encrypt (nebūtina)",
+      "konkretus leidimas vietoj naujausio",
+      "go (numatytoji) įdiegia Go versiją; ts įdiegia TypeScript versiją",
+      "be savo HTTPS: portalas klausosi 127.0.0.1:8080 už jūsų tarpinio serverio",
+      "tik parodo, ką darytų, nieko nekeisdama",
+      "pašalina programą ir paslaugą; jūsų duomenys ir nustatymai išlieka (pridėkite --purge, kad būtų ištrinti ir jie)"
+    ],
+    "checksP": "Prieš ką nors keisdama, diegimo programa patikrina sistemą (Linux amd64 arba arm64 su systemd), root teises, vietą diske, ar domenas nukreiptas į šį serverį, ar 80 ir 443 prievadai laisvi, ir ugniasienę. Su ufw ar firewalld ji išspausdina tikslią komandą 80 ir 443 prievadams atidaryti.",
+    "filesTitle": "Kur kas yra",
+    "filesHead": [
+      "Kas",
+      "Go versija",
+      "TypeScript versija"
+    ],
+    "filesRows": [
+      "Programa",
+      "Duomenys",
+      "Nustatymai",
+      "Paslauga"
+    ],
+    "commandsTitle": "Naudingos komandos",
+    "cfTitle": "2. Cloudflare Workers",
+    "cfLead": "Jokio serverio, kurį reikėtų prižiūrėti: portalas veikia jūsų Cloudflare paskyroje. Spustelėkite mygtuką, prisijunkite ir sekite žingsnius.",
+    "cfDnsTitle": "DNS: nuosavas domenas Worker programai",
+    "cfDnsP": "Pridėkite adresą kaip nuosavą domeną Worker programai: Workers & Pages → jūsų Worker → Settings → Domains & Routes → Add → Custom domain. Jei jūsų domenas jau yra Cloudflare, DNS ir sertifikatas nustatomi automatiškai. Jei ne, perkelkite domeno DNS į Cloudflare (nemokamai) arba pridėkite CNAME įrašą portal, nukreiptą į Worker adresą, kaip aprašyta Cloudflare vadove. Tada nustatykite OBX_PUBLIC_URL į tą adresą ir įdiekite iš naujo.",
+    "webDnsTitle": "DNS: subdomenas valdymo skydelyje",
+    "webDnsP": "Sukurkite subdomeną savo talpinimo valdymo skydelyje (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain arba Subdomains; Plesk: Websites & Domains → Add Subdomain). Jei jūsų domeno DNS yra pas tą pačią talpinimo įmonę, daugiau nieko nereikia. Kitaip pridėkite subdomenui A įrašą, nukreiptą į talpinimo serverio IP adresą, kurį rodo skydelis. Tada skydelyje įjunkite Let's Encrypt subdomenui."
   },
   "retailers": {
     "h1": "Pardavėjams",
@@ -668,7 +712,7 @@
       "specifikacija, schemos, bandomieji duomenys",
       "Go SDK, įrankis obx, atitikties testai, imitacinis serveris",
       "bendra žiniatinklio sąsaja: administravimas ir prekybininkų portalas",
-      "Go: Docker ir Google Cloud Run",
+      "Go: nuosavas serveris su vienos eilutės diegimo programa",
       "PHP: įprastas interneto talpinimas",
       "TypeScript: Cloudflare Workers"
     ],
@@ -702,7 +746,7 @@
       },
       {
         "name": "node-go",
-        "d": "Portalas Docker ir Google Cloud Run"
+        "d": "Portalas nuosavam serveriui"
       },
       {
         "name": "node-php",
@@ -992,7 +1036,7 @@
       "Įkelkite Excel eksportą ir nuotraukas rankiniu būdu arba leiskite juos paimti kas naktį",
       "Automatinis pateikimas iš jūsų PIM, ERP ar bendro aplanko",
       "Prieigos prašymai, kvietimai ir API raktai jūsų pardavėjų programinei įrangai",
-      "Trys leidimai: Cloudflare, Google Cloud & Docker ir įprastas žiniatinklio talpinimas"
+      "Trys versijos: nuosavas serveris, Cloudflare Workers ir įprastas interneto talpinimas"
     ],
     "brandsComing": [
       "Pirmasis viešas leidimas su įdiegimu vienu spustelėjimu",
@@ -1150,12 +1194,21 @@
       "editions": [
         {
           "tag": "Rekomenduojama",
-          "name": "Nuosavas serveris Europoje",
-          "runs": "Serveris pas Europos paslaugų teikėją, pavyzdžiui, Hetzner (Vokietija)",
-          "need": "Serverio ir domeno vardo",
-          "setup": "Kelios komandos, tada sąrankos vedlys",
+          "name": "Nuosavas serveris",
+          "runs": "Bet kuris Linux serveris (VPS), pavyzdžiui, pas Hetzner, DigitalOcean, TransIP ar Scaleway",
+          "need": "Serverio, domeno vardo ir SSH prieigos",
+          "setup": "Viena komanda, tada sąrankos vedlys",
           "cost": "Apie 5–15 € per mėnesį už nedidelį serverį su atsarginėmis kopijomis",
-          "cta": "Įdiegti Europoje"
+          "cta": "Įdiegti savo serveryje"
+        },
+        {
+          "tag": "Be serverio",
+          "name": "Cloudflare Workers",
+          "runs": "Jūsų Cloudflare paskyra, su D1 kaip duomenų baze ir R2 nuotraukoms",
+          "need": "Cloudflare paskyros su Workers Paid planu",
+          "setup": "Vienas paspaudimas, tada sąrankos vedlys",
+          "cost": "5 doleriai per mėnesį ir saugykla",
+          "cta": "Įdiegti Cloudflare"
         },
         {
           "tag": "Be komandų",
@@ -1174,15 +1227,6 @@
           "setup": "Partneris įdiegia kartu su jumis",
           "cost": "Partnerio kainos",
           "cta": "Žiūrėti teikėjus"
-        },
-        {
-          "tag": "Kiti debesys",
-          "name": "Cloudflare arba Google Cloud",
-          "runs": "Cloudflare Workers arba Google Cloud Run",
-          "need": "Cloudflare arba Google Cloud paskyros",
-          "setup": "Vienas paspaudimas arba vienas scenarijus",
-          "cost": "Cloudflare: 5 doleriai per mėnesį ir saugykla. Google Cloud: pagal naudojimą",
-          "cta": "Įdiegti kitame debesyje"
         }
       ],
       "trustEyebrow": "Valdymas",

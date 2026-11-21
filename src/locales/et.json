@@ -15,14 +15,14 @@
     "footerSource": "Lähtekood ja spetsifikatsioon",
     "footerLicence": "© 2026 {foundation}. Kõik õigused kaitstud. Spetsifikatsioon on CC-BY-4.0 litsentsiga.",
     "editionCloudflare": "Portaal Cloudflare'ile",
-    "editionGoogle": "Portaal Google Cloudile ja Dockerile",
     "editionHosting": "Portaal veebimajutusele",
     "yes": "Jah",
     "inDevelopment": "Arendamisel",
     "available": "Saadaval",
     "footerContact": "Kontakt",
     "madeInEu": "Valmistatud ELis",
-    "footerDiscuss": "Liituge aruteluga"
+    "footerDiscuss": "Liituge aruteluga",
+    "editionServer": "Portaal oma serverile"
   },
   "nav": {
     "brands": "Kaubamärkidele",
@@ -55,7 +55,7 @@
     },
     "hosting": {
       "title": "Majutus",
-      "description": "Teie pildiportaal seal, kus soovite: partneri majutatuna, teie oma serveris Euroopas, tavalises veebimajutuses või muus pilves."
+      "description": "Teie pildiportaal seal, kus soovite: oma serveris ühe käsuga, Cloudflare Workersil, tavalises veebimajutuses või partneri majutatuna."
     },
     "retailers": {
       "title": "Edasimüüjatele",
@@ -350,7 +350,7 @@
     "cliExit": "Väljumiskood 0 = kõik korras, 2 = valmis, kuid mõnel real oli vigu (need loetletakse), 1 = ebaõnnestus.",
     "cliGet": "Laadi obx alla",
     "watchTitle": "2. Kaust, mis avaldab end ise: obx watch",
-    "watchP": "Laske PIM-il, ERP-l või kolleegil salvestada ekspordid kausta. obx watch avaldab kohe, kui midagi muutub, ja jätab muutmata fotod vahele. Käivitage see teenusena või Dockeriga:",
+    "watchP": "Laske PIM-il, ERP-l või kolleegil salvestada ekspordid kausta. obx watch avaldab kohe, kui midagi muutub, ja jätab muutmata fotod vahele. Käivitage see teenusena, näiteks Linuxis systemd abil:",
     "cronTitle": "3. cron või Windowsi Tööajasti",
     "cronLinux": "Linux või macOS",
     "cronWindows": "Windows (PowerShell, üks kord)",
@@ -383,8 +383,8 @@
   },
   "hosting": {
     "h1": "Majutus",
-    "lead": "Igal kaubamärgil on oma pildiportaal oma serveris. Teie valite, kuidas seda käitada, täielikust sisseostust täiesti iseseisva haldamiseni.",
-    "p1Title": "3. Partner majutab selle teie eest",
+    "lead": "Igal kaubamärgil on oma pildiportaal. Paigaldage see ühe käsuga oma serverisse, käitage seda Cloudflare Workersil, laadige see üles tavalisse veebimajutusse või laske partneril seda majutada.",
+    "p1Title": "4. Partner majutab selle teie eest",
     "p1P": "Ei soovi ise majutada? Partnerid saavad portaali teie eest majutada ja hooldada.",
     "fieldBased": "Asukoht",
     "fieldLanguages": "Keeled",
@@ -399,11 +399,8 @@
       "avaldate oma hinnad ja tingimused oma veebisaidil"
     ],
     "listHow": "Ühilduv olla on tasuta; siin loetelus olemine kuulub ametliku partnerluse juurde.",
-    "p2Title": "2. Ühe klõpsuga",
-    "p2P": "Oma portaal oma kontol, ilma serverit haldamata.",
     "cfP": "Töötab Cloudflare Workersil, andmebaasiks D1 ja piltide jaoks R2. Klõpsake nuppu, logige Cloudflare'i sisse ja järgige samme. Igapäevaseks kasutamiseks vajab portaal paketti Workers Paid (5 dollarit kuus); tasuta paketist piisab ainult proovimiseks. Teie fotode veebiversioonid teeb teie brauser ja tööriist obx.",
     "cfButton": "Paigalda Cloudflare'i",
-    "runP": "Skript, mis paneb teie portaali Google Cloud Runi. Vajate Google Cloudi kontot ja tööriista gcloud.",
     "phpP": "Veebimajutusele, mis teil ehk juba on, PHP ja andmebaasiga. Käske pole vaja:",
     "phpSteps": [
       "Laadige alla obx-portal-php-<version>.zip uusimast väljalaskest.",
@@ -414,17 +411,10 @@
       "Lisage paigaldaja näidatud cron-aadress oma majutuse juhtpaneelis cron-tööna, iga 5 minuti järel. Ka ilma selleta portaal töötab."
     ],
     "phpDownload": "Laadi alla uusim väljalase",
-    "p3Title": "3. Teie oma server",
-    "p3P": "Kas teil on juba oma pöördpuhverserver (reverse proxy)? Siis käivitage ainult avaldatud tõmmis ja suunake puhverserver pordile 8080:",
-    "envTitle": "Seaded",
-    "envPublicUrl": "teie portaali avalik aadress",
-    "envSecretKey": "pikk juhuslik võti (openssl rand -base64 48). Hoidke koopiat oma paroolihalduris: kui andmed on olemas, ei saa võtit enam muuta",
-    "envSetupCode": "valikuline: eelnevalt valitud seadistuskood",
-    "envPort": "port, vaikimisi 8080",
     "firstTitle": "Pärast paigaldamist: esimene käivitus",
     "first": [
       "Avage oma portaali aadress brauseris.",
-      "Sisestage ühekordne seadistuskood. See on logis esimesel käivitamisel (Portaal veebimajutusele: failis data/SETUP-CODE.txt ja paigaldaja täidab selle teie eest), või määrate selle eelnevalt OBX_SETUP_CODE abil.",
+      "Sisestage ühekordne seadistuskood. Teie oma serveri paigaldaja näitab seda lõpus. Muul juhul on see logis esimesel käivitamisel (Portaal veebimajutusele: failis data/SETUP-CODE.txt ja paigaldaja täidab selle teie eest), või määrate selle eelnevalt OBX_SETUP_CODE abil.",
       "Sisestage oma ettevõte ja esimene kaubamärk ning valige oma parool. Vaikeparooli ei ole kunagi."
     ],
     "firstWhy": "Seadistuskood tagab, et keegi teine ei saa äsja paigaldatud portaali endale võtta.",
@@ -434,54 +424,108 @@
     "compareP": "Kolm väljaannet teevad sama asja ning neil on sama haldus ja sama edasimüüjate portaal. Valige see, mis sobib teie majutusega; vahetada saab hiljem.",
     "compareLink": "Vaadake teostusi",
     "heroTitle": "Teie pildiportaal, seal kus soovite.",
-    "heroLead": "Tarkvara on tasuta. Teie valite, kus see töötab, ja saate igal ajal kolida.",
+    "heroLead": "Tarkvara on tasuta. Kõige lihtsam on väike oma server ja üks käsk. Saate igal ajal kolida.",
     "heroChecks": [
       "Tasuta tarkvara, maksate ainult majutuse eest",
-      "Soovitatav: Euroopas, näiteks Hetzneris (Saksamaa)",
+      "Üks käsk paigaldab portaali koos HTTPS-iga",
       "Igal pool sama portaal, nii et saate alati vahetada",
       "Ei soovi ise teha? Partner majutab selle teie eest"
     ],
-    "euCta": "Teie pildiportaal Euroopas",
-    "euTitle": "1. Oma server Euroopas (soovitatav)",
-    "euP": "Enamikule kaubamärkidele piisab väikesest serverist Euroopa teenusepakkuja juures. Meie juhend kasutab Hetznerit, mille andmekeskused asuvad Saksamaal ja Soomes.",
-    "euSteps": [
-      "Looge Hetzneris server Nürnbergis, Falkensteinis või Helsingis, varukoopiad sisse lülitatud.",
-      "Suunake oma domeen, näiteks images.teiebrand.ee, serverile.",
-      "Paigaldage Docker ja käivitage portaal mõne käsuga. HTTPS seadistatakse automaatselt.",
-      "Avage oma domeen ja läbige seadistusviisard.",
-      "Valikuline: hoidke pilte Hetzner Object Storage'is, samas asukohas.",
-      "Ajastage igaöine varukoopia ja kopeerige see serverist välja. Uuendamiseks piisab kahest käsust."
-    ],
-    "euGuide": "Samm-sammult juhend: teie portaal Hetzneris",
-    "euData": "Kui server ja salvestus asuvad ELi asukohas, hoitakse teie kataloogi, pilte ja andmebaasi ELis.",
-    "webTitle": "2. Tavaline veebimajutus",
+    "webTitle": "3. Tavaline veebimajutus",
     "webP": "PHP-versioon töötab tavalisel Euroopa veebimajutusel PHP ja andmebaasiga, näiteks TransIPis, Stratos või OVHcloudis. Käske pole vaja:",
-    "altTitle": "4. Muud pilved",
-    "altP": "Sama portaal töötab ka Cloudflare Workersil ja Google Cloud Runis. Valige Euroopa piirkond, kui teenus seda pakub.",
     "partnerLink": "Vaadake partnereid",
     "techTitle": "Tehnilised üksikasjad teie IT-meeskonnale",
-    "techLead": "Käsud, seaded ja paigaldusjuhendid inimesele, kes serveri seadistab.",
+    "techLead": "Paigaldaja valikud, failid, varukoopiad ja uuendused inimesele, kes serveri seadistab.",
     "costTitle": "Ligikaudsed kulud",
     "costItems": [
       "Oma server ELis: umbes 5–15 € kuus väikese automaatsete varukoopiatega serveri eest, näiteks Hetzneris. Fotod serveri enda kettal ei maksa midagi lisaks; objektisalvestus suure arhiivi jaoks lisab mõne euro kuus terabaidi kohta.",
       "Tavaline veebimajutus: pakett, mille eest juba maksate, kui sellel on PHP 8.2 või uuem.",
       "Cloudflare Workers: Workers Paid maksab 5 dollarit kuus, lisaks R2 salvestus umbes 1,50 dollarit kuus 100 GB fotode kohta. Allalaadimistasusid ei ole.",
       "Partner: partneri enda hind. Küsige, mis selle sisse kuulub: uuendused, varukoopiad, oma domeen ja kogu sisu eksport, kui lahkute.",
-      "Teie enda aeg: esimesel korral arvestage pool päeva kuni päev, sealhulgas domeen ja varukoopia proovitaastamine, ning umbes tund kuus uuendusteks ja varukoopiate kontrolliks."
+      "Teie enda aeg: esimesel korral arvestage üks kuni kaks tundi, sealhulgas domeen ja varukoopia proovitaastamine, ning umbes tund kuus uuendusteks ja varukoopiate kontrolliks."
     ],
     "costNote": "Ligikaudsed hinnad 2026. aasta novembri seisuga, käibemaksuta. Enne valimist kontrollige teenusepakkuja kehtivaid hindu.",
-    "stepsTitle": "Samm-sammult uues serveris",
-    "stepsP": "Uues Ubuntu serveris, kus pordid 22, 80 ja 443 on avatud ning teie domeeni A- ja AAAA-kirjed juba sellele osutavad. See on sama seadistus nagu Hetzneri juhendis: see ehitab portaali uusima väljalaske ja paneb HTTPS-i jaoks selle ette Caddy.",
     "httpsTitle": "HTTPS",
-    "httpsP": "Caddy taotleb Let's Encrypti sertifikaadi kohe, kui teie domeen osutab serverile, uuendab seda automaatselt ja suunab http päringud https-ile. Sertifikaati pole? Kontrollige käsuga dig, et domeen näitab serveri aadressi ja et pordid 80 ja 443 on tulemüüris avatud.",
+    "httpsP": "Go väljaanne taotleb Let's Encrypti sertifikaadi ise kohe, kui teie domeen osutab serverile, uuendab seda automaatselt ja suunab http päringud https-ile. TypeScripti väljaanne teeb sama Caddy abil, mille paigaldaja seadistab. Sertifikaati pole? Kontrollige käsuga dig, et domeen näitab serveri aadressi ja et pordid 80 ja 443 on avatud.",
     "backupTitle": "Varukoopiad",
-    "backupP": "Lülitage sisse teenusepakkuja serveri varukoopiad ja lisage igaöine portaali varukoopia, mille kopeerite ka serverist välja. Hoidke OBX_SECRET_KEY eraldi, paroolihalduris: ilma selleta ei saa varukoopiat täielikult taastada. Proovige taastamist üks kord läbi, et teaksite, et see töötab.",
+    "backupP": "Lülitage sisse teenusepakkuja serveri varukoopiad ja lisage igaöine portaali varukoopia, mille kopeerite ka serverist välja. Hoidke salajast võtit eraldi, paroolihalduris: see on OBX_SECRET_KEY seadete failis või secret.key andmekaustas. Ilma selleta ei saa varukoopiat täielikult taastada. Proovige taastamist üks kord läbi, et teaksite, et see töötab.",
     "updateTitle": "Uuendused",
-    "updateP": "Tehke varukoopia ja lugege väljalaskemärkmeid. Seejärel võtke kasutusele uus väljalase ja ehitage portaal uuesti; andmebaas uueneb portaali käivitumisel ise.",
+    "updateP": "Tehke varukoopia ja lugege väljalaskemärkmeid. Seejärel käivitage sama paigalduskäsk uuesti: see paigaldab uusima väljalaske, jätab teie seaded ja andmed alles ning taaskäivitab portaali. Andmebaas uueneb käivitumisel ise.",
     "cfCliP": "Või oma arvutist, Buni ja tööriistaga Wrangler:",
-    "cfDomainP": "Oma domeen: lisage see menüüs Workers & Pages → teie Worker → Settings → Domains & Routes (domeen peab olema Cloudflare'is), määrake OBX_PUBLIC_URL sellele aadressile ja paigaldage uuesti.",
     "cfBackupP": "Varukoopiad: Workers Paidiga hoiab D1 andmebaasi ajalugu 30 päeva (Time Travel). Cloudflare'ist väljaspool asuva koopia jaoks eksportige andmebaasi regulaarselt. Pildid on R2-s; kopeerige bucket mis tahes S3-tööriistaga.",
-    "cfUpdateP": "Uuendused: liitke uus väljalase oma repositooriumi koopiaga ja tehke push; Cloudflare paigaldab selle uuesti."
+    "cfUpdateP": "Uuendused: liitke uus väljalase oma repositooriumi koopiaga ja tehke push; Cloudflare paigaldab selle uuesti.",
+    "installCta": "Paigaldage oma serverisse",
+    "exampleDomain": "portal.teiebrand.ee",
+    "ownTitle": "1. Oma server (soovitatav)",
+    "ownP": "Rentige väike Linuxi server, suunake oma domeen sellele ja käivitage üks käsk. Paigaldaja laadib portaali alla, hangib Let's Encryptilt tasuta HTTPS-sertifikaadi ja käivitab portaali teenusena, mis taaskäivituse järel ise uuesti tööle hakkab.",
+    "needTitle": "Mida vajate",
+    "needItems": [
+      "Linuxi server (VPS), millel on Ubuntu 22.04 või 24.04, Debian 12 või 13 või sarnane. Alustuseks piisab 1 GB mälust. Sobib iga teenusepakkuja, näiteks Hetzner Cloud, DigitalOcean, TransIP VPS või Scaleway.",
+      "Avalik IPv4-aadress (IPv6 on valikuline), pordid 80 ja 443 avatud.",
+      "Domeen või alamdomeen portaali jaoks, näiteks portal.teiebrand.ee."
+    ],
+    "ownStepsTitle": "Kolm sammu",
+    "ownSteps": [
+      "Looge server ja pange kirja selle IP-aadress.",
+      "Suunake portal.teiebrand.ee ühe DNS-kirjega serverile (vt allpool).",
+      "Logige SSH-ga serverisse sisse ja käivitage see käsk oma aadressiga:"
+    ],
+    "ownDone": "Kui paigaldus on valmis, näitab paigaldaja teie portaali aadressi ja ühekordset seadistuskoodi. Avage aadress, sisestage kood ja läbige seadistusviisard. Hiljem uuendamiseks käivitage sama käsk uuesti: teie seaded ja andmed jäävad alles.",
+    "ownTs": "See paigaldab Go väljaande ehk Portaali oma serverile. TypeScripti väljaande jaoks lisage samale käsule --edition ts.",
+    "ownEu": "Valige andmekeskus ELis, siis jäävad teie kataloog, pildid ja andmebaas ELi.",
+    "dnsTitle": "DNS: suunake oma domeen serverile",
+    "dnsP": "Lisage üks kirje ettevõttes, mis haldab teie domeeni:",
+    "dnsHead": [
+      "Tüüp",
+      "Nimi",
+      "Väärtus"
+    ],
+    "dnsAaaaType": "AAAA (ainult kui serveril on IPv6)",
+    "dnsAValue": "teie serveri IPv4-aadress, näiteks 203.0.113.10",
+    "dnsAaaaValue": "teie serveri IPv6-aadress",
+    "dnsNameNote": "„portal“ annab aadressi portal.teiebrand.ee; soovi korral valige mõni muu sõna. Jätke TTL vaikeväärtusele (või 1 tunnile).",
+    "dnsWhere": "Kuhu klõpsata (nimetused võivad veidi erineda):",
+    "dnsPaths": [
+      "Juhtpaneel → Domeenid → teie domeen → DNS → lisage kirje.",
+      "Mijn Hostnet → Domeinnamen → teie domeen → DNS beheren → lisage kirje.",
+      "Domeenid → Halda domeeni → hammasrattaikoon → DNS → A-kirje → Halda.",
+      "Juhtpaneel → DNS-seaded → DNS-kirjed → Loo uus kirje.",
+      "teie domeen → DNS → Records → Add record. Määrake Proxy status väärtuseks DNS only (hall pilv), et portaal saaks oma sertifikaadi. Soovite hiljem oranži pilve? Määrake enne SSL/TLS väärtuseks Full (strict).",
+      "Minu tooted → teie domeen → DNS → Halda DNS-i → Lisa uus kirje."
+    ],
+    "dnsCheckTitle": "Kontrollige",
+    "dnsCheckP": "Teie enda arvutis peab see näitama serveri aadressi (või kasutage veebipõhist DNS-kontrolli, näiteks dnschecker.org):",
+    "dnsWait": "Tavaliselt võtab see 5 kuni 60 minutit, mõnikord paar tundi. Paigaldaja kontrollib seda samuti ja ütleb, mis veel puudu on.",
+    "optionsTitle": "Paigaldaja valikud",
+    "options": [
+      "portaali aadress, näiteks portal.teiebrand.ee (kohustuslik)",
+      "e-posti aadress Let's Encrypti jaoks (valikuline)",
+      "kindel väljalase uusima asemel",
+      "go (vaikimisi) paigaldab Go väljaande; ts paigaldab TypeScripti väljaande",
+      "ilma oma HTTPS-ita: portaal kuulab aadressil 127.0.0.1:8080 teie enda puhverserveri taga",
+      "näita ainult, mida tehtaks, ära muuda midagi",
+      "eemalda programm ja teenus; teie andmed ja seaded jäävad alles (lisage --purge, et need samuti kustutada)"
+    ],
+    "checksP": "Enne kui paigaldaja midagi muudab, kontrollib see süsteemi (Linux amd64 või arm64 koos systemd-ga), juurkasutaja õigusi, kettaruumi, et domeen osutab sellele serverile, et pordid 80 ja 443 on vabad, ning tulemüüri. ufw või firewalld puhul näitab see täpset käsku portide 80 ja 443 avamiseks.",
+    "filesTitle": "Kus mis asub",
+    "filesHead": [
+      "Mis",
+      "Go väljaanne",
+      "TypeScripti väljaanne"
+    ],
+    "filesRows": [
+      "Programm",
+      "Andmed",
+      "Seaded",
+      "Teenus"
+    ],
+    "commandsTitle": "Kasulikud käsud",
+    "cfTitle": "2. Cloudflare Workers",
+    "cfLead": "Serverit pole vaja hallata: portaal töötab teie oma Cloudflare'i kontol. Klõpsake nuppu, logige sisse ja järgige samme.",
+    "cfDnsTitle": "DNS: oma domeen Workerile",
+    "cfDnsP": "Lisage aadress Workeri oma domeenina: Workers & Pages → teie Worker → Settings → Domains & Routes → Add → Custom domain. Kui teie domeen on juba Cloudflare'is, seadistatakse DNS ja sertifikaat automaatselt. Kui ei, viige oma domeeni DNS Cloudflare'i (tasuta) või lisage CNAME-kirje portal, mis osutab Workeri aadressile, nagu Cloudflare'i juhend kirjeldab. Seejärel määrake OBX_PUBLIC_URL sellele aadressile ja paigaldage uuesti.",
+    "webDnsTitle": "DNS: alamdomeen teie juhtpaneelis",
+    "webDnsP": "Looge alamdomeen oma veebimajutuse juhtpaneelis (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain või Subdomains; Plesk: Websites & Domains → Add Subdomain). Kui teie domeeni DNS on sama majutusettevõtte juures, ongi kõik. Muul juhul lisage alamdomeenile A-kirje, mis osutab majutusserveri IP-aadressile; paneel näitab seda. Seejärel lülitage paneelis alamdomeenile sisse Let's Encrypt."
   },
   "retailers": {
     "h1": "Edasimüüjatele",
@@ -668,7 +712,7 @@
       "spetsifikatsioon, skeemid, testandmed",
       "Go SDK, tööriist obx, vastavustestid, näidisserver",
       "ühine veebiliides: haldus ja edasimüüjate portaal",
-      "Go: Docker ja Google Cloud Run",
+      "Go: teie oma server, üherealise paigaldajaga",
       "PHP: tavaline veebimajutus",
       "TypeScript: Cloudflare Workers"
     ],
@@ -702,7 +746,7 @@
       },
       {
         "name": "node-go",
-        "d": "Portaal Dockeri ja Google Cloud Runi jaoks"
+        "d": "Portaal oma serverile"
       },
       {
         "name": "node-php",
@@ -992,7 +1036,7 @@
       "Laadige Exceli eksport ja fotod üles käsitsi või laske need igal ööl tuua",
       "Automaatne edastus teie PIM-ist, ERP-st või jagatud kaustast",
       "Juurdepääsutaotlused, kutsed ja API-võtmed teie edasimüüjate tarkvarale",
-      "Kolm väljaannet: Cloudflare, Google Cloud & Docker ja tavaline veebimajutus"
+      "Kolm väljaannet: oma server, Cloudflare Workers ja tavaline veebimajutus"
     ],
     "brandsComing": [
       "Esimene avalik väljalase, paigaldusega ühe klõpsuga",
@@ -1150,12 +1194,21 @@
       "editions": [
         {
           "tag": "Soovitatav",
-          "name": "Oma server Euroopas",
-          "runs": "Server Euroopa teenusepakkuja juures, näiteks Hetzneris (Saksamaa)",
-          "need": "Server ja domeeninimi",
-          "setup": "Mõni käsk, seejärel seadistusviisard",
+          "name": "Oma server",
+          "runs": "Mis tahes Linuxi server (VPS), näiteks Hetzneris, DigitalOceanis, TransIP-s või Scalewayl",
+          "need": "Server, domeeninimi ja SSH-ligipääs",
+          "setup": "Üks käsk, seejärel seadistusviisard",
           "cost": "Umbes 5–15 € kuus väikese varukoopiatega serveri eest",
-          "cta": "Seadistage Euroopas"
+          "cta": "Paigaldage oma serverisse"
+        },
+        {
+          "tag": "Serverita",
+          "name": "Cloudflare Workers",
+          "runs": "Teie oma Cloudflare'i konto, andmebaasiks D1 ja piltide jaoks R2",
+          "need": "Cloudflare'i konto paketiga Workers Paid",
+          "setup": "Üks klõps, seejärel seadistusviisard",
+          "cost": "5 dollarit kuus pluss salvestus",
+          "cta": "Seadistage Cloudflare'is"
         },
         {
           "tag": "Ilma käskudeta",
@@ -1174,15 +1227,6 @@
           "setup": "Partner seadistab selle koos teiega",
           "cost": "Partneri enda hinnad",
           "cta": "Vaadake teenusepakkujaid"
-        },
-        {
-          "tag": "Muud pilved",
-          "name": "Cloudflare või Google Cloud",
-          "runs": "Cloudflare Workers või Google Cloud Run",
-          "need": "Cloudflare'i või Google Cloudi konto",
-          "setup": "Üks klõps või üks skript",
-          "cost": "Cloudflare: 5 dollarit kuus pluss salvestus. Google Cloud: kasutuse järgi",
-          "cta": "Seadistage muus pilves"
         }
       ],
       "trustEyebrow": "Juhtimine",

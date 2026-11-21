@@ -15,14 +15,14 @@
     "footerSource": "Forráskód és specifikáció",
     "footerLicence": "© 2026 {foundation}. Minden jog fenntartva. A specifikáció CC-BY-4.0 licencű.",
     "editionCloudflare": "Portál Cloudflare-re",
-    "editionGoogle": "Portál Google Cloudra és Dockerre",
     "editionHosting": "Portál webtárhelyre",
     "yes": "Igen",
     "inDevelopment": "Fejlesztés alatt",
     "available": "Elérhető",
     "footerContact": "Kapcsolat",
     "madeInEu": "Az EU-ban készült",
-    "footerDiscuss": "Csatlakozzon a beszélgetéshez"
+    "footerDiscuss": "Csatlakozzon a beszélgetéshez",
+    "editionServer": "Portál saját szerverre"
   },
   "nav": {
     "brands": "Márkáknak",
@@ -55,7 +55,7 @@
     },
     "hosting": {
       "title": "Üzemeltetés",
-      "description": "Az Ön képportálja ott, ahol szeretné: egy partnernél, saját szerveren Európában, hagyományos webtárhelyen vagy egy másik felhőben."
+      "description": "Az Ön képportálja ott, ahol szeretné: saját szerveren egyetlen paranccsal, Cloudflare Workers-en, hagyományos webtárhelyen vagy egy partnernél."
     },
     "retailers": {
       "title": "Viszonteladóknak",
@@ -350,7 +350,7 @@
     "cliExit": "Kilépési kód 0 = minden rendben, 2 = kész, de néhány sorban hiba volt (listázva), 1 = sikertelen.",
     "cliGet": "Az obx letöltése",
     "watchTitle": "2. Egy mappa, amely magát publikálja: obx watch",
-    "watchP": "A PIM, az ERP vagy egy kolléga mentse az exportokat egy mappába. Az obx watch azonnal publikál, ha valami változik, és kihagyja a változatlan fotókat. Futtassa szolgáltatásként vagy Dockerrel:",
+    "watchP": "A PIM, az ERP vagy egy kolléga mentse az exportokat egy mappába. Az obx watch azonnal publikál, ha valami változik, és kihagyja a változatlan fotókat. Futtassa szolgáltatásként, Linuxon például systemd-vel:",
     "cronTitle": "3. cron vagy a Windows Feladatütemező",
     "cronLinux": "Linux vagy macOS",
     "cronWindows": "Windows (PowerShell, egyszer)",
@@ -383,8 +383,8 @@
   },
   "hosting": {
     "h1": "Üzemeltetés",
-    "lead": "Minden márkának saját képportálja van, saját szerveren. Ön választja ki, hogyan üzemelteti, a teljes kiszervezéstől a teljesen önálló működtetésig.",
-    "p1Title": "3. Egy partner üzemelteti Ön helyett",
+    "lead": "Minden márkának saját képportálja van. Telepítse saját szerverre egyetlen paranccsal, futtassa Cloudflare Workers-en, töltse fel hagyományos webtárhelyre, vagy bízza egy partnerre az üzemeltetést.",
+    "p1Title": "4. Egy partner üzemelteti Ön helyett",
     "p1P": "Nem szeretné maga üzemeltetni? A partnerek üzemeltethetik és karbantarthatják Ön helyett a portált.",
     "fieldBased": "Székhely",
     "fieldLanguages": "Nyelvek",
@@ -399,11 +399,8 @@
       "árait és feltételeit a saját webhelyén teszi közzé"
     ],
     "listHow": "A kompatibilitás ingyenes; az itteni megjelenés a hivatalos partnerség része.",
-    "p2Title": "2. Egy kattintással",
-    "p2P": "Saját portál a saját fiókjában, szerverkezelés nélkül.",
     "cfP": "Cloudflare Workers-en fut, adatbázisként D1-gyel, a képekhez R2-vel. Kattintson a gombra, jelentkezzen be a Cloudflare-be, és kövesse a lépéseket. A napi használatú portálhoz a Workers Paid csomag kell (havi 5 dollár); az ingyenes csomag csak körülnézésre elég. A fotói webes változatait a böngészője és az obx eszköz készíti el.",
     "cfButton": "Telepítés Cloudflare-re",
-    "runP": "Egy szkript, amely a portált a Google Cloud Runra telepíti. Google Cloud-fiókra és a gcloud eszközre van szüksége.",
     "phpP": "Ahhoz a webtárhelyhez, amely talán már megvan, PHP-val és adatbázissal. Nincs szükség parancsokra:",
     "phpSteps": [
       "Töltse le az obx-portal-php-<version>.zip fájlt a legújabb kiadásból.",
@@ -414,17 +411,10 @@
       "A telepítő által mutatott cron-címet vegye fel cron-feladatként a tárhely vezérlőpultján, 5 percenként. Enélkül is működik a portál."
     ],
     "phpDownload": "A legújabb kiadás letöltése",
-    "p3Title": "3. Saját szerver",
-    "p3P": "Már saját reverse proxyt használ? Akkor csak a közzétett image-et indítsa el, és irányítsa a proxyt a 8080-as portra:",
-    "envTitle": "Beállítások",
-    "envPublicUrl": "a portál nyilvános címe",
-    "envSecretKey": "hosszú véletlen kulcs (openssl rand -base64 48). Tartson egy példányt a jelszókezelőjében: ha már vannak adatok, a kulcs nem módosítható",
-    "envSetupCode": "opcionális: előre választott telepítési kód",
-    "envPort": "port, alapértelmezés szerint 8080",
     "firstTitle": "Telepítés után: az első indítás",
     "first": [
       "Nyissa meg a portál címét a böngészőben.",
-      "Adja meg az egyszer használatos telepítési kódot. Az első indításkor a naplóban találja (Portál webtárhelyre: a data/SETUP-CODE.txt fájlban, és a telepítő kitölti Ön helyett), vagy előre beállíthatja az OBX_SETUP_CODE értékkel.",
+      "Adja meg az egyszer használatos telepítési kódot. A saját szerveren a telepítő a végén megmutatja. Egyébként az első indításkor a naplóban találja (Portál webtárhelyre: a data/SETUP-CODE.txt fájlban, és a telepítő kitölti Ön helyett), vagy előre beállíthatja az OBX_SETUP_CODE értékkel.",
       "Adja meg cégét és első márkáját, és válasszon saját jelszót. Alapértelmezett jelszó soha nincs."
     ],
     "firstWhy": "A telepítési kód biztosítja, hogy senki más ne vehesse át a frissen telepített portált.",
@@ -434,54 +424,108 @@
     "compareP": "A három kiadás ugyanazt tudja, és ugyanaz az adminisztrációja és viszonteladói portálja. Válassza azt, amelyik illik a tárhelyéhez; később válthat.",
     "compareLink": "Az implementációk megtekintése",
     "heroTitle": "Az Ön képportálja, ott, ahol szeretné.",
-    "heroLead": "A szoftver ingyenes. Ön választja ki, hol fut, és bármikor költözhet.",
+    "heroLead": "A szoftver ingyenes. A legegyszerűbb egy kis saját szerver és egyetlen parancs. Bármikor költözhet.",
     "heroChecks": [
       "Ingyenes szoftver, csak az üzemeltetésért fizet",
-      "Ajánlott: Európában, például a Hetznernél (Németország)",
+      "Egyetlen parancs telepíti a portált, HTTPS-sel együtt",
       "Mindenhol ugyanaz a portál, így bármikor válthat",
       "Nem szeretné maga csinálni? Egy partner üzemelteti Ön helyett"
     ],
-    "euCta": "Az Ön képportálja Európában",
-    "euTitle": "1. Saját szerver Európában (ajánlott)",
-    "euP": "A legtöbb márkának elég egy kis szerver egy európai szolgáltatónál. Útmutatónk a Hetznert használja, amelynek adatközpontjai Németországban és Finnországban vannak.",
-    "euSteps": [
-      "Hozzon létre egy szervert a Hetznernél Nürnbergben, Falkensteinben vagy Helsinkiben, bekapcsolt biztonsági mentéssel.",
-      "Irányítsa domainjét, például images.markaja.hu, a szerverre.",
-      "Telepítse a Dockert, és indítsa el a portált néhány paranccsal. A HTTPS automatikusan beáll.",
-      "Nyissa meg a domainjét, és menjen végig a beállítási varázslón.",
-      "Opcionális: tárolja a képeket a Hetzner Object Storage-ban, ugyanazon a helyszínen.",
-      "Ütemezzen éjszakai biztonsági mentést, és másolja a szerveren kívülre. A frissítés két parancs."
-    ],
-    "euGuide": "Lépésről lépésre: az Ön portálja a Hetznernél",
-    "euData": "Ha a szerver és a tárhely EU-s helyszínen van, katalógusát, képeit és adatbázisát az EU-ban tárolják.",
-    "webTitle": "2. Hagyományos webtárhely",
+    "webTitle": "3. Hagyományos webtárhely",
     "webP": "A PHP-kiadás hagyományos európai webtárhelyen fut PHP-val és adatbázissal, például a TransIP-nél, a Stratónál vagy az OVHcloudnál. Nincs szükség parancsokra:",
-    "altTitle": "4. Egyéb felhők",
-    "altP": "Ugyanez a portál a Cloudflare Workersen és a Google Cloud Runon is fut. Válasszon európai régiót, ha a szolgáltatás kínál ilyet.",
     "partnerLink": "Partnerek megtekintése",
     "techTitle": "Műszaki részletek az IT-csapatának",
-    "techLead": "Parancsok, beállítások és telepítési útmutatók annak, aki a szervert beállítja.",
+    "techLead": "Telepítési beállítások, fájlok, biztonsági mentések és frissítések annak, aki a szervert beállítja.",
     "costTitle": "Mennyibe kerül nagyjából",
     "costItems": [
       "Saját szerver az EU-ban: havi kb. 5–15 € egy kis szerverért automatikus biztonsági mentéssel, például a Hetznernél. A szerver saját lemezén tárolt fotók nem kerülnek többe; egy nagy archívum objektumtárhelye terabájtonként havi néhány euróval növeli a költséget.",
       "Hagyományos webtárhely: a csomag, amelyért már most is fizet, ha PHP 8.2 vagy újabb verzió fut rajta.",
       "Cloudflare Workers: havi 5 dollár a Workers Paid csomagért, plusz R2-tárhely, havonta kb. 1,50 dollár 100 GB fotónként. Letöltési díj nincs.",
       "Partner: a partner saját ára. Kérdezze meg, mit tartalmaz: frissítéseket, biztonsági mentéseket, saját domaint, és minden adat exportálását, ha továbblép.",
-      "A saját ideje: első alkalommal számoljon fél–egy nappal, beleértve a domaint és egy biztonsági mentés próba-visszaállítását, utána havonta kb. egy órával a frissítésekre és a mentések ellenőrzésére."
+      "A saját ideje: első alkalommal számoljon egy-két órával, beleértve a domaint és egy biztonsági mentés próba-visszaállítását, utána havonta kb. egy órával a frissítésekre és a mentések ellenőrzésére."
     ],
     "costNote": "Tájékoztató árak 2026 novemberéből, áfa nélkül. Választás előtt ellenőrizze a szolgáltató aktuális árait.",
-    "stepsTitle": "Lépésről lépésre egy új szerveren",
-    "stepsP": "Egy új Ubuntu-szerveren, amelyen nyitva vannak a 22-es, 80-as és 443-as portok, és amelyre a domain A és AAAA rekordjai már mutatnak. Ez ugyanaz a beállítás, mint a Hetzner-útmutatóban: lefordítja a portál legújabb kiadását, és HTTPS-hez Caddy-t tesz elé.",
     "httpsTitle": "HTTPS",
-    "httpsP": "A Caddy Let's Encrypt-tanúsítványt kér, amint a domain a szerverre mutat, automatikusan megújítja, és a http-t https-re irányítja át. Nincs tanúsítvány? Ellenőrizze a dig paranccsal, hogy a domain a szerver címét mutatja-e, és hogy a 80-as és 443-as port nyitva van-e a tűzfalon.",
+    "httpsP": "A Go-változat maga kér Let's Encrypt-tanúsítványt, amint a domain a szerverre mutat, automatikusan megújítja, és a http-t https-re irányítja. A TypeScript-változat ugyanezt a Caddyvel teszi, amelyet a telepítő állít be. Nincs tanúsítvány? Ellenőrizze dig-gel, hogy a domain a szerver címét mutatja-e, és hogy a 80-as és 443-as port nyitva van-e.",
     "backupTitle": "Biztonsági mentés",
-    "backupP": "Kapcsolja be a szolgáltató szervermentését, és állítson be egy éjszakai portálmentést is, amelyet a szerveren kívülre is átmásol. Az OBX_SECRET_KEY kulcsot tartsa külön, egy jelszókezelőben: nélküle a mentés nem állítható vissza teljesen. Egyszer próbálja ki a visszaállítást, hogy biztosan tudja: működik.",
+    "backupP": "Kapcsolja be a szolgáltatója szervermentéseit, és állítson be egy éjszakai portálmentést, amelyet a szerveren kívülre is átmásol. A titkos kulcsot tartsa külön, egy jelszókezelőben: ez az OBX_SECRET_KEY a beállításfájlban, vagy a secret.key az adatmappában. Nélküle egy mentést nem lehet teljesen visszaállítani. Próbáljon ki egyszer egy visszaállítást, hogy tudja, működik.",
     "updateTitle": "Frissítések",
-    "updateP": "Készítsen mentést, és olvassa el a kiadási megjegyzéseket. Ezután töltse le az új kiadást, és fordítsa újra; az adatbázis a portál indulásakor magától frissül.",
+    "updateP": "Készítsen mentést, és olvassa el a kiadási megjegyzéseket. Ezután futtassa újra ugyanazt a telepítési parancsot: telepíti a legújabb kiadást, megtartja a beállításokat és az adatokat, és újraindítja a portált. Az adatbázis induláskor magától frissül.",
     "cfCliP": "Vagy a saját számítógépéről, a Bun és a Wrangler eszköz segítségével:",
-    "cfDomainP": "Saját domain: adja hozzá itt: Workers & Pages → az Ön Workere → Settings → Domains & Routes (a domainnek a Cloudflare-en kell lennie), állítsa az OBX_PUBLIC_URL értékét erre a címre, és telepítse újra.",
     "cfBackupP": "Biztonsági mentés: Workers Paid csomaggal a D1 30 napnyi adatbázis-előzményt őriz meg (Time Travel). Ha a Cloudflare-en kívül is szeretne másolatot, rendszeresen exportálja az adatbázist. A képek az R2-ben vannak; a bucketet bármilyen S3-eszközzel átmásolhatja.",
-    "cfUpdateP": "Frissítések: olvassza be az új kiadást a repository saját példányába, és pusholja; a Cloudflare újra telepíti."
+    "cfUpdateP": "Frissítések: olvassza be az új kiadást a repository saját példányába, és pusholja; a Cloudflare újra telepíti.",
+    "installCta": "Telepítés saját szerverre",
+    "exampleDomain": "portal.markaja.hu",
+    "ownTitle": "1. Saját szerver (ajánlott)",
+    "ownP": "Béreljen egy kis Linux-szervert, irányítsa rá a domainjét, és futtasson egyetlen parancsot. A telepítő letölti a portált, ingyenes HTTPS-tanúsítványt kér a Let's Encrypttől, és szolgáltatásként indítja el a portált, amely újraindítás után magától visszajön.",
+    "needTitle": "Amire szüksége van",
+    "needItems": [
+      "Egy Linux-szerver (VPS) Ubuntu 22.04-gyel vagy 24.04-gyel, Debian 12-vel vagy 13-mal vagy hasonlóval. Kezdésnek 1 GB memória elég. Bármelyik szolgáltató megfelel, például a Hetzner Cloud, a DigitalOcean, a TransIP VPS vagy a Scaleway.",
+      "Egy nyilvános IPv4-cím (az IPv6 nem kötelező), nyitott 80-as és 443-as porttal.",
+      "Egy domain vagy aldomain a portálnak, például portal.markaja.hu."
+    ],
+    "ownStepsTitle": "Három lépés",
+    "ownSteps": [
+      "Hozza létre a szervert, és jegyezze fel az IP-címét.",
+      "Irányítsa a portal.markaja.hu címet a szerverre egyetlen DNS-rekorddal (lásd lent).",
+      "Jelentkezzen be a szerverre SSH-val, és futtassa ezt a parancsot a saját címével:"
+    ],
+    "ownDone": "A végén a telepítő megmutatja a portál címét és egy egyszer használatos telepítési kódot. Nyissa meg a címet, adja meg a kódot, és menjen végig a beállítási varázslón. Későbbi frissítéshez futtassa újra ugyanazt a parancsot: a beállítások és az adatok megmaradnak.",
+    "ownTs": "Ez a Go-változatot telepíti, vagyis a Portál saját szerverre változatot. A TypeScript-változathoz adja hozzá ugyanahhoz a parancshoz a --edition ts kapcsolót.",
+    "ownEu": "Válasszon adatközpontot az EU-ban, és a katalógusa, a képei és az adatbázisa az EU-ban maradnak.",
+    "dnsTitle": "DNS: irányítsa a domaint a szerverre",
+    "dnsP": "Vegyen fel egy rekordot annál a cégnél, amely a domainjét kezeli:",
+    "dnsHead": [
+      "Típus",
+      "Név",
+      "Érték"
+    ],
+    "dnsAaaaType": "AAAA (csak ha a szervernek van IPv6-címe)",
+    "dnsAValue": "a szerver IPv4-címe, például 203.0.113.10",
+    "dnsAaaaValue": "a szerver IPv6-címe",
+    "dnsNameNote": "A „portal” adja a portal.markaja.hu címet; ha szeretné, válasszon más szót. A TTL maradjon az alapértelmezett (vagy 1 óra).",
+    "dnsWhere": "Hová kattintson (a feliratok kissé eltérhetnek):",
+    "dnsPaths": [
+      "Vezérlőpult → Domainek → az Ön domainje → DNS → rekord hozzáadása.",
+      "Mijn Hostnet → Domeinnamen → az Ön domainje → DNS beheren → rekord hozzáadása.",
+      "Domainek → Domain kezelése → fogaskerék ikon → DNS → A rekord → Kezelés.",
+      "Vezérlőpult → DNS-beállítások → DNS-rekordok → Új rekord létrehozása.",
+      "az Ön domainje → DNS → Records → Add record. A Proxy status legyen DNS only (szürke felhő), hogy a portál saját tanúsítványt kapjon. Később narancssárga felhőt szeretne? Előbb állítsa az SSL/TLS-t Full (strict) értékre.",
+      "Saját termékek → az Ön domainje → DNS → DNS kezelése → Új rekord hozzáadása."
+    ],
+    "dnsCheckTitle": "Ellenőrzés",
+    "dnsCheckP": "A saját gépén ennek a szerver címét kell mutatnia (vagy használjon online DNS-ellenőrzőt, például a dnschecker.org oldalt):",
+    "dnsWait": "Ez általában 5–60 percig tart, néha néhány óráig. A telepítő is ellenőrzi, és megmondja, mi hiányzik még.",
+    "optionsTitle": "A telepítő beállításai",
+    "options": [
+      "a portál címe, például portal.markaja.hu (kötelező)",
+      "e-mail-cím a Let's Encrypthez (nem kötelező)",
+      "egy adott kiadás a legújabb helyett",
+      "go (alapértelmezett) a Go-változatot telepíti; ts a TypeScript-változatot",
+      "saját HTTPS nélkül: a portál a 127.0.0.1:8080 címen figyel, az Ön saját proxyja mögött",
+      "csak megmutatja, mit tenne, semmit nem változtat",
+      "eltávolítja a programot és a szolgáltatást; az adatok és a beállítások megmaradnak (a --purge kapcsolóval azokat is törli)"
+    ],
+    "checksP": "Mielőtt bármit megváltoztatna, a telepítő ellenőrzi a rendszert (Linux amd64 vagy arm64 systemd-vel), a root jogokat, a lemezterületet, hogy a domain erre a szerverre mutat-e, hogy a 80-as és 443-as port szabad-e, valamint a tűzfalat. Ufw vagy firewalld esetén kiírja a pontos parancsot, amely megnyitja a 80-as és 443-as portot.",
+    "filesTitle": "Hol mi található",
+    "filesHead": [
+      "Mi",
+      "Go-változat",
+      "TypeScript-változat"
+    ],
+    "filesRows": [
+      "Program",
+      "Adatok",
+      "Beállítások",
+      "Szolgáltatás"
+    ],
+    "commandsTitle": "Hasznos parancsok",
+    "cfTitle": "2. Cloudflare Workers",
+    "cfLead": "Nincs kezelendő szerver: a portál a saját Cloudflare-fiókjában fut. Kattintson a gombra, jelentkezzen be, és kövesse a lépéseket.",
+    "cfDnsTitle": "DNS: saját domain a Workerhez",
+    "cfDnsP": "Adja hozzá a címet saját domainként a Workerhez: Workers & Pages → az Ön Workere → Settings → Domains & Routes → Add → Custom domain. Ha a domainje már a Cloudflare-en van, a DNS és a tanúsítvány automatikusan beállul. Ha nem, vigye át a domain DNS-ét a Cloudflare-re (ingyenes), vagy vegyen fel egy portal nevű CNAME rekordot, amely a Worker címére mutat, ahogy a Cloudflare útmutatója leírja. Ezután állítsa az OBX_PUBLIC_URL értékét erre a címre, és telepítse újra.",
+    "webDnsTitle": "DNS: aldomain a vezérlőpultban",
+    "webDnsP": "Hozza létre az aldomaint a tárhely vezérlőpultjában (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain, vagy Subdomains; Plesk: Websites & Domains → Add Subdomain). Ha a domain DNS-e ugyanannál a tárhelycégnél van, ennyi az egész. Ha nem, vegyen fel az aldomainhez egy A rekordot, amely a tárhelyszerver IP-címére mutat; ezt a panel megmutatja. Ezután kapcsolja be a panelen a Let's Encryptet az aldomainhez."
   },
   "retailers": {
     "h1": "Viszonteladóknak",
@@ -668,7 +712,7 @@
       "specifikáció, sémák, tesztadatok",
       "Go SDK, obx eszköz, megfelelőségi tesztek, álszerver",
       "közös webes felület: adminisztráció és viszonteladói portál",
-      "Go: Docker és Google Cloud Run",
+      "Go: saját szerver, egysoros telepítővel",
       "PHP: hagyományos webtárhely",
       "TypeScript: Cloudflare Workers"
     ],
@@ -702,7 +746,7 @@
       },
       {
         "name": "node-go",
-        "d": "Portál Dockerhez és Google Cloud Runhoz"
+        "d": "Portál saját szerverre"
       },
       {
         "name": "node-php",
@@ -992,7 +1036,7 @@
       "Töltse fel kézzel az Excel-exportját és a fotóit, vagy hagyja, hogy minden éjjel átvegyék őket",
       "Automatikus szállítás a PIM-ből, az ERP-ből vagy egy megosztott mappából",
       "Hozzáférési kérelmek, meghívók és API-kulcsok a viszonteladói szoftverekhez",
-      "Három változat: Cloudflare, Google Cloud & Docker és hagyományos webtárhely"
+      "Három változat: saját szerver, Cloudflare Workers és hagyományos webtárhely"
     ],
     "brandsComing": [
       "Az első nyilvános kiadás, egykattintásos telepítéssel",
@@ -1150,12 +1194,21 @@
       "editions": [
         {
           "tag": "Ajánlott",
-          "name": "Saját szerver Európában",
-          "runs": "Szerver egy európai szolgáltatónál, például a Hetznernél (Németország)",
-          "need": "Egy szerver és egy domainnév",
-          "setup": "Néhány parancs, majd a beállítási varázsló",
+          "name": "Saját szerver",
+          "runs": "Bármilyen Linux-szerver (VPS), például a Hetznernél, a DigitalOceannél, a TransIP-nél vagy a Scalewaynél",
+          "need": "Egy szerver, egy domainnév és SSH-hozzáférés",
+          "setup": "Egy parancs, majd a beállítási varázsló",
           "cost": "Havi kb. 5–15 € egy kis szerverért biztonsági mentéssel",
-          "cta": "Telepítés Európában"
+          "cta": "Telepítés saját szerverre"
+        },
+        {
+          "tag": "Szerver nélkül",
+          "name": "Cloudflare Workers",
+          "runs": "A saját Cloudflare-fiókja, adatbázisként D1-gyel, a képekhez R2-vel",
+          "need": "Egy Cloudflare-fiók Workers Paid csomaggal",
+          "setup": "Egy kattintás, majd a beállítási varázsló",
+          "cost": "Havi 5 dollár plusz tárhely",
+          "cta": "Beállítás a Cloudflare-en"
         },
         {
           "tag": "Parancsok nélkül",
@@ -1174,15 +1227,6 @@
           "setup": "A partner Önnel együtt állítja be",
           "cost": "A partner saját árai",
           "cta": "Szolgáltatók megtekintése"
-        },
-        {
-          "tag": "Egyéb felhők",
-          "name": "Cloudflare vagy Google Cloud",
-          "runs": "Cloudflare Workers vagy Google Cloud Run",
-          "need": "Egy Cloudflare- vagy Google Cloud-fiók",
-          "setup": "Egy kattintás vagy egy szkript",
-          "cost": "Cloudflare: havi 5 dollár plusz tárhely. Google Cloud: használat szerint",
-          "cta": "Telepítés másik felhőbe"
         }
       ],
       "trustEyebrow": "Irányítás",

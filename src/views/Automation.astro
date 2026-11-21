@@ -103,7 +103,7 @@ const rowIds = ['scheduled', 'watch', 'cron', 'github', 'http', 'api'];
     <DocSection id="watch" title={c.watchTitle}>
       <p>{c.watchP}</p>
       <Code code={'obx watch /data/outbox'} />
-      <Code label="Docker" code={s.watchDocker} />
+      <Code label="systemd" code={s.watchService} />
     </DocSection>
 
     <DocSection id="cron" title={c.cronTitle}>

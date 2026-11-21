@@ -15,14 +15,14 @@
     "footerSource": "Zdrojový kód a špecifikácia",
     "footerLicence": "© 2026 {foundation}. Všetky práva vyhradené. Špecifikácia je pod licenciou CC-BY-4.0.",
     "editionCloudflare": "Portál pre Cloudflare",
-    "editionGoogle": "Portál pre Google Cloud a Docker",
     "editionHosting": "Portál pre webhosting",
     "yes": "Áno",
     "inDevelopment": "Vo vývoji",
     "available": "Dostupné",
     "footerContact": "Kontakt",
     "madeInEu": "Vyrobené v EÚ",
-    "footerDiscuss": "Zapojte sa do diskusie"
+    "footerDiscuss": "Zapojte sa do diskusie",
+    "editionServer": "Portál pre vlastný server"
   },
   "nav": {
     "brands": "Pre značky",
@@ -55,7 +55,7 @@
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Vaša fotobanka, kdekoľvek chcete: u partnera, na vlastnom serveri v Európe, na bežnom webhostingu alebo v inom cloude."
+      "description": "Vaša fotobanka, kdekoľvek chcete: na vlastnom serveri jedným príkazom, na Cloudflare Workers, na bežnom webhostingu alebo u partnera."
     },
     "retailers": {
       "title": "Pre predajcov",
@@ -350,7 +350,7 @@
     "cliExit": "Návratový kód 0 = všetko v poriadku, 2 = hotovo, ale niektoré riadky mali chyby (sú vypísané), 1 = zlyhalo.",
     "cliGet": "Stiahnuť obx",
     "watchTitle": "2. Priečinok, ktorý sa publikuje sám: obx watch",
-    "watchP": "Nechajte PIM, ERP alebo kolegu ukladať exporty do priečinka. obx watch publikuje, len čo sa niečo zmení, a preskakuje fotky, ktoré zostali rovnaké. Spustite ho ako službu alebo v Dockeri:",
+    "watchP": "Nechajte PIM, ERP alebo kolegu ukladať exporty do priečinka. obx watch publikuje, len čo sa niečo zmení, a preskakuje fotky, ktoré zostali rovnaké. Spustite ho ako službu, napríklad cez systemd v Linuxe:",
     "cronTitle": "3. cron alebo Plánovač úloh Windows",
     "cronLinux": "Linux alebo macOS",
     "cronWindows": "Windows (PowerShell, raz)",
@@ -383,8 +383,8 @@
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Každá značka má vlastnú fotobanku na vlastnom serveri. Vy volíte, ako ju prevádzkovať, od úplného outsourcingu po úplne vlastnú prevádzku.",
-    "p1Title": "3. Partner ho hostuje za vás",
+    "lead": "Každá značka má vlastnú fotobanku. Nainštalujte ju jedným príkazom na vlastný server, prevádzkujte na Cloudflare Workers, nahrajte na bežný webhosting alebo ju nechajte hostovať partnera.",
+    "p1Title": "4. Partner ho hostuje za vás",
     "p1P": "Nechcete hostovať sami? Partneri môžu portál hostovať a udržiavať za vás.",
     "fieldBased": "Sídlo",
     "fieldLanguages": "Jazyky",
@@ -399,11 +399,8 @@
       "vlastné ceny a podmienky zverejňujete na svojom webe"
     ],
     "listHow": "Kompatibilita je zadarmo; zápis na tejto stránke je súčasťou oficiálneho partnerstva.",
-    "p2Title": "2. Jedným kliknutím",
-    "p2P": "Vlastný portál na vlastnom účte, bez správy servera.",
     "cfP": "Beží na Cloudflare Workers, s D1 ako databázou a R2 pre obrázky. Kliknite na tlačidlo, prihláste sa do Cloudflare a postupujte podľa krokov. Portál v každodennom používaní potrebuje plán Workers Paid (5 dolárov mesačne); bezplatný plán stačí len na vyskúšanie. Webové verzie vašich fotografií vytvorí váš prehliadač a nástroj obx.",
     "cfButton": "Nainštalovať na Cloudflare",
-    "runP": "Skript, ktorý váš portál nasadí na Google Cloud Run. Potrebujete účet Google Cloud a nástroj gcloud.",
     "phpP": "Pre webhosting, ktorý možno už máte, s PHP a databázou. Žiadne príkazy nie sú potrebné:",
     "phpSteps": [
       "Stiahnite obx-portal-php-<version>.zip z najnovšieho vydania.",
@@ -414,17 +411,10 @@
       "Adresu pre cron, ktorú inštalátor ukáže, pridajte ako úlohu cron v ovládacom paneli hostingu, každých 5 minút. Aj bez nej portál funguje."
     ],
     "phpDownload": "Stiahnuť najnovšie vydanie",
-    "p3Title": "3. Vlastný server",
-    "p3P": "Už prevádzkujete vlastnú reverznú proxy? Potom spustite len zverejnený image a nasmerujte proxy na port 8080:",
-    "envTitle": "Nastavenia",
-    "envPublicUrl": "verejná adresa vášho portálu",
-    "envSecretKey": "dlhý náhodný kľúč (openssl rand -base64 48). Uložte si kópiu do správcu hesiel: keď portál obsahuje údaje, kľúč sa už nedá zmeniť",
-    "envSetupCode": "voliteľne: vopred zvolený inštalačný kód",
-    "envPort": "port, predvolene 8080",
     "firstTitle": "Po inštalácii: prvé spustenie",
     "first": [
       "Otvorte adresu svojho portálu v prehliadači.",
-      "Zadajte jednorazový inštalačný kód. Nájdete ho v logu pri prvom spustení (Portál pre webhosting: v data/SETUP-CODE.txt a inštalátor ho vyplní za vás), alebo ho vopred nastavíte pomocou OBX_SETUP_CODE.",
+      "Zadajte jednorazový inštalačný kód. Inštalátor na vlastnom serveri ho ukáže na konci. Inak ho nájdete v logu pri prvom spustení (Portál pre webhosting: v data/SETUP-CODE.txt a inštalátor ho vyplní za vás), alebo ho vopred nastavíte pomocou OBX_SETUP_CODE.",
       "Vyplňte svoju firmu a prvú značku a zvoľte si vlastné heslo. Predvolené heslo nikdy neexistuje."
     ],
     "firstWhy": "Inštalačný kód zaistí, že si čerstvo nainštalovaný portál nikto iný neprivlastní.",
@@ -434,54 +424,108 @@
     "compareP": "Tri edície robia to isté a majú rovnakú administráciu aj rovnaký portál pre predajcov. Zvoľte tú, ktorá sedí k vášmu hostingu; zmeniť ju môžete neskôr.",
     "compareLink": "Zobraziť implementácie",
     "heroTitle": "Vaša fotobanka, kdekoľvek chcete.",
-    "heroLead": "Softvér je zadarmo. Vy si vyberáte, kde beží, a kedykoľvek sa môžete presunúť.",
+    "heroLead": "Softvér je zadarmo. Najjednoduchší je malý vlastný server a jeden príkaz. Kedykoľvek sa môžete presunúť.",
     "heroChecks": [
       "Bezplatný softvér, platíte len za hosting",
-      "Odporúčané: v Európe, napríklad u Hetzner (Nemecko)",
+      "Jeden príkaz nainštaluje portál, aj s HTTPS",
       "Všade rovnaký portál, takže môžete kedykoľvek prejsť inam",
       "Nechcete to robiť sami? Partner ho bude hostovať za vás"
     ],
-    "euCta": "Vaša fotobanka v Európe",
-    "euTitle": "1. Vlastný server v Európe (odporúčané)",
-    "euP": "Pre väčšinu značiek stačí malý server u európskeho poskytovateľa. Náš návod používa Hetzner s dátovými centrami v Nemecku a vo Fínsku.",
-    "euSteps": [
-      "Vytvorte server u Hetzner v Norimbergu, Falkensteine alebo Helsinkách so zapnutými zálohami.",
-      "Nasmerujte svoju doménu, napríklad obrazky.vasaznacka.sk, na server.",
-      "Nainštalujte Docker a spustite portál niekoľkými príkazmi. HTTPS sa nastaví automaticky.",
-      "Otvorte svoju doménu a prejdite sprievodcom nastavením.",
-      "Voliteľne: ukladajte obrázky do Hetzner Object Storage v tej istej lokalite.",
-      "Naplánujte nočnú zálohu a skopírujte ju mimo servera. Aktualizácia sú dva príkazy."
-    ],
-    "euGuide": "Návod krok za krokom: váš portál u Hetzner",
-    "euData": "So serverom aj úložiskom v lokalite v EÚ sú váš katalóg, obrázky aj databáza uložené v EÚ.",
-    "webTitle": "2. Bežný webhosting",
+    "webTitle": "3. Bežný webhosting",
     "webP": "Edícia PHP beží na bežnom európskom webhostingu s PHP a databázou, napríklad u TransIP, Strato alebo OVHcloud. Bez príkazov:",
-    "altTitle": "4. Iné cloudy",
-    "altP": "Ten istý portál beží aj na Cloudflare Workers a na Google Cloud Run. Vyberte si región v Európe, ak ho služba ponúka.",
     "partnerLink": "Zobraziť partnerov",
     "techTitle": "Technické podrobnosti pre váš IT tím",
-    "techLead": "Príkazy, nastavenia a inštalačné návody pre toho, kto server nastavuje.",
+    "techLead": "Voľby inštalátora, súbory, zálohy a aktualizácie, pre toho, kto server nastavuje.",
     "costTitle": "Koľko to približne stojí",
     "costItems": [
       "Vlastný server v EÚ: približne 5 až 15 € mesačne za malý server s automatickými zálohami u poskytovateľa, ako je Hetzner. Fotografie na vlastnom disku servera nič navyše nestoja; objektové úložisko pre veľký archív pridá niekoľko eur mesačne za terabajt.",
       "Bežný webhosting: balík, ktorý už platíte, ak má PHP 8.2 alebo novšie.",
       "Cloudflare Workers: 5 dolárov mesačne za Workers Paid plus úložisko R2 za približne 1,50 dolára mesačne za 100 GB fotografií. Poplatky za sťahovanie nie sú.",
       "Partner: jeho vlastná cena. Opýtajte sa, čo zahŕňa: aktualizácie, zálohy, vlastnú doménu a export všetkých údajov, ak odídete.",
-      "Váš vlastný čas: prvýkrát počítajte s pol dňom až dňom vrátane domény a skúšobnej obnovy zálohy a potom približne s hodinou mesačne na aktualizácie a kontrolu záloh."
+      "Váš vlastný čas: prvýkrát počítajte s jednou až dvoma hodinami vrátane domény a skúšobnej obnovy zálohy a potom približne s hodinou mesačne na aktualizácie a kontrolu záloh."
     ],
     "costNote": "Orientačné ceny z novembra 2026 bez DPH. Pred rozhodnutím si overte aktuálne ceny poskytovateľa.",
-    "stepsTitle": "Krok za krokom na novom serveri",
-    "stepsP": "Na novom serveri s Ubuntu s otvorenými portami 22, 80 a 443, na ktorý už smerujú záznamy A a AAAA vašej domény. Je to rovnaké nastavenie ako v návode pre Hetzner: zostaví najnovšie vydanie portálu a predradí mu Caddy pre HTTPS.",
     "httpsTitle": "HTTPS",
-    "httpsP": "Caddy si vyžiada certifikát Let's Encrypt, hneď ako vaša doména smeruje na server, automaticky ho obnovuje a presmerúva http na https. Certifikát neprišiel? Overte pomocou dig, že doména ukazuje adresu servera a že porty 80 a 443 sú vo firewalle otvorené.",
+    "httpsP": "Edícia Go si sama vyžiada certifikát Let's Encrypt, len čo vaša doména smeruje na server, automaticky ho obnovuje a presmerúva http na https. Edícia TypeScript robí to isté cez Caddy, ktorý nastaví inštalátor. Žiadny certifikát? Skontrolujte pomocou dig, že doména ukazuje adresu servera a že porty 80 a 443 sú otvorené.",
     "backupTitle": "Zálohy",
-    "backupP": "Zapnite zálohy servera u svojho poskytovateľa a pridajte nočnú zálohu portálu, ktorú zároveň kopírujete mimo servera. OBX_SECRET_KEY uchovávajte osobitne v správcovi hesiel: bez neho sa záloha nedá úplne obnoviť. Raz si obnovu vyskúšajte, aby ste vedeli, že funguje.",
+    "backupP": "Zapnite zálohy servera u svojho poskytovateľa a pridajte nočnú zálohu portálu, ktorú kopírujete aj mimo servera. Tajný kľúč uchovávajte zvlášť, v správcovi hesiel: je to OBX_SECRET_KEY v súbore s nastaveniami alebo secret.key v priečinku s údajmi. Bez neho sa záloha nedá úplne obnoviť. Raz si obnovu vyskúšajte, aby ste vedeli, že funguje.",
     "updateTitle": "Aktualizácie",
-    "updateP": "Urobte zálohu a prečítajte si poznámky k vydaniu. Potom si stiahnite nové vydanie a znova ho zostavte; databáza sa pri štarte portálu aktualizuje sama.",
+    "updateP": "Urobte zálohu a prečítajte si poznámky k vydaniu. Potom znova spustite ten istý inštalačný príkaz: nainštaluje najnovšie vydanie, ponechá nastavenia aj údaje a portál reštartuje. Databáza sa pri štarte aktualizuje sama.",
     "cfCliP": "Alebo z vlastného počítača pomocou Bun a nástroja Wrangler:",
-    "cfDomainP": "Vlastná doména: pridajte ju vo Workers & Pages → váš Worker → Settings → Domains & Routes (doména musí byť v Cloudflare), nastavte OBX_PUBLIC_URL na túto adresu a nasaďte znova.",
     "cfBackupP": "Zálohy: s Workers Paid uchováva D1 históriu databázy za 30 dní (Time Travel). Ak chcete kópiu mimo Cloudflare, databázu pravidelne exportujte. Obrázky sú v R2; bucket skopírujete ľubovoľným nástrojom pre S3.",
-    "cfUpdateP": "Aktualizácie: zlúčte nové vydanie do svojej kópie repozitára a pushnite; Cloudflare ho znova nasadí."
+    "cfUpdateP": "Aktualizácie: zlúčte nové vydanie do svojej kópie repozitára a pushnite; Cloudflare ho znova nasadí.",
+    "installCta": "Nainštalovať na vlastný server",
+    "exampleDomain": "portal.vasaznacka.sk",
+    "ownTitle": "1. Vlastný server (odporúčané)",
+    "ownP": "Prenajmite si malý linuxový server, nasmerujte naň svoju doménu a spustite jeden príkaz. Inštalátor stiahne portál, získa bezplatný certifikát HTTPS od Let's Encrypt a spustí portál ako službu, ktorá sa po reštarte sama znova rozbehne.",
+    "needTitle": "Čo potrebujete",
+    "needItems": [
+      "Linuxový server (VPS) s Ubuntu 22.04 alebo 24.04, Debianom 12 alebo 13 či podobným systémom. Na začiatok stačí 1 GB pamäte. Poskytovateľ môže byť akýkoľvek, napríklad Hetzner Cloud, DigitalOcean, TransIP VPS alebo Scaleway.",
+      "Verejnú adresu IPv4 (IPv6 je voliteľná) s otvorenými portami 80 a 443.",
+      "Doménu alebo subdoménu pre portál, napríklad portal.vasaznacka.sk."
+    ],
+    "ownStepsTitle": "Tri kroky",
+    "ownSteps": [
+      "Vytvorte server a poznačte si jeho IP adresu.",
+      "Nasmerujte portal.vasaznacka.sk na server jedným záznamom DNS (pozri nižšie).",
+      "Prihláste sa na server cez SSH a spustite tento príkaz so svojou vlastnou adresou:"
+    ],
+    "ownDone": "Na konci inštalátor ukáže adresu vášho portálu a jednorazový inštalačný kód. Otvorte adresu, zadajte kód a prejdite sprievodcom nastavením. Na neskoršiu aktualizáciu spustite ten istý príkaz znova: nastavenia aj údaje zostanú.",
+    "ownTs": "Takto sa nainštaluje edícia Go, teda Portál pre vlastný server. Pre edíciu TypeScript pridajte k tomu istému príkazu --edition ts.",
+    "ownEu": "Zvoľte dátové centrum v EÚ a váš katalóg, obrázky aj databáza zostanú v EÚ.",
+    "dnsTitle": "DNS: nasmerujte doménu na server",
+    "dnsP": "Pridajte jeden záznam u firmy, ktorá spravuje vašu doménu:",
+    "dnsHead": [
+      "Typ",
+      "Názov",
+      "Hodnota"
+    ],
+    "dnsAaaaType": "AAAA (len ak má server IPv6)",
+    "dnsAValue": "IPv4 adresa vášho servera, napríklad 203.0.113.10",
+    "dnsAaaaValue": "IPv6 adresa vášho servera",
+    "dnsNameNote": "„portal“ vytvorí adresu portal.vasaznacka.sk; ak chcete, zvoľte iné slovo. TTL nechajte na predvolenej hodnote (alebo 1 hodina).",
+    "dnsWhere": "Kam kliknúť (názvy sa môžu mierne líšiť):",
+    "dnsPaths": [
+      "Ovládací panel → Domény → vaša doména → DNS → pridať záznam.",
+      "Mijn Hostnet → Domeinnamen → vaša doména → DNS beheren → pridať záznam.",
+      "Domény → Spravovať doménu → ikona ozubeného kolesa → DNS → záznam A → Spravovať.",
+      "Ovládací panel → Nastavenia DNS → Záznamy DNS → Vytvoriť nový záznam.",
+      "vaša doména → DNS → Records → Add record. Proxy status nastavte na DNS only (sivý obláčik), aby portál dostal vlastný certifikát. Chcete neskôr oranžový obláčik? Najprv nastavte SSL/TLS na Full (strict).",
+      "Moje produkty → vaša doména → DNS → Spravovať DNS → Pridať nový záznam."
+    ],
+    "dnsCheckTitle": "Skontrolujte to",
+    "dnsCheckP": "Na vašom počítači musí tento príkaz ukázať adresu servera (alebo použite online kontrolu DNS, napríklad dnschecker.org):",
+    "dnsWait": "Zvyčajne to trvá 5 až 60 minút, niekedy aj niekoľko hodín. Inštalátor to tiež kontroluje a povie vám, čo ešte chýba.",
+    "optionsTitle": "Voľby inštalátora",
+    "options": [
+      "adresa portálu, napríklad portal.vasaznacka.sk (povinné)",
+      "e-mailová adresa pre Let's Encrypt (voliteľné)",
+      "konkrétne vydanie namiesto najnovšieho",
+      "go (predvolené) nainštaluje edíciu Go; ts nainštaluje edíciu TypeScript",
+      "bez vlastného HTTPS: portál počúva na 127.0.0.1:8080 za vašou vlastnou proxy",
+      "len ukázať, čo by urobil, nič nemeniť",
+      "odstrániť program a službu; údaje a nastavenia zostanú (pridajte --purge, ak ich chcete tiež zmazať)"
+    ],
+    "checksP": "Skôr než čokoľvek zmení, inštalátor skontroluje systém (Linux amd64 alebo arm64 so systemd), práva roota, miesto na disku, či doména smeruje na tento server, či sú porty 80 a 443 voľné, a firewall. Pri ufw alebo firewalld vypíše presný príkaz, ktorým porty 80 a 443 otvoríte.",
+    "filesTitle": "Kde čo nájdete",
+    "filesHead": [
+      "Čo",
+      "Edícia Go",
+      "Edícia TypeScript"
+    ],
+    "filesRows": [
+      "Program",
+      "Údaje",
+      "Nastavenia",
+      "Služba"
+    ],
+    "commandsTitle": "Užitočné príkazy",
+    "cfTitle": "2. Cloudflare Workers",
+    "cfLead": "Žiadny server na správu: portál beží na vašom vlastnom účte Cloudflare. Kliknite na tlačidlo, prihláste sa a postupujte podľa krokov.",
+    "cfDnsTitle": "DNS: vlastná doména pre Worker",
+    "cfDnsP": "Pridajte adresu ako vlastnú doménu Workera: Workers & Pages → váš Worker → Settings → Domains & Routes → Add → Custom domain. Ak je vaša doména už na Cloudflare, DNS aj certifikát sa nastavia automaticky. Ak nie, presuňte DNS domény na Cloudflare (zadarmo) alebo pridajte záznam CNAME portal, ktorý smeruje na adresu Workera, ako opisuje návod Cloudflare. Potom nastavte OBX_PUBLIC_URL na túto adresu a nasaďte znova.",
+    "webDnsTitle": "DNS: subdoména v ovládacom paneli",
+    "webDnsP": "Vytvorte subdoménu v ovládacom paneli hostingu (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain alebo Subdomains; Plesk: Websites & Domains → Add Subdomain). Ak máte DNS domény u tej istej hostingovej firmy, je hotovo. Inak pridajte pre subdoménu záznam A, ktorý smeruje na IP adresu hostingového servera, ktorú panel ukazuje. Potom v paneli zapnite pre subdoménu Let's Encrypt."
   },
   "retailers": {
     "h1": "Pre predajcov",
@@ -668,7 +712,7 @@
       "špecifikácia, schémy, testovacie údaje",
       "Go SDK, nástroj obx, testy zhody, mock server",
       "zdieľané webové rozhranie: administrácia a portál pre predajcov",
-      "Go: Docker a Google Cloud Run",
+      "Go: vlastný server, s inštalátorom na jeden riadok",
       "PHP: bežný webhosting",
       "TypeScript: Cloudflare Workers"
     ],
@@ -702,7 +746,7 @@
       },
       {
         "name": "node-go",
-        "d": "Portál pre Docker a Google Cloud Run"
+        "d": "Portál pre vlastný server"
       },
       {
         "name": "node-php",
@@ -992,7 +1036,7 @@
       "Nahrajte export z Excelu a fotografie ručne, alebo ich nechajte preberať každú noc",
       "Automatické dodávanie z vášho PIM, ERP alebo zo zdieľaného priečinka",
       "Žiadosti o prístup, pozvánky a API kľúče pre softvér vašich predajcov",
-      "Tri edície: Cloudflare, Google Cloud & Docker a bežný webhosting"
+      "Tri edície: vlastný server, Cloudflare Workers a bežný webhosting"
     ],
     "brandsComing": [
       "Prvé verejné vydanie s inštaláciou na jedno kliknutie",
@@ -1150,12 +1194,21 @@
       "editions": [
         {
           "tag": "Odporúčané",
-          "name": "Vlastný server v Európe",
-          "runs": "Server u európskeho poskytovateľa, napríklad Hetzner (Nemecko)",
-          "need": "Server a doménové meno",
-          "setup": "Niekoľko príkazov, potom sprievodca nastavením",
+          "name": "Vlastný server",
+          "runs": "Akýkoľvek linuxový server (VPS), napríklad u Hetzner, DigitalOcean, TransIP alebo Scaleway",
+          "need": "Server, doménové meno a prístup cez SSH",
+          "setup": "Jeden príkaz, potom sprievodca nastavením",
           "cost": "Približne 5 až 15 € mesačne za malý server so zálohami",
-          "cta": "Nastaviť v Európe"
+          "cta": "Nainštalovať na vlastný server"
+        },
+        {
+          "tag": "Bez servera",
+          "name": "Cloudflare Workers",
+          "runs": "Váš vlastný účet Cloudflare, s D1 ako databázou a R2 pre obrázky",
+          "need": "Účet Cloudflare s plánom Workers Paid",
+          "setup": "Jedno kliknutie, potom sprievodca nastavením",
+          "cost": "5 dolárov mesačne plus úložisko",
+          "cta": "Nastaviť na Cloudflare"
         },
         {
           "tag": "Bez príkazov",
@@ -1174,15 +1227,6 @@
           "setup": "Partner ho nastaví spolu s vami",
           "cost": "Cenník partnera",
           "cta": "Zobraziť poskytovateľov"
-        },
-        {
-          "tag": "Iné cloudy",
-          "name": "Cloudflare alebo Google Cloud",
-          "runs": "Cloudflare Workers alebo Google Cloud Run",
-          "need": "Účet Cloudflare alebo Google Cloud",
-          "setup": "Jedno kliknutie alebo jeden skript",
-          "cost": "Cloudflare: 5 dolárov mesačne plus úložisko. Google Cloud: podľa využitia",
-          "cta": "Nastaviť v inom cloude"
         }
       ],
       "trustEyebrow": "Správa",

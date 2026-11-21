@@ -14,18 +14,15 @@ interface Props {
 const { lang } = Astro.props;
 const t = messages[lang];
 const c = t.hosting;
-const env: [string, string][] = [
-  ['OBX_PUBLIC_URL', c.envPublicUrl],
-  ['OBX_SECRET_KEY', c.envSecretKey],
-  ['OBX_SETUP_CODE', c.envSetupCode],
-  ['PORT', c.envPort],
-];
+const domain = c.exampleDomain;
+// The click paths in c.dnsPaths follow this order.
+const dnsProviders = ['TransIP', 'Hostnet', 'Strato', 'one.com', 'Cloudflare DNS', 'GoDaddy'];
 ---
 
 <PageHero eyebrow={t.nav.hosting} title={c.heroTitle} lead={c.heroLead}>
   <Fragment slot="actions">
     <ul class="checks hero-checks">{c.heroChecks.map((item) => <li>{item}</li>)}</ul>
-    <a class="button primary lg" href="#europe">{c.euCta} <Icon name="arrow" class="arrow" /></a>
+    <a class="button primary lg" href="#own-server">{c.installCta} <Icon name="arrow" class="arrow" /></a>
   </Fragment>
 </PageHero>
 
@@ -39,31 +36,161 @@ const env: [string, string][] = [
   </div>
 </section>
 
-
-
-<section class="band" aria-labelledby="europe">
+<section class="band">
   <div class="wrap">
-    <header class="section-head">
-      <h2 id="europe">{c.euTitle}</h2>
-      <p class="lead">{c.euP}</p>
-    </header>
-    <ol class="steps steps-row steps-three">
-      {c.euSteps.map((step) => <li>{step}</li>)}
-    </ol>
-    <p class="note">{c.euData}</p>
-    <p class="actions">
-      <a class="link-arrow" href="#technical">{c.techTitle} <Icon name="arrow" class="arrow" /></a>
-    </p>
+    <DocSection id="own-server" title={c.ownTitle}>
+      <p>{c.ownP}</p>
+      <h3>{c.needTitle}</h3>
+      <ul>{c.needItems.map((item) => <li>{item}</li>)}</ul>
+      <h3>{c.ownStepsTitle}</h3>
+      <ol>{c.ownSteps.map((st) => <li>{st}</li>)}</ol>
+      <Code code={s.installCmd(domain)} />
+      <p>{c.ownDone}</p>
+      <p class="small">{c.ownTs}</p>
+      <p class="note">{c.ownEu}</p>
+      <p class="actions">
+        <a class="link-arrow" href="#technical">{c.techTitle} <Icon name="arrow" class="arrow" /></a>
+      </p>
+    </DocSection>
+
+    <DocSection id="dns" title={c.dnsTitle}>
+      <p>{c.dnsP}</p>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>{c.dnsHead.map((h) => <th scope="col">{h}</th>)}</tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>A</code></td>
+              <td><code>portal</code></td>
+              <td>{c.dnsAValue}</td>
+            </tr>
+            <tr>
+              <td>{c.dnsAaaaType}</td>
+              <td><code>portal</code></td>
+              <td>{c.dnsAaaaValue}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small">{c.dnsNameNote}</p>
+      <p>{c.dnsWhere}</p>
+      <ul class="dns-paths">
+        {
+          dnsProviders.map((name, i) => (
+            <li>
+              <strong>{name}:</strong> {c.dnsPaths[i]}
+            </li>
+          ))
+        }
+      </ul>
+      <h3>{c.dnsCheckTitle}</h3>
+      <p>{c.dnsCheckP}</p>
+      <Code code={s.digCheck(domain)} />
+      <p>{c.dnsWait}</p>
+    </DocSection>
+
+    <details class="tech-details" id="technical">
+      <summary><span id="technical-title">{c.techTitle}</span></summary>
+      <p class="tech-lead">{c.techLead}</p>
+
+      <DocSection id="installer" title={c.optionsTitle}>
+        <div class="table-scroll">
+          <table>
+            <tbody>
+              {
+                s.installOptions.map((flag, i) => (
+                  <tr>
+                    <th scope="row">
+                      <code>{flag}</code>
+                    </th>
+                    <td>{c.options[i]}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+        <Code code={s.installCmd(domain, ' --edition ts')} />
+        <p>{c.checksP}</p>
+
+        <h3>{c.filesTitle}</h3>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>{c.filesHead.map((h) => <th scope="col">{h}</th>)}</tr>
+            </thead>
+            <tbody>
+              {
+                s.serverFiles.map(([go, ts], i) => (
+                  <tr>
+                    <th scope="row">{c.filesRows[i]}</th>
+                    <td>
+                      <code>{go}</code>
+                    </td>
+                    <td>
+                      <code>{ts}</code>
+                    </td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+
+        <h3>{c.commandsTitle}</h3>
+        <Code code={s.serverCommands(domain)} />
+
+        <h3>{c.httpsTitle}</h3>
+        <p>{c.httpsP}</p>
+
+        <h3>{c.backupTitle}</h3>
+        <p>{c.backupP}</p>
+        <Code code={s.serverBackup} />
+
+        <h3>{c.updateTitle}</h3>
+        <p>{c.updateP}</p>
+        <p class="small">
+          <a href={repo('node-go', '/blob/main/docs/hosting/linux.md')}>openbrandexchange/node-go · docs/hosting/linux.md</a> · <a href={repo('node-go', '/blob/main/docs/operations.md')}>docs/operations.md</a>
+        </p>
+      </DocSection>
+    </details>
   </div>
 </section>
 
 <section class="band band-alt">
   <div class="wrap">
+    <DocSection id="cloudflare" title={c.cfTitle}>
+      <p>{c.cfP}</p>
+      <p>
+        <a class="button primary" href="https://deploy.workers.cloudflare.com/?url=https://github.com/openbrandexchange/node-ts">{c.cfButton}</a>
+      </p>
+      <p>{c.cfCliP}</p>
+      <Code code={s.cfCli} />
+      <h3>{c.cfDnsTitle}</h3>
+      <p>{c.cfDnsP}</p>
+      <p>{c.cfBackupP}</p>
+      <p>{c.cfUpdateP}</p>
+      <p class="small"><a href={repo('node-ts', '/blob/main/docs/hosting-cloudflare.md')}>openbrandexchange/node-ts · docs/hosting-cloudflare.md</a></p>
+    </DocSection>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
     <DocSection id="web-hosting" title={c.webTitle}>
       <p>{c.webP}</p>
       <ol>{c.phpSteps.map((st) => <li>{st}</li>)}</ol>
+      <h3>{c.webDnsTitle}</h3>
+      <p>{c.webDnsP}</p>
       <p class="small"><a href={repo('node-php', '/releases/latest')}>{c.phpDownload}</a></p>
     </DocSection>
+  </div>
+</section>
+
+<section class="band band-alt">
+  <div class="wrap">
     <DocSection id="providers" title={c.p1Title}>
       <p>{c.p1P} <a href={url(lang, 'partners')}>{c.partnerLink}</a></p>
       <div class="cards"><Providers lang={lang} /></div>
@@ -71,17 +198,7 @@ const env: [string, string][] = [
   </div>
 </section>
 
-<section class="band" aria-labelledby="other-clouds">
-  <div class="wrap">
-    <header class="section-head">
-      <h2 id="other-clouds">{c.altTitle}</h2>
-      <p class="lead">{c.altP}</p>
-    </header>
-    <p><a class="link-arrow" href="#technical">{c.techTitle} <Icon name="arrow" class="arrow" /></a></p>
-  </div>
-</section>
-
-<section class="band band-alt">
+<section class="band">
   <div class="wrap">
     <DocSection id="costs" title={c.costTitle}>
       <ul>{c.costItems.map((item) => <li>{item}</li>)}</ul>
@@ -100,73 +217,5 @@ const env: [string, string][] = [
     <DocSection id="editions" title={c.compareTitle}>
       <p>{c.compareP} <a href={url(lang, 'developers', '#implementations')}>{c.compareLink}</a>.</p>
     </DocSection>
-  </div>
-</section>
-
-<section class="band" aria-labelledby="technical-title">
-  <div class="wrap">
-    <details class="tech-details" id="technical">
-      <summary><span id="technical-title">{c.techTitle}</span></summary>
-      <p class="tech-lead">{c.techLead}</p>
-
-      <DocSection id="docker" title={c.euTitle.replace(/^\d+\.\s*/, '').replace(/\s*\(.*\)$/, '')}>
-        <h3>{c.stepsTitle}</h3>
-        <p>{c.stepsP}</p>
-        <Code code={s.vpsSteps} />
-        <p><a href={repo('node-go', '/blob/main/docs/hosting/hetzner.md')}>{c.euGuide}</a></p>
-
-        <h3>{c.httpsTitle}</h3>
-        <p>{c.httpsP}</p>
-
-        <h3>{c.backupTitle}</h3>
-        <p>{c.backupP}</p>
-        <Code code={s.vpsBackup} />
-
-        <h3>{c.updateTitle}</h3>
-        <p>{c.updateP}</p>
-        <Code code={s.vpsUpdate} />
-
-        <h3>{c.envTitle}</h3>
-        <div class="table-scroll">
-          <table>
-            <tbody>
-              {
-                env.map(([k, v]) => (
-                  <tr>
-                    <th scope="row">
-                      <code>{k}</code>
-                    </th>
-                    <td>{v}</td>
-                  </tr>
-                ))
-              }
-            </tbody>
-          </table>
-        </div>
-
-        <p>{c.p3P}</p>
-        <Code code={s.dockerRun} />
-        <p class="small"><a href={repo('node-go')}>openbrandexchange/node-go</a> · <a href={repo('node-php')}>openbrandexchange/node-php</a></p>
-      </DocSection>
-
-      <DocSection id="cloudflare" title={t.common.editionCloudflare}>
-        <p>{c.cfP}</p>
-        <p>
-          <a class="button primary" href="https://deploy.workers.cloudflare.com/?url=https://github.com/openbrandexchange/node-ts">{c.cfButton}</a>
-        </p>
-        <p>{c.cfCliP}</p>
-        <Code code={s.cfCli} />
-        <p>{c.cfDomainP}</p>
-        <p>{c.cfBackupP}</p>
-        <p>{c.cfUpdateP}</p>
-        <p class="small"><a href={repo('node-ts', '/blob/main/docs/hosting-cloudflare.md')}>openbrandexchange/node-ts · docs/hosting-cloudflare.md</a></p>
-      </DocSection>
-
-      <DocSection id="cloud-run" title={t.common.editionGoogle}>
-        <p>{c.runP}</p>
-        <Code code={s.cloudRun} />
-        <p class="small"><a href={repo('node-go')}>openbrandexchange/node-go</a> · <a href="#docker">Docker</a></p>
-      </DocSection>
-    </details>
   </div>
 </section>

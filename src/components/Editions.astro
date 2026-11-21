@@ -9,9 +9,9 @@ interface Props {
 const { lang } = Astro.props;
 const t = messages[lang];
 const h = t.site.home;
-// Europe first: an own server (node-go with Docker), ordinary web hosting (node-php), a partner,
-// and the other clouds (node-ts on Cloudflare, node-go on Google Cloud Run).
-const links = [url(lang, 'hosting', '#europe'), url(lang, 'hosting', '#web-hosting'), url(lang, 'hosting', '#providers'), url(lang, 'hosting', '#other-clouds')];
+// The three ways to run it yourself, simplest first: an own server with the one-line installer
+// (node-go), Cloudflare Workers (node-ts) and ordinary web hosting (node-php); then a partner.
+const links = [url(lang, 'hosting', '#own-server'), url(lang, 'hosting', '#cloudflare'), url(lang, 'hosting', '#web-hosting'), url(lang, 'hosting', '#providers')];
 ---
 
 <ul class="editions">

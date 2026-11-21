@@ -15,14 +15,14 @@
     "footerSource": "Lähdekoodi ja määrittely",
     "footerLicence": "© 2026 {foundation}. Kaikki oikeudet pidätetään. Määrittelyn lisenssi on CC-BY-4.0.",
     "editionCloudflare": "Portaali Cloudflarelle",
-    "editionGoogle": "Portaali Google Cloudille ja Dockerille",
     "editionHosting": "Portaali webhotelliin",
     "yes": "Kyllä",
     "inDevelopment": "Kehitteillä",
     "available": "Saatavilla",
     "footerContact": "Yhteystiedot",
     "madeInEu": "Valmistettu EU:ssa",
-    "footerDiscuss": "Osallistu keskusteluun"
+    "footerDiscuss": "Osallistu keskusteluun",
+    "editionServer": "Portaali omalle palvelimelle"
   },
   "nav": {
     "brands": "Brändeille",
@@ -55,7 +55,7 @@
     },
     "hosting": {
       "title": "Ylläpito",
-      "description": "Kuvaportaalisi missä haluat: kumppanin ylläpitämänä, omalla palvelimellasi Euroopassa, tavallisessa webhotellissa tai muussa pilvessä."
+      "description": "Kuvaportaalisi missä haluat: omalla palvelimellasi yhdellä komennolla, Cloudflare Workersissa, tavallisessa webhotellissa tai kumppanin ylläpitämänä."
     },
     "retailers": {
       "title": "Jälleenmyyjille",
@@ -350,7 +350,7 @@
     "cliExit": "Paluukoodi 0 = kaikki kunnossa, 2 = valmis, mutta joissakin riveissä oli virheitä (ne listataan), 1 = epäonnistui.",
     "cliGet": "Lataa obx",
     "watchTitle": "2. Kansio, joka julkaisee itsensä: obx watch",
-    "watchP": "Anna PIM-, ERP-järjestelmän tai kollegan tallentaa viennit kansioon. obx watch julkaisee heti, kun jokin muuttuu, ja ohittaa ennallaan pysyneet kuvat. Aja sitä palveluna tai Dockerilla:",
+    "watchP": "Anna PIM-, ERP-järjestelmän tai kollegan tallentaa viennit kansioon. obx watch julkaisee heti, kun jokin muuttuu, ja ohittaa ennallaan pysyneet kuvat. Aja sitä palveluna, esimerkiksi systemd:llä Linuxissa:",
     "cronTitle": "3. cron tai Windowsin Tehtävien ajoitus",
     "cronLinux": "Linux tai macOS",
     "cronWindows": "Windows (PowerShell, kerran)",
@@ -383,8 +383,8 @@
   },
   "hosting": {
     "h1": "Ylläpito",
-    "lead": "Jokaisella brändillä on oma kuvaportaalinsa omalla palvelimellaan. Sinä valitset, miten sitä ylläpidetään, täysin ulkoistetusta täysin itse hoidettuun.",
-    "p1Title": "3. Kumppani ylläpitää sen puolestasi",
+    "lead": "Jokaisella brändillä on oma kuvaportaalinsa. Asenna se omalle palvelimellesi yhdellä komennolla, aja sitä Cloudflare Workersissa, lataa se tavalliseen webhotelliin tai anna kumppanin ylläpitää sitä.",
+    "p1Title": "4. Kumppani ylläpitää sen puolestasi",
     "p1P": "Etkö halua ylläpitää itse? Kumppanit voivat ylläpitää ja huoltaa portaalia puolestasi.",
     "fieldBased": "Kotipaikka",
     "fieldLanguages": "Kielet",
@@ -399,11 +399,8 @@
       "julkaiset omat hintasi ja ehtosi omalla sivustollasi"
     ],
     "listHow": "Yhteensopivuus on maksutonta; paikka tällä listalla kuuluu viralliseen kumppanuuteen.",
-    "p2Title": "2. Yhdellä klikkauksella",
-    "p2P": "Oma portaali omalla tililläsi ilman palvelimen ylläpitoa.",
     "cfP": "Toimii Cloudflare Workersissa, tietokantana D1 ja kuville R2. Napsauta painiketta, kirjaudu Cloudflareen ja seuraa vaiheita. Päivittäiseen käyttöön portaali tarvitsee Workers Paid -tilauksen (5 dollaria kuukaudessa); ilmaistilaus riittää vain tutustumiseen. Kuviesi verkkoversiot tekevät selaimesi ja obx-työkalu.",
     "cfButton": "Asenna Cloudflareen",
-    "runP": "Skripti, joka asentaa portaalisi Google Cloud Runiin. Tarvitset Google Cloud -tilin ja gcloud-työkalun.",
     "phpP": "Webhotelliin, joka sinulla ehkä jo on, PHP:llä ja tietokannalla. Komentoja ei tarvita:",
     "phpSteps": [
       "Lataa obx-portal-php-<version>.zip uusimmasta julkaisusta.",
@@ -414,17 +411,10 @@
       "Lisää asennuksen näyttämä cron-osoite cron-ajoksi palvelusi hallintapaneeliin, 5 minuutin välein. Portaali toimii ilmankin."
     ],
     "phpDownload": "Lataa uusin julkaisu",
-    "p3Title": "3. Oma palvelimesi",
-    "p3P": "Onko sinulla jo oma käänteinen välityspalvelin? Käynnistä silloin vain julkaistu image ja ohjaa välityspalvelin porttiin 8080:",
-    "envTitle": "Asetukset",
-    "envPublicUrl": "portaalisi julkinen osoite",
-    "envSecretKey": "pitkä satunnainen avain (openssl rand -base64 48). Säilytä kopio salasanojen hallintaohjelmassa: avainta ei voi vaihtaa, kun portaalissa on dataa",
-    "envSetupCode": "valinnainen: etukäteen valittu asennuskoodi",
-    "envPort": "portti, oletuksena 8080",
     "firstTitle": "Asennuksen jälkeen: ensimmäinen käynnistys",
     "first": [
       "Avaa portaalisi osoite selaimessa.",
-      "Syötä kertakäyttöinen asennuskoodi. Se näkyy lokissa ensimmäisellä käynnistyskerralla (Portaali webhotelliin: tiedostossa data/SETUP-CODE.txt, ja asennus täyttää sen puolestasi), tai asetat sen etukäteen OBX_SETUP_CODE-arvolla.",
+      "Syötä kertakäyttöinen asennuskoodi. Oman palvelimen asennusohjelma näyttää sen lopuksi. Muuten se näkyy lokissa ensimmäisellä käynnistyskerralla (Portaali webhotelliin: tiedostossa data/SETUP-CODE.txt, ja asennus täyttää sen puolestasi), tai asetat sen etukäteen OBX_SETUP_CODE-arvolla.",
       "Täytä yrityksesi ja ensimmäinen brändisi ja valitse oma salasana. Oletussalasanaa ei ole koskaan."
     ],
     "firstWhy": "Asennuskoodi varmistaa, ettei kukaan muu voi ottaa haltuunsa juuri asennettua portaalia.",
@@ -434,54 +424,108 @@
     "compareP": "Kolme versiota tekevät saman asian, ja niissä on sama hallinta ja sama jälleenmyyjäportaali. Valitse ylläpitoosi sopiva; voit vaihtaa myöhemmin.",
     "compareLink": "Katso toteutukset",
     "heroTitle": "Kuvaportaalisi, missä haluat.",
-    "heroLead": "Ohjelmisto on maksuton. Sinä valitset, missä se toimii, ja voit muuttaa milloin tahansa.",
+    "heroLead": "Ohjelmisto on maksuton. Helpoin tapa on pieni oma palvelin ja yksi komento. Voit vaihtaa milloin tahansa.",
     "heroChecks": [
       "Maksuton ohjelmisto, maksat vain ylläpidosta",
-      "Suositus: Euroopassa, esimerkiksi Hetznerillä (Saksa)",
+      "Yksi komento asentaa portaalin HTTPS:n kanssa",
       "Sama portaali kaikkialla, joten voit aina vaihtaa",
       "Etkö halua tehdä sitä itse? Kumppani ylläpitää sen puolestasi"
     ],
-    "euCta": "Kuvaportaalisi Euroopassa",
-    "euTitle": "1. Oma palvelin Euroopassa (suositus)",
-    "euP": "Useimmille brändeille riittää pieni palvelin eurooppalaiselta palveluntarjoajalta. Oppaamme käyttää Hetzneriä, jonka konesalit ovat Saksassa ja Suomessa.",
-    "euSteps": [
-      "Luo palvelin Hetznerillä Nürnbergiin, Falkensteiniin tai Helsinkiin, varmuuskopiot päällä.",
-      "Ohjaa verkkotunnuksesi, esimerkiksi images.brandisi.fi, palvelimelle.",
-      "Asenna Docker ja käynnistä portaali muutamalla komennolla. HTTPS järjestyy automaattisesti.",
-      "Avaa verkkotunnuksesi ja käy läpi käyttöönottoavustaja.",
-      "Valinnainen: säilytä kuvat Hetzner Object Storagessa, samassa sijainnissa.",
-      "Ajasta yöllinen varmuuskopio ja kopioi se pois palvelimelta. Päivitys vaatii kaksi komentoa."
-    ],
-    "euGuide": "Vaiheittainen ohje: portaalisi Hetznerillä",
-    "euData": "Kun palvelin ja tallennustila ovat EU-sijainnissa, luettelosi, kuvasi ja tietokantasi säilytetään EU:ssa.",
-    "webTitle": "2. Tavallinen webhotelli",
+    "webTitle": "3. Tavallinen webhotelli",
     "webP": "PHP-versio toimii tavallisessa eurooppalaisessa webhotellissa, jossa on PHP ja tietokanta, esimerkiksi TransIP:llä, Stratolla tai OVHcloudilla. Komentoja ei tarvita:",
-    "altTitle": "4. Muut pilvet",
-    "altP": "Sama portaali toimii myös Cloudflare Workersissa ja Google Cloud Runissa. Valitse Euroopassa sijaitseva alue, jos palvelu tarjoaa sellaisen.",
     "partnerLink": "Katso kumppanit",
     "techTitle": "Tekniset tiedot IT-tiimillesi",
-    "techLead": "Komennot, asetukset ja asennusohjeet sille, joka pystyttää palvelimen.",
+    "techLead": "Asennusohjelman valinnat, tiedostot, varmuuskopiot ja päivitykset sille, joka pystyttää palvelimen.",
     "costTitle": "Mitä se suunnilleen maksaa",
     "costItems": [
       "Oma palvelin EU:ssa: noin 5–15 € kuukaudessa pienestä palvelimesta automaattisine varmuuskopioineen esimerkiksi Hetzneriltä. Palvelimen omalla levyllä olevat kuvat eivät maksa mitään lisää; objektitallennus suurelle arkistolle maksaa muutaman euron lisää kuukaudessa teratavua kohden.",
       "Tavallinen webhotelli: paketti, josta jo maksat, kunhan siinä on PHP 8.2 tai uudempi.",
       "Cloudflare Workers: 5 dollaria kuukaudessa Workers Paid -tilauksesta sekä R2-tallennustila, noin 1,50 dollaria kuukaudessa 100 Gt:n kuvamäärää kohden. Latausmaksuja ei ole.",
       "Kumppani: kumppanin oma hinta. Kysy, mitä siihen sisältyy: päivitykset, varmuuskopiot, oma verkkotunnus ja kaiken tiedon vienti, jos lopetat.",
-      "Oma aikasi: varaa ensimmäisellä kerralla puolesta päivästä päivään, mukaan lukien verkkotunnus ja varmuuskopion palautuksen testaus, ja noin tunti kuukaudessa päivityksiin ja varmuuskopioiden tarkistamiseen."
+      "Oma aikasi: varaa ensimmäisellä kerralla tunnista kahteen tuntiin, mukaan lukien verkkotunnus ja varmuuskopion palautuksen testaus, ja noin tunti kuukaudessa päivityksiin ja varmuuskopioiden tarkistamiseen."
     ],
     "costNote": "Suuntaa antavat hinnat marraskuulta 2026, ilman arvonlisäveroa. Tarkista palveluntarjoajan ajantasaiset hinnat ennen valintaa.",
-    "stepsTitle": "Vaihe vaiheelta uudella palvelimella",
-    "stepsP": "Uudella Ubuntu-palvelimella, jossa portit 22, 80 ja 443 ovat auki ja verkkotunnuksesi A- ja AAAA-tietueet osoittavat jo palvelimeen. Tämä on sama kokoonpano kuin Hetzner-ohjeessa: se rakentaa portaalin uusimman julkaisun ja asettaa Caddyn sen eteen HTTPS:ää varten.",
     "httpsTitle": "HTTPS",
-    "httpsP": "Caddy hakee Let's Encrypt -varmenteen heti, kun verkkotunnuksesi osoittaa palvelimeen, uusii sen automaattisesti ja ohjaa http-liikenteen https:ään. Eikö varmennetta tule? Tarkista dig-komennolla, että verkkotunnus näyttää palvelimen osoitteen, ja että portit 80 ja 443 ovat auki palomuurissa.",
+    "httpsP": "Go-versio hakee itse Let's Encrypt -varmenteen heti, kun verkkotunnuksesi osoittaa palvelimeen, uusii sen automaattisesti ja ohjaa http-liikenteen https:ään. TypeScript-versio tekee saman Caddyn avulla, jonka asennusohjelma määrittää. Eikö varmennetta tule? Tarkista dig-komennolla, että verkkotunnus näyttää palvelimen osoitteen, ja että portit 80 ja 443 ovat auki.",
     "backupTitle": "Varmuuskopiot",
-    "backupP": "Ota käyttöön palveluntarjoajan palvelinvarmuuskopiot ja lisää yöllinen portaalin varmuuskopio, jonka kopioit myös pois palvelimelta. Säilytä OBX_SECRET_KEY erikseen salasanojen hallintaohjelmassa: ilman sitä varmuuskopiota ei voi palauttaa kokonaan. Kokeile palautusta kerran, jotta tiedät sen toimivan.",
+    "backupP": "Ota käyttöön palveluntarjoajan palvelinvarmuuskopiot ja lisää yöllinen portaalin varmuuskopio, jonka kopioit myös pois palvelimelta. Säilytä salainen avain erikseen salasanojen hallintaohjelmassa: se on OBX_SECRET_KEY asetustiedostossa tai secret.key datakansiossa. Ilman sitä varmuuskopiota ei voi palauttaa kokonaan. Kokeile palautusta kerran, jotta tiedät sen toimivan.",
     "updateTitle": "Päivitykset",
-    "updateP": "Ota varmuuskopio ja lue julkaisutiedot. Hae sitten uusi julkaisu ja rakenna uudelleen; tietokanta päivittyy itsestään, kun portaali käynnistyy.",
+    "updateP": "Ota varmuuskopio ja lue julkaisutiedot. Aja sitten sama asennuskomento uudelleen: se asentaa uusimman julkaisun, säilyttää asetuksesi ja tietosi ja käynnistää portaalin uudelleen. Tietokanta päivittyy itsestään käynnistyksen yhteydessä.",
     "cfCliP": "Tai omalta tietokoneeltasi Bunin ja Wrangler-työkalun avulla:",
-    "cfDomainP": "Oma verkkotunnus: lisää se kohdassa Workers & Pages → oma Workerisi → Settings → Domains & Routes (verkkotunnuksen on oltava Cloudflaressa), aseta OBX_PUBLIC_URL tähän osoitteeseen ja julkaise uudelleen.",
     "cfBackupP": "Varmuuskopiot: Workers Paid -tilauksella D1 säilyttää tietokannan historian 30 päivän ajalta (Time Travel). Jos haluat kopion Cloudflaren ulkopuolelle, vie tietokanta säännöllisesti. Kuvat ovat R2:ssa; kopioi bucket millä tahansa S3-työkalulla.",
-    "cfUpdateP": "Päivitykset: yhdistä uusi julkaisu omaan kopioosi repositoriosta ja tee push; Cloudflare julkaisee sen uudelleen."
+    "cfUpdateP": "Päivitykset: yhdistä uusi julkaisu omaan kopioosi repositoriosta ja tee push; Cloudflare julkaisee sen uudelleen.",
+    "installCta": "Asenna omalle palvelimelle",
+    "exampleDomain": "portal.brandisi.fi",
+    "ownTitle": "1. Oma palvelin (suositus)",
+    "ownP": "Vuokraa pieni Linux-palvelin, osoita verkkotunnuksesi siihen ja aja yksi komento. Asennusohjelma lataa portaalin, hakee maksuttoman HTTPS-varmenteen Let's Encryptiltä ja käynnistää portaalin palveluna, joka käynnistyy itsestään uudelleenkäynnistyksen jälkeen.",
+    "needTitle": "Mitä tarvitset",
+    "needItems": [
+      "Linux-palvelin (VPS), jossa on Ubuntu 22.04 tai 24.04, Debian 12 tai 13 tai vastaava. 1 Gt muistia riittää alkuun. Mikä tahansa palveluntarjoaja käy, esimerkiksi Hetzner Cloud, DigitalOcean, TransIP VPS tai Scaleway.",
+      "Julkinen IPv4-osoite (IPv6 on valinnainen), ja portit 80 ja 443 auki.",
+      "Verkkotunnus tai aliverkkotunnus portaalille, esimerkiksi portal.brandisi.fi."
+    ],
+    "ownStepsTitle": "Kolme vaihetta",
+    "ownSteps": [
+      "Luo palvelin ja kirjoita muistiin sen IP-osoite.",
+      "Osoita portal.brandisi.fi palvelimeen yhdellä DNS-tietueella (katso alta).",
+      "Kirjaudu palvelimelle SSH:lla ja aja tämä komento omalla osoitteellasi:"
+    ],
+    "ownDone": "Kun asennus on valmis, asennusohjelma näyttää portaalisi osoitteen ja kertakäyttöisen asennuskoodin. Avaa osoite, syötä koodi ja käy käyttöönottoavustaja läpi. Päivitä myöhemmin ajamalla sama komento uudelleen: asetuksesi ja tietosi säilyvät.",
+    "ownTs": "Tämä asentaa Go-version eli Portaalin omalle palvelimelle. TypeScript-version saat lisäämällä samaan komentoon --edition ts.",
+    "ownEu": "Valitse datakeskus EU:sta, niin luettelosi, kuvasi ja tietokantasi pysyvät EU:ssa.",
+    "dnsTitle": "DNS: osoita verkkotunnuksesi palvelimeen",
+    "dnsP": "Lisää yksi tietue siihen yritykseen, joka hallinnoi verkkotunnustasi:",
+    "dnsHead": [
+      "Tyyppi",
+      "Nimi",
+      "Arvo"
+    ],
+    "dnsAaaaType": "AAAA (vain jos palvelimella on IPv6)",
+    "dnsAValue": "palvelimesi IPv4-osoite, esimerkiksi 203.0.113.10",
+    "dnsAaaaValue": "palvelimesi IPv6-osoite",
+    "dnsNameNote": "”portal” tekee osoitteeksi portal.brandisi.fi; voit valita myös toisen sanan. Jätä TTL oletusarvoon (tai 1 tuntiin).",
+    "dnsWhere": "Mistä klikata (nimet voivat poiketa hieman):",
+    "dnsPaths": [
+      "Ohjauspaneeli → Verkkotunnukset → verkkotunnuksesi → DNS → lisää tietue.",
+      "Mijn Hostnet → Domeinnamen → verkkotunnuksesi → DNS beheren → lisää tietue.",
+      "Verkkotunnukset → Hallinnoi verkkotunnusta → rataskuvake → DNS → A-tietue → Hallinnoi.",
+      "Ohjauspaneeli → DNS-asetukset → DNS-tietueet → Luo uusi tietue.",
+      "verkkotunnuksesi → DNS → Records → Add record. Aseta Proxy status tilaan DNS only (harmaa pilvi), jotta portaali saa oman varmenteen. Haluatko oranssin pilven myöhemmin? Aseta ensin SSL/TLS tilaan Full (strict).",
+      "Omat tuotteet → verkkotunnuksesi → DNS → Hallinnoi DNS:ää → Lisää uusi tietue."
+    ],
+    "dnsCheckTitle": "Tarkista",
+    "dnsCheckP": "Omalla tietokoneellasi tämän pitää näyttää palvelimen osoite (tai käytä verkossa olevaa DNS-tarkistinta, kuten dnschecker.org):",
+    "dnsWait": "Se kestää yleensä 5–60 minuuttia, joskus muutaman tunnin. Asennusohjelma tarkistaa sen myös ja kertoo, mitä vielä puuttuu.",
+    "optionsTitle": "Asennusohjelman valinnat",
+    "options": [
+      "portaalin osoite, esimerkiksi portal.brandisi.fi (pakollinen)",
+      "sähköpostiosoite Let's Encryptille (valinnainen)",
+      "tietty julkaisu uusimman sijaan",
+      "go (oletus) asentaa Go-version; ts asentaa TypeScript-version",
+      "ei omaa HTTPS:ää: portaali kuuntelee osoitteessa 127.0.0.1:8080 oman välityspalvelimesi takana",
+      "näytä vain, mitä tehtäisiin, älä muuta mitään",
+      "poista ohjelma ja palvelu; tietosi ja asetuksesi säilyvät (lisää --purge, niin nekin poistetaan)"
+    ],
+    "checksP": "Ennen kuin asennusohjelma muuttaa mitään, se tarkistaa järjestelmän (Linux amd64 tai arm64 ja systemd), pääkäyttäjän oikeudet, levytilan, että verkkotunnus osoittaa tähän palvelimeen, että portit 80 ja 443 ovat vapaina, sekä palomuurin. Jos käytössä on ufw tai firewalld, se näyttää tarkan komennon porttien 80 ja 443 avaamiseen.",
+    "filesTitle": "Missä kaikki on",
+    "filesHead": [
+      "Mitä",
+      "Go-versio",
+      "TypeScript-versio"
+    ],
+    "filesRows": [
+      "Ohjelma",
+      "Tiedot",
+      "Asetukset",
+      "Palvelu"
+    ],
+    "commandsTitle": "Hyödyllisiä komentoja",
+    "cfTitle": "2. Cloudflare Workers",
+    "cfLead": "Ei palvelinta ylläpidettäväksi: portaali toimii omalla Cloudflare-tililläsi. Napsauta painiketta, kirjaudu sisään ja seuraa vaiheita.",
+    "cfDnsTitle": "DNS: oma verkkotunnus Workerille",
+    "cfDnsP": "Lisää osoite Workerin omaksi verkkotunnukseksi: Workers & Pages → oma Workerisi → Settings → Domains & Routes → Add → Custom domain. Jos verkkotunnuksesi on jo Cloudflaressa, DNS ja varmenne määritetään automaattisesti. Jos ei, siirrä verkkotunnuksen DNS Cloudflareen (maksuton) tai lisää CNAME-tietue portal, joka osoittaa Workerin osoitteeseen, kuten Cloudflaren ohjeessa kuvataan. Aseta sitten OBX_PUBLIC_URL tähän osoitteeseen ja julkaise uudelleen.",
+    "webDnsTitle": "DNS: aliverkkotunnus ohjauspaneelissa",
+    "webDnsP": "Luo aliverkkotunnus webhotellisi ohjauspaneelissa (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain tai Subdomains; Plesk: Websites & Domains → Add Subdomain). Jos verkkotunnuksesi DNS on samalla webhotellilla, muuta ei tarvita. Muuten lisää aliverkkotunnukselle A-tietue, joka osoittaa webhotellipalvelimen IP-osoitteeseen; paneeli näyttää sen. Ota sitten paneelissa Let's Encrypt käyttöön aliverkkotunnukselle."
   },
   "retailers": {
     "h1": "Jälleenmyyjille",
@@ -668,7 +712,7 @@
       "määrittely, skeemat, testidata",
       "Go-SDK, obx-työkalu, yhdenmukaisuustestit, mock-palvelin",
       "yhteinen verkkokäyttöliittymä: hallinta ja jälleenmyyjäportaali",
-      "Go: Docker ja Google Cloud Run",
+      "Go: oma palvelin, yhden rivin asennusohjelmalla",
       "PHP: tavallinen webhotelli",
       "TypeScript: Cloudflare Workers"
     ],
@@ -702,7 +746,7 @@
       },
       {
         "name": "node-go",
-        "d": "Portaali Dockerille ja Google Cloud Runille"
+        "d": "Portaali omalle palvelimelle"
       },
       {
         "name": "node-php",
@@ -992,7 +1036,7 @@
       "Lataa Excel-vientisi ja kuvasi käsin, tai anna hakea ne joka yö",
       "Automaattinen toimitus PIM- tai ERP-järjestelmästäsi tai jaetusta kansiosta",
       "Käyttöoikeuspyynnöt, kutsut ja API-avaimet jälleenmyyjiesi ohjelmistoille",
-      "Kolme versiota: Cloudflare, Google Cloud & Docker ja tavallinen webhotelli"
+      "Kolme versiota: oma palvelin, Cloudflare Workers ja tavallinen webhotelli"
     ],
     "brandsComing": [
       "Ensimmäinen julkinen julkaisu, asennus yhdellä napsautuksella",
@@ -1150,12 +1194,21 @@
       "editions": [
         {
           "tag": "Suositus",
-          "name": "Oma palvelin Euroopassa",
-          "runs": "Palvelin eurooppalaiselta palveluntarjoajalta, kuten Hetzner (Saksa)",
-          "need": "Palvelin ja verkkotunnus",
-          "setup": "Muutama komento, sitten käyttöönottoavustaja",
+          "name": "Oma palvelin",
+          "runs": "Mikä tahansa Linux-palvelin (VPS), esimerkiksi Hetzneriltä, DigitalOceanilta, TransIP:ltä tai Scalewaylta",
+          "need": "Palvelin, verkkotunnus ja SSH-yhteys",
+          "setup": "Yksi komento, sitten käyttöönottoavustaja",
           "cost": "Noin 5–15 € kuukaudessa pienestä palvelimesta varmuuskopioineen",
-          "cta": "Ota käyttöön Euroopassa"
+          "cta": "Asenna omalle palvelimelle"
+        },
+        {
+          "tag": "Ei palvelinta",
+          "name": "Cloudflare Workers",
+          "runs": "Oma Cloudflare-tilisi, tietokantana D1 ja kuville R2",
+          "need": "Cloudflare-tili ja Workers Paid -tilaus",
+          "setup": "Yksi klikkaus, sitten käyttöönottoavustaja",
+          "cost": "5 dollaria kuukaudessa sekä tallennustila",
+          "cta": "Ota käyttöön Cloudflaressa"
         },
         {
           "tag": "Ei komentoja",
@@ -1174,15 +1227,6 @@
           "setup": "Kumppani ottaa sen käyttöön kanssasi",
           "cost": "Kumppanin omat hinnat",
           "cta": "Katso palveluntarjoajat"
-        },
-        {
-          "tag": "Muut pilvet",
-          "name": "Cloudflare tai Google Cloud",
-          "runs": "Cloudflare Workers tai Google Cloud Run",
-          "need": "Cloudflare- tai Google Cloud -tili",
-          "setup": "Yksi klikkaus tai yksi skripti",
-          "cost": "Cloudflare: 5 dollaria kuukaudessa sekä tallennustila. Google Cloud: käytön mukaan",
-          "cta": "Ota käyttöön toisessa pilvessä"
         }
       ],
       "trustEyebrow": "Hallinto",

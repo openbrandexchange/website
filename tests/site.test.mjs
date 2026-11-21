@@ -169,13 +169,12 @@ test('the cookie statement and the privacy page say there are no cookies', { ski
 test('the web hosting steps match the release: its file name, the writable folders, the setup code file and the cron job', { skip: !built && 'dist/ not built' }, () => {
   for (const lang of langs) {
     const html = read(`${lang}/hosting/index.html`);
-    const steps = html.slice(html.indexOf('id="web-hosting"'), html.indexOf('id="docker"'));
+    const steps = html.slice(html.indexOf('id="web-hosting"'), html.indexOf('id="providers"'));
     assert.ok(steps.includes('obx-portal-php-&lt;version&gt;.zip'), `${lang}: release file name`);
     assert.doesNotMatch(steps, /obx-node-php\.zip/, `${lang}: old file name`);
     assert.ok(steps.includes('data/SETUP-CODE.txt'), `${lang}: where the setup code is`);
     assert.match(steps, /775/, `${lang}: folder permissions`);
     assert.match(steps, /cron/i, `${lang}: cron job`);
-    assert.ok(html.includes('./deploy/cloudrun.sh'), `${lang}: node-go's real deploy script`);
   }
 });
 
@@ -219,17 +218,22 @@ test('the example files are one download in every language', { skip: !built && '
   for (const lang of langs) assert.ok(read(`${lang}/downloads/index.html`).includes('href="/downloads/kestrel-example.zip?v='), `${lang}: link`);
 });
 
-test('the Docker steps work when copied: the setup code is read from the log on stderr, the key is kept', { skip: !built && 'dist/ not built' }, () => {
-  const html = read('en/hosting/index.html').replaceAll('&gt;', '>').replaceAll('&amp;', '&').replaceAll('&quot;', '"');
-  // The node logs to standard error; "docker logs obx | grep" would find nothing.
-  assert.ok(html.includes('docker logs obx 2>&1 | grep -i "setup code"'), 'setup code from both streams');
-  assert.doesNotMatch(html, /OBX_SECRET_KEY="\$\(openssl/, 'a key generated inline cannot be kept');
-  assert.ok(html.includes('-e OBX_TRUST_PROXY=true'), 'behind a proxy the node trusts its X-Forwarded-For');
-  // The server steps follow node-go's own docker-compose.yml (the node service "node", Caddy for HTTPS).
-  assert.ok(html.includes('docker compose logs node | grep "setup code"'), 'setup code from the compose service');
-  assert.ok(html.includes('git checkout "$(git describe --tags --abbrev=0)"'), 'the latest release, not main');
-  assert.ok(html.includes('node-go backup --to /data/backups/'), 'nightly backup with node-go backup');
-  assert.ok(html.includes('DRY_RUN=1 ./deploy/cloudrun.sh'), 'Cloud Run dry run');
+test('the own-server route is the one-line installer, with the DNS record, in every language; no container routes', { skip: !built && 'dist/ not built' }, () => {
+  const routes = /docker|ghcr\.io|cloud ?run|cloudrun|fly\.io|railway|render\.com|compose/i;
+  for (const lang of langs) {
+    const html = read(`${lang}/hosting/index.html`).replaceAll('&gt;', '>').replaceAll('&amp;', '&').replaceAll('&quot;', '"');
+    const own = html.slice(html.indexOf('id="own-server"'), html.indexOf('id="cloudflare"'));
+    assert.match(own, /curl -fsSL https:\/\/openbrandexchange\.com\/install\.sh \| sudo sh -s -- --domain portal\.[a-z0-9-]+\.[a-z]{2,}/, `${lang}: the install command`);
+    assert.ok(own.includes('--edition ts'), `${lang}: the TypeScript edition through the same installer`);
+    assert.match(own, /<code>A<\/code>[\s\S]*<code>portal<\/code>/, `${lang}: the A record`);
+    for (const p of ['TransIP', 'Hostnet', 'Strato', 'one.com', 'Cloudflare DNS', 'GoDaddy']) assert.ok(own.includes(p), `${lang}: click path for ${p}`);
+    assert.match(own, /dig \+short portal\./, `${lang}: how to check the DNS`);
+    assert.ok(own.includes('node-go backup --to /var/lib/node-go/backups/'), `${lang}: nightly backup with node-go backup`);
+    assert.doesNotMatch(html, routes, `${lang}: hosting names a container or PaaS route`);
+  }
+  for (const lang of langs) {
+    for (const slug of slugs) assert.doesNotMatch(read(`${lang}/${slug}index.html`).replace(/<script[\s\S]*?<\/script>/g, ''), /docker|ghcr\.io|cloud ?run|cloudrun/i, `${lang}/${slug}`);
+  }
 });
 
 test('every error code has a page at its problem type URL, with its HTTP status', { skip: !built && 'dist/ not built' }, () => {

@@ -15,14 +15,14 @@
     "footerSource": "Codice sorgente e specifica",
     "footerLicence": "© 2026 {foundation}. Tutti i diritti riservati. La specifica è CC-BY-4.0.",
     "editionCloudflare": "Portale per Cloudflare",
-    "editionGoogle": "Portale per Google Cloud e Docker",
     "editionHosting": "Portale per web hosting",
     "yes": "Sì",
     "inDevelopment": "In sviluppo",
     "available": "Disponibile",
     "footerContact": "Contatti",
     "madeInEu": "Prodotto nell'UE",
-    "footerDiscuss": "Partecipa alla discussione"
+    "footerDiscuss": "Partecipa alla discussione",
+    "editionServer": "Portale per il tuo server"
   },
   "nav": {
     "brands": "Per i brand",
@@ -55,7 +55,7 @@
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Il tuo portale immagini dove preferisci: gestito da un partner, sul tuo server in Europa, su un normale web hosting o su un altro cloud."
+      "description": "Il tuo portale immagini dove preferisci: sul tuo server con un solo comando, su Cloudflare Workers, su un normale web hosting o gestito da un partner."
     },
     "retailers": {
       "title": "Per i rivenditori",
@@ -350,7 +350,7 @@
     "cliExit": "Codice di uscita 0 = tutto ok, 2 = finito ma alcune righe avevano errori (vengono elencate), 1 = non riuscito.",
     "cliGet": "Scarica obx",
     "watchTitle": "2. Una cartella che si pubblica da sola: obx watch",
-    "watchP": "Lascia che il tuo PIM, ERP o un collega salvi gli export in una cartella. obx watch pubblica appena qualcosa cambia e salta le foto rimaste uguali. Eseguilo come servizio o con Docker:",
+    "watchP": "Lascia che il tuo PIM, ERP o un collega salvi gli export in una cartella. obx watch pubblica appena qualcosa cambia e salta le foto rimaste uguali. Eseguilo come servizio, per esempio con systemd su Linux:",
     "cronTitle": "3. cron o Utilità di pianificazione di Windows",
     "cronLinux": "Linux o macOS",
     "cronWindows": "Windows (PowerShell, una volta)",
@@ -383,8 +383,8 @@
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Ogni brand ha il proprio portale immagini, sul proprio server. Scegli tu come gestirlo, da completamente affidato a completamente in proprio.",
-    "p1Title": "3. Un partner lo ospita per te",
+    "lead": "Ogni brand ha il proprio portale immagini. Installalo sul tuo server con un solo comando, fallo girare su Cloudflare Workers, caricalo su un normale web hosting o fallo ospitare da un partner.",
+    "p1Title": "4. Un partner lo ospita per te",
     "p1P": "Preferisci non ospitarlo tu? I partner possono ospitare e gestire il portale per te.",
     "fieldBased": "Sede",
     "fieldLanguages": "Lingue",
@@ -399,11 +399,8 @@
       "pubblichi prezzi e condizioni sul tuo sito"
     ],
     "listHow": "Essere compatibili è gratuito; la presenza in questa pagina fa parte della partnership ufficiale.",
-    "p2Title": "2. Con un clic",
-    "p2P": "Il tuo portale sul tuo account, senza gestire un server.",
     "cfP": "Funziona su Cloudflare Workers, con D1 come database e R2 per le immagini. Clicca il pulsante, accedi a Cloudflare e segui i passaggi. Un portale in uso ogni giorno richiede il piano Workers Paid (5 dollari al mese); il piano gratuito basta solo per dare un'occhiata. Le versioni web delle tue foto le crea il tuo browser insieme allo strumento obx.",
     "cfButton": "Installa su Cloudflare",
-    "runP": "Uno script che mette il tuo portale su Google Cloud Run. Servono un account Google Cloud e lo strumento gcloud.",
     "phpP": "Per il pacchetto di web hosting che forse hai già, con PHP e un database. Nessun comando necessario:",
     "phpSteps": [
       "Scarica obx-portal-php-<version>.zip dall'ultima release.",
@@ -414,17 +411,10 @@
       "Aggiungi l'indirizzo cron mostrato dall'installer come cron job nel pannello del tuo hosting, ogni 5 minuti. Anche senza, il portale funziona."
     ],
     "phpDownload": "Scarica l'ultima release",
-    "p3Title": "3. Il tuo server",
-    "p3P": "Hai già un tuo reverse proxy? Allora avvia solo l'immagine pubblicata e punta il proxy sulla porta 8080:",
-    "envTitle": "Impostazioni",
-    "envPublicUrl": "l'indirizzo pubblico del tuo portale",
-    "envSecretKey": "una lunga chiave casuale (openssl rand -base64 48). Conservane una copia nel tuo password manager: quando ci sono dati non si può più cambiare",
-    "envSetupCode": "facoltativo: un codice di configurazione scelto in anticipo",
-    "envPort": "porta, 8080 per impostazione predefinita",
     "firstTitle": "Dopo l'installazione: il primo avvio",
     "first": [
       "Apri l'indirizzo del tuo portale nel browser.",
-      "Inserisci il codice di installazione monouso. Lo trovi nel log al primo avvio (Portale per web hosting: in data/SETUP-CODE.txt, e l'installer lo compila per te), oppure lo imposti in anticipo con OBX_SETUP_CODE.",
+      "Inserisci il codice di installazione monouso. L'installer sul tuo server lo mostra alla fine. Altrimenti lo trovi nel log al primo avvio (Portale per web hosting: in data/SETUP-CODE.txt, e l'installer lo compila per te), oppure lo imposti in anticipo con OBX_SETUP_CODE.",
       "Inserisci la tua azienda e il tuo primo brand e scegli la tua password. Non esiste mai una password predefinita."
     ],
     "firstWhy": "Il codice di configurazione garantisce che nessun altro possa appropriarsi di un portale appena installato.",
@@ -434,54 +424,108 @@
     "compareP": "Le tre edizioni fanno la stessa cosa e condividono la stessa amministrazione e la stessa area rivenditori. Scegli quella adatta al tuo hosting; puoi cambiare in seguito.",
     "compareLink": "Vedi le implementazioni",
     "heroTitle": "Il tuo portale immagini, dove preferisci.",
-    "heroLead": "Il software è gratuito. Scegli tu dove gira, e puoi spostarlo in qualsiasi momento.",
+    "heroLead": "Il software è gratuito. La via più semplice è un piccolo server tuo e un solo comando. Puoi spostarti in qualsiasi momento.",
     "heroChecks": [
       "Software gratuito, paghi solo l'hosting",
-      "Consigliato: in Europa, per esempio con Hetzner (Germania)",
+      "Un solo comando installa il portale, con HTTPS",
       "Lo stesso portale ovunque, quindi puoi sempre cambiare",
       "Preferisci non farlo da solo? Un partner lo ospita per te"
     ],
-    "euCta": "Il tuo portale immagini in Europa",
-    "euTitle": "1. Il tuo server in Europa (consigliato)",
-    "euP": "Per la maggior parte dei brand basta un piccolo server presso un provider europeo. La nostra guida usa Hetzner, con data center in Germania e Finlandia.",
-    "euSteps": [
-      "Crea un server su Hetzner a Norimberga, Falkenstein o Helsinki, con i backup attivati.",
-      "Punta il tuo dominio, per esempio images.tuobrand.it, sul server.",
-      "Installa Docker e avvia il portale con pochi comandi. L'HTTPS si configura automaticamente.",
-      "Apri il tuo dominio e completa la procedura guidata.",
-      "Facoltativo: conserva le immagini in Hetzner Object Storage, nella stessa sede.",
-      "Pianifica un backup notturno e copialo fuori dal server. Per aggiornare bastano due comandi."
-    ],
-    "euGuide": "Guida passo passo: il tuo portale su Hetzner",
-    "euData": "Con server e storage in una sede nell'UE, catalogo, immagini e database restano nell'UE.",
-    "webTitle": "2. Normale web hosting",
+    "webTitle": "3. Normale web hosting",
     "webP": "L'edizione PHP funziona su un normale web hosting europeo con PHP e un database, per esempio presso TransIP, Strato o OVHcloud. Nessun comando necessario:",
-    "altTitle": "4. Altri cloud",
-    "altP": "Lo stesso portale funziona anche su Cloudflare Workers e su Google Cloud Run. Scegli una regione in Europa, se il servizio la offre.",
     "partnerLink": "Vedi i partner",
     "techTitle": "Dettagli tecnici per il tuo reparto IT",
-    "techLead": "Comandi, impostazioni e guide di installazione per chi configura il server.",
+    "techLead": "Opzioni dell'installer, file, backup e aggiornamenti, per chi configura il server.",
     "costTitle": "Quanto costa, più o meno",
     "costItems": [
       "Il tuo server nell'UE: circa 5-15 € al mese per un piccolo server con backup automatici, presso un provider come Hetzner. Le foto sul disco del server non costano nulla in più; un object storage per un grande archivio aggiunge qualche euro al mese per terabyte.",
       "Web hosting tradizionale: il pacchetto che paghi già, purché abbia PHP 8.2 o successivo.",
       "Cloudflare Workers: 5 dollari al mese per Workers Paid, più lo storage R2 a circa 1,50 dollari al mese ogni 100 GB di foto. I download non si pagano.",
       "Un partner: il suo prezzo. Chiedi cosa comprende: aggiornamenti, backup, il tuo dominio e l'esportazione di tutto se te ne vai.",
-      "Il tuo tempo: la prima volta conta da mezza giornata a una giornata, compresi il dominio e un ripristino di prova di un backup. Poi circa un'ora al mese per aggiornamenti e controllo dei backup."
+      "Il tuo tempo: la prima volta conta da una a due ore, compresi il dominio e un ripristino di prova di un backup, poi circa un'ora al mese per aggiornamenti e controllo dei backup."
     ],
     "costNote": "Prezzi indicativi di novembre 2026, IVA esclusa. Verifica i prezzi attuali del provider prima di scegliere.",
-    "stepsTitle": "Passo per passo su un nuovo server",
-    "stepsP": "Su un nuovo server Ubuntu con le porte 22, 80 e 443 aperte e con i record A e AAAA del tuo dominio che puntano già al server. È la stessa configurazione della guida per Hetzner: compila l'ultima release del portale e mette Caddy davanti per l'HTTPS.",
     "httpsTitle": "HTTPS",
-    "httpsP": "Caddy richiede un certificato Let's Encrypt appena il tuo dominio punta al server, lo rinnova automaticamente e reindirizza http su https. Nessun certificato? Controlla con dig che il dominio restituisca l'indirizzo del server e che le porte 80 e 443 siano aperte nel firewall.",
+    "httpsP": "L'edizione Go richiede da sola un certificato Let's Encrypt appena il tuo dominio punta al server, lo rinnova automaticamente e reindirizza http su https. L'edizione TypeScript fa lo stesso tramite Caddy, che l'installer configura. Nessun certificato? Controlla con dig che il dominio restituisca l'indirizzo del server e che le porte 80 e 443 siano aperte.",
     "backupTitle": "Backup",
-    "backupP": "Attiva i backup del server presso il tuo provider e aggiungi un backup notturno del portale da copiare anche fuori dal server. Conserva OBX_SECRET_KEY a parte, in un password manager: senza, un backup non si può ripristinare del tutto. Prova un ripristino almeno una volta, così sai che funziona.",
+    "backupP": "Attiva i backup del server presso il tuo provider e aggiungi un backup notturno del portale da copiare anche fuori dal server. Conserva la chiave segreta a parte, in un password manager: è OBX_SECRET_KEY nel file delle impostazioni, oppure secret.key nella cartella dei dati. Senza di essa un backup non si può ripristinare del tutto. Prova un ripristino almeno una volta, così sai che funziona.",
     "updateTitle": "Aggiornamenti",
-    "updateP": "Fai un backup e leggi le note di rilascio. Poi passa alla nuova release e ricompila; il database si aggiorna da solo all'avvio del portale.",
+    "updateP": "Fai un backup e leggi le note di rilascio. Poi esegui di nuovo lo stesso comando di installazione: installa l'ultima release, mantiene impostazioni e dati e riavvia il portale. Il database si aggiorna da solo all'avvio.",
     "cfCliP": "Oppure dal tuo computer, con Bun e lo strumento Wrangler:",
-    "cfDomainP": "Il tuo dominio: aggiungilo in Workers & Pages → il tuo Worker → Settings → Domains & Routes (il dominio deve essere su Cloudflare), imposta OBX_PUBLIC_URL su quell'indirizzo e ripeti il deploy.",
     "cfBackupP": "Backup: con Workers Paid, D1 conserva 30 giorni di cronologia del database (Time Travel). Per una copia fuori da Cloudflare, esporta regolarmente il database. Le immagini sono in R2; copia il bucket con qualsiasi strumento S3.",
-    "cfUpdateP": "Aggiornamenti: fai il merge della nuova release nella tua copia del repository e fai push; Cloudflare la ripubblica."
+    "cfUpdateP": "Aggiornamenti: fai il merge della nuova release nella tua copia del repository e fai push; Cloudflare la ripubblica.",
+    "installCta": "Installa sul tuo server",
+    "exampleDomain": "portal.tuobrand.it",
+    "ownTitle": "1. Il tuo server (consigliato)",
+    "ownP": "Noleggia un piccolo server Linux, fai puntare il tuo dominio verso di esso ed esegui un solo comando. L'installer scarica il portale, ottiene un certificato HTTPS gratuito da Let's Encrypt e avvia il portale come servizio che riparte da solo dopo un riavvio.",
+    "needTitle": "Cosa ti serve",
+    "needItems": [
+      "Un server Linux (VPS) con Ubuntu 22.04 o 24.04, Debian 12 o 13, o simile. Per iniziare basta 1 GB di memoria. Va bene qualsiasi provider, per esempio Hetzner Cloud, DigitalOcean, TransIP VPS o Scaleway.",
+      "Un indirizzo IPv4 pubblico (IPv6 è facoltativo), con le porte 80 e 443 aperte.",
+      "Un dominio o sottodominio per il portale, per esempio portal.tuobrand.it."
+    ],
+    "ownStepsTitle": "Tre passaggi",
+    "ownSteps": [
+      "Crea il server e annota il suo indirizzo IP.",
+      "Fai puntare portal.tuobrand.it al server con un record DNS (vedi sotto).",
+      "Accedi al server via SSH ed esegui questo comando, con il tuo indirizzo:"
+    ],
+    "ownDone": "Alla fine l'installer mostra l'indirizzo del tuo portale e un codice di installazione monouso. Apri l'indirizzo, inserisci il codice e completa la procedura guidata. Per aggiornare in seguito, esegui di nuovo lo stesso comando: impostazioni e dati restano.",
+    "ownTs": "Così installi l'edizione Go, il Portale per il tuo server. Per l'edizione TypeScript, aggiungi --edition ts allo stesso comando.",
+    "ownEu": "Scegli un data center nell'UE e il tuo catalogo, le immagini e il database restano nell'UE.",
+    "dnsTitle": "DNS: fai puntare il tuo dominio al server",
+    "dnsP": "Aggiungi un record presso la società che gestisce il tuo dominio:",
+    "dnsHead": [
+      "Tipo",
+      "Nome",
+      "Valore"
+    ],
+    "dnsAaaaType": "AAAA (solo se il server ha IPv6)",
+    "dnsAValue": "l'indirizzo IPv4 del tuo server, per esempio 203.0.113.10",
+    "dnsAaaaValue": "l'indirizzo IPv6 del tuo server",
+    "dnsNameNote": "“portal” crea l'indirizzo portal.tuobrand.it; se vuoi puoi scegliere un'altra parola. Lascia il TTL al valore predefinito (o 1 ora).",
+    "dnsWhere": "Dove cliccare (le voci possono variare leggermente):",
+    "dnsPaths": [
+      "Pannello di controllo → Domini → il tuo dominio → DNS → aggiungi un record.",
+      "Mijn Hostnet → Domeinnamen → il tuo dominio → DNS beheren → aggiungi un record.",
+      "Domini → Gestisci dominio → icona dell'ingranaggio → DNS → record A → Gestisci.",
+      "Pannello di controllo → Impostazioni DNS → Record DNS → Crea nuovo record.",
+      "il tuo dominio → DNS → Records → Add record. Imposta Proxy status su DNS only (nuvola grigia), così il portale ottiene un proprio certificato. Vuoi la nuvola arancione più avanti? Prima imposta SSL/TLS su Full (strict).",
+      "I miei prodotti → il tuo dominio → DNS → Gestisci DNS → Aggiungi nuovo record."
+    ],
+    "dnsCheckTitle": "Verifica",
+    "dnsCheckP": "Sul tuo computer, questo deve mostrare l'indirizzo del server (oppure usa un controllo DNS online come dnschecker.org):",
+    "dnsWait": "Di solito servono da 5 a 60 minuti, a volte qualche ora. Anche l'installer lo verifica e ti dice cosa manca ancora.",
+    "optionsTitle": "Opzioni dell'installer",
+    "options": [
+      "l'indirizzo del portale, per esempio portal.tuobrand.it (obbligatorio)",
+      "un indirizzo e-mail per Let's Encrypt (facoltativo)",
+      "una release specifica invece dell'ultima",
+      "go (predefinito) installa l'edizione Go; ts installa l'edizione TypeScript",
+      "nessun HTTPS proprio: il portale ascolta su 127.0.0.1:8080 dietro il tuo proxy",
+      "mostra solo cosa farebbe, senza cambiare nulla",
+      "rimuove il programma e il servizio; dati e impostazioni restano (aggiungi --purge per eliminare anche quelli)"
+    ],
+    "checksP": "Prima di cambiare qualcosa, l'installer controlla il sistema (Linux amd64 o arm64 con systemd), i permessi di root, lo spazio su disco, che il dominio punti a questo server, che le porte 80 e 443 siano libere, e il firewall. Con ufw o firewalld mostra il comando esatto per aprire le porte 80 e 443.",
+    "filesTitle": "Dove si trova tutto",
+    "filesHead": [
+      "Cosa",
+      "Edizione Go",
+      "Edizione TypeScript"
+    ],
+    "filesRows": [
+      "Programma",
+      "Dati",
+      "Impostazioni",
+      "Servizio"
+    ],
+    "commandsTitle": "Comandi utili",
+    "cfTitle": "2. Cloudflare Workers",
+    "cfLead": "Nessun server da gestire: il portale gira sul tuo account Cloudflare. Clicca il pulsante, accedi e segui i passaggi.",
+    "cfDnsTitle": "DNS: un dominio personalizzato sul Worker",
+    "cfDnsP": "Aggiungi l'indirizzo come dominio personalizzato del Worker: Workers & Pages → il tuo Worker → Settings → Domains & Routes → Add → Custom domain. Se il tuo dominio è già su Cloudflare, DNS e certificato vengono configurati automaticamente. Altrimenti sposta il DNS del tuo dominio su Cloudflare (gratis), oppure aggiungi un record CNAME portal che punti all'indirizzo del Worker, come spiega la guida di Cloudflare. Poi imposta OBX_PUBLIC_URL su quell'indirizzo e fai di nuovo il deploy.",
+    "webDnsTitle": "DNS: un sottodominio nel tuo pannello di controllo",
+    "webDnsP": "Crea il sottodominio nel pannello di controllo del tuo hosting (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain, oppure Subdomains; Plesk: Websites & Domains → Add Subdomain). Se il DNS del tuo dominio è presso lo stesso hosting, hai finito. Altrimenti aggiungi per il sottodominio un record A che punti all'indirizzo IP del server di hosting, indicato nel pannello. Poi attiva Let's Encrypt per il sottodominio nel pannello."
   },
   "retailers": {
     "h1": "Per i rivenditori",
@@ -668,7 +712,7 @@
       "specifica, schemi, dati di test",
       "SDK Go, strumento obx, test di conformità, server fittizio",
       "interfaccia web condivisa: amministrazione e area rivenditori",
-      "Go: Docker e Google Cloud Run",
+      "Go: il tuo server, con un installer di una riga",
       "PHP: normale web hosting",
       "TypeScript: Cloudflare Workers"
     ],
@@ -702,7 +746,7 @@
       },
       {
         "name": "node-go",
-        "d": "Portale per Docker e Google Cloud Run"
+        "d": "Portale per il tuo server"
       },
       {
         "name": "node-php",
@@ -992,7 +1036,7 @@
       "Carica a mano il tuo export Excel e le foto, oppure falli raccogliere ogni notte",
       "Consegna automatica dal tuo PIM, ERP o da una cartella condivisa",
       "Richieste di accesso, inviti e chiavi API per il software dei tuoi rivenditori",
-      "Tre edizioni: Cloudflare, Google Cloud & Docker e normale hosting web"
+      "Tre edizioni: il tuo server, Cloudflare Workers e normale web hosting"
     ],
     "brandsComing": [
       "La prima versione pubblica, con installazione in un clic",
@@ -1150,12 +1194,21 @@
       "editions": [
         {
           "tag": "Consigliato",
-          "name": "Il tuo server in Europa",
-          "runs": "Un server presso un provider europeo come Hetzner (Germania)",
-          "need": "Un server e un nome di dominio",
-          "setup": "Pochi comandi, poi la procedura guidata",
+          "name": "Il tuo server",
+          "runs": "Qualsiasi server Linux (VPS), per esempio presso Hetzner, DigitalOcean, TransIP o Scaleway",
+          "need": "Un server, un nome di dominio e accesso SSH",
+          "setup": "Un comando, poi la procedura guidata",
           "cost": "Circa 5-15 € al mese per un piccolo server con backup",
-          "cta": "Configura in Europa"
+          "cta": "Installa sul tuo server"
+        },
+        {
+          "tag": "Nessun server",
+          "name": "Cloudflare Workers",
+          "runs": "Il tuo account Cloudflare, con D1 come database e R2 per le immagini",
+          "need": "Un account Cloudflare con il piano Workers Paid",
+          "setup": "Un clic, poi la procedura guidata",
+          "cost": "5 dollari al mese più lo storage",
+          "cta": "Configura su Cloudflare"
         },
         {
           "tag": "Nessun comando",
@@ -1174,15 +1227,6 @@
           "setup": "Il partner lo configura insieme a te",
           "cost": "Le tariffe del partner",
           "cta": "Vedi i provider"
-        },
-        {
-          "tag": "Altri cloud",
-          "name": "Cloudflare o Google Cloud",
-          "runs": "Cloudflare Workers, oppure Google Cloud Run",
-          "need": "Un account Cloudflare o Google Cloud",
-          "setup": "Un clic o uno script",
-          "cost": "Cloudflare: 5 dollari al mese più lo storage. Google Cloud: a consumo",
-          "cta": "Configura su un altro cloud"
         }
       ],
       "trustEyebrow": "Governance",

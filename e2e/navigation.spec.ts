@@ -182,12 +182,12 @@ test('brand and retailer pages show no technical material; it lives under For de
   await expect(page.locator('.repo-list a[href*="github.com/openbrandexchange/spec"]')).toHaveCount(1);
 });
 
-test('the hosting page keeps the commands in a collapsed section for the IT team, opened by a link', async ({ page }) => {
+test('the hosting page keeps the installer details in a collapsed section for the IT team, opened by a link', async ({ page }) => {
   await page.goto('/en/hosting/');
   const details = page.locator('details#technical');
   await expect(details).not.toHaveAttribute('open', '');
-  await expect(page.locator('section[aria-labelledby="docker"] pre').first()).toBeHidden();
+  await expect(page.locator('section[aria-labelledby="installer"] pre').first()).toBeHidden();
   await page.locator('a[href="#technical"]').first().click();
   await expect(details).toHaveAttribute('open', '');
-  await expect(page.locator('section[aria-labelledby="docker"] pre').first()).toBeVisible();
+  await expect(page.locator('section[aria-labelledby="installer"] pre').first()).toBeVisible();
 });

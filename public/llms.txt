@@ -5,7 +5,7 @@
 Key facts:
 
 - Specification: version 0.3, OpenAPI 3.1 and JSON Schema, licensed CC-BY-4.0. Anyone may implement it, commercially too.
-- Software: three portal editions under AGPL-3.0: Go (Docker, any server; the recommended setup is a server in the EU, for example at Hetzner in Germany or Finland), PHP (ordinary web hosting) and Cloudflare Workers. The Go SDK, the `obx` command-line tool and the admin web interface are Apache-2.0.
+- Software: three portal editions under AGPL-3.0: Go (your own Linux server, installed with one command: `curl -fsSL https://openbrandexchange.com/install.sh | sudo sh -s -- --domain portal.yourbrand.com`, with HTTPS built in; the recommended setup is a server in the EU), PHP (ordinary web hosting) and Cloudflare Workers. The Go SDK, the `obx` command-line tool and the admin web interface are Apache-2.0.
 - Conformance: the open-source test `obx-conformance` runs 61 automated checks in four profiles (protocol, ingest, portal, security). Testing and the label "Compatible with Open Brand Exchange" are free.
 - Official partners: a paid listing on the website. Proposed annual fees, which apply only once the foundation is registered: €0 for one person, €500, €2,500 or €10,000 by company size. The same criteria apply to everyone, starting with a passed conformance test. Partners have no more say in the standard than anyone else.
 - Article data: fibre composition per part, with recycled and organic flags, as required by EU Regulation 1007/2011; animal origin; footwear materials per Directive 94/11/EC; ISO 3758 care symbols; country of origin; measurements for bags, luggage and shoes (height, width, depth, weight, volume, handle drop, strap length, heel height); features such as wheels or a detachable strap; certifications; colour families.
@@ -18,8 +18,8 @@ Key facts:
 - [For brands](https://openbrandexchange.com/en/for-brands/): what a brand gets, and the four steps from spreadsheet to every retailer
 - [Excel template](https://openbrandexchange.com/downloads/products.xlsx): the import columns with drop-down lists and an explanation in English and Dutch
 - [Automation](https://openbrandexchange.com/en/automation/): scheduled import, the obx tool, GitHub Actions, n8n, Make and Zapier
-- [Hosting](https://openbrandexchange.com/en/hosting/): an own server in Europe (guide for Hetzner), ordinary web hosting, a partner, or Cloudflare and Google Cloud
-- [Hetzner guide](https://github.com/openbrandexchange/node-go/blob/main/docs/hosting/hetzner.md): a portal on a Hetzner Cloud server in the EU, step by step
+- [Hosting](https://openbrandexchange.com/en/hosting/): your own server with the one-line installer (and the DNS record to add), Cloudflare Workers, ordinary web hosting, or a partner
+- [Installer](https://openbrandexchange.com/install.sh): the shell script behind the one-line install (redirects to the latest node-go release); options --domain, --email, --version, --edition go|ts, --behind-proxy, --dry-run, --uninstall
 
 ## For retailers and software vendors
 

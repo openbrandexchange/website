@@ -164,9 +164,10 @@ export function brandsHtml(lang, t = loadMessages(lang)) {
     .join('');
   const admin = t.brands.admin.map((a) => `<dt>${esc(a.k)}</dt><dd>${esc(a.v)}</dd>`).join('');
   const hosting = [
-    [t.hosting.p1Title, t.hosting.p1P],
-    [t.hosting.p2Title, `${t.hosting.p2P} ${t.common.editionCloudflare}, ${t.common.editionGoogle}, ${t.common.editionHosting}.`],
-    [t.hosting.p3Title, t.hosting.p3P.replace(/[:：]\s*$/, '.')],
+    // The first sentence of the own-server text: the whole route in one line (the page has the rest).
+    [t.hosting.ownTitle, t.hosting.ownP.replace(/^(.+?[.!?])\s.*$/s, '$1')],
+    [t.hosting.cfTitle, t.hosting.cfLead],
+    [t.hosting.webTitle, t.hosting.webP.replace(/[:：]\s*$/, '.')],
   ]
     .map(([h, p]) => `<div class="card"><h3>${esc(h)}</h3><p>${esc(p)}</p></div>`)
     .join('');

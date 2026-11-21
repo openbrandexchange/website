@@ -15,14 +15,14 @@
     "footerSource": "Kildekode og spesifikasjon",
     "footerLicence": "© 2026 {foundation}. Alle rettigheter forbeholdt. Spesifikasjonen er CC-BY-4.0.",
     "editionCloudflare": "Portal for Cloudflare",
-    "editionGoogle": "Portal for Google Cloud og Docker",
     "editionHosting": "Portal for webhotell",
     "yes": "Ja",
     "inDevelopment": "Under utvikling",
     "available": "Tilgjengelig",
     "footerContact": "Kontakt",
     "madeInEu": "Laget i EU",
-    "footerDiscuss": "Bli med i diskusjonen"
+    "footerDiscuss": "Bli med i diskusjonen",
+    "editionServer": "Portal for din egen server"
   },
   "nav": {
     "brands": "For merkevarer",
@@ -55,7 +55,7 @@
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Bildeportalen din der du vil: driftet av en partner, på din egen server i Europa, på vanlig webhotell eller i en annen sky."
+      "description": "Bildeportalen din der du vil: på din egen server med én kommando, på Cloudflare Workers, på vanlig webhotell eller driftet av en partner."
     },
     "retailers": {
       "title": "For forhandlere",
@@ -350,7 +350,7 @@
     "cliExit": "Avslutningskode 0 = alt i orden, 2 = ferdig, men noen linjer hadde feil (de listes), 1 = mislyktes.",
     "cliGet": "Last ned obx",
     "watchTitle": "2. En mappe som publiserer seg selv: obx watch",
-    "watchP": "La PIM, ERP eller en kollega lagre eksporter i en mappe. obx watch publiserer så snart noe endres, og hopper over bilder som er uendret. Kjør det som tjeneste eller med Docker:",
+    "watchP": "La PIM, ERP eller en kollega lagre eksporter i en mappe. obx watch publiserer så snart noe endres, og hopper over bilder som er uendret. Kjør det som tjeneste, for eksempel med systemd på Linux:",
     "cronTitle": "3. cron eller Windows Oppgaveplanlegging",
     "cronLinux": "Linux eller macOS",
     "cronWindows": "Windows (PowerShell, én gang)",
@@ -383,8 +383,8 @@
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Hver merkevare har sin egen bildeportal, på sin egen server. Du velger hvordan den driftes, fra helt satt bort til helt selv.",
-    "p1Title": "3. En partner drifter den for deg",
+    "lead": "Hver merkevare har sin egen bildeportal. Installer den på din egen server med én kommando, kjør den på Cloudflare Workers, last den opp til vanlig webhotell, eller la en partner drifte den.",
+    "p1Title": "4. En partner drifter den for deg",
     "p1P": "Vil du helst ikke drifte den selv? Partnere kan drifte og vedlikeholde portalen for deg.",
     "fieldBased": "Hovedkontor i",
     "fieldLanguages": "Språk",
@@ -399,11 +399,8 @@
       "du oppgir dine egne priser og vilkår på ditt eget nettsted"
     ],
     "listHow": "Å være kompatibel er gratis; en oppføring her er en del av det offisielle partnerskapet.",
-    "p2Title": "2. Med ett klikk",
-    "p2P": "Din egen portal på din egen konto, uten å drifte en server.",
     "cfP": "Kjører på Cloudflare Workers, med D1 som database og R2 for bildene. Klikk på knappen, logg inn hos Cloudflare og følg trinnene. En portal i daglig bruk trenger abonnementet Workers Paid (5 dollar i måneden); gratisabonnementet holder bare til å se seg om. Nettversjoner av bildene deres lages av nettleseren og verktøyet obx.",
     "cfButton": "Installer på Cloudflare",
-    "runP": "Et skript som setter portalen din opp på Google Cloud Run. Du trenger en Google Cloud-konto og gcloud-verktøyet.",
     "phpP": "For webhotellet du kanskje allerede har, med PHP og en database. Ingen kommandoer nødvendig:",
     "phpSteps": [
       "Last ned obx-portal-php-<version>.zip fra den nyeste utgivelsen.",
@@ -414,17 +411,10 @@
       "Legg inn cron-adressen installasjonen viser som en cron-jobb i webhotellets kontrollpanel, hvert 5. minutt. Portalen virker også uten."
     ],
     "phpDownload": "Last ned den nyeste utgivelsen",
-    "p3Title": "3. Din egen server",
-    "p3P": "Kjører du allerede din egen reverse proxy? Da starter du bare det publiserte imaget og peker proxyen mot port 8080:",
-    "envTitle": "Innstillinger",
-    "envPublicUrl": "den offentlige adressen til portalen din",
-    "envSecretKey": "en lang tilfeldig nøkkel (openssl rand -base64 48). Ta vare på en kopi i passordbehandleren din: Nøkkelen kan ikke endres når det først finnes data",
-    "envSetupCode": "valgfritt: en oppsettkode du velger på forhånd",
-    "envPort": "port, 8080 som standard",
     "firstTitle": "Etter installasjonen: første oppstart",
     "first": [
       "Åpne adressen til portalen din i nettleseren.",
-      "Skriv inn engangskoden for oppsett. Den står i loggen ved første oppstart (Portal for webhotell: i data/SETUP-CODE.txt, og installasjonen fyller den inn for deg), eller du angir den på forhånd med OBX_SETUP_CODE.",
+      "Skriv inn engangskoden for oppsett. Installasjonsprogrammet på din egen server viser den til slutt. Ellers står den i loggen ved første oppstart (Portal for webhotell: i data/SETUP-CODE.txt, og installasjonen fyller den inn for deg), eller du angir den på forhånd med OBX_SETUP_CODE.",
       "Fyll inn selskapet og den første merkevaren din, og velg ditt eget passord. Det finnes aldri et standardpassord."
     ],
     "firstWhy": "Oppsettkoden sørger for at ingen andre kan ta over en nyinstallert portal.",
@@ -434,54 +424,108 @@
     "compareP": "De tre utgavene gjør det samme og har samme administrasjon og samme forhandlerportal. Velg det som passer hostingen din; du kan bytte senere.",
     "compareLink": "Se implementasjonene",
     "heroTitle": "Bildeportalen din, der du vil.",
-    "heroLead": "Programvaren er gratis. Du velger hvor den kjører, og du kan flytte når som helst.",
+    "heroLead": "Programvaren er gratis. Det enkleste er en liten egen server og én kommando. Du kan flytte når som helst.",
     "heroChecks": [
       "Gratis programvare, du betaler bare for hosting",
-      "Anbefalt: i Europa, for eksempel hos Hetzner (Tyskland)",
+      "Én kommando installerer portalen, med HTTPS",
       "Samme portal overalt, så du kan alltid bytte",
       "Vil du helst slippe å gjøre det selv? En partner drifter den for deg"
     ],
-    "euCta": "Bildeportalen din i Europa",
-    "euTitle": "1. Din egen server i Europa (anbefalt)",
-    "euP": "En liten server hos en europeisk leverandør er nok for de fleste merkevarer. Veiledningen vår bruker Hetzner, med datasentre i Tyskland og Finland.",
-    "euSteps": [
-      "Opprett en server hos Hetzner i Nürnberg, Falkenstein eller Helsinki, med sikkerhetskopiering slått på.",
-      "Pek domenet ditt, for eksempel images.dittmerke.no, mot serveren.",
-      "Installer Docker og start portalen med noen få kommandoer. HTTPS ordnes automatisk.",
-      "Åpne domenet ditt og fullfør oppsettsveiviseren.",
-      "Valgfritt: lagre bildene i Hetzner Object Storage, på samme sted.",
-      "Planlegg en nattlig sikkerhetskopi og kopier den bort fra serveren. Oppdatering tar to kommandoer."
-    ],
-    "euGuide": "Steg for steg: portalen din hos Hetzner",
-    "euData": "Med serveren og lagringen på et sted i EU lagres katalogen, bildene og databasen din i EU.",
-    "webTitle": "2. Vanlig webhotell",
+    "webTitle": "3. Vanlig webhotell",
     "webP": "PHP-utgaven kjører på et vanlig europeisk webhotell med PHP og en database, for eksempel hos TransIP, Strato eller OVHcloud. Ingen kommandoer nødvendig:",
-    "altTitle": "4. Andre skyer",
-    "altP": "Den samme portalen kjører også på Cloudflare Workers og på Google Cloud Run. Velg en region i Europa der tjenesten tilbyr det.",
     "partnerLink": "Se partnere",
     "techTitle": "Tekniske detaljer for IT-avdelingen din",
-    "techLead": "Kommandoer, innstillinger og installasjonsveiledninger for den som setter opp serveren.",
+    "techLead": "Valg for installasjonsprogrammet, filer, sikkerhetskopier og oppdateringer, for den som setter opp serveren.",
     "costTitle": "Hva det omtrent koster",
     "costItems": [
       "Din egen server i EU: rundt 5–15 € i måneden for en liten server med automatisk sikkerhetskopiering, hos en leverandør som Hetzner. Bilder på serverens egen disk koster ikke noe ekstra; objektlagring for et stort arkiv gir noen få euro ekstra i måneden per terabyte.",
       "Vanlig webhotell: pakken du allerede betaler for, så lenge den har PHP 8.2 eller nyere.",
       "Cloudflare Workers: 5 dollar i måneden for Workers Paid, pluss R2-lagring til rundt 1,50 dollar i måneden per 100 GB bilder. Det er ingen nedlastingsgebyrer.",
       "En partner: partnerens egen pris. Spør hva som er inkludert: oppdateringer, sikkerhetskopier, eget domene og eksport av alt hvis du avslutter.",
-      "Din egen tid: Regn med en halv til en hel dag første gang, inkludert domenet og en testgjenoppretting av en sikkerhetskopi, og omtrent en time i måneden til oppdateringer og kontroll av sikkerhetskopiene."
+      "Din egen tid: Regn med én til to timer første gang, inkludert domenet og en testgjenoppretting av en sikkerhetskopi, og omtrent en time i måneden til oppdateringer og kontroll av sikkerhetskopiene."
     ],
     "costNote": "Veiledende priser fra november 2026, eksklusiv mva. Sjekk leverandørens gjeldende priser før du velger.",
-    "stepsTitle": "Steg for steg på en ny server",
-    "stepsP": "På en ny Ubuntu-server med portene 22, 80 og 443 åpne, og med domenets A- og AAAA-poster allerede pekende mot den. Dette er det samme oppsettet som i Hetzner-veiledningen: Det bygger den nyeste utgivelsen av portalen og setter Caddy foran for HTTPS.",
     "httpsTitle": "HTTPS",
-    "httpsP": "Caddy ber om et Let's Encrypt-sertifikat så snart domenet peker mot serveren, fornyer det automatisk og videresender http til https. Ikke noe sertifikat? Sjekk med dig at domenet viser serverens adresse, og at port 80 og 443 er åpne i brannmuren.",
+    "httpsP": "Go-utgaven ber selv om et Let's Encrypt-sertifikat så snart domenet peker mot serveren, fornyer det automatisk og videresender http til https. TypeScript-utgaven gjør det samme via Caddy, som installasjonsprogrammet setter opp. Ikke noe sertifikat? Sjekk med dig at domenet viser serverens adresse, og at port 80 og 443 er åpne.",
     "backupTitle": "Sikkerhetskopier",
-    "backupP": "Slå på leverandørens sikkerhetskopiering av serveren, og legg til en nattlig sikkerhetskopi av portalen som du også kopierer bort fra serveren. Oppbevar OBX_SECRET_KEY separat, i en passordbehandler: Uten den kan en sikkerhetskopi ikke gjenopprettes fullt ut. Prøv en gjenoppretting én gang, så du vet at det fungerer.",
+    "backupP": "Slå på leverandørens sikkerhetskopiering av serveren, og legg til en nattlig sikkerhetskopi av portalen som du også kopierer bort fra serveren. Oppbevar den hemmelige nøkkelen separat, i en passordbehandler: det er OBX_SECRET_KEY i innstillingsfilen, eller secret.key i datamappen. Uten den kan en sikkerhetskopi ikke gjenopprettes fullt ut. Prøv en gjenoppretting én gang, så du vet at det fungerer.",
     "updateTitle": "Oppdateringer",
-    "updateP": "Ta en sikkerhetskopi og les utgivelsesnotatene. Sjekk deretter ut den nye utgivelsen og bygg på nytt; databasen oppdaterer seg selv når portalen starter.",
+    "updateP": "Ta en sikkerhetskopi og les utgivelsesnotatene. Kjør deretter samme installasjonskommando igjen: den installerer den nyeste utgivelsen, beholder innstillingene og dataene dine og starter portalen på nytt. Databasen oppdaterer seg selv ved oppstart.",
     "cfCliP": "Eller fra din egen datamaskin, med Bun og Wrangler-verktøyet:",
-    "cfDomainP": "Eget domene: Legg det til under Workers & Pages → din Worker → Settings → Domains & Routes (domenet må ligge hos Cloudflare), sett OBX_PUBLIC_URL til den adressen og publiser på nytt.",
     "cfBackupP": "Sikkerhetskopier: Med Workers Paid tar D1 vare på 30 dager med databasehistorikk (Time Travel). Vil du ha en kopi utenfor Cloudflare, eksporterer du databasen jevnlig. Bildene ligger i R2; kopier bucketen med et hvilket som helst S3-verktøy.",
-    "cfUpdateP": "Oppdateringer: Flett den nye utgivelsen inn i din kopi av repositoriet og push; Cloudflare publiserer den på nytt."
+    "cfUpdateP": "Oppdateringer: Flett den nye utgivelsen inn i din kopi av repositoriet og push; Cloudflare publiserer den på nytt.",
+    "installCta": "Installer på din egen server",
+    "exampleDomain": "portal.dittmerke.no",
+    "ownTitle": "1. Din egen server (anbefalt)",
+    "ownP": "Lei en liten Linux-server, pek domenet ditt mot den og kjør én kommando. Installasjonsprogrammet laster ned portalen, henter et gratis HTTPS-sertifikat fra Let's Encrypt og starter portalen som en tjeneste som kommer i gang av seg selv etter en omstart.",
+    "needTitle": "Dette trenger du",
+    "needItems": [
+      "En Linux-server (VPS) med Ubuntu 22.04 eller 24.04, Debian 12 eller 13 eller lignende. 1 GB minne holder til å begynne med. Alle leverandører går fint, for eksempel Hetzner Cloud, DigitalOcean, TransIP VPS eller Scaleway.",
+      "En offentlig IPv4-adresse (IPv6 er valgfritt), med port 80 og 443 åpne.",
+      "Et domene eller underdomene for portalen, for eksempel portal.dittmerke.no."
+    ],
+    "ownStepsTitle": "Tre trinn",
+    "ownSteps": [
+      "Opprett serveren og noter IP-adressen.",
+      "Pek portal.dittmerke.no mot serveren med én DNS-post (se nedenfor).",
+      "Logg inn på serveren med SSH og kjør denne kommandoen, med din egen adresse:"
+    ],
+    "ownDone": "Når det er ferdig, viser installasjonsprogrammet adressen til portalen din og en engangskode for oppsett. Åpne adressen, skriv inn koden og fullfør oppsettsveiviseren. Vil du oppdatere senere, kjører du samme kommando igjen: innstillingene og dataene dine blir værende.",
+    "ownTs": "Dette installerer Go-utgaven, Portal for din egen server. Vil du ha TypeScript-utgaven, legger du til --edition ts i samme kommando.",
+    "ownEu": "Velg et datasenter i EU, så blir katalogen, bildene og databasen din i EU.",
+    "dnsTitle": "DNS: pek domenet ditt mot serveren",
+    "dnsP": "Legg til én post hos selskapet som administrerer domenet ditt:",
+    "dnsHead": [
+      "Type",
+      "Navn",
+      "Verdi"
+    ],
+    "dnsAaaaType": "AAAA (bare hvis serveren har IPv6)",
+    "dnsAValue": "serverens IPv4-adresse, for eksempel 203.0.113.10",
+    "dnsAaaaValue": "serverens IPv6-adresse",
+    "dnsNameNote": "«portal» gir adressen portal.dittmerke.no; velg gjerne et annet ord. La TTL stå på standard (eller 1 time).",
+    "dnsWhere": "Hvor du klikker (navnene kan avvike litt):",
+    "dnsPaths": [
+      "Kontrollpanel → Domener → domenet ditt → DNS → legg til en post.",
+      "Mijn Hostnet → Domeinnamen → domenet ditt → DNS beheren → legg til en post.",
+      "Domener → Administrer domene → tannhjulikonet → DNS → A-post → Administrer.",
+      "Kontrollpanel → DNS-innstillinger → DNS-poster → Opprett ny post.",
+      "domenet ditt → DNS → Records → Add record. Sett Proxy status til DNS only (grå sky), så portalen får sitt eget sertifikat. Vil du ha den oransje skyen senere? Sett først SSL/TLS til Full (strict).",
+      "Mine produkter → domenet ditt → DNS → Administrer DNS → Legg til ny post."
+    ],
+    "dnsCheckTitle": "Sjekk det",
+    "dnsCheckP": "På din egen datamaskin skal dette vise serverens adresse (eller bruk en DNS-sjekk på nett, som dnschecker.org):",
+    "dnsWait": "Det tar vanligvis 5 til 60 minutter, noen ganger noen timer. Installasjonsprogrammet sjekker det også og forteller hva som fortsatt mangler.",
+    "optionsTitle": "Valg for installasjonsprogrammet",
+    "options": [
+      "portalens adresse, for eksempel portal.dittmerke.no (påkrevd)",
+      "en e-postadresse for Let's Encrypt (valgfritt)",
+      "en bestemt utgivelse i stedet for den nyeste",
+      "go (standard) installerer Go-utgaven; ts installerer TypeScript-utgaven",
+      "ingen egen HTTPS: portalen lytter på 127.0.0.1:8080 bak din egen proxy",
+      "vis bare hva det ville gjort, endre ingenting",
+      "fjern programmet og tjenesten; dataene og innstillingene dine blir værende (legg til --purge for å slette dem også)"
+    ],
+    "checksP": "Før installasjonsprogrammet endrer noe, sjekker det systemet (Linux amd64 eller arm64 med systemd), root-rettigheter, diskplass, at domenet peker mot denne serveren, at port 80 og 443 er ledige, og brannmuren. Med ufw eller firewalld skriver det ut nøyaktig hvilken kommando som åpner port 80 og 443.",
+    "filesTitle": "Hvor alt ligger",
+    "filesHead": [
+      "Hva",
+      "Go-utgaven",
+      "TypeScript-utgaven"
+    ],
+    "filesRows": [
+      "Program",
+      "Data",
+      "Innstillinger",
+      "Tjeneste"
+    ],
+    "commandsTitle": "Nyttige kommandoer",
+    "cfTitle": "2. Cloudflare Workers",
+    "cfLead": "Ingen server å drifte: portalen kjører på din egen Cloudflare-konto. Klikk på knappen, logg inn og følg trinnene.",
+    "cfDnsTitle": "DNS: eget domene på din Worker",
+    "cfDnsP": "Legg til adressen som eget domene på din Worker: Workers & Pages → din Worker → Settings → Domains & Routes → Add → Custom domain. Ligger domenet ditt allerede hos Cloudflare, blir DNS og sertifikat satt opp automatisk. Hvis ikke, flytter du domenets DNS til Cloudflare (gratis), eller legger til en CNAME-post portal som peker mot adressen til din Worker, slik Cloudflares veiledning beskriver. Sett deretter OBX_PUBLIC_URL til den adressen og publiser på nytt.",
+    "webDnsTitle": "DNS: et underdomene i kontrollpanelet ditt",
+    "webDnsP": "Opprett underdomenet i kontrollpanelet til webhotellet (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain, eller Subdomains; Plesk: Websites & Domains → Add Subdomain). Ligger domenets DNS hos samme webhotell, er det alt. Ellers legger du til en A-post for underdomenet som peker mot IP-adressen til webhotellserveren, som panelet viser. Slå deretter på Let's Encrypt for underdomenet i panelet."
   },
   "retailers": {
     "h1": "For forhandlere",
@@ -668,7 +712,7 @@
       "spesifikasjon, skjemaer, testdata",
       "Go-SDK, obx-verktøy, samsvarstester, mockserver",
       "felles nettgrensesnitt: administrasjon og forhandlerportal",
-      "Go: Docker og Google Cloud Run",
+      "Go: din egen server, med et installasjonsprogram på én linje",
       "PHP: vanlig webhotell",
       "TypeScript: Cloudflare Workers"
     ],
@@ -702,7 +746,7 @@
       },
       {
         "name": "node-go",
-        "d": "Portal for Docker og Google Cloud Run"
+        "d": "Portal for din egen server"
       },
       {
         "name": "node-php",
@@ -992,7 +1036,7 @@
       "Last opp Excel-eksporten og bildene manuelt, eller få dem hentet hver natt",
       "Automatisk levering fra PIM, ERP eller en delt mappe",
       "Tilgangsforespørsler, invitasjoner og API-nøkler for forhandlernes programvare",
-      "Tre utgaver: Cloudflare, Google Cloud & Docker og vanlig webhotell"
+      "Tre utgaver: din egen server, Cloudflare Workers og vanlig webhotell"
     ],
     "brandsComing": [
       "Den første offentlige utgivelsen, med installasjon med ett klikk",
@@ -1150,12 +1194,21 @@
       "editions": [
         {
           "tag": "Anbefalt",
-          "name": "Din egen server i Europa",
-          "runs": "En server hos en europeisk leverandør som Hetzner (Tyskland)",
-          "need": "En server og et domenenavn",
-          "setup": "Noen få kommandoer, deretter oppsettsveiviseren",
+          "name": "Din egen server",
+          "runs": "Hvilken som helst Linux-server (VPS), for eksempel hos Hetzner, DigitalOcean, TransIP eller Scaleway",
+          "need": "En server, et domenenavn og SSH-tilgang",
+          "setup": "Én kommando, deretter oppsettsveiviseren",
           "cost": "Rundt 5–15 € i måneden for en liten server med sikkerhetskopi",
-          "cta": "Sett opp i Europa"
+          "cta": "Installer på din egen server"
+        },
+        {
+          "tag": "Ingen server",
+          "name": "Cloudflare Workers",
+          "runs": "Din egen Cloudflare-konto, med D1 som database og R2 for bildene",
+          "need": "En Cloudflare-konto med abonnementet Workers Paid",
+          "setup": "Ett klikk, deretter oppsettsveiviseren",
+          "cost": "5 dollar i måneden pluss lagring",
+          "cta": "Sett opp på Cloudflare"
         },
         {
           "tag": "Ingen kommandoer",
@@ -1174,15 +1227,6 @@
           "setup": "Partneren setter den opp sammen med deg",
           "cost": "Partnerens egne priser",
           "cta": "Se leverandører"
-        },
-        {
-          "tag": "Andre skyer",
-          "name": "Cloudflare eller Google Cloud",
-          "runs": "Cloudflare Workers, eller Google Cloud Run",
-          "need": "En Cloudflare- eller Google Cloud-konto",
-          "setup": "Ett klikk eller ett skript",
-          "cost": "Cloudflare: 5 dollar i måneden pluss lagring. Google Cloud: etter bruk",
-          "cta": "Sett opp i en annen sky"
         }
       ],
       "trustEyebrow": "Styring",

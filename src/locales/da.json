@@ -15,14 +15,14 @@
     "footerSource": "Kildekode og specifikation",
     "footerLicence": "© 2026 {foundation}. Alle rettigheder forbeholdes. Specifikationen er CC-BY-4.0.",
     "editionCloudflare": "Portal til Cloudflare",
-    "editionGoogle": "Portal til Google Cloud og Docker",
     "editionHosting": "Portal til webhotel",
     "yes": "Ja",
     "inDevelopment": "Under udvikling",
     "available": "Tilgængelig",
     "footerContact": "Kontakt",
     "madeInEu": "Fremstillet i EU",
-    "footerDiscuss": "Deltag i diskussionen"
+    "footerDiscuss": "Deltag i diskussionen",
+    "editionServer": "Portal til din egen server"
   },
   "nav": {
     "brands": "For brands",
@@ -55,7 +55,7 @@
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Din forhandlerportal, hvor du vil: hostet af en partner, på din egen server i Europa, på et almindeligt webhotel eller i en anden cloud."
+      "description": "Din forhandlerportal, hvor du vil: på din egen server med én kommando, på Cloudflare Workers, på et almindeligt webhotel eller hostet af en partner."
     },
     "retailers": {
       "title": "For forhandlere",
@@ -350,7 +350,7 @@
     "cliExit": "Exitkode 0 = alt i orden, 2 = færdig, men nogle linjer havde fejl (de vises), 1 = mislykkedes.",
     "cliGet": "Download obx",
     "watchTitle": "2. En mappe, der udgiver sig selv: obx watch",
-    "watchP": "Lad dit PIM, ERP eller en kollega gemme eksporter i en mappe. obx watch udgiver, så snart noget ændrer sig, og springer billeder over, der er uændrede. Kør det som tjeneste eller med Docker:",
+    "watchP": "Lad dit PIM, ERP eller en kollega gemme eksporter i en mappe. obx watch udgiver, så snart noget ændrer sig, og springer billeder over, der er uændrede. Kør det som tjeneste, for eksempel med systemd på Linux:",
     "cronTitle": "3. cron eller Windows Opgavestyring",
     "cronLinux": "Linux eller macOS",
     "cronWindows": "Windows (PowerShell, én gang)",
@@ -383,8 +383,8 @@
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Hvert brand har sin egen forhandlerportal på sin egen server. Du vælger, hvordan den drives, fra helt outsourcet til helt selv.",
-    "p1Title": "3. En partner hoster den for dig",
+    "lead": "Hvert brand har sin egen forhandlerportal. Installér den på din egen server med én kommando, kør den på Cloudflare Workers, upload den til et almindeligt webhotel, eller lad en partner hoste den.",
+    "p1Title": "4. En partner hoster den for dig",
     "p1P": "Vil du helst ikke selv hoste? Partnere kan hoste og vedligeholde portalen for dig.",
     "fieldBased": "Hjemsted",
     "fieldLanguages": "Sprog",
@@ -399,11 +399,8 @@
       "du offentliggør dine egne priser og vilkår på dit eget websted"
     ],
     "listHow": "Det er gratis at være kompatibel; en plads her er en del af det officielle partnerskab.",
-    "p2Title": "2. Med ét klik",
-    "p2P": "Din egen portal på din egen konto, uden at du skal drive en server.",
     "cfP": "Kører på Cloudflare Workers, med D1 som database og R2 til billederne. Klik på knappen, log ind hos Cloudflare, og følg trinene. En portal i daglig brug kræver abonnementet Workers Paid (5 dollar om måneden); gratisabonnementet rækker kun til at se sig omkring. Webversioner af jeres fotos laves af jeres browser og værktøjet obx.",
     "cfButton": "Installér på Cloudflare",
-    "runP": "Et script, der sætter din portal op på Google Cloud Run. Du skal bruge en Google Cloud-konto og gcloud-værktøjet.",
     "phpP": "Til det webhotel, du måske allerede har, med PHP og en database. Ingen kommandoer nødvendige:",
     "phpSteps": [
       "Download obx-portal-php-<version>.zip fra den nyeste udgivelse.",
@@ -414,17 +411,10 @@
       "Tilføj den cron-adresse, installationen viser, som cronjob i dit webhotels kontrolpanel, hvert 5. minut. Portalen virker også uden."
     ],
     "phpDownload": "Download den nyeste udgivelse",
-    "p3Title": "3. Din egen server",
-    "p3P": "Kører du allerede din egen reverse proxy? Så start kun det udgivne image, og peg proxyen på port 8080:",
-    "envTitle": "Indstillinger",
-    "envPublicUrl": "den offentlige adresse på din portal",
-    "envSecretKey": "en lang tilfældig nøgle (openssl rand -base64 48). Gem en kopi i din adgangskodeadministrator: nøglen kan ikke ændres, når der først er data",
-    "envSetupCode": "valgfrit: en opsætningskode, du vælger på forhånd",
-    "envPort": "port, 8080 som standard",
     "firstTitle": "Efter installationen: første start",
     "first": [
       "Åbn adressen på din portal i browseren.",
-      "Indtast engangskoden til opsætning. Den står i loggen ved første start (Portal til webhotel: i data/SETUP-CODE.txt, og installationen udfylder den for dig), eller du angiver den på forhånd med OBX_SETUP_CODE.",
+      "Indtast engangskoden til opsætning. Installationsprogrammet på din egen server viser den til sidst. Ellers står den i loggen ved første start (Portal til webhotel: i data/SETUP-CODE.txt, og installationen udfylder den for dig), eller du angiver den på forhånd med OBX_SETUP_CODE.",
       "Udfyld din virksomhed og dit første brand, og vælg din egen adgangskode. Der er aldrig en standardadgangskode."
     ],
     "firstWhy": "Opsætningskoden sikrer, at ingen andre kan overtage en nyinstalleret portal.",
@@ -434,54 +424,108 @@
     "compareP": "De tre udgaver gør det samme og har samme administration og samme forhandlerportal. Vælg det, der passer til din hosting; du kan skifte senere.",
     "compareLink": "Se implementeringerne",
     "heroTitle": "Din forhandlerportal, hvor du vil.",
-    "heroLead": "Softwaren er gratis. Du vælger, hvor den kører, og du kan flytte når som helst.",
+    "heroLead": "Softwaren er gratis. Det nemmeste er en lille server af din egen og én kommando. Du kan flytte når som helst.",
     "heroChecks": [
       "Gratis software, du betaler kun for hosting",
-      "Anbefalet: i Europa, for eksempel hos Hetzner (Tyskland)",
+      "Én kommando installerer portalen, med HTTPS",
       "Den samme portal overalt, så du altid kan skifte",
       "Vil du helst ikke selv? En partner hoster den for dig"
     ],
-    "euCta": "Din forhandlerportal i Europa",
-    "euTitle": "1. Din egen server i Europa (anbefalet)",
-    "euP": "En lille server hos en europæisk udbyder er nok for de fleste brands. Vores vejledning bruger Hetzner, med datacentre i Tyskland og Finland.",
-    "euSteps": [
-      "Opret en server hos Hetzner i Nürnberg, Falkenstein eller Helsinki, med backup slået til.",
-      "Peg dit domæne, for eksempel images.ditbrand.dk, på serveren.",
-      "Installer Docker, og start portalen med et par kommandoer. HTTPS ordnes automatisk.",
-      "Åbn dit domæne, og gennemfør opsætningsguiden.",
-      "Valgfrit: gem billederne i Hetzner Object Storage, på samme placering.",
-      "Planlæg en natlig backup, og kopiér den væk fra serveren. En opdatering kræver to kommandoer."
-    ],
-    "euGuide": "Trin for trin: din portal hos Hetzner",
-    "euData": "Med serveren og lageret på en placering i EU ligger dit katalog, dine billeder og din database i EU.",
-    "webTitle": "2. Almindeligt webhotel",
+    "webTitle": "3. Almindeligt webhotel",
     "webP": "PHP-udgaven kører på et almindeligt europæisk webhotel med PHP og en database, for eksempel hos TransIP, Strato eller OVHcloud. Uden kommandoer:",
-    "altTitle": "4. Andre clouds",
-    "altP": "Den samme portal kører også på Cloudflare Workers og på Google Cloud Run. Vælg en region i Europa, hvis tjenesten tilbyder en.",
     "partnerLink": "Se partnere",
     "techTitle": "Tekniske detaljer til din it-afdeling",
-    "techLead": "Kommandoer, indstillinger og installationsvejledninger til den person, der sætter serveren op.",
+    "techLead": "Indstillinger til installationsprogrammet, filer, backup og opdateringer, til den person, der sætter serveren op.",
     "costTitle": "Hvad det cirka koster",
     "costItems": [
       "Din egen server i EU: ca. 5-15 € om måneden for en lille server med automatisk backup hos en udbyder som Hetzner. Billeder på serverens egen disk koster ikke ekstra; objektlagring til et stort arkiv koster nogle få euro ekstra om måneden pr. terabyte.",
       "Almindeligt webhotel: den pakke, du allerede betaler for, så længe den har PHP 8.2 eller nyere.",
       "Cloudflare Workers: 5 dollar om måneden for Workers Paid plus R2-lagerplads til ca. 1,50 dollar om måneden pr. 100 GB billeder. Der er ingen downloadgebyrer.",
       "En partner: partnerens egen pris. Spørg, hvad der er inkluderet: opdateringer, backup, dit eget domæne og eksport af alle data, hvis du stopper.",
-      "Din egen tid: regn med en halv til en hel dag første gang, inklusive domænet og en testgendannelse af en backup, og omkring en time om måneden til opdateringer og kontrol af backupperne."
+      "Din egen tid: regn med en til to timer første gang, inklusive domænet og en testgendannelse af en backup, og omkring en time om måneden til opdateringer og kontrol af backupperne."
     ],
     "costNote": "Vejledende priser fra november 2026, ekskl. moms. Tjek udbyderens aktuelle priser, før du vælger.",
-    "stepsTitle": "Trin for trin på en ny server",
-    "stepsP": "På en ny Ubuntu-server med port 22, 80 og 443 åbne, og hvor domænets A- og AAAA-records allerede peger på serveren. Det er samme opsætning som i Hetzner-vejledningen: Den bygger den seneste udgivelse af portalen og sætter Caddy foran til HTTPS.",
     "httpsTitle": "HTTPS",
-    "httpsP": "Caddy anmoder om et Let's Encrypt-certifikat, så snart dit domæne peger på serveren, fornyer det automatisk og omdirigerer http til https. Intet certifikat? Tjek med dig, at domænet viser serverens adresse, og at port 80 og 443 er åbne i firewallen.",
+    "httpsP": "Go-udgaven anmoder selv om et Let's Encrypt-certifikat, så snart dit domæne peger på serveren, fornyer det automatisk og omdirigerer http til https. TypeScript-udgaven gør det samme via Caddy, som installationsprogrammet sætter op. Intet certifikat? Tjek med dig, at domænet viser serverens adresse, og at port 80 og 443 er åbne.",
     "backupTitle": "Backup",
-    "backupP": "Slå udbyderens serverbackup til, og tilføj en natlig backup af portalen, som du også kopierer væk fra serveren. Opbevar OBX_SECRET_KEY separat i en adgangskodeadministrator: Uden den kan en backup ikke gendannes fuldt ud. Prøv en gendannelse én gang, så du ved, at det virker.",
+    "backupP": "Slå udbyderens serverbackup til, og tilføj en natlig backup af portalen, som du også kopierer væk fra serveren. Opbevar den hemmelige nøgle separat i en adgangskodeadministrator: det er OBX_SECRET_KEY i indstillingsfilen eller secret.key i datamappen. Uden den kan en backup ikke gendannes fuldt ud. Prøv en gendannelse én gang, så du ved, at det virker.",
     "updateTitle": "Opdateringer",
-    "updateP": "Tag en backup, og læs udgivelsesnoterne. Tjek derefter den nye udgivelse ud, og byg igen; databasen opdaterer sig selv, når portalen starter.",
+    "updateP": "Tag en backup, og læs udgivelsesnoterne. Kør derefter den samme installationskommando igen: den installerer den nyeste udgivelse, beholder dine indstillinger og data og genstarter portalen. Databasen opdaterer sig selv ved start.",
     "cfCliP": "Eller fra din egen computer med Bun og Wrangler-værktøjet:",
-    "cfDomainP": "Dit eget domæne: Tilføj det under Workers & Pages → din Worker → Settings → Domains & Routes (domænet skal ligge hos Cloudflare), sæt OBX_PUBLIC_URL til den adresse, og udrul igen.",
     "cfBackupP": "Backup: Med Workers Paid gemmer D1 30 dages databasehistorik (Time Travel). Vil du have en kopi uden for Cloudflare, så eksportér databasen regelmæssigt. Billederne ligger i R2; kopiér bucketten med et vilkårligt S3-værktøj.",
-    "cfUpdateP": "Opdateringer: Flet den nye udgivelse ind i din kopi af repositoriet, og push; Cloudflare udruller den så igen."
+    "cfUpdateP": "Opdateringer: Flet den nye udgivelse ind i din kopi af repositoriet, og push; Cloudflare udruller den så igen.",
+    "installCta": "Installér på din egen server",
+    "exampleDomain": "portal.ditbrand.dk",
+    "ownTitle": "1. Din egen server (anbefalet)",
+    "ownP": "Lej en lille Linux-server, peg dit domæne på den, og kør én kommando. Installationsprogrammet henter portalen, får et gratis HTTPS-certifikat fra Let's Encrypt og starter portalen som en tjeneste, der selv starter igen efter en genstart.",
+    "needTitle": "Det skal du bruge",
+    "needItems": [
+      "En Linux-server (VPS) med Ubuntu 22.04 eller 24.04, Debian 12 eller 13 eller lignende. 1 GB hukommelse er nok til at starte med. Alle udbydere er fine, for eksempel Hetzner Cloud, DigitalOcean, TransIP VPS eller Scaleway.",
+      "En offentlig IPv4-adresse (IPv6 er valgfri), med port 80 og 443 åbne.",
+      "Et domæne eller underdomæne til portalen, for eksempel portal.ditbrand.dk."
+    ],
+    "ownStepsTitle": "Tre trin",
+    "ownSteps": [
+      "Opret serveren, og notér dens IP-adresse.",
+      "Peg portal.ditbrand.dk på serveren med én DNS-post (se nedenfor).",
+      "Log ind på serveren med SSH, og kør denne kommando med din egen adresse:"
+    ],
+    "ownDone": "Når den er færdig, viser installationsprogrammet adressen på din portal og en engangskode til opsætning. Åbn adressen, indtast koden, og gennemfør opsætningsguiden. Vil du opdatere senere, kører du bare den samme kommando igen: dine indstillinger og data bliver.",
+    "ownTs": "Det installerer Go-udgaven, Portal til din egen server. Vil du have TypeScript-udgaven, tilføjer du --edition ts til den samme kommando.",
+    "ownEu": "Vælg et datacenter i EU, så bliver dit katalog, dine billeder og din database i EU.",
+    "dnsTitle": "DNS: peg dit domæne på serveren",
+    "dnsP": "Tilføj én post hos det firma, der administrerer dit domæne:",
+    "dnsHead": [
+      "Type",
+      "Navn",
+      "Værdi"
+    ],
+    "dnsAaaaType": "AAAA (kun hvis serveren har IPv6)",
+    "dnsAValue": "serverens IPv4-adresse, for eksempel 203.0.113.10",
+    "dnsAaaaValue": "serverens IPv6-adresse",
+    "dnsNameNote": "»portal« giver adressen portal.ditbrand.dk; vælg gerne et andet ord. Lad TTL stå på standard (eller 1 time).",
+    "dnsWhere": "Hvor du skal klikke (betegnelserne kan variere lidt):",
+    "dnsPaths": [
+      "Kontrolpanel → Domæner → dit domæne → DNS → tilføj en post.",
+      "Mijn Hostnet → Domeinnamen → dit domæne → DNS beheren → tilføj en post.",
+      "Domæner → Administrer domæne → tandhjulsikonet → DNS → A-post → Administrer.",
+      "Kontrolpanel → DNS-indstillinger → DNS-poster → Opret ny post.",
+      "dit domæne → DNS → Records → Add record. Sæt Proxy status til DNS only (grå sky), så portalen får sit eget certifikat. Vil du have den orange sky senere? Sæt først SSL/TLS til Full (strict).",
+      "Mine produkter → dit domæne → DNS → Administrer DNS → Tilføj ny post."
+    ],
+    "dnsCheckTitle": "Tjek det",
+    "dnsCheckP": "På din egen computer skal dette vise serverens adresse (eller brug et online DNS-tjek som dnschecker.org):",
+    "dnsWait": "Det tager som regel 5 til 60 minutter, nogle gange et par timer. Installationsprogrammet tjekker det også og fortæller dig, hvad der stadig mangler.",
+    "optionsTitle": "Indstillinger til installationsprogrammet",
+    "options": [
+      "portalens adresse, for eksempel portal.ditbrand.dk (påkrævet)",
+      "en e-mailadresse til Let's Encrypt (valgfri)",
+      "en bestemt udgivelse i stedet for den nyeste",
+      "go (standard) installerer Go-udgaven; ts installerer TypeScript-udgaven",
+      "ingen egen HTTPS: portalen lytter på 127.0.0.1:8080 bag din egen proxy",
+      "vis kun, hvad den ville gøre, og ændr intet",
+      "fjern programmet og tjenesten; dine data og indstillinger bliver (tilføj --purge for også at slette dem)"
+    ],
+    "checksP": "Før installationsprogrammet ændrer noget, tjekker det systemet (Linux amd64 eller arm64 med systemd), root-rettigheder, diskplads, at domænet peger på denne server, at port 80 og 443 er ledige, og firewallen. Med ufw eller firewalld viser det den præcise kommando til at åbne port 80 og 443.",
+    "filesTitle": "Hvor alting ligger",
+    "filesHead": [
+      "Hvad",
+      "Go-udgaven",
+      "TypeScript-udgaven"
+    ],
+    "filesRows": [
+      "Program",
+      "Data",
+      "Indstillinger",
+      "Tjeneste"
+    ],
+    "commandsTitle": "Nyttige kommandoer",
+    "cfTitle": "2. Cloudflare Workers",
+    "cfLead": "Ingen server at passe: portalen kører på din egen Cloudflare-konto. Klik på knappen, log ind, og følg trinene.",
+    "cfDnsTitle": "DNS: et eget domæne på din Worker",
+    "cfDnsP": "Tilføj adressen som eget domæne på din Worker: Workers & Pages → din Worker → Settings → Domains & Routes → Add → Custom domain. Ligger dit domæne allerede hos Cloudflare, sættes DNS og certifikat op automatisk. Hvis ikke, så flyt dit domænes DNS til Cloudflare (gratis), eller tilføj en CNAME-post portal, der peger på din Workers adresse, som Cloudflares vejledning beskriver. Sæt derefter OBX_PUBLIC_URL til den adresse, og udrul igen.",
+    "webDnsTitle": "DNS: et underdomæne i dit kontrolpanel",
+    "webDnsP": "Opret underdomænet i dit webhotels kontrolpanel (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain eller Subdomains; Plesk: Websites & Domains → Add Subdomain). Ligger dit domænes DNS hos samme webhotel, er det alt. Ellers tilføjer du en A-post for underdomænet, der peger på webhotelserverens IP-adresse, som panelet viser. Slå derefter Let's Encrypt til for underdomænet i panelet."
   },
   "retailers": {
     "h1": "For forhandlere",
@@ -668,7 +712,7 @@
       "specifikation, skemaer, testdata",
       "Go-SDK, obx-værktøj, konformitetstests, mockserver",
       "fælles webgrænseflade: administration og forhandlerportal",
-      "Go: Docker og Google Cloud Run",
+      "Go: din egen server, med et installationsprogram på én linje",
       "PHP: almindeligt webhotel",
       "TypeScript: Cloudflare Workers"
     ],
@@ -702,7 +746,7 @@
       },
       {
         "name": "node-go",
-        "d": "Portal til Docker og Google Cloud Run"
+        "d": "Portal til din egen server"
       },
       {
         "name": "node-php",
@@ -992,7 +1036,7 @@
       "Upload din Excel-eksport og dine fotos manuelt, eller få dem hentet hver nat",
       "Automatisk levering fra dit PIM, ERP eller en delt mappe",
       "Adgangsanmodninger, invitationer og API-nøgler til dine forhandleres software",
-      "Tre udgaver: Cloudflare, Google Cloud & Docker og almindeligt webhotel"
+      "Tre udgaver: din egen server, Cloudflare Workers og almindeligt webhotel"
     ],
     "brandsComing": [
       "Den første offentlige udgivelse, med installation med ét klik",
@@ -1150,12 +1194,21 @@
       "editions": [
         {
           "tag": "Anbefalet",
-          "name": "Din egen server i Europa",
-          "runs": "En server hos en europæisk udbyder som Hetzner (Tyskland)",
-          "need": "En server og et domænenavn",
-          "setup": "Et par kommandoer, derefter opsætningsguiden",
+          "name": "Din egen server",
+          "runs": "Enhver Linux-server (VPS), for eksempel hos Hetzner, DigitalOcean, TransIP eller Scaleway",
+          "need": "En server, et domænenavn og SSH-adgang",
+          "setup": "Én kommando, derefter opsætningsguiden",
           "cost": "Ca. 5-15 € om måneden for en lille server med backup",
-          "cta": "Opsæt i Europa"
+          "cta": "Installér på din egen server"
+        },
+        {
+          "tag": "Ingen server",
+          "name": "Cloudflare Workers",
+          "runs": "Din egen Cloudflare-konto, med D1 som database og R2 til billederne",
+          "need": "En Cloudflare-konto med abonnementet Workers Paid",
+          "setup": "Ét klik, derefter opsætningsguiden",
+          "cost": "5 dollar om måneden plus lagerplads",
+          "cta": "Opsæt på Cloudflare"
         },
         {
           "tag": "Ingen kommandoer",
@@ -1174,15 +1227,6 @@
           "setup": "Partneren sætter den op sammen med dig",
           "cost": "Partnerens egne priser",
           "cta": "Se udbydere"
-        },
-        {
-          "tag": "Andre clouds",
-          "name": "Cloudflare eller Google Cloud",
-          "runs": "Cloudflare Workers eller Google Cloud Run",
-          "need": "En Cloudflare- eller Google Cloud-konto",
-          "setup": "Ét klik eller ét script",
-          "cost": "Cloudflare: 5 dollar om måneden plus lagerplads. Google Cloud: efter forbrug",
-          "cta": "Opsæt i en anden cloud"
         }
       ],
       "trustEyebrow": "Styring",

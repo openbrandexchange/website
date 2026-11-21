@@ -15,14 +15,14 @@
     "footerSource": "Broncode en specificatie",
     "footerLicence": "© 2026 {foundation}. Alle rechten voorbehouden. De specificatie is CC-BY-4.0.",
     "editionCloudflare": "Portaal voor Cloudflare",
-    "editionGoogle": "Portaal voor Google Cloud & Docker",
     "editionHosting": "Portaal voor webhosting",
     "yes": "Ja",
     "inDevelopment": "In ontwikkeling",
     "available": "Beschikbaar",
     "footerContact": "Contact",
     "madeInEu": "Made in the EU",
-    "footerDiscuss": "Praat mee"
+    "footerDiscuss": "Praat mee",
+    "editionServer": "Portaal voor je eigen server"
   },
   "nav": {
     "brands": "Voor merken",
@@ -55,7 +55,7 @@
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Je beeldbank waar je maar wilt: gehost door een partner, op je eigen server in Europa, op gewone webhosting of op een andere cloud."
+      "description": "Je beeldbank waar je maar wilt: op je eigen server met één commando, op Cloudflare Workers, op gewone webhosting of gehost door een partner."
     },
     "retailers": {
       "title": "Voor retailers",
@@ -350,7 +350,7 @@
     "cliExit": "Exitcode 0 = alles goed, 2 = klaar maar sommige regels hadden fouten (die worden getoond), 1 = mislukt.",
     "cliGet": "obx downloaden",
     "watchTitle": "2. Een map die zichzelf publiceert: obx watch",
-    "watchP": "Laat je PIM, ERP of een collega exports in een map zetten. obx watch publiceert zodra er iets verandert en slaat foto's over die hetzelfde bleven. Laat het draaien als dienst, of met Docker:",
+    "watchP": "Laat je PIM, ERP of een collega exports in een map zetten. obx watch publiceert zodra er iets verandert en slaat foto's over die hetzelfde bleven. Laat het draaien als dienst, bijvoorbeeld met systemd op Linux:",
     "cronTitle": "3. cron of Windows Taakplanner",
     "cronLinux": "Linux of macOS",
     "cronWindows": "Windows (PowerShell, eenmalig)",
@@ -383,8 +383,8 @@
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Elk merk heeft zijn eigen beeldbank, op zijn eigen server. Jij kiest hoe je hem draait, van volledig uitbesteed tot helemaal zelf.",
-    "p1Title": "3. Een partner host het voor je",
+    "lead": "Elk merk heeft zijn eigen beeldbank. Installeer hem met één commando op je eigen server, draai hem op Cloudflare Workers, upload hem naar gewone webhosting of laat een partner hem hosten.",
+    "p1Title": "4. Een partner host het voor je",
     "p1P": "Liever niet zelf hosten? Partners kunnen het portaal voor je hosten en onderhouden.",
     "fieldBased": "Gevestigd in",
     "fieldLanguages": "Talen",
@@ -399,11 +399,8 @@
       "je vermeldt je eigen prijzen en voorwaarden op je eigen site"
     ],
     "listHow": "Compatibel zijn is gratis; een vermelding hier hoort bij het officiële partnerschap.",
-    "p2Title": "2. Met één klik",
-    "p2P": "Je eigen portaal op je eigen account, zonder een server te beheren.",
     "cfP": "Draait op Cloudflare Workers, met D1 als database en R2 voor de beelden. Klik op de knop, log in bij Cloudflare en volg de stappen. Voor een portal die je dagelijks gebruikt heb je het Workers Paid-abonnement nodig (5 dollar per maand); het gratis abonnement is alleen genoeg om rond te kijken. Webversies van je foto's maken je browser en de obx-tool.",
     "cfButton": "Installeren op Cloudflare",
-    "runP": "Een script dat je portaal op Google Cloud Run zet. Je hebt een Google Cloud-account en de gcloud-tool nodig.",
     "phpP": "Voor het webhostingpakket dat je misschien al hebt, met PHP en een database. Geen commando's nodig:",
     "phpSteps": [
       "Download obx-portal-php-<version>.zip bij de nieuwste release.",
@@ -414,17 +411,10 @@
       "Zet het cron-adres dat de installatie toont als cronjob in het beheerpaneel van je hosting, elke 5 minuten. Zonder werkt het portaal ook."
     ],
     "phpDownload": "Download de nieuwste release",
-    "p3Title": "3. Je eigen server",
-    "p3P": "Draai je al een eigen reverse proxy? Start dan alleen de gepubliceerde image en laat de proxy naar poort 8080 wijzen:",
-    "envTitle": "Instellingen",
-    "envPublicUrl": "het openbare adres van je portaal",
-    "envSecretKey": "een lange willekeurige sleutel (openssl rand -base64 48). Bewaar een kopie in je wachtwoordmanager: zodra er data is, kun je hem niet meer wijzigen",
-    "envSetupCode": "optioneel: een setupcode die je vooraf kiest",
-    "envPort": "poort, standaard 8080",
     "firstTitle": "Na het installeren: de eerste start",
     "first": [
       "Open het adres van je portaal in je browser.",
-      "Vul de eenmalige installatiecode in. Die staat in het log bij de eerste start (Portaal voor webhosting: in data/SETUP-CODE.txt, en de installatie vult hem voor je in), of je stelt hem vooraf in met OBX_SETUP_CODE.",
+      "Vul de eenmalige installatiecode in. De installer op je eigen server toont hem aan het eind. Anders staat hij in het log bij de eerste start (Portaal voor webhosting: in data/SETUP-CODE.txt, en de installatie vult hem voor je in), of je stelt hem vooraf in met OBX_SETUP_CODE.",
       "Vul je bedrijf en je eerste merk in en kies je eigen wachtwoord. Er is nooit een standaardwachtwoord."
     ],
     "firstWhy": "De setupcode zorgt ervoor dat niemand anders een net geïnstalleerd portaal kan claimen.",
@@ -434,54 +424,108 @@
     "compareP": "De drie edities doen hetzelfde en hebben dezelfde beheeromgeving en hetzelfde retailerportaal. Kies wat bij je hosting past; wisselen kan later altijd.",
     "compareLink": "Bekijk de implementaties",
     "heroTitle": "Je beeldbank, waar je maar wilt.",
-    "heroLead": "De software is gratis. Jij kiest waar hij draait, en je kunt altijd verhuizen.",
+    "heroLead": "De software is gratis. Het makkelijkst is een kleine eigen server en één commando. Je kunt altijd verhuizen.",
     "heroChecks": [
       "Gratis software, je betaalt alleen voor hosting",
-      "Aanbevolen: in Europa, bijvoorbeeld bij Hetzner (Duitsland)",
+      "Eén commando installeert de beeldbank, met HTTPS",
       "Overal hetzelfde portaal, dus je kunt altijd overstappen",
       "Liever niet zelf? Een partner host het voor je"
     ],
-    "euCta": "Je beeldbank in Europa",
-    "euTitle": "1. Je eigen server in Europa (aanbevolen)",
-    "euP": "Een kleine server bij een Europese provider is voor de meeste merken genoeg. Onze handleiding gebruikt Hetzner, met datacenters in Duitsland en Finland.",
-    "euSteps": [
-      "Maak een server aan bij Hetzner in Neurenberg, Falkenstein of Helsinki, met back-ups aan.",
-      "Laat je domein, bijvoorbeeld images.jouwmerk.nl, naar de server wijzen.",
-      "Installeer Docker en start het portaal met een paar commando's. HTTPS wordt automatisch geregeld.",
-      "Open je domein en doorloop de installatiewizard.",
-      "Optioneel: bewaar de beelden in Hetzner Object Storage, op dezelfde locatie.",
-      "Plan een nachtelijke back-up en kopieer die naar een plek buiten de server. Bijwerken kost twee commando's."
-    ],
-    "euGuide": "Stap voor stap: je portaal bij Hetzner",
-    "euData": "Met de server en de opslag op een EU-locatie staan je catalogus, beelden en database in de EU.",
-    "webTitle": "2. Gewone webhosting",
+    "webTitle": "3. Gewone webhosting",
     "webP": "De PHP-editie draait op gewone Europese webhosting met PHP en een database, bijvoorbeeld bij TransIP, Strato of OVHcloud. Zonder commando's:",
-    "altTitle": "4. Andere clouds",
-    "altP": "Hetzelfde portaal draait ook op Cloudflare Workers en op Google Cloud Run. Kies een regio in Europa als de dienst die aanbiedt.",
     "partnerLink": "Bekijk partners",
     "techTitle": "Technische details voor je IT-team",
-    "techLead": "Commando's, instellingen en installatiehandleidingen voor wie de server inricht.",
+    "techLead": "Opties van de installer, bestanden, back-ups en updates, voor wie de server inricht.",
     "costTitle": "Wat het ongeveer kost",
     "costItems": [
       "Je eigen server in de EU: ongeveer € 5 tot € 15 per maand voor een kleine server met automatische back-ups, bij een provider als Hetzner. Foto's op de eigen schijf van de server kosten niets extra; objectopslag voor een groot archief kost een paar euro per maand per terabyte.",
       "Gewone webhosting: het pakket dat je al betaalt, als het maar PHP 8.2 of nieuwer heeft.",
       "Cloudflare Workers: 5 dollar per maand voor Workers Paid, plus R2-opslag van ongeveer 1,50 dollar per maand per 100 GB foto's. Downloads kosten niets.",
       "Een partner: diens eigen prijs. Vraag wat erbij zit: updates, back-ups, je eigen domein, en alles kunnen exporteren als je vertrekt.",
-      "Je eigen tijd: reken de eerste keer op een halve tot een hele dag, inclusief het domein en een proef met het terugzetten van een back-up. Daarna ongeveer een uur per maand voor updates en het controleren van de back-ups."
+      "Je eigen tijd: reken de eerste keer op één tot twee uur, inclusief het domein en een proef met het terugzetten van een back-up, en daarna ongeveer een uur per maand voor updates en het controleren van de back-ups."
     ],
     "costNote": "Indicatieve prijzen van november 2026, exclusief btw. Bekijk de actuele prijzen van de provider voordat je kiest.",
-    "stepsTitle": "Stap voor stap op een nieuwe server",
-    "stepsP": "Op een nieuwe Ubuntu-server met de poorten 22, 80 en 443 open, waar de A- en AAAA-records van je domein al naar wijzen. Dit is dezelfde opzet als in de Hetzner-handleiding: hij bouwt de nieuwste release van het portaal en zet Caddy ervoor voor HTTPS.",
     "httpsTitle": "HTTPS",
-    "httpsP": "Caddy vraagt een Let's Encrypt-certificaat aan zodra je domein naar de server wijst, verlengt het automatisch en stuurt http door naar https. Geen certificaat? Controleer met dig of het domein het adres van de server toont, en of de poorten 80 en 443 open staan in de firewall.",
+    "httpsP": "De Go-editie vraagt zelf een Let's Encrypt-certificaat aan zodra je domein naar de server wijst, verlengt het automatisch en stuurt http door naar https. De TypeScript-editie doet hetzelfde via Caddy, dat de installer voor je inricht. Geen certificaat? Controleer met dig of het domein het adres van de server toont, en of de poorten 80 en 443 open staan.",
     "backupTitle": "Back-ups",
-    "backupP": "Zet de serverback-ups van je provider aan, en voeg een nachtelijke back-up van het portaal toe die je ook naar een plek buiten de server kopieert. Bewaar OBX_SECRET_KEY apart, in een wachtwoordmanager: zonder die sleutel kun je een back-up niet volledig terugzetten. Zet één keer een back-up terug als test, zodat je weet dat het werkt.",
+    "backupP": "Zet de serverback-ups van je provider aan, en voeg een nachtelijke back-up van de beeldbank toe die je ook naar een plek buiten de server kopieert. Bewaar de geheime sleutel apart, in een wachtwoordmanager: dat is OBX_SECRET_KEY in het instellingenbestand, of secret.key in de datamap. Zonder die sleutel kun je een back-up niet volledig terugzetten. Zet één keer een back-up terug als test, zodat je weet dat het werkt.",
     "updateTitle": "Updates",
-    "updateP": "Maak een back-up en lees de release notes. Haal daarna de nieuwe release op en bouw opnieuw; de database werkt zichzelf bij als het portaal start.",
+    "updateP": "Maak een back-up en lees de release notes. Voer daarna hetzelfde installatiecommando opnieuw uit: het installeert de nieuwste release, houdt je instellingen en gegevens en herstart de beeldbank. De database werkt zichzelf bij bij het starten.",
     "cfCliP": "Of vanaf je eigen computer, met Bun en de Wrangler-tool:",
-    "cfDomainP": "Je eigen domein: voeg het toe onder Workers & Pages → je Worker → Settings → Domains & Routes (het domein moet op Cloudflare staan), zet OBX_PUBLIC_URL op dat adres en deploy opnieuw.",
     "cfBackupP": "Back-ups: met Workers Paid bewaart D1 30 dagen databasegeschiedenis (Time Travel). Wil je een kopie buiten Cloudflare? Exporteer de database dan regelmatig. De beelden staan in R2; kopieer de bucket met een willekeurige S3-tool.",
-    "cfUpdateP": "Updates: merge de nieuwe release in je kopie van de repository en push; Cloudflare deployt hem opnieuw."
+    "cfUpdateP": "Updates: merge de nieuwe release in je kopie van de repository en push; Cloudflare deployt hem opnieuw.",
+    "installCta": "Installeer op je eigen server",
+    "exampleDomain": "portal.jouwmerk.nl",
+    "ownTitle": "1. Je eigen server (aanbevolen)",
+    "ownP": "Huur een kleine Linux-server, laat je domein ernaar wijzen en voer één commando uit. De installer downloadt de beeldbank, haalt een gratis HTTPS-certificaat op bij Let's Encrypt en start de beeldbank als dienst die na een herstart vanzelf terugkomt.",
+    "needTitle": "Wat je nodig hebt",
+    "needItems": [
+      "Een Linux-server (VPS) met Ubuntu 22.04 of 24.04, Debian 12 of 13, of iets vergelijkbaars. 1 GB geheugen is genoeg om te beginnen. Elke provider is prima, bijvoorbeeld Hetzner Cloud, DigitalOcean, TransIP VPS of Scaleway.",
+      "Een publiek IPv4-adres (IPv6 is optioneel), met de poorten 80 en 443 open.",
+      "Een domein of subdomein voor de beeldbank, bijvoorbeeld portal.jouwmerk.nl."
+    ],
+    "ownStepsTitle": "Drie stappen",
+    "ownSteps": [
+      "Maak de server aan en noteer het IP-adres.",
+      "Laat portal.jouwmerk.nl met één DNS-record naar de server wijzen (zie hieronder).",
+      "Log met SSH in op de server en voer dit commando uit, met je eigen adres:"
+    ],
+    "ownDone": "Als hij klaar is, toont de installer het adres van je beeldbank en een eenmalige installatiecode. Open het adres, vul de code in en doorloop de installatiewizard. Later bijwerken? Voer hetzelfde commando opnieuw uit: je instellingen en gegevens blijven staan.",
+    "ownTs": "Zo installeer je de Go-editie, het Portaal voor je eigen server. Wil je de TypeScript-editie, voeg dan --edition ts toe aan hetzelfde commando.",
+    "ownEu": "Kies een datacenter in de EU, dan blijven je catalogus, beelden en database in de EU.",
+    "dnsTitle": "DNS: laat je domein naar de server wijzen",
+    "dnsP": "Voeg één record toe bij het bedrijf dat je domein beheert:",
+    "dnsHead": [
+      "Type",
+      "Naam",
+      "Waarde"
+    ],
+    "dnsAaaaType": "AAAA (alleen als de server IPv6 heeft)",
+    "dnsAValue": "het IPv4-adres van je server, bijvoorbeeld 203.0.113.10",
+    "dnsAaaaValue": "het IPv6-adres van je server",
+    "dnsNameNote": "“portal” maakt het adres portal.jouwmerk.nl; kies gerust een ander woord. Laat de TTL op de standaardwaarde staan (of 1 uur).",
+    "dnsWhere": "Waar je klikt (de namen kunnen iets afwijken):",
+    "dnsPaths": [
+      "Controlepaneel → Domeinen → je domein → DNS → voeg een record toe.",
+      "Mijn Hostnet → Domeinnamen → je domein → DNS beheren → voeg een record toe.",
+      "Domeinen → Domein beheren → tandwielicoon → DNS → A-record → Beheren.",
+      "Controlepaneel → DNS-instellingen → DNS-records → Nieuw record aanmaken.",
+      "je domein → DNS → Records → Add record. Zet Proxy status op DNS only (grijze wolk), zodat de beeldbank een eigen certificaat krijgt. Later toch de oranje wolk? Zet dan eerst SSL/TLS op Full (strict).",
+      "Mijn producten → je domein → DNS → DNS beheren → Nieuw record toevoegen."
+    ],
+    "dnsCheckTitle": "Controleer het",
+    "dnsCheckP": "Op je eigen computer moet dit het adres van de server tonen (of gebruik een online DNS-checker zoals dnschecker.org):",
+    "dnsWait": "Dat duurt meestal 5 tot 60 minuten, soms een paar uur. De installer controleert het ook en vertelt je wat er nog ontbreekt.",
+    "optionsTitle": "Opties van de installer",
+    "options": [
+      "het adres van de beeldbank, bijvoorbeeld portal.jouwmerk.nl (verplicht)",
+      "een e-mailadres voor Let's Encrypt (optioneel)",
+      "een bepaalde release in plaats van de nieuwste",
+      "go (standaard) installeert de Go-editie; ts installeert de TypeScript-editie",
+      "geen eigen HTTPS: de beeldbank luistert op 127.0.0.1:8080 achter je eigen proxy",
+      "alleen laten zien wat hij zou doen, niets veranderen",
+      "verwijder het programma en de dienst; je gegevens en instellingen blijven staan (voeg --purge toe om die ook te wissen)"
+    ],
+    "checksP": "Voordat de installer iets verandert, controleert hij het systeem (Linux amd64 of arm64 met systemd), rootrechten, schijfruimte, of het domein naar deze server wijst, of de poorten 80 en 443 vrij zijn, en de firewall. Met ufw of firewalld toont hij precies het commando om de poorten 80 en 443 te openen.",
+    "filesTitle": "Waar alles staat",
+    "filesHead": [
+      "Wat",
+      "Go-editie",
+      "TypeScript-editie"
+    ],
+    "filesRows": [
+      "Programma",
+      "Gegevens",
+      "Instellingen",
+      "Dienst"
+    ],
+    "commandsTitle": "Handige commando's",
+    "cfTitle": "2. Cloudflare Workers",
+    "cfLead": "Geen server om te beheren: de beeldbank draait op je eigen Cloudflare-account. Klik op de knop, log in en volg de stappen.",
+    "cfDnsTitle": "DNS: een eigen domein op de Worker",
+    "cfDnsP": "Voeg het adres als eigen domein toe aan de Worker: Workers & Pages → je Worker → Settings → Domains & Routes → Add → Custom domain. Staat je domein al bij Cloudflare, dan worden DNS en het certificaat automatisch ingesteld. Zo niet, verhuis dan de DNS van je domein naar Cloudflare (gratis), of voeg een CNAME-record portal toe dat naar het adres van de Worker wijst, zoals de handleiding van Cloudflare beschrijft. Zet daarna OBX_PUBLIC_URL op dat adres en deploy opnieuw.",
+    "webDnsTitle": "DNS: een subdomein in je controlepaneel",
+    "webDnsP": "Maak het subdomein aan in het controlepaneel van je hosting (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain, of Subdomains; Plesk: Websites & Domains → Add Subdomain). Staat de DNS van je domein bij hetzelfde hostingbedrijf, dan ben je klaar. Anders voeg je een A-record toe voor het subdomein dat naar het IP-adres van de hostingserver wijst; dat staat in het paneel. Zet daarna Let's Encrypt aan voor het subdomein in het paneel."
   },
   "retailers": {
     "h1": "Voor retailers",
@@ -668,7 +712,7 @@
       "specificatie, schema's, testdata",
       "Go-SDK, obx-tool, conformancetest, mockserver",
       "gedeelde webinterface: beheer en retailerportaal",
-      "Go: Docker en Google Cloud Run",
+      "Go: je eigen server, met een installer van één regel",
       "PHP: gewone webhosting",
       "TypeScript: Cloudflare Workers"
     ],
@@ -702,7 +746,7 @@
       },
       {
         "name": "node-go",
-        "d": "Portaal voor Docker en Google Cloud Run"
+        "d": "Portaal voor je eigen server"
       },
       {
         "name": "node-php",
@@ -992,7 +1036,7 @@
       "Je Excel-export en foto's met de hand uploaden, of elke nacht laten ophalen",
       "Automatisch aanleveren vanuit je PIM, ERP of een gedeelde map",
       "Toegangsaanvragen, uitnodigingen en API-sleutels voor de software van je retailers",
-      "Drie edities: Cloudflare, Google Cloud & Docker, en gewone webhosting"
+      "Drie edities: je eigen server, Cloudflare Workers en gewone webhosting"
     ],
     "brandsComing": [
       "De eerste openbare release, met installatie in één klik",
@@ -1150,12 +1194,21 @@
       "editions": [
         {
           "tag": "Aanbevolen",
-          "name": "Je eigen server in Europa",
-          "runs": "Een server bij een Europese provider zoals Hetzner (Duitsland)",
-          "need": "Een server en een domeinnaam",
-          "setup": "Een paar commando's, daarna de installatiewizard",
+          "name": "Je eigen server",
+          "runs": "Elke Linux-server (VPS), bijvoorbeeld bij Hetzner, DigitalOcean, TransIP of Scaleway",
+          "need": "Een server, een domeinnaam en SSH-toegang",
+          "setup": "Eén commando, daarna de installatiewizard",
           "cost": "Ongeveer € 5 tot € 15 per maand voor een kleine server met back-ups",
-          "cta": "Installeer in Europa"
+          "cta": "Installeer op je eigen server"
+        },
+        {
+          "tag": "Geen server",
+          "name": "Cloudflare Workers",
+          "runs": "Je eigen Cloudflare-account, met D1 als database en R2 voor de beelden",
+          "need": "Een Cloudflare-account met het Workers Paid-abonnement",
+          "setup": "Eén klik, daarna de installatiewizard",
+          "cost": "5 dollar per maand plus opslag",
+          "cta": "Zet op in Cloudflare"
         },
         {
           "tag": "Geen commando's",
@@ -1174,15 +1227,6 @@
           "setup": "De partner richt het met je in",
           "cost": "De eigen prijzen van de partner",
           "cta": "Bekijk de providers"
-        },
-        {
-          "tag": "Andere clouds",
-          "name": "Cloudflare of Google Cloud",
-          "runs": "Cloudflare Workers, of Google Cloud Run",
-          "need": "Een Cloudflare- of Google Cloud-account",
-          "setup": "Eén klik of één script",
-          "cost": "Cloudflare: 5 dollar per maand plus opslag. Google Cloud: naar gebruik",
-          "cta": "Installeer op een andere cloud"
         }
       ],
       "trustEyebrow": "Governance",
