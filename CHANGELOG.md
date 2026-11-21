@@ -6,6 +6,8 @@ its texts; the repository itself is versioned with [Semantic Versioning](https:/
 ## [Unreleased]
 
 ### Added
+- Specification 0.3.1 (2026-11-21): the download links carry `?v=0.3.1` and the discovery example says
+  `"spec_version": "0.3.1"`; the reference already shows 0.3.1 (portal appearance in the Node Admin API).
 - Specification 0.3.0 (2026-11-17): the schemas at `/schemas/v0.3/` (0.1 and 0.2 are withdrawn by the
   spec; their paths redirect to 0.3), the vocabularies at `/vocabularies/v0.3/`, the 0.3 API
   reference, templates and glossary; `/errors/` has `idempotency_key_reused` and the warnings

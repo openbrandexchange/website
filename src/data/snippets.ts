@@ -192,7 +192,7 @@ obx-conformance mock                                              # a mock serve
 export const discovery = `$ curl https://brands.maison-noor.example/.well-known/obx`;
 export const discoveryResponse = `{
   "obx_version": "0.3",
-  "spec_version": "0.3.0",
+  "spec_version": "0.3.1",
   "publisher": { "name": "MAISON NOOR Group" },
   "api_base": "https://brands.maison-noor.example/obx/v1",
   "portal_url": "https://brands.maison-noor.example/",
