@@ -523,7 +523,7 @@
     "cfTitle": "2. Cloudflare Workers",
     "cfLead": "Nincs kezelendő szerver: a portál a saját Cloudflare-fiókjában fut. Kattintson a gombra, jelentkezzen be, és kövesse a lépéseket.",
     "cfDnsTitle": "DNS: saját domain a Workerhez",
-    "cfDnsP": "Adja hozzá a címet saját domainként a Workerhez: Workers & Pages → az Ön Workere → Settings → Domains & Routes → Add → Custom domain. Ha a domainje már a Cloudflare-en van, a DNS és a tanúsítvány automatikusan beállul. Ha nem, vigye át a domain DNS-ét a Cloudflare-re (ingyenes), vagy vegyen fel egy portal nevű CNAME rekordot, amely a Worker címére mutat, ahogy a Cloudflare útmutatója leírja. Ezután állítsa az OBX_PUBLIC_URL értékét erre a címre, és telepítse újra.",
+    "cfDnsP": "Adja hozzá a címet saját domainként a Workerhez: Workers & Pages → az Ön Workere → Settings → Domains & Routes → Add → Custom domain. Ha a domainje már a Cloudflare-en van, a DNS és a tanúsítvány automatikusan beállul. Ha nem, először vigye át a domain DNS-ét a Cloudflare-re (ingyenes; a domain ott marad regisztrálva, ahol most van), majd adja hozzá a saját domaint. Ezután állítsa az OBX_PUBLIC_URL értékét erre a címre, és telepítse újra.",
     "webDnsTitle": "DNS: aldomain a vezérlőpultban",
     "webDnsP": "Hozza létre az aldomaint a tárhely vezérlőpultjában (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain, vagy Subdomains; Plesk: Websites & Domains → Add Subdomain). Ha a domain DNS-e ugyanannál a tárhelycégnél van, ennyi az egész. Ha nem, vegyen fel az aldomainhez egy A rekordot, amely a tárhelyszerver IP-címére mutat; ezt a panel megmutatja. Ezután kapcsolja be a panelen a Let's Encryptet az aldomainhez."
   },

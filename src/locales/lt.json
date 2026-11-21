@@ -523,7 +523,7 @@
     "cfTitle": "2. Cloudflare Workers",
     "cfLead": "Jokio serverio, kurį reikėtų prižiūrėti: portalas veikia jūsų Cloudflare paskyroje. Spustelėkite mygtuką, prisijunkite ir sekite žingsnius.",
     "cfDnsTitle": "DNS: nuosavas domenas Worker programai",
-    "cfDnsP": "Pridėkite adresą kaip nuosavą domeną Worker programai: Workers & Pages → jūsų Worker → Settings → Domains & Routes → Add → Custom domain. Jei jūsų domenas jau yra Cloudflare, DNS ir sertifikatas nustatomi automatiškai. Jei ne, perkelkite domeno DNS į Cloudflare (nemokamai) arba pridėkite CNAME įrašą portal, nukreiptą į Worker adresą, kaip aprašyta Cloudflare vadove. Tada nustatykite OBX_PUBLIC_URL į tą adresą ir įdiekite iš naujo.",
+    "cfDnsP": "Pridėkite adresą kaip nuosavą domeną Worker programai: Workers & Pages → jūsų Worker → Settings → Domains & Routes → Add → Custom domain. Jei jūsų domenas jau yra Cloudflare, DNS ir sertifikatas nustatomi automatiškai. Jei ne, pirmiausia perkelkite domeno DNS į Cloudflare (nemokamai; domenas lieka užregistruotas ten, kur yra), tada pridėkite nuosavą domeną. Tada nustatykite OBX_PUBLIC_URL į tą adresą ir įdiekite iš naujo.",
     "webDnsTitle": "DNS: subdomenas valdymo skydelyje",
     "webDnsP": "Sukurkite subdomeną savo talpinimo valdymo skydelyje (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain arba Subdomains; Plesk: Websites & Domains → Add Subdomain). Jei jūsų domeno DNS yra pas tą pačią talpinimo įmonę, daugiau nieko nereikia. Kitaip pridėkite subdomenui A įrašą, nukreiptą į talpinimo serverio IP adresą, kurį rodo skydelis. Tada skydelyje įjunkite Let's Encrypt subdomenui."
   },

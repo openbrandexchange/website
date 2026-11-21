@@ -523,7 +523,7 @@
     "cfTitle": "2. Cloudflare Workers",
     "cfLead": "Ni strežnika za upravljanje: portal deluje v vašem lastnem računu Cloudflare. Kliknite gumb, se prijavite in sledite korakom.",
     "cfDnsTitle": "DNS: lastna domena za Worker",
-    "cfDnsP": "Dodajte naslov kot lastno domeno za Worker: Workers & Pages → vaš Worker → Settings → Domains & Routes → Add → Custom domain. Če je vaša domena že pri Cloudflare, se DNS in potrdilo nastavita samodejno. Če ni, prenesite DNS svoje domene k Cloudflare (brezplačno) ali dodajte zapis CNAME portal, ki kaže na naslov Workerja, kot opisuje vodnik Cloudflare. Nato nastavite OBX_PUBLIC_URL na ta naslov in znova objavite.",
+    "cfDnsP": "Dodajte naslov kot lastno domeno za Worker: Workers & Pages → vaš Worker → Settings → Domains & Routes → Add → Custom domain. Če je vaša domena že pri Cloudflare, se DNS in potrdilo nastavita samodejno. Če ni, najprej prenesite DNS svoje domene k Cloudflare (brezplačno; domena ostane registrirana tam, kjer je), nato dodajte lastno domeno. Nato nastavite OBX_PUBLIC_URL na ta naslov in znova objavite.",
     "webDnsTitle": "DNS: poddomena v nadzorni plošči",
     "webDnsP": "Ustvarite poddomeno v nadzorni plošči gostovanja (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain ali Subdomains; Plesk: Websites & Domains → Add Subdomain). Če je DNS vaše domene pri istem ponudniku gostovanja, je to vse. Sicer dodajte zapis A za poddomeno, ki kaže na naslov IP strežnika gostovanja, ki ga prikaže plošča. Nato v plošči vklopite Let's Encrypt za poddomeno."
   },

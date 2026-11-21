@@ -523,7 +523,7 @@
     "cfTitle": "2. Cloudflare Workers",
     "cfLead": "Nav servera, ko uzturēt: portāls darbojas jūsu pašu Cloudflare kontā. Noklikšķiniet uz pogas, pierakstieties un sekojiet soļiem.",
     "cfDnsTitle": "DNS: savs domēns Worker lietotnei",
-    "cfDnsP": "Pievienojiet adresi kā savu domēnu Worker lietotnei: Workers & Pages → jūsu Worker → Settings → Domains & Routes → Add → Custom domain. Ja jūsu domēns jau ir Cloudflare, DNS un sertifikāts tiek iestatīti automātiski. Ja nav, pārceliet domēna DNS uz Cloudflare (bez maksas) vai pievienojiet CNAME ierakstu portal, kas norāda uz Worker adresi, kā aprakstīts Cloudflare rokasgrāmatā. Pēc tam iestatiet OBX_PUBLIC_URL uz šo adresi un izvietojiet vēlreiz.",
+    "cfDnsP": "Pievienojiet adresi kā savu domēnu Worker lietotnei: Workers & Pages → jūsu Worker → Settings → Domains & Routes → Add → Custom domain. Ja jūsu domēns jau ir Cloudflare, DNS un sertifikāts tiek iestatīti automātiski. Ja nav, vispirms pārceliet domēna DNS uz Cloudflare (bez maksas; domēns paliek reģistrēts tur, kur tas ir), pēc tam pievienojiet savu domēnu. Pēc tam iestatiet OBX_PUBLIC_URL uz šo adresi un izvietojiet vēlreiz.",
     "webDnsTitle": "DNS: apakšdomēns vadības panelī",
     "webDnsP": "Izveidojiet apakšdomēnu savas mitināšanas vadības panelī (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain vai Subdomains; Plesk: Websites & Domains → Add Subdomain). Ja jūsu domēna DNS ir pie tā paša mitināšanas uzņēmuma, ar to pietiek. Citādi pievienojiet apakšdomēnam A ierakstu, kas norāda uz mitināšanas servera IP adresi, ko rāda panelis. Pēc tam panelī ieslēdziet Let's Encrypt apakšdomēnam."
   },

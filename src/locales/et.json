@@ -523,7 +523,7 @@
     "cfTitle": "2. Cloudflare Workers",
     "cfLead": "Serverit pole vaja hallata: portaal töötab teie oma Cloudflare'i kontol. Klõpsake nuppu, logige sisse ja järgige samme.",
     "cfDnsTitle": "DNS: oma domeen Workerile",
-    "cfDnsP": "Lisage aadress Workeri oma domeenina: Workers & Pages → teie Worker → Settings → Domains & Routes → Add → Custom domain. Kui teie domeen on juba Cloudflare'is, seadistatakse DNS ja sertifikaat automaatselt. Kui ei, viige oma domeeni DNS Cloudflare'i (tasuta) või lisage CNAME-kirje portal, mis osutab Workeri aadressile, nagu Cloudflare'i juhend kirjeldab. Seejärel määrake OBX_PUBLIC_URL sellele aadressile ja paigaldage uuesti.",
+    "cfDnsP": "Lisage aadress Workeri oma domeenina: Workers & Pages → teie Worker → Settings → Domains & Routes → Add → Custom domain. Kui teie domeen on juba Cloudflare'is, seadistatakse DNS ja sertifikaat automaatselt. Kui ei, viige esmalt oma domeeni DNS Cloudflare'i (tasuta; domeen jääb registreerituks sinna, kus see praegu on) ja lisage seejärel oma domeen. Seejärel määrake OBX_PUBLIC_URL sellele aadressile ja paigaldage uuesti.",
     "webDnsTitle": "DNS: alamdomeen teie juhtpaneelis",
     "webDnsP": "Looge alamdomeen oma veebimajutuse juhtpaneelis (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain või Subdomains; Plesk: Websites & Domains → Add Subdomain). Kui teie domeeni DNS on sama majutusettevõtte juures, ongi kõik. Muul juhul lisage alamdomeenile A-kirje, mis osutab majutusserveri IP-aadressile; paneel näitab seda. Seejärel lülitage paneelis alamdomeenile sisse Let's Encrypt."
   },

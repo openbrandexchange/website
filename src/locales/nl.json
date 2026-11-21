@@ -523,7 +523,7 @@
     "cfTitle": "2. Cloudflare Workers",
     "cfLead": "Geen server om te beheren: de beeldbank draait op je eigen Cloudflare-account. Klik op de knop, log in en volg de stappen.",
     "cfDnsTitle": "DNS: een eigen domein op de Worker",
-    "cfDnsP": "Voeg het adres als eigen domein toe aan de Worker: Workers & Pages → je Worker → Settings → Domains & Routes → Add → Custom domain. Staat je domein al bij Cloudflare, dan worden DNS en het certificaat automatisch ingesteld. Zo niet, verhuis dan de DNS van je domein naar Cloudflare (gratis), of voeg een CNAME-record portal toe dat naar het adres van de Worker wijst, zoals de handleiding van Cloudflare beschrijft. Zet daarna OBX_PUBLIC_URL op dat adres en deploy opnieuw.",
+    "cfDnsP": "Voeg het adres als eigen domein toe aan de Worker: Workers & Pages → je Worker → Settings → Domains & Routes → Add → Custom domain. Staat je domein al bij Cloudflare, dan worden DNS en het certificaat automatisch ingesteld. Zo niet, verhuis dan eerst de DNS van je domein naar Cloudflare (gratis; je domein blijft geregistreerd waar het nu is) en voeg dan het eigen domein toe. Zet daarna OBX_PUBLIC_URL op dat adres en deploy opnieuw.",
     "webDnsTitle": "DNS: een subdomein in je controlepaneel",
     "webDnsP": "Maak het subdomein aan in het controlepaneel van je hosting (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain, of Subdomains; Plesk: Websites & Domains → Add Subdomain). Staat de DNS van je domein bij hetzelfde hostingbedrijf, dan ben je klaar. Anders voeg je een A-record toe voor het subdomein dat naar het IP-adres van de hostingserver wijst; dat staat in het paneel. Zet daarna Let's Encrypt aan voor het subdomein in het paneel."
   },

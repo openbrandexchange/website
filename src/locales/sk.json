@@ -523,7 +523,7 @@
     "cfTitle": "2. Cloudflare Workers",
     "cfLead": "Žiadny server na správu: portál beží na vašom vlastnom účte Cloudflare. Kliknite na tlačidlo, prihláste sa a postupujte podľa krokov.",
     "cfDnsTitle": "DNS: vlastná doména pre Worker",
-    "cfDnsP": "Pridajte adresu ako vlastnú doménu Workera: Workers & Pages → váš Worker → Settings → Domains & Routes → Add → Custom domain. Ak je vaša doména už na Cloudflare, DNS aj certifikát sa nastavia automaticky. Ak nie, presuňte DNS domény na Cloudflare (zadarmo) alebo pridajte záznam CNAME portal, ktorý smeruje na adresu Workera, ako opisuje návod Cloudflare. Potom nastavte OBX_PUBLIC_URL na túto adresu a nasaďte znova.",
+    "cfDnsP": "Pridajte adresu ako vlastnú doménu Workera: Workers & Pages → váš Worker → Settings → Domains & Routes → Add → Custom domain. Ak je vaša doména už na Cloudflare, DNS aj certifikát sa nastavia automaticky. Ak nie, najprv presuňte DNS domény na Cloudflare (zadarmo; doména zostane registrovaná tam, kde je), a potom pridajte vlastnú doménu. Potom nastavte OBX_PUBLIC_URL na túto adresu a nasaďte znova.",
     "webDnsTitle": "DNS: subdoména v ovládacom paneli",
     "webDnsP": "Vytvorte subdoménu v ovládacom paneli hostingu (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain alebo Subdomains; Plesk: Websites & Domains → Add Subdomain). Ak máte DNS domény u tej istej hostingovej firmy, je hotovo. Inak pridajte pre subdoménu záznam A, ktorý smeruje na IP adresu hostingového servera, ktorú panel ukazuje. Potom v paneli zapnite pre subdoménu Let's Encrypt."
   },

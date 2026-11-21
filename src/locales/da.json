@@ -523,7 +523,7 @@
     "cfTitle": "2. Cloudflare Workers",
     "cfLead": "Ingen server at passe: portalen kører på din egen Cloudflare-konto. Klik på knappen, log ind, og følg trinene.",
     "cfDnsTitle": "DNS: et eget domæne på din Worker",
-    "cfDnsP": "Tilføj adressen som eget domæne på din Worker: Workers & Pages → din Worker → Settings → Domains & Routes → Add → Custom domain. Ligger dit domæne allerede hos Cloudflare, sættes DNS og certifikat op automatisk. Hvis ikke, så flyt dit domænes DNS til Cloudflare (gratis), eller tilføj en CNAME-post portal, der peger på din Workers adresse, som Cloudflares vejledning beskriver. Sæt derefter OBX_PUBLIC_URL til den adresse, og udrul igen.",
+    "cfDnsP": "Tilføj adressen som eget domæne på din Worker: Workers & Pages → din Worker → Settings → Domains & Routes → Add → Custom domain. Ligger dit domæne allerede hos Cloudflare, sættes DNS og certifikat op automatisk. Hvis ikke, så flyt først dit domænes DNS til Cloudflare (gratis; domænet forbliver registreret, hvor det er), og tilføj derefter dit eget domæne. Sæt derefter OBX_PUBLIC_URL til den adresse, og udrul igen.",
     "webDnsTitle": "DNS: et underdomæne i dit kontrolpanel",
     "webDnsP": "Opret underdomænet i dit webhotels kontrolpanel (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain eller Subdomains; Plesk: Websites & Domains → Add Subdomain). Ligger dit domænes DNS hos samme webhotel, er det alt. Ellers tilføjer du en A-post for underdomænet, der peger på webhotelserverens IP-adresse, som panelet viser. Slå derefter Let's Encrypt til for underdomænet i panelet."
   },

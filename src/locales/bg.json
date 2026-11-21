@@ -523,7 +523,7 @@
     "cfTitle": "2. Cloudflare Workers",
     "cfLead": "Няма сървър за управление: порталът работи във вашия собствен акаунт в Cloudflare. Щракнете върху бутона, влезте и следвайте стъпките.",
     "cfDnsTitle": "DNS: собствен домейн за Worker-а",
-    "cfDnsP": "Добавете адреса като собствен домейн на Worker-а: Workers & Pages → вашият Worker → Settings → Domains & Routes → Add → Custom domain. Ако домейнът ви вече е в Cloudflare, DNS и сертификатът се настройват автоматично. Ако не е, преместете DNS на домейна в Cloudflare (безплатно) или добавете CNAME запис portal, който сочи към адреса на Worker-а, както описва ръководството на Cloudflare. След това задайте OBX_PUBLIC_URL на този адрес и публикувайте отново.",
+    "cfDnsP": "Добавете адреса като собствен домейн на Worker-а: Workers & Pages → вашият Worker → Settings → Domains & Routes → Add → Custom domain. Ако домейнът ви вече е в Cloudflare, DNS и сертификатът се настройват автоматично. Ако не е, първо преместете DNS на домейна в Cloudflare (безплатно; домейнът остава регистриран там, където е), след това добавете собствения домейн. След това задайте OBX_PUBLIC_URL на този адрес и публикувайте отново.",
     "webDnsTitle": "DNS: поддомейн в контролния панел",
     "webDnsP": "Създайте поддомейна в контролния панел на хостинга (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain или Subdomains; Plesk: Websites & Domains → Add Subdomain). Ако DNS на домейна е при същата хостинг фирма, това е всичко. Иначе добавете за поддомейна A запис, който сочи към IP адреса на хостинг сървъра, показан в панела. След това включете Let's Encrypt за поддомейна в панела."
   },

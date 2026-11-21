@@ -523,7 +523,7 @@
     "cfTitle": "2. Cloudflare Workers",
     "cfLead": "Niciun server de administrat: portalul rulează în propriul cont Cloudflare. Faceți clic pe buton, conectați-vă și urmați pașii.",
     "cfDnsTitle": "DNS: un domeniu propriu pentru Worker",
-    "cfDnsP": "Adăugați adresa ca domeniu propriu al Workerului: Workers & Pages → Workerul dvs. → Settings → Domains & Routes → Add → Custom domain. Dacă domeniul este deja pe Cloudflare, DNS-ul și certificatul se configurează automat. Dacă nu, mutați DNS-ul domeniului la Cloudflare (gratuit) sau adăugați o înregistrare CNAME portal care indică spre adresa Workerului, așa cum descrie ghidul Cloudflare. Apoi setați OBX_PUBLIC_URL la acea adresă și publicați din nou.",
+    "cfDnsP": "Adăugați adresa ca domeniu propriu al Workerului: Workers & Pages → Workerul dvs. → Settings → Domains & Routes → Add → Custom domain. Dacă domeniul este deja pe Cloudflare, DNS-ul și certificatul se configurează automat. Dacă nu, mutați mai întâi DNS-ul domeniului la Cloudflare (gratuit; domeniul rămâne înregistrat unde este), după care adăugați domeniul propriu. Apoi setați OBX_PUBLIC_URL la acea adresă și publicați din nou.",
     "webDnsTitle": "DNS: un subdomeniu în panoul de control",
     "webDnsP": "Creați subdomeniul în panoul de control al găzduirii (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain sau Subdomains; Plesk: Websites & Domains → Add Subdomain). Dacă DNS-ul domeniului este la aceeași firmă de găzduire, asta e tot. Altfel, adăugați pentru subdomeniu o înregistrare A care indică spre adresa IP a serverului de găzduire, afișată în panou. Apoi activați Let's Encrypt pentru subdomeniu din panou."
   },

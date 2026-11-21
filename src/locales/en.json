@@ -523,7 +523,7 @@
     "cfTitle": "2. Cloudflare Workers",
     "cfLead": "No server to manage: the portal runs on your own Cloudflare account. Click the button, sign in and follow the steps.",
     "cfDnsTitle": "DNS: a custom domain on the Worker",
-    "cfDnsP": "Add the address as a custom domain on the Worker: Workers & Pages → your Worker → Settings → Domains & Routes → Add → Custom domain. If your domain is already on Cloudflare, DNS and the certificate are set up automatically. If not, move your domain's DNS to Cloudflare (free), or add a CNAME record portal that points at the Worker's address, as the Cloudflare guide describes. Then set OBX_PUBLIC_URL to that address and deploy again.",
+    "cfDnsP": "Add the address as a custom domain on the Worker: Workers & Pages → your Worker → Settings → Domains & Routes → Add → Custom domain. If your domain is already on Cloudflare, DNS and the certificate are set up automatically. If not, move your domain's DNS to Cloudflare first (free; your domain stays registered where it is), then add the custom domain. Then set OBX_PUBLIC_URL to that address and deploy again.",
     "webDnsTitle": "DNS: a subdomain in your control panel",
     "webDnsP": "Create the subdomain in your hosting control panel (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain, or Subdomains; Plesk: Websites & Domains → Add Subdomain). If your domain's DNS is with the same hosting company, that is all. Otherwise add an A record for the subdomain that points at the hosting server's IP address, which the panel shows. Then switch on Let's Encrypt for the subdomain in the panel."
   },

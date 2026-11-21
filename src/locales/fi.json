@@ -523,7 +523,7 @@
     "cfTitle": "2. Cloudflare Workers",
     "cfLead": "Ei palvelinta ylläpidettäväksi: portaali toimii omalla Cloudflare-tililläsi. Napsauta painiketta, kirjaudu sisään ja seuraa vaiheita.",
     "cfDnsTitle": "DNS: oma verkkotunnus Workerille",
-    "cfDnsP": "Lisää osoite Workerin omaksi verkkotunnukseksi: Workers & Pages → oma Workerisi → Settings → Domains & Routes → Add → Custom domain. Jos verkkotunnuksesi on jo Cloudflaressa, DNS ja varmenne määritetään automaattisesti. Jos ei, siirrä verkkotunnuksen DNS Cloudflareen (maksuton) tai lisää CNAME-tietue portal, joka osoittaa Workerin osoitteeseen, kuten Cloudflaren ohjeessa kuvataan. Aseta sitten OBX_PUBLIC_URL tähän osoitteeseen ja julkaise uudelleen.",
+    "cfDnsP": "Lisää osoite Workerin omaksi verkkotunnukseksi: Workers & Pages → oma Workerisi → Settings → Domains & Routes → Add → Custom domain. Jos verkkotunnuksesi on jo Cloudflaressa, DNS ja varmenne määritetään automaattisesti. Jos ei, siirrä ensin verkkotunnuksen DNS Cloudflareen (maksuton; verkkotunnus pysyy rekisteröitynä nykyisessä paikassaan) ja lisää sitten oma verkkotunnus. Aseta sitten OBX_PUBLIC_URL tähän osoitteeseen ja julkaise uudelleen.",
     "webDnsTitle": "DNS: aliverkkotunnus ohjauspaneelissa",
     "webDnsP": "Luo aliverkkotunnus webhotellisi ohjauspaneelissa (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain tai Subdomains; Plesk: Websites & Domains → Add Subdomain). Jos verkkotunnuksesi DNS on samalla webhotellilla, muuta ei tarvita. Muuten lisää aliverkkotunnukselle A-tietue, joka osoittaa webhotellipalvelimen IP-osoitteeseen; paneeli näyttää sen. Ota sitten paneelissa Let's Encrypt käyttöön aliverkkotunnukselle."
   },
