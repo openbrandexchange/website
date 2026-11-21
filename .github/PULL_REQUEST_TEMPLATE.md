@@ -10,4 +10,4 @@
 - [ ] Visible change? `bun run test:e2e` passes (axe, keyboard, phone layout)
 - [ ] `CHANGELOG.md` updated under Unreleased
 - [ ] Every commit is signed off (`git commit -s`, see CONTRIBUTING.md)
-- [ ] No real customer data; examples use Kestrel Outfitters and `.example` domains
+- [ ] No real customer data; examples use MAISON NOOR and `.example` domains

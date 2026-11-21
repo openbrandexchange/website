@@ -43,7 +43,7 @@ test('the language menu opens with the keyboard and switches to the same page in
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(/\/de\/for-retailers\/$/);
   await expect(page.locator('html')).toHaveAttribute('lang', 'de');
-  await expect(page.getByText('Kestrel · Händlerportal').first()).toBeVisible();
+  await expect(page.getByText('MAISON NOOR · Händlerportal').first()).toBeVisible();
 });
 
 test('the chosen language is remembered for the home address', async ({ page }) => {
@@ -97,8 +97,8 @@ test('the imprint shows the foundation in formation and both addresses', async (
 test('the directory search filters the list and says when nothing matches', async ({ page }) => {
   await page.goto('/en/directory/');
   const search = page.getByRole('searchbox');
-  await search.fill('kestrel');
-  await expect(page.getByText('Kestrel Outfitters').first()).toBeVisible();
+  await search.fill('noor');
+  await expect(page.getByText('MAISON NOOR Group').first()).toBeVisible();
   await search.fill('no-such-brand-xyz');
   await expect(page.getByText('No brands match your search.')).toBeVisible();
 });

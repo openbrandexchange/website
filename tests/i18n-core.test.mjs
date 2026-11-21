@@ -47,5 +47,5 @@ test('localized text falls back: language, then English, then the first value', 
 });
 
 test('format replaces known placeholders and keeps unknown ones', () => {
-  assert.equal(format('Kestrel · {portal} {x}', { portal: 'Beeldbank' }), 'Kestrel · Beeldbank {x}');
+  assert.equal(format('MAISON NOOR · {portal} {x}', { portal: 'Beeldbank' }), 'MAISON NOOR · Beeldbank {x}');
 });

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 // Copy the Excel templates for brands from the specification (spec/templates/, generated there
-// from the schemas and the Kestrel fixtures by `npm run templates`) to public/downloads/, so the
+// from the schemas and the MAISON NOOR fixtures by `npm run templates`) to public/downloads/, so the
 // Downloads page can link /downloads/products.xlsx and /downloads/assets.xlsx.
-// tests/templates.test.mjs checks that the copies match the Kestrel example zip and, when a spec
+// tests/templates.test.mjs checks that the copies match the MAISON NOOR example zip and, when a spec
 // checkout is next to this repo, that they are byte-identical to spec/templates/.
 //   npm run sync:templates                 # expects ../spec next to this repo
 //   npm run sync:templates -- <path-to-spec-checkout>

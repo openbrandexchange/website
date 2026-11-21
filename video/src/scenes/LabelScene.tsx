@@ -5,10 +5,10 @@ import { FPS } from "../timeline";
 import { theme } from "../theme";
 import { clamp, CodeWindow, lift, RevealLine, Stage, usePortrait, useRise } from "./kit";
 
-// Product KT-2001 of the spec's fictional test brand, as on the website's retailers page
+// Product NA-2001 of the spec's fictional test brand, as on the website's retailers page
 // (website/src/data/label-example.ts).
 const LABEL = {
-  styleNumber: "KT-2001",
+  styleNumber: "NA-2001",
   materials: [
     { part: "outer", fibers: [{ fiber: "recycled_polyester", percentage: 100 }] },
     { part: "lining", fibers: [{ fiber: "polyamide", percentage: 88 }, { fiber: "elastane", percentage: 12 }] },
@@ -26,7 +26,7 @@ type Section = "materials" | "care" | "origin" | "variants";
 // GET /obx/v1/products/{id}, the label fields only; each line knows which part of the label it shows.
 const JSON_LINES: { text: string; section?: Section }[] = [
   { text: "{" },
-  { text: '  "style_number": "KT-2001",' },
+  { text: '  "style_number": "NA-2001",' },
   { text: '  "materials": [', section: "materials" },
   { text: '    { "part": "outer", "fibers": [', section: "materials" },
   { text: '      { "fiber": "polyester", "percentage": 100, "recycled": true } ] },', section: "materials" },
@@ -113,7 +113,7 @@ export const LabelScene = ({ ui, lawAt }: { ui: Ui["label"]; lawAt: number }) =>
   const card = (
     <div style={{ width: portrait ? 760 : 680, background: theme.surface, border: `1px solid ${theme.lineStrong}`, borderRadius: 12, boxShadow: theme.shadow, padding: 30, fontSize: 21, lineHeight: 1.45, ...lift(rise(4), 24) }}>
       <div style={{ marginBottom: 20, fontSize: 24 }}>
-        <strong style={{ fontWeight: 650 }}>Kestrel Trail · {ui.product}</strong> <span style={{ color: theme.muted }}>KT-2001 · {ui.colour}</span>
+        <strong style={{ fontWeight: 650 }}>NOOR ATELIER · {ui.product}</strong> <span style={{ color: theme.muted }}>NA-2001 · {ui.colour}</span>
       </div>
       <dl style={{ display: "grid", gridTemplateColumns: "max-content 1fr", columnGap: 22, rowGap: 6, margin: 0 }}>
         {row(

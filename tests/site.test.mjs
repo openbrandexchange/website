@@ -56,14 +56,14 @@ test('the sitemap lists every page in every language', { skip: !built && 'dist/ 
 
 test('the directory page renders the demo entry, clearly marked', { skip: !built && 'dist/ not built' }, () => {
   const html = read('en/directory/index.html');
-  assert.match(html, /Kestrel Outfitters/);
+  assert.match(html, /MAISON NOOR Group/);
   assert.match(html, /class="badge demo">Demo entry</);
-  assert.doesNotMatch(html, /href="https:\/\/brands\.kestrel\.example/, 'demo entry must not link to its fake portal');
+  assert.doesNotMatch(html, /href="https:\/\/brands\.maison-noor\.example/, 'demo entry must not link to its fake portal');
 });
 
 test('the portal word follows the language', { skip: !built && 'dist/ not built' }, () => {
-  assert.match(read('nl/for-retailers/index.html'), /Kestrel · Beeldbank/);
-  assert.match(read('de/for-retailers/index.html'), /Kestrel · Händlerportal/);
+  assert.match(read('nl/for-retailers/index.html'), /MAISON NOOR · Beeldbank/);
+  assert.match(read('de/for-retailers/index.html'), /MAISON NOOR · Händlerportal/);
 });
 
 test('switch-kit emails exist per language and link to that language', { skip: !built && 'dist/ not built' }, () => {
@@ -210,12 +210,12 @@ test('the Cloudflare edition says which plan it needs and where its web versions
 });
 
 test('the example files are one download in every language', { skip: !built && 'dist/ not built' }, () => {
-  const zip = readFileSync(new URL('downloads/kestrel-example.zip', dist));
+  const zip = readFileSync(new URL('downloads/maison-noor-example.zip', dist));
   assert.equal(zip.subarray(0, 4).toString('latin1'), 'PK\x03\x04');
   const names = zip.toString('latin1');
-  for (const f of ['kestrel-example/products.csv', 'kestrel-example/assets.csv', 'kestrel-example/images/KO-1001_NVY_1_front.png']) assert.ok(names.includes(f), f);
+  for (const f of ['maison-noor-example/products.csv', 'maison-noor-example/assets.csv', 'maison-noor-example/images/MN-1001_NVY_1_front.png']) assert.ok(names.includes(f), f);
   assert.ok(!names.includes('images.json'), 'test metadata stays out');
-  for (const lang of langs) assert.ok(read(`${lang}/downloads/index.html`).includes('href="/downloads/kestrel-example.zip?v='), `${lang}: link`);
+  for (const lang of langs) assert.ok(read(`${lang}/downloads/index.html`).includes('href="/downloads/maison-noor-example.zip?v='), `${lang}: link`);
 });
 
 test('the own-server route is the one-line installer, with the DNS record, in every language; no container routes', { skip: !built && 'dist/ not built' }, () => {

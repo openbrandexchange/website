@@ -1,4 +1,4 @@
-// Flat product illustrations for the fictional Kestrel Outfitters fixtures.
+// Flat product illustrations for the fictional MAISON NOOR fixtures.
 //
 // The spec's fixture images are colour swatches with the file name printed on them: right for
 // tests, unreadable in a marketing screenshot. For the website screenshots only, every fixture
@@ -165,24 +165,24 @@ function ribs(x1, x2, y1, y2, c, step = 18) {
 }
 
 const productShape = {
-  'KO-1001': 'sweater',
-  'KO-1002': 'jacket',
-  'KO-1003': 'tee',
-  'KO-1004': 'jeans',
-  'KO-1005': 'bag',
-  'KO-1006': 'beanie',
-  'KT-2001': 'shorts',
-  'KT-2002': 'shell',
+  'MN-1001': 'sweater',
+  'MN-1002': 'jacket',
+  'MN-1003': 'tee',
+  'MN-1004': 'jeans',
+  'MN-1005': 'bag',
+  'MN-1006': 'beanie',
+  'NA-2001': 'shorts',
+  'NA-2002': 'shell',
 };
 
-/** SVG for a fixture file name such as KO-1001_NVY_2_back.png. */
+/** SVG for a fixture file name such as MN-1001_NVY_2_back.png. */
 export function garmentSvg(file) {
   const m = /^([A-Z]{2}-\d{4})_([A-Z]{3})_(\d+)_(\w+)\.png$/.exec(file);
   if (!m) throw new Error(`unexpected fixture name ${file}`);
   const [, style, code, , view] = m;
   const color = COLORS[code] ?? '#777777';
   let shape = productShape[style] ?? 'tee';
-  if (style === 'KO-1004' && view === 'detail') shape = 'jeansDetail';
+  if (style === 'MN-1004' && view === 'detail') shape = 'jeansDetail';
   if (view === 'model') shape = 'model';
   const bg = view === 'model' ? '#e4e1da' : '#efede8';
   const art = shapes[shape](color, view);

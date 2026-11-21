@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Product screenshots for the website, taken from the real admin-ui in its mock mode
-// (the fictional brand Kestrel Outfitters, everything running in the browser).
+// (the fictional brand MAISON NOOR, everything running in the browser).
 //
 //   node scripts/capture-screenshots.mjs                 # en, nl, de, fr
 //   node scripts/capture-screenshots.mjs --lang nl       # one language
@@ -41,7 +41,7 @@ execFileSync('bunx', ['vite', 'build', '--mode', 'mock', '--outDir', site, '--em
 const browser = await chromium.launch();
 
 // 2. Product illustrations instead of the fixture swatches.
-const fixtures = join(site, 'mock-fixtures/kestrel');
+const fixtures = join(site, 'mock-fixtures/maison-noor');
 {
   const page = await browser.newPage({ viewport: { width: 1200, height: 1500 } });
   for (const file of readdirSync(fixtures).filter((f) => f.endsWith('.png'))) {
@@ -63,8 +63,8 @@ const server = createServer((req, res) => {
 await new Promise((r) => server.listen(0, '127.0.0.1', r));
 const base = `http://127.0.0.1:${server.address().port}/`;
 
-const buyer = { email: 'buyer@shop.example', password: 'kestrel-shop-2026' };
-const admin = { email: 'admin@kestrel.example', password: 'kestrel-admin-2026' };
+const buyer = { email: 'buyer@shop.example', password: 'noor-shop-2026' };
+const admin = { email: 'admin@maison-noor.example', password: 'noor-admin-2026' };
 
 async function session(lang, who) {
   const context = await browser.newContext({ viewport: VIEW, deviceScaleFactor: 2, locale: lang, colorScheme: 'light', reducedMotion: 'reduce' });
@@ -90,7 +90,7 @@ async function save(page, lang, name) {
   await page.evaluate((local) => {
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     for (let n = walker.nextNode(); n; n = walker.nextNode()) {
-      if (n.nodeValue.includes(local)) n.nodeValue = n.nodeValue.replaceAll(local, 'https://brands.kestrel.example');
+      if (n.nodeValue.includes(local)) n.nodeValue = n.nodeValue.replaceAll(local, 'https://brands.maison-noor.example');
     }
   }, base.replace(/\/$/, ''));
   const dir = join(outRoot, lang);
@@ -105,7 +105,8 @@ for (const lang of langs) {
   // Retailer portal.
   {
     const { context, page } = await session(lang, buyer);
-    await page.goto(base);
+    // The catalog, not the brand's start page (admin-ui shows a start page when the brand has one).
+    await page.goto(base + 'catalog');
     await settle(page);
     await save(page, lang, 'portal-catalog');
 
@@ -121,7 +122,7 @@ for (const lang of langs) {
     await save(page, lang, 'portal-ean');
     await page.setViewportSize(VIEW);
 
-    await page.goto(base);
+    await page.goto(base + 'catalog');
     await settle(page);
     await page.locator('main a[href*="products/"]').nth(1).click();
     await settle(page);

@@ -36,6 +36,13 @@ its texts; the repository itself is versioned with [Semantic Versioning](https:/
 - Provider logos on /hosting (light and dark version).
 
 ### Changed
+- The fictional brand is now MAISON NOOR (spec 0.3.1 test data) instead of Kestrel: brands MAISON NOOR
+  and NOOR ATELIER, company MAISON NOOR Group, `brands.maison-noor.example`, article numbers `MN-`/`NA-`,
+  in every text of all 25 languages, the snippets, the directory's demo entry, the retailers label
+  example (NA-2001) and the developer prompts. The example download is `/downloads/maison-noor-example.zip`;
+  the reference, schemas and Excel templates are synced from the spec. The product screenshots are
+  retaken from admin-ui's mock (the catalog, not the new start page; eleven articles) and the
+  brochures and social images rebuilt.
 - Bun instead of npm: `bun install` with `bun.lock` (also in `video/`), `bun run` scripts, `bun audit`
   in CI, Dependabot on the bun ecosystem. oxlint (`bun run lint`, part of `check`) over the site's
   code; `video/` type-checks with oxlint instead of tsc. Astro 7.4.13 (security advisories).
