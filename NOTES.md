@@ -85,7 +85,7 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
 17. **Explainer video** (`video/`, Remotion, its own package). One beat per point, timed by the
     voice-over (ElevenLabs, `bun run voice:en` / `voice:nl`; cost logged in `video/.drafts/`), no
     music, captions burned in. It uses the real portal screenshots and draws everything else; facts
-    only (the label is spec fixture KT-2001, the suitcase KO-1008). `bun run render` writes
+    only (the label is spec fixture NA-2001, the suitcase MN-1008). `bun run render` writes
     `public/video/obx-{en,nl}.{mp4,webm,jpg}` and a 9:16 cut to `video/out/` (not committed). The
     home page shows Dutch for nl and English for every other language, with `preload="none"`, so
     nothing but the poster loads until the visitor presses play (an end-to-end test checks this).

@@ -20,7 +20,7 @@ test('the published directory is valid and has one marked demo entry', () => {
   assert.deepEqual(checkDirectory(current, validate), []);
   const demos = current.entries.filter((e) => e['x-obx-demo'] === true);
   assert.equal(demos.length, 1);
-  assert.equal(demos[0].name, 'Kestrel Outfitters');
+  assert.equal(demos[0].name, 'MAISON NOOR Group');
 });
 
 test('a normal entry is accepted', () => {

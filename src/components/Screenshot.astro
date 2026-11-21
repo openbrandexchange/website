@@ -18,7 +18,7 @@ interface Props {
   class?: string;
 }
 
-const { name, lang, alt, sizes, eager = false, url = 'brands.kestrel.example', class: extra } = Astro.props;
+const { name, lang, alt, sizes, eager = false, url = 'brands.maison-noor.example', class: extra } = Astro.props;
 const files = import.meta.glob<{ default: ImageMetadata }>('../assets/screens/*/*.webp', { eager: true });
 const image = (files[`../assets/screens/${lang}/${name}.webp`] ?? files[`../assets/screens/en/${name}.webp`]).default;
 const path = name.startsWith('admin') ? `${url}/admin` : url;

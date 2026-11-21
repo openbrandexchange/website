@@ -25,7 +25,7 @@ locale texts, so a text change can make `bun run test` report stale PDFs: rebuil
 `bun run build:brochures -- --lang <lang>` and commit the PDFs.
 
 Style: short sentences, plain words, no protocol terms on brand and retailer pages (the tests
-list them), examples with the fictional *Kestrel Outfitters* and `.example` domains. Never put
+list them), examples with the fictional *MAISON NOOR* and `.example` domains. Never put
 real customer data in examples.
 
 ## Sign your commits, and the rights in your contribution

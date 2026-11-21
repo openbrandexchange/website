@@ -8,17 +8,17 @@ export const exportPrompt = `You are helping me connect our system to Open Brand
 
 Read these first:
 - Import format: ${SPEC}/docs/import-format.md
-- Example data (fictional brand Kestrel): ${SPEC}/fixtures/kestrel/products.csv
+- Example data (fictional brand MAISON NOOR): ${SPEC}/fixtures/maison-noor/products.csv
 - JSON Schemas: https://openbrandexchange.com/schemas/v0.3/
 - Codes with their names (materials, qualifiers, care): https://openbrandexchange.com/vocabularies/v0.3/
 
 Our system: [name, version, database or API, programming language].
 
 Task:
-1. Write an export that produces products.csv exactly in the OBX import format: the same columns in the same order as the Kestrel example, one row per size, UTF-8.
+1. Write an export that produces products.csv exactly in the OBX import format: the same columns in the same order as the MAISON NOOR example, one row per size, UTF-8.
 2. Map our fields to the OBX columns. Include the fibre composition per part, the care codes and the EANs. List every OBX field we cannot fill, and every field of ours that has no place in OBX.
-3. Rename or copy our product photos to the OBX naming rule {style}_{color}_{position}.jpg, for example KO-1001_NVY_1.jpg.
-4. Add a test that runs the export on sample data and compares the result with the Kestrel example's columns.
+3. Rename or copy our product photos to the OBX naming rule {style}_{color}_{position}.jpg, for example MN-1001_NVY_1.jpg.
+4. Add a test that runs the export on sample data and compares the result with the MAISON NOOR example's columns.
 5. Explain how to check the result with: obx push --dry-run
 
 Ask me for anything you need to know about our system before you write code.`;

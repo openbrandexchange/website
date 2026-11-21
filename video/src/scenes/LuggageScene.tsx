@@ -3,7 +3,7 @@ import type { Ui } from "../copy";
 import { theme } from "../theme";
 import { clamp, lift, Stage, usePortrait, useRise } from "./kit";
 
-// Spec fixture KO-1008, size CABIN: 55 × 40 × 20 cm. Drawn at 7.5 px per cm.
+// Spec fixture MN-1008, size CABIN: 55 × 40 × 20 cm. Drawn at 7.5 px per cm.
 const CM = 7.5;
 const TOP = 60;
 const H = 55 * CM;

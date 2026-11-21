@@ -100,7 +100,7 @@ language; readers see their language, else English. They appear on /hosting and 
 Copyright © 2026 Open Brand Exchange Foundation (in formation). All rights reserved. The repository is
 public for transparency; no licence is granted to copy or reuse the site (see [LICENSE](LICENSE)).
 Exceptions with their own licence: files from the specification (schemas, API reference, templates,
-the Kestrel example) and the brand directory are CC-BY-4.0, third-party code and fonts keep theirs,
+the MAISON NOOR example) and the brand directory are CC-BY-4.0, third-party code and fonts keep theirs,
 and the badges and brochures may be shared unchanged. See [NOTICE](NOTICE) and
 [LICENSE-CONTENT](LICENSE-CONTENT). Contributions: [CONTRIBUTING.md](CONTRIBUTING.md). The copyright
 and the name will be transferred to the Open Brand Exchange Foundation, a Dutch stichting that is

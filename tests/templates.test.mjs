@@ -1,6 +1,6 @@
 // The Excel templates in public/downloads/ are copies of spec/templates/ (npm run sync:templates).
 // Without a dependency: a small zip reader, then the Products/Assets sheet is compared value for
-// value with products.csv/assets.csv of the Kestrel example zip (both come from the spec), so the
+// value with products.csv/assets.csv of the MAISON NOOR example zip (both come from the spec), so the
 // two downloads cannot disagree. With a spec checkout next to this repo (or SPEC_DIR) the copies
 // must also be byte-identical to spec/templates/.
 import { test } from 'node:test';
@@ -94,20 +94,20 @@ function parseCsv(text) {
   return rows.filter((r) => r.some((x) => x !== ''));
 }
 
-const example = unzip(readFileSync(new URL('kestrel-example.zip', downloads)));
+const example = unzip(readFileSync(new URL('maison-noor-example.zip', downloads)));
 
 for (const [file, sheet] of Object.entries(TEMPLATES)) {
-  test(`downloads/${file} has the template sheets and the Kestrel example rows`, () => {
+  test(`downloads/${file} has the template sheets and the MAISON NOOR example rows`, () => {
     const book = sheets(readFileSync(new URL(file, downloads)));
     assert.deepEqual(Object.keys(book), ['Read me', sheet, 'Explanation', 'Uitleg', 'Lists']);
-    const csv = parseCsv(example[`kestrel-example/${file.replace('.xlsx', '.csv')}`].toString('utf8'));
+    const csv = parseCsv(example[`maison-noor-example/${file.replace('.xlsx', '.csv')}`].toString('utf8'));
     const [header, ...rows] = book[sheet];
     // products.xlsx has exactly the CSV's columns; assets.xlsx has every assets.csv column of the
     // import format, of which the example file uses some (in the same order).
     const idx = csv[0].map((c) => header.indexOf(c));
     assert.ok(idx.every((x, i) => x >= 0 && (i === 0 || x > idx[i - 1])), `${file}: columns of the example CSV missing or out of order`);
     if (file === 'products.xlsx') assert.deepEqual(header, csv[0]);
-    assert.deepEqual(rows.map((r) => idx.map((i) => r[i] ?? '')), csv.slice(1), `${file}: example rows differ from the Kestrel example zip`);
+    assert.deepEqual(rows.map((r) => idx.map((i) => r[i] ?? '')), csv.slice(1), `${file}: example rows differ from the MAISON NOOR example zip`);
     const explained = book.Explanation.map((r) => r[0]);
     for (const h of header) assert.ok(explained.includes(h), `${file}: column ${h} is not explained`);
     assert.ok(book['Read me'].flat().some((t) => t.includes('{style}_{color}_{position}')), `${file}: image naming rule`);

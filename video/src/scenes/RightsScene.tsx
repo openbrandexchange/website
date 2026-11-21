@@ -3,7 +3,7 @@ import type { Ui } from "../copy";
 import { theme } from "../theme";
 import { lift, Stage, usePortrait, useRise } from "./kit";
 
-// A product image drawn like the website's screenshots: the spec's KO-1003 tee in rust, on warm grey.
+// A product image drawn like the website's screenshots: the spec's MN-1003 tee in rust, on warm grey.
 const Product = () => (
   <svg width="440" height="520" viewBox="0 0 440 520">
     <rect width="440" height="520" fill="#efedea" />

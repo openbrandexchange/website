@@ -1,8 +1,8 @@
-// The care-label example on the retailers page: product KT-2001 of the spec's fictional test
-// brand (spec fixtures/kestrel/products.csv), in the 0.3 shape: a fibre is a material code with a list of
+// The care-label example on the retailers page: product NA-2001 of the spec's fictional test
+// brand (spec fixtures/maison-noor/products.csv), in the 0.3 shape: a fibre is a material code with a list of
 // qualifiers (recycled, organic, …). Keep it in step with the fixture.
 export const labelExample = {
-  styleNumber: 'KT-2001',
+  styleNumber: 'NA-2001',
   colourCode: 'BLK',
   countryOfOrigin: 'VN',
   materials: [
