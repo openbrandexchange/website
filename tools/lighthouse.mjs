@@ -16,20 +16,31 @@ const server = spawn(process.execPath, ['tools/serve-dist.mjs', 'dist', String(p
 await new Promise((r) => setTimeout(r, 800));
 mkdirSync('.cache/lighthouse', { recursive: true });
 let failed = false;
+
+/** One Lighthouse run. Headless Chrome on the CI runners now and then fails to record the trace
+ * (NO_NAVSTART, nothing to do with the page); such a run is retried, up to three attempts. */
+function lighthouse(page, out, stdio) {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      execFileSync('bunx', ['lighthouse@12', `http://127.0.0.1:${port}${page}`, '--quiet', '--output=json', `--output-path=${out}`, '--chrome-flags=--headless=new --no-sandbox'], {
+        stdio,
+        env: { ...process.env, ...(chrome ? { CHROME_PATH: chrome } : {}) },
+      });
+      return;
+    } catch (err) {
+      if (attempt >= 3) throw err;
+      console.error(`${page}: Lighthouse run failed (attempt ${attempt}), trying again`);
+    }
+  }
+}
 try {
   // Warm-up run, not scored: the first Lighthouse run after the server and Chrome start reports a
   // ~2 s unattributable long task on whichever page comes first (measured 2026-11-12: /en/ scored
   // 73 when first and 99 when second, with identical assets).
-  execFileSync('bunx', ['lighthouse@12', `http://127.0.0.1:${port}${pages[0]}`, '--quiet', '--output=json', '--output-path=.cache/lighthouse/warmup.json', '--chrome-flags=--headless=new --no-sandbox'], {
-    stdio: 'ignore',
-    env: { ...process.env, ...(chrome ? { CHROME_PATH: chrome } : {}) },
-  });
+  lighthouse(pages[0], '.cache/lighthouse/warmup.json', 'ignore');
   for (const page of pages) {
     const out = `.cache/lighthouse/${page.replace(/\//g, '_') || 'root'}.json`;
-    execFileSync('bunx', ['lighthouse@12', `http://127.0.0.1:${port}${page}`, '--quiet', '--output=json', `--output-path=${out}`, '--chrome-flags=--headless=new --no-sandbox'], {
-      stdio: 'inherit',
-      env: { ...process.env, ...(chrome ? { CHROME_PATH: chrome } : {}) },
-    });
+    lighthouse(page, out, 'inherit');
     const report = JSON.parse(readFileSync(out, 'utf8'));
     const scores = Object.fromEntries(Object.entries(report.categories).map(([k, v]) => [k, v.score]));
     const lcp = Math.round(report.audits['largest-contentful-paint'].numericValue);
