@@ -14,15 +14,12 @@
     "footerMore": "Aktar",
     "footerSource": "Kodiċi sors u speċifikazzjoni",
     "footerLicence": "© 2026 {foundation}. Id-drittijiet kollha riżervati. L-ispeċifikazzjoni hija CC-BY-4.0.",
-    "editionCloudflare": "Portal għal Cloudflare",
-    "editionHosting": "Portal għal web hosting",
     "yes": "Iva",
     "inDevelopment": "Qed jiġi żviluppat",
     "available": "Disponibbli",
     "footerContact": "Kuntatt",
     "madeInEu": "Magħmul fl-UE",
-    "footerDiscuss": "Ingħaqad fid-diskussjoni",
-    "editionServer": "Portal għas-server tiegħek"
+    "footerDiscuss": "Ingħaqad fid-diskussjoni"
   },
   "nav": {
     "brands": "Għall-marki",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Il-portal tar-ritratti tiegħek fejn trid: fuq is-server tiegħek b'kmand wieħed, fuq Cloudflare Workers, fuq web hosting ordinarju jew ospitat minn sieħeb."
+      "description": "Il-portal tar-ritratti tiegħek fejn trid: il-portal f'Rust fuq is-server Linux tiegħek jew b'Docker, jew ospitat minn sieħeb."
     },
     "retailers": {
       "title": "Għall-bejjiegħa",
@@ -361,7 +358,6 @@
     "httpProduct": "Oġġett (pereżempju meta jinbidel fil-PIM tiegħek)",
     "httpVariant": "Kulur u daqs, bl-EAN tiegħu",
     "httpImage": "Ritratt: l-ewwel id-dettalji, imbagħad il-fajl innifsu",
-    "httpImageNote": "Il-Portal għal Cloudflare ma jagħmilx hu stess verżjonijiet tal-web tar-ritratti. Hemmhekk ippubblika b'obx jew minn \"Importazzjonijiet\" fl-amministrazzjoni tiegħek: huma jagħmluhom għalik. Ir-ritratti li jaslu b'mod ieħor, bħal minn importazzjoni skedata, jintwerew sa dak iż-żmien fid-daqs oriġinali.",
     "httpOffline": "Tneħħi xi ħaġa offline",
     "httpHooks": "Trid sinjal meta jiġri xi ħaġa? Fl-amministrazzjoni tiegħek, żid notifika (webhook) għal importazzjoni lesta jew talba ġdida għall-aċċess, u ħalliha tibda trigger f'n8n, Make jew Zapier.",
     "apiTitle": "6. L-API direttament (għall-iżviluppaturi)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Kull marka għandha l-portal tar-ritratti tagħha. Installah fuq is-server tiegħek b'kmand wieħed, ħaddmu fuq Cloudflare Workers, tellgħu fuq web hosting ordinarju, jew ħalli sieħeb jospitah.",
-    "p1Title": "4. Sieħeb jospitah għalik",
-    "p1P": "Tippreferi ma tospitahx int? Is-sħab jistgħu jospitaw u jżommu l-portal għalik.",
-    "fieldBased": "Ibbażat f'",
-    "fieldLanguages": "Lingwi",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "Esporta l-kontenut kollu tiegħek",
-    "fieldWebsite": "Sit web",
-    "listTitle": "Trid tidher hawn bħala fornitur?",
-    "listP": "Il-kriterji biex tidher hawn huma l-istess għal kulħadd:",
-    "listItems": [
-      "il-portal tiegħek jgħaddi mit-test ta' konformità tal-verżjoni attwali",
-      "marka tista' tesporta d-data u r-ritratti kollha tagħha u titlaq",
-      "tippubblika l-prezzijiet u t-termini tiegħek fuq is-sit tiegħek"
-    ],
-    "listHow": "Li tkun kompatibbli huwa b'xejn; post hawnhekk huwa parti mis-sħubija uffiċjali.",
-    "cfP": "Jaħdem fuq Cloudflare Workers, b'D1 bħala database u R2 għall-immaġini. Ikklikkja l-buttuna, idħol f'Cloudflare u segwi l-passi. Portal li tuża kuljum jeħtieġ il-pjan Workers Paid (5 dollari fix-xahar); il-pjan b'xejn huwa biss biżżejjed biex tħares madwarek. Il-verżjonijiet tal-web tar-ritratti tiegħek jagħmluhom il-browser tiegħek u l-għodda obx.",
-    "cfButton": "Installa fuq Cloudflare",
-    "phpP": "Għall-pakkett tal-web hosting li forsi diġà għandek, b'PHP u database. L-ebda kmand meħtieġ:",
-    "phpSteps": [
-      "Niżżel obx-portal-php-<version>.zip mill-aħħar ħarġa.",
-      "Iftħu u tella' l-folder fuq il-hosting tiegħek b'(S)FTP.",
-      "Ipponta d-dominju jew is-sottodominju tiegħek, pereżempju retailers.yourbrand.mt, lejn il-folder public.",
-      "Agħmel il-folders data u config jistgħu jinkitbu (permessi 775; jekk l-installatur għadu jgħid li ma jistgħux, 777).",
-      "Iftaħ dak l-indirizz. L-installatur jiċċekkja s-server u jitlob il-kodiċi tal-installazzjoni mill-fajl data/SETUP-CODE.txt, li tiftaħ bil-programm FTP tiegħek. Imbagħad ikklikkja “Iftaħ il-wizard tas-setup”.",
-      "Żid l-indirizz cron li juri l-installatur bħala cron job fil-pannell tal-kontroll tal-hosting tiegħek, kull 5 minuti. Anki mingħajru l-portal jaħdem."
-    ],
-    "phpDownload": "Niżżel l-aħħar ħarġa",
-    "firstTitle": "Wara l-installazzjoni: l-ewwel bidu",
-    "first": [
-      "Iftaħ l-indirizz tal-portal tiegħek fil-browser.",
-      "Daħħal il-kodiċi tal-installazzjoni ta' darba. L-installatur fuq is-server tiegħek jurih fl-aħħar. Inkella jinsab fil-log fl-ewwel bidu (Portal għal web hosting: f'data/SETUP-CODE.txt, u l-installatur jimlieh għalik), jew issettjah minn qabel b'OBX_SETUP_CODE.",
-      "Imla l-kumpanija u l-ewwel marka tiegħek, u agħżel il-password tiegħek. Qatt ma jkun hemm password awtomatika."
-    ],
-    "firstWhy": "Il-kodiċi tas-setup jiżgura li ħadd ieħor ma jista' jieħu portal li għadu kif ġie installat.",
-    "domainTitle": "Id-dominju tiegħek",
-    "domainP": "Uża sottodominju bħal retailers.yourbrand.mt jew b2b.yourbrand.mt. Il-bejjiegħa mbagħad jaraw ismek, u l-indirizz jibqa' l-istess meta tbiddel il-hosting.",
-    "compareTitle": "Tliet edizzjonijiet, portal wieħed",
-    "compareP": "It-tliet edizzjonijiet jagħmlu l-istess ħaġa u għandhom l-istess amministrazzjoni u l-istess portal għall-bejjiegħa. Agħżel dak li jaqbel mal-hosting tiegħek; tista' tbiddel aktar tard.",
-    "compareLink": "Ara l-implimentazzjonijiet",
+    "lead": "Kull marka għandha l-portal tar-ritratti tagħha. OBX jaħdem f'Rust: installah fuq is-server Linux tiegħek jew b'Docker, jew ħalli sieħeb jospitah.",
     "heroTitle": "Il-portal tar-ritratti tiegħek, fejn trid.",
-    "heroLead": "Is-software huwa b'xejn. L-eħfef mod huwa server żgħir tiegħek u kmand wieħed. Tista' tiċċaqlaq meta trid.",
+    "heroLead": "Is-software huwa b'xejn u jaħdem f'Rust. L-eħfef mod huwa server żgħir tiegħek, bħala servizz jew b'Docker. Tista' tiċċaqlaq meta trid.",
     "heroChecks": [
       "Software b'xejn, tħallas biss għall-hosting",
-      "Kmand wieħed jinstalla l-portal, bl-HTTPS",
+      "Programm wieħed f'Rust, b'HTTPS awtomatiku permezz ta' Caddy",
       "L-istess portal kullimkien, allura dejjem tista' taqleb",
       "Tippreferi ma tagħmlux int? Sieħeb jospitah għalik"
     ],
-    "webTitle": "3. Web hosting ordinarju",
-    "webP": "L-edizzjoni PHP taħdem fuq web hosting Ewropew ordinarju b'PHP u database, pereżempju ma' TransIP, Strato jew OVHcloud. L-ebda kmand meħtieġ:",
-    "partnerLink": "Ara s-sħab",
-    "techTitle": "Dettalji tekniċi għat-tim tal-IT tiegħek",
-    "techLead": "L-għażliet tal-installatur, il-fajls, il-backups u l-aġġornamenti, għal min iwaqqaf is-server.",
-    "costTitle": "Bejn wieħed u ieħor, kemm jiswa",
-    "costItems": [
-      "Is-server tiegħek fl-UE: madwar €5 sa €15 fix-xahar għal server żgħir b'backups awtomatiċi, ma' fornitur bħal Hetzner. Ir-ritratti fuq id-diska tas-server stess ma jiswew xejn żejjed; object storage għal arkivju kbir iżid ftit ewro fix-xahar għal kull terabyte.",
-      "Web hosting ordinarju: il-pakkett li diġà tħallas għalih, sakemm ikollu PHP 8.2 jew aktar ġdid.",
-      "Cloudflare Workers: 5 dollari fix-xahar għal Workers Paid, flimkien mal-ħażna R2 b'madwar 1.50 dollari fix-xahar għal kull 100 GB ta' ritratti. M'hemmx ħlasijiet għat-tniżżil.",
-      "Sieħeb: il-prezz tiegħu. Staqsi x'jinkludi: aġġornamenti, backups, id-dominju tiegħek, u l-esportazzjoni ta' kollox jekk titlaq.",
-      "Il-ħin tiegħek: ippjana siegħa jew sagħtejn l-ewwel darba, inkluż id-dominju u test biex tirrestawra backup, u madwar siegħa fix-xahar għall-aġġornamenti u biex tiċċekkja l-backups."
-    ],
-    "costNote": "Prezzijiet indikattivi ta' Novembru 2026, mingħajr VAT. Iċċekkja l-prezzijiet attwali tal-fornitur qabel tagħżel.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "L-edizzjoni Go titlob ċertifikat Let's Encrypt waħedha hekk kif id-dominju tiegħek jippunta lejn is-server, iġġeddu awtomatikament u tibgħat http lejn https. L-edizzjoni TypeScript tagħmel l-istess permezz ta' Caddy, li l-installatur iwaqqaf. M'hemmx ċertifikat? Iċċekkja b'dig li d-dominju juri l-indirizz tas-server, u li l-portijiet 80 u 443 huma miftuħa.",
-    "backupTitle": "Backups",
-    "backupP": "Ixgħel il-backups tas-server tal-fornitur tiegħek, u żid backup tal-portal kull lejl li tikkopja wkoll barra mis-server. Żomm iċ-ċavetta sigrieta separatament, f'password manager: hija OBX_SECRET_KEY fil-fajl tas-settings, jew secret.key fil-folder tad-data. Mingħajrha backup ma jistax jiġi rrestawrat kollu. Ipprova restore darba, biex tkun taf li jaħdem.",
-    "updateTitle": "Aġġornamenti",
-    "updateP": "Agħmel backup u aqra n-noti tal-ħarġa. Imbagħad erġa' ħaddem l-istess kmand tal-installazzjoni: jinstalla l-aħħar ħarġa, iżomm is-settings u d-data tiegħek u jerġa' jibda l-portal. Id-database tiġi aġġornata waħedha meta jibda.",
-    "cfCliP": "Jew mill-kompjuter tiegħek, b'Bun u l-għodda Wrangler:",
-    "cfBackupP": "Backups: fuq Workers Paid, D1 iżomm 30 jum ta' storja tad-database (Time Travel). Għal kopja barra minn Cloudflare, esporta d-database regolarment. L-immaġini jinsabu f'R2; ikkopja l-bucket bi kwalunkwe għodda S3.",
-    "cfUpdateP": "Aġġornamenti: għaqqad il-ħarġa l-ġdida fil-kopja tiegħek tar-repository u agħmel push; Cloudflare jerġa' jagħmel deploy.",
     "installCta": "Installa fuq is-server tiegħek",
     "exampleDomain": "portal.yourbrand.mt",
     "ownTitle": "1. Is-server tiegħek (rakkomandat)",
-    "ownP": "Ikri server Linux żgħir, ipponta d-dominju tiegħek lejh u ħaddem kmand wieħed. L-installatur iniżżel il-portal, jieħu ċertifikat HTTPS b'xejn minn Let's Encrypt u jibda l-portal bħala servizz li jerġa' jqum waħdu wara li s-server jerġa' jinxtegħel.",
+    "ownP": "Ikri server Linux żgħir (kwalunkwe VPS, x86_64 jew arm64), ipponta d-dominju tiegħek lejh u installa l-portal bħala servizz, b'Caddy quddiemu għall-HTTPS awtomatiku. Is-servizz jerġa' jqum waħdu wara li s-server jerġa' jinxtegħel.",
     "needTitle": "X'għandek bżonn",
     "needItems": [
       "Server Linux (VPS) b'Ubuntu 22.04 jew 24.04, Debian 12 jew 13, jew simili. 1 GB ta' memorja huwa biżżejjed biex tibda. Kull fornitur jgħodd, pereżempju Hetzner Cloud, DigitalOcean, TransIP VPS jew Scaleway.",
       "Indirizz IPv4 pubbliku (l-IPv6 mhux obbligatorju), bil-portijiet 80 u 443 miftuħa.",
       "Dominju jew sottodominju għall-portal, pereżempju portal.yourbrand.mt."
     ],
-    "ownStepsTitle": "Tliet passi",
+    "ownStepsTitle": "Ħames passi",
     "ownSteps": [
-      "Oħloq is-server u ħu nota tal-indirizz IP tiegħu.",
-      "Ipponta portal.yourbrand.mt lejn is-server b'rekord DNS wieħed (ara hawn taħt).",
-      "Idħol fis-server bl-SSH u ħaddem dan il-kmand, bl-indirizz tiegħek:"
+      "Ipponta {domain} lejn is-server b'rekord A (ara hawn taħt).",
+      "Niżżel node-rs għas-server tiegħek mill-aħħar ħarġa u installah b'sudo install node-rs /usr/local/bin/.",
+      "Installa l-unit tas-systemd deploy/node-rs.service mir-repożitorju. Iħaddem il-portal bħala l-utent node-rs, iżomm id-data f'/var/lib/node-rs u jissettja OBX_PUBLIC_URL għal https://{domain}.",
+      "Installa Caddy u agħtih il-Caddyfile qasir hawn taħt. Jieħu ċ-ċertifikat HTTPS għalik u jgħaddi l-viżitaturi lill-portal.",
+      "Iftaħ https://{domain} u daħħal il-kodiċi tal-installazzjoni ta' darba minn journalctl -u node-rs."
     ],
-    "ownDone": "Meta jlesti, l-installatur juri l-indirizz tal-portal tiegħek u kodiċi tal-installazzjoni ta' darba. Iftaħ l-indirizz, daħħal il-kodiċi u lesti l-wizard tas-setup. Biex taġġorna aktar tard, erġa' ħaddem l-istess kmand: is-settings u d-data tiegħek jibqgħu.",
-    "ownTs": "Dan jinstalla l-edizzjoni Go, il-Portal għas-server tiegħek. Għall-edizzjoni TypeScript, żid --edition ts mal-istess kmand.",
     "ownEu": "Agħżel ċentru tad-data fl-UE, u l-katalgu, l-immaġini u d-database tiegħek jibqgħu fl-UE.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "Diġà tuża Docker? Fajl compose wieħed jibda l-portal (l-image ghcr.io/openbrandexchange/node-rs) flimkien ma' Caddy għall-HTTPS. L-ewwel ipponta d-dominju tiegħek lejn is-server (ara d-DNS hawn taħt), imbagħad ħaddem:",
+    "dockerDone": "Imbagħad iftaħ https://{domain} u daħħal il-kodiċi tal-installazzjoni ta' darba minn docker compose logs node-rs.",
     "dnsTitle": "DNS: ipponta d-dominju tiegħek lejn is-server",
     "dnsP": "Żid rekord wieħed mal-kumpanija li timmaniġġja d-dominju tiegħek:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Iċċekkja",
     "dnsCheckP": "Fuq il-kompjuter tiegħek, dan irid juri l-indirizz tas-server (jew uża għodda onlajn biex tiċċekkja d-DNS, bħal dnschecker.org):",
-    "dnsWait": "Normalment jieħu bejn 5 u 60 minuta, xi drabi ftit sigħat. L-installatur jiċċekkja wkoll u jgħidlek x'għadu nieqes.",
-    "optionsTitle": "L-għażliet tal-installatur",
-    "options": [
-      "l-indirizz tal-portal, pereżempju portal.yourbrand.mt (obbligatorju)",
-      "indirizz tal-email għal Let's Encrypt (mhux obbligatorju)",
-      "ħarġa speċifika minflok l-aħħar waħda",
-      "go (awtomatiku) jinstalla l-edizzjoni Go; ts jinstalla l-edizzjoni TypeScript",
-      "l-ebda HTTPS tiegħu: il-portal jisma' fuq 127.0.0.1:8080 wara s-server intermedjarju tiegħek",
-      "juri biss x'kien se jagħmel, ma jbiddel xejn",
-      "ineħħi l-programm u s-servizz; id-data u s-settings tiegħek jibqgħu (żid --purge biex tħassarhom ukoll)"
-    ],
-    "checksP": "Qabel ma jbiddel xejn, l-installatur jiċċekkja s-sistema (Linux amd64 jew arm64 b'systemd), id-drittijiet ta' root, l-ispazju fuq id-diska, li d-dominju jippunta lejn dan is-server, li l-portijiet 80 u 443 huma liberi, u l-firewall. B'ufw jew firewalld jipprintja l-kmand eżatt biex jiftaħ il-portijiet 80 u 443.",
-    "filesTitle": "Fejn jinsab kollox",
-    "filesHead": [
-      "X'inhu",
-      "Edizzjoni Go",
-      "Edizzjoni TypeScript"
-    ],
-    "filesRows": [
-      "Programm",
-      "Data",
-      "Settings",
-      "Servizz"
-    ],
+    "dnsWait": "Normalment jieħu bejn 5 u 60 minuta, xi drabi ftit sigħat. Caddy jieħu ċ-ċertifikat hekk kif id-dominju jippunta lejn is-server.",
+    "techTitle": "Dettalji tekniċi għat-tim tal-IT tiegħek",
+    "techLead": "Il-ħażna, is-settings, il-backups u l-aġġornamenti, għal min iwaqqaf is-server.",
+    "storageTitle": "Ħażna u settings",
+    "storageP": "Il-portal juża SQLite b'mod awtomatiku. Ir-ritratti jmorru fuq id-diska tas-server stess jew f'kwalunkwe bucket kompatibbli ma' S3 (OBX_BLOB_URL). Kull setting hija varjabbli tal-ambjent OBX_*, bl-istess ismijiet li kien juża node-go.",
     "commandsTitle": "Kmandi utli",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "L-ebda server x'timmaniġġja: il-portal jaħdem fuq il-kont tiegħek ta' Cloudflare. Ikklikkja l-buttuna, idħol u segwi l-passi.",
-    "cfDnsTitle": "DNS: dominju tiegħek fuq il-Worker",
-    "cfDnsP": "Żid l-indirizz bħala dominju tiegħek fuq il-Worker: Workers & Pages → il-Worker tiegħek → Settings → Domains & Routes → Add → Custom domain. Jekk id-dominju tiegħek diġà jinsab fuq Cloudflare, id-DNS u ċ-ċertifikat jiġu rranġati awtomatikament. Jekk le, l-ewwel ittrasferixxi d-DNS tad-dominju tiegħek għal Cloudflare (b'xejn; id-dominju jibqa' rreġistrat fejn hu), imbagħad żid id-dominju tiegħek. Imbagħad issettja OBX_PUBLIC_URL għal dak l-indirizz u erġa' ppubblika.",
-    "webDnsTitle": "DNS: sottodominju fil-panew tal-kontroll tiegħek",
-    "webDnsP": "Oħloq is-sottodominju fil-panew tal-kontroll tal-hosting tiegħek (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain, jew Subdomains; Plesk: Websites & Domains → Add Subdomain). Jekk id-DNS tad-dominju tiegħek huwa mal-istess kumpanija tal-hosting, dak kollox. Inkella żid rekord A għas-sottodominju li jippunta lejn l-indirizz IP tas-server tal-hosting, li jidher fil-panew. Imbagħad ixgħel Let's Encrypt għas-sottodominju fil-panew."
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy jitlob ċertifikat Let's Encrypt hekk kif id-dominju tiegħek jippunta lejn is-server, iġġeddu awtomatikament u jibgħat http lejn https. M'hemmx ċertifikat? Iċċekkja b'dig li d-dominju juri l-indirizz tas-server, u li l-portijiet 80 u 443 huma miftuħa.",
+    "backupTitle": "Backups",
+    "backupP": "Ixgħel il-backups tas-server tal-fornitur tiegħek, u żomm kopja kriptata tal-portal kull lejl ma' fornitur ieħor jew f'reġjun ieħor. Ipprova restore kull tliet xhur, biex tkun taf li jaħdem.",
+    "backupLink": "Backup f'post ieħor",
+    "updateTitle": "Aġġornamenti",
+    "updateP": "Agħmel backup u aqra n-noti tal-ħarġa. Fuq Linux, installa l-binarju l-ġdid bl-istess mod u erġa' ibda s-servizz. B'Docker, ħaddem docker compose pull u mbagħad docker compose up -d. Id-database tiġi aġġornata waħedha meta jibda.",
+    "releaseLink": "Niżżel l-aħħar ħarġa",
+    "migrateTitle": "Taqleb minn node-go, node-php jew node-ts",
+    "migrateP": "Id-data, ir-ritratti u s-settings tiegħek jiġu miegħek. Il-gwida tal-migrazzjoni għandha l-passi għal kull edizzjoni preċedenti.",
+    "migrateLink": "Aqra l-gwida tal-migrazzjoni",
+    "p1Title": "3. Sieħeb jospitah għalik",
+    "p1P": "Tippreferi ma tospitahx int? Is-sħab jistgħu jospitaw u jżommu l-portal għalik.",
+    "partnerLink": "Ara s-sħab",
+    "fieldBased": "Ibbażat f'",
+    "fieldLanguages": "Lingwi",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Esporta l-kontenut kollu tiegħek",
+    "fieldWebsite": "Sit web",
+    "listTitle": "Trid tidher hawn bħala fornitur?",
+    "listP": "Il-kriterji biex tidher hawn huma l-istess għal kulħadd:",
+    "listItems": [
+      "il-portal tiegħek jgħaddi mit-test ta' konformità tal-verżjoni attwali",
+      "marka tista' tesporta d-data u r-ritratti kollha tagħha u titlaq",
+      "tippubblika l-prezzijiet u t-termini tiegħek fuq is-sit tiegħek"
+    ],
+    "listHow": "Li tkun kompatibbli huwa b'xejn; post hawnhekk huwa parti mis-sħubija uffiċjali.",
+    "costTitle": "Bejn wieħed u ieħor, kemm jiswa",
+    "costItems": [
+      "Is-server tiegħek fl-UE: madwar €5 sa €15 fix-xahar għal server żgħir b'backups awtomatiċi, ma' fornitur bħal Hetzner. Ir-ritratti fuq id-diska tas-server stess ma jiswew xejn żejjed; object storage għal arkivju kbir iżid ftit ewro fix-xahar għal kull terabyte.",
+      "Sieħeb: il-prezz tiegħu. Staqsi x'jinkludi: aġġornamenti, backups, id-dominju tiegħek, u l-esportazzjoni ta' kollox jekk titlaq.",
+      "Il-ħin tiegħek: ippjana siegħa jew sagħtejn l-ewwel darba, inkluż id-dominju u test biex tirrestawra backup, u madwar siegħa fix-xahar għall-aġġornamenti u biex tiċċekkja l-backups."
+    ],
+    "costNote": "Prezzijiet indikattivi ta' Novembru 2026, mingħajr VAT. Iċċekkja l-prezzijiet attwali tal-fornitur qabel tagħżel.",
+    "firstTitle": "Wara l-installazzjoni: l-ewwel bidu",
+    "first": [
+      "Iftaħ l-indirizz tal-portal tiegħek fil-browser.",
+      "Daħħal il-kodiċi tal-installazzjoni ta' darba. Jinsab fil-log fl-ewwel bidu (journalctl -u node-rs, jew docker compose logs node-rs), jew issettjah minn qabel b'OBX_SETUP_CODE.",
+      "Imla l-kumpanija u l-ewwel marka tiegħek, u agħżel il-password tiegħek. Qatt ma jkun hemm password awtomatika."
+    ],
+    "firstWhy": "Il-kodiċi tas-setup jiżgura li ħadd ieħor ma jista' jieħu portal li għadu kif ġie installat.",
+    "domainTitle": "Id-dominju tiegħek",
+    "domainP": "Uża sottodominju bħal retailers.yourbrand.mt jew b2b.yourbrand.mt. Il-bejjiegħa mbagħad jaraw ismek, u l-indirizz jibqa' l-istess meta tbiddel il-hosting.",
+    "compareTitle": "Portal wieħed, miktub f'Rust",
+    "compareP": "Hemm portal ta' referenza wieħed, node-rs. Għandu l-istess amministrazzjoni u l-istess portal għall-bejjiegħa kull fejn jaħdem, għalhekk tista' taqleb bejn is-server tiegħek, Docker u sieħeb meta trid.",
+    "retireNote": "L-edizzjonijiet preċedenti node-go, node-php u node-ts qed jiġu rtirati."
   },
   "retailers": {
     "h1": "Għall-bejjiegħa",
@@ -712,10 +670,9 @@
       "speċifikazzjoni, skemi, data tat-test",
       "Go SDK, għodda obx, testijiet ta' konformità, server finta",
       "interfaċċa web kondiviża: amministrazzjoni u portal għall-bejjiegħa",
-      "Go: is-server tiegħek, b'installatur ta' linja waħda",
-      "PHP: web hosting normali",
-      "TypeScript: Cloudflare Workers"
+      "il-portal ta' referenza, f'Rust: Linux jew Docker"
     ],
+    "implRef": "Portal ta' referenza",
     "statusDraft": "0.3",
     "implP": "Qed tibni l-implimentazzjoni jew il-client tiegħek? Għarrafna b'issue jew pull request, u tidħol f'din it-tabella hekk kif tgħaddi mit-testijiet ta' konformità.",
     "docsTitle": "Dokumenti",
@@ -737,20 +694,12 @@
         "d": "L-ispeċifikazzjoni, l-iskemi u d-data tat-test"
       },
       {
+        "name": "node-rs",
+        "d": "Il-portal ta' referenza, f'Rust"
+      },
+      {
         "name": "obx-go",
         "d": "SDK tal-Go, l-għodda obx u t-test ta' konformità"
-      },
-      {
-        "name": "node-ts",
-        "d": "Portal għal Cloudflare Workers"
-      },
-      {
-        "name": "node-go",
-        "d": "Portal għas-server tiegħek"
-      },
-      {
-        "name": "node-php",
-        "d": "Portal għal web hosting normali"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Open source, fuq GitHub.",
     "reposTitle": "Repożitorji",
-    "reposP": "Kollox huwa open source fuq GitHub: l-ispeċifikazzjoni, il-kodiċi komuni u t-tliet edizzjonijiet tal-portal.",
+    "reposP": "Kollox huwa open source fuq GitHub: l-ispeċifikazzjoni, il-kodiċi komuni u l-portal ta' referenza f'Rust.",
     "newTitle": "X'hemm ġdid fil-verżjoni 0.3",
     "newItems": [
       "Il-materjali u l-kura huma kodiċijiet b'ismijiet bl-Ingliż, bl-Olandiż, bil-Ġermaniż u bil-Franċiż, minn vokabularji komuni ppubblikati f'/vocabularies/v0.3/.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "Huwa lest?",
-        "a": "Iva, il-verżjoni 0.3: l-ispeċifikazzjoni, it-tliet edizzjonijiet tal-portal u l-għodod ħarġu u huma ħielsa biex tużahom. Għadna fil-bidu: l-ewwel marki qed jingħaqdu issa."
+        "a": "Iva, il-verżjoni 0.3: l-ispeċifikazzjoni u l-għodod ħarġu u huma ħielsa biex tużahom, u l-portal jaħdem f'Rust. Għadna fil-bidu: l-ewwel marki qed jingħaqdu issa."
       },
       {
         "q": "Min hemm warajh?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Liċenzji",
-        "p": "L-ispeċifikazzjoni hija CC-BY-4.0. L-SDK, l-għodda obx u l-interfaċċa web kondiviża huma Apache-2.0. It-tliet edizzjonijiet tal-portal huma AGPL-3.0, biex it-titjib fihom jibqa' miftuħ. Dan is-sit web m'għandux liċenzja miftuħa: il-kodiċi, id-disinn u t-testi tiegħu huma kollha bid-drittijiet riżervati. Il-fajls tal-ispeċifikazzjoni li jservi, bħall-iskemi, il-mudelli u l-eżempji, iżommu l-liċenzja CC-BY-4.0 tagħhom."
+        "p": "L-ispeċifikazzjoni hija CC-BY-4.0. L-SDK, l-għodda obx u l-interfaċċa web kondiviża huma Apache-2.0. Il-portal, node-rs, huwa AGPL-3.0, biex it-titjib fih jibqa' miftuħ. Dan is-sit web m'għandux liċenzja miftuħa: il-kodiċi, id-disinn u t-testi tiegħu huma kollha bid-drittijiet riżervati. Il-fajls tal-ispeċifikazzjoni li jservi, bħall-iskemi, il-mudelli u l-eżempji, iżommu l-liċenzja CC-BY-4.0 tagħhom."
       }
     ],
     "nameTitle": "Dwar l-isem",
@@ -1036,7 +985,7 @@
       "Tella' l-esportazzjoni Excel u r-ritratti tiegħek bl-idejn, jew ħallihom jinġabru kull lejl",
       "Twassil awtomatiku mill-PIM, l-ERP jew folder kondiviż tiegħek",
       "Talbiet għall-aċċess, stediniet u ċwievet API għas-software tal-bejjiegħa tiegħek",
-      "Tliet edizzjonijiet: is-server tiegħek, Cloudflare Workers u web hosting ordinarju"
+      "Portal wieħed f'Rust: fuq is-server Linux tiegħek jew b'Docker"
     ],
     "brandsComing": [
       "L-ewwel ħarġa pubblika, b'installazzjoni bi klikk waħda",
@@ -1098,8 +1047,8 @@
           "l": "standard, b'xejn għal kulħadd"
         },
         {
-          "v": "3",
-          "l": "edizzjonijiet tal-portal"
+          "v": "61",
+          "l": "kontrolli ta' konformità awtomatiċi"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Ħaddmu fejn trid. Ħallas il-hosting biss.",
-      "editionsLead": "Tliet edizzjonijiet tal-istess portal tar-ritratti. Jaħdmu bl-istess mod, għalhekk tista' taqleb minn waħda għall-oħra fi kwalunkwe ħin.",
+      "editionsLead": "OBX jaħdem f'Rust: portal tar-ritratti wieħed li tospita fuq is-server Linux tiegħek jew b'Docker, jew li sieħeb jospita għalik. Tista' tiċċaqlaq meta trid.",
       "editionsLink": "Qabbel l-għażliet ta' hosting",
       "editionFields": [
         "Jaħdem fuq",
@@ -1197,27 +1146,18 @@
           "name": "Is-server tiegħek",
           "runs": "Kwalunkwe server Linux (VPS), pereżempju ma' Hetzner, DigitalOcean, TransIP jew Scaleway",
           "need": "Server, isem ta' dominju u aċċess SSH",
-          "setup": "Kmand wieħed, imbagħad il-wizard tas-setup",
+          "setup": "Installa l-programm u Caddy, imbagħad il-wizard tas-setup",
           "cost": "Madwar €5 sa €15 fix-xahar għal server żgħir b'backups",
           "cta": "Installa fuq is-server tiegħek"
         },
         {
-          "tag": "Mingħajr server",
-          "name": "Cloudflare Workers",
-          "runs": "Il-kont tiegħek ta' Cloudflare, b'D1 bħala d-database u R2 għall-immaġini",
-          "need": "Kont ta' Cloudflare fuq il-pjan Workers Paid",
-          "setup": "Klikk waħda, imbagħad il-wizard tas-setup",
-          "cost": "5 dollari fix-xahar flimkien mal-ħażna",
-          "cta": "Waqqaf fuq Cloudflare"
-        },
-        {
-          "tag": "Mingħajr kmandi",
-          "name": "Web hosting ordinarju",
-          "runs": "Web hosting Ewropew b'PHP u database, bħal TransIP, Strato jew OVHcloud",
-          "need": "Programm FTP",
-          "setup": "Tella' zip, imbagħad l-installatur",
-          "cost": "Il-hosting li diġà tħallas għalih (PHP 8.2 jew aktar ġdid)",
-          "cta": "Installa fuq web hosting"
+          "tag": "Containers",
+          "name": "Docker",
+          "runs": "Kwalunkwe server b'Docker u Docker Compose",
+          "need": "Docker, isem ta' dominju u aċċess SSH",
+          "setup": "Fajl compose wieħed, imbagħad il-wizard tas-setup",
+          "cost": "Madwar €5 sa €15 fix-xahar għal server żgħir b'backups",
+          "cta": "Ibda b'Docker"
         },
         {
           "tag": "L-eħfef",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Il-portal tar-ritratti tiegħek, fuq l-istandard miftuħ.",
       "retailersSoftware": "Għas-software tiegħek",
-      "hostingEditions": "It-tliet edizzjonijiet"
+      "hostingEditions": "Modi kif tħaddmu"
     }
   },
   "partners": {

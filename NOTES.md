@@ -51,9 +51,11 @@ instead of as TODOs in the code. Report changes to the spec repository if they m
    optional logo (light and dark version in `src/assets/providers/`). Since 2026-11-12 Photopilot
    is listed without a label; its relation to the founder is disclosed on the governance page
    (conflict-of-interest rule).
-10. **Edition names.** "Portal for Cloudflare" (node-ts), "Portal for Google Cloud & Docker"
-    (node-go), "Portal for web hosting" (node-php), translated per language. Repo names appear only
-    as links.
+10. **One edition.** Since 2026-11-25 the site presents one reference portal, node-rs (Rust), with
+    one way on a Linux server (systemd + Caddy) and one with Docker (compose file); a partner only
+    through the providers list. node-go, node-php and node-ts are named only as retiring editions,
+    with a link to node-rs `docs/migrating.md`. `/install.sh` (public/_redirects) still serves
+    existing node-go portals but is no longer shown.
 11. **Switch-kit e-mails.** Written for every language; the retailers page shows the page language
     plus English; downloads are generated at build time (`/downloads/switch-kit-<lang>.txt`).
 12. **Provider texts** use the LocalizedText fallback (reader's language → en → first).

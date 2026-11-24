@@ -166,18 +166,6 @@ test('the cookie statement and the privacy page say there are no cookies', { ski
   assert.match(read('en/privacy/index.html'), /Autoriteit Persoonsgegevens/);
 });
 
-test('the web hosting steps match the release: its file name, the writable folders, the setup code file and the cron job', { skip: !built && 'dist/ not built' }, () => {
-  for (const lang of langs) {
-    const html = read(`${lang}/hosting/index.html`);
-    const steps = html.slice(html.indexOf('id="web-hosting"'), html.indexOf('id="providers"'));
-    assert.ok(steps.includes('obx-portal-php-&lt;version&gt;.zip'), `${lang}: release file name`);
-    assert.doesNotMatch(steps, /obx-node-php\.zip/, `${lang}: old file name`);
-    assert.ok(steps.includes('data/SETUP-CODE.txt'), `${lang}: where the setup code is`);
-    assert.match(steps, /775/, `${lang}: folder permissions`);
-    assert.match(steps, /cron/i, `${lang}: cron job`);
-  }
-});
-
 test('the automation page names the admin menus as the portal shows them', { skip: !built && 'dist/ not built' }, async () => {
   const { readFile } = await import('node:fs/promises');
   for (const lang of langs) {
@@ -200,13 +188,8 @@ test('the automation page names the import modes and the connection test as the 
   }
 });
 
-test('the Cloudflare edition says which plan it needs and where its web versions come from', { skip: !built && 'dist/ not built' }, () => {
-  for (const lang of langs) {
-    assert.ok(read(`${lang}/hosting/index.html`).includes('Workers Paid'), `${lang}: hosting names the Workers Paid plan`);
-    assert.match(read(`${lang}/automation/index.html`), /obx/, `${lang}: automation names obx`);
-  }
-  // A scheduled import delivers originals only; on Cloudflare it does not make web versions.
-  assert.doesNotMatch(read('en/automation/index.html'), /use a scheduled import or obx: they make them/);
+test('the automation page names the obx tool in every language', { skip: !built && 'dist/ not built' }, () => {
+  for (const lang of langs) assert.match(read(`${lang}/automation/index.html`), /obx/, `${lang}: automation names obx`);
 });
 
 test('the example files are one download in every language', { skip: !built && 'dist/ not built' }, () => {
@@ -218,21 +201,38 @@ test('the example files are one download in every language', { skip: !built && '
   for (const lang of langs) assert.ok(read(`${lang}/downloads/index.html`).includes('href="/downloads/maison-noor-example.zip?v='), `${lang}: link`);
 });
 
-test('the own-server route is the one-line installer, with the DNS record, in every language; no container routes', { skip: !built && 'dist/ not built' }, () => {
-  const routes = /docker|ghcr\.io|cloud ?run|cloudrun|fly\.io|railway|render\.com|compose/i;
+test('hosting is one edition, node-rs: a Linux server or Docker, with the DNS record, in every language', { skip: !built && 'dist/ not built' }, () => {
+  const paas = /cloud ?run|cloudrun|fly\.io|railway|render\.com/i;
   for (const lang of langs) {
-    const html = read(`${lang}/hosting/index.html`).replaceAll('&gt;', '>').replaceAll('&amp;', '&').replaceAll('&quot;', '"');
-    const own = html.slice(html.indexOf('id="own-server"'), html.indexOf('id="cloudflare"'));
-    assert.match(own, /curl -fsSL https:\/\/openbrandexchange\.com\/install\.sh \| sudo sh -s -- --domain portal\.[a-z0-9-]+\.[a-z]{2,}/, `${lang}: the install command`);
-    assert.ok(own.includes('--edition ts'), `${lang}: the TypeScript edition through the same installer`);
-    assert.match(own, /<code>A<\/code>[\s\S]*<code>portal<\/code>/, `${lang}: the A record`);
-    for (const p of ['TransIP', 'Hostnet', 'Strato', 'one.com', 'Cloudflare DNS', 'GoDaddy']) assert.ok(own.includes(p), `${lang}: click path for ${p}`);
-    assert.match(own, /dig \+short portal\./, `${lang}: how to check the DNS`);
-    assert.ok(own.includes('node-go backup --to /var/lib/node-go/backups/'), `${lang}: nightly backup with node-go backup`);
-    assert.doesNotMatch(html, routes, `${lang}: hosting names a container or PaaS route`);
+    const html = read(`${lang}/hosting/index.html`).replaceAll('&gt;', '>').replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#39;', "'");
+    const own = html.slice(html.indexOf('id="own-server"'), html.indexOf('id="docker"'));
+    assert.ok(own.includes('https://github.com/openbrandexchange/node-rs/releases/latest'), `${lang}: the node-rs release`);
+    assert.ok(own.includes('sudo install node-rs /usr/local/bin/'), `${lang}: installing the binary`);
+    assert.ok(own.includes('deploy/node-rs.service'), `${lang}: the systemd unit`);
+    assert.match(own, /OBX_PUBLIC_URL=https:\/\/portal\.[a-z0-9-]+\.[a-z]{2,}/, `${lang}: the public URL`);
+    assert.match(own, /portal\.[a-z0-9-]+\.[a-z]{2,} \{\s+reverse_proxy 127\.0\.0\.1:8080\s+\}/, `${lang}: the Caddyfile`);
+    assert.ok(own.includes('journalctl -u node-rs'), `${lang}: where the setup code is`);
+    assert.doesNotMatch(own, /\{domain\}/, `${lang}: placeholder filled in`);
+    const docker = html.slice(html.indexOf('id="docker"'), html.indexOf('id="dns"'));
+    assert.ok(docker.includes('curl -fsSLO https://raw.githubusercontent.com/openbrandexchange/node-rs/main/deploy/compose.yaml'), `${lang}: the compose file`);
+    assert.match(docker, /DOMAIN=portal\.[a-z0-9-]+\.[a-z]{2,} docker compose up -d/, `${lang}: docker compose up`);
+    assert.ok(docker.includes('ghcr.io/openbrandexchange/node-rs'), `${lang}: the image`);
+    assert.ok(docker.includes('docker compose logs node-rs'), `${lang}: the setup code with Docker`);
+    const dns = html.slice(html.indexOf('id="dns"'), html.indexOf('id="technical"'));
+    assert.match(dns, /<code>A<\/code>[\s\S]*<code>portal<\/code>/, `${lang}: the A record`);
+    for (const p of ['TransIP', 'Hostnet', 'Strato', 'one.com', 'Cloudflare DNS', 'GoDaddy']) assert.ok(dns.includes(p), `${lang}: click path for ${p}`);
+    assert.match(dns, /dig \+short portal\./, `${lang}: how to check the DNS`);
+    assert.ok(html.includes('href="https://github.com/openbrandexchange/node-rs/blob/main/docs/backup.md"'), `${lang}: offsite backups`);
+    assert.ok(html.includes('href="https://github.com/openbrandexchange/node-rs/blob/main/docs/migrating.md"'), `${lang}: moving from an earlier edition`);
+    assert.ok(html.includes('OBX_BLOB_URL'), `${lang}: S3-compatible storage`);
+    assert.doesNotMatch(html, paas, `${lang}: hosting names a PaaS route`);
   }
+});
+
+test('no page offers the retired editions: no PHP or Cloudflare edition, no Deploy to Cloudflare, no installer flags', { skip: !built && 'dist/ not built' }, () => {
+  const retired = /deploy\.workers\.cloudflare\.com|github\.com\/openbrandexchange\/node-(go|php|ts)\b|obx-portal-php|Workers Paid|install\.sh|--edition|wrangler/;
   for (const lang of langs) {
-    for (const slug of slugs) assert.doesNotMatch(read(`${lang}/${slug}index.html`).replace(/<script[\s\S]*?<\/script>/g, ''), /docker|ghcr\.io|cloud ?run|cloudrun/i, `${lang}/${slug}`);
+    for (const slug of slugs) assert.doesNotMatch(read(`${lang}/${slug}index.html`), retired, `${lang}/${slug}`);
   }
 });
 

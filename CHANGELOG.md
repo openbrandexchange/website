@@ -5,6 +5,15 @@ its texts; the repository itself is versioned with [Semantic Versioning](https:/
 
 ## [Unreleased]
 
+### Changed
+- One edition: OBX runs in Rust. Hosting, Developers, the home page and the brochures present one
+  reference portal, node-rs, with one way on a Linux server (the binary from the node-rs release, the
+  systemd unit `deploy/node-rs.service`, Caddy for HTTPS) and one with Docker
+  (`deploy/compose.yaml`), storage and settings, offsite backups (`docs/backup.md`) and moving from
+  the earlier editions (`docs/migrating.md`). The PHP and Cloudflare editions, the "Deploy to
+  Cloudflare" button and the one-line installer are gone from the pages; `/install.sh` still
+  redirects for existing node-go portals. In all 25 languages.
+
 ### Added
 - Specification 0.3.1 (2026-11-21): the download links carry `?v=0.3.1` and the discovery example says
   `"spec_version": "0.3.1"`; the reference already shows 0.3.1 (portal appearance in the Node Admin API).

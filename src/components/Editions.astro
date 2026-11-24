@@ -1,5 +1,5 @@
 ---
-// The four ways to run a portal, side by side with the same rows (subgrid).
+// The ways to run the portal (node-rs), side by side with the same rows (subgrid).
 import Icon from './Icon.astro';
 import { messages, url, type Lang } from '../i18n';
 
@@ -9,9 +9,9 @@ interface Props {
 const { lang } = Astro.props;
 const t = messages[lang];
 const h = t.site.home;
-// The three ways to run it yourself, simplest first: an own server with the one-line installer
-// (node-go), Cloudflare Workers (node-ts) and ordinary web hosting (node-php); then a partner.
-const links = [url(lang, 'hosting', '#own-server'), url(lang, 'hosting', '#cloudflare'), url(lang, 'hosting', '#web-hosting'), url(lang, 'hosting', '#providers')];
+// One portal, written in Rust (node-rs). Two ways to run it yourself, simplest first: a Linux
+// server (a service behind Caddy) and Docker; then a partner from the providers list.
+const links = [url(lang, 'hosting', '#own-server'), url(lang, 'hosting', '#docker'), url(lang, 'hosting', '#providers')];
 ---
 
 <ul class="editions">

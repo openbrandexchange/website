@@ -5,7 +5,7 @@
 Key facts:
 
 - Specification: version 0.3, OpenAPI 3.1 and JSON Schema, licensed CC-BY-4.0. Anyone may implement it, commercially too.
-- Software: three portal editions under AGPL-3.0: Go (your own Linux server, installed with one command: `curl -fsSL https://openbrandexchange.com/install.sh | sudo sh -s -- --domain portal.yourbrand.com`, with HTTPS built in; the recommended setup is a server in the EU), PHP (ordinary web hosting) and Cloudflare Workers. The Go SDK, the `obx` command-line tool and the admin web interface are Apache-2.0.
+- Software: one reference portal, node-rs, written in Rust, under AGPL-3.0. Brands host it themselves on a Linux server (x86_64 or arm64; a systemd service with Caddy in front for automatic HTTPS) or with Docker (`curl -fsSLO https://raw.githubusercontent.com/openbrandexchange/node-rs/main/deploy/compose.yaml`, then `DOMAIN=portal.yourbrand.com docker compose up -d`), or a partner hosts it. SQLite by default, images on local disk or any S3-compatible bucket, settings as `OBX_*` environment variables. The earlier editions node-go, node-php and node-ts are being retired ([migrating](https://github.com/openbrandexchange/node-rs/blob/main/docs/migrating.md)). The Go SDK, the `obx` command-line tool, the conformance checker `obx-conformance` and the admin web interface are Apache-2.0.
 - Conformance: the open-source test `obx-conformance` runs 61 automated checks in four profiles (protocol, ingest, portal, security). Testing and the label "Compatible with Open Brand Exchange" are free.
 - Official partners: a paid listing on the website. Proposed annual fees, which apply only once the foundation is registered: €0 for one person, €500, €2,500 or €10,000 by company size. The same criteria apply to everyone, starting with a passed conformance test. Partners have no more say in the standard than anyone else.
 - Article data: fibre composition per part, with recycled and organic flags, as required by EU Regulation 1007/2011; animal origin; footwear materials per Directive 94/11/EC; ISO 3758 care symbols; country of origin; measurements for bags, luggage and shoes (height, width, depth, weight, volume, handle drop, strap length, heel height); features such as wheels or a detachable strap; certifications; colour families.
@@ -18,8 +18,7 @@ Key facts:
 - [For brands](https://openbrandexchange.com/en/for-brands/): what a brand gets, and the four steps from spreadsheet to every retailer
 - [Excel template](https://openbrandexchange.com/downloads/products.xlsx): the import columns with drop-down lists and an explanation in English and Dutch
 - [Automation](https://openbrandexchange.com/en/automation/): scheduled import, the obx tool, GitHub Actions, n8n, Make and Zapier
-- [Hosting](https://openbrandexchange.com/en/hosting/): your own server with the one-line installer (and the DNS record to add), Cloudflare Workers, ordinary web hosting, or a partner
-- [Installer](https://openbrandexchange.com/install.sh): the shell script behind the one-line install (redirects to the latest node-go release); options --domain, --email, --version, --edition go|ts, --behind-proxy, --dry-run, --uninstall
+- [Hosting](https://openbrandexchange.com/en/hosting/): the Rust portal on your own Linux server or with Docker (and the DNS record to add), backups, moving from an earlier edition, or a partner
 
 ## For retailers and software vendors
 

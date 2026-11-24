@@ -14,15 +14,12 @@
     "footerMore": "Továbbiak",
     "footerSource": "Forráskód és specifikáció",
     "footerLicence": "© 2026 {foundation}. Minden jog fenntartva. A specifikáció CC-BY-4.0 licencű.",
-    "editionCloudflare": "Portál Cloudflare-re",
-    "editionHosting": "Portál webtárhelyre",
     "yes": "Igen",
     "inDevelopment": "Fejlesztés alatt",
     "available": "Elérhető",
     "footerContact": "Kapcsolat",
     "madeInEu": "Az EU-ban készült",
-    "footerDiscuss": "Csatlakozzon a beszélgetéshez",
-    "editionServer": "Portál saját szerverre"
+    "footerDiscuss": "Csatlakozzon a beszélgetéshez"
   },
   "nav": {
     "brands": "Márkáknak",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Üzemeltetés",
-      "description": "Az Ön képportálja ott, ahol szeretné: saját szerveren egyetlen paranccsal, Cloudflare Workers-en, hagyományos webtárhelyen vagy egy partnernél."
+      "description": "Az Ön képportálja ott, ahol szeretné: a Rust-portál saját Linux-szerveren vagy Dockerrel, vagy egy partnernél."
     },
     "retailers": {
       "title": "Viszonteladóknak",
@@ -361,7 +358,6 @@
     "httpProduct": "Cikk (például ha a PIM-ben módosul)",
     "httpVariant": "Szín és méret, EAN-nal",
     "httpImage": "Fotó: előbb az adatok, aztán maga a fájl",
-    "httpImageNote": "A Portál Cloudflare-re maga nem készít webes változatokat a fotókról. Ott az obx eszközzel vagy az adminisztráció „Importálások” menüpontjában publikáljon: ezek elkészítik Ön helyett. A más úton érkező fotók, például ütemezett importból, addig eredeti méretben jelennek meg.",
     "httpOffline": "Valami visszavonása",
     "httpHooks": "Szeretne jelzést kapni, ha történik valami? Az adminisztrációban adjon hozzá értesítést (webhook) egy befejezett importhoz vagy egy új hozzáférési kérelemhez, és indítson vele triggert az n8n-ben, a Make-ben vagy a Zapierben.",
     "apiTitle": "6. Közvetlenül az API (fejlesztőknek)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Üzemeltetés",
-    "lead": "Minden márkának saját képportálja van. Telepítse saját szerverre egyetlen paranccsal, futtassa Cloudflare Workers-en, töltse fel hagyományos webtárhelyre, vagy bízza egy partnerre az üzemeltetést.",
-    "p1Title": "4. Egy partner üzemelteti Ön helyett",
-    "p1P": "Nem szeretné maga üzemeltetni? A partnerek üzemeltethetik és karbantarthatják Ön helyett a portált.",
-    "fieldBased": "Székhely",
-    "fieldLanguages": "Nyelvek",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "Minden tartalom exportálása",
-    "fieldWebsite": "Weboldal",
-    "listTitle": "Szeretne itt szolgáltatóként szerepelni?",
-    "listP": "Az itt való szerepléshez szükséges feltételek mindenkire ugyanazok:",
-    "listItems": [
-      "portálja átmegy a jelenlegi verzió megfelelőségi tesztjén",
-      "a márka minden adatát és képét exportálhatja, és távozhat",
-      "árait és feltételeit a saját webhelyén teszi közzé"
-    ],
-    "listHow": "A kompatibilitás ingyenes; az itteni megjelenés a hivatalos partnerség része.",
-    "cfP": "Cloudflare Workers-en fut, adatbázisként D1-gyel, a képekhez R2-vel. Kattintson a gombra, jelentkezzen be a Cloudflare-be, és kövesse a lépéseket. A napi használatú portálhoz a Workers Paid csomag kell (havi 5 dollár); az ingyenes csomag csak körülnézésre elég. A fotói webes változatait a böngészője és az obx eszköz készíti el.",
-    "cfButton": "Telepítés Cloudflare-re",
-    "phpP": "Ahhoz a webtárhelyhez, amely talán már megvan, PHP-val és adatbázissal. Nincs szükség parancsokra:",
-    "phpSteps": [
-      "Töltse le az obx-portal-php-<version>.zip fájlt a legújabb kiadásból.",
-      "Csomagolja ki, és töltse fel a mappát (S)FTP-n a tárhelyére.",
-      "Irányítsa (al)domainjét, például viszontelado.markaja.hu, a public mappára.",
-      "Tegye írhatóvá a data és a config mappát (jogosultság 775; ha a telepítő továbbra is nem írhatót jelez, 777).",
-      "Nyissa meg a címet. A telepítő ellenőrzi a szervert, és elkéri a telepítési kódot a data/SETUP-CODE.txt fájlból, amelyet FTP-programmal nyit meg. Ezután kattintson erre: „A beállítási varázsló megnyitása“.",
-      "A telepítő által mutatott cron-címet vegye fel cron-feladatként a tárhely vezérlőpultján, 5 percenként. Enélkül is működik a portál."
-    ],
-    "phpDownload": "A legújabb kiadás letöltése",
-    "firstTitle": "Telepítés után: az első indítás",
-    "first": [
-      "Nyissa meg a portál címét a böngészőben.",
-      "Adja meg az egyszer használatos telepítési kódot. A saját szerveren a telepítő a végén megmutatja. Egyébként az első indításkor a naplóban találja (Portál webtárhelyre: a data/SETUP-CODE.txt fájlban, és a telepítő kitölti Ön helyett), vagy előre beállíthatja az OBX_SETUP_CODE értékkel.",
-      "Adja meg cégét és első márkáját, és válasszon saját jelszót. Alapértelmezett jelszó soha nincs."
-    ],
-    "firstWhy": "A telepítési kód biztosítja, hogy senki más ne vehesse át a frissen telepített portált.",
-    "domainTitle": "Saját domain",
-    "domainP": "Használjon aldomaint, például viszontelado.markaja.hu vagy b2b.markaja.hu. A viszonteladók így az Ön nevét látják, és a cím akkor is ugyanaz marad, ha üzemeltetőt vált.",
-    "compareTitle": "Három kiadás, egy portál",
-    "compareP": "A három kiadás ugyanazt tudja, és ugyanaz az adminisztrációja és viszonteladói portálja. Válassza azt, amelyik illik a tárhelyéhez; később válthat.",
-    "compareLink": "Az implementációk megtekintése",
+    "lead": "Minden márkának saját képportálja van. Az OBX Rustban fut: telepítse saját Linux-szerverre vagy Dockerrel, vagy bízza egy partnerre az üzemeltetést.",
     "heroTitle": "Az Ön képportálja, ott, ahol szeretné.",
-    "heroLead": "A szoftver ingyenes. A legegyszerűbb egy kis saját szerver és egyetlen parancs. Bármikor költözhet.",
+    "heroLead": "A szoftver ingyenes, és Rustban fut. A legegyszerűbb egy kis saját szerver, szolgáltatásként vagy Dockerrel. Bármikor költözhet.",
     "heroChecks": [
       "Ingyenes szoftver, csak az üzemeltetésért fizet",
-      "Egyetlen parancs telepíti a portált, HTTPS-sel együtt",
+      "Egyetlen program Rustban, automatikus HTTPS-sel a Caddyn keresztül",
       "Mindenhol ugyanaz a portál, így bármikor válthat",
       "Nem szeretné maga csinálni? Egy partner üzemelteti Ön helyett"
     ],
-    "webTitle": "3. Hagyományos webtárhely",
-    "webP": "A PHP-kiadás hagyományos európai webtárhelyen fut PHP-val és adatbázissal, például a TransIP-nél, a Stratónál vagy az OVHcloudnál. Nincs szükség parancsokra:",
-    "partnerLink": "Partnerek megtekintése",
-    "techTitle": "Műszaki részletek az IT-csapatának",
-    "techLead": "Telepítési beállítások, fájlok, biztonsági mentések és frissítések annak, aki a szervert beállítja.",
-    "costTitle": "Mennyibe kerül nagyjából",
-    "costItems": [
-      "Saját szerver az EU-ban: havi kb. 5–15 € egy kis szerverért automatikus biztonsági mentéssel, például a Hetznernél. A szerver saját lemezén tárolt fotók nem kerülnek többe; egy nagy archívum objektumtárhelye terabájtonként havi néhány euróval növeli a költséget.",
-      "Hagyományos webtárhely: a csomag, amelyért már most is fizet, ha PHP 8.2 vagy újabb verzió fut rajta.",
-      "Cloudflare Workers: havi 5 dollár a Workers Paid csomagért, plusz R2-tárhely, havonta kb. 1,50 dollár 100 GB fotónként. Letöltési díj nincs.",
-      "Partner: a partner saját ára. Kérdezze meg, mit tartalmaz: frissítéseket, biztonsági mentéseket, saját domaint, és minden adat exportálását, ha továbblép.",
-      "A saját ideje: első alkalommal számoljon egy-két órával, beleértve a domaint és egy biztonsági mentés próba-visszaállítását, utána havonta kb. egy órával a frissítésekre és a mentések ellenőrzésére."
-    ],
-    "costNote": "Tájékoztató árak 2026 novemberéből, áfa nélkül. Választás előtt ellenőrizze a szolgáltató aktuális árait.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "A Go-változat maga kér Let's Encrypt-tanúsítványt, amint a domain a szerverre mutat, automatikusan megújítja, és a http-t https-re irányítja. A TypeScript-változat ugyanezt a Caddyvel teszi, amelyet a telepítő állít be. Nincs tanúsítvány? Ellenőrizze dig-gel, hogy a domain a szerver címét mutatja-e, és hogy a 80-as és 443-as port nyitva van-e.",
-    "backupTitle": "Biztonsági mentés",
-    "backupP": "Kapcsolja be a szolgáltatója szervermentéseit, és állítson be egy éjszakai portálmentést, amelyet a szerveren kívülre is átmásol. A titkos kulcsot tartsa külön, egy jelszókezelőben: ez az OBX_SECRET_KEY a beállításfájlban, vagy a secret.key az adatmappában. Nélküle egy mentést nem lehet teljesen visszaállítani. Próbáljon ki egyszer egy visszaállítást, hogy tudja, működik.",
-    "updateTitle": "Frissítések",
-    "updateP": "Készítsen mentést, és olvassa el a kiadási megjegyzéseket. Ezután futtassa újra ugyanazt a telepítési parancsot: telepíti a legújabb kiadást, megtartja a beállításokat és az adatokat, és újraindítja a portált. Az adatbázis induláskor magától frissül.",
-    "cfCliP": "Vagy a saját számítógépéről, a Bun és a Wrangler eszköz segítségével:",
-    "cfBackupP": "Biztonsági mentés: Workers Paid csomaggal a D1 30 napnyi adatbázis-előzményt őriz meg (Time Travel). Ha a Cloudflare-en kívül is szeretne másolatot, rendszeresen exportálja az adatbázist. A képek az R2-ben vannak; a bucketet bármilyen S3-eszközzel átmásolhatja.",
-    "cfUpdateP": "Frissítések: olvassza be az új kiadást a repository saját példányába, és pusholja; a Cloudflare újra telepíti.",
     "installCta": "Telepítés saját szerverre",
     "exampleDomain": "portal.markaja.hu",
     "ownTitle": "1. Saját szerver (ajánlott)",
-    "ownP": "Béreljen egy kis Linux-szervert, irányítsa rá a domainjét, és futtasson egyetlen parancsot. A telepítő letölti a portált, ingyenes HTTPS-tanúsítványt kér a Let's Encrypttől, és szolgáltatásként indítja el a portált, amely újraindítás után magától visszajön.",
+    "ownP": "Béreljen egy kis Linux-szervert (bármilyen VPS, x86_64 vagy arm64), irányítsa rá a domainjét, és telepítse a portált szolgáltatásként, elé pedig a Caddyt az automatikus HTTPS-hez. A szolgáltatás újraindítás után magától visszajön.",
     "needTitle": "Amire szüksége van",
     "needItems": [
       "Egy Linux-szerver (VPS) Ubuntu 22.04-gyel vagy 24.04-gyel, Debian 12-vel vagy 13-mal vagy hasonlóval. Kezdésnek 1 GB memória elég. Bármelyik szolgáltató megfelel, például a Hetzner Cloud, a DigitalOcean, a TransIP VPS vagy a Scaleway.",
       "Egy nyilvános IPv4-cím (az IPv6 nem kötelező), nyitott 80-as és 443-as porttal.",
       "Egy domain vagy aldomain a portálnak, például portal.markaja.hu."
     ],
-    "ownStepsTitle": "Három lépés",
+    "ownStepsTitle": "Öt lépés",
     "ownSteps": [
-      "Hozza létre a szervert, és jegyezze fel az IP-címét.",
-      "Irányítsa a portal.markaja.hu címet a szerverre egyetlen DNS-rekorddal (lásd lent).",
-      "Jelentkezzen be a szerverre SSH-val, és futtassa ezt a parancsot a saját címével:"
+      "Irányítsa a {domain} címet a szerverre egy A rekorddal (lásd lent).",
+      "Töltse le a szerverének megfelelő node-rs fájlt a legújabb kiadásból, és telepítse ezzel: sudo install node-rs /usr/local/bin/.",
+      "Telepítse a tárolóból a deploy/node-rs.service systemd unitot. Ez node-rs felhasználóként futtatja a portált, az adatokat a /var/lib/node-rs mappában tartja, és az OBX_PUBLIC_URL értékét https://{domain} címre állítja.",
+      "Telepítse a Caddyt, és adja meg neki a lenti rövid Caddyfile-t. Megszerzi Ön helyett a HTTPS-tanúsítványt, és továbbítja a látogatókat a portálhoz.",
+      "Nyissa meg a https://{domain} címet, és adja meg az egyszer használatos telepítési kódot a journalctl -u node-rs kimenetéből."
     ],
-    "ownDone": "A végén a telepítő megmutatja a portál címét és egy egyszer használatos telepítési kódot. Nyissa meg a címet, adja meg a kódot, és menjen végig a beállítási varázslón. Későbbi frissítéshez futtassa újra ugyanazt a parancsot: a beállítások és az adatok megmaradnak.",
-    "ownTs": "Ez a Go-változatot telepíti, vagyis a Portál saját szerverre változatot. A TypeScript-változathoz adja hozzá ugyanahhoz a parancshoz a --edition ts kapcsolót.",
     "ownEu": "Válasszon adatközpontot az EU-ban, és a katalógusa, a képei és az adatbázisa az EU-ban maradnak.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "Már használ Dockert? Egyetlen compose fájl elindítja a portált (a ghcr.io/openbrandexchange/node-rs image-et) a HTTPS-t biztosító Caddyvel együtt. Előbb irányítsa a domainjét a szerverre (lásd lent a DNS-t), majd futtassa:",
+    "dockerDone": "Ezután nyissa meg a https://{domain} címet, és adja meg az egyszer használatos telepítési kódot a docker compose logs node-rs kimenetéből.",
     "dnsTitle": "DNS: irányítsa a domaint a szerverre",
     "dnsP": "Vegyen fel egy rekordot annál a cégnél, amely a domainjét kezeli:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Ellenőrzés",
     "dnsCheckP": "A saját gépén ennek a szerver címét kell mutatnia (vagy használjon online DNS-ellenőrzőt, például a dnschecker.org oldalt):",
-    "dnsWait": "Ez általában 5–60 percig tart, néha néhány óráig. A telepítő is ellenőrzi, és megmondja, mi hiányzik még.",
-    "optionsTitle": "A telepítő beállításai",
-    "options": [
-      "a portál címe, például portal.markaja.hu (kötelező)",
-      "e-mail-cím a Let's Encrypthez (nem kötelező)",
-      "egy adott kiadás a legújabb helyett",
-      "go (alapértelmezett) a Go-változatot telepíti; ts a TypeScript-változatot",
-      "saját HTTPS nélkül: a portál a 127.0.0.1:8080 címen figyel, az Ön saját proxyja mögött",
-      "csak megmutatja, mit tenne, semmit nem változtat",
-      "eltávolítja a programot és a szolgáltatást; az adatok és a beállítások megmaradnak (a --purge kapcsolóval azokat is törli)"
-    ],
-    "checksP": "Mielőtt bármit megváltoztatna, a telepítő ellenőrzi a rendszert (Linux amd64 vagy arm64 systemd-vel), a root jogokat, a lemezterületet, hogy a domain erre a szerverre mutat-e, hogy a 80-as és 443-as port szabad-e, valamint a tűzfalat. Ufw vagy firewalld esetén kiírja a pontos parancsot, amely megnyitja a 80-as és 443-as portot.",
-    "filesTitle": "Hol mi található",
-    "filesHead": [
-      "Mi",
-      "Go-változat",
-      "TypeScript-változat"
-    ],
-    "filesRows": [
-      "Program",
-      "Adatok",
-      "Beállítások",
-      "Szolgáltatás"
-    ],
+    "dnsWait": "Ez általában 5–60 percig tart, néha néhány óráig. A Caddy megszerzi a tanúsítványt, amint a domain a szerverre mutat.",
+    "techTitle": "Műszaki részletek az IT-csapatának",
+    "techLead": "Tárolás, beállítások, biztonsági mentések és frissítések annak, aki a szervert beállítja.",
+    "storageTitle": "Tárolás és beállítások",
+    "storageP": "A portál alapértelmezés szerint SQLite-ot használ. A képek a szerver saját lemezére vagy bármilyen S3-kompatibilis bucketbe kerülnek (OBX_BLOB_URL). Minden beállítás egy OBX_* környezeti változó, ugyanazokkal a nevekkel, mint a node-go esetében.",
     "commandsTitle": "Hasznos parancsok",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "Nincs kezelendő szerver: a portál a saját Cloudflare-fiókjában fut. Kattintson a gombra, jelentkezzen be, és kövesse a lépéseket.",
-    "cfDnsTitle": "DNS: saját domain a Workerhez",
-    "cfDnsP": "Adja hozzá a címet saját domainként a Workerhez: Workers & Pages → az Ön Workere → Settings → Domains & Routes → Add → Custom domain. Ha a domainje már a Cloudflare-en van, a DNS és a tanúsítvány automatikusan beállul. Ha nem, először vigye át a domain DNS-ét a Cloudflare-re (ingyenes; a domain ott marad regisztrálva, ahol most van), majd adja hozzá a saját domaint. Ezután állítsa az OBX_PUBLIC_URL értékét erre a címre, és telepítse újra.",
-    "webDnsTitle": "DNS: aldomain a vezérlőpultban",
-    "webDnsP": "Hozza létre az aldomaint a tárhely vezérlőpultjában (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain, vagy Subdomains; Plesk: Websites & Domains → Add Subdomain). Ha a domain DNS-e ugyanannál a tárhelycégnél van, ennyi az egész. Ha nem, vegyen fel az aldomainhez egy A rekordot, amely a tárhelyszerver IP-címére mutat; ezt a panel megmutatja. Ezután kapcsolja be a panelen a Let's Encryptet az aldomainhez."
+    "httpsTitle": "HTTPS",
+    "httpsP": "A Caddy Let's Encrypt-tanúsítványt kér, amint a domain a szerverre mutat, automatikusan megújítja, és a http-t https-re irányítja. Nincs tanúsítvány? Ellenőrizze dig-gel, hogy a domain a szerver címét mutatja-e, és hogy a 80-as és 443-as port nyitva van-e.",
+    "backupTitle": "Biztonsági mentés",
+    "backupP": "Kapcsolja be a szolgáltatója szervermentéseit, és tartson egy éjszakai, titkosított másolatot a portálról egy másik szolgáltatónál vagy egy másik régióban. Negyedévente próbáljon ki egy visszaállítást, hogy tudja, működik.",
+    "backupLink": "Mentés másik helyre",
+    "updateTitle": "Frissítések",
+    "updateP": "Készítsen mentést, és olvassa el a kiadási megjegyzéseket. Linuxon ugyanúgy telepítse az új binárist, és indítsa újra a szolgáltatást. Dockerrel futtassa a docker compose pull, majd a docker compose up -d parancsot. Az adatbázis induláskor magától frissül.",
+    "releaseLink": "A legújabb kiadás letöltése",
+    "migrateTitle": "Átállás node-go, node-php vagy node-ts kiadásról",
+    "migrateP": "Az adatai, képei és beállításai Önnel jönnek. Az átállási útmutató minden korábbi kiadáshoz megadja a lépéseket.",
+    "migrateLink": "Az átállási útmutató",
+    "p1Title": "3. Egy partner üzemelteti Ön helyett",
+    "p1P": "Nem szeretné maga üzemeltetni? A partnerek üzemeltethetik és karbantarthatják Ön helyett a portált.",
+    "partnerLink": "Partnerek megtekintése",
+    "fieldBased": "Székhely",
+    "fieldLanguages": "Nyelvek",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Minden tartalom exportálása",
+    "fieldWebsite": "Weboldal",
+    "listTitle": "Szeretne itt szolgáltatóként szerepelni?",
+    "listP": "Az itt való szerepléshez szükséges feltételek mindenkire ugyanazok:",
+    "listItems": [
+      "portálja átmegy a jelenlegi verzió megfelelőségi tesztjén",
+      "a márka minden adatát és képét exportálhatja, és távozhat",
+      "árait és feltételeit a saját webhelyén teszi közzé"
+    ],
+    "listHow": "A kompatibilitás ingyenes; az itteni megjelenés a hivatalos partnerség része.",
+    "costTitle": "Mennyibe kerül nagyjából",
+    "costItems": [
+      "Saját szerver az EU-ban: havi kb. 5–15 € egy kis szerverért automatikus biztonsági mentéssel, például a Hetznernél. A szerver saját lemezén tárolt fotók nem kerülnek többe; egy nagy archívum objektumtárhelye terabájtonként havi néhány euróval növeli a költséget.",
+      "Partner: a partner saját ára. Kérdezze meg, mit tartalmaz: frissítéseket, biztonsági mentéseket, saját domaint, és minden adat exportálását, ha továbblép.",
+      "A saját ideje: első alkalommal számoljon egy-két órával, beleértve a domaint és egy biztonsági mentés próba-visszaállítását, utána havonta kb. egy órával a frissítésekre és a mentések ellenőrzésére."
+    ],
+    "costNote": "Tájékoztató árak 2026 novemberéből, áfa nélkül. Választás előtt ellenőrizze a szolgáltató aktuális árait.",
+    "firstTitle": "Telepítés után: az első indítás",
+    "first": [
+      "Nyissa meg a portál címét a böngészőben.",
+      "Adja meg az egyszer használatos telepítési kódot. Az első indításkor a naplóban találja (journalctl -u node-rs vagy docker compose logs node-rs), vagy előre beállíthatja az OBX_SETUP_CODE értékkel.",
+      "Adja meg cégét és első márkáját, és válasszon saját jelszót. Alapértelmezett jelszó soha nincs."
+    ],
+    "firstWhy": "A telepítési kód biztosítja, hogy senki más ne vehesse át a frissen telepített portált.",
+    "domainTitle": "Saját domain",
+    "domainP": "Használjon aldomaint, például viszontelado.markaja.hu vagy b2b.markaja.hu. A viszonteladók így az Ön nevét látják, és a cím akkor is ugyanaz marad, ha üzemeltetőt vált.",
+    "compareTitle": "Egy portál, Rustban írva",
+    "compareP": "Egyetlen referenciaportál van, a node-rs. Bárhol fut, ugyanaz az adminisztrációja és viszonteladói portálja, így bármikor válthat saját szerver, Docker és partner között.",
+    "retireNote": "A korábbi node-go, node-php és node-ts kiadások kivezetése folyamatban van."
   },
   "retailers": {
     "h1": "Viszonteladóknak",
@@ -712,10 +670,9 @@
       "specifikáció, sémák, tesztadatok",
       "Go SDK, obx eszköz, megfelelőségi tesztek, álszerver",
       "közös webes felület: adminisztráció és viszonteladói portál",
-      "Go: saját szerver, egysoros telepítővel",
-      "PHP: hagyományos webtárhely",
-      "TypeScript: Cloudflare Workers"
+      "a referenciaportál, Rustban: Linux vagy Docker"
     ],
+    "implRef": "Referenciaportál",
     "statusDraft": "0.3",
     "implP": "Saját implementációt vagy klienst épít? Jelezze issue-ban vagy pull requestben; amint átmegy a megfelelőségi teszteken, bekerül ebbe a táblázatba.",
     "docsTitle": "Dokumentumok",
@@ -737,20 +694,12 @@
         "d": "A specifikáció, a sémák és a tesztadatok"
       },
       {
+        "name": "node-rs",
+        "d": "A referenciaportál, Rustban"
+      },
+      {
         "name": "obx-go",
         "d": "Go SDK, az obx eszköz és a megfelelőségi teszt"
-      },
-      {
-        "name": "node-ts",
-        "d": "Portál Cloudflare Workershez"
-      },
-      {
-        "name": "node-go",
-        "d": "Portál saját szerverre"
-      },
-      {
-        "name": "node-php",
-        "d": "Portál hagyományos webtárhelyre"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Nyílt forráskód, a GitHubon.",
     "reposTitle": "Tárolók",
-    "reposP": "Minden nyílt forráskódú a GitHubon: a specifikáció, a közös kód és a három portálkiadás.",
+    "reposP": "Minden nyílt forráskódú a GitHubon: a specifikáció, a közös kód és a Rustban írt referenciaportál.",
     "newTitle": "Újdonságok a 0.3-as verzióban",
     "newItems": [
       "Az anyag- és ápolási adatok kódok angol, holland, német és francia nevekkel. Közös szótárakból származnak, amelyek a /vocabularies/v0.3/ címen érhetők el.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "Kész van?",
-        "a": "Igen, a 0.3-es verzió: a specifikáció, a három portálkiadás és az eszközök megjelentek, és szabadon használhatók. Még az elején járunk: az első márkák most csatlakoznak."
+        "a": "Igen, a 0.3-es verzió: a specifikáció és az eszközök megjelentek, szabadon használhatók, a portál pedig Rustban fut. Még az elején járunk: az első márkák most csatlakoznak."
       },
       {
         "q": "Ki áll mögötte?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Licencek",
-        "p": "A specifikáció CC-BY-4.0 licencű. Az SDK, az obx eszköz és a közös webes felület Apache-2.0 licencű. A három portálkiadás AGPL-3.0 licencű, így a rajtuk végzett fejlesztések nyíltak maradnak. Ez a weboldal nem nyílt licencű: kódjára, dizájnjára és szövegeire minden jog fenntartva. Az oldal által kiszolgált, a specifikációból származó fájlok, például a sémák, sablonok és példák, megtartják CC-BY-4.0 licencüket."
+        "p": "A specifikáció CC-BY-4.0 licencű. Az SDK, az obx eszköz és a közös webes felület Apache-2.0 licencű. A portál, a node-rs, AGPL-3.0 licencű, így a rajta végzett fejlesztések nyíltak maradnak. Ez a weboldal nem nyílt licencű: kódjára, dizájnjára és szövegeire minden jog fenntartva. Az oldal által kiszolgált, a specifikációból származó fájlok, például a sémák, sablonok és példák, megtartják CC-BY-4.0 licencüket."
       }
     ],
     "nameTitle": "A névről",
@@ -1036,7 +985,7 @@
       "Töltse fel kézzel az Excel-exportját és a fotóit, vagy hagyja, hogy minden éjjel átvegyék őket",
       "Automatikus szállítás a PIM-ből, az ERP-ből vagy egy megosztott mappából",
       "Hozzáférési kérelmek, meghívók és API-kulcsok a viszonteladói szoftverekhez",
-      "Három változat: saját szerver, Cloudflare Workers és hagyományos webtárhely"
+      "Egy portál Rustban: saját Linux-szerveren vagy Dockerrel"
     ],
     "brandsComing": [
       "Az első nyilvános kiadás, egykattintásos telepítéssel",
@@ -1098,8 +1047,8 @@
           "l": "szabvány, mindenki számára szabadon"
         },
         {
-          "v": "3",
-          "l": "portálkiadás"
+          "v": "61",
+          "l": "automatikus megfelelőségi ellenőrzés"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Üzemeltetés",
       "editionsTitle": "Futtassa, ahol akarja. Csak az üzemeltetést fizeti.",
-      "editionsLead": "Ugyanannak a képportálnak három kiadása. Ugyanúgy működnek, így bármikor válthat közöttük.",
+      "editionsLead": "Az OBX Rustban fut: egyetlen képportál, amelyet saját Linux-szerveren vagy Dockerrel üzemeltet, vagy egy partner üzemeltet Ön helyett. Bármikor költözhet.",
       "editionsLink": "Üzemeltetési lehetőségek összehasonlítása",
       "editionFields": [
         "Hol fut",
@@ -1197,27 +1146,18 @@
           "name": "Saját szerver",
           "runs": "Bármilyen Linux-szerver (VPS), például a Hetznernél, a DigitalOceannél, a TransIP-nél vagy a Scalewaynél",
           "need": "Egy szerver, egy domainnév és SSH-hozzáférés",
-          "setup": "Egy parancs, majd a beállítási varázsló",
+          "setup": "Telepítse a programot és a Caddyt, majd a beállítási varázsló",
           "cost": "Havi kb. 5–15 € egy kis szerverért biztonsági mentéssel",
           "cta": "Telepítés saját szerverre"
         },
         {
-          "tag": "Szerver nélkül",
-          "name": "Cloudflare Workers",
-          "runs": "A saját Cloudflare-fiókja, adatbázisként D1-gyel, a képekhez R2-vel",
-          "need": "Egy Cloudflare-fiók Workers Paid csomaggal",
-          "setup": "Egy kattintás, majd a beállítási varázsló",
-          "cost": "Havi 5 dollár plusz tárhely",
-          "cta": "Beállítás a Cloudflare-en"
-        },
-        {
-          "tag": "Parancsok nélkül",
-          "name": "Hagyományos webtárhely",
-          "runs": "Európai webtárhely PHP-val és adatbázissal, például TransIP, Strato vagy OVHcloud",
-          "need": "Egy FTP-program",
-          "setup": "Töltsön fel egy ZIP-et, majd futtassa a telepítőt",
-          "cost": "A tárhely, amelyért már most is fizet (PHP 8.2 vagy újabb)",
-          "cta": "Telepítés webtárhelyre"
+          "tag": "Konténerek",
+          "name": "Docker",
+          "runs": "Bármilyen szerver Dockerrel és Docker Compose-zal",
+          "need": "Docker, egy domainnév és SSH-hozzáférés",
+          "setup": "Egy compose fájl, majd a beállítási varázsló",
+          "cost": "Havi kb. 5–15 € egy kis szerverért biztonsági mentéssel",
+          "cta": "Kezdés Dockerrel"
         },
         {
           "tag": "A legegyszerűbb",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Az Ön képportálja, a nyílt szabványon.",
       "retailersSoftware": "A szoftveréhez",
-      "hostingEditions": "A három kiadás"
+      "hostingEditions": "Üzemeltetési módok"
     }
   },
   "partners": {

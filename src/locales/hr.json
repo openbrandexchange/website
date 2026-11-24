@@ -14,15 +14,12 @@
     "footerMore": "Više",
     "footerSource": "Izvorni kod i specifikacija",
     "footerLicence": "© 2026 {foundation}. Sva prava pridržana. Specifikacija je pod licencijom CC-BY-4.0.",
-    "editionCloudflare": "Portal za Cloudflare",
-    "editionHosting": "Portal za web hosting",
     "yes": "Da",
     "inDevelopment": "U razvoju",
     "available": "Dostupno",
     "footerContact": "Kontakt",
     "madeInEu": "Proizvedeno u EU-u",
-    "footerDiscuss": "Pridružite se raspravi",
-    "editionServer": "Portal za vlastiti poslužitelj"
+    "footerDiscuss": "Pridružite se raspravi"
   },
   "nav": {
     "brands": "Za robne marke",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Vaš portal fotografija gdje god želite: na vlastitom poslužitelju s jednom naredbom, na Cloudflare Workers, na običnom web hostingu ili kod partnera."
+      "description": "Vaš portal fotografija gdje god želite: portal u jeziku Rust na vlastitom Linux poslužitelju ili pomoću alata Docker, ili kod partnera."
     },
     "retailers": {
       "title": "Za trgovce",
@@ -361,7 +358,6 @@
     "httpProduct": "Artikl (na primjer kad se promijeni u PIM-u)",
     "httpVariant": "Boja i veličina s EAN-om",
     "httpImage": "Fotografija: najprije podaci, zatim sama datoteka",
-    "httpImageNote": "Portal za Cloudflare sam ne izrađuje web-verzije fotografija. Ondje objavljujte pomoću obx ili putem „Uvozi” u administraciji: oni ih izrađuju za vas. Fotografije koje stignu drugim putem, npr. zakazanim uvozom, dotad se prikazuju u izvornoj veličini.",
     "httpOffline": "Povlačenje nečega",
     "httpHooks": "Želite obavijest kad se nešto dogodi? U administraciji dodajte obavijest (webhook) za dovršeni uvoz ili novi zahtjev za pristup i neka pokrene okidač u n8n, Make ili Zapier.",
     "apiTitle": "6. Izravno API (za programere)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Svaka marka ima vlastiti portal fotografija. Instalirajte ga na vlastiti poslužitelj jednom naredbom, pokrenite ga na Cloudflare Workers, učitajte ga na običan web hosting ili neka ga hosta partner.",
-    "p1Title": "4. Partner ga hosta za vas",
-    "p1P": "Ne želite sami hostati? Partneri mogu hostati i održavati portal za vas.",
-    "fieldBased": "Sjedište",
-    "fieldLanguages": "Jezici",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "Izvoz cijelog sadržaja",
-    "fieldWebsite": "Web stranica",
-    "listTitle": "Želite biti navedeni ovdje kao pružatelj usluge?",
-    "listP": "Uvjeti za navođenje ovdje jednaki su za sve:",
-    "listItems": [
-      "vaš portal prolazi test sukladnosti za trenutačnu verziju",
-      "marka može izvesti sve svoje podatke i fotografije i otići",
-      "svoje cijene i uvjete objavljujete na vlastitoj stranici"
-    ],
-    "listHow": "Kompatibilnost je besplatna; navođenje ovdje dio je službenog partnerstva.",
-    "cfP": "Radi na Cloudflare Workers, s D1 kao bazom podataka i R2 za slike. Kliknite gumb, prijavite se u Cloudflare i slijedite korake. Za portal u svakodnevnoj upotrebi trebate paket Workers Paid (5 dolara mjesečno); besplatni paket dovoljan je samo za razgledavanje. Web-verzije vaših fotografija izrađuju vaš preglednik i alat obx.",
-    "cfButton": "Instaliraj na Cloudflare",
-    "phpP": "Za web hosting koji možda već imate, s PHP-om i bazom podataka. Nisu potrebne naredbe:",
-    "phpSteps": [
-      "Preuzmite obx-portal-php-<version>.zip iz najnovijeg izdanja.",
-      "Raspakirajte ga i mapu prenesite na hosting putem (S)FTP-a.",
-      "Usmjerite svoju (pod)domenu, na primjer trgovci.vasamarka.hr, na mapu public.",
-      "Omogućite pisanje u mape data i config (dopuštenja 775; ako instalacija i dalje javlja da nije moguće, 777).",
-      "Otvorite tu adresu. Instalacija provjerava poslužitelj i traži instalacijski kod iz datoteke data/SETUP-CODE.txt, koju otvarate FTP programom. Zatim kliknite „Otvori čarobnjak za postavljanje“.",
-      "Cron adresu koju prikazuje instalacija dodajte kao cron zadatak u upravljačkoj ploči hostinga, svakih 5 minuta. I bez nje portal radi."
-    ],
-    "phpDownload": "Preuzmi najnovije izdanje",
-    "firstTitle": "Nakon instalacije: prvo pokretanje",
-    "first": [
-      "Otvorite adresu svog portala u pregledniku.",
-      "Unesite jednokratni instalacijski kod. Instalacijski program na vlastitom poslužitelju prikazuje ga na kraju. Inače se nalazi u zapisniku pri prvom pokretanju (Portal za web hosting: u data/SETUP-CODE.txt, a instalacija ga ispunjava umjesto vas) ili ga unaprijed postavite s OBX_SETUP_CODE.",
-      "Unesite svoju tvrtku i prvu marku te odaberite vlastitu lozinku. Zadane lozinke nikad nema."
-    ],
-    "firstWhy": "Instalacijski kod osigurava da nitko drugi ne može preuzeti tek instalirani portal.",
-    "domainTitle": "Vlastita domena",
-    "domainP": "Koristite poddomenu poput trgovci.vasamarka.hr ili b2b.vasamarka.hr. Trgovci tada vide vaše ime, a adresa ostaje ista i kad promijenite hosting.",
-    "compareTitle": "Tri izdanja, jedan portal",
-    "compareP": "Tri izdanja rade isto i imaju istu administraciju i isti portal za trgovce. Odaberite ono koje odgovara vašem hostingu; promijeniti možete kasnije.",
-    "compareLink": "Pogledajte implementacije",
+    "lead": "Svaka marka ima vlastiti portal fotografija. OBX radi u jeziku Rust: instalirajte ga na vlastiti Linux poslužitelj ili pomoću alata Docker, ili neka ga hosta partner.",
     "heroTitle": "Vaš portal fotografija, gdje god želite.",
-    "heroLead": "Softver je besplatan. Najjednostavnije je s malim vlastitim poslužiteljem i jednom naredbom. Možete se preseliti u bilo kojem trenutku.",
+    "heroLead": "Softver je besplatan i radi u jeziku Rust. Najjednostavnije je s malim vlastitim poslužiteljem, kao usluga ili pomoću alata Docker. Možete se preseliti u bilo kojem trenutku.",
     "heroChecks": [
       "Besplatan softver, plaćate samo hosting",
-      "Jedna naredba instalira portal, s HTTPS-om",
+      "Jedan program u jeziku Rust, s automatskim HTTPS-om putem programa Caddy",
       "Isti portal posvuda, pa uvijek možete prijeći",
       "Ne želite sami? Partner ga hosta za vas"
     ],
-    "webTitle": "3. Običan web hosting",
-    "webP": "PHP izdanje radi na običnom europskom web hostingu s PHP-om i bazom podataka, na primjer kod TransIP-a, Strata ili OVHclouda. Nisu potrebne naredbe:",
-    "partnerLink": "Pogledajte partnere",
-    "techTitle": "Tehnički detalji za vaš IT tim",
-    "techLead": "Opcije instalacijskog programa, datoteke, sigurnosne kopije i ažuriranja, za osobu koja postavlja poslužitelj.",
-    "costTitle": "Koliko otprilike košta",
-    "costItems": [
-      "Vlastiti poslužitelj u EU-u: oko 5 do 15 € mjesečno za mali poslužitelj s automatskim sigurnosnim kopijama, kod pružatelja kao što je Hetzner. Fotografije na vlastitom disku poslužitelja ne koštaju ništa dodatno; objektna pohrana za veliku arhivu dodaje nekoliko eura mjesečno po terabajtu.",
-      "Običan web hosting: paket koji već plaćate, ako ima PHP 8.2 ili noviji.",
-      "Cloudflare Workers: 5 dolara mjesečno za Workers Paid, plus R2 pohrana po cijeni od oko 1,50 dolara mjesečno za 100 GB fotografija. Naknada za preuzimanje nema.",
-      "Partner: njegova vlastita cijena. Pitajte što je uključeno: ažuriranja, sigurnosne kopije, vlastita domena i izvoz svih podataka ako odete.",
-      "Vaše vrijeme: prvi put računajte s jedan do dva sata, uključujući domenu i probni povrat sigurnosne kopije, a zatim s oko sat vremena mjesečno za ažuriranja i provjeru sigurnosnih kopija."
-    ],
-    "costNote": "Okvirne cijene iz studenoga 2026., bez PDV-a. Prije odabira provjerite aktualne cijene pružatelja.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "Go izdanje samo zatraži Let's Encrypt certifikat čim vaša domena upućuje na poslužitelj, automatski ga obnavlja i preusmjerava http na https. TypeScript izdanje radi isto pomoću programa Caddy, koji postavlja instalacijski program. Nema certifikata? Naredbom dig provjerite prikazuje li domena adresu poslužitelja te jesu li portovi 80 i 443 otvoreni.",
-    "backupTitle": "Sigurnosne kopije",
-    "backupP": "Uključite sigurnosne kopije poslužitelja kod svog pružatelja i dodajte noćnu sigurnosnu kopiju portala koju kopirate i izvan poslužitelja. Tajni ključ čuvajte odvojeno, u upravitelju lozinki: to je OBX_SECRET_KEY u datoteci postavki ili secret.key u mapi s podacima. Bez njega se sigurnosna kopija ne može u potpunosti vratiti. Jednom isprobajte povrat kako biste znali da radi.",
-    "updateTitle": "Ažuriranja",
-    "updateP": "Napravite sigurnosnu kopiju i pročitajte napomene uz novu verziju. Zatim ponovno pokrenite istu naredbu za instalaciju: instalira najnoviju verziju, zadržava vaše postavke i podatke te ponovno pokreće portal. Baza podataka ažurira se sama pri pokretanju.",
-    "cfCliP": "Ili s vlastitog računala, s alatima Bun i Wrangler:",
-    "cfBackupP": "Sigurnosne kopije: uz Workers Paid D1 čuva 30 dana povijesti baze podataka (Time Travel). Za kopiju izvan Cloudflarea redovito izvozite bazu podataka. Slike su u R2; bucket kopirajte bilo kojim S3 alatom.",
-    "cfUpdateP": "Ažuriranja: spojite novo izdanje u svoju kopiju repozitorija i napravite push; Cloudflare ga ponovno objavljuje.",
     "installCta": "Instaliraj na vlastiti poslužitelj",
     "exampleDomain": "portal.vasamarka.hr",
     "ownTitle": "1. Vlastiti poslužitelj (preporučeno)",
-    "ownP": "Unajmite mali Linux poslužitelj, usmjerite svoju domenu na njega i pokrenite jednu naredbu. Instalacijski program preuzima portal, dobiva besplatan HTTPS certifikat od Let's Encrypt i pokreće portal kao uslugu koja se nakon ponovnog pokretanja sama vraća.",
+    "ownP": "Unajmite mali Linux poslužitelj (bilo koji VPS, x86_64 ili arm64), usmjerite svoju domenu na njega i instalirajte portal kao uslugu, s programom Caddy ispred za automatski HTTPS. Usluga se nakon ponovnog pokretanja sama vraća.",
     "needTitle": "Što vam treba",
     "needItems": [
       "Linux poslužitelj (VPS) s Ubuntu 22.04 ili 24.04, Debian 12 ili 13 ili sličnim sustavom. Za početak je dovoljan 1 GB memorije. Odgovara bilo koji pružatelj, na primjer Hetzner Cloud, DigitalOcean, TransIP VPS ili Scaleway.",
       "Javna IPv4 adresa (IPv6 nije obavezan), s otvorenim portovima 80 i 443.",
       "Domena ili poddomena za portal, na primjer portal.vasamarka.hr."
     ],
-    "ownStepsTitle": "Tri koraka",
+    "ownStepsTitle": "Pet koraka",
     "ownSteps": [
-      "Izradite poslužitelj i zabilježite njegovu IP adresu.",
-      "Usmjerite portal.vasamarka.hr na poslužitelj jednim DNS zapisom (vidi niže).",
-      "Prijavite se na poslužitelj putem SSH-a i pokrenite ovu naredbu sa svojom adresom:"
+      "Usmjerite {domain} na poslužitelj A zapisom (vidi niže).",
+      "Preuzmite node-rs za svoj poslužitelj iz najnovijeg izdanja i instalirajte ga naredbom sudo install node-rs /usr/local/bin/.",
+      "Instalirajte systemd jedinicu deploy/node-rs.service iz repozitorija. Ona pokreće portal kao korisnik node-rs, čuva podatke u /var/lib/node-rs i postavlja OBX_PUBLIC_URL na https://{domain}.",
+      "Instalirajte Caddy i dajte mu kratki Caddyfile u nastavku. On umjesto vas dobiva HTTPS certifikat i prosljeđuje posjetitelje portalu.",
+      "Otvorite https://{domain} i unesite jednokratni instalacijski kod iz journalctl -u node-rs."
     ],
-    "ownDone": "Kad završi, instalacijski program prikazuje adresu vašeg portala i jednokratni instalacijski kod. Otvorite adresu, unesite kod i prođite kroz čarobnjak za postavljanje. Za kasnije ažuriranje ponovno pokrenite istu naredbu: vaše postavke i podaci ostaju.",
-    "ownTs": "Time se instalira Go izdanje, Portal za vlastiti poslužitelj. Za TypeScript izdanje dodajte --edition ts istoj naredbi.",
     "ownEu": "Odaberite podatkovni centar u EU-u i vaš katalog, slike i baza podataka ostaju u EU-u.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "Već koristite Docker? Jedna compose datoteka pokreće portal (sliku ghcr.io/openbrandexchange/node-rs) zajedno s programom Caddy za HTTPS. Najprije usmjerite domenu na poslužitelj (vidi DNS niže), a zatim pokrenite:",
+    "dockerDone": "Zatim otvorite https://{domain} i unesite jednokratni instalacijski kod iz docker compose logs node-rs.",
     "dnsTitle": "DNS: usmjerite domenu na poslužitelj",
     "dnsP": "Dodajte jedan zapis kod tvrtke koja upravlja vašom domenom:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Provjerite",
     "dnsCheckP": "Na vlastitom računalu ovo mora prikazati adresu poslužitelja (ili koristite mrežni alat za provjeru DNS-a kao što je dnschecker.org):",
-    "dnsWait": "To obično traje 5 do 60 minuta, ponekad nekoliko sati. Instalacijski program to također provjerava i kaže vam što još nedostaje.",
-    "optionsTitle": "Opcije instalacijskog programa",
-    "options": [
-      "adresa portala, na primjer portal.vasamarka.hr (obavezno)",
-      "adresa e-pošte za Let's Encrypt (neobavezno)",
-      "određena verzija umjesto najnovije",
-      "go (zadano) instalira Go izdanje; ts instalira TypeScript izdanje",
-      "bez vlastitog HTTPS-a: portal sluša na 127.0.0.1:8080 iza vašeg vlastitog posredničkog poslužitelja",
-      "samo prikaži što bi učinio, ništa ne mijenjaj",
-      "ukloni program i uslugu; vaši podaci i postavke ostaju (dodajte --purge da se i oni izbrišu)"
-    ],
-    "checksP": "Prije nego što išta promijeni, instalacijski program provjerava sustav (Linux amd64 ili arm64 sa systemd), root ovlasti, prostor na disku, upućuje li domena na ovaj poslužitelj, jesu li portovi 80 i 443 slobodni te vatrozid. Uz ufw ili firewalld ispisuje točnu naredbu za otvaranje portova 80 i 443.",
-    "filesTitle": "Gdje se sve nalazi",
-    "filesHead": [
-      "Što",
-      "Go izdanje",
-      "TypeScript izdanje"
-    ],
-    "filesRows": [
-      "Program",
-      "Podaci",
-      "Postavke",
-      "Usluga"
-    ],
+    "dnsWait": "To obično traje 5 do 60 minuta, ponekad nekoliko sati. Caddy dobiva certifikat čim domena upućuje na poslužitelj.",
+    "techTitle": "Tehnički detalji za vaš IT tim",
+    "techLead": "Pohrana, postavke, sigurnosne kopije i ažuriranja, za osobu koja postavlja poslužitelj.",
+    "storageTitle": "Pohrana i postavke",
+    "storageP": "Portal prema zadanim postavkama koristi SQLite. Slike se spremaju na disk samog poslužitelja ili u bilo koji spremnik kompatibilan s S3 (OBX_BLOB_URL). Svaka postavka je varijabla okruženja OBX_*, s istim nazivima kao u node-go.",
     "commandsTitle": "Korisne naredbe",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "Nema poslužitelja za održavanje: portal radi na vašem vlastitom Cloudflare računu. Kliknite gumb, prijavite se i slijedite korake.",
-    "cfDnsTitle": "DNS: vlastita domena za Worker",
-    "cfDnsP": "Dodajte adresu kao vlastitu domenu za Worker: Workers & Pages → vaš Worker → Settings → Domains & Routes → Add → Custom domain. Ako je vaša domena već na Cloudflare, DNS i certifikat postavljaju se automatski. Ako nije, najprije premjestite DNS svoje domene na Cloudflare (besplatno; domena ostaje registrirana gdje jest), a zatim dodajte vlastitu domenu. Zatim postavite OBX_PUBLIC_URL na tu adresu i ponovno objavite.",
-    "webDnsTitle": "DNS: poddomena u upravljačkoj ploči",
-    "webDnsP": "Izradite poddomenu u upravljačkoj ploči svog hostinga (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain ili Subdomains; Plesk: Websites & Domains → Add Subdomain). Ako je DNS vaše domene kod iste hosting tvrtke, to je sve. Inače dodajte A zapis za poddomenu koji upućuje na IP adresu hosting poslužitelja, koju prikazuje ploča. Zatim u ploči uključite Let's Encrypt za poddomenu."
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy zatraži Let's Encrypt certifikat čim vaša domena upućuje na poslužitelj, automatski ga obnavlja i preusmjerava http na https. Nema certifikata? Naredbom dig provjerite prikazuje li domena adresu poslužitelja te jesu li portovi 80 i 443 otvoreni.",
+    "backupTitle": "Sigurnosne kopije",
+    "backupP": "Uključite sigurnosne kopije poslužitelja kod svog pružatelja i svake noći čuvajte šifriranu kopiju portala kod drugog pružatelja ili u drugoj regiji. Svako tromjesečje isprobajte povrat kako biste znali da radi.",
+    "backupLink": "Kopija na drugom mjestu",
+    "updateTitle": "Ažuriranja",
+    "updateP": "Napravite sigurnosnu kopiju i pročitajte napomene uz novu verziju. Na Linuxu na isti način instalirajte novu izvršnu datoteku i ponovno pokrenite uslugu. S alatom Docker pokrenite docker compose pull, a zatim docker compose up -d. Baza podataka ažurira se sama pri pokretanju.",
+    "releaseLink": "Preuzmi najnovije izdanje",
+    "migrateTitle": "Prelazak s node-go, node-php ili node-ts",
+    "migrateP": "Vaši podaci, fotografije i postavke idu s vama. Vodič za migraciju opisuje korake za svako ranije izdanje.",
+    "migrateLink": "Pročitajte vodič za migraciju",
+    "p1Title": "3. Partner ga hosta za vas",
+    "p1P": "Ne želite sami hostati? Partneri mogu hostati i održavati portal za vas.",
+    "partnerLink": "Pogledajte partnere",
+    "fieldBased": "Sjedište",
+    "fieldLanguages": "Jezici",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Izvoz cijelog sadržaja",
+    "fieldWebsite": "Web stranica",
+    "listTitle": "Želite biti navedeni ovdje kao pružatelj usluge?",
+    "listP": "Uvjeti za navođenje ovdje jednaki su za sve:",
+    "listItems": [
+      "vaš portal prolazi test sukladnosti za trenutačnu verziju",
+      "marka može izvesti sve svoje podatke i fotografije i otići",
+      "svoje cijene i uvjete objavljujete na vlastitoj stranici"
+    ],
+    "listHow": "Kompatibilnost je besplatna; navođenje ovdje dio je službenog partnerstva.",
+    "costTitle": "Koliko otprilike košta",
+    "costItems": [
+      "Vlastiti poslužitelj u EU-u: oko 5 do 15 € mjesečno za mali poslužitelj s automatskim sigurnosnim kopijama, kod pružatelja kao što je Hetzner. Fotografije na vlastitom disku poslužitelja ne koštaju ništa dodatno; objektna pohrana za veliku arhivu dodaje nekoliko eura mjesečno po terabajtu.",
+      "Partner: njegova vlastita cijena. Pitajte što je uključeno: ažuriranja, sigurnosne kopije, vlastita domena i izvoz svih podataka ako odete.",
+      "Vaše vrijeme: prvi put računajte s jedan do dva sata, uključujući domenu i probni povrat sigurnosne kopije, a zatim s oko sat vremena mjesečno za ažuriranja i provjeru sigurnosnih kopija."
+    ],
+    "costNote": "Okvirne cijene iz studenoga 2026., bez PDV-a. Prije odabira provjerite aktualne cijene pružatelja.",
+    "firstTitle": "Nakon instalacije: prvo pokretanje",
+    "first": [
+      "Otvorite adresu svog portala u pregledniku.",
+      "Unesite jednokratni instalacijski kod. Nalazi se u zapisniku pri prvom pokretanju (journalctl -u node-rs ili docker compose logs node-rs) ili ga unaprijed postavite s OBX_SETUP_CODE.",
+      "Unesite svoju tvrtku i prvu marku te odaberite vlastitu lozinku. Zadane lozinke nikad nema."
+    ],
+    "firstWhy": "Instalacijski kod osigurava da nitko drugi ne može preuzeti tek instalirani portal.",
+    "domainTitle": "Vlastita domena",
+    "domainP": "Koristite poddomenu poput trgovci.vasamarka.hr ili b2b.vasamarka.hr. Trgovci tada vide vaše ime, a adresa ostaje ista i kad promijenite hosting.",
+    "compareTitle": "Jedan portal, napisan u jeziku Rust",
+    "compareP": "Postoji jedan referentni portal, node-rs. Gdje god radi, ima istu administraciju i isti portal za trgovce, pa u bilo kojem trenutku možete prijeći između vlastitog poslužitelja, alata Docker i partnera.",
+    "retireNote": "Ranija izdanja node-go, node-php i node-ts postupno se ukidaju."
   },
   "retailers": {
     "h1": "Za trgovce",
@@ -712,10 +670,9 @@
       "specifikacija, sheme, testni podaci",
       "Go SDK, alat obx, testovi sukladnosti, lažni poslužitelj",
       "zajedničko web sučelje: administracija i portal za trgovce",
-      "Go: vlastiti poslužitelj, s instalacijom u jednom retku",
-      "PHP: običan web hosting",
-      "TypeScript: Cloudflare Workers"
+      "referentni portal, u jeziku Rust: Linux ili Docker"
     ],
+    "implRef": "Referentni portal",
     "statusDraft": "0.3",
     "implP": "Gradite vlastitu implementaciju ili klijent? Javite nam putem issuea ili pull requesta; ući će u tablicu čim prođe testove sukladnosti.",
     "docsTitle": "Dokumenti",
@@ -737,20 +694,12 @@
         "d": "Specifikacija, sheme i testni podaci"
       },
       {
+        "name": "node-rs",
+        "d": "Referentni portal u jeziku Rust"
+      },
+      {
         "name": "obx-go",
         "d": "Go SDK, alat obx i test sukladnosti"
-      },
-      {
-        "name": "node-ts",
-        "d": "Portal za Cloudflare Workers"
-      },
-      {
-        "name": "node-go",
-        "d": "Portal za vlastiti poslužitelj"
-      },
-      {
-        "name": "node-php",
-        "d": "Portal za običan web-hosting"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Otvoreni kod, na GitHubu.",
     "reposTitle": "Repozitoriji",
-    "reposP": "Sve je otvorenog koda na GitHubu: specifikacija, zajednički kod i tri izdanja portala.",
+    "reposP": "Sve je otvorenog koda na GitHubu: specifikacija, zajednički kod i referentni portal u jeziku Rust.",
     "newTitle": "Novo u verziji 0.3",
     "newItems": [
       "Materijali i održavanje su kodovi s nazivima na engleskom, nizozemskom, njemačkom i francuskom, iz zajedničkih rječnika objavljenih na /vocabularies/v0.3/.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "Je li gotovo?",
-        "a": "Da, verzija 0.3: specifikacija, tri izdanja portala i alati objavljeni su i slobodni za korištenje. Tek smo na početku: prve marke pridružuju se upravo sada."
+        "a": "Da, verzija 0.3: specifikacija i alati objavljeni su i slobodni za korištenje, a portal radi u jeziku Rust. Tek smo na početku: prve marke pridružuju se upravo sada."
       },
       {
         "q": "Tko stoji iza toga?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Licence",
-        "p": "Specifikacija je pod licencijom CC-BY-4.0. SDK, alat obx i zajedničko web sučelje pod licencijom su Apache-2.0. Tri izdanja portala pod licencijom su AGPL-3.0, pa njihova poboljšanja ostaju otvorena. Ova stranica nema otvorenu licenciju: sva prava na njezin kod, dizajn i tekstove su pridržana. Datoteke iz specifikacije koje stranica isporučuje, poput shema, predložaka i primjera, zadržavaju licenciju CC-BY-4.0."
+        "p": "Specifikacija je pod licencijom CC-BY-4.0. SDK, alat obx i zajedničko web sučelje pod licencijom su Apache-2.0. Portal node-rs pod licencijom je AGPL-3.0, pa njegova poboljšanja ostaju otvorena. Ova stranica nema otvorenu licenciju: sva prava na njezin kod, dizajn i tekstove su pridržana. Datoteke iz specifikacije koje stranica isporučuje, poput shema, predložaka i primjera, zadržavaju licenciju CC-BY-4.0."
       }
     ],
     "nameTitle": "O nazivu",
@@ -1036,7 +985,7 @@
       "Učitajte Excel izvoz i fotografije ručno ili neka se preuzimaju svake noći",
       "Automatska isporuka iz vašeg PIM-a, ERP-a ili zajedničke mape",
       "Zahtjevi za pristup, pozivnice i API ključevi za softver vaših trgovaca",
-      "Tri izdanja: vlastiti poslužitelj, Cloudflare Workers i običan web hosting"
+      "Jedan portal u jeziku Rust: na vlastitom Linux poslužitelju ili pomoću alata Docker"
     ],
     "brandsComing": [
       "Prvo javno izdanje, s instalacijom jednim klikom",
@@ -1098,8 +1047,8 @@
           "l": "standard, slobodan za svakoga"
         },
         {
-          "v": "3",
-          "l": "izdanja portala"
+          "v": "61",
+          "l": "automatska provjera sukladnosti"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Pokrenite gdje želite. Plaćate samo hosting.",
-      "editionsLead": "Tri izdanja istog portala fotografija. Rade na isti način, pa u bilo kojem trenutku možete prijeći s jednog na drugo.",
+      "editionsLead": "OBX radi u jeziku Rust: jedan portal fotografija koji hostate na vlastitom Linux poslužitelju ili pomoću alata Docker, ili ga za vas hosta partner. Možete se preseliti u bilo kojem trenutku.",
       "editionsLink": "Usporedite mogućnosti hostinga",
       "editionFields": [
         "Radi na",
@@ -1197,27 +1146,18 @@
           "name": "Vlastiti poslužitelj",
           "runs": "Bilo koji Linux poslužitelj (VPS), na primjer kod pružatelja Hetzner, DigitalOcean, TransIP ili Scaleway",
           "need": "Poslužitelj, naziv domene i SSH pristup",
-          "setup": "Jedna naredba, zatim čarobnjak za postavljanje",
+          "setup": "Instalirajte program i Caddy, zatim čarobnjak za postavljanje",
           "cost": "Oko 5 do 15 € mjesečno za mali poslužitelj sa sigurnosnim kopijama",
           "cta": "Instaliraj na vlastiti poslužitelj"
         },
         {
-          "tag": "Bez poslužitelja",
-          "name": "Cloudflare Workers",
-          "runs": "Vaš vlastiti Cloudflare račun, s D1 kao bazom podataka i R2 za slike",
-          "need": "Cloudflare račun s planom Workers Paid",
-          "setup": "Jedan klik, zatim čarobnjak za postavljanje",
-          "cost": "5 dolara mjesečno plus pohrana",
-          "cta": "Postavi na Cloudflare"
-        },
-        {
-          "tag": "Bez naredbi",
-          "name": "Običan web hosting",
-          "runs": "Europski web hosting s PHP-om i bazom podataka, kao što su TransIP, Strato ili OVHcloud",
-          "need": "FTP program",
-          "setup": "Učitajte ZIP, zatim pokrenite instalacijski program",
-          "cost": "Hosting koji već plaćate (PHP 8.2 ili noviji)",
-          "cta": "Instaliraj na web hosting"
+          "tag": "Kontejneri",
+          "name": "Docker",
+          "runs": "Bilo koji poslužitelj s alatima Docker i Docker Compose",
+          "need": "Docker, naziv domene i SSH pristup",
+          "setup": "Jedna compose datoteka, zatim čarobnjak za postavljanje",
+          "cost": "Oko 5 do 15 € mjesečno za mali poslužitelj sa sigurnosnim kopijama",
+          "cta": "Pokreni pomoću alata Docker"
         },
         {
           "tag": "Najjednostavnije",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Vaš portal fotografija, na otvorenom standardu.",
       "retailersSoftware": "Za vaš softver",
-      "hostingEditions": "Tri izdanja"
+      "hostingEditions": "Načini pokretanja"
     }
   },
   "partners": {

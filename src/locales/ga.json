@@ -14,15 +14,12 @@
     "footerMore": "Tuilleadh",
     "footerSource": "Cód foinseach agus sonraíocht",
     "footerLicence": "© 2026 {foundation}. Gach ceart ar cosaint. Tá an tsonraíocht faoi CC-BY-4.0.",
-    "editionCloudflare": "Tairseach do Cloudflare",
-    "editionHosting": "Tairseach d'óstáil gréasáin",
     "yes": "Tá",
     "inDevelopment": "Á forbairt",
     "available": "Ar fáil",
     "footerContact": "Teagmháil",
     "madeInEu": "Déanta san AE",
-    "footerDiscuss": "Bí páirteach sa phlé",
-    "editionServer": "Tairseach do d'fhreastalaí féin"
+    "footerDiscuss": "Bí páirteach sa phlé"
   },
   "nav": {
     "brands": "Do bhrandaí",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Óstáil",
-      "description": "Do thairseach íomhánna cibé áit is mian leat: ar do fhreastalaí féin le hordú amháin, ar Cloudflare Workers, ar ghnáthóstáil ghréasáin nó óstáilte ag comhpháirtí."
+      "description": "Do thairseach íomhánna cibé áit is mian leat: an tairseach Rust ar do fhreastalaí Linux féin nó le Docker, nó óstáilte ag comhpháirtí."
     },
     "retailers": {
       "title": "Do mhiondíoltóirí",
@@ -361,7 +358,6 @@
     "httpProduct": "Earra (mar shampla nuair a athraíonn sé i do PIM)",
     "httpVariant": "Dath agus méid, lena EAN",
     "httpImage": "Grianghraf: na sonraí ar dtús, ansin an comhad féin",
-    "httpImageNote": "Ní dhéanann Tairseach do Cloudflare leaganacha gréasáin de ghrianghraif é féin. Foilsigh ansin le obx nó trí \"Iompórtálacha\" i do riarachán: déanann siad sin duit iad. Taispeántar grianghraif a thagann ar bhealach eile, mar shampla ó iompórtáil sceidealaithe, ina mbunmhéid go dtí sin.",
     "httpOffline": "Rud a thógáil as líne",
     "httpHooks": "Ar mhaith leat fógra nuair a tharlaíonn rud éigin? I do riarachán, cuir fógra (webhook) leis le haghaidh allmhairiú críochnaithe nó iarratas nua ar rochtain, agus lig dó truicear a thosú in n8n, Make nó Zapier.",
     "apiTitle": "6. An API go díreach (d'fhorbróirí)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Óstáil",
-    "lead": "Tá a tairseach íomhánna féin ag gach branda. Suiteáil í ar do fhreastalaí féin le hordú amháin, rith í ar Cloudflare Workers, uaslódáil í chuig gnáthóstáil ghréasáin, nó lig do chomhpháirtí í a óstáil.",
-    "p1Title": "4. Óstálann comhpháirtí é duit",
-    "p1P": "B'fhearr leat gan é a óstáil tú féin? Is féidir le comhpháirtithe an tairseach a óstáil agus a chothabháil duit.",
-    "fieldBased": "Lonnaithe i",
-    "fieldLanguages": "Teangacha",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "D'ábhar go léir a easpórtáil",
-    "fieldWebsite": "Suíomh gréasáin",
-    "listTitle": "Ar mhaith leat a bheith liostaithe anseo mar sholáthraí?",
-    "listP": "Tá na coinníollacha le bheith liostaithe anseo mar an gcéanna do chách:",
-    "listItems": [
-      "éiríonn le do thairseach sa tástáil chomhréireachta don leagan reatha",
-      "is féidir le branda a shonraí agus a íomhánna go léir a easpórtáil agus imeacht",
-      "foilsíonn tú do phraghsanna agus do théarmaí féin ar do shuíomh féin"
-    ],
-    "listHow": "Tá sé saor in aisce a bheith comhoiriúnach; is cuid den chomhpháirtíocht oifigiúil é áit ar an liosta seo.",
-    "cfP": "Ritheann sé ar Cloudflare Workers, le D1 mar bhunachar sonraí agus R2 do na híomhánna. Cliceáil an cnaipe, logáil isteach in Cloudflare agus lean na céimeanna. Teastaíonn an plean Workers Paid (5 dollar sa mhí) le haghaidh tairsí a úsáidtear gach lá; níl an plean saor in aisce ach go leor chun breathnú thart. Déanann do bhrabhsálaí agus an uirlis obx leaganacha gréasáin de do ghrianghraif.",
-    "cfButton": "Suiteáil ar Cloudflare",
-    "phpP": "Don phacáiste óstála gréasáin atá agat b'fhéidir cheana, le PHP agus bunachar sonraí. Níl aon orduithe ag teastáil:",
-    "phpSteps": [
-      "Íoslódáil obx-portal-php-<version>.zip ón eisiúint is déanaí.",
-      "Díphacáil é agus uaslódáil an fillteán chuig d'óstáil le (S)FTP.",
-      "Dírigh d'(fho)fhearann, mar shampla retailers.dobhranda.ie, ar an bhfillteán public.",
-      "Tabhair cead scríofa do na fillteáin data agus config (ceadanna 775; má deir an suiteálaí fós nach bhfuil, 777).",
-      "Oscail an seoladh sin. Seiceálann an suiteálaí do fhreastalaí agus iarrann sé an cód suiteála ón gcomhad data/SETUP-CODE.txt, a osclaíonn tú le do chlár FTP. Ansin cliceáil “Oscail an draoi socraithe”.",
-      "Cuir an seoladh cron a thaispeánann an suiteálaí leis mar jab cron i bpainéal rialaithe d'óstála, gach 5 nóiméad. Oibríonn an tairseach gan é freisin."
-    ],
-    "phpDownload": "Íoslódáil an eisiúint is déanaí",
-    "firstTitle": "Tar éis suiteála: an chéad tosú",
-    "first": [
-      "Oscail seoladh do thairsí i do bhrabhsálaí.",
-      "Cuir isteach an cód suiteála aonuaire. Taispeánann an suiteálaí ar do fhreastalaí féin é ag an deireadh. Seachas sin, tá sé sa loga ar an gcéad tosú (Tairseach d'óstáil gréasáin: in data/SETUP-CODE.txt, agus líonann an suiteálaí isteach duit é), nó socraíonn tú roimh ré é le OBX_SETUP_CODE.",
-      "Líon isteach do chuideachta agus do chéad bhranda, agus roghnaigh do phasfhocal féin. Ní bhíonn pasfhocal réamhshocraithe ann riamh."
-    ],
-    "firstWhy": "Cinntíonn an cód socraithe nach féidir le haon duine eile tairseach nuashuiteáilte a éileamh.",
-    "domainTitle": "D'fhearann féin",
-    "domainP": "Úsáid fofhearann mar retailers.dobhranda.ie nó b2b.dobhranda.ie. Feiceann miondíoltóirí d'ainm ansin, agus fanann do sheoladh mar an gcéanna nuair a athraíonn tú óstáil.",
-    "compareTitle": "Trí eagrán, tairseach amháin",
-    "compareP": "Déanann na trí eagrán an rud céanna agus tá an riarachán céanna agus an tairseach miondíoltóirí chéanna acu. Roghnaigh an ceann a oireann d'óstáil; is féidir leat athrú níos déanaí.",
-    "compareLink": "Féach ar na cur chun feidhme",
+    "lead": "Tá a tairseach íomhánna féin ag gach branda. Ritheann OBX in Rust: suiteáil í ar do fhreastalaí Linux féin nó le Docker, nó lig do chomhpháirtí í a óstáil.",
     "heroTitle": "Do thairseach íomhánna, cibé áit is mian leat.",
-    "heroLead": "Tá na bogearraí saor in aisce. Is é an bealach is simplí ná freastalaí beag de do chuid féin agus ordú amháin. Is féidir leat aistriú am ar bith.",
+    "heroLead": "Tá na bogearraí saor in aisce agus ritheann siad in Rust. Is é an bealach is simplí ná freastalaí beag de do chuid féin, mar sheirbhís nó le Docker. Is féidir leat aistriú am ar bith.",
     "heroChecks": [
       "Bogearraí saor in aisce, ní íocann tú ach as an óstáil",
-      "Suiteálann ordú amháin an tairseach, le HTTPS",
+      "Clár amháin in Rust, le HTTPS uathoibríoch trí Caddy",
       "An tairseach chéanna i ngach áit, mar sin is féidir leat aistriú i gcónaí",
       "B'fhearr leat gan é a dhéanamh tú féin? Óstálann comhpháirtí é duit"
     ],
-    "webTitle": "3. Gnáthóstáil ghréasáin",
-    "webP": "Ritheann an t-eagrán PHP ar ghnáthóstáil ghréasáin Eorpach le PHP agus bunachar sonraí, mar shampla ag TransIP, Strato nó OVHcloud. Níl aon orduithe ag teastáil:",
-    "partnerLink": "Féach ar chomhpháirtithe",
-    "techTitle": "Sonraí teicniúla do d'fhoireann TF",
-    "techLead": "Roghanna an tsuiteálaí, comhaid, cúltacaí agus nuashonruithe, don duine a shocraíonn an freastalaí.",
-    "costTitle": "Cad a chosnaíonn sé, go garbh",
-    "costItems": [
-      "Do fhreastalaí féin san AE: thart ar €5 go €15 sa mhí do fhreastalaí beag le cúltacaí uathoibríocha, ag soláthraí ar nós Hetzner. Ní chosnaíonn grianghraif ar dhiosca an fhreastalaí féin aon rud breise; cuireann stóráil oibiachtaí do chartlann mhór cúpla euro sa mhí in aghaidh an teirebheart leis.",
-      "Gnáthóstáil ghréasáin: an pacáiste a íocann tú as cheana, chomh fada is go bhfuil PHP 8.2 nó níos nuaí air.",
-      "Cloudflare Workers: 5 dollar sa mhí do Workers Paid, móide stóráil R2 ar thart ar 1.50 dollar sa mhí in aghaidh 100 GB de ghrianghraif. Níl aon táillí íoslódála ann.",
-      "Comhpháirtí: a phraghas féin. Fiafraigh cad atá san áireamh: nuashonruithe, cúltacaí, d'fhearann féin, agus gach rud a easpórtáil má imíonn tú.",
-      "D'am féin: bíodh uair nó dhó an chloig agat an chéad uair, an fearann agus athchóiriú tástála ar chúltaca san áireamh, agus thart ar uair an chloig sa mhí do nuashonruithe agus chun na cúltacaí a sheiceáil."
-    ],
-    "costNote": "Praghsanna táscacha ó Shamhain 2026, gan CBL. Seiceáil praghsanna reatha an tsoláthraí sula roghnaíonn tú.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "Iarrann an t-eagrán Go teastas Let's Encrypt é féin chomh luath is a bhíonn d'fhearann dírithe ar an bhfreastalaí, athnuann sé go huathoibríoch é agus atreoraíonn sé http chuig https. Déanann an t-eagrán TypeScript an rud céanna trí Caddy, a shocraíonn an suiteálaí. Gan teastas? Seiceáil le dig go dtaispeánann an fearann seoladh an fhreastalaí, agus go bhfuil poirt 80 agus 443 oscailte.",
-    "backupTitle": "Cúltacaí",
-    "backupP": "Cas air cúltacaí freastalaí do sholáthraí, agus cuir cúltaca tairsí gach oíche leis a chóipeálann tú amach ón bhfreastalaí freisin. Coinnigh an eochair rúnda ar leith, i mbainisteoir pasfhocal: is é OBX_SECRET_KEY é sa chomhad socruithe, nó secret.key san fhillteán sonraí. Ní féidir cúltaca a athchóiriú go hiomlán gan é. Bain triail as athchóiriú uair amháin, ionas go mbeidh a fhios agat go n-oibríonn sé.",
-    "updateTitle": "Nuashonruithe",
-    "updateP": "Déan cúltaca agus léigh na nótaí eisiúna. Ansin rith an t-ordú suiteála céanna arís: suiteálann sé an eisiúint is déanaí, coinníonn sé do shocruithe agus do shonraí agus atosaíonn sé an tairseach. Nuashonraíonn an bunachar sonraí é féin ag tosú.",
-    "cfCliP": "Nó ó do ríomhaire féin, le Bun agus an uirlis Wrangler:",
-    "cfBackupP": "Cúltacaí: ar Workers Paid, coinníonn D1 stair 30 lá den bhunachar sonraí (Time Travel). Le haghaidh cóip lasmuigh de Cloudflare, easpórtáil an bunachar sonraí go rialta. Tá na híomhánna in R2; cóipeáil an buicéad le haon uirlis S3.",
-    "cfUpdateP": "Nuashonruithe: cumaisc an eisiúint nua isteach i do chóip den stór agus brúigh é; imscarann Cloudflare arís é.",
     "installCta": "Suiteáil ar do fhreastalaí féin",
     "exampleDomain": "portal.dobhranda.ie",
     "ownTitle": "1. Do fhreastalaí féin (molta)",
-    "ownP": "Faigh freastalaí beag Linux ar cíos, dírigh d'fhearann air agus rith ordú amháin. Íoslódálann an suiteálaí an tairseach, faigheann sé teastas HTTPS saor in aisce ó Let's Encrypt agus tosaíonn sé an tairseach mar sheirbhís a thagann ar ais léi féin tar éis atosú.",
+    "ownP": "Faigh freastalaí beag Linux ar cíos (aon VPS, x86_64 nó arm64), dírigh d'fhearann air agus suiteáil an tairseach mar sheirbhís, le Caddy os a comhair do HTTPS uathoibríoch. Tagann an tseirbhís ar ais léi féin tar éis atosú.",
     "needTitle": "A bhfuil uait",
     "needItems": [
       "Freastalaí Linux (VPS) le Ubuntu 22.04 nó 24.04, Debian 12 nó 13, nó a leithéid. Is leor 1 GB cuimhne le tosú. Tá aon soláthraí go breá, mar shampla Hetzner Cloud, DigitalOcean, TransIP VPS nó Scaleway.",
       "Seoladh poiblí IPv4 (tá IPv6 roghnach), le poirt 80 agus 443 oscailte.",
       "Fearann nó fofhearann don tairseach, mar shampla portal.dobhranda.ie."
     ],
-    "ownStepsTitle": "Trí chéim",
+    "ownStepsTitle": "Cúig chéim",
     "ownSteps": [
-      "Cruthaigh an freastalaí agus breac síos a sheoladh IP.",
-      "Dírigh portal.dobhranda.ie ar an bhfreastalaí le taifead DNS amháin (féach thíos).",
-      "Logáil isteach ar an bhfreastalaí le SSH agus rith an t-ordú seo, le do sheoladh féin:"
+      "Dírigh {domain} ar an bhfreastalaí le taifead A (féach thíos).",
+      "Íoslódáil node-rs do do fhreastalaí ón eisiúint is déanaí agus suiteáil é le sudo install node-rs /usr/local/bin/.",
+      "Suiteáil an t-aonad systemd deploy/node-rs.service ón stór. Ritheann sé an tairseach mar an t-úsáideoir node-rs, coinníonn sé na sonraí in /var/lib/node-rs agus socraíonn sé OBX_PUBLIC_URL go https://{domain}.",
+      "Suiteáil Caddy agus tabhair dó an Caddyfile gearr thíos. Faigheann sé an teastas HTTPS duit agus seolann sé cuairteoirí ar aghaidh chuig an tairseach.",
+      "Oscail https://{domain} agus cuir isteach an cód suiteála aonuaire ó journalctl -u node-rs."
     ],
-    "ownDone": "Nuair a bhíonn sé críochnaithe, taispeánann an suiteálaí seoladh do thairsí agus cód suiteála aonuaire. Oscail an seoladh, cuir isteach an cód agus críochnaigh an draoi socraithe. Le nuashonrú níos déanaí, rith an t-ordú céanna arís: fanann do shocruithe agus do shonraí.",
-    "ownTs": "Suiteálann sé seo an t-eagrán Go, an Tairseach do d'fhreastalaí féin. Don eagrán TypeScript, cuir --edition ts leis an ordú céanna.",
     "ownEu": "Roghnaigh ionad sonraí san AE, agus fanfaidh do chatalóg, d'íomhánna agus do bhunachar sonraí san AE.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "An bhfuil Docker in úsáid agat cheana? Tosaíonn comhad compose amháin an tairseach (an íomhá ghcr.io/openbrandexchange/node-rs) in éineacht le Caddy do HTTPS. Dírigh d'fhearann ar an bhfreastalaí ar dtús (féach DNS thíos), ansin rith:",
+    "dockerDone": "Ansin oscail https://{domain} agus cuir isteach an cód suiteála aonuaire ó docker compose logs node-rs.",
     "dnsTitle": "DNS: dírigh d'fhearann ar an bhfreastalaí",
     "dnsP": "Cuir taifead amháin leis ag an gcomhlacht a bhainistíonn d'fhearann:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Seiceáil é",
     "dnsCheckP": "Ar do ríomhaire féin, caithfidh sé seo seoladh an fhreastalaí a thaispeáint (nó úsáid seiceálaí DNS ar líne ar nós dnschecker.org):",
-    "dnsWait": "Tógann sé sin 5 go 60 nóiméad de ghnáth, uaireanta cúpla uair an chloig. Seiceálann an suiteálaí é freisin agus insíonn sé duit cad atá fós in easnamh.",
-    "optionsTitle": "Roghanna an tsuiteálaí",
-    "options": [
-      "seoladh na tairsí, mar shampla portal.dobhranda.ie (riachtanach)",
-      "seoladh ríomhphoist do Let's Encrypt (roghnach)",
-      "eisiúint ar leith in ionad na heisiúna is déanaí",
-      "suiteálann go (réamhshocrú) an t-eagrán Go; suiteálann ts an t-eagrán TypeScript",
-      "gan HTTPS dá chuid féin: éisteann an tairseach ar 127.0.0.1:8080 taobh thiar de do sheachfhreastalaí féin",
-      "ná taispeáin ach a ndéanfadh sé, ná hathraigh faic",
-      "bain an clár agus an tseirbhís; fanann do shonraí agus do shocruithe (cuir --purge leis chun iad a scriosadh freisin)"
-    ],
-    "checksP": "Sula n-athraíonn sé aon rud, seiceálann an suiteálaí an córas (Linux amd64 nó arm64 le systemd), cearta root, spás diosca, go bhfuil an fearann dírithe ar an bhfreastalaí seo, go bhfuil poirt 80 agus 443 saor, agus an balla dóiteáin. Le ufw nó firewalld priontálann sé an t-ordú cruinn chun poirt 80 agus 443 a oscailt.",
-    "filesTitle": "Cá bhfuil gach rud",
-    "filesHead": [
-      "Cad",
-      "Eagrán Go",
-      "Eagrán TypeScript"
-    ],
-    "filesRows": [
-      "Clár",
-      "Sonraí",
-      "Socruithe",
-      "Seirbhís"
-    ],
+    "dnsWait": "Tógann sé sin 5 go 60 nóiméad de ghnáth, uaireanta cúpla uair an chloig. Faigheann Caddy an teastas chomh luath is a bhíonn an fearann dírithe ar an bhfreastalaí.",
+    "techTitle": "Sonraí teicniúla do d'fhoireann TF",
+    "techLead": "Stóráil, socruithe, cúltacaí agus nuashonruithe, don duine a shocraíonn an freastalaí.",
+    "storageTitle": "Stóráil agus socruithe",
+    "storageP": "Úsáideann an tairseach SQLite de réir réamhshocraithe. Téann íomhánna ar dhiosca an fhreastalaí féin nó in aon bhuicéad atá comhoiriúnach le S3 (OBX_BLOB_URL). Is athróg timpeallachta OBX_* gach socrú, leis na hainmneacha céanna a d'úsáid node-go.",
     "commandsTitle": "Orduithe úsáideacha",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "Gan freastalaí le bainistiú: ritheann an tairseach ar do chuntas Cloudflare féin. Cliceáil an cnaipe, logáil isteach agus lean na céimeanna.",
-    "cfDnsTitle": "DNS: fearann saincheaptha ar an Worker",
-    "cfDnsP": "Cuir an seoladh leis mar fhearann saincheaptha ar an Worker: Workers & Pages → do Worker → Settings → Domains & Routes → Add → Custom domain. Má tá d'fhearann ar Cloudflare cheana, socraítear DNS agus an teastas go huathoibríoch. Mura bhfuil, aistrigh DNS d'fhearainn chuig Cloudflare ar dtús (saor in aisce; fanann d'fhearann cláraithe san áit a bhfuil sé), agus ansin cuir an fearann saincheaptha leis. Ansin socraigh OBX_PUBLIC_URL ar an seoladh sin agus imscar arís.",
-    "webDnsTitle": "DNS: fofhearann i do phainéal rialaithe",
-    "webDnsP": "Cruthaigh an fofhearann i bpainéal rialaithe d'óstála (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain, nó Subdomains; Plesk: Websites & Domains → Add Subdomain). Má tá DNS d'fhearainn ag an gcomhlacht óstála céanna, sin uile. Seachas sin, cuir taifead A leis don fhofhearann a dhíríonn ar sheoladh IP fhreastalaí na hóstála, a thaispeánann an painéal. Ansin cas air Let's Encrypt don fhofhearann sa phainéal."
+    "httpsTitle": "HTTPS",
+    "httpsP": "Iarrann Caddy teastas Let's Encrypt chomh luath is a bhíonn d'fhearann dírithe ar an bhfreastalaí, athnuann sé go huathoibríoch é agus atreoraíonn sé http chuig https. Gan teastas? Seiceáil le dig go dtaispeánann an fearann seoladh an fhreastalaí, agus go bhfuil poirt 80 agus 443 oscailte.",
+    "backupTitle": "Cúltacaí",
+    "backupP": "Cas air cúltacaí freastalaí do sholáthraí, agus coinnigh cóip chriptithe den tairseach gach oíche ag soláthraí eile nó i réigiún eile. Bain triail as athchóiriú gach ráithe, ionas go mbeidh a fhios agat go n-oibríonn sé.",
+    "backupLink": "Cúltaca lasmuigh den láthair",
+    "updateTitle": "Nuashonruithe",
+    "updateP": "Déan cúltaca agus léigh na nótaí eisiúna. Ar Linux, suiteáil an dénártha nua ar an mbealach céanna agus atosaigh an tseirbhís. Le Docker, rith docker compose pull agus ansin docker compose up -d. Nuashonraíonn an bunachar sonraí é féin ag tosú.",
+    "releaseLink": "Íoslódáil an eisiúint is déanaí",
+    "migrateTitle": "Aistriú ó node-go, node-php nó node-ts",
+    "migrateP": "Tagann do shonraí, d'íomhánna agus do shocruithe leat. Tá na céimeanna do gach eagrán roimhe seo sa treoir aistrithe.",
+    "migrateLink": "Léigh an treoir aistrithe",
+    "p1Title": "3. Óstálann comhpháirtí é duit",
+    "p1P": "B'fhearr leat gan é a óstáil tú féin? Is féidir le comhpháirtithe an tairseach a óstáil agus a chothabháil duit.",
+    "partnerLink": "Féach ar chomhpháirtithe",
+    "fieldBased": "Lonnaithe i",
+    "fieldLanguages": "Teangacha",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "D'ábhar go léir a easpórtáil",
+    "fieldWebsite": "Suíomh gréasáin",
+    "listTitle": "Ar mhaith leat a bheith liostaithe anseo mar sholáthraí?",
+    "listP": "Tá na coinníollacha le bheith liostaithe anseo mar an gcéanna do chách:",
+    "listItems": [
+      "éiríonn le do thairseach sa tástáil chomhréireachta don leagan reatha",
+      "is féidir le branda a shonraí agus a íomhánna go léir a easpórtáil agus imeacht",
+      "foilsíonn tú do phraghsanna agus do théarmaí féin ar do shuíomh féin"
+    ],
+    "listHow": "Tá sé saor in aisce a bheith comhoiriúnach; is cuid den chomhpháirtíocht oifigiúil é áit ar an liosta seo.",
+    "costTitle": "Cad a chosnaíonn sé, go garbh",
+    "costItems": [
+      "Do fhreastalaí féin san AE: thart ar €5 go €15 sa mhí do fhreastalaí beag le cúltacaí uathoibríocha, ag soláthraí ar nós Hetzner. Ní chosnaíonn grianghraif ar dhiosca an fhreastalaí féin aon rud breise; cuireann stóráil oibiachtaí do chartlann mhór cúpla euro sa mhí in aghaidh an teirebheart leis.",
+      "Comhpháirtí: a phraghas féin. Fiafraigh cad atá san áireamh: nuashonruithe, cúltacaí, d'fhearann féin, agus gach rud a easpórtáil má imíonn tú.",
+      "D'am féin: bíodh uair nó dhó an chloig agat an chéad uair, an fearann agus athchóiriú tástála ar chúltaca san áireamh, agus thart ar uair an chloig sa mhí do nuashonruithe agus chun na cúltacaí a sheiceáil."
+    ],
+    "costNote": "Praghsanna táscacha ó Shamhain 2026, gan CBL. Seiceáil praghsanna reatha an tsoláthraí sula roghnaíonn tú.",
+    "firstTitle": "Tar éis suiteála: an chéad tosú",
+    "first": [
+      "Oscail seoladh do thairsí i do bhrabhsálaí.",
+      "Cuir isteach an cód suiteála aonuaire. Tá sé sa loga ar an gcéad tosú (journalctl -u node-rs, nó docker compose logs node-rs), nó socraíonn tú roimh ré é le OBX_SETUP_CODE.",
+      "Líon isteach do chuideachta agus do chéad bhranda, agus roghnaigh do phasfhocal féin. Ní bhíonn pasfhocal réamhshocraithe ann riamh."
+    ],
+    "firstWhy": "Cinntíonn an cód socraithe nach féidir le haon duine eile tairseach nuashuiteáilte a éileamh.",
+    "domainTitle": "D'fhearann féin",
+    "domainP": "Úsáid fofhearann mar retailers.dobhranda.ie nó b2b.dobhranda.ie. Feiceann miondíoltóirí d'ainm ansin, agus fanann do sheoladh mar an gcéanna nuair a athraíonn tú óstáil.",
+    "compareTitle": "Tairseach amháin, scríofa in Rust",
+    "compareP": "Tá tairseach tagartha amháin ann, node-rs. Tá an riarachán céanna agus an tairseach miondíoltóirí chéanna aici cibé áit a ritheann sí, mar sin is féidir leat bogadh idir do fhreastalaí féin, Docker agus comhpháirtí am ar bith.",
+    "retireNote": "Tá na heagráin roimhe seo node-go, node-php agus node-ts á scor."
   },
   "retailers": {
     "h1": "Do mhiondíoltóirí",
@@ -712,10 +670,9 @@
       "sonraíocht, scéimeanna, sonraí tástála",
       "Go SDK, uirlis obx, tástálacha comhréireachta, freastalaí bréige",
       "comhéadan gréasáin comhroinnte: riarachán agus tairseach miondíoltóirí",
-      "Go: do fhreastalaí féin, le suiteálaí aon líne",
-      "PHP: gnáth-óstáil ghréasáin",
-      "TypeScript: Cloudflare Workers"
+      "an tairseach tagartha, in Rust: Linux nó Docker"
     ],
+    "implRef": "Tairseach tagartha",
     "statusDraft": "0.3",
     "implP": "Ag tógáil do chur chun feidhme nó do chliant féin? Cuir in iúl dúinn le issue nó pull request, agus rachaidh sé sa tábla seo a luaithe a éiríonn leis sna tástálacha comhréireachta.",
     "docsTitle": "Doiciméid",
@@ -737,20 +694,12 @@
         "d": "An tsonraíocht, na scéimeanna agus na sonraí tástála"
       },
       {
+        "name": "node-rs",
+        "d": "An tairseach tagartha, in Rust"
+      },
+      {
         "name": "obx-go",
         "d": "Go SDK, an uirlis obx agus an tástáil chomhréireachta"
-      },
-      {
-        "name": "node-ts",
-        "d": "Tairseach do Cloudflare Workers"
-      },
-      {
-        "name": "node-go",
-        "d": "Tairseach do d'fhreastalaí féin"
-      },
-      {
-        "name": "node-php",
-        "d": "Tairseach d'óstáil ghréasáin ghnáth"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Foinse oscailte, ar GitHub.",
     "reposTitle": "Stórtha",
-    "reposP": "Tá gach rud ina fhoinse oscailte ar GitHub: an tsonraíocht, an cód comhroinnte agus na trí eagrán den tairseach.",
+    "reposP": "Tá gach rud ina fhoinse oscailte ar GitHub: an tsonraíocht, an cód comhroinnte agus an tairseach tagartha in Rust.",
     "newTitle": "Nua i leagan 0.3",
     "newItems": [
       "Is cóid iad ábhair agus cúram, le hainmneacha i mBéarla, in Ollainnis, i nGearmáinis agus i bhFraincis, ó fhoclóirí comhroinnte atá foilsithe ag /vocabularies/v0.3/.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "An bhfuil sé réidh?",
-        "a": "Tá, leagan 0.3: tá an tsonraíocht, na trí eagrán den tairseach agus na huirlisí eisithe agus saor le húsáid. Is luath sa lá é: tá na chéad bhrandaí ag teacht isteach anois."
+        "a": "Tá, leagan 0.3: tá an tsonraíocht agus na huirlisí eisithe agus saor le húsáid, agus ritheann an tairseach in Rust. Is luath sa lá é: tá na chéad bhrandaí ag teacht isteach anois."
       },
       {
         "q": "Cé atá taobh thiar de?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Ceadúnais",
-        "p": "Tá an tsonraíocht faoi CC-BY-4.0. Tá an SDK, an uirlis obx agus an comhéadan gréasáin comhroinnte faoi Apache-2.0. Tá na trí eagrán tairsí faoi AGPL-3.0, ionas go bhfanann feabhsuithe orthu oscailte. Níl ceadúnas oscailte ar an suíomh gréasáin seo: tá gach ceart ar cosaint ar a chód, a dhearadh agus a théacsanna. Coinníonn comhaid ón tsonraíocht a sholáthraíonn sé, ar nós na scéimeanna, na dteimpléad agus na samplaí, a gceadúnas CC-BY-4.0."
+        "p": "Tá an tsonraíocht faoi CC-BY-4.0. Tá an SDK, an uirlis obx agus an comhéadan gréasáin comhroinnte faoi Apache-2.0. Tá an tairseach, node-rs, faoi AGPL-3.0, ionas go bhfanann feabhsuithe uirthi oscailte. Níl ceadúnas oscailte ar an suíomh gréasáin seo: tá gach ceart ar cosaint ar a chód, a dhearadh agus a théacsanna. Coinníonn comhaid ón tsonraíocht a sholáthraíonn sé, ar nós na scéimeanna, na dteimpléad agus na samplaí, a gceadúnas CC-BY-4.0."
       }
     ],
     "nameTitle": "Maidir leis an ainm",
@@ -1036,7 +985,7 @@
       "Uaslódáil d'easpórtáil Excel agus do ghrianghraif de láimh, nó bíodh siad bailithe gach oíche",
       "Seachadadh uathoibríoch ó do PIM, ERP nó fillteán comhroinnte",
       "Iarratais rochtana, cuirí agus eochracha API do bhogearraí do mhiondíoltóirí",
-      "Trí eagrán: do fhreastalaí féin, Cloudflare Workers agus gnáthóstáil ghréasáin"
+      "Tairseach amháin in Rust: ar do fhreastalaí Linux féin nó le Docker"
     ],
     "brandsComing": [
       "An chéad eisiúint phoiblí, le suiteáil le cliceáil amháin",
@@ -1098,8 +1047,8 @@
           "l": "caighdeán, saor do chách"
         },
         {
-          "v": "3",
-          "l": "eagrán den tairseach"
+          "v": "61",
+          "l": "seiceálacha comhréireachta uathoibríocha"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Óstáil",
       "editionsTitle": "Rith é áit ar bith. Íoc as óstáil amháin.",
-      "editionsLead": "Trí eagrán den tairseach íomhánna chéanna. Oibríonn siad ar an mbealach céanna, mar sin is féidir leat bogadh ó cheann go ceann am ar bith.",
+      "editionsLead": "Ritheann OBX in Rust: tairseach íomhánna amháin a óstálann tú ar do fhreastalaí Linux féin nó le Docker, nó a óstálann comhpháirtí duit. Is féidir leat aistriú am ar bith.",
       "editionsLink": "Cuir na roghanna óstála i gcomparáid",
       "editionFields": [
         "Ritheann ar",
@@ -1197,27 +1146,18 @@
           "name": "Do fhreastalaí féin",
           "runs": "Aon fhreastalaí Linux (VPS), mar shampla ag Hetzner, DigitalOcean, TransIP nó Scaleway",
           "need": "Freastalaí, ainm fearainn agus rochtain SSH",
-          "setup": "Ordú amháin, ansin an draoi socraithe",
+          "setup": "Suiteáil an clár agus Caddy, ansin an draoi socraithe",
           "cost": "Thart ar €5 go €15 sa mhí do fhreastalaí beag le cúltacaí",
           "cta": "Suiteáil ar do fhreastalaí féin"
         },
         {
-          "tag": "Gan freastalaí",
-          "name": "Cloudflare Workers",
-          "runs": "Do chuntas Cloudflare féin, le D1 mar bhunachar sonraí agus R2 do na híomhánna",
-          "need": "Cuntas Cloudflare ar an bplean Workers Paid",
-          "setup": "Cliceáil amháin, ansin an draoi socraithe",
-          "cost": "5 dollar sa mhí móide stóráil",
-          "cta": "Socraigh ar Cloudflare"
-        },
-        {
-          "tag": "Gan orduithe",
-          "name": "Gnáthóstáil ghréasáin",
-          "runs": "Óstáil ghréasáin Eorpach le PHP agus bunachar sonraí, ar nós TransIP, Strato nó OVHcloud",
-          "need": "Clár FTP",
-          "setup": "Uaslódáil zip, ansin an suiteálaí",
-          "cost": "An óstáil a íocann tú as cheana (PHP 8.2 nó níos nuaí)",
-          "cta": "Socraigh ar óstáil ghréasáin"
+          "tag": "Coimeádáin",
+          "name": "Docker",
+          "runs": "Aon fhreastalaí le Docker agus Docker Compose",
+          "need": "Docker, ainm fearainn agus rochtain SSH",
+          "setup": "Comhad compose amháin, ansin an draoi socraithe",
+          "cost": "Thart ar €5 go €15 sa mhí do fhreastalaí beag le cúltacaí",
+          "cta": "Tosaigh le Docker"
         },
         {
           "tag": "Is fusa",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Do thairseach íomhánna, ar an gcaighdeán oscailte.",
       "retailersSoftware": "Do do bhogearraí",
-      "hostingEditions": "Na trí eagrán"
+      "hostingEditions": "Bealaí lena rith"
     }
   },
   "partners": {

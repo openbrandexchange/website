@@ -14,15 +14,12 @@
     "footerMore": "Meer",
     "footerSource": "Broncode en specificatie",
     "footerLicence": "© 2026 {foundation}. Alle rechten voorbehouden. De specificatie is CC-BY-4.0.",
-    "editionCloudflare": "Portaal voor Cloudflare",
-    "editionHosting": "Portaal voor webhosting",
     "yes": "Ja",
     "inDevelopment": "In ontwikkeling",
     "available": "Beschikbaar",
     "footerContact": "Contact",
     "madeInEu": "Made in the EU",
-    "footerDiscuss": "Praat mee",
-    "editionServer": "Portaal voor je eigen server"
+    "footerDiscuss": "Praat mee"
   },
   "nav": {
     "brands": "Voor merken",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Je beeldbank waar je maar wilt: op je eigen server met één commando, op Cloudflare Workers, op gewone webhosting of gehost door een partner."
+      "description": "Je beeldbank waar je maar wilt: de Rust-beeldbank op je eigen Linux-server of met Docker, of gehost door een partner."
     },
     "retailers": {
       "title": "Voor retailers",
@@ -361,7 +358,6 @@
     "httpProduct": "Artikel (bijvoorbeeld als het in je PIM wijzigt)",
     "httpVariant": "Kleur en maat, met de EAN",
     "httpImage": "Foto: eerst de gegevens, dan het bestand zelf",
-    "httpImageNote": "Het Portaal voor Cloudflare maakt zelf geen webversies van foto's. Publiceer daar met obx of via \"Imports\" in je beheeromgeving: die maken ze voor je. Foto's die op een andere manier binnenkomen, zoals via een geplande import, worden tot dan op origineel formaat getoond.",
     "httpOffline": "Iets offline halen",
     "httpHooks": "Wil je een seintje als er iets gebeurt? Zet in je beheeromgeving een melding (webhook) op een afgeronde import of een nieuwe toegangsaanvraag, en laat die een trigger in n8n, Make of Zapier starten.",
     "apiTitle": "6. De API direct (voor ontwikkelaars)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Elk merk heeft zijn eigen beeldbank. Installeer hem met één commando op je eigen server, draai hem op Cloudflare Workers, upload hem naar gewone webhosting of laat een partner hem hosten.",
-    "p1Title": "4. Een partner host het voor je",
-    "p1P": "Liever niet zelf hosten? Partners kunnen het portaal voor je hosten en onderhouden.",
-    "fieldBased": "Gevestigd in",
-    "fieldLanguages": "Talen",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "Al je content exporteren",
-    "fieldWebsite": "Website",
-    "listTitle": "Hier vermeld worden als provider?",
-    "listP": "De voorwaarden voor een vermelding hier zijn voor iedereen gelijk:",
-    "listItems": [
-      "je portaal slaagt voor de conformancetest van de huidige versie",
-      "een merk kan al zijn data en beelden exporteren en vertrekken",
-      "je vermeldt je eigen prijzen en voorwaarden op je eigen site"
-    ],
-    "listHow": "Compatibel zijn is gratis; een vermelding hier hoort bij het officiële partnerschap.",
-    "cfP": "Draait op Cloudflare Workers, met D1 als database en R2 voor de beelden. Klik op de knop, log in bij Cloudflare en volg de stappen. Voor een portal die je dagelijks gebruikt heb je het Workers Paid-abonnement nodig (5 dollar per maand); het gratis abonnement is alleen genoeg om rond te kijken. Webversies van je foto's maken je browser en de obx-tool.",
-    "cfButton": "Installeren op Cloudflare",
-    "phpP": "Voor het webhostingpakket dat je misschien al hebt, met PHP en een database. Geen commando's nodig:",
-    "phpSteps": [
-      "Download obx-portal-php-<version>.zip bij de nieuwste release.",
-      "Pak het uit en upload de map met (S)FTP naar je hosting.",
-      "Laat je (sub)domein, bijvoorbeeld beeldbank.jouwmerk.nl, naar de map public wijzen.",
-      "Maak de mappen data en config schrijfbaar (rechten 775; zegt de installatie dat ze het nog niet zijn, dan 777).",
-      "Open dat adres. De installatie controleert je server en vraagt om de installatiecode uit het bestand data/SETUP-CODE.txt, dat je met je FTP-programma opent. Klik daarna op “Open de installatiewizard”.",
-      "Zet het cron-adres dat de installatie toont als cronjob in het beheerpaneel van je hosting, elke 5 minuten. Zonder werkt het portaal ook."
-    ],
-    "phpDownload": "Download de nieuwste release",
-    "firstTitle": "Na het installeren: de eerste start",
-    "first": [
-      "Open het adres van je portaal in je browser.",
-      "Vul de eenmalige installatiecode in. De installer op je eigen server toont hem aan het eind. Anders staat hij in het log bij de eerste start (Portaal voor webhosting: in data/SETUP-CODE.txt, en de installatie vult hem voor je in), of je stelt hem vooraf in met OBX_SETUP_CODE.",
-      "Vul je bedrijf en je eerste merk in en kies je eigen wachtwoord. Er is nooit een standaardwachtwoord."
-    ],
-    "firstWhy": "De setupcode zorgt ervoor dat niemand anders een net geïnstalleerd portaal kan claimen.",
-    "domainTitle": "Je eigen domein",
-    "domainP": "Gebruik een subdomein zoals beeldbank.jouwmerk.nl of b2b.jouwmerk.nl. Retailers zien dan jouw naam, en je adres blijft hetzelfde als je van hosting wisselt.",
-    "compareTitle": "Drie edities, één portaal",
-    "compareP": "De drie edities doen hetzelfde en hebben dezelfde beheeromgeving en hetzelfde retailerportaal. Kies wat bij je hosting past; wisselen kan later altijd.",
-    "compareLink": "Bekijk de implementaties",
+    "lead": "Elk merk heeft zijn eigen beeldbank. OBX draait in Rust: installeer hem op je eigen Linux-server of met Docker, of laat een partner hem hosten.",
     "heroTitle": "Je beeldbank, waar je maar wilt.",
-    "heroLead": "De software is gratis. Het makkelijkst is een kleine eigen server en één commando. Je kunt altijd verhuizen.",
+    "heroLead": "De software is gratis en draait in Rust. Het makkelijkst is een kleine eigen server, als dienst of met Docker. Je kunt altijd verhuizen.",
     "heroChecks": [
       "Gratis software, je betaalt alleen voor hosting",
-      "Eén commando installeert de beeldbank, met HTTPS",
+      "Eén programma in Rust, met automatisch HTTPS via Caddy",
       "Overal hetzelfde portaal, dus je kunt altijd overstappen",
       "Liever niet zelf? Een partner host het voor je"
     ],
-    "webTitle": "3. Gewone webhosting",
-    "webP": "De PHP-editie draait op gewone Europese webhosting met PHP en een database, bijvoorbeeld bij TransIP, Strato of OVHcloud. Zonder commando's:",
-    "partnerLink": "Bekijk partners",
-    "techTitle": "Technische details voor je IT-team",
-    "techLead": "Opties van de installer, bestanden, back-ups en updates, voor wie de server inricht.",
-    "costTitle": "Wat het ongeveer kost",
-    "costItems": [
-      "Je eigen server in de EU: ongeveer € 5 tot € 15 per maand voor een kleine server met automatische back-ups, bij een provider als Hetzner. Foto's op de eigen schijf van de server kosten niets extra; objectopslag voor een groot archief kost een paar euro per maand per terabyte.",
-      "Gewone webhosting: het pakket dat je al betaalt, als het maar PHP 8.2 of nieuwer heeft.",
-      "Cloudflare Workers: 5 dollar per maand voor Workers Paid, plus R2-opslag van ongeveer 1,50 dollar per maand per 100 GB foto's. Downloads kosten niets.",
-      "Een partner: diens eigen prijs. Vraag wat erbij zit: updates, back-ups, je eigen domein, en alles kunnen exporteren als je vertrekt.",
-      "Je eigen tijd: reken de eerste keer op één tot twee uur, inclusief het domein en een proef met het terugzetten van een back-up, en daarna ongeveer een uur per maand voor updates en het controleren van de back-ups."
-    ],
-    "costNote": "Indicatieve prijzen van november 2026, exclusief btw. Bekijk de actuele prijzen van de provider voordat je kiest.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "De Go-editie vraagt zelf een Let's Encrypt-certificaat aan zodra je domein naar de server wijst, verlengt het automatisch en stuurt http door naar https. De TypeScript-editie doet hetzelfde via Caddy, dat de installer voor je inricht. Geen certificaat? Controleer met dig of het domein het adres van de server toont, en of de poorten 80 en 443 open staan.",
-    "backupTitle": "Back-ups",
-    "backupP": "Zet de serverback-ups van je provider aan, en voeg een nachtelijke back-up van de beeldbank toe die je ook naar een plek buiten de server kopieert. Bewaar de geheime sleutel apart, in een wachtwoordmanager: dat is OBX_SECRET_KEY in het instellingenbestand, of secret.key in de datamap. Zonder die sleutel kun je een back-up niet volledig terugzetten. Zet één keer een back-up terug als test, zodat je weet dat het werkt.",
-    "updateTitle": "Updates",
-    "updateP": "Maak een back-up en lees de release notes. Voer daarna hetzelfde installatiecommando opnieuw uit: het installeert de nieuwste release, houdt je instellingen en gegevens en herstart de beeldbank. De database werkt zichzelf bij bij het starten.",
-    "cfCliP": "Of vanaf je eigen computer, met Bun en de Wrangler-tool:",
-    "cfBackupP": "Back-ups: met Workers Paid bewaart D1 30 dagen databasegeschiedenis (Time Travel). Wil je een kopie buiten Cloudflare? Exporteer de database dan regelmatig. De beelden staan in R2; kopieer de bucket met een willekeurige S3-tool.",
-    "cfUpdateP": "Updates: merge de nieuwe release in je kopie van de repository en push; Cloudflare deployt hem opnieuw.",
     "installCta": "Installeer op je eigen server",
     "exampleDomain": "portal.jouwmerk.nl",
     "ownTitle": "1. Je eigen server (aanbevolen)",
-    "ownP": "Huur een kleine Linux-server, laat je domein ernaar wijzen en voer één commando uit. De installer downloadt de beeldbank, haalt een gratis HTTPS-certificaat op bij Let's Encrypt en start de beeldbank als dienst die na een herstart vanzelf terugkomt.",
+    "ownP": "Huur een kleine Linux-server (elke VPS, x86_64 of arm64), laat je domein ernaar wijzen en installeer de beeldbank als dienst, met Caddy ervoor voor automatisch HTTPS. De dienst komt na een herstart vanzelf terug.",
     "needTitle": "Wat je nodig hebt",
     "needItems": [
       "Een Linux-server (VPS) met Ubuntu 22.04 of 24.04, Debian 12 of 13, of iets vergelijkbaars. 1 GB geheugen is genoeg om te beginnen. Elke provider is prima, bijvoorbeeld Hetzner Cloud, DigitalOcean, TransIP VPS of Scaleway.",
       "Een publiek IPv4-adres (IPv6 is optioneel), met de poorten 80 en 443 open.",
       "Een domein of subdomein voor de beeldbank, bijvoorbeeld portal.jouwmerk.nl."
     ],
-    "ownStepsTitle": "Drie stappen",
+    "ownStepsTitle": "Vijf stappen",
     "ownSteps": [
-      "Maak de server aan en noteer het IP-adres.",
-      "Laat portal.jouwmerk.nl met één DNS-record naar de server wijzen (zie hieronder).",
-      "Log met SSH in op de server en voer dit commando uit, met je eigen adres:"
+      "Laat {domain} met een A-record naar de server wijzen (zie hieronder).",
+      "Download node-rs voor je server uit de nieuwste release en installeer hem met sudo install node-rs /usr/local/bin/.",
+      "Installeer de systemd-unit deploy/node-rs.service uit de repository. Die draait de beeldbank als gebruiker node-rs, bewaart de gegevens in /var/lib/node-rs en zet OBX_PUBLIC_URL op https://{domain}.",
+      "Installeer Caddy en geef het de korte Caddyfile hieronder. Caddy haalt het HTTPS-certificaat voor je op en stuurt bezoekers door naar de beeldbank.",
+      "Open https://{domain} en vul de eenmalige installatiecode uit journalctl -u node-rs in."
     ],
-    "ownDone": "Als hij klaar is, toont de installer het adres van je beeldbank en een eenmalige installatiecode. Open het adres, vul de code in en doorloop de installatiewizard. Later bijwerken? Voer hetzelfde commando opnieuw uit: je instellingen en gegevens blijven staan.",
-    "ownTs": "Zo installeer je de Go-editie, het Portaal voor je eigen server. Wil je de TypeScript-editie, voeg dan --edition ts toe aan hetzelfde commando.",
     "ownEu": "Kies een datacenter in de EU, dan blijven je catalogus, beelden en database in de EU.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "Gebruik je al Docker? Eén compose-bestand start de beeldbank (de image ghcr.io/openbrandexchange/node-rs) samen met Caddy voor HTTPS. Laat eerst je domein naar de server wijzen (zie DNS hieronder) en voer dan uit:",
+    "dockerDone": "Open daarna https://{domain} en vul de eenmalige installatiecode uit docker compose logs node-rs in.",
     "dnsTitle": "DNS: laat je domein naar de server wijzen",
     "dnsP": "Voeg één record toe bij het bedrijf dat je domein beheert:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Controleer het",
     "dnsCheckP": "Op je eigen computer moet dit het adres van de server tonen (of gebruik een online DNS-checker zoals dnschecker.org):",
-    "dnsWait": "Dat duurt meestal 5 tot 60 minuten, soms een paar uur. De installer controleert het ook en vertelt je wat er nog ontbreekt.",
-    "optionsTitle": "Opties van de installer",
-    "options": [
-      "het adres van de beeldbank, bijvoorbeeld portal.jouwmerk.nl (verplicht)",
-      "een e-mailadres voor Let's Encrypt (optioneel)",
-      "een bepaalde release in plaats van de nieuwste",
-      "go (standaard) installeert de Go-editie; ts installeert de TypeScript-editie",
-      "geen eigen HTTPS: de beeldbank luistert op 127.0.0.1:8080 achter je eigen proxy",
-      "alleen laten zien wat hij zou doen, niets veranderen",
-      "verwijder het programma en de dienst; je gegevens en instellingen blijven staan (voeg --purge toe om die ook te wissen)"
-    ],
-    "checksP": "Voordat de installer iets verandert, controleert hij het systeem (Linux amd64 of arm64 met systemd), rootrechten, schijfruimte, of het domein naar deze server wijst, of de poorten 80 en 443 vrij zijn, en de firewall. Met ufw of firewalld toont hij precies het commando om de poorten 80 en 443 te openen.",
-    "filesTitle": "Waar alles staat",
-    "filesHead": [
-      "Wat",
-      "Go-editie",
-      "TypeScript-editie"
-    ],
-    "filesRows": [
-      "Programma",
-      "Gegevens",
-      "Instellingen",
-      "Dienst"
-    ],
+    "dnsWait": "Dat duurt meestal 5 tot 60 minuten, soms een paar uur. Caddy haalt het certificaat op zodra het domein naar de server wijst.",
+    "techTitle": "Technische details voor je IT-team",
+    "techLead": "Opslag, instellingen, back-ups en updates, voor wie de server inricht.",
+    "storageTitle": "Opslag en instellingen",
+    "storageP": "De beeldbank gebruikt standaard SQLite. Beelden staan op de eigen schijf van de server of in een S3-compatibele bucket naar keuze (OBX_BLOB_URL). Elke instelling is een OBX_*-omgevingsvariabele, met dezelfde namen als bij node-go.",
     "commandsTitle": "Handige commando's",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "Geen server om te beheren: de beeldbank draait op je eigen Cloudflare-account. Klik op de knop, log in en volg de stappen.",
-    "cfDnsTitle": "DNS: een eigen domein op de Worker",
-    "cfDnsP": "Voeg het adres als eigen domein toe aan de Worker: Workers & Pages → je Worker → Settings → Domains & Routes → Add → Custom domain. Staat je domein al bij Cloudflare, dan worden DNS en het certificaat automatisch ingesteld. Zo niet, verhuis dan eerst de DNS van je domein naar Cloudflare (gratis; je domein blijft geregistreerd waar het nu is) en voeg dan het eigen domein toe. Zet daarna OBX_PUBLIC_URL op dat adres en deploy opnieuw.",
-    "webDnsTitle": "DNS: een subdomein in je controlepaneel",
-    "webDnsP": "Maak het subdomein aan in het controlepaneel van je hosting (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain, of Subdomains; Plesk: Websites & Domains → Add Subdomain). Staat de DNS van je domein bij hetzelfde hostingbedrijf, dan ben je klaar. Anders voeg je een A-record toe voor het subdomein dat naar het IP-adres van de hostingserver wijst; dat staat in het paneel. Zet daarna Let's Encrypt aan voor het subdomein in het paneel."
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy vraagt een Let's Encrypt-certificaat aan zodra je domein naar de server wijst, verlengt het automatisch en stuurt http door naar https. Geen certificaat? Controleer met dig of het domein het adres van de server toont, en of de poorten 80 en 443 open staan.",
+    "backupTitle": "Back-ups",
+    "backupP": "Zet de serverback-ups van je provider aan, en bewaar elke nacht een versleutelde kopie van de beeldbank bij een andere provider of in een andere regio. Zet elk kwartaal als oefening een back-up terug, zodat je weet dat het werkt.",
+    "backupLink": "Back-up op een andere plek",
+    "updateTitle": "Updates",
+    "updateP": "Maak een back-up en lees de release notes. Op Linux installeer je het nieuwe programma op dezelfde manier en herstart je de dienst. Met Docker voer je docker compose pull uit en daarna docker compose up -d. De database werkt zichzelf bij bij het starten.",
+    "releaseLink": "Download de nieuwste release",
+    "migrateTitle": "Overstappen van node-go, node-php of node-ts",
+    "migrateP": "Je gegevens, beelden en instellingen gaan mee. De migratiehandleiding beschrijft de stappen voor elke eerdere editie.",
+    "migrateLink": "Lees de migratiehandleiding",
+    "p1Title": "3. Een partner host het voor je",
+    "p1P": "Liever niet zelf hosten? Partners kunnen het portaal voor je hosten en onderhouden.",
+    "partnerLink": "Bekijk partners",
+    "fieldBased": "Gevestigd in",
+    "fieldLanguages": "Talen",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Al je content exporteren",
+    "fieldWebsite": "Website",
+    "listTitle": "Hier vermeld worden als provider?",
+    "listP": "De voorwaarden voor een vermelding hier zijn voor iedereen gelijk:",
+    "listItems": [
+      "je portaal slaagt voor de conformancetest van de huidige versie",
+      "een merk kan al zijn data en beelden exporteren en vertrekken",
+      "je vermeldt je eigen prijzen en voorwaarden op je eigen site"
+    ],
+    "listHow": "Compatibel zijn is gratis; een vermelding hier hoort bij het officiële partnerschap.",
+    "costTitle": "Wat het ongeveer kost",
+    "costItems": [
+      "Je eigen server in de EU: ongeveer € 5 tot € 15 per maand voor een kleine server met automatische back-ups, bij een provider als Hetzner. Foto's op de eigen schijf van de server kosten niets extra; objectopslag voor een groot archief kost een paar euro per maand per terabyte.",
+      "Een partner: diens eigen prijs. Vraag wat erbij zit: updates, back-ups, je eigen domein, en alles kunnen exporteren als je vertrekt.",
+      "Je eigen tijd: reken de eerste keer op één tot twee uur, inclusief het domein en een proef met het terugzetten van een back-up, en daarna ongeveer een uur per maand voor updates en het controleren van de back-ups."
+    ],
+    "costNote": "Indicatieve prijzen van november 2026, exclusief btw. Bekijk de actuele prijzen van de provider voordat je kiest.",
+    "firstTitle": "Na het installeren: de eerste start",
+    "first": [
+      "Open het adres van je portaal in je browser.",
+      "Vul de eenmalige installatiecode in. Die staat in het log bij de eerste start (journalctl -u node-rs, of docker compose logs node-rs), of je stelt hem vooraf in met OBX_SETUP_CODE.",
+      "Vul je bedrijf en je eerste merk in en kies je eigen wachtwoord. Er is nooit een standaardwachtwoord."
+    ],
+    "firstWhy": "De setupcode zorgt ervoor dat niemand anders een net geïnstalleerd portaal kan claimen.",
+    "domainTitle": "Je eigen domein",
+    "domainP": "Gebruik een subdomein zoals beeldbank.jouwmerk.nl of b2b.jouwmerk.nl. Retailers zien dan jouw naam, en je adres blijft hetzelfde als je van hosting wisselt.",
+    "compareTitle": "Eén portaal, geschreven in Rust",
+    "compareP": "Er is één referentieportaal: node-rs. Het heeft overal dezelfde beheeromgeving en hetzelfde retailerportaal, dus je kunt altijd wisselen tussen je eigen server, Docker en een partner.",
+    "retireNote": "De eerdere edities node-go, node-php en node-ts worden uitgefaseerd."
   },
   "retailers": {
     "h1": "Voor retailers",
@@ -712,10 +670,9 @@
       "specificatie, schema's, testdata",
       "Go-SDK, obx-tool, conformancetest, mockserver",
       "gedeelde webinterface: beheer en retailerportaal",
-      "Go: je eigen server, met een installer van één regel",
-      "PHP: gewone webhosting",
-      "TypeScript: Cloudflare Workers"
+      "het referentieportaal, in Rust: Linux of Docker"
     ],
+    "implRef": "Referentieportaal",
     "statusDraft": "0.3",
     "implP": "Bouw je zelf een implementatie of een afnemer? Laat het weten met een issue of pull request; hij komt in deze tabel zodra hij de conformancetest haalt.",
     "docsTitle": "Documenten",
@@ -737,20 +694,12 @@
         "d": "De specificatie, schema's en testdata"
       },
       {
+        "name": "node-rs",
+        "d": "Het referentieportaal, in Rust"
+      },
+      {
         "name": "obx-go",
         "d": "Go-SDK, de obx-tool en de conformancetest"
-      },
-      {
-        "name": "node-ts",
-        "d": "Portaal voor Cloudflare Workers"
-      },
-      {
-        "name": "node-go",
-        "d": "Portaal voor je eigen server"
-      },
-      {
-        "name": "node-php",
-        "d": "Portaal voor gewone webhosting"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Open source, op GitHub.",
     "reposTitle": "Repository's",
-    "reposP": "Alles is open source op GitHub: de specificatie, de gedeelde code en de drie portaaledities.",
+    "reposP": "Alles is open source op GitHub: de specificatie, de gedeelde code en het referentieportaal in Rust.",
     "newTitle": "Nieuw in versie 0.3",
     "newItems": [
       "Materialen en wasvoorschriften zijn codes met namen in het Engels, Nederlands, Duits en Frans, uit gedeelde vocabulaires op /vocabularies/v0.3/.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "Is het klaar?",
-        "a": "Ja, versie 0.3: de specificatie, de drie portaaledities en de tools zijn uitgebracht en vrij te gebruiken. We staan aan het begin: de eerste merken sluiten nu aan."
+        "a": "Ja, versie 0.3: de specificatie en de tools zijn uitgebracht en vrij te gebruiken, en het portaal draait in Rust. We staan aan het begin: de eerste merken sluiten nu aan."
       },
       {
         "q": "Wie zit erachter?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Licenties",
-        "p": "De specificatie is CC-BY-4.0. De SDK, de obx-tool en de gedeelde webinterface zijn Apache-2.0. De drie portaaledities zijn AGPL-3.0, zodat verbeteringen open blijven. Deze website heeft geen open licentie: de code, het ontwerp en de teksten zijn auteursrechtelijk beschermd, met alle rechten voorbehouden. Bestanden uit de specificatie die de site aanbiedt, zoals de schema's, templates en voorbeelden, houden hun CC-BY-4.0-licentie."
+        "p": "De specificatie is CC-BY-4.0. De SDK, de obx-tool en de gedeelde webinterface zijn Apache-2.0. Het portaal, node-rs, is AGPL-3.0, zodat verbeteringen eraan open blijven. Deze website heeft geen open licentie: de code, het ontwerp en de teksten zijn auteursrechtelijk beschermd, met alle rechten voorbehouden. Bestanden uit de specificatie die de site aanbiedt, zoals de schema's, templates en voorbeelden, houden hun CC-BY-4.0-licentie."
       }
     ],
     "nameTitle": "Over de naam",
@@ -1036,7 +985,7 @@
       "Je Excel-export en foto's met de hand uploaden, of elke nacht laten ophalen",
       "Automatisch aanleveren vanuit je PIM, ERP of een gedeelde map",
       "Toegangsaanvragen, uitnodigingen en API-sleutels voor de software van je retailers",
-      "Drie edities: je eigen server, Cloudflare Workers en gewone webhosting"
+      "Eén portaal in Rust: op je eigen Linux-server of met Docker"
     ],
     "brandsComing": [
       "De eerste openbare release, met installatie in één klik",
@@ -1098,8 +1047,8 @@
           "l": "standaard, vrij voor iedereen"
         },
         {
-          "v": "3",
-          "l": "portaaledities"
+          "v": "61",
+          "l": "geautomatiseerde conformancechecks"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Draai het waar je wilt. Betaal alleen voor hosting.",
-      "editionsLead": "Drie edities van dezelfde beeldbank. Ze werken op dezelfde manier, dus je kunt altijd van de ene naar de andere overstappen.",
+      "editionsLead": "OBX draait in Rust: één beeldbank die je host op je eigen Linux-server of met Docker, of die een partner voor je host. Je kunt altijd verhuizen.",
       "editionsLink": "Vergelijk de hostingopties",
       "editionFields": [
         "Draait op",
@@ -1197,27 +1146,18 @@
           "name": "Je eigen server",
           "runs": "Elke Linux-server (VPS), bijvoorbeeld bij Hetzner, DigitalOcean, TransIP of Scaleway",
           "need": "Een server, een domeinnaam en SSH-toegang",
-          "setup": "Eén commando, daarna de installatiewizard",
+          "setup": "Installeer het programma en Caddy, daarna de installatiewizard",
           "cost": "Ongeveer € 5 tot € 15 per maand voor een kleine server met back-ups",
           "cta": "Installeer op je eigen server"
         },
         {
-          "tag": "Geen server",
-          "name": "Cloudflare Workers",
-          "runs": "Je eigen Cloudflare-account, met D1 als database en R2 voor de beelden",
-          "need": "Een Cloudflare-account met het Workers Paid-abonnement",
-          "setup": "Eén klik, daarna de installatiewizard",
-          "cost": "5 dollar per maand plus opslag",
-          "cta": "Zet op in Cloudflare"
-        },
-        {
-          "tag": "Geen commando's",
-          "name": "Gewone webhosting",
-          "runs": "Europese webhosting met PHP en een database, zoals TransIP, Strato of OVHcloud",
-          "need": "Een FTP-programma",
-          "setup": "Upload een zip, daarna de installer",
-          "cost": "De hosting die je al betaalt (PHP 8.2 of nieuwer)",
-          "cta": "Installeer op webhosting"
+          "tag": "Containers",
+          "name": "Docker",
+          "runs": "Elke server met Docker en Docker Compose",
+          "need": "Docker, een domeinnaam en SSH-toegang",
+          "setup": "Eén compose-bestand, daarna de installatiewizard",
+          "cost": "Ongeveer € 5 tot € 15 per maand voor een kleine server met back-ups",
+          "cta": "Start met Docker"
         },
         {
           "tag": "Makkelijkst",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Je beeldbank, op de open standaard.",
       "retailersSoftware": "Voor je software",
-      "hostingEditions": "De drie edities"
+      "hostingEditions": "Zo draai je hem"
     }
   },
   "partners": {

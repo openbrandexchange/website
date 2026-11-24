@@ -141,49 +141,46 @@ curl -s -H "Authorization: Bearer $TOKEN" -X POST -H 'Content-Type: application/
 # or let the obx tool keep a copy in a folder, only fetching what changed:
 OBX_CLIENT_ID=$CLIENT_ID OBX_CLIENT_SECRET=$CLIENT_SECRET obx pull $HOST --out ./maison-noor`;
 
-// The one-line installer (node-go/install.sh, attached to every node-go release; the website
-// redirects /install.sh to the latest one in public/_redirects). The domain is the page's example.
-export const installCmd = (domain: string, extra = '') =>
-  `curl -fsSL https://openbrandexchange.com/install.sh | sudo sh -s -- --domain ${domain}${extra}`;
+// The reference portal, node-rs (openbrandexchange/node-rs): one way on a Linux server (a systemd
+// service behind Caddy) and one with Docker (deploy/compose.yaml: node-rs + Caddy). The domain is the
+// page's example. The old one-line installer (/install.sh, see public/_redirects) stays only for
+// existing node-go portals and is no longer shown.
+export const NODE_RS_RELEASES = 'https://github.com/openbrandexchange/node-rs/releases/latest';
+export const NODE_RS_BACKUP_DOC = 'https://github.com/openbrandexchange/node-rs/blob/main/docs/backup.md';
+export const NODE_RS_MIGRATING_DOC = 'https://github.com/openbrandexchange/node-rs/blob/main/docs/migrating.md';
+const raw = 'https://raw.githubusercontent.com/openbrandexchange/node-rs/main/deploy';
+
+export const linuxInstall = (domain: string) => `# 2. the program, for x86_64 or arm64, from ${NODE_RS_RELEASES}
+sudo install node-rs /usr/local/bin/
+
+# 3. the service: user node-rs, data in /var/lib/node-rs
+sudo useradd --system --home-dir /var/lib/node-rs --create-home --shell /usr/sbin/nologin node-rs
+sudo curl -fsSL -o /etc/systemd/system/node-rs.service ${raw}/node-rs.service
+sudo systemctl edit node-rs          # [Service] Environment=OBX_PUBLIC_URL=https://${domain}
+sudo systemctl enable --now node-rs
+
+# 4. Caddy in front, for automatic HTTPS: /etc/caddy/Caddyfile
+${domain} {
+  reverse_proxy 127.0.0.1:8080
+}
+sudo systemctl reload caddy
+
+# 5. the one-time setup code
+sudo journalctl -u node-rs | grep -i "setup code"`;
+
+export const dockerInstall = (domain: string) => `curl -fsSLO ${raw}/compose.yaml
+DOMAIN=${domain} docker compose up -d     # node-rs (ghcr.io/openbrandexchange/node-rs) + Caddy for HTTPS
+docker compose logs node-rs               # the one-time setup code`;
 
 export const digCheck = (domain: string) => `dig +short ${domain}`;
 
-export const installOptions = ['--domain NAME', '--email ADDRESS', '--version X.Y.Z', '--edition go|ts', '--behind-proxy', '--dry-run', '--uninstall'];
+export const serverCommands = `sudo systemctl status node-rs        # is it running?
+sudo journalctl -u node-rs -f        # follow the log
+sudo systemctl restart node-rs       # after installing a new binary
 
-export const serverFiles: [string, string][] = [
-  ['/usr/local/bin/node-go', '/opt/obx-portal'],
-  ['/var/lib/node-go', '/var/lib/obx-portal'],
-  ['/etc/node-go/node-go.env', '/etc/obx-portal/obx-portal.env'],
-  ['node-go', 'obx-portal'],
-];
-
-export const serverCommands = (domain: string) => `sudo systemctl status node-go                     # is it running? (TypeScript edition: obx-portal)
-sudo journalctl -u node-go -f                     # follow the log
-sudo journalctl -u node-go | grep "setup code"    # the one-time setup code again
-sudo grep OBX_SETUP_CODE /etc/node-go/node-go.env # ... or from the settings file
-
-# update: the same command again (keeps settings and data)
-curl -fsSL https://openbrandexchange.com/install.sh | sudo sh -s -- --domain ${domain}
-
-# remove the program and the service; data and settings stay (add --purge to delete them)
-curl -fsSL https://openbrandexchange.com/install.sh | sudo sh -s -- --uninstall`;
-
-// node-go/docs/hosting/linux.md: a nightly node-go backup from cron, copied off the server.
-export const serverBackup = `# /etc/cron.d/node-go-backup: a consistent copy every night at 03:15, while the portal keeps running
-15 3 * * * root sh -c 'set -a; . /etc/node-go/node-go.env; exec runuser -u obx -- /usr/local/bin/node-go backup --to /var/lib/node-go/backups/'"$(date +\\%F)" >/dev/null
-
-# copy one off the server now and then (or sync it to a bucket)
-scp -r root@<server-ip>:/var/lib/node-go/backups/2026-11-17 ./portal-backup-2026-11-17`;
-
-export const cfCli = `git clone https://github.com/openbrandexchange/node-ts && cd node-ts
-bun install
-bunx wrangler login
-bunx wrangler secret put OBX_SECRET_KEY      # paste the output of: openssl rand -base64 48
-bunx wrangler secret put OBX_SETUP_CODE      # a code you choose, for the setup wizard
-bun run deploy                               # Worker + D1 database + R2 bucket + cron, then the tables
-
-# backups outside Cloudflare: export the database regularly
-bunx wrangler d1 export brand-portal-db --remote --output=portal-$(date +%F).sql`;
+docker compose ps                    # the same with Docker
+docker compose logs -f node-rs
+docker compose pull && docker compose up -d   # update`;
 
 export const conformance = `obx-conformance all --url http://localhost:8080 --setup-code …   # a fresh portal: setup, fixtures, every profile
 obx-conformance protocol --url https://brands.maison-noor.example --client-id obxc_… --client-secret obxs_…
@@ -200,7 +197,8 @@ export const discoveryResponse = `{
                    "renditions", "exports", "webhooks"]
 }`;
 
-// The public demo portal (node-ts in demo mode, docs/demo.md there): fictional data, reset every hour.
+// The public demo portal (still node-ts in demo mode, docs/demo.md there; it moves to node-rs later):
+// fictional data, reset every hour.
 // Its test key is published on purpose and can only read.
 export const DEMO_URL = 'https://obx-portal-demo.richardlindhout96.workers.dev';
 export const DEMO_CLIENT_ID = 'obxc_demo-portal-read-only';

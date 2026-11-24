@@ -14,15 +14,12 @@
     "footerMore": "Veel",
     "footerSource": "Lähtekood ja spetsifikatsioon",
     "footerLicence": "© 2026 {foundation}. Kõik õigused kaitstud. Spetsifikatsioon on CC-BY-4.0 litsentsiga.",
-    "editionCloudflare": "Portaal Cloudflare'ile",
-    "editionHosting": "Portaal veebimajutusele",
     "yes": "Jah",
     "inDevelopment": "Arendamisel",
     "available": "Saadaval",
     "footerContact": "Kontakt",
     "madeInEu": "Valmistatud ELis",
-    "footerDiscuss": "Liituge aruteluga",
-    "editionServer": "Portaal oma serverile"
+    "footerDiscuss": "Liituge aruteluga"
   },
   "nav": {
     "brands": "Kaubamärkidele",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Majutus",
-      "description": "Teie pildiportaal seal, kus soovite: oma serveris ühe käsuga, Cloudflare Workersil, tavalises veebimajutuses või partneri majutatuna."
+      "description": "Teie pildiportaal seal, kus soovite: Rustis kirjutatud portaal teie oma Linuxi serveris või Dockeriga või partneri majutatuna."
     },
     "retailers": {
       "title": "Edasimüüjatele",
@@ -361,7 +358,6 @@
     "httpProduct": "Toode (näiteks kui see PIM-is muutub)",
     "httpVariant": "Värv ja suurus koos EAN-iga",
     "httpImage": "Foto: kõigepealt andmed, siis fail ise",
-    "httpImageNote": "Portaal Cloudflare'ile ei tee fotodest ise veebiversioone. Avaldage seal obx-iga või haldusliidese kaudu „Impordid”: need teevad need teie eest. Muul viisil saabunud fotod, näiteks ajastatud impordist, näidatakse seni originaalsuuruses.",
     "httpOffline": "Millegi tagasivõtmine",
     "httpHooks": "Soovite teadet, kui midagi juhtub? Lisage halduses teavitus (webhook) lõppenud impordi või uue juurdepääsutaotluse kohta ja laske sellel käivitada päästik n8n-is, Make'is või Zapieris.",
     "apiTitle": "6. API otse (arendajatele)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Majutus",
-    "lead": "Igal kaubamärgil on oma pildiportaal. Paigaldage see ühe käsuga oma serverisse, käitage seda Cloudflare Workersil, laadige see üles tavalisse veebimajutusse või laske partneril seda majutada.",
-    "p1Title": "4. Partner majutab selle teie eest",
-    "p1P": "Ei soovi ise majutada? Partnerid saavad portaali teie eest majutada ja hooldada.",
-    "fieldBased": "Asukoht",
-    "fieldLanguages": "Keeled",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "Kogu sisu eksport",
-    "fieldWebsite": "Veebisait",
-    "listTitle": "Kas soovite olla siin teenusepakkujana?",
-    "listP": "Siin loetellu kandmise tingimused on kõigile samad:",
-    "listItems": [
-      "teie portaal läbib kehtiva versiooni vastavustesti",
-      "kaubamärk saab kõik oma andmed ja fotod eksportida ning lahkuda",
-      "avaldate oma hinnad ja tingimused oma veebisaidil"
-    ],
-    "listHow": "Ühilduv olla on tasuta; siin loetelus olemine kuulub ametliku partnerluse juurde.",
-    "cfP": "Töötab Cloudflare Workersil, andmebaasiks D1 ja piltide jaoks R2. Klõpsake nuppu, logige Cloudflare'i sisse ja järgige samme. Igapäevaseks kasutamiseks vajab portaal paketti Workers Paid (5 dollarit kuus); tasuta paketist piisab ainult proovimiseks. Teie fotode veebiversioonid teeb teie brauser ja tööriist obx.",
-    "cfButton": "Paigalda Cloudflare'i",
-    "phpP": "Veebimajutusele, mis teil ehk juba on, PHP ja andmebaasiga. Käske pole vaja:",
-    "phpSteps": [
-      "Laadige alla obx-portal-php-<version>.zip uusimast väljalaskest.",
-      "Pakkige see lahti ja laadige kaust (S)FTP kaudu majutusse üles.",
-      "Suunake oma (ala)domeen, näiteks edasimyyjad.teiebrand.ee, kausta public.",
-      "Muutke kaustad data ja config kirjutatavaks (õigused 775; kui paigaldaja ütleb endiselt, et pole, siis 777).",
-      "Avage see aadress. Paigaldaja kontrollib serverit ja küsib seadistuskoodi failist data/SETUP-CODE.txt, mille avate FTP-programmiga. Seejärel klõpsake „Ava seadistusviisard“.",
-      "Lisage paigaldaja näidatud cron-aadress oma majutuse juhtpaneelis cron-tööna, iga 5 minuti järel. Ka ilma selleta portaal töötab."
-    ],
-    "phpDownload": "Laadi alla uusim väljalase",
-    "firstTitle": "Pärast paigaldamist: esimene käivitus",
-    "first": [
-      "Avage oma portaali aadress brauseris.",
-      "Sisestage ühekordne seadistuskood. Teie oma serveri paigaldaja näitab seda lõpus. Muul juhul on see logis esimesel käivitamisel (Portaal veebimajutusele: failis data/SETUP-CODE.txt ja paigaldaja täidab selle teie eest), või määrate selle eelnevalt OBX_SETUP_CODE abil.",
-      "Sisestage oma ettevõte ja esimene kaubamärk ning valige oma parool. Vaikeparooli ei ole kunagi."
-    ],
-    "firstWhy": "Seadistuskood tagab, et keegi teine ei saa äsja paigaldatud portaali endale võtta.",
-    "domainTitle": "Oma domeen",
-    "domainP": "Kasutage alamdomeeni, näiteks edasimyyjad.teiebrand.ee või b2b.teiebrand.ee. Edasimüüjad näevad siis teie nime ja aadress jääb samaks ka majutust vahetades.",
-    "compareTitle": "Kolm väljaannet, üks portaal",
-    "compareP": "Kolm väljaannet teevad sama asja ning neil on sama haldus ja sama edasimüüjate portaal. Valige see, mis sobib teie majutusega; vahetada saab hiljem.",
-    "compareLink": "Vaadake teostusi",
+    "lead": "Igal kaubamärgil on oma pildiportaal. OBX on kirjutatud Rustis: paigaldage see oma Linuxi serverisse või Dockeriga või laske partneril seda majutada.",
     "heroTitle": "Teie pildiportaal, seal kus soovite.",
-    "heroLead": "Tarkvara on tasuta. Kõige lihtsam on väike oma server ja üks käsk. Saate igal ajal kolida.",
+    "heroLead": "Tarkvara on tasuta ja kirjutatud Rustis. Kõige lihtsam on väike oma server, teenusena või Dockeriga. Saate igal ajal kolida.",
     "heroChecks": [
       "Tasuta tarkvara, maksate ainult majutuse eest",
-      "Üks käsk paigaldab portaali koos HTTPS-iga",
+      "Üks Rustis kirjutatud programm, automaatne HTTPS Caddy kaudu",
       "Igal pool sama portaal, nii et saate alati vahetada",
       "Ei soovi ise teha? Partner majutab selle teie eest"
     ],
-    "webTitle": "3. Tavaline veebimajutus",
-    "webP": "PHP-versioon töötab tavalisel Euroopa veebimajutusel PHP ja andmebaasiga, näiteks TransIPis, Stratos või OVHcloudis. Käske pole vaja:",
-    "partnerLink": "Vaadake partnereid",
-    "techTitle": "Tehnilised üksikasjad teie IT-meeskonnale",
-    "techLead": "Paigaldaja valikud, failid, varukoopiad ja uuendused inimesele, kes serveri seadistab.",
-    "costTitle": "Ligikaudsed kulud",
-    "costItems": [
-      "Oma server ELis: umbes 5–15 € kuus väikese automaatsete varukoopiatega serveri eest, näiteks Hetzneris. Fotod serveri enda kettal ei maksa midagi lisaks; objektisalvestus suure arhiivi jaoks lisab mõne euro kuus terabaidi kohta.",
-      "Tavaline veebimajutus: pakett, mille eest juba maksate, kui sellel on PHP 8.2 või uuem.",
-      "Cloudflare Workers: Workers Paid maksab 5 dollarit kuus, lisaks R2 salvestus umbes 1,50 dollarit kuus 100 GB fotode kohta. Allalaadimistasusid ei ole.",
-      "Partner: partneri enda hind. Küsige, mis selle sisse kuulub: uuendused, varukoopiad, oma domeen ja kogu sisu eksport, kui lahkute.",
-      "Teie enda aeg: esimesel korral arvestage üks kuni kaks tundi, sealhulgas domeen ja varukoopia proovitaastamine, ning umbes tund kuus uuendusteks ja varukoopiate kontrolliks."
-    ],
-    "costNote": "Ligikaudsed hinnad 2026. aasta novembri seisuga, käibemaksuta. Enne valimist kontrollige teenusepakkuja kehtivaid hindu.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "Go väljaanne taotleb Let's Encrypti sertifikaadi ise kohe, kui teie domeen osutab serverile, uuendab seda automaatselt ja suunab http päringud https-ile. TypeScripti väljaanne teeb sama Caddy abil, mille paigaldaja seadistab. Sertifikaati pole? Kontrollige käsuga dig, et domeen näitab serveri aadressi ja et pordid 80 ja 443 on avatud.",
-    "backupTitle": "Varukoopiad",
-    "backupP": "Lülitage sisse teenusepakkuja serveri varukoopiad ja lisage igaöine portaali varukoopia, mille kopeerite ka serverist välja. Hoidke salajast võtit eraldi, paroolihalduris: see on OBX_SECRET_KEY seadete failis või secret.key andmekaustas. Ilma selleta ei saa varukoopiat täielikult taastada. Proovige taastamist üks kord läbi, et teaksite, et see töötab.",
-    "updateTitle": "Uuendused",
-    "updateP": "Tehke varukoopia ja lugege väljalaskemärkmeid. Seejärel käivitage sama paigalduskäsk uuesti: see paigaldab uusima väljalaske, jätab teie seaded ja andmed alles ning taaskäivitab portaali. Andmebaas uueneb käivitumisel ise.",
-    "cfCliP": "Või oma arvutist, Buni ja tööriistaga Wrangler:",
-    "cfBackupP": "Varukoopiad: Workers Paidiga hoiab D1 andmebaasi ajalugu 30 päeva (Time Travel). Cloudflare'ist väljaspool asuva koopia jaoks eksportige andmebaasi regulaarselt. Pildid on R2-s; kopeerige bucket mis tahes S3-tööriistaga.",
-    "cfUpdateP": "Uuendused: liitke uus väljalase oma repositooriumi koopiaga ja tehke push; Cloudflare paigaldab selle uuesti.",
     "installCta": "Paigaldage oma serverisse",
     "exampleDomain": "portal.teiebrand.ee",
     "ownTitle": "1. Oma server (soovitatav)",
-    "ownP": "Rentige väike Linuxi server, suunake oma domeen sellele ja käivitage üks käsk. Paigaldaja laadib portaali alla, hangib Let's Encryptilt tasuta HTTPS-sertifikaadi ja käivitab portaali teenusena, mis taaskäivituse järel ise uuesti tööle hakkab.",
+    "ownP": "Rentige väike Linuxi server (mis tahes VPS, x86_64 või arm64), suunake oma domeen sellele ja paigaldage portaal teenusena, mille ees on automaatse HTTPS-i jaoks Caddy. Teenus hakkab taaskäivituse järel ise uuesti tööle.",
     "needTitle": "Mida vajate",
     "needItems": [
       "Linuxi server (VPS), millel on Ubuntu 22.04 või 24.04, Debian 12 või 13 või sarnane. Alustuseks piisab 1 GB mälust. Sobib iga teenusepakkuja, näiteks Hetzner Cloud, DigitalOcean, TransIP VPS või Scaleway.",
       "Avalik IPv4-aadress (IPv6 on valikuline), pordid 80 ja 443 avatud.",
       "Domeen või alamdomeen portaali jaoks, näiteks portal.teiebrand.ee."
     ],
-    "ownStepsTitle": "Kolm sammu",
+    "ownStepsTitle": "Viis sammu",
     "ownSteps": [
-      "Looge server ja pange kirja selle IP-aadress.",
-      "Suunake portal.teiebrand.ee ühe DNS-kirjega serverile (vt allpool).",
-      "Logige SSH-ga serverisse sisse ja käivitage see käsk oma aadressiga:"
+      "Suunake {domain} A-kirjega serverile (vt allpool).",
+      "Laadige uusimast väljalaskest oma serverile sobiv node-rs alla ja paigaldage see käsuga sudo install node-rs /usr/local/bin/.",
+      "Paigaldage hoidlast systemd üksus deploy/node-rs.service. See käitab portaali kasutajana node-rs, hoiab andmeid kaustas /var/lib/node-rs ja seab OBX_PUBLIC_URL väärtuseks https://{domain}.",
+      "Paigaldage Caddy ja andke sellele allolev lühike Caddyfile. See hangib teie eest HTTPS-sertifikaadi ja suunab külastajad portaali.",
+      "Avage https://{domain} ja sisestage ühekordne seadistuskood, mille leiate käsuga journalctl -u node-rs."
     ],
-    "ownDone": "Kui paigaldus on valmis, näitab paigaldaja teie portaali aadressi ja ühekordset seadistuskoodi. Avage aadress, sisestage kood ja läbige seadistusviisard. Hiljem uuendamiseks käivitage sama käsk uuesti: teie seaded ja andmed jäävad alles.",
-    "ownTs": "See paigaldab Go väljaande ehk Portaali oma serverile. TypeScripti väljaande jaoks lisage samale käsule --edition ts.",
     "ownEu": "Valige andmekeskus ELis, siis jäävad teie kataloog, pildid ja andmebaas ELi.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "Kasutate juba Dockerit? Üks compose-fail käivitab portaali (kujutis ghcr.io/openbrandexchange/node-rs) koos Caddyga HTTPS-i jaoks. Suunake esmalt oma domeen serverile (vt DNS allpool) ja käivitage seejärel:",
+    "dockerDone": "Seejärel avage https://{domain} ja sisestage ühekordne seadistuskood, mille leiate käsuga docker compose logs node-rs.",
     "dnsTitle": "DNS: suunake oma domeen serverile",
     "dnsP": "Lisage üks kirje ettevõttes, mis haldab teie domeeni:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Kontrollige",
     "dnsCheckP": "Teie enda arvutis peab see näitama serveri aadressi (või kasutage veebipõhist DNS-kontrolli, näiteks dnschecker.org):",
-    "dnsWait": "Tavaliselt võtab see 5 kuni 60 minutit, mõnikord paar tundi. Paigaldaja kontrollib seda samuti ja ütleb, mis veel puudu on.",
-    "optionsTitle": "Paigaldaja valikud",
-    "options": [
-      "portaali aadress, näiteks portal.teiebrand.ee (kohustuslik)",
-      "e-posti aadress Let's Encrypti jaoks (valikuline)",
-      "kindel väljalase uusima asemel",
-      "go (vaikimisi) paigaldab Go väljaande; ts paigaldab TypeScripti väljaande",
-      "ilma oma HTTPS-ita: portaal kuulab aadressil 127.0.0.1:8080 teie enda puhverserveri taga",
-      "näita ainult, mida tehtaks, ära muuda midagi",
-      "eemalda programm ja teenus; teie andmed ja seaded jäävad alles (lisage --purge, et need samuti kustutada)"
-    ],
-    "checksP": "Enne kui paigaldaja midagi muudab, kontrollib see süsteemi (Linux amd64 või arm64 koos systemd-ga), juurkasutaja õigusi, kettaruumi, et domeen osutab sellele serverile, et pordid 80 ja 443 on vabad, ning tulemüüri. ufw või firewalld puhul näitab see täpset käsku portide 80 ja 443 avamiseks.",
-    "filesTitle": "Kus mis asub",
-    "filesHead": [
-      "Mis",
-      "Go väljaanne",
-      "TypeScripti väljaanne"
-    ],
-    "filesRows": [
-      "Programm",
-      "Andmed",
-      "Seaded",
-      "Teenus"
-    ],
+    "dnsWait": "Tavaliselt võtab see 5 kuni 60 minutit, mõnikord paar tundi. Caddy hangib sertifikaadi kohe, kui domeen osutab serverile.",
+    "techTitle": "Tehnilised üksikasjad teie IT-meeskonnale",
+    "techLead": "Salvestus, seaded, varukoopiad ja uuendused inimesele, kes serveri seadistab.",
+    "storageTitle": "Salvestus ja seaded",
+    "storageP": "Portaal kasutab vaikimisi SQLite'i. Pildid salvestatakse serveri enda kettale või mis tahes S3-ühilduvasse bucketisse (OBX_BLOB_URL). Iga seade on OBX_* keskkonnamuutuja, samade nimedega nagu väljaandes node-go.",
     "commandsTitle": "Kasulikud käsud",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "Serverit pole vaja hallata: portaal töötab teie oma Cloudflare'i kontol. Klõpsake nuppu, logige sisse ja järgige samme.",
-    "cfDnsTitle": "DNS: oma domeen Workerile",
-    "cfDnsP": "Lisage aadress Workeri oma domeenina: Workers & Pages → teie Worker → Settings → Domains & Routes → Add → Custom domain. Kui teie domeen on juba Cloudflare'is, seadistatakse DNS ja sertifikaat automaatselt. Kui ei, viige esmalt oma domeeni DNS Cloudflare'i (tasuta; domeen jääb registreerituks sinna, kus see praegu on) ja lisage seejärel oma domeen. Seejärel määrake OBX_PUBLIC_URL sellele aadressile ja paigaldage uuesti.",
-    "webDnsTitle": "DNS: alamdomeen teie juhtpaneelis",
-    "webDnsP": "Looge alamdomeen oma veebimajutuse juhtpaneelis (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain või Subdomains; Plesk: Websites & Domains → Add Subdomain). Kui teie domeeni DNS on sama majutusettevõtte juures, ongi kõik. Muul juhul lisage alamdomeenile A-kirje, mis osutab majutusserveri IP-aadressile; paneel näitab seda. Seejärel lülitage paneelis alamdomeenile sisse Let's Encrypt."
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy taotleb Let's Encrypti sertifikaadi kohe, kui teie domeen osutab serverile, uuendab seda automaatselt ja suunab http päringud https-ile. Sertifikaati pole? Kontrollige käsuga dig, et domeen näitab serveri aadressi ja et pordid 80 ja 443 on avatud.",
+    "backupTitle": "Varukoopiad",
+    "backupP": "Lülitage sisse teenusepakkuja serveri varukoopiad ja hoidke portaalist igaöist krüpteeritud koopiat teise teenusepakkuja juures või teises regioonis. Harjutage taastamist igas kvartalis, et teaksite, et see töötab.",
+    "backupLink": "Varundage väljapoole",
+    "updateTitle": "Uuendused",
+    "updateP": "Tehke varukoopia ja lugege väljalaskemärkmeid. Linuxis paigaldage uus binaarfail samamoodi ja taaskäivitage teenus. Dockeriga käivitage docker compose pull ja seejärel docker compose up -d. Andmebaas uueneb käivitumisel ise.",
+    "releaseLink": "Laadi alla uusim väljalase",
+    "migrateTitle": "Üleminek väljaannetelt node-go, node-php või node-ts",
+    "migrateP": "Teie andmed, pildid ja seaded tulevad kaasa. Üleminekujuhendis on sammud iga varasema väljaande jaoks.",
+    "migrateLink": "Lugege üleminekujuhendit",
+    "p1Title": "3. Partner majutab selle teie eest",
+    "p1P": "Ei soovi ise majutada? Partnerid saavad portaali teie eest majutada ja hooldada.",
+    "partnerLink": "Vaadake partnereid",
+    "fieldBased": "Asukoht",
+    "fieldLanguages": "Keeled",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Kogu sisu eksport",
+    "fieldWebsite": "Veebisait",
+    "listTitle": "Kas soovite olla siin teenusepakkujana?",
+    "listP": "Siin loetellu kandmise tingimused on kõigile samad:",
+    "listItems": [
+      "teie portaal läbib kehtiva versiooni vastavustesti",
+      "kaubamärk saab kõik oma andmed ja fotod eksportida ning lahkuda",
+      "avaldate oma hinnad ja tingimused oma veebisaidil"
+    ],
+    "listHow": "Ühilduv olla on tasuta; siin loetelus olemine kuulub ametliku partnerluse juurde.",
+    "costTitle": "Ligikaudsed kulud",
+    "costItems": [
+      "Oma server ELis: umbes 5–15 € kuus väikese automaatsete varukoopiatega serveri eest, näiteks Hetzneris. Fotod serveri enda kettal ei maksa midagi lisaks; objektisalvestus suure arhiivi jaoks lisab mõne euro kuus terabaidi kohta.",
+      "Partner: partneri enda hind. Küsige, mis selle sisse kuulub: uuendused, varukoopiad, oma domeen ja kogu sisu eksport, kui lahkute.",
+      "Teie enda aeg: esimesel korral arvestage üks kuni kaks tundi, sealhulgas domeen ja varukoopia proovitaastamine, ning umbes tund kuus uuendusteks ja varukoopiate kontrolliks."
+    ],
+    "costNote": "Ligikaudsed hinnad 2026. aasta novembri seisuga, käibemaksuta. Enne valimist kontrollige teenusepakkuja kehtivaid hindu.",
+    "firstTitle": "Pärast paigaldamist: esimene käivitus",
+    "first": [
+      "Avage oma portaali aadress brauseris.",
+      "Sisestage ühekordne seadistuskood. See on logis esimesel käivitamisel (journalctl -u node-rs või docker compose logs node-rs), või määrate selle eelnevalt OBX_SETUP_CODE abil.",
+      "Sisestage oma ettevõte ja esimene kaubamärk ning valige oma parool. Vaikeparooli ei ole kunagi."
+    ],
+    "firstWhy": "Seadistuskood tagab, et keegi teine ei saa äsja paigaldatud portaali endale võtta.",
+    "domainTitle": "Oma domeen",
+    "domainP": "Kasutage alamdomeeni, näiteks edasimyyjad.teiebrand.ee või b2b.teiebrand.ee. Edasimüüjad näevad siis teie nime ja aadress jääb samaks ka majutust vahetades.",
+    "compareTitle": "Üks portaal, kirjutatud Rustis",
+    "compareP": "On üks viiteportaal, node-rs. Sellel on sama haldus ja sama edasimüüjate portaal, kus iganes see töötab, nii et saate igal ajal liikuda oma serveri, Dockeri ja partneri vahel.",
+    "retireNote": "Varasemate väljaannete node-go, node-php ja node-ts tugi lõpetatakse."
   },
   "retailers": {
     "h1": "Edasimüüjatele",
@@ -712,10 +670,9 @@
       "spetsifikatsioon, skeemid, testandmed",
       "Go SDK, tööriist obx, vastavustestid, näidisserver",
       "ühine veebiliides: haldus ja edasimüüjate portaal",
-      "Go: teie oma server, üherealise paigaldajaga",
-      "PHP: tavaline veebimajutus",
-      "TypeScript: Cloudflare Workers"
+      "viiteportaal, Rustis: Linux või Docker"
     ],
+    "implRef": "Viiteportaal",
     "statusDraft": "0.3",
     "implP": "Ehitate oma teostust või klienti? Andke teada issue või pull requesti kaudu; see lisatakse tabelisse, kui see läbib vastavustestid.",
     "docsTitle": "Dokumendid",
@@ -737,20 +694,12 @@
         "d": "Spetsifikatsioon, skeemid ja testandmed"
       },
       {
+        "name": "node-rs",
+        "d": "Viiteportaal, Rustis"
+      },
+      {
         "name": "obx-go",
         "d": "Go SDK, tööriist obx ja vastavustest"
-      },
-      {
-        "name": "node-ts",
-        "d": "Portaal Cloudflare Workersi jaoks"
-      },
-      {
-        "name": "node-go",
-        "d": "Portaal oma serverile"
-      },
-      {
-        "name": "node-php",
-        "d": "Portaal tavalise veebimajutuse jaoks"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Avatud lähtekood, GitHubis.",
     "reposTitle": "Hoidlad",
-    "reposP": "Kõik on GitHubis avatud lähtekoodiga: spetsifikatsioon, ühine kood ja kolm portaali väljaannet.",
+    "reposP": "Kõik on GitHubis avatud lähtekoodiga: spetsifikatsioon, ühine kood ja Rustis kirjutatud viiteportaal.",
     "newTitle": "Uut versioonis 0.3",
     "newItems": [
       "Materjalid ja hooldus on koodid, mille nimetused on inglise, hollandi, saksa ja prantsuse keeles. Need pärinevad ühistest sõnastikest, mis on avaldatud aadressil /vocabularies/v0.3/.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "Kas see on valmis?",
-        "a": "Jah, versioon 0.3: spetsifikatsioon, kolm portaali väljaannet ja tööriistad on avaldatud ja vabalt kasutatavad. Oleme alguses: esimesed kaubamärgid liituvad praegu."
+        "a": "Jah, versioon 0.3: spetsifikatsioon ja tööriistad on avaldatud ja vabalt kasutatavad ning portaal on kirjutatud Rustis. Oleme alguses: esimesed kaubamärgid liituvad praegu."
       },
       {
         "q": "Kes on selle taga?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Litsentsid",
-        "p": "Spetsifikatsioon on CC-BY-4.0 litsentsiga. SDK, tööriist obx ja ühine veebiliides on Apache-2.0 litsentsiga. Kolm portaali väljaannet on AGPL-3.0 litsentsiga, et täiustused jääksid avatuks. See veebisait ei ole avatud litsentsiga: selle kood, kujundus ja tekstid on kaitstud, kõik õigused on reserveeritud. Spetsifikatsiooni failid, mida sait jagab, näiteks skeemid, mallid ja näited, jäävad CC-BY-4.0 litsentsi alla."
+        "p": "Spetsifikatsioon on CC-BY-4.0 litsentsiga. SDK, tööriist obx ja ühine veebiliides on Apache-2.0 litsentsiga. Portaal node-rs on AGPL-3.0 litsentsiga, et täiustused jääksid avatuks. See veebisait ei ole avatud litsentsiga: selle kood, kujundus ja tekstid on kaitstud, kõik õigused on reserveeritud. Spetsifikatsiooni failid, mida sait jagab, näiteks skeemid, mallid ja näited, jäävad CC-BY-4.0 litsentsi alla."
       }
     ],
     "nameTitle": "Nimest",
@@ -1036,7 +985,7 @@
       "Laadige Exceli eksport ja fotod üles käsitsi või laske need igal ööl tuua",
       "Automaatne edastus teie PIM-ist, ERP-st või jagatud kaustast",
       "Juurdepääsutaotlused, kutsed ja API-võtmed teie edasimüüjate tarkvarale",
-      "Kolm väljaannet: oma server, Cloudflare Workers ja tavaline veebimajutus"
+      "Üks portaal Rustis: teie oma Linuxi serveris või Dockeriga"
     ],
     "brandsComing": [
       "Esimene avalik väljalase, paigaldusega ühe klõpsuga",
@@ -1098,8 +1047,8 @@
           "l": "standard, kõigile vabalt kasutatav"
         },
         {
-          "v": "3",
-          "l": "portaali väljaannet"
+          "v": "61",
+          "l": "automaatset vastavuskontrolli"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Majutus",
       "editionsTitle": "Käitage seda, kus soovite. Maksate ainult majutuse eest.",
-      "editionsLead": "Sama pildiportaali kolm väljaannet. Need töötavad samamoodi, nii et saate igal ajal ühelt teisele üle minna.",
+      "editionsLead": "OBX on kirjutatud Rustis: üks pildiportaal, mida majutate oma Linuxi serveris või Dockeriga või mida partner teie eest majutab. Saate igal ajal kolida.",
       "editionsLink": "Võrrelge majutusvõimalusi",
       "editionFields": [
         "Töötab",
@@ -1197,27 +1146,18 @@
           "name": "Oma server",
           "runs": "Mis tahes Linuxi server (VPS), näiteks Hetzneris, DigitalOceanis, TransIP-s või Scalewayl",
           "need": "Server, domeeninimi ja SSH-ligipääs",
-          "setup": "Üks käsk, seejärel seadistusviisard",
+          "setup": "Paigaldage programm ja Caddy, seejärel seadistusviisard",
           "cost": "Umbes 5–15 € kuus väikese varukoopiatega serveri eest",
           "cta": "Paigaldage oma serverisse"
         },
         {
-          "tag": "Serverita",
-          "name": "Cloudflare Workers",
-          "runs": "Teie oma Cloudflare'i konto, andmebaasiks D1 ja piltide jaoks R2",
-          "need": "Cloudflare'i konto paketiga Workers Paid",
-          "setup": "Üks klõps, seejärel seadistusviisard",
-          "cost": "5 dollarit kuus pluss salvestus",
-          "cta": "Seadistage Cloudflare'is"
-        },
-        {
-          "tag": "Ilma käskudeta",
-          "name": "Tavaline veebimajutus",
-          "runs": "Euroopa veebimajutus PHP ja andmebaasiga, näiteks TransIP, Strato või OVHcloud",
-          "need": "FTP-programm",
-          "setup": "Laadige üles zip, seejärel paigaldaja",
-          "cost": "Majutus, mille eest juba maksate (PHP 8.2 või uuem)",
-          "cta": "Seadistage veebimajutuses"
+          "tag": "Konteinerid",
+          "name": "Docker",
+          "runs": "Mis tahes server, kus on Docker ja Docker Compose",
+          "need": "Docker, domeeninimi ja SSH-ligipääs",
+          "setup": "Üks compose-fail, seejärel seadistusviisard",
+          "cost": "Umbes 5–15 € kuus väikese varukoopiatega serveri eest",
+          "cta": "Alustage Dockeriga"
         },
         {
           "tag": "Kõige lihtsam",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Teie pildiportaal avatud standardil.",
       "retailersSoftware": "Teie tarkvarale",
-      "hostingEditions": "Kolm väljaannet"
+      "hostingEditions": "Käitamisviisid"
     }
   },
   "partners": {
