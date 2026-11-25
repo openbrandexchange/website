@@ -436,7 +436,7 @@
     "techTitle": "Détails techniques pour votre équipe informatique",
     "techLead": "Stockage, paramètres, sauvegardes et mises à jour, pour la personne qui met en place le serveur.",
     "storageTitle": "Stockage et paramètres",
-    "storageP": "Le portail utilise SQLite par défaut. Les images sont stockées sur le disque du serveur lui-même ou dans n'importe quel bucket compatible S3 (OBX_BLOB_URL). Chaque paramètre est une variable d'environnement OBX_*, avec les mêmes noms que dans node-go.",
+    "storageP": "Le portail utilise SQLite : un seul fichier, sans serveur de base de données. Les images sont stockées sur le disque du serveur lui-même ou dans n'importe quel bucket compatible S3 (OBX_BLOB_URL). Chaque paramètre est une variable d'environnement OBX_*, avec les mêmes noms que dans node-go.",
     "commandsTitle": "Commandes utiles",
     "httpsTitle": "HTTPS",
     "httpsP": "Caddy demande un certificat Let's Encrypt dès que votre domaine pointe vers le serveur, le renouvelle automatiquement et redirige http vers https. Pas de certificat ? Vérifiez avec dig que le domaine renvoie l'adresse du serveur, et que les ports 80 et 443 sont ouverts.",

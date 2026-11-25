@@ -436,7 +436,7 @@
     "techTitle": "Tekniske detaljer til din it-afdeling",
     "techLead": "Lagring, indstillinger, backup og opdateringer, til den person, der sætter serveren op.",
     "storageTitle": "Lagring og indstillinger",
-    "storageP": "Portalen bruger som standard SQLite. Billeder ligger på serverens egen disk eller i en hvilken som helst S3-kompatibel bucket (OBX_BLOB_URL). Hver indstilling er en OBX_*-miljøvariabel med de samme navne som i node-go.",
+    "storageP": "Portalen bruger SQLite: én fil, ingen databaseserver. Billeder ligger på serverens egen disk eller i en hvilken som helst S3-kompatibel bucket (OBX_BLOB_URL). Hver indstilling er en OBX_*-miljøvariabel med de samme navne som i node-go.",
     "commandsTitle": "Nyttige kommandoer",
     "httpsTitle": "HTTPS",
     "httpsP": "Caddy anmoder om et Let's Encrypt-certifikat, så snart dit domæne peger på serveren, fornyer det automatisk og omdirigerer http til https. Intet certifikat? Tjek med dig, at domænet viser serverens adresse, og at port 80 og 443 er åbne.",

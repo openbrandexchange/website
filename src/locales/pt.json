@@ -436,7 +436,7 @@
     "techTitle": "Detalhes técnicos para a sua equipa de TI",
     "techLead": "Armazenamento, definições, cópias de segurança e atualizações, para quem configura o servidor.",
     "storageTitle": "Armazenamento e definições",
-    "storageP": "O portal usa SQLite por predefinição. As imagens ficam no disco do próprio servidor ou em qualquer bucket compatível com S3 (OBX_BLOB_URL). Cada definição é uma variável de ambiente OBX_*, com os mesmos nomes que o node-go usava.",
+    "storageP": "O portal usa SQLite: um único ficheiro, sem servidor de base de dados. As imagens ficam no disco do próprio servidor ou em qualquer bucket compatível com S3 (OBX_BLOB_URL). Cada definição é uma variável de ambiente OBX_*, com os mesmos nomes que o node-go usava.",
     "commandsTitle": "Comandos úteis",
     "httpsTitle": "HTTPS",
     "httpsP": "O Caddy pede um certificado Let's Encrypt assim que o seu domínio aponta para o servidor, renova-o automaticamente e redireciona http para https. Sem certificado? Verifique com dig se o domínio devolve o endereço do servidor e se as portas 80 e 443 estão abertas.",

@@ -436,7 +436,7 @@
     "techTitle": "Detalles técnicos para tu equipo de TI",
     "techLead": "Almacenamiento, ajustes, copias de seguridad y actualizaciones, para la persona que configura el servidor.",
     "storageTitle": "Almacenamiento y ajustes",
-    "storageP": "El portal usa SQLite por defecto. Las imágenes se guardan en el disco del propio servidor o en cualquier bucket compatible con S3 (OBX_BLOB_URL). Cada ajuste es una variable de entorno OBX_*, con los mismos nombres que usaba node-go.",
+    "storageP": "El portal usa SQLite: un solo archivo, sin servidor de base de datos. Las imágenes se guardan en el disco del propio servidor o en cualquier bucket compatible con S3 (OBX_BLOB_URL). Cada ajuste es una variable de entorno OBX_*, con los mismos nombres que usaba node-go.",
     "commandsTitle": "Comandos útiles",
     "httpsTitle": "HTTPS",
     "httpsP": "Caddy solicita un certificado de Let's Encrypt en cuanto tu dominio apunta al servidor, lo renueva automáticamente y redirige http a https. ¿No hay certificado? Comprueba con dig que el dominio devuelve la dirección del servidor y que los puertos 80 y 443 están abiertos.",

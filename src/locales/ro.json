@@ -436,7 +436,7 @@
     "techTitle": "Detalii tehnice pentru echipa dvs. IT",
     "techLead": "Stocare, setări, copii de rezervă și actualizări, pentru persoana care configurează serverul.",
     "storageTitle": "Stocare și setări",
-    "storageP": "Implicit, portalul folosește SQLite. Imaginile stau pe discul serverului sau în orice bucket compatibil S3 (OBX_BLOB_URL). Fiecare setare este o variabilă de mediu OBX_*, cu aceleași nume ca la node-go.",
+    "storageP": "Portalul folosește SQLite: un singur fișier, fără server de baze de date. Imaginile stau pe discul serverului sau în orice bucket compatibil S3 (OBX_BLOB_URL). Fiecare setare este o variabilă de mediu OBX_*, cu aceleași nume ca la node-go.",
     "commandsTitle": "Comenzi utile",
     "httpsTitle": "HTTPS",
     "httpsP": "Caddy solicită un certificat Let's Encrypt imediat ce domeniul indică spre server, îl reînnoiește automat și redirecționează http către https. Niciun certificat? Verificați cu dig că domeniul afișează adresa serverului și că porturile 80 și 443 sunt deschise.",

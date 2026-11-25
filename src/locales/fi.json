@@ -436,7 +436,7 @@
     "techTitle": "Tekniset tiedot IT-tiimillesi",
     "techLead": "Tallennus, asetukset, varmuuskopiot ja päivitykset sille, joka pystyttää palvelimen.",
     "storageTitle": "Tallennus ja asetukset",
-    "storageP": "Portaali käyttää oletuksena SQLiteä. Kuvat tallennetaan palvelimen omalle levylle tai mihin tahansa S3-yhteensopivaan bucketiin (OBX_BLOB_URL). Jokainen asetus on OBX_*-ympäristömuuttuja, samoilla nimillä kuin versiossa node-go.",
+    "storageP": "Portaali käyttää SQLiteä: yksi tiedosto, ei tietokantapalvelinta. Kuvat tallennetaan palvelimen omalle levylle tai mihin tahansa S3-yhteensopivaan bucketiin (OBX_BLOB_URL). Jokainen asetus on OBX_*-ympäristömuuttuja, samoilla nimillä kuin versiossa node-go.",
     "commandsTitle": "Hyödyllisiä komentoja",
     "httpsTitle": "HTTPS",
     "httpsP": "Caddy hakee Let's Encrypt -varmenteen heti, kun verkkotunnuksesi osoittaa palvelimeen, uusii sen automaattisesti ja ohjaa http-liikenteen https:ään. Eikö varmennetta tule? Tarkista dig-komennolla, että verkkotunnus näyttää palvelimen osoitteen, ja että portit 80 ja 443 ovat auki.",
