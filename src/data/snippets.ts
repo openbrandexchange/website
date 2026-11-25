@@ -150,7 +150,8 @@ export const NODE_RS_BACKUP_DOC = 'https://github.com/openbrandexchange/node-rs/
 export const NODE_RS_MIGRATING_DOC = 'https://github.com/openbrandexchange/node-rs/blob/main/docs/migrating.md';
 const raw = 'https://raw.githubusercontent.com/openbrandexchange/node-rs/main/deploy';
 
-export const linuxInstall = (domain: string) => `# 2. the program, for x86_64 or arm64, from ${NODE_RS_RELEASES}
+export const linuxInstall = (domain: string) => `# 2. the program (x86_64 or arm64) from ${NODE_RS_RELEASES}
+curl -fsSL ${NODE_RS_RELEASES}/download/node-rs-$(uname -m)-linux.tar.gz | tar -xz node-rs
 sudo install node-rs /usr/local/bin/
 
 # 3. the service: user node-rs, data in /var/lib/node-rs
