@@ -1132,7 +1132,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Run it where you want. Pay only for hosting.",
-      "editionsLead": "OBX runs in Rust: one image portal that you host on your own Linux server or with Docker, or that a partner hosts for you. You can move at any time.",
+      "editionsLead": "OBX runs in Rust: one image portal that you host on your own Linux server or in a container, or that a partner hosts for you. You can move at any time.",
       "editionsLink": "Compare the hosting options",
       "editionFields": [
         "Runs on",
@@ -1152,12 +1152,12 @@
         },
         {
           "tag": "Containers",
-          "name": "Docker",
-          "runs": "Any server with Docker and Docker Compose",
-          "need": "Docker, a domain name and SSH access",
+          "name": "Container",
+          "runs": "Any server that runs containers",
+          "need": "A container host, a domain name and SSH access",
           "setup": "One compose file, then the setup wizard",
           "cost": "About €5 to €15 a month for a small server with backups",
-          "cta": "Start with Docker"
+          "cta": "Start with a container"
         },
         {
           "tag": "Easiest",

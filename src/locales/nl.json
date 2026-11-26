@@ -1132,7 +1132,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Draai het waar je wilt. Betaal alleen voor hosting.",
-      "editionsLead": "OBX draait in Rust: één beeldbank die je host op je eigen Linux-server of met Docker, of die een partner voor je host. Je kunt altijd verhuizen.",
+      "editionsLead": "OBX draait in Rust: één beeldbank die je host op je eigen Linux-server of in een container, of die een partner voor je host. Je kunt altijd verhuizen.",
       "editionsLink": "Vergelijk de hostingopties",
       "editionFields": [
         "Draait op",
@@ -1152,12 +1152,12 @@
         },
         {
           "tag": "Containers",
-          "name": "Docker",
-          "runs": "Elke server met Docker en Docker Compose",
-          "need": "Docker, een domeinnaam en SSH-toegang",
+          "name": "Container",
+          "runs": "Elke server die containers draait",
+          "need": "Een containerhost, een domeinnaam en SSH-toegang",
           "setup": "Eén compose-bestand, daarna de installatiewizard",
           "cost": "Ongeveer € 5 tot € 15 per maand voor een kleine server met back-ups",
-          "cta": "Start met Docker"
+          "cta": "Start met een container"
         },
         {
           "tag": "Makkelijkst",
