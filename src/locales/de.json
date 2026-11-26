@@ -14,15 +14,12 @@
     "footerMore": "Mehr",
     "footerSource": "Quellcode und Spezifikation",
     "footerLicence": "© 2026 {foundation}. Alle Rechte vorbehalten. Die Spezifikation steht unter CC-BY-4.0.",
-    "editionCloudflare": "Portal für Cloudflare",
-    "editionHosting": "Portal für Webhosting",
     "yes": "Ja",
     "inDevelopment": "In Entwicklung",
     "available": "Verfügbar",
     "footerContact": "Kontakt",
     "madeInEu": "Hergestellt in der EU",
-    "footerDiscuss": "Diskutieren Sie mit",
-    "editionServer": "Portal für Ihren eigenen Server"
+    "footerDiscuss": "Diskutieren Sie mit"
   },
   "nav": {
     "brands": "Für Marken",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Ihr Händlerportal, wo Sie möchten: auf Ihrem eigenen Server mit einem Befehl, auf Cloudflare Workers, auf normalem Webhosting oder von einem Partner gehostet."
+      "description": "Ihr Händlerportal, wo Sie möchten: das Rust-Portal auf Ihrem eigenen Linux-Server oder mit Docker, oder von einem Partner gehostet."
     },
     "retailers": {
       "title": "Für Händler",
@@ -361,7 +358,6 @@
     "httpProduct": "Artikel (zum Beispiel, wenn er sich im PIM ändert)",
     "httpVariant": "Farbe und Größe, mit EAN",
     "httpImage": "Foto: erst die Angaben, dann die Datei selbst",
-    "httpImageNote": "Das Portal für Cloudflare erstellt selbst keine Webversionen von Fotos. Veröffentlichen Sie dort mit obx oder über „Importe“ in Ihrer Verwaltung: Die erstellen sie für Sie. Fotos, die auf anderem Weg ankommen, etwa über einen geplanten Import, werden bis dahin in Originalgröße gezeigt.",
     "httpOffline": "Etwas offline nehmen",
     "httpHooks": "Sie möchten Bescheid bekommen, wenn etwas passiert? Richten Sie in Ihrer Verwaltung eine Benachrichtigung (Webhook) für einen abgeschlossenen Import oder eine neue Zugangsanfrage ein und lassen Sie damit einen Trigger in n8n, Make oder Zapier starten.",
     "apiTitle": "6. Die API direkt (für Entwickler)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Jede Marke hat ihr eigenes Händlerportal. Installieren Sie es mit einem Befehl auf Ihrem eigenen Server, betreiben Sie es auf Cloudflare Workers, laden Sie es auf normales Webhosting hoch oder lassen Sie es von einem Partner hosten.",
-    "p1Title": "4. Ein Partner hostet es für Sie",
-    "p1P": "Lieber nicht selbst hosten? Partner können das Portal für Sie hosten und pflegen.",
-    "fieldBased": "Sitz",
-    "fieldLanguages": "Sprachen",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "Alle Inhalte exportieren",
-    "fieldWebsite": "Website",
-    "listTitle": "Hier als Anbieter aufgeführt werden?",
-    "listP": "Die Bedingungen für einen Eintrag hier sind für alle gleich:",
-    "listItems": [
-      "Ihr Portal besteht den Konformitätstest für die aktuelle Version",
-      "eine Marke kann alle Daten und Bilder exportieren und gehen",
-      "Sie nennen Ihre eigenen Preise und Bedingungen auf Ihrer eigenen Website"
-    ],
-    "listHow": "Kompatibel zu sein ist kostenlos; ein Eintrag hier gehört zur offiziellen Partnerschaft.",
-    "cfP": "Läuft auf Cloudflare Workers, mit D1 als Datenbank und R2 für die Bilder. Klicken Sie auf den Button, melden Sie sich bei Cloudflare an und folgen Sie den Schritten. Für ein Portal im täglichen Einsatz brauchen Sie den Tarif Workers Paid (5 Dollar im Monat); der kostenlose Tarif reicht nur zum Ausprobieren. Webversionen Ihrer Fotos erstellen Ihr Browser und das Tool obx.",
-    "cfButton": "Auf Cloudflare installieren",
-    "phpP": "Für das Webhosting-Paket, das Sie vielleicht schon haben, mit PHP und einer Datenbank. Keine Befehle nötig:",
-    "phpSteps": [
-      "Laden Sie obx-portal-php-<version>.zip aus dem neuesten Release herunter.",
-      "Entpacken Sie es und laden Sie den Ordner per (S)FTP auf Ihr Hosting.",
-      "Richten Sie Ihre (Sub-)Domain, zum Beispiel haendler.ihremarke.de, auf den Ordner public aus.",
-      "Machen Sie die Ordner data und config beschreibbar (Rechte 775; meldet der Installer weiterhin, dass sie es nicht sind, 777).",
-      "Öffnen Sie diese Adresse. Der Installer prüft Ihren Server und fragt nach dem Einrichtungscode aus der Datei data/SETUP-CODE.txt, die Sie mit Ihrem FTP-Programm öffnen. Klicken Sie danach auf „Einrichtungsassistent öffnen“.",
-      "Tragen Sie die Cron-Adresse, die der Installer anzeigt, als Cronjob in der Verwaltung Ihres Hostings ein, alle 5 Minuten. Auch ohne funktioniert das Portal."
-    ],
-    "phpDownload": "Neuestes Release herunterladen",
-    "firstTitle": "Nach der Installation: der erste Start",
-    "first": [
-      "Öffnen Sie die Adresse Ihres Portals im Browser.",
-      "Geben Sie den einmaligen Einrichtungscode ein. Der Installer auf Ihrem eigenen Server zeigt ihn am Ende an. Sonst steht er beim ersten Start im Log (Portal für Webhosting: in data/SETUP-CODE.txt, und der Installer trägt ihn für Sie ein), oder Sie legen ihn vorab mit OBX_SETUP_CODE fest.",
-      "Geben Sie Ihr Unternehmen und Ihre erste Marke an und wählen Sie Ihr eigenes Passwort. Ein Standardpasswort gibt es nie."
-    ],
-    "firstWhy": "Der Einrichtungscode sorgt dafür, dass niemand sonst ein frisch installiertes Portal übernehmen kann.",
-    "domainTitle": "Ihre eigene Domain",
-    "domainP": "Nutzen Sie eine Subdomain wie haendler.ihremarke.de oder b2b.ihremarke.de. Händler sehen dann Ihren Namen, und Ihre Adresse bleibt gleich, wenn Sie das Hosting wechseln.",
-    "compareTitle": "Drei Editionen, ein Portal",
-    "compareP": "Die drei Editionen können dasselbe und haben dieselbe Verwaltung und dasselbe Händlerportal. Wählen Sie, was zu Ihrem Hosting passt; wechseln können Sie später.",
-    "compareLink": "Implementierungen ansehen",
+    "lead": "Jede Marke hat ihr eigenes Händlerportal. OBX läuft in Rust: Installieren Sie es auf Ihrem eigenen Linux-Server oder mit Docker, oder lassen Sie es von einem Partner hosten.",
     "heroTitle": "Ihr Händlerportal, wo Sie möchten.",
-    "heroLead": "Die Software ist kostenlos. Am einfachsten ist ein kleiner eigener Server und ein Befehl. Sie können jederzeit umziehen.",
+    "heroLead": "Die Software ist kostenlos und läuft in Rust. Am einfachsten ist ein kleiner eigener Server, als Dienst oder mit Docker. Sie können jederzeit umziehen.",
     "heroChecks": [
       "Kostenlose Software, Sie zahlen nur für das Hosting",
-      "Ein Befehl installiert das Portal, mit HTTPS",
+      "Ein Programm in Rust, mit automatischem HTTPS über Caddy",
       "Überall dasselbe Portal, Sie können also jederzeit wechseln",
       "Lieber nicht selbst? Ein Partner hostet es für Sie"
     ],
-    "webTitle": "3. Normales Webhosting",
-    "webP": "Die PHP-Edition läuft auf normalem europäischem Webhosting mit PHP und Datenbank, zum Beispiel bei TransIP, Strato oder OVHcloud. Ganz ohne Befehle:",
-    "partnerLink": "Partner ansehen",
-    "techTitle": "Technische Details für Ihr IT-Team",
-    "techLead": "Installer-Optionen, Dateien, Backups und Updates, für die Person, die den Server einrichtet.",
-    "costTitle": "Was es ungefähr kostet",
-    "costItems": [
-      "Ihr eigener Server in der EU: etwa 5 bis 15 € im Monat für einen kleinen Server mit automatischen Backups, bei einem Anbieter wie Hetzner. Fotos auf der Festplatte des Servers kosten nichts extra; Object Storage für ein großes Archiv kostet zusätzlich einige Euro im Monat pro Terabyte.",
-      "Normales Webhosting: das Paket, das Sie schon bezahlen, sofern es PHP 8.2 oder neuer bietet.",
-      "Cloudflare Workers: 5 Dollar im Monat für Workers Paid, plus R2-Speicher für etwa 1,50 Dollar im Monat pro 100 GB Fotos. Gebühren für Downloads fallen nicht an.",
-      "Ein Partner: dessen eigener Preis. Fragen Sie, was enthalten ist: Updates, Backups, Ihre eigene Domain und der Export aller Daten, wenn Sie wechseln.",
-      "Ihre eigene Zeit: Rechnen Sie beim ersten Mal mit ein bis zwei Stunden, inklusive Domain und einer Testwiederherstellung eines Backups, und danach mit etwa einer Stunde im Monat für Updates und die Kontrolle der Backups."
-    ],
-    "costNote": "Richtpreise Stand November 2026, ohne MwSt. Prüfen Sie vor Ihrer Wahl die aktuellen Preise des Anbieters.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "Die Go-Edition beantragt selbst ein Zertifikat von Let's Encrypt, sobald Ihre Domain auf den Server zeigt, verlängert es automatisch und leitet http auf https um. Die TypeScript-Edition macht dasselbe über Caddy, das der Installer einrichtet. Kein Zertifikat? Prüfen Sie mit dig, ob die Domain die Adresse des Servers liefert und ob die Ports 80 und 443 offen sind.",
-    "backupTitle": "Backups",
-    "backupP": "Schalten Sie die Server-Backups Ihres Anbieters ein und ergänzen Sie ein nächtliches Portal-Backup, das Sie auch außerhalb des Servers ablegen. Bewahren Sie den geheimen Schlüssel getrennt auf, in einem Passwortmanager: Das ist OBX_SECRET_KEY in der Einstellungsdatei oder secret.key im Datenordner. Ohne ihn lässt sich ein Backup nicht vollständig wiederherstellen. Testen Sie einmal eine Wiederherstellung, damit Sie wissen, dass sie funktioniert.",
-    "updateTitle": "Updates",
-    "updateP": "Erstellen Sie ein Backup und lesen Sie die Release Notes. Führen Sie dann denselben Installationsbefehl erneut aus: Er installiert das neueste Release, behält Ihre Einstellungen und Daten und startet das Portal neu. Die Datenbank aktualisiert sich beim Start selbst.",
-    "cfCliP": "Oder von Ihrem eigenen Computer aus, mit Bun und dem Tool Wrangler:",
-    "cfBackupP": "Backups: Mit Workers Paid bewahrt D1 den Datenbankverlauf von 30 Tagen auf (Time Travel). Für eine Kopie außerhalb von Cloudflare exportieren Sie die Datenbank regelmäßig. Die Bilder liegen in R2; kopieren Sie den Bucket mit einem beliebigen S3-Tool.",
-    "cfUpdateP": "Updates: Mergen Sie das neue Release in Ihre Kopie des Repositorys und pushen Sie; Cloudflare deployt es erneut.",
     "installCta": "Auf eigenem Server installieren",
     "exampleDomain": "portal.ihremarke.de",
     "ownTitle": "1. Ihr eigener Server (empfohlen)",
-    "ownP": "Mieten Sie einen kleinen Linux-Server, lassen Sie Ihre Domain darauf zeigen und führen Sie einen Befehl aus. Der Installer lädt das Portal herunter, holt ein kostenloses HTTPS-Zertifikat von Let's Encrypt und startet das Portal als Dienst, der nach einem Neustart von selbst wieder läuft.",
+    "ownP": "Mieten Sie einen kleinen Linux-Server (jeder VPS, x86_64 oder arm64), lassen Sie Ihre Domain darauf zeigen und installieren Sie das Portal als Dienst, mit Caddy davor für automatisches HTTPS. Der Dienst läuft nach einem Neustart von selbst wieder.",
     "needTitle": "Was Sie brauchen",
     "needItems": [
       "Einen Linux-Server (VPS) mit Ubuntu 22.04 oder 24.04, Debian 12 oder 13 oder Ähnlichem. 1 GB Arbeitsspeicher reicht für den Anfang. Jeder Anbieter ist geeignet, zum Beispiel Hetzner Cloud, DigitalOcean, TransIP VPS oder Scaleway.",
       "Eine öffentliche IPv4-Adresse (IPv6 ist optional), mit offenen Ports 80 und 443.",
       "Eine Domain oder Subdomain für das Portal, zum Beispiel portal.ihremarke.de."
     ],
-    "ownStepsTitle": "Drei Schritte",
+    "ownStepsTitle": "Fünf Schritte",
     "ownSteps": [
-      "Erstellen Sie den Server und notieren Sie seine IP-Adresse.",
-      "Lassen Sie portal.ihremarke.de mit einem DNS-Eintrag auf den Server zeigen (siehe unten).",
-      "Melden Sie sich per SSH am Server an und führen Sie diesen Befehl mit Ihrer eigenen Adresse aus:"
+      "Lassen Sie {domain} mit einem A-Eintrag auf den Server zeigen (siehe unten).",
+      "Laden Sie node-rs für Ihren Server aus dem neuesten Release herunter und installieren Sie es mit sudo install node-rs /usr/local/bin/.",
+      "Installieren Sie die systemd-Unit deploy/node-rs.service aus dem Repository. Sie führt das Portal als Benutzer node-rs aus, legt die Daten in /var/lib/node-rs ab und setzt OBX_PUBLIC_URL auf https://{domain}.",
+      "Installieren Sie Caddy und geben Sie ihm die kurze Caddyfile unten. Caddy holt das HTTPS-Zertifikat für Sie und leitet Besucher an das Portal weiter.",
+      "Öffnen Sie https://{domain} und geben Sie den einmaligen Einrichtungscode aus journalctl -u node-rs ein."
     ],
-    "ownDone": "Wenn er fertig ist, zeigt der Installer die Adresse Ihres Portals und einen einmaligen Einrichtungscode. Öffnen Sie die Adresse, geben Sie den Code ein und schließen Sie den Einrichtungsassistenten ab. Für spätere Updates führen Sie denselben Befehl erneut aus: Ihre Einstellungen und Daten bleiben erhalten.",
-    "ownTs": "Damit installieren Sie die Go-Edition, das Portal für Ihren eigenen Server. Für die TypeScript-Edition ergänzen Sie denselben Befehl um --edition ts.",
     "ownEu": "Wählen Sie ein Rechenzentrum in der EU, dann bleiben Ihr Katalog, Ihre Bilder und Ihre Datenbank in der EU.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "Sie nutzen bereits Docker? Eine Compose-Datei startet das Portal (das Image ghcr.io/openbrandexchange/node-rs) zusammen mit Caddy für HTTPS. Lassen Sie Ihre Domain zuerst auf den Server zeigen (siehe DNS unten) und führen Sie dann aus:",
+    "dockerDone": "Öffnen Sie dann https://{domain} und geben Sie den einmaligen Einrichtungscode aus docker compose logs node-rs ein.",
     "dnsTitle": "DNS: Ihre Domain auf den Server zeigen lassen",
     "dnsP": "Legen Sie bei dem Unternehmen, das Ihre Domain verwaltet, einen Eintrag an:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Prüfen",
     "dnsCheckP": "Auf Ihrem eigenen Computer muss dies die Adresse des Servers anzeigen (oder nutzen Sie einen Online-DNS-Checker wie dnschecker.org):",
-    "dnsWait": "Das dauert meist 5 bis 60 Minuten, manchmal ein paar Stunden. Der Installer prüft es ebenfalls und sagt Ihnen, was noch fehlt.",
-    "optionsTitle": "Installer-Optionen",
-    "options": [
-      "die Adresse des Portals, zum Beispiel portal.ihremarke.de (Pflicht)",
-      "eine E-Mail-Adresse für Let's Encrypt (optional)",
-      "ein bestimmtes Release statt des neuesten",
-      "go (Standard) installiert die Go-Edition; ts installiert die TypeScript-Edition",
-      "kein eigenes HTTPS: Das Portal lauscht auf 127.0.0.1:8080 hinter Ihrem eigenen Proxy",
-      "nur anzeigen, was passieren würde, nichts ändern",
-      "Programm und Dienst entfernen; Ihre Daten und Einstellungen bleiben erhalten (mit --purge werden auch sie gelöscht)"
-    ],
-    "checksP": "Bevor er etwas ändert, prüft der Installer das System (Linux amd64 oder arm64 mit systemd), Root-Rechte, Speicherplatz, ob die Domain auf diesen Server zeigt, ob die Ports 80 und 443 frei sind, und die Firewall. Bei ufw oder firewalld gibt er den genauen Befehl aus, um die Ports 80 und 443 zu öffnen.",
-    "filesTitle": "Wo alles liegt",
-    "filesHead": [
-      "Was",
-      "Go-Edition",
-      "TypeScript-Edition"
-    ],
-    "filesRows": [
-      "Programm",
-      "Daten",
-      "Einstellungen",
-      "Dienst"
-    ],
+    "dnsWait": "Das dauert meist 5 bis 60 Minuten, manchmal ein paar Stunden. Caddy holt das Zertifikat, sobald die Domain auf den Server zeigt.",
+    "techTitle": "Technische Details für Ihr IT-Team",
+    "techLead": "Speicher, Einstellungen, Backups und Updates, für die Person, die den Server einrichtet.",
+    "storageTitle": "Speicher und Einstellungen",
+    "storageP": "Das Portal nutzt SQLite: eine Datei, kein Datenbankserver. Bilder liegen auf der Festplatte des Servers selbst oder in einem beliebigen S3-kompatiblen Bucket (OBX_BLOB_URL). Jede Einstellung ist eine OBX_*-Umgebungsvariable, mit denselben Namen wie bei node-go.",
     "commandsTitle": "Nützliche Befehle",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "Kein Server zu verwalten: Das Portal läuft in Ihrem eigenen Cloudflare-Konto. Klicken Sie auf die Schaltfläche, melden Sie sich an und folgen Sie den Schritten.",
-    "cfDnsTitle": "DNS: eine eigene Domain für den Worker",
-    "cfDnsP": "Fügen Sie die Adresse als eigene Domain zum Worker hinzu: Workers & Pages → Ihr Worker → Settings → Domains & Routes → Add → Custom domain. Liegt Ihre Domain schon bei Cloudflare, werden DNS und Zertifikat automatisch eingerichtet. Wenn nicht, verlegen Sie zuerst das DNS Ihrer Domain zu Cloudflare (kostenlos; Ihre Domain bleibt dort registriert, wo sie ist) und fügen Sie danach die eigene Domain hinzu. Setzen Sie danach OBX_PUBLIC_URL auf diese Adresse und deployen Sie erneut.",
-    "webDnsTitle": "DNS: eine Subdomain in Ihrem Control Panel",
-    "webDnsP": "Legen Sie die Subdomain im Control Panel Ihres Hostings an (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain oder Subdomains; Plesk: Websites & Domains → Add Subdomain). Liegt das DNS Ihrer Domain beim selben Hoster, sind Sie fertig. Andernfalls legen Sie für die Subdomain einen A-Eintrag an, der auf die IP-Adresse des Hosting-Servers zeigt; das Panel zeigt sie an. Schalten Sie danach im Panel Let's Encrypt für die Subdomain ein."
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy beantragt ein Zertifikat von Let's Encrypt, sobald Ihre Domain auf den Server zeigt, verlängert es automatisch und leitet http auf https um. Kein Zertifikat? Prüfen Sie mit dig, ob die Domain die Adresse des Servers liefert und ob die Ports 80 und 443 offen sind.",
+    "backupTitle": "Backups",
+    "backupP": "Schalten Sie die Server-Backups Ihres Anbieters ein und bewahren Sie jede Nacht eine verschlüsselte Kopie des Portals bei einem anderen Anbieter oder in einer anderen Region auf. Testen Sie jedes Quartal eine Wiederherstellung, damit Sie wissen, dass sie funktioniert.",
+    "backupLink": "Extern sichern",
+    "updateTitle": "Updates",
+    "updateP": "Erstellen Sie ein Backup und lesen Sie die Release Notes. Unter Linux installieren Sie das neue Binary auf dieselbe Weise und starten den Dienst neu. Mit Docker führen Sie docker compose pull und dann docker compose up -d aus. Die Datenbank aktualisiert sich beim Start selbst.",
+    "releaseLink": "Neuestes Release herunterladen",
+    "migrateTitle": "Umzug von node-go, node-php oder node-ts",
+    "migrateP": "Ihre Daten, Bilder und Einstellungen ziehen mit um. Die Migrationsanleitung beschreibt die Schritte für jede frühere Edition.",
+    "migrateLink": "Migrationsanleitung lesen",
+    "p1Title": "3. Ein Partner hostet es für Sie",
+    "p1P": "Lieber nicht selbst hosten? Partner können das Portal für Sie hosten und pflegen.",
+    "partnerLink": "Partner ansehen",
+    "fieldBased": "Sitz",
+    "fieldLanguages": "Sprachen",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Alle Inhalte exportieren",
+    "fieldWebsite": "Website",
+    "listTitle": "Hier als Anbieter aufgeführt werden?",
+    "listP": "Die Bedingungen für einen Eintrag hier sind für alle gleich:",
+    "listItems": [
+      "Ihr Portal besteht den Konformitätstest für die aktuelle Version",
+      "eine Marke kann alle Daten und Bilder exportieren und gehen",
+      "Sie nennen Ihre eigenen Preise und Bedingungen auf Ihrer eigenen Website"
+    ],
+    "listHow": "Kompatibel zu sein ist kostenlos; ein Eintrag hier gehört zur offiziellen Partnerschaft.",
+    "costTitle": "Was es ungefähr kostet",
+    "costItems": [
+      "Ihr eigener Server in der EU: etwa 5 bis 15 € im Monat für einen kleinen Server mit automatischen Backups, bei einem Anbieter wie Hetzner. Fotos auf der Festplatte des Servers kosten nichts extra; Object Storage für ein großes Archiv kostet zusätzlich einige Euro im Monat pro Terabyte.",
+      "Ein Partner: dessen eigener Preis. Fragen Sie, was enthalten ist: Updates, Backups, Ihre eigene Domain und der Export aller Daten, wenn Sie wechseln.",
+      "Ihre eigene Zeit: Rechnen Sie beim ersten Mal mit ein bis zwei Stunden, inklusive Domain und einer Testwiederherstellung eines Backups, und danach mit etwa einer Stunde im Monat für Updates und die Kontrolle der Backups."
+    ],
+    "costNote": "Richtpreise Stand November 2026, ohne MwSt. Prüfen Sie vor Ihrer Wahl die aktuellen Preise des Anbieters.",
+    "firstTitle": "Nach der Installation: der erste Start",
+    "first": [
+      "Öffnen Sie die Adresse Ihres Portals im Browser.",
+      "Geben Sie den einmaligen Einrichtungscode ein. Er steht beim ersten Start im Log (journalctl -u node-rs oder docker compose logs node-rs), oder Sie legen ihn vorab mit OBX_SETUP_CODE fest.",
+      "Geben Sie Ihr Unternehmen und Ihre erste Marke an und wählen Sie Ihr eigenes Passwort. Ein Standardpasswort gibt es nie."
+    ],
+    "firstWhy": "Der Einrichtungscode sorgt dafür, dass niemand sonst ein frisch installiertes Portal übernehmen kann.",
+    "domainTitle": "Ihre eigene Domain",
+    "domainP": "Nutzen Sie eine Subdomain wie haendler.ihremarke.de oder b2b.ihremarke.de. Händler sehen dann Ihren Namen, und Ihre Adresse bleibt gleich, wenn Sie das Hosting wechseln.",
+    "compareTitle": "Ein Portal, geschrieben in Rust",
+    "compareP": "Es gibt ein Referenzportal: node-rs. Es hat überall dieselbe Verwaltung und dasselbe Händlerportal, Sie können also jederzeit zwischen Ihrem eigenen Server, Docker und einem Partner wechseln.",
+    "retireNote": "Die früheren Editionen node-go, node-php und node-ts werden eingestellt."
   },
   "retailers": {
     "h1": "Für Händler",
@@ -712,10 +670,9 @@
       "Spezifikation, Schemas, Testdaten",
       "Go-SDK, obx-Tool, Konformitätstests, Mock-Server",
       "gemeinsame Weboberfläche: Verwaltung und Händlerportal",
-      "Go: Ihr eigener Server, mit einem einzeiligen Installer",
-      "PHP: normales Webhosting",
-      "TypeScript: Cloudflare Workers"
+      "das Referenzportal, in Rust: Linux oder Docker"
     ],
+    "implRef": "Referenzportal",
     "statusDraft": "0.3",
     "implP": "Sie bauen eine eigene Implementierung oder einen Abnehmer? Melden Sie sich per Issue oder Pull Request; sobald die Konformitätstests bestanden sind, kommt sie in diese Tabelle.",
     "docsTitle": "Dokumente",
@@ -737,20 +694,12 @@
         "d": "Die Spezifikation, Schemas und Testdaten"
       },
       {
+        "name": "node-rs",
+        "d": "Das Referenzportal, in Rust"
+      },
+      {
         "name": "obx-go",
         "d": "Go-SDK, das obx-Tool und der Konformitätstest"
-      },
-      {
-        "name": "node-ts",
-        "d": "Portal für Cloudflare Workers"
-      },
-      {
-        "name": "node-go",
-        "d": "Portal für Ihren eigenen Server"
-      },
-      {
-        "name": "node-php",
-        "d": "Portal für normales Webhosting"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Open Source, auf GitHub.",
     "reposTitle": "Repositorys",
-    "reposP": "Alles ist Open Source auf GitHub: die Spezifikation, der gemeinsame Code und die drei Portal-Editionen.",
+    "reposP": "Alles ist Open Source auf GitHub: die Spezifikation, der gemeinsame Code und das Referenzportal in Rust.",
     "newTitle": "Neu in Version 0.3",
     "newItems": [
       "Materialien und Pflegehinweise sind Codes mit Namen auf Englisch, Niederländisch, Deutsch und Französisch, aus gemeinsamen Vokabularen unter /vocabularies/v0.3/.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "Ist es fertig?",
-        "a": "Ja, Version 0.3: Die Spezifikation, die drei Portal-Editionen und die Werkzeuge sind erschienen und frei nutzbar. Wir stehen am Anfang: Die ersten Marken steigen jetzt ein."
+        "a": "Ja, Version 0.3: Die Spezifikation und die Werkzeuge sind erschienen und frei nutzbar, und das Portal läuft in Rust. Wir stehen am Anfang: Die ersten Marken steigen jetzt ein."
       },
       {
         "q": "Wer steckt dahinter?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Lizenzen",
-        "p": "Die Spezifikation steht unter CC-BY-4.0. SDK, obx-Tool und die gemeinsame Weboberfläche stehen unter Apache-2.0. Die drei Portal-Editionen stehen unter AGPL-3.0, damit Verbesserungen offen bleiben. Diese Website ist nicht offen lizenziert: Code, Design und Texte sind urheberrechtlich geschützt, alle Rechte vorbehalten. Dateien aus der Spezifikation, die sie bereitstellt, etwa Schemas, Vorlagen und Beispiele, behalten ihre CC-BY-4.0-Lizenz."
+        "p": "Die Spezifikation steht unter CC-BY-4.0. SDK, obx-Tool und die gemeinsame Weboberfläche stehen unter Apache-2.0. Das Portal, node-rs, steht unter AGPL-3.0, damit Verbesserungen daran offen bleiben. Diese Website ist nicht offen lizenziert: Code, Design und Texte sind urheberrechtlich geschützt, alle Rechte vorbehalten. Dateien aus der Spezifikation, die sie bereitstellt, etwa Schemas, Vorlagen und Beispiele, behalten ihre CC-BY-4.0-Lizenz."
       }
     ],
     "nameTitle": "Zum Namen",
@@ -1036,7 +985,7 @@
       "Excel-Export und Fotos von Hand hochladen oder jede Nacht abholen lassen",
       "Automatische Lieferung aus Ihrem PIM, ERP oder einem gemeinsamen Ordner",
       "Zugangsanfragen, Einladungen und API-Schlüssel für die Software Ihrer Händler",
-      "Drei Editionen: Ihr eigener Server, Cloudflare Workers und normales Webhosting"
+      "Ein Portal in Rust: auf Ihrem eigenen Linux-Server oder mit Docker"
     ],
     "brandsComing": [
       "Die erste öffentliche Version, mit Installation per Klick",
@@ -1098,8 +1047,8 @@
           "l": "Standard, frei für alle"
         },
         {
-          "v": "3",
-          "l": "Portal-Editionen"
+          "v": "72",
+          "l": "automatische Konformitätsprüfungen"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Betreiben Sie es, wo Sie wollen. Sie zahlen nur das Hosting.",
-      "editionsLead": "Drei Editionen desselben Händlerportals. Sie funktionieren gleich, ein Wechsel ist also jederzeit möglich.",
+      "editionsLead": "OBX läuft in Rust: ein Händlerportal, das Sie auf Ihrem eigenen Linux-Server oder mit Docker selbst hosten oder von einem Partner hosten lassen. Sie können jederzeit umziehen.",
       "editionsLink": "Hosting-Optionen vergleichen",
       "editionFields": [
         "Läuft auf",
@@ -1197,27 +1146,18 @@
           "name": "Ihr eigener Server",
           "runs": "Jeder Linux-Server (VPS), zum Beispiel bei Hetzner, DigitalOcean, TransIP oder Scaleway",
           "need": "Einen Server, einen Domainnamen und SSH-Zugang",
-          "setup": "Ein Befehl, dann der Einrichtungsassistent",
+          "setup": "Programm und Caddy installieren, dann der Einrichtungsassistent",
           "cost": "Etwa 5 bis 15 € im Monat für einen kleinen Server mit Backups",
           "cta": "Auf eigenem Server installieren"
         },
         {
-          "tag": "Ohne Server",
-          "name": "Cloudflare Workers",
-          "runs": "Ihr eigenes Cloudflare-Konto, mit D1 als Datenbank und R2 für die Bilder",
-          "need": "Ein Cloudflare-Konto mit dem Tarif Workers Paid",
-          "setup": "Ein Klick, dann der Einrichtungsassistent",
-          "cost": "5 Dollar im Monat plus Speicher",
-          "cta": "Auf Cloudflare einrichten"
-        },
-        {
-          "tag": "Ohne Befehle",
-          "name": "Normales Webhosting",
-          "runs": "Europäisches Webhosting mit PHP und Datenbank, etwa TransIP, Strato oder OVHcloud",
-          "need": "Ein FTP-Programm",
-          "setup": "ZIP hochladen, dann der Installer",
-          "cost": "Das Hosting, das Sie schon bezahlen (PHP 8.2 oder neuer)",
-          "cta": "Auf Webhosting einrichten"
+          "tag": "Container",
+          "name": "Docker",
+          "runs": "Jeder Server mit Docker und Docker Compose",
+          "need": "Docker, einen Domainnamen und SSH-Zugang",
+          "setup": "Eine Compose-Datei, dann der Einrichtungsassistent",
+          "cost": "Etwa 5 bis 15 € im Monat für einen kleinen Server mit Backups",
+          "cta": "Mit Docker starten"
         },
         {
           "tag": "Am einfachsten",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Ihr Händlerportal, auf dem offenen Standard.",
       "retailersSoftware": "Für Ihre Software",
-      "hostingEditions": "Die drei Editionen"
+      "hostingEditions": "Betriebsarten"
     }
   },
   "partners": {

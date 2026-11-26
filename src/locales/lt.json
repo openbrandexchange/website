@@ -14,15 +14,12 @@
     "footerMore": "Daugiau",
     "footerSource": "Išeities kodas ir specifikacija",
     "footerLicence": "© 2026 {foundation}. Visos teisės saugomos. Specifikacijai taikoma CC-BY-4.0 licencija.",
-    "editionCloudflare": "Portalas Cloudflare",
-    "editionHosting": "Portalas interneto talpinimui",
     "yes": "Taip",
     "inDevelopment": "Kuriama",
     "available": "Prieinama",
     "footerContact": "Kontaktai",
     "madeInEu": "Pagaminta ES",
-    "footerDiscuss": "Prisijunkite prie diskusijos",
-    "editionServer": "Portalas nuosavam serveriui"
+    "footerDiscuss": "Prisijunkite prie diskusijos"
   },
   "nav": {
     "brands": "Prekių ženklams",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Talpinimas",
-      "description": "Jūsų nuotraukų portalas ten, kur norite: jūsų serveryje viena komanda, Cloudflare Workers, įprastame interneto talpinime arba talpinamas partnerio."
+      "description": "Jūsų nuotraukų portalas ten, kur norite: Rust kalba parašytas portalas jūsų Linux serveryje arba su Docker, arba talpinamas partnerio."
     },
     "retailers": {
       "title": "Pardavėjams",
@@ -361,7 +358,6 @@
     "httpProduct": "Prekė (pavyzdžiui, kai ji pasikeičia PIM)",
     "httpVariant": "Spalva ir dydis su EAN",
     "httpImage": "Nuotrauka: pirmiausia duomenys, tada pats failas",
-    "httpImageNote": "Portalas Cloudflare pats nekuria nuotraukų žiniatinklio versijų. Ten skelbkite su obx arba per „Importai“ administravime: jie jas sukuria už jus. Kitu būdu gautos nuotraukos, pvz., iš suplanuoto importo, iki tol rodomos originalaus dydžio.",
     "httpOffline": "Ko nors atšaukimas",
     "httpHooks": "Norite pranešimo, kai kas nors įvyksta? Administravime pridėkite pranešimą (webhook) apie baigtą importą ar naują prieigos prašymą ir leiskite jam paleisti trigerį n8n, Make ar Zapier.",
     "apiTitle": "6. API tiesiogiai (kūrėjams)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Talpinimas",
-    "lead": "Kiekvienas prekės ženklas turi savo nuotraukų portalą. Įdiekite jį savo serveryje viena komanda, paleiskite Cloudflare Workers, įkelkite į įprastą interneto talpinimą arba leiskite jį talpinti partneriui.",
-    "p1Title": "4. Partneris talpina už jus",
-    "p1P": "Nenorite talpinti patys? Partneriai gali talpinti ir prižiūrėti portalą už jus.",
-    "fieldBased": "Buveinė",
-    "fieldLanguages": "Kalbos",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "Viso turinio eksportas",
-    "fieldWebsite": "Svetainė",
-    "listTitle": "Norite būti čia kaip paslaugų teikėjas?",
-    "listP": "Būtinos sąlygos, kad čia būtumėte nurodyti, visiems vienodos:",
-    "listItems": [
-      "jūsų portalas išlaiko dabartinės versijos atitikties testą",
-      "prekės ženklas gali eksportuoti visus savo duomenis ir nuotraukas ir išeiti",
-      "savo kainas ir sąlygas skelbiate savo svetainėje"
-    ],
-    "listHow": "Būti suderinamam nemokama; vieta šiame sąraše yra oficialios partnerystės dalis.",
-    "cfP": "Veikia Cloudflare Workers, su D1 kaip duomenų baze ir R2 vaizdams. Spustelėkite mygtuką, prisijunkite prie Cloudflare ir sekite žingsnius. Kasdien naudojamam portalui reikia plano Workers Paid (5 doleriai per mėnesį); nemokamo plano užtenka tik apsidairyti. Jūsų nuotraukų žiniatinklio versijas kuria jūsų naršyklė ir įrankis obx.",
-    "cfButton": "Įdiegti Cloudflare",
-    "phpP": "Interneto talpinimui, kurį galbūt jau turite, su PHP ir duomenų baze. Jokių komandų:",
-    "phpSteps": [
-      "Atsisiųskite obx-portal-php-<version>.zip iš naujausios versijos.",
-      "Išpakuokite ir įkelkite aplanką į talpinimą per (S)FTP.",
-      "Nukreipkite savo (sub)domeną, pavyzdžiui, pardavejai.jusuzenklas.lt, į aplanką public.",
-      "Leiskite rašyti į aplankus data ir config (teisės 775; jei diegimo programa vis dar sako, kad negalima, 777).",
-      "Atidarykite šį adresą. Diegimo programa patikrina serverį ir paprašo diegimo kodo iš failo data/SETUP-CODE.txt, kurį atidarote FTP programa. Tada spustelėkite „Atidaryti sąrankos vedlį“.",
-      "Diegimo programos parodytą cron adresą įtraukite kaip cron užduotį prieglobos valdymo skydelyje, kas 5 minutes. Portalas veikia ir be jo."
-    ],
-    "phpDownload": "Atsisiųsti naujausią versiją",
-    "firstTitle": "Po diegimo: pirmasis paleidimas",
-    "first": [
-      "Atidarykite savo portalo adresą naršyklėje.",
-      "Įveskite vienkartinį diegimo kodą. Diegimo programa jūsų serveryje jį parodo pabaigoje. Kitu atveju jis yra žurnale pirmojo paleidimo metu (Portalas interneto talpinimui: faile data/SETUP-CODE.txt, o diegimo programa jį įrašo už jus) arba jį nustatote iš anksto su OBX_SETUP_CODE.",
-      "Įveskite savo įmonę ir pirmąjį prekės ženklą ir pasirinkite savo slaptažodį. Numatytojo slaptažodžio niekada nėra."
-    ],
-    "firstWhy": "Diegimo kodas užtikrina, kad niekas kitas negalėtų perimti ką tik įdiegto portalo.",
-    "domainTitle": "Nuosavas domenas",
-    "domainP": "Naudokite subdomeną, pavyzdžiui, pardavejai.jusuzenklas.lt arba b2b.jusuzenklas.lt. Pardavėjai tada mato jūsų pavadinimą, o adresas nesikeičia, net jei pakeičiate talpinimą.",
-    "compareTitle": "Trys leidimai, vienas portalas",
-    "compareP": "Trys leidimai daro tą patį ir turi tą patį administravimą bei tą patį prekybininkų portalą. Pasirinkite tą, kuris tinka jūsų talpinimui; pakeisti galėsite vėliau.",
-    "compareLink": "Peržiūrėti įgyvendinimus",
+    "lead": "Kiekvienas prekės ženklas turi savo nuotraukų portalą. OBX parašytas Rust kalba: įdiekite jį savo Linux serveryje arba su Docker, arba leiskite jį talpinti partneriui.",
     "heroTitle": "Jūsų nuotraukų portalas ten, kur norite.",
-    "heroLead": "Programinė įranga nemokama. Paprasčiausia – nedidelis nuosavas serveris ir viena komanda. Persikelti galite bet kada.",
+    "heroLead": "Programinė įranga nemokama ir parašyta Rust kalba. Paprasčiausia – nedidelis nuosavas serveris, kaip paslauga arba su Docker. Persikelti galite bet kada.",
     "heroChecks": [
       "Nemokama programinė įranga, mokate tik už talpinimą",
-      "Viena komanda įdiegia portalą su HTTPS",
+      "Viena Rust kalba parašyta programa su automatiniu HTTPS per Caddy",
       "Visur tas pats portalas, todėl visada galite pereiti",
       "Nenorite patys? Partneris jį talpins už jus"
     ],
-    "webTitle": "3. Įprastas interneto talpinimas",
-    "webP": "PHP versija veikia įprastame Europos interneto talpinime su PHP ir duomenų baze, pavyzdžiui, pas TransIP, Strato ar OVHcloud. Jokių komandų:",
-    "partnerLink": "Žiūrėti partnerius",
-    "techTitle": "Techninė informacija jūsų IT komandai",
-    "techLead": "Diegimo programos parinktys, failai, atsarginės kopijos ir atnaujinimai tam, kas įrengia serverį.",
-    "costTitle": "Kiek tai apytiksliai kainuoja",
-    "costItems": [
-      "Nuosavas serveris ES: apie 5–15 € per mėnesį už nedidelį serverį su automatinėmis atsarginėmis kopijomis pas tokį teikėją kaip Hetzner. Nuotraukos paties serverio diske papildomai nekainuoja; objektų saugykla dideliam archyvui prideda kelis eurus per mėnesį už terabaitą.",
-      "Įprastas interneto talpinimas: planas, už kurį jau mokate, jei jame yra PHP 8.2 ar naujesnė.",
-      "Cloudflare Workers: 5 doleriai per mėnesį už Workers Paid ir R2 saugykla – apie 1,50 dolerio per mėnesį už 100 GB nuotraukų. Mokesčių už atsisiuntimus nėra.",
-      "Partneris: jo paties kaina. Paklauskite, kas į ją įeina: atnaujinimai, atsarginės kopijos, nuosavas domenas ir viso turinio eksportas, jei nuspręsite išeiti.",
-      "Jūsų laikas: pirmą kartą skirkite valandą ar dvi, įskaitant domeną ir bandomąjį atsarginės kopijos atkūrimą, o vėliau apie valandą per mėnesį atnaujinimams ir atsarginių kopijų patikrinimui."
-    ],
-    "costNote": "Orientacinės 2026 m. lapkričio kainos be PVM. Prieš rinkdamiesi patikrinkite dabartines teikėjo kainas.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "Go versija pati paprašo Let's Encrypt sertifikato, kai tik jūsų domenas nukreipiamas į serverį, automatiškai jį atnaujina ir peradresuoja http į https. TypeScript versija daro tą patį per Caddy, kurį įdiegia diegimo programa. Sertifikato nėra? Su dig patikrinkite, ar domenas rodo serverio adresą ir ar 80 bei 443 prievadai atidaryti.",
-    "backupTitle": "Atsarginės kopijos",
-    "backupP": "Įjunkite teikėjo serverio atsargines kopijas ir pridėkite naktinę portalo atsarginę kopiją, kurią taip pat nukopijuokite už serverio ribų. Slaptąjį raktą laikykite atskirai, slaptažodžių tvarkyklėje: tai OBX_SECRET_KEY nustatymų faile arba secret.key duomenų aplanke. Be jo atsarginės kopijos visiškai atkurti neįmanoma. Vieną kartą išbandykite atkūrimą, kad žinotumėte, jog jis veikia.",
-    "updateTitle": "Atnaujinimai",
-    "updateP": "Padarykite atsarginę kopiją ir perskaitykite leidimo pastabas. Tada dar kartą paleiskite tą pačią diegimo komandą: ji įdiegia naujausią leidimą, išsaugo jūsų nustatymus ir duomenis ir iš naujo paleidžia portalą. Duomenų bazė atsinaujina pati paleidimo metu.",
-    "cfCliP": "Arba iš savo kompiuterio, naudojant Bun ir įrankį Wrangler:",
-    "cfBackupP": "Atsarginės kopijos: su Workers Paid D1 saugo 30 dienų duomenų bazės istoriją (Time Travel). Jei norite kopijos už Cloudflare ribų, reguliariai eksportuokite duomenų bazę. Nuotraukos yra R2; nukopijuokite bucket bet kuriuo S3 įrankiu.",
-    "cfUpdateP": "Atnaujinimai: sujunkite naują versiją į savo repozitorijos kopiją ir atlikite push; Cloudflare ją įdiegia iš naujo.",
     "installCta": "Įdiegti savo serveryje",
     "exampleDomain": "portal.jusuzenklas.lt",
     "ownTitle": "1. Nuosavas serveris (rekomenduojama)",
-    "ownP": "Išsinuomokite nedidelį Linux serverį, nukreipkite į jį savo domeną ir paleiskite vieną komandą. Diegimo programa atsisiunčia portalą, gauna nemokamą HTTPS sertifikatą iš Let's Encrypt ir paleidžia portalą kaip paslaugą, kuri po perkrovimo vėl pasileidžia pati.",
+    "ownP": "Išsinuomokite nedidelį Linux serverį (bet kurį VPS, x86_64 arba arm64), nukreipkite į jį savo domeną ir įdiekite portalą kaip paslaugą, o priešais jį – Caddy automatiniam HTTPS. Po perkrovimo paslauga vėl pasileidžia pati.",
     "needTitle": "Ko jums reikia",
     "needItems": [
       "Linux serverio (VPS) su Ubuntu 22.04 ar 24.04, Debian 12 ar 13 ar panašia sistema. Pradžiai pakanka 1 GB atminties. Tinka bet kuris teikėjas, pavyzdžiui, Hetzner Cloud, DigitalOcean, TransIP VPS ar Scaleway.",
       "Viešo IPv4 adreso (IPv6 nebūtinas) su atidarytais 80 ir 443 prievadais.",
       "Domeno ar subdomeno portalui, pavyzdžiui, portal.jusuzenklas.lt."
     ],
-    "ownStepsTitle": "Trys žingsniai",
+    "ownStepsTitle": "Penki žingsniai",
     "ownSteps": [
-      "Sukurkite serverį ir užsirašykite jo IP adresą.",
-      "Vienu DNS įrašu nukreipkite portal.jusuzenklas.lt į serverį (žr. toliau).",
-      "Prisijunkite prie serverio per SSH ir paleiskite šią komandą su savo adresu:"
+      "Vienu A įrašu nukreipkite {domain} į serverį (žr. toliau).",
+      "Atsisiųskite savo serveriui tinkamą node-rs iš naujausio leidimo ir įdiekite jį su sudo install node-rs /usr/local/bin/.",
+      "Įdiekite systemd vienetą deploy/node-rs.service iš saugyklos. Jis paleidžia portalą naudotojo node-rs teisėmis, duomenis laiko /var/lib/node-rs ir nustato OBX_PUBLIC_URL į https://{domain}.",
+      "Įdiekite Caddy ir pateikite jam toliau esantį trumpą Caddyfile. Jis už jus gauna HTTPS sertifikatą ir perduoda lankytojus portalui.",
+      "Atidarykite https://{domain} ir įveskite vienkartinį diegimo kodą iš journalctl -u node-rs."
     ],
-    "ownDone": "Baigusi diegimo programa parodo jūsų portalo adresą ir vienkartinį diegimo kodą. Atidarykite adresą, įveskite kodą ir užbaikite sąrankos vedlį. Norėdami vėliau atnaujinti, paleiskite tą pačią komandą dar kartą: jūsų nustatymai ir duomenys išlieka.",
-    "ownTs": "Taip įdiegiama Go versija – Portalas nuosavam serveriui. TypeScript versijai prie tos pačios komandos pridėkite --edition ts.",
     "ownEu": "Pasirinkite duomenų centrą ES, ir jūsų katalogas, nuotraukos bei duomenų bazė liks ES.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "Jau naudojate Docker? Vienas compose failas paleidžia portalą (atvaizdą ghcr.io/openbrandexchange/node-rs) kartu su Caddy, kuris rūpinasi HTTPS. Pirmiausia nukreipkite domeną į serverį (žr. DNS toliau), tada paleiskite:",
+    "dockerDone": "Tada atidarykite https://{domain} ir įveskite vienkartinį diegimo kodą iš docker compose logs node-rs.",
     "dnsTitle": "DNS: nukreipkite domeną į serverį",
     "dnsP": "Pridėkite vieną įrašą pas įmonę, kuri tvarko jūsų domeną:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Patikrinkite",
     "dnsCheckP": "Jūsų kompiuteryje tai turi parodyti serverio adresą (arba naudokite internetinį DNS tikrinimo įrankį, pavyzdžiui, dnschecker.org):",
-    "dnsWait": "Paprastai tai užtrunka 5–60 minučių, kartais kelias valandas. Diegimo programa tai irgi patikrina ir pasako, ko dar trūksta.",
-    "optionsTitle": "Diegimo programos parinktys",
-    "options": [
-      "portalo adresas, pavyzdžiui, portal.jusuzenklas.lt (privaloma)",
-      "el. pašto adresas, skirtas Let's Encrypt (nebūtina)",
-      "konkretus leidimas vietoj naujausio",
-      "go (numatytoji) įdiegia Go versiją; ts įdiegia TypeScript versiją",
-      "be savo HTTPS: portalas klausosi 127.0.0.1:8080 už jūsų tarpinio serverio",
-      "tik parodo, ką darytų, nieko nekeisdama",
-      "pašalina programą ir paslaugą; jūsų duomenys ir nustatymai išlieka (pridėkite --purge, kad būtų ištrinti ir jie)"
-    ],
-    "checksP": "Prieš ką nors keisdama, diegimo programa patikrina sistemą (Linux amd64 arba arm64 su systemd), root teises, vietą diske, ar domenas nukreiptas į šį serverį, ar 80 ir 443 prievadai laisvi, ir ugniasienę. Su ufw ar firewalld ji išspausdina tikslią komandą 80 ir 443 prievadams atidaryti.",
-    "filesTitle": "Kur kas yra",
-    "filesHead": [
-      "Kas",
-      "Go versija",
-      "TypeScript versija"
-    ],
-    "filesRows": [
-      "Programa",
-      "Duomenys",
-      "Nustatymai",
-      "Paslauga"
-    ],
+    "dnsWait": "Paprastai tai užtrunka 5–60 minučių, kartais kelias valandas. Caddy gauna sertifikatą, kai tik domenas nukreipiamas į serverį.",
+    "techTitle": "Techninė informacija jūsų IT komandai",
+    "techLead": "Saugykla, nustatymai, atsarginės kopijos ir atnaujinimai tam, kas įrengia serverį.",
+    "storageTitle": "Saugykla ir nustatymai",
+    "storageP": "Portalas naudoja SQLite: vienas failas, be duomenų bazės serverio. Nuotraukos saugomos paties serverio diske arba bet kurioje su S3 suderinamoje saugykloje (OBX_BLOB_URL). Kiekvienas nustatymas yra OBX_* aplinkos kintamasis, tais pačiais pavadinimais kaip node-go.",
     "commandsTitle": "Naudingos komandos",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "Jokio serverio, kurį reikėtų prižiūrėti: portalas veikia jūsų Cloudflare paskyroje. Spustelėkite mygtuką, prisijunkite ir sekite žingsnius.",
-    "cfDnsTitle": "DNS: nuosavas domenas Worker programai",
-    "cfDnsP": "Pridėkite adresą kaip nuosavą domeną Worker programai: Workers & Pages → jūsų Worker → Settings → Domains & Routes → Add → Custom domain. Jei jūsų domenas jau yra Cloudflare, DNS ir sertifikatas nustatomi automatiškai. Jei ne, pirmiausia perkelkite domeno DNS į Cloudflare (nemokamai; domenas lieka užregistruotas ten, kur yra), tada pridėkite nuosavą domeną. Tada nustatykite OBX_PUBLIC_URL į tą adresą ir įdiekite iš naujo.",
-    "webDnsTitle": "DNS: subdomenas valdymo skydelyje",
-    "webDnsP": "Sukurkite subdomeną savo talpinimo valdymo skydelyje (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain arba Subdomains; Plesk: Websites & Domains → Add Subdomain). Jei jūsų domeno DNS yra pas tą pačią talpinimo įmonę, daugiau nieko nereikia. Kitaip pridėkite subdomenui A įrašą, nukreiptą į talpinimo serverio IP adresą, kurį rodo skydelis. Tada skydelyje įjunkite Let's Encrypt subdomenui."
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy paprašo Let's Encrypt sertifikato, kai tik jūsų domenas nukreipiamas į serverį, automatiškai jį atnaujina ir peradresuoja http į https. Sertifikato nėra? Su dig patikrinkite, ar domenas rodo serverio adresą ir ar 80 bei 443 prievadai atidaryti.",
+    "backupTitle": "Atsarginės kopijos",
+    "backupP": "Įjunkite teikėjo serverio atsargines kopijas ir kas naktį laikykite šifruotą portalo kopiją pas kitą teikėją arba kitame regione. Kas ketvirtį išbandykite atkūrimą, kad žinotumėte, jog jis veikia.",
+    "backupLink": "Atsarginė kopija kitoje vietoje",
+    "updateTitle": "Atnaujinimai",
+    "updateP": "Padarykite atsarginę kopiją ir perskaitykite leidimo pastabas. Linux serveryje tokiu pat būdu įdiekite naują programą ir iš naujo paleiskite paslaugą. Su Docker paleiskite docker compose pull, tada docker compose up -d. Duomenų bazė atsinaujina pati paleidimo metu.",
+    "releaseLink": "Atsisiųsti naujausią versiją",
+    "migrateTitle": "Perėjimas nuo node-go, node-php ar node-ts",
+    "migrateP": "Jūsų duomenys, nuotraukos ir nustatymai persikelia kartu. Perkėlimo vadove rasite žingsnius kiekvienam ankstesniam leidimui.",
+    "migrateLink": "Skaityti perkėlimo vadovą",
+    "p1Title": "3. Partneris talpina už jus",
+    "p1P": "Nenorite talpinti patys? Partneriai gali talpinti ir prižiūrėti portalą už jus.",
+    "partnerLink": "Žiūrėti partnerius",
+    "fieldBased": "Buveinė",
+    "fieldLanguages": "Kalbos",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Viso turinio eksportas",
+    "fieldWebsite": "Svetainė",
+    "listTitle": "Norite būti čia kaip paslaugų teikėjas?",
+    "listP": "Būtinos sąlygos, kad čia būtumėte nurodyti, visiems vienodos:",
+    "listItems": [
+      "jūsų portalas išlaiko dabartinės versijos atitikties testą",
+      "prekės ženklas gali eksportuoti visus savo duomenis ir nuotraukas ir išeiti",
+      "savo kainas ir sąlygas skelbiate savo svetainėje"
+    ],
+    "listHow": "Būti suderinamam nemokama; vieta šiame sąraše yra oficialios partnerystės dalis.",
+    "costTitle": "Kiek tai apytiksliai kainuoja",
+    "costItems": [
+      "Nuosavas serveris ES: apie 5–15 € per mėnesį už nedidelį serverį su automatinėmis atsarginėmis kopijomis pas tokį teikėją kaip Hetzner. Nuotraukos paties serverio diske papildomai nekainuoja; objektų saugykla dideliam archyvui prideda kelis eurus per mėnesį už terabaitą.",
+      "Partneris: jo paties kaina. Paklauskite, kas į ją įeina: atnaujinimai, atsarginės kopijos, nuosavas domenas ir viso turinio eksportas, jei nuspręsite išeiti.",
+      "Jūsų laikas: pirmą kartą skirkite valandą ar dvi, įskaitant domeną ir bandomąjį atsarginės kopijos atkūrimą, o vėliau apie valandą per mėnesį atnaujinimams ir atsarginių kopijų patikrinimui."
+    ],
+    "costNote": "Orientacinės 2026 m. lapkričio kainos be PVM. Prieš rinkdamiesi patikrinkite dabartines teikėjo kainas.",
+    "firstTitle": "Po diegimo: pirmasis paleidimas",
+    "first": [
+      "Atidarykite savo portalo adresą naršyklėje.",
+      "Įveskite vienkartinį diegimo kodą. Jis yra žurnale pirmojo paleidimo metu (journalctl -u node-rs arba docker compose logs node-rs), arba jį nustatote iš anksto su OBX_SETUP_CODE.",
+      "Įveskite savo įmonę ir pirmąjį prekės ženklą ir pasirinkite savo slaptažodį. Numatytojo slaptažodžio niekada nėra."
+    ],
+    "firstWhy": "Diegimo kodas užtikrina, kad niekas kitas negalėtų perimti ką tik įdiegto portalo.",
+    "domainTitle": "Nuosavas domenas",
+    "domainP": "Naudokite subdomeną, pavyzdžiui, pardavejai.jusuzenklas.lt arba b2b.jusuzenklas.lt. Pardavėjai tada mato jūsų pavadinimą, o adresas nesikeičia, net jei pakeičiate talpinimą.",
+    "compareTitle": "Vienas portalas, parašytas Rust kalba",
+    "compareP": "Yra vienas etaloninis portalas – node-rs. Kad ir kur jis veiktų, turi tą patį administravimą ir tą patį prekybininkų portalą, todėl bet kada galite pereiti tarp nuosavo serverio, Docker ir partnerio.",
+    "retireNote": "Ankstesni leidimai node-go, node-php ir node-ts palaipsniui nutraukiami."
   },
   "retailers": {
     "h1": "Pardavėjams",
@@ -712,10 +670,9 @@
       "specifikacija, schemos, bandomieji duomenys",
       "Go SDK, įrankis obx, atitikties testai, imitacinis serveris",
       "bendra žiniatinklio sąsaja: administravimas ir prekybininkų portalas",
-      "Go: nuosavas serveris su vienos eilutės diegimo programa",
-      "PHP: įprastas interneto talpinimas",
-      "TypeScript: Cloudflare Workers"
+      "etaloninis portalas, Rust kalba: Linux arba Docker"
     ],
+    "implRef": "Etaloninis portalas",
     "statusDraft": "0.3",
     "implP": "Kuriate savo įgyvendinimą ar klientą? Praneškite per issue ar pull request; jis pateks į šią lentelę, kai išlaikys atitikties testus.",
     "docsTitle": "Dokumentai",
@@ -737,20 +694,12 @@
         "d": "Specifikacija, schemos ir bandomieji duomenys"
       },
       {
+        "name": "node-rs",
+        "d": "Etaloninis portalas, parašytas Rust kalba"
+      },
+      {
         "name": "obx-go",
         "d": "Go SDK, įrankis obx ir atitikties testas"
-      },
-      {
-        "name": "node-ts",
-        "d": "Portalas Cloudflare Workers"
-      },
-      {
-        "name": "node-go",
-        "d": "Portalas nuosavam serveriui"
-      },
-      {
-        "name": "node-php",
-        "d": "Portalas įprastam žiniatinklio prieglobos planui"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Atvirasis kodas, GitHub.",
     "reposTitle": "Saugyklos",
-    "reposP": "Viskas yra atvirojo kodo GitHub: specifikacija, bendras kodas ir trys portalo leidimai.",
+    "reposP": "Viskas yra atvirojo kodo GitHub: specifikacija, bendras kodas ir Rust kalba parašytas etaloninis portalas.",
     "newTitle": "Kas nauja 0.3 versijoje",
     "newItems": [
       "Medžiagos ir priežiūra yra kodai su pavadinimais anglų, olandų, vokiečių ir prancūzų kalbomis iš bendrų žodynų, paskelbtų adresu /vocabularies/v0.3/.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "Ar tai paruošta?",
-        "a": "Taip, versija 0.3: specifikacija, trys portalo leidimai ir įrankiai išleisti, jais galima laisvai naudotis. Esame pradžioje: pirmieji prekių ženklai prisijungia dabar."
+        "a": "Taip, versija 0.3: specifikacija ir įrankiai išleisti, jais galima laisvai naudotis, o portalas parašytas Rust kalba. Esame pradžioje: pirmieji prekių ženklai prisijungia dabar."
       },
       {
         "q": "Kas už to stovi?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Licencijos",
-        "p": "Specifikacijai taikoma CC-BY-4.0 licencija. SDK, įrankiui obx ir bendrai žiniatinklio sąsajai – Apache-2.0. Trims portalo leidimams – AGPL-3.0, kad jų patobulinimai liktų atviri. Ši svetainė nėra platinama pagal atvirą licenciją: jos kodas, dizainas ir tekstai saugomi visomis teisėmis. Svetainėje pateikiamiems specifikacijos failams, pavyzdžiui, schemoms, šablonams ir pavyzdžiams, ir toliau taikoma CC-BY-4.0 licencija."
+        "p": "Specifikacijai taikoma CC-BY-4.0 licencija. SDK, įrankiui obx ir bendrai žiniatinklio sąsajai – Apache-2.0. Portalui node-rs – AGPL-3.0, kad jo patobulinimai liktų atviri. Ši svetainė nėra platinama pagal atvirą licenciją: jos kodas, dizainas ir tekstai saugomi visomis teisėmis. Svetainėje pateikiamiems specifikacijos failams, pavyzdžiui, schemoms, šablonams ir pavyzdžiams, ir toliau taikoma CC-BY-4.0 licencija."
       }
     ],
     "nameTitle": "Apie pavadinimą",
@@ -1036,7 +985,7 @@
       "Įkelkite Excel eksportą ir nuotraukas rankiniu būdu arba leiskite juos paimti kas naktį",
       "Automatinis pateikimas iš jūsų PIM, ERP ar bendro aplanko",
       "Prieigos prašymai, kvietimai ir API raktai jūsų pardavėjų programinei įrangai",
-      "Trys versijos: nuosavas serveris, Cloudflare Workers ir įprastas interneto talpinimas"
+      "Vienas Rust kalba parašytas portalas: jūsų Linux serveryje arba su Docker"
     ],
     "brandsComing": [
       "Pirmasis viešas leidimas su įdiegimu vienu spustelėjimu",
@@ -1098,8 +1047,8 @@
           "l": "standartas, nemokamas visiems"
         },
         {
-          "v": "3",
-          "l": "portalo leidimai"
+          "v": "72",
+          "l": "automatiniai atitikties patikrinimai"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Talpinimas",
       "editionsTitle": "Kur norite. Mokate tik už talpinimą.",
-      "editionsLead": "Trys to paties nuotraukų portalo leidimai. Jie veikia vienodai, todėl bet kada galite pereiti nuo vieno prie kito.",
+      "editionsLead": "OBX parašytas Rust kalba: vienas nuotraukų portalas, kurį talpinate savo Linux serveryje arba su Docker, arba kurį už jus talpina partneris. Persikelti galite bet kada.",
       "editionsLink": "Palyginkite talpinimo galimybes",
       "editionFields": [
         "Veikia",
@@ -1197,27 +1146,18 @@
           "name": "Nuosavas serveris",
           "runs": "Bet kuris Linux serveris (VPS), pavyzdžiui, pas Hetzner, DigitalOcean, TransIP ar Scaleway",
           "need": "Serverio, domeno vardo ir SSH prieigos",
-          "setup": "Viena komanda, tada sąrankos vedlys",
+          "setup": "Įdiekite programą ir Caddy, tada sąrankos vedlys",
           "cost": "Apie 5–15 € per mėnesį už nedidelį serverį su atsarginėmis kopijomis",
           "cta": "Įdiegti savo serveryje"
         },
         {
-          "tag": "Be serverio",
-          "name": "Cloudflare Workers",
-          "runs": "Jūsų Cloudflare paskyra, su D1 kaip duomenų baze ir R2 nuotraukoms",
-          "need": "Cloudflare paskyros su Workers Paid planu",
-          "setup": "Vienas paspaudimas, tada sąrankos vedlys",
-          "cost": "5 doleriai per mėnesį ir saugykla",
-          "cta": "Įdiegti Cloudflare"
-        },
-        {
-          "tag": "Be komandų",
-          "name": "Įprastas interneto talpinimas",
-          "runs": "Europos interneto talpinimas su PHP ir duomenų baze, pavyzdžiui, TransIP, Strato ar OVHcloud",
-          "need": "FTP programos",
-          "setup": "Įkelkite zip, tada diegimo programa",
-          "cost": "Talpinimas, už kurį jau mokate (PHP 8.2 ar naujesnė)",
-          "cta": "Įdiegti interneto talpinime"
+          "tag": "Konteineriai",
+          "name": "Docker",
+          "runs": "Bet kuris serveris su Docker ir Docker Compose",
+          "need": "Docker, domeno vardo ir SSH prieigos",
+          "setup": "Vienas compose failas, tada sąrankos vedlys",
+          "cost": "Apie 5–15 € per mėnesį už nedidelį serverį su atsarginėmis kopijomis",
+          "cta": "Pradėti su Docker"
         },
         {
           "tag": "Paprasčiausia",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Jūsų nuotraukų portalas, paremtas atviru standartu.",
       "retailersSoftware": "Jūsų programinei įrangai",
-      "hostingEditions": "Trys leidimai"
+      "hostingEditions": "Paleidimo būdai"
     }
   },
   "partners": {

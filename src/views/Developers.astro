@@ -6,7 +6,7 @@ import GetInvolved from '../components/GetInvolved.astro';
 import CodeWindow from '../components/CodeWindow.astro';
 import Icon from '../components/Icon.astro';
 import { messages, repo, specDoc, url, type Lang } from '../i18n';
-import { retailerCurl, conformance, discovery, discoveryResponse, demoCurl, DEMO_URL, DEMO_CLIENT_ID, DEMO_CLIENT_SECRET } from '../data/snippets';
+import { retailerCurl, conformance, discovery, discoveryResponse, demoCurl, DEMO_URL, DEMO_CLIENT_ID, DEMO_CLIENT_SECRET, NODE_RS_MIGRATING_DOC } from '../data/snippets';
 import { prompts } from '../data/prompts';
 
 interface Props {
@@ -23,12 +23,10 @@ const apis = [
   { name: 'Node Admin + Portal API', file: 'openapi/node-admin.yaml', page: '/reference/admin.html' },
 ];
 const impl = [
-  { repo: 'spec', licence: 'CC-BY-4.0', edition: '' },
-  { repo: 'obx-go', licence: 'Apache-2.0', edition: '' },
-  { repo: 'admin-ui', licence: 'Apache-2.0', edition: '' },
-  { repo: 'node-go', licence: 'AGPL-3.0', edition: t.common.editionServer },
-  { repo: 'node-php', licence: 'AGPL-3.0', edition: t.common.editionHosting },
-  { repo: 'node-ts', licence: 'AGPL-3.0', edition: t.common.editionCloudflare },
+  { repo: 'spec', licence: 'CC-BY-4.0', edition: '', status: '' },
+  { repo: 'obx-go', licence: 'Apache-2.0', edition: '', status: '' },
+  { repo: 'admin-ui', licence: 'Apache-2.0', edition: '', status: '' },
+  { repo: 'node-rs', licence: 'AGPL-3.0', edition: c.implRef, status: t.common.inDevelopment },
 ];
 const docs = [
   'docs/protocol.md',
@@ -173,13 +171,14 @@ const docs = [
                     {c.impl[i]}
                   </td>
                   <td>{row.licence}</td>
-                  <td>{c.statusDraft}</td>
+                  <td>{row.status || c.statusDraft}</td>
                 </tr>
               ))
             }
           </tbody>
         </table>
       </div>
+      <p>{t.hosting.retireNote} <a href={NODE_RS_MIGRATING_DOC}>{t.hosting.migrateLink}</a> · <a href={url(lang, 'hosting')}>{t.nav.hosting}</a></p>
       <p>{c.implP}</p>
     </DocSection>
 

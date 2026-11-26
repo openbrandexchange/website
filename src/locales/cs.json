@@ -14,15 +14,12 @@
     "footerMore": "Další",
     "footerSource": "Zdrojový kód a specifikace",
     "footerLicence": "© 2026 {foundation}. Všechna práva vyhrazena. Specifikace je pod licencí CC-BY-4.0.",
-    "editionCloudflare": "Portál pro Cloudflare",
-    "editionHosting": "Portál pro webhosting",
     "yes": "Ano",
     "inDevelopment": "Ve vývoji",
     "available": "Dostupné",
     "footerContact": "Kontakt",
     "madeInEu": "Vyrobeno v EU",
-    "footerDiscuss": "Zapojte se do diskuse",
-    "editionServer": "Portál pro vlastní server"
+    "footerDiscuss": "Zapojte se do diskuse"
   },
   "nav": {
     "brands": "Pro značky",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Váš portál pro prodejce, kde chcete: na vlastním serveru jedním příkazem, na Cloudflare Workers, na běžném webhostingu nebo u partnera."
+      "description": "Váš portál pro prodejce, kde chcete: portál v jazyce Rust na vlastním linuxovém serveru nebo přes Docker, nebo u partnera."
     },
     "retailers": {
       "title": "Pro prodejce",
@@ -361,7 +358,6 @@
     "httpProduct": "Položka (například když se změní v PIM)",
     "httpVariant": "Barva a velikost s EAN",
     "httpImage": "Fotografie: nejdřív údaje, potom samotný soubor",
-    "httpImageNote": "Portál pro Cloudflare sám nevytváří webové verze fotografií. Publikujte tam pomocí obx nebo přes „Importy“ ve své administraci: ty je vytvoří za vás. Fotografie, které přijdou jinak, například plánovaným importem, se do té doby zobrazují v původní velikosti.",
     "httpOffline": "Stažení něčeho",
     "httpHooks": "Chcete dostat zprávu, když se něco stane? V administraci přidejte oznámení (webhook) na dokončený import nebo novou žádost o přístup a nechte ho spustit trigger v n8n, Make nebo Zapier.",
     "apiTitle": "6. Přímo API (pro vývojáře)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Každá značka má svůj vlastní portál pro prodejce. Nainstalujte ho jedním příkazem na vlastní server, provozujte na Cloudflare Workers, nahrajte na běžný webhosting, nebo ho nechte hostovat partnera.",
-    "p1Title": "4. Partner ho hostuje za vás",
-    "p1P": "Nechcete hostovat sami? Partneři mohou portál hostovat a spravovat za vás.",
-    "fieldBased": "Sídlo",
-    "fieldLanguages": "Jazyky",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "Export veškerého obsahu",
-    "fieldWebsite": "Web",
-    "listTitle": "Chcete být uvedeni jako poskytovatel?",
-    "listP": "Podmínky pro uvedení zde jsou pro všechny stejné:",
-    "listItems": [
-      "váš portál projde testem shody pro aktuální verzi",
-      "značka může exportovat všechna svá data a obrázky a odejít",
-      "své ceny a podmínky zveřejňujete na vlastním webu"
-    ],
-    "listHow": "Kompatibilita je zdarma; uvedení zde je součástí oficiálního partnerství.",
-    "cfP": "Běží na Cloudflare Workers, s D1 jako databází a R2 pro obrázky. Klikněte na tlačítko, přihlaste se do Cloudflare a postupujte podle kroků. Pro portál v každodenním provozu potřebujete tarif Workers Paid (5 dolarů měsíčně); bezplatný tarif stačí jen na vyzkoušení. Webové verze vašich fotografií vytvoří váš prohlížeč a nástroj obx.",
-    "cfButton": "Nainstalovat na Cloudflare",
-    "phpP": "Pro webhosting, který možná už máte, s PHP a databází. Žádné příkazy nejsou potřeba:",
-    "phpSteps": [
-      "Stáhněte obx-portal-php-<version>.zip z nejnovějšího vydání.",
-      "Rozbalte ho a nahrajte složku na hosting přes (S)FTP.",
-      "Nasměrujte svou (sub)doménu, například prodejci.vaseznacka.cz, na složku public.",
-      "Umožněte zápis do složek data a config (oprávnění 775; pokud instalátor stále hlásí, že zápis nejde, 777).",
-      "Otevřete tuto adresu. Instalátor zkontroluje server a zeptá se na instalační kód ze souboru data/SETUP-CODE.txt, který otevřete programem pro FTP. Pak klikněte na „Otevřít průvodce nastavením“.",
-      "Adresu pro cron, kterou instalátor ukáže, přidejte jako úlohu cron v ovládacím panelu hostingu, každých 5 minut. I bez ní portál funguje."
-    ],
-    "phpDownload": "Stáhnout nejnovější vydání",
-    "firstTitle": "Po instalaci: první spuštění",
-    "first": [
-      "Otevřete adresu svého portálu v prohlížeči.",
-      "Zadejte jednorázový instalační kód. Instalátor na vlastním serveru ho ukáže na konci. Jinak ho najdete v logu při prvním spuštění (Portál pro webhosting: v data/SETUP-CODE.txt a instalátor ho vyplní za vás), nebo ho předem nastavíte pomocí OBX_SETUP_CODE.",
-      "Vyplňte svou firmu a první značku a zvolte si vlastní heslo. Výchozí heslo nikdy neexistuje."
-    ],
-    "firstWhy": "Instalační kód zajistí, že si nikdo jiný čerstvě nainstalovaný portál nepřivlastní.",
-    "domainTitle": "Vlastní doména",
-    "domainP": "Použijte subdoménu jako prodejci.vaseznacka.cz nebo b2b.vaseznacka.cz. Prodejci pak vidí vaše jméno a adresa zůstane stejná, i když změníte hosting.",
-    "compareTitle": "Tři edice, jeden portál",
-    "compareP": "Tři edice dělají totéž a mají stejnou administraci i stejný portál pro prodejce. Zvolte tu, která sedí k vašemu hostingu; změnit ji můžete později.",
-    "compareLink": "Zobrazit implementace",
+    "lead": "Každá značka má svůj vlastní portál pro prodejce. OBX běží v jazyce Rust: nainstalujte ho na vlastní linuxový server nebo přes Docker, nebo ho nechte hostovat partnera.",
     "heroTitle": "Váš portál pro prodejce, kde chcete.",
-    "heroLead": "Software je zdarma. Nejjednodušší je malý vlastní server a jeden příkaz. Kdykoli se můžete přestěhovat.",
+    "heroLead": "Software je zdarma a běží v jazyce Rust. Nejjednodušší je malý vlastní server, jako služba nebo přes Docker. Kdykoli se můžete přestěhovat.",
     "heroChecks": [
       "Software zdarma, platíte jen za hosting",
-      "Jeden příkaz nainstaluje portál, včetně HTTPS",
+      "Jeden program v jazyce Rust, s automatickým HTTPS přes Caddy",
       "Všude stejný portál, takže můžete kdykoli přejít jinam",
       "Nechcete to dělat sami? Partner ho hostuje za vás"
     ],
-    "webTitle": "3. Běžný webhosting",
-    "webP": "Edice pro PHP běží na běžném evropském webhostingu s PHP a databází, například u TransIP, Strato nebo OVHcloud. Bez příkazů:",
-    "partnerLink": "Zobrazit partnery",
-    "techTitle": "Technické podrobnosti pro vaše IT",
-    "techLead": "Volby instalátoru, soubory, zálohy a aktualizace, pro toho, kdo server nastavuje.",
-    "costTitle": "Kolik to zhruba stojí",
-    "costItems": [
-      "Vlastní server v EU: zhruba 5 až 15 € měsíčně za malý server s automatickými zálohami u poskytovatele, jako je Hetzner. Fotografie na vlastním disku serveru nic navíc nestojí; objektové úložiště pro velký archiv přidá několik eur měsíčně za terabajt.",
-      "Běžný webhosting: tarif, který už platíte, pokud má PHP 8.2 nebo novější.",
-      "Cloudflare Workers: 5 dolarů měsíčně za Workers Paid plus úložiště R2 za zhruba 1,50 dolaru měsíčně za 100 GB fotografií. Poplatky za stahování nejsou.",
-      "Partner: jeho vlastní cena. Zeptejte se, co zahrnuje: aktualizace, zálohy, vlastní doménu a export všech dat, pokud odejdete.",
-      "Váš vlastní čas: napoprvé počítejte s jednou až dvěma hodinami, včetně domény a zkušební obnovy zálohy, a pak zhruba s hodinou měsíčně na aktualizace a kontrolu záloh."
-    ],
-    "costNote": "Orientační ceny z listopadu 2026 bez DPH. Než se rozhodnete, ověřte si aktuální ceny poskytovatele.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "Edice Go si sama vyžádá certifikát Let's Encrypt, jakmile vaše doména míří na server, automaticky ho obnovuje a přesměrovává http na https. Edice TypeScript dělá totéž přes Caddy, který nastaví instalátor. Žádný certifikát? Zkontrolujte pomocí dig, že doména ukazuje adresu serveru a že jsou porty 80 a 443 otevřené.",
-    "backupTitle": "Zálohy",
-    "backupP": "Zapněte zálohy serveru u svého poskytovatele a přidejte noční zálohu portálu, kterou kopírujete i mimo server. Tajný klíč uchovávejte zvlášť, ve správci hesel: je to OBX_SECRET_KEY v souboru s nastavením, nebo secret.key ve složce s daty. Bez něj nejde zálohu úplně obnovit. Jednou si obnovu vyzkoušejte, ať víte, že funguje.",
-    "updateTitle": "Aktualizace",
-    "updateP": "Udělejte zálohu a přečtěte si poznámky k vydání. Pak spusťte znovu stejný instalační příkaz: nainstaluje nejnovější vydání, ponechá nastavení i data a portál restartuje. Databáze se při startu aktualizuje sama.",
-    "cfCliP": "Nebo z vlastního počítače pomocí Bun a nástroje Wrangler:",
-    "cfBackupP": "Zálohy: s Workers Paid uchovává D1 historii databáze za 30 dní (Time Travel). Chcete-li kopii mimo Cloudflare, databázi pravidelně exportujte. Obrázky jsou v R2; bucket zkopírujete libovolným nástrojem pro S3.",
-    "cfUpdateP": "Aktualizace: slučte nové vydání do své kopie repozitáře a pushněte; Cloudflare ho znovu nasadí.",
     "installCta": "Nainstalovat na vlastní server",
     "exampleDomain": "portal.vaseznacka.cz",
     "ownTitle": "1. Vlastní server (doporučeno)",
-    "ownP": "Pronajměte si malý linuxový server, nasměrujte na něj svou doménu a spusťte jeden příkaz. Instalátor stáhne portál, získá bezplatný certifikát HTTPS od Let's Encrypt a spustí portál jako službu, která se po restartu sama znovu rozběhne.",
+    "ownP": "Pronajměte si malý linuxový server (jakýkoli VPS, x86_64 nebo arm64), nasměrujte na něj svou doménu a nainstalujte portál jako službu, s Caddy před ním pro automatické HTTPS. Služba se po restartu sama znovu rozběhne.",
     "needTitle": "Co potřebujete",
     "needItems": [
       "Linuxový server (VPS) s Ubuntu 22.04 nebo 24.04, Debianem 12 nebo 13 či podobným systémem. Pro začátek stačí 1 GB paměti. Poskytovatel může být jakýkoli, například Hetzner Cloud, DigitalOcean, TransIP VPS nebo Scaleway.",
       "Veřejnou adresu IPv4 (IPv6 je volitelná) s otevřenými porty 80 a 443.",
       "Doménu nebo subdoménu pro portál, například portal.vaseznacka.cz."
     ],
-    "ownStepsTitle": "Tři kroky",
+    "ownStepsTitle": "Pět kroků",
     "ownSteps": [
-      "Vytvořte server a poznamenejte si jeho IP adresu.",
-      "Nasměrujte portal.vaseznacka.cz na server jedním záznamem DNS (viz níže).",
-      "Přihlaste se na server přes SSH a spusťte tento příkaz se svou vlastní adresou:"
+      "Nasměrujte {domain} na server záznamem A (viz níže).",
+      "Stáhněte node-rs pro svůj server z nejnovějšího vydání a nainstalujte ho příkazem sudo install node-rs /usr/local/bin/.",
+      "Nainstalujte jednotku systemd deploy/node-rs.service z repozitáře. Spouští portál pod uživatelem node-rs, ukládá data do /var/lib/node-rs a nastavuje OBX_PUBLIC_URL na https://{domain}.",
+      "Nainstalujte Caddy a dejte mu krátký Caddyfile níže. Získá za vás certifikát HTTPS a předává návštěvníky portálu.",
+      "Otevřete https://{domain} a zadejte jednorázový instalační kód z journalctl -u node-rs."
     ],
-    "ownDone": "Na konci instalátor ukáže adresu vašeho portálu a jednorázový instalační kód. Otevřete adresu, zadejte kód a projděte průvodce nastavením. Pro pozdější aktualizaci spusťte stejný příkaz znovu: nastavení i data zůstanou.",
-    "ownTs": "Tím se nainstaluje edice Go, tedy Portál pro vlastní server. Pro edici TypeScript přidejte ke stejnému příkazu --edition ts.",
     "ownEu": "Zvolte datové centrum v EU a váš katalog, obrázky i databáze zůstanou v EU.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "Už používáte Docker? Jeden soubor compose spustí portál (image ghcr.io/openbrandexchange/node-rs) spolu s Caddy pro HTTPS. Nejdřív nasměrujte doménu na server (viz DNS níže), pak spusťte:",
+    "dockerDone": "Pak otevřete https://{domain} a zadejte jednorázový instalační kód z docker compose logs node-rs.",
     "dnsTitle": "DNS: nasměrujte doménu na server",
     "dnsP": "Přidejte jeden záznam u firmy, která spravuje vaši doménu:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Zkontrolujte to",
     "dnsCheckP": "Na vašem počítači musí tento příkaz ukázat adresu serveru (nebo použijte online kontrolu DNS, například dnschecker.org):",
-    "dnsWait": "Obvykle to trvá 5 až 60 minut, někdy i několik hodin. Instalátor to také kontroluje a řekne vám, co ještě chybí.",
-    "optionsTitle": "Volby instalátoru",
-    "options": [
-      "adresa portálu, například portal.vaseznacka.cz (povinné)",
-      "e-mailová adresa pro Let's Encrypt (volitelné)",
-      "konkrétní vydání místo nejnovějšího",
-      "go (výchozí) nainstaluje edici Go; ts nainstaluje edici TypeScript",
-      "bez vlastního HTTPS: portál naslouchá na 127.0.0.1:8080 za vaší vlastní proxy",
-      "jen ukázat, co by udělal, nic neměnit",
-      "odebrat program a službu; data a nastavení zůstanou (přidejte --purge, chcete-li smazat i je)"
-    ],
-    "checksP": "Než cokoli změní, instalátor zkontroluje systém (Linux amd64 nebo arm64 se systemd), práva roota, místo na disku, zda doména míří na tento server, zda jsou porty 80 a 443 volné, a firewall. U ufw nebo firewalld vypíše přesný příkaz, kterým porty 80 a 443 otevřete.",
-    "filesTitle": "Kde co najdete",
-    "filesHead": [
-      "Co",
-      "Edice Go",
-      "Edice TypeScript"
-    ],
-    "filesRows": [
-      "Program",
-      "Data",
-      "Nastavení",
-      "Služba"
-    ],
+    "dnsWait": "Obvykle to trvá 5 až 60 minut, někdy i několik hodin. Caddy získá certifikát, jakmile doména míří na server.",
+    "techTitle": "Technické podrobnosti pro vaše IT",
+    "techLead": "Úložiště, nastavení, zálohy a aktualizace, pro toho, kdo server nastavuje.",
+    "storageTitle": "Úložiště a nastavení",
+    "storageP": "Portál používá SQLite: jeden soubor, žádný databázový server. Obrázky se ukládají na vlastní disk serveru nebo do libovolného bucketu kompatibilního s S3 (OBX_BLOB_URL). Každé nastavení je proměnná prostředí OBX_*, se stejnými názvy jako u node-go.",
     "commandsTitle": "Užitečné příkazy",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "Žádný server ke správě: portál běží na vašem vlastním účtu Cloudflare. Klikněte na tlačítko, přihlaste se a postupujte podle kroků.",
-    "cfDnsTitle": "DNS: vlastní doména pro Worker",
-    "cfDnsP": "Přidejte adresu jako vlastní doménu Workeru: Workers & Pages → váš Worker → Settings → Domains & Routes → Add → Custom domain. Pokud je vaše doména už na Cloudflare, DNS i certifikát se nastaví automaticky. Pokud ne, nejdřív přesuňte DNS domény na Cloudflare (zdarma; doména zůstane registrovaná tam, kde je), a pak přidejte vlastní doménu. Pak nastavte OBX_PUBLIC_URL na tuto adresu a nasaďte znovu.",
-    "webDnsTitle": "DNS: subdoména v ovládacím panelu",
-    "webDnsP": "Vytvořte subdoménu v ovládacím panelu hostingu (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain, nebo Subdomains; Plesk: Websites & Domains → Add Subdomain). Pokud máte DNS domény u stejné hostingové firmy, je hotovo. Jinak přidejte pro subdoménu záznam A, který míří na IP adresu hostingového serveru, kterou panel ukazuje. Pak v panelu zapněte pro subdoménu Let's Encrypt."
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy si vyžádá certifikát Let's Encrypt, jakmile vaše doména míří na server, automaticky ho obnovuje a přesměrovává http na https. Žádný certifikát? Zkontrolujte pomocí dig, že doména ukazuje adresu serveru a že jsou porty 80 a 443 otevřené.",
+    "backupTitle": "Zálohy",
+    "backupP": "Zapněte zálohy serveru u svého poskytovatele a každou noc si ukládejte šifrovanou kopii portálu u jiného poskytovatele nebo v jiném regionu. Každé čtvrtletí si obnovu vyzkoušejte, ať víte, že funguje.",
+    "backupLink": "Záloha mimo server",
+    "updateTitle": "Aktualizace",
+    "updateP": "Udělejte zálohu a přečtěte si poznámky k vydání. Na Linuxu nainstalujte nový binární soubor stejným způsobem a restartujte službu. Při provozu přes Docker spusťte docker compose pull a pak docker compose up -d. Databáze se při startu aktualizuje sama.",
+    "releaseLink": "Stáhnout nejnovější vydání",
+    "migrateTitle": "Přechod z node-go, node-php nebo node-ts",
+    "migrateP": "Vaše data, obrázky i nastavení přejdou s vámi. Průvodce migrací popisuje kroky pro každou dřívější edici.",
+    "migrateLink": "Přečíst průvodce migrací",
+    "p1Title": "3. Partner ho hostuje za vás",
+    "p1P": "Nechcete hostovat sami? Partneři mohou portál hostovat a spravovat za vás.",
+    "partnerLink": "Zobrazit partnery",
+    "fieldBased": "Sídlo",
+    "fieldLanguages": "Jazyky",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Export veškerého obsahu",
+    "fieldWebsite": "Web",
+    "listTitle": "Chcete být uvedeni jako poskytovatel?",
+    "listP": "Podmínky pro uvedení zde jsou pro všechny stejné:",
+    "listItems": [
+      "váš portál projde testem shody pro aktuální verzi",
+      "značka může exportovat všechna svá data a obrázky a odejít",
+      "své ceny a podmínky zveřejňujete na vlastním webu"
+    ],
+    "listHow": "Kompatibilita je zdarma; uvedení zde je součástí oficiálního partnerství.",
+    "costTitle": "Kolik to zhruba stojí",
+    "costItems": [
+      "Vlastní server v EU: zhruba 5 až 15 € měsíčně za malý server s automatickými zálohami u poskytovatele, jako je Hetzner. Fotografie na vlastním disku serveru nic navíc nestojí; objektové úložiště pro velký archiv přidá několik eur měsíčně za terabajt.",
+      "Partner: jeho vlastní cena. Zeptejte se, co zahrnuje: aktualizace, zálohy, vlastní doménu a export všech dat, pokud odejdete.",
+      "Váš vlastní čas: napoprvé počítejte s jednou až dvěma hodinami, včetně domény a zkušební obnovy zálohy, a pak zhruba s hodinou měsíčně na aktualizace a kontrolu záloh."
+    ],
+    "costNote": "Orientační ceny z listopadu 2026 bez DPH. Než se rozhodnete, ověřte si aktuální ceny poskytovatele.",
+    "firstTitle": "Po instalaci: první spuštění",
+    "first": [
+      "Otevřete adresu svého portálu v prohlížeči.",
+      "Zadejte jednorázový instalační kód. Najdete ho v logu při prvním spuštění (journalctl -u node-rs nebo docker compose logs node-rs), nebo ho předem nastavíte pomocí OBX_SETUP_CODE.",
+      "Vyplňte svou firmu a první značku a zvolte si vlastní heslo. Výchozí heslo nikdy neexistuje."
+    ],
+    "firstWhy": "Instalační kód zajistí, že si nikdo jiný čerstvě nainstalovaný portál nepřivlastní.",
+    "domainTitle": "Vlastní doména",
+    "domainP": "Použijte subdoménu jako prodejci.vaseznacka.cz nebo b2b.vaseznacka.cz. Prodejci pak vidí vaše jméno a adresa zůstane stejná, i když změníte hosting.",
+    "compareTitle": "Jeden portál, napsaný v jazyce Rust",
+    "compareP": "Existuje jeden referenční portál, node-rs. Ať běží kdekoli, má stejnou administraci i stejný portál pro prodejce, takže se můžete kdykoli přesunout z vlastního serveru na Docker nebo k partnerovi a zpět.",
+    "retireNote": "Dřívější edice node-go, node-php a node-ts postupně končí."
   },
   "retailers": {
     "h1": "Pro prodejce",
@@ -712,10 +670,9 @@
       "specifikace, schémata, testovací data",
       "Go SDK, nástroj obx, testy shody, mock server",
       "sdílené webové rozhraní: administrace a portál pro prodejce",
-      "Go: vlastní server, s instalátorem na jeden řádek",
-      "PHP: běžný webhosting",
-      "TypeScript: Cloudflare Workers"
+      "referenční portál, v jazyce Rust: Linux nebo Docker"
     ],
+    "implRef": "Referenční portál",
     "statusDraft": "0.3",
     "implP": "Stavíte vlastní implementaci nebo klienta? Dejte vědět přes issue nebo pull request; do tabulky se dostane, jakmile projde testy shody.",
     "docsTitle": "Dokumenty",
@@ -737,20 +694,12 @@
         "d": "Specifikace, schémata a testovací data"
       },
       {
+        "name": "node-rs",
+        "d": "Referenční portál v jazyce Rust"
+      },
+      {
         "name": "obx-go",
         "d": "Go SDK, nástroj obx a test shody"
-      },
-      {
-        "name": "node-ts",
-        "d": "Portál pro Cloudflare Workers"
-      },
-      {
-        "name": "node-go",
-        "d": "Portál pro vlastní server"
-      },
-      {
-        "name": "node-php",
-        "d": "Portál pro běžný webhosting"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Open source, na GitHubu.",
     "reposTitle": "Repozitáře",
-    "reposP": "Vše je open source na GitHubu: specifikace, sdílený kód a tři edice portálu.",
+    "reposP": "Vše je open source na GitHubu: specifikace, sdílený kód a referenční portál v jazyce Rust.",
     "newTitle": "Novinky ve verzi 0.3",
     "newItems": [
       "Materiály a pokyny k údržbě jsou kódy s názvy v angličtině, nizozemštině, němčině a francouzštině, ze sdílených slovníků zveřejněných na /vocabularies/v0.3/.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "Je to hotové?",
-        "a": "Ano, verze 0.3: specifikace, tři edice portálu a nástroje jsou vydané a volně k použití. Jsme na začátku: první značky se připojují právě teď."
+        "a": "Ano, verze 0.3: specifikace a nástroje jsou vydané a volně k použití a portál běží v jazyce Rust. Jsme na začátku: první značky se připojují právě teď."
       },
       {
         "q": "Kdo za tím stojí?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Licence",
-        "p": "Specifikace je pod licencí CC-BY-4.0. SDK, nástroj obx a sdílené webové rozhraní jsou pod licencí Apache-2.0. Tři edice portálu jsou pod licencí AGPL-3.0, takže jejich vylepšení zůstávají otevřená. Tento web nemá otevřenou licenci: k jeho kódu, designu a textům jsou vyhrazena všechna práva. Soubory ze specifikace, které web poskytuje, například schémata, šablony a příklady, si ponechávají licenci CC-BY-4.0."
+        "p": "Specifikace je pod licencí CC-BY-4.0. SDK, nástroj obx a sdílené webové rozhraní jsou pod licencí Apache-2.0. Portál node-rs je pod licencí AGPL-3.0, takže jeho vylepšení zůstávají otevřená. Tento web nemá otevřenou licenci: k jeho kódu, designu a textům jsou vyhrazena všechna práva. Soubory ze specifikace, které web poskytuje, například schémata, šablony a příklady, si ponechávají licenci CC-BY-4.0."
       }
     ],
     "nameTitle": "O názvu",
@@ -1036,7 +985,7 @@
       "Nahrajte export z Excelu a fotografie ručně, nebo je nechte převzít každou noc",
       "Automatické doručování z vašeho PIM, ERP nebo sdílené složky",
       "Žádosti o přístup, pozvánky a API klíče pro software vašich prodejců",
-      "Tři edice: vlastní server, Cloudflare Workers a běžný webhosting"
+      "Jeden portál v jazyce Rust: na vlastním linuxovém serveru nebo přes Docker"
     ],
     "brandsComing": [
       "První veřejné vydání s instalací na jedno kliknutí",
@@ -1098,8 +1047,8 @@
           "l": "standard, volně pro každého"
         },
         {
-          "v": "3",
-          "l": "edice portálu"
+          "v": "72",
+          "l": "automatických testů shody"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Provozujte, kde chcete. Plaťte jen hosting.",
-      "editionsLead": "Tři edice téhož portálu pro prodejce. Fungují stejně, takže můžete kdykoli přejít z jedné na druhou.",
+      "editionsLead": "OBX běží v jazyce Rust: jeden portál pro prodejce, který hostujete na vlastním linuxovém serveru nebo přes Docker, nebo který za vás hostuje partner. Kdykoli se můžete přestěhovat.",
       "editionsLink": "Porovnat možnosti hostingu",
       "editionFields": [
         "Běží na",
@@ -1197,27 +1146,18 @@
           "name": "Vlastní server",
           "runs": "Jakýkoli linuxový server (VPS), například u Hetzneru, DigitalOcean, TransIP nebo Scaleway",
           "need": "Server, doménové jméno a přístup přes SSH",
-          "setup": "Jeden příkaz, pak průvodce nastavením",
+          "setup": "Nainstalujte program a Caddy, pak průvodce nastavením",
           "cost": "Zhruba 5 až 15 € měsíčně za malý server se zálohami",
           "cta": "Nainstalovat na vlastní server"
         },
         {
-          "tag": "Bez serveru",
-          "name": "Cloudflare Workers",
-          "runs": "Váš vlastní účet Cloudflare, s D1 jako databází a R2 pro obrázky",
-          "need": "Účet Cloudflare s tarifem Workers Paid",
-          "setup": "Jedno kliknutí, pak průvodce nastavením",
-          "cost": "5 dolarů měsíčně plus úložiště",
-          "cta": "Nastavit na Cloudflare"
-        },
-        {
-          "tag": "Bez příkazů",
-          "name": "Běžný webhosting",
-          "runs": "Evropský webhosting s PHP a databází, například TransIP, Strato nebo OVHcloud",
-          "need": "Program pro FTP",
-          "setup": "Nahrajte ZIP, pak spusťte instalátor",
-          "cost": "Hosting, který už platíte (PHP 8.2 nebo novější)",
-          "cta": "Nainstalovat na webhosting"
+          "tag": "Kontejnery",
+          "name": "Docker",
+          "runs": "Jakýkoli server, na kterém běží Docker a Docker Compose",
+          "need": "Docker, doménové jméno a přístup přes SSH",
+          "setup": "Jeden soubor compose, pak průvodce nastavením",
+          "cost": "Zhruba 5 až 15 € měsíčně za malý server se zálohami",
+          "cta": "Spustit přes Docker"
         },
         {
           "tag": "Nejjednodušší",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Váš portál pro prodejce, na otevřeném standardu.",
       "retailersSoftware": "Pro váš software",
-      "hostingEditions": "Tři edice"
+      "hostingEditions": "Způsoby provozu"
     }
   },
   "partners": {

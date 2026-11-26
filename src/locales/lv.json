@@ -14,15 +14,12 @@
     "footerMore": "Vairāk",
     "footerSource": "Pirmkods un specifikācija",
     "footerLicence": "© 2026 {foundation}. Visas tiesības aizsargātas. Specifikācijai ir CC-BY-4.0 licence.",
-    "editionCloudflare": "Portāls Cloudflare",
-    "editionHosting": "Portāls tīmekļa mitināšanai",
     "yes": "Jā",
     "inDevelopment": "Izstrādē",
     "available": "Pieejams",
     "footerContact": "Kontakti",
     "madeInEu": "Ražots ES",
-    "footerDiscuss": "Pievienojieties diskusijai",
-    "editionServer": "Portāls savam serverim"
+    "footerDiscuss": "Pievienojieties diskusijai"
   },
   "nav": {
     "brands": "Zīmoliem",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Mitināšana",
-      "description": "Jūsu attēlu portāls, kur vien vēlaties: jūsu serverī ar vienu komandu, Cloudflare Workers, parastā tīmekļa mitināšanā vai partnera mitināts."
+      "description": "Jūsu attēlu portāls, kur vien vēlaties: Rust portāls jūsu Linux serverī vai ar Docker, vai partnera mitināts."
     },
     "retailers": {
       "title": "Tirgotājiem",
@@ -361,7 +358,6 @@
     "httpProduct": "Prece (piemēram, kad tā mainās PIM)",
     "httpVariant": "Krāsa un izmērs ar EAN",
     "httpImage": "Fotoattēls: vispirms dati, tad pats fails",
-    "httpImageNote": "Portāls Cloudflare pats neveido fotoattēlu tīmekļa versijas. Publicējiet tur ar obx vai ar “Importi” administrācijā: tie tās izveido jūsu vietā. Citādi saņemti fotoattēli, piemēram, no ieplānota importa, līdz tam tiek rādīti oriģinālajā izmērā.",
     "httpOffline": "Kaut kā atsaukšana",
     "httpHooks": "Vēlaties paziņojumu, kad kaut kas notiek? Pārvaldībā pievienojiet paziņojumu (webhook) par pabeigtu importu vai jaunu piekļuves pieprasījumu un ļaujiet tam palaist trigeri n8n, Make vai Zapier.",
     "apiTitle": "6. Tieši API (izstrādātājiem)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Mitināšana",
-    "lead": "Katram zīmolam ir savs attēlu portāls. Uzstādiet to savā serverī ar vienu komandu, darbiniet Cloudflare Workers, augšupielādējiet parastā tīmekļa mitināšanā vai ļaujiet to mitināt partnerim.",
-    "p1Title": "4. Partneris to mitina jūsu vietā",
-    "p1P": "Nevēlaties mitināt paši? Partneri var mitināt un uzturēt portālu jūsu vietā.",
-    "fieldBased": "Atrašanās vieta",
-    "fieldLanguages": "Valodas",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "Visa satura eksports",
-    "fieldWebsite": "Tīmekļa vietne",
-    "listTitle": "Vēlaties būt šeit kā pakalpojumu sniedzējs?",
-    "listP": "Nosacījumi, lai šeit tiktu norādīti, visiem ir vienādi:",
-    "listItems": [
-      "jūsu portāls iztur pašreizējās versijas atbilstības testu",
-      "zīmols var eksportēt visus savus datus un fotoattēlus un aiziet",
-      "savas cenas un nosacījumus publicējat savā vietnē"
-    ],
-    "listHow": "Būt saderīgam ir bez maksas; vieta šajā sarakstā ir daļa no oficiālās partnerības.",
-    "cfP": "Darbojas ar Cloudflare Workers, ar D1 kā datubāzi un R2 attēliem. Noklikšķiniet uz pogas, pierakstieties Cloudflare un sekojiet soļiem. Ikdienā lietotam portālam vajadzīgs plāns Workers Paid (5 dolāri mēnesī); bezmaksas plāns der tikai, lai apskatītos. Jūsu fotoattēlu tīmekļa versijas izveido jūsu pārlūks un rīks obx.",
-    "cfButton": "Instalēt Cloudflare",
-    "phpP": "Tīmekļa mitināšanai, kas jums, iespējams, jau ir, ar PHP un datubāzi. Komandas nav vajadzīgas:",
-    "phpSteps": [
-      "Lejupielādējiet obx-portal-php-<version>.zip no jaunākā laidiena.",
-      "Atarhivējiet to un augšupielādējiet mapi mitināšanā ar (S)FTP.",
-      "Novirziet savu (apakš)domēnu, piemēram, tirgotaji.jusuzimols.lv, uz mapi public.",
-      "Padariet mapes data un config rakstāmas (atļaujas 775; ja instalētājs joprojām saka, ka nav, 777).",
-      "Atveriet šo adresi. Instalētājs pārbauda serveri un prasa instalēšanas kodu no faila data/SETUP-CODE.txt, ko atverat ar FTP programmu. Pēc tam noklikšķiniet uz „Atvērt iestatīšanas vedni“.",
-      "Instalētāja parādīto cron adresi pievienojiet kā cron uzdevumu hostinga vadības panelī, ik pēc 5 minūtēm. Portāls darbojas arī bez tā."
-    ],
-    "phpDownload": "Lejupielādēt jaunāko laidienu",
-    "firstTitle": "Pēc instalēšanas: pirmā palaišana",
-    "first": [
-      "Atveriet sava portāla adresi pārlūkā.",
-      "Ievadiet vienreizējo instalēšanas kodu. Instalētājs jūsu serverī to parāda beigās. Citādi tas ir žurnālā pirmajā palaišanas reizē (Portāls tīmekļa mitināšanai: failā data/SETUP-CODE.txt, un instalētājs to aizpilda jūsu vietā), vai arī iestatāt to iepriekš ar OBX_SETUP_CODE.",
-      "Ievadiet savu uzņēmumu un pirmo zīmolu un izvēlieties savu paroli. Noklusējuma paroles nekad nav."
-    ],
-    "firstWhy": "Iestatīšanas kods nodrošina, ka neviens cits nevar pārņemt tikko instalētu portālu.",
-    "domainTitle": "Savs domēns",
-    "domainP": "Izmantojiet apakšdomēnu, piemēram, tirgotaji.jusuzimols.lv vai b2b.jusuzimols.lv. Tirgotāji tad redz jūsu vārdu, un adrese paliek tā pati arī pēc mitināšanas maiņas.",
-    "compareTitle": "Trīs izdevumi, viens portāls",
-    "compareP": "Trīs izdevumi dara to pašu, un tiem ir viena un tā pati pārvaldība un tirgotāju portāls. Izvēlieties to, kas atbilst jūsu mitināšanai; mainīt var vēlāk.",
-    "compareLink": "Apskatīt implementācijas",
+    "lead": "Katram zīmolam ir savs attēlu portāls. OBX ir rakstīts Rust valodā: uzstādiet to savā Linux serverī vai ar Docker, vai ļaujiet to mitināt partnerim.",
     "heroTitle": "Jūsu attēlu portāls, kur vien vēlaties.",
-    "heroLead": "Programmatūra ir bez maksas. Vienkāršākais ceļš ir neliels savs serveris un viena komanda. Pārcelties varat jebkurā laikā.",
+    "heroLead": "Programmatūra ir bez maksas un rakstīta Rust valodā. Vienkāršākais ceļš ir neliels savs serveris, kā pakalpojums vai ar Docker. Pārcelties varat jebkurā laikā.",
     "heroChecks": [
       "Bezmaksas programmatūra, maksājat tikai par mitināšanu",
-      "Viena komanda uzstāda portālu ar HTTPS",
+      "Viena programma Rust valodā ar automātisku HTTPS caur Caddy",
       "Visur tas pats portāls, tāpēc vienmēr varat pāriet",
       "Nevēlaties paši? Partneris to mitina jūsu vietā"
     ],
-    "webTitle": "3. Parasta tīmekļa mitināšana",
-    "webP": "PHP versija darbojas parastā Eiropas tīmekļa mitināšanā ar PHP un datubāzi, piemēram, pie TransIP, Strato vai OVHcloud. Komandas nav vajadzīgas:",
-    "partnerLink": "Skatīt partnerus",
-    "techTitle": "Tehniskā informācija jūsu IT komandai",
-    "techLead": "Instalētāja opcijas, faili, rezerves kopijas un atjauninājumi tam, kas iestata serveri.",
-    "costTitle": "Aptuvenās izmaksas",
-    "costItems": [
-      "Savs serveris ES: aptuveni 5–15 € mēnesī par nelielu serveri ar automātiskām rezerves kopijām, piemēram, pie Hetzner. Fotoattēli servera paša diskā neko papildus nemaksā; objektu krātuve lielam arhīvam pievieno dažus eiro mēnesī par terabaitu.",
-      "Parasta tīmekļa mitināšana: pakete, par kuru jau maksājat, ja tajā ir PHP 8.2 vai jaunāka versija.",
-      "Cloudflare Workers: 5 dolāri mēnesī par Workers Paid, plus R2 krātuve aptuveni 1,50 dolāri mēnesī par 100 GB fotoattēlu. Maksas par lejupielādēm nav.",
-      "Partneris: partnera paša cena. Pajautājiet, kas tajā ietilpst: atjauninājumi, rezerves kopijas, savs domēns un visa satura eksports, ja aiziesiet.",
-      "Jūsu laiks: pirmajā reizē rēķinieties ar vienu līdz divām stundām, ieskaitot domēnu un rezerves kopijas izmēģinājuma atjaunošanu, un ar aptuveni stundu mēnesī atjauninājumiem un rezerves kopiju pārbaudei."
-    ],
-    "costNote": "Orientējošas cenas 2026. gada novembrī, bez PVN. Pirms izvēles pārbaudiet pakalpojumu sniedzēja pašreizējās cenas.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "Go versija pati pieprasa Let's Encrypt sertifikātu, tiklīdz jūsu domēns norāda uz serveri, automātiski to atjauno un novirza http uz https. TypeScript versija dara to pašu ar Caddy, ko uzstāda instalētājs. Nav sertifikāta? Ar dig pārbaudiet, vai domēns rāda servera adresi un vai porti 80 un 443 ir atvērti.",
-    "backupTitle": "Rezerves kopijas",
-    "backupP": "Ieslēdziet pakalpojumu sniedzēja servera rezerves kopijas un pievienojiet nakts portāla rezerves kopiju, ko nokopējat arī ārpus servera. Slepeno atslēgu glabājiet atsevišķi, paroļu pārvaldniekā: tā ir OBX_SECRET_KEY iestatījumu failā vai secret.key datu mapē. Bez tās rezerves kopiju nevar pilnībā atjaunot. Vienreiz izmēģiniet atjaunošanu, lai zinātu, ka tā darbojas.",
-    "updateTitle": "Atjauninājumi",
-    "updateP": "Izveidojiet rezerves kopiju un izlasiet laidiena piezīmes. Pēc tam vēlreiz palaidiet to pašu instalēšanas komandu: tā uzstāda jaunāko laidienu, saglabā jūsu iestatījumus un datus un restartē portālu. Datubāze atjauninās pati startēšanas laikā.",
-    "cfCliP": "Vai no sava datora, ar Bun un rīku Wrangler:",
-    "cfBackupP": "Rezerves kopijas: ar Workers Paid D1 glabā datubāzes vēsturi 30 dienas (Time Travel). Lai kopija būtu arī ārpus Cloudflare, regulāri eksportējiet datubāzi. Attēli atrodas R2; nokopējiet bucket ar jebkuru S3 rīku.",
-    "cfUpdateP": "Atjauninājumi: sapludiniet jauno laidienu ar savu repozitorija kopiju un veiciet push; Cloudflare to izvieto vēlreiz.",
     "installCta": "Uzstādīt savā serverī",
     "exampleDomain": "portal.jusuzimols.lv",
     "ownTitle": "1. Savs serveris (ieteicams)",
-    "ownP": "Nomājiet nelielu Linux serveri, novirziet uz to savu domēnu un palaidiet vienu komandu. Instalētājs lejupielādē portālu, saņem bezmaksas HTTPS sertifikātu no Let's Encrypt un palaiž portālu kā pakalpojumu, kas pēc restartēšanas atsāk darbu pats.",
+    "ownP": "Nomājiet nelielu Linux serveri (jebkuru VPS, x86_64 vai arm64), novirziet uz to savu domēnu un uzstādiet portālu kā pakalpojumu ar Caddy priekšā automātiskam HTTPS. Pēc restartēšanas pakalpojums atsāk darbu pats.",
     "needTitle": "Kas jums vajadzīgs",
     "needItems": [
       "Linux serveris (VPS) ar Ubuntu 22.04 vai 24.04, Debian 12 vai 13 vai līdzīgu sistēmu. Sākumam pietiek ar 1 GB atmiņas. Der jebkurš pakalpojumu sniedzējs, piemēram, Hetzner Cloud, DigitalOcean, TransIP VPS vai Scaleway.",
       "Publiska IPv4 adrese (IPv6 nav obligāta) ar atvērtiem portiem 80 un 443.",
       "Domēns vai apakšdomēns portālam, piemēram, portal.jusuzimols.lv."
     ],
-    "ownStepsTitle": "Trīs soļi",
+    "ownStepsTitle": "Pieci soļi",
     "ownSteps": [
-      "Izveidojiet serveri un pierakstiet tā IP adresi.",
-      "Ar vienu DNS ierakstu novirziet portal.jusuzimols.lv uz serveri (skatīt zemāk).",
-      "Pieslēdzieties serverim ar SSH un palaidiet šo komandu ar savu adresi:"
+      "Ar A ierakstu novirziet {domain} uz serveri (skatīt zemāk).",
+      "Lejupielādējiet savam serverim atbilstošo node-rs no jaunākā laidiena un uzstādiet to ar sudo install node-rs /usr/local/bin/.",
+      "Uzstādiet systemd vienību deploy/node-rs.service no repozitorija. Tā darbina portālu kā lietotājs node-rs, glabā datus mapē /var/lib/node-rs un iestata OBX_PUBLIC_URL uz https://{domain}.",
+      "Uzstādiet Caddy un iedodiet tam zemāk redzamo īso Caddyfile. Tas jūsu vietā iegūst HTTPS sertifikātu un nodod apmeklētājus tālāk portālam.",
+      "Atveriet https://{domain} un ievadiet vienreizējo instalēšanas kodu no journalctl -u node-rs."
     ],
-    "ownDone": "Kad darbs ir pabeigts, instalētājs parāda jūsu portāla adresi un vienreizēju instalēšanas kodu. Atveriet adresi, ievadiet kodu un izejiet cauri iestatīšanas vednim. Lai vēlāk atjauninātu, palaidiet to pašu komandu vēlreiz: jūsu iestatījumi un dati paliek.",
-    "ownTs": "Tā tiek uzstādīta Go versija, Portāls savam serverim. TypeScript versijai tai pašai komandai pievienojiet --edition ts.",
     "ownEu": "Izvēlieties datu centru ES, un jūsu katalogs, attēli un datubāze paliek ES.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "Jau lietojat Docker? Viens compose fails palaiž portālu (konteinera attēlu ghcr.io/openbrandexchange/node-rs) kopā ar Caddy HTTPS nodrošināšanai. Vispirms novirziet savu domēnu uz serveri (skatīt DNS zemāk), tad palaidiet:",
+    "dockerDone": "Pēc tam atveriet https://{domain} un ievadiet vienreizējo instalēšanas kodu no docker compose logs node-rs.",
     "dnsTitle": "DNS: novirziet domēnu uz serveri",
     "dnsP": "Pievienojiet vienu ierakstu uzņēmumā, kas pārvalda jūsu domēnu:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Pārbaudiet",
     "dnsCheckP": "Jūsu datorā tam jāparāda servera adrese (vai izmantojiet tiešsaistes DNS pārbaudes rīku, piemēram, dnschecker.org):",
-    "dnsWait": "Parasti tas aizņem 5 līdz 60 minūtes, dažreiz dažas stundas. Instalētājs to arī pārbauda un pasaka, kas vēl trūkst.",
-    "optionsTitle": "Instalētāja opcijas",
-    "options": [
-      "portāla adrese, piemēram, portal.jusuzimols.lv (obligāta)",
-      "e-pasta adrese Let's Encrypt vajadzībām (nav obligāta)",
-      "konkrēts laidiens jaunākā vietā",
-      "go (noklusējums) uzstāda Go versiju; ts uzstāda TypeScript versiju",
-      "bez sava HTTPS: portāls klausās 127.0.0.1:8080 aiz jūsu starpniekservera",
-      "tikai parāda, ko tas darītu, neko nemainot",
-      "noņem programmu un pakalpojumu; jūsu dati un iestatījumi paliek (pievienojiet --purge, lai dzēstu arī tos)"
-    ],
-    "checksP": "Pirms kaut ko maina, instalētājs pārbauda sistēmu (Linux amd64 vai arm64 ar systemd), root tiesības, vietu diskā, vai domēns norāda uz šo serveri, vai porti 80 un 443 ir brīvi, un ugunsmūri. Ar ufw vai firewalld tas izdrukā precīzu komandu portu 80 un 443 atvēršanai.",
-    "filesTitle": "Kur kas atrodas",
-    "filesHead": [
-      "Kas",
-      "Go versija",
-      "TypeScript versija"
-    ],
-    "filesRows": [
-      "Programma",
-      "Dati",
-      "Iestatījumi",
-      "Pakalpojums"
-    ],
+    "dnsWait": "Parasti tas aizņem 5 līdz 60 minūtes, dažreiz dažas stundas. Caddy iegūst sertifikātu, tiklīdz domēns norāda uz serveri.",
+    "techTitle": "Tehniskā informācija jūsu IT komandai",
+    "techLead": "Krātuve, iestatījumi, rezerves kopijas un atjauninājumi tam, kas iestata serveri.",
+    "storageTitle": "Krātuve un iestatījumi",
+    "storageP": "Portāls izmanto SQLite: viens fails, bez datubāzes servera. Attēli tiek glabāti servera diskā vai jebkurā ar S3 saderīgā bucket (OBX_BLOB_URL). Katrs iestatījums ir OBX_* vides mainīgais ar tādiem pašiem nosaukumiem kā izdevumā node-go.",
     "commandsTitle": "Noderīgas komandas",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "Nav servera, ko uzturēt: portāls darbojas jūsu pašu Cloudflare kontā. Noklikšķiniet uz pogas, pierakstieties un sekojiet soļiem.",
-    "cfDnsTitle": "DNS: savs domēns Worker lietotnei",
-    "cfDnsP": "Pievienojiet adresi kā savu domēnu Worker lietotnei: Workers & Pages → jūsu Worker → Settings → Domains & Routes → Add → Custom domain. Ja jūsu domēns jau ir Cloudflare, DNS un sertifikāts tiek iestatīti automātiski. Ja nav, vispirms pārceliet domēna DNS uz Cloudflare (bez maksas; domēns paliek reģistrēts tur, kur tas ir), pēc tam pievienojiet savu domēnu. Pēc tam iestatiet OBX_PUBLIC_URL uz šo adresi un izvietojiet vēlreiz.",
-    "webDnsTitle": "DNS: apakšdomēns vadības panelī",
-    "webDnsP": "Izveidojiet apakšdomēnu savas mitināšanas vadības panelī (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain vai Subdomains; Plesk: Websites & Domains → Add Subdomain). Ja jūsu domēna DNS ir pie tā paša mitināšanas uzņēmuma, ar to pietiek. Citādi pievienojiet apakšdomēnam A ierakstu, kas norāda uz mitināšanas servera IP adresi, ko rāda panelis. Pēc tam panelī ieslēdziet Let's Encrypt apakšdomēnam."
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy pieprasa Let's Encrypt sertifikātu, tiklīdz jūsu domēns norāda uz serveri, automātiski to atjauno un novirza http uz https. Nav sertifikāta? Ar dig pārbaudiet, vai domēns rāda servera adresi un vai porti 80 un 443 ir atvērti.",
+    "backupTitle": "Rezerves kopijas",
+    "backupP": "Ieslēdziet pakalpojumu sniedzēja servera rezerves kopijas un katru nakti glabājiet šifrētu portāla kopiju pie cita pakalpojumu sniedzēja vai citā reģionā. Katru ceturksni izmēģiniet atjaunošanu, lai zinātu, ka tā darbojas.",
+    "backupLink": "Rezerves kopija ārpus servera",
+    "updateTitle": "Atjauninājumi",
+    "updateP": "Izveidojiet rezerves kopiju un izlasiet laidiena piezīmes. Linux serverī uzstādiet jauno bināro failu tāpat un restartējiet pakalpojumu. Ar Docker palaidiet docker compose pull un pēc tam docker compose up -d. Datubāze atjauninās pati startēšanas laikā.",
+    "releaseLink": "Lejupielādēt jaunāko laidienu",
+    "migrateTitle": "Pāreja no node-go, node-php vai node-ts",
+    "migrateP": "Jūsu dati, attēli un iestatījumi tiek pārnesti līdzi. Migrācijas ceļvedī ir soļi katram iepriekšējam izdevumam.",
+    "migrateLink": "Lasīt migrācijas ceļvedi",
+    "p1Title": "3. Partneris to mitina jūsu vietā",
+    "p1P": "Nevēlaties mitināt paši? Partneri var mitināt un uzturēt portālu jūsu vietā.",
+    "partnerLink": "Skatīt partnerus",
+    "fieldBased": "Atrašanās vieta",
+    "fieldLanguages": "Valodas",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Visa satura eksports",
+    "fieldWebsite": "Tīmekļa vietne",
+    "listTitle": "Vēlaties būt šeit kā pakalpojumu sniedzējs?",
+    "listP": "Nosacījumi, lai šeit tiktu norādīti, visiem ir vienādi:",
+    "listItems": [
+      "jūsu portāls iztur pašreizējās versijas atbilstības testu",
+      "zīmols var eksportēt visus savus datus un fotoattēlus un aiziet",
+      "savas cenas un nosacījumus publicējat savā vietnē"
+    ],
+    "listHow": "Būt saderīgam ir bez maksas; vieta šajā sarakstā ir daļa no oficiālās partnerības.",
+    "costTitle": "Aptuvenās izmaksas",
+    "costItems": [
+      "Savs serveris ES: aptuveni 5–15 € mēnesī par nelielu serveri ar automātiskām rezerves kopijām, piemēram, pie Hetzner. Fotoattēli servera paša diskā neko papildus nemaksā; objektu krātuve lielam arhīvam pievieno dažus eiro mēnesī par terabaitu.",
+      "Partneris: partnera paša cena. Pajautājiet, kas tajā ietilpst: atjauninājumi, rezerves kopijas, savs domēns un visa satura eksports, ja aiziesiet.",
+      "Jūsu laiks: pirmajā reizē rēķinieties ar vienu līdz divām stundām, ieskaitot domēnu un rezerves kopijas izmēģinājuma atjaunošanu, un ar aptuveni stundu mēnesī atjauninājumiem un rezerves kopiju pārbaudei."
+    ],
+    "costNote": "Orientējošas cenas 2026. gada novembrī, bez PVN. Pirms izvēles pārbaudiet pakalpojumu sniedzēja pašreizējās cenas.",
+    "firstTitle": "Pēc instalēšanas: pirmā palaišana",
+    "first": [
+      "Atveriet sava portāla adresi pārlūkā.",
+      "Ievadiet vienreizējo instalēšanas kodu. Tas ir žurnālā pirmajā palaišanas reizē (journalctl -u node-rs vai docker compose logs node-rs), vai arī iestatāt to iepriekš ar OBX_SETUP_CODE.",
+      "Ievadiet savu uzņēmumu un pirmo zīmolu un izvēlieties savu paroli. Noklusējuma paroles nekad nav."
+    ],
+    "firstWhy": "Iestatīšanas kods nodrošina, ka neviens cits nevar pārņemt tikko instalētu portālu.",
+    "domainTitle": "Savs domēns",
+    "domainP": "Izmantojiet apakšdomēnu, piemēram, tirgotaji.jusuzimols.lv vai b2b.jusuzimols.lv. Tirgotāji tad redz jūsu vārdu, un adrese paliek tā pati arī pēc mitināšanas maiņas.",
+    "compareTitle": "Viens portāls, rakstīts Rust valodā",
+    "compareP": "Ir viens atsauces portāls, node-rs. Tam ir viena un tā pati pārvaldība un tirgotāju portāls, lai kur tas darbotos, tāpēc jebkurā laikā varat pāriet starp savu serveri, Docker un partneri.",
+    "retireNote": "Iepriekšējo izdevumu node-go, node-php un node-ts darbība tiek pakāpeniski izbeigta."
   },
   "retailers": {
     "h1": "Tirgotājiem",
@@ -712,10 +670,9 @@
       "specifikācija, shēmas, testa dati",
       "Go SDK, rīks obx, atbilstības testi, imitācijas serveris",
       "kopīgā tīmekļa saskarne: pārvaldība un tirgotāju portāls",
-      "Go: savs serveris ar vienas rindas instalētāju",
-      "PHP: parasta tīmekļa mitināšana",
-      "TypeScript: Cloudflare Workers"
+      "atsauces portāls Rust valodā: Linux vai Docker"
     ],
+    "implRef": "Atsauces portāls",
     "statusDraft": "0.3",
     "implP": "Veidojat savu implementāciju vai klientu? Paziņojiet ar issue vai pull request; tā nonāks šajā tabulā, tiklīdz izturēs atbilstības testus.",
     "docsTitle": "Dokumenti",
@@ -737,20 +694,12 @@
         "d": "Specifikācija, shēmas un testa dati"
       },
       {
+        "name": "node-rs",
+        "d": "Atsauces portāls Rust valodā"
+      },
+      {
         "name": "obx-go",
         "d": "Go SDK, rīks obx un atbilstības tests"
-      },
-      {
-        "name": "node-ts",
-        "d": "Portāls Cloudflare Workers"
-      },
-      {
-        "name": "node-go",
-        "d": "Portāls savam serverim"
-      },
-      {
-        "name": "node-php",
-        "d": "Portāls parastai tīmekļa mitināšanai"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Atvērtais kods, GitHub.",
     "reposTitle": "Repozitoriji",
-    "reposP": "Viss ir atvērtā koda GitHub: specifikācija, kopīgais kods un trīs portāla izdevumi.",
+    "reposP": "Viss ir atvērtā koda GitHub: specifikācija, kopīgais kods un atsauces portāls Rust valodā.",
     "newTitle": "Jaunumi versijā 0.3",
     "newItems": [
       "Materiāli un kopšana ir kodi ar nosaukumiem angļu, nīderlandiešu, vācu un franču valodā. Tie nāk no kopīgām vārdnīcām, kas publicētas /vocabularies/v0.3/.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "Vai tas ir gatavs?",
-        "a": "Jā, versija 0.3: specifikācija, trīs portāla izdevumi un rīki ir izlaisti un brīvi izmantojami. Esam pašā sākumā: pirmie zīmoli pievienojas tagad."
+        "a": "Jā, versija 0.3: specifikācija un rīki ir izlaisti un brīvi izmantojami, un portāls ir rakstīts Rust valodā. Esam pašā sākumā: pirmie zīmoli pievienojas tagad."
       },
       {
         "q": "Kas ir aiz tā?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Licences",
-        "p": "Specifikācijai ir CC-BY-4.0 licence. SDK, rīkam obx un kopīgajai tīmekļa saskarnei ir Apache-2.0 licence. Trīs portāla izdevumiem ir AGPL-3.0 licence, lai uzlabojumi paliktu atvērti. Šai vietnei nav atvērtas licences: tās kods, dizains un teksti ir aizsargāti, visas tiesības paturētas. Specifikācijas failiem, ko vietne piedāvā, piemēram, shēmām, veidnēm un piemēriem, saglabājas CC-BY-4.0 licence."
+        "p": "Specifikācijai ir CC-BY-4.0 licence. SDK, rīkam obx un kopīgajai tīmekļa saskarnei ir Apache-2.0 licence. Portālam node-rs ir AGPL-3.0 licence, lai uzlabojumi paliktu atvērti. Šai vietnei nav atvērtas licences: tās kods, dizains un teksti ir aizsargāti, visas tiesības paturētas. Specifikācijas failiem, ko vietne piedāvā, piemēram, shēmām, veidnēm un piemēriem, saglabājas CC-BY-4.0 licence."
       }
     ],
     "nameTitle": "Par nosaukumu",
@@ -1036,7 +985,7 @@
       "Augšupielādējiet Excel eksportu un fotoattēlus manuāli vai ļaujiet tos paņemt katru nakti",
       "Automātiska piegāde no jūsu PIM, ERP vai koplietotas mapes",
       "Piekļuves pieprasījumi, uzaicinājumi un API atslēgas jūsu tirgotāju programmatūrai",
-      "Trīs versijas: savs serveris, Cloudflare Workers un parasta tīmekļa mitināšana"
+      "Viens portāls Rust valodā: savā Linux serverī vai ar Docker"
     ],
     "brandsComing": [
       "Pirmais publiskais laidiens ar instalēšanu vienā klikšķī",
@@ -1098,8 +1047,8 @@
           "l": "standarts, brīvi pieejams ikvienam"
         },
         {
-          "v": "3",
-          "l": "portāla izdevumi"
+          "v": "72",
+          "l": "automatizētas atbilstības pārbaudes"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Mitināšana",
       "editionsTitle": "Kur vēlaties. Maksājiet tikai par mitināšanu.",
-      "editionsLead": "Trīs viena un tā paša attēlu portāla izdevumi. Tie darbojas vienādi, tāpēc jebkurā laikā varat pāriet no viena uz otru.",
+      "editionsLead": "OBX ir rakstīts Rust valodā: viens attēlu portāls, ko mitināt savā Linux serverī vai ar Docker, vai ko partneris mitina jūsu vietā. Pārcelties varat jebkurā laikā.",
       "editionsLink": "Salīdziniet mitināšanas iespējas",
       "editionFields": [
         "Darbojas",
@@ -1197,27 +1146,18 @@
           "name": "Savs serveris",
           "runs": "Jebkurš Linux serveris (VPS), piemēram, pie Hetzner, DigitalOcean, TransIP vai Scaleway",
           "need": "Serveri, domēna vārdu un SSH piekļuvi",
-          "setup": "Viena komanda, tad iestatīšanas vednis",
+          "setup": "Uzstādiet programmu un Caddy, tad iestatīšanas vednis",
           "cost": "Aptuveni 5–15 € mēnesī par nelielu serveri ar rezerves kopijām",
           "cta": "Uzstādīt savā serverī"
         },
         {
-          "tag": "Bez servera",
-          "name": "Cloudflare Workers",
-          "runs": "Jūsu pašu Cloudflare konts ar D1 kā datubāzi un R2 attēliem",
-          "need": "Cloudflare kontu ar Workers Paid plānu",
-          "setup": "Viens klikšķis, tad iestatīšanas vednis",
-          "cost": "5 dolāri mēnesī plus krātuve",
-          "cta": "Uzstādīt Cloudflare"
-        },
-        {
-          "tag": "Bez komandām",
-          "name": "Parasta tīmekļa mitināšana",
-          "runs": "Eiropas tīmekļa mitināšana ar PHP un datubāzi, piemēram, TransIP, Strato vai OVHcloud",
-          "need": "FTP programmu",
-          "setup": "Augšupielādējiet zip, tad instalētājs",
-          "cost": "Mitināšana, par kuru jau maksājat (PHP 8.2 vai jaunāka)",
-          "cta": "Uzstādīt tīmekļa mitināšanā"
+          "tag": "Konteineri",
+          "name": "Docker",
+          "runs": "Jebkurš serveris ar Docker un Docker Compose",
+          "need": "Docker, domēna vārdu un SSH piekļuvi",
+          "setup": "Viens compose fails, tad iestatīšanas vednis",
+          "cost": "Aptuveni 5–15 € mēnesī par nelielu serveri ar rezerves kopijām",
+          "cta": "Sākt ar Docker"
         },
         {
           "tag": "Visvieglāk",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Jūsu attēlu portāls, balstīts uz atvērto standartu.",
       "retailersSoftware": "Jūsu programmatūrai",
-      "hostingEditions": "Trīs izdevumi"
+      "hostingEditions": "Darbināšanas veidi"
     }
   },
   "partners": {

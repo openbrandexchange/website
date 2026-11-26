@@ -5,7 +5,7 @@ import DocSection from '../components/DocSection.astro';
 import Editions from '../components/Editions.astro';
 import Providers from '../components/Providers.astro';
 import Icon from '../components/Icon.astro';
-import { messages, repo, url, type Lang } from '../i18n';
+import { format, messages, url, type Lang } from '../i18n';
 import * as s from '../data/snippets';
 
 interface Props {
@@ -15,6 +15,7 @@ const { lang } = Astro.props;
 const t = messages[lang];
 const c = t.hosting;
 const domain = c.exampleDomain;
+const withDomain = (text: string) => format(text, { domain });
 // The click paths in c.dnsPaths follow this order.
 const dnsProviders = ['TransIP', 'Hostnet', 'Strato', 'one.com', 'Cloudflare DNS', 'GoDaddy'];
 ---
@@ -43,14 +44,19 @@ const dnsProviders = ['TransIP', 'Hostnet', 'Strato', 'one.com', 'Cloudflare DNS
       <h3>{c.needTitle}</h3>
       <ul>{c.needItems.map((item) => <li>{item}</li>)}</ul>
       <h3>{c.ownStepsTitle}</h3>
-      <ol>{c.ownSteps.map((st) => <li>{st}</li>)}</ol>
-      <Code code={s.installCmd(domain)} />
-      <p>{c.ownDone}</p>
-      <p class="small">{c.ownTs}</p>
+      <ol>{c.ownSteps.map((st) => <li>{withDomain(st)}</li>)}</ol>
+      <Code code={s.linuxInstall(domain)} />
+      <p class="small"><a href={s.NODE_RS_RELEASES}>{c.releaseLink}</a> · <a href="https://github.com/openbrandexchange/node-rs">openbrandexchange/node-rs</a></p>
       <p class="note">{c.ownEu}</p>
       <p class="actions">
         <a class="link-arrow" href="#technical">{c.techTitle} <Icon name="arrow" class="arrow" /></a>
       </p>
+    </DocSection>
+
+    <DocSection id="docker" title={c.dockerTitle}>
+      <p>{c.dockerP}</p>
+      <Code code={s.dockerInstall(domain)} />
+      <p>{withDomain(c.dockerDone)}</p>
     </DocSection>
 
     <DocSection id="dns" title={c.dnsTitle}>
@@ -95,97 +101,29 @@ const dnsProviders = ['TransIP', 'Hostnet', 'Strato', 'one.com', 'Cloudflare DNS
       <summary><span id="technical-title">{c.techTitle}</span></summary>
       <p class="tech-lead">{c.techLead}</p>
 
-      <DocSection id="installer" title={c.optionsTitle}>
-        <div class="table-scroll">
-          <table>
-            <tbody>
-              {
-                s.installOptions.map((flag, i) => (
-                  <tr>
-                    <th scope="row">
-                      <code>{flag}</code>
-                    </th>
-                    <td>{c.options[i]}</td>
-                  </tr>
-                ))
-              }
-            </tbody>
-          </table>
-        </div>
-        <Code code={s.installCmd(domain, ' --edition ts')} />
-        <p>{c.checksP}</p>
-
-        <h3>{c.filesTitle}</h3>
-        <div class="table-scroll">
-          <table>
-            <thead>
-              <tr>{c.filesHead.map((h) => <th scope="col">{h}</th>)}</tr>
-            </thead>
-            <tbody>
-              {
-                s.serverFiles.map(([go, ts], i) => (
-                  <tr>
-                    <th scope="row">{c.filesRows[i]}</th>
-                    <td>
-                      <code>{go}</code>
-                    </td>
-                    <td>
-                      <code>{ts}</code>
-                    </td>
-                  </tr>
-                ))
-              }
-            </tbody>
-          </table>
-        </div>
+      <DocSection id="operations" title={c.storageTitle}>
+        <p>{c.storageP}</p>
 
         <h3>{c.commandsTitle}</h3>
-        <Code code={s.serverCommands(domain)} />
+        <Code code={s.serverCommands} />
 
         <h3>{c.httpsTitle}</h3>
         <p>{c.httpsP}</p>
 
         <h3>{c.backupTitle}</h3>
         <p>{c.backupP}</p>
-        <Code code={s.serverBackup} />
+        <p class="small"><a href={s.NODE_RS_BACKUP_DOC}>{c.backupLink} · docs/backup.md</a></p>
 
         <h3>{c.updateTitle}</h3>
         <p>{c.updateP}</p>
-        <p class="small">
-          <a href={repo('node-go', '/blob/main/docs/hosting/linux.md')}>openbrandexchange/node-go · docs/hosting/linux.md</a> · <a href={repo('node-go', '/blob/main/docs/operations.md')}>docs/operations.md</a>
-        </p>
+        <p class="small"><a href={s.NODE_RS_RELEASES}>{c.releaseLink}</a></p>
+      </DocSection>
+
+      <DocSection id="migrating" title={c.migrateTitle}>
+        <p>{c.migrateP}</p>
+        <p><a class="link-arrow" href={s.NODE_RS_MIGRATING_DOC}>{c.migrateLink} <Icon name="arrow" class="arrow" /></a></p>
       </DocSection>
     </details>
-  </div>
-</section>
-
-<section class="band band-alt">
-  <div class="wrap">
-    <DocSection id="cloudflare" title={c.cfTitle}>
-      <p>{c.cfP}</p>
-      <p>
-        <a class="button primary" href="https://deploy.workers.cloudflare.com/?url=https://github.com/openbrandexchange/node-ts">{c.cfButton}</a>
-      </p>
-      <p>{c.cfCliP}</p>
-      <Code code={s.cfCli} />
-      <h3>{c.cfDnsTitle}</h3>
-      <p>{c.cfDnsP}</p>
-      <p>{c.cfBackupP}</p>
-      <p>{c.cfUpdateP}</p>
-      <p class="small"><a href={repo('node-ts', '/blob/main/docs/hosting-cloudflare.md')}>openbrandexchange/node-ts · docs/hosting-cloudflare.md</a></p>
-    </DocSection>
-  </div>
-</section>
-
-<section class="band">
-  <div class="wrap">
-    <DocSection id="web-hosting" title={c.webTitle}>
-      <p>{c.webP}</p>
-      <ol>{c.phpSteps.map((st) => <li>{st}</li>)}</ol>
-      <h3>{c.webDnsTitle}</h3>
-      <p>{c.webDnsP}</p>
-      <p class="small"><a href={repo('node-php', '/releases/latest')}>{c.phpDownload}</a></p>
-    </DocSection>
   </div>
 </section>
 
@@ -215,7 +153,8 @@ const dnsProviders = ['TransIP', 'Hostnet', 'Strato', 'one.com', 'Cloudflare DNS
     </DocSection>
 
     <DocSection id="editions" title={c.compareTitle}>
-      <p>{c.compareP} <a href={url(lang, 'developers', '#implementations')}>{c.compareLink}</a>.</p>
+      <p>{c.compareP}</p>
+      <p>{c.retireNote} <a href={s.NODE_RS_MIGRATING_DOC}>{c.migrateLink}</a></p>
     </DocSection>
   </div>
 </section>

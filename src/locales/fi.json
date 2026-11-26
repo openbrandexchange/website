@@ -14,15 +14,12 @@
     "footerMore": "Lisää",
     "footerSource": "Lähdekoodi ja määrittely",
     "footerLicence": "© 2026 {foundation}. Kaikki oikeudet pidätetään. Määrittelyn lisenssi on CC-BY-4.0.",
-    "editionCloudflare": "Portaali Cloudflarelle",
-    "editionHosting": "Portaali webhotelliin",
     "yes": "Kyllä",
     "inDevelopment": "Kehitteillä",
     "available": "Saatavilla",
     "footerContact": "Yhteystiedot",
     "madeInEu": "Valmistettu EU:ssa",
-    "footerDiscuss": "Osallistu keskusteluun",
-    "editionServer": "Portaali omalle palvelimelle"
+    "footerDiscuss": "Osallistu keskusteluun"
   },
   "nav": {
     "brands": "Brändeille",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Ylläpito",
-      "description": "Kuvaportaalisi missä haluat: omalla palvelimellasi yhdellä komennolla, Cloudflare Workersissa, tavallisessa webhotellissa tai kumppanin ylläpitämänä."
+      "description": "Kuvaportaalisi missä haluat: Rust-portaali omalla Linux-palvelimellasi tai Dockerilla, tai kumppanin ylläpitämänä."
     },
     "retailers": {
       "title": "Jälleenmyyjille",
@@ -361,7 +358,6 @@
     "httpProduct": "Tuote (esimerkiksi kun se muuttuu PIM:ssä)",
     "httpVariant": "Väri ja koko EAN-koodeineen",
     "httpImage": "Kuva: ensin tiedot, sitten itse tiedosto",
-    "httpImageNote": "Portaali Cloudflarelle ei itse tee kuvista verkkoversioita. Julkaise siellä obx-työkalulla tai hallinnan kohdasta ”Tuonnit”: ne tekevät ne puolestasi. Muuta kautta tulevat kuvat, esimerkiksi ajastetusta tuonnista, näytetään siihen asti alkuperäisessä koossa.",
     "httpOffline": "Poista jotain näkyvistä",
     "httpHooks": "Haluatko ilmoituksen, kun jotain tapahtuu? Lisää hallinnassa ilmoitus (webhook) valmistuneesta tuonnista tai uudesta pääsypyynnöstä ja anna sen käynnistää n8n-, Make- tai Zapier-laukaisin.",
     "apiTitle": "6. API suoraan (kehittäjille)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Ylläpito",
-    "lead": "Jokaisella brändillä on oma kuvaportaalinsa. Asenna se omalle palvelimellesi yhdellä komennolla, aja sitä Cloudflare Workersissa, lataa se tavalliseen webhotelliin tai anna kumppanin ylläpitää sitä.",
-    "p1Title": "4. Kumppani ylläpitää sen puolestasi",
-    "p1P": "Etkö halua ylläpitää itse? Kumppanit voivat ylläpitää ja huoltaa portaalia puolestasi.",
-    "fieldBased": "Kotipaikka",
-    "fieldLanguages": "Kielet",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "Vie kaikki sisältösi",
-    "fieldWebsite": "Verkkosivusto",
-    "listTitle": "Haluatko listalle palveluntarjoajana?",
-    "listP": "Listalle pääsyn ehdot ovat kaikille samat:",
-    "listItems": [
-      "portaalisi läpäisee nykyisen version yhdenmukaisuustestin",
-      "brändi voi viedä kaikki tietonsa ja kuvansa ja lähteä",
-      "julkaiset omat hintasi ja ehtosi omalla sivustollasi"
-    ],
-    "listHow": "Yhteensopivuus on maksutonta; paikka tällä listalla kuuluu viralliseen kumppanuuteen.",
-    "cfP": "Toimii Cloudflare Workersissa, tietokantana D1 ja kuville R2. Napsauta painiketta, kirjaudu Cloudflareen ja seuraa vaiheita. Päivittäiseen käyttöön portaali tarvitsee Workers Paid -tilauksen (5 dollaria kuukaudessa); ilmaistilaus riittää vain tutustumiseen. Kuviesi verkkoversiot tekevät selaimesi ja obx-työkalu.",
-    "cfButton": "Asenna Cloudflareen",
-    "phpP": "Webhotelliin, joka sinulla ehkä jo on, PHP:llä ja tietokannalla. Komentoja ei tarvita:",
-    "phpSteps": [
-      "Lataa obx-portal-php-<version>.zip uusimmasta julkaisusta.",
-      "Pura se ja lataa kansio webhotelliisi (S)FTP:llä.",
-      "Ohjaa (ali)verkkotunnuksesi, esimerkiksi jalleenmyyjat.brandisi.fi, public-kansioon.",
-      "Salli kirjoittaminen kansioihin data ja config (oikeudet 775; jos asennus sanoo yhä, ettei se onnistu, 777).",
-      "Avaa osoite. Asennus tarkistaa palvelimesi ja kysyy asennuskoodia tiedostosta data/SETUP-CODE.txt, jonka avaat FTP-ohjelmalla. Valitse sitten “Avaa käyttöönottoavustaja”.",
-      "Lisää asennuksen näyttämä cron-osoite cron-ajoksi palvelusi hallintapaneeliin, 5 minuutin välein. Portaali toimii ilmankin."
-    ],
-    "phpDownload": "Lataa uusin julkaisu",
-    "firstTitle": "Asennuksen jälkeen: ensimmäinen käynnistys",
-    "first": [
-      "Avaa portaalisi osoite selaimessa.",
-      "Syötä kertakäyttöinen asennuskoodi. Oman palvelimen asennusohjelma näyttää sen lopuksi. Muuten se näkyy lokissa ensimmäisellä käynnistyskerralla (Portaali webhotelliin: tiedostossa data/SETUP-CODE.txt, ja asennus täyttää sen puolestasi), tai asetat sen etukäteen OBX_SETUP_CODE-arvolla.",
-      "Täytä yrityksesi ja ensimmäinen brändisi ja valitse oma salasana. Oletussalasanaa ei ole koskaan."
-    ],
-    "firstWhy": "Asennuskoodi varmistaa, ettei kukaan muu voi ottaa haltuunsa juuri asennettua portaalia.",
-    "domainTitle": "Oma verkkotunnus",
-    "domainP": "Käytä aliverkkotunnusta, kuten jalleenmyyjat.brandisi.fi tai b2b.brandisi.fi. Jälleenmyyjät näkevät nimesi, ja osoite pysyy samana, vaikka vaihtaisit ylläpitoa.",
-    "compareTitle": "Kolme versiota, yksi portaali",
-    "compareP": "Kolme versiota tekevät saman asian, ja niissä on sama hallinta ja sama jälleenmyyjäportaali. Valitse ylläpitoosi sopiva; voit vaihtaa myöhemmin.",
-    "compareLink": "Katso toteutukset",
+    "lead": "Jokaisella brändillä on oma kuvaportaalinsa. OBX toimii Rustilla: asenna se omalle Linux-palvelimellesi tai Dockerilla, tai anna kumppanin ylläpitää sitä.",
     "heroTitle": "Kuvaportaalisi, missä haluat.",
-    "heroLead": "Ohjelmisto on maksuton. Helpoin tapa on pieni oma palvelin ja yksi komento. Voit vaihtaa milloin tahansa.",
+    "heroLead": "Ohjelmisto on maksuton ja toimii Rustilla. Helpoin tapa on pieni oma palvelin, palveluna tai Dockerilla. Voit vaihtaa milloin tahansa.",
     "heroChecks": [
       "Maksuton ohjelmisto, maksat vain ylläpidosta",
-      "Yksi komento asentaa portaalin HTTPS:n kanssa",
+      "Yksi Rust-ohjelma, automaattinen HTTPS Caddyn kautta",
       "Sama portaali kaikkialla, joten voit aina vaihtaa",
       "Etkö halua tehdä sitä itse? Kumppani ylläpitää sen puolestasi"
     ],
-    "webTitle": "3. Tavallinen webhotelli",
-    "webP": "PHP-versio toimii tavallisessa eurooppalaisessa webhotellissa, jossa on PHP ja tietokanta, esimerkiksi TransIP:llä, Stratolla tai OVHcloudilla. Komentoja ei tarvita:",
-    "partnerLink": "Katso kumppanit",
-    "techTitle": "Tekniset tiedot IT-tiimillesi",
-    "techLead": "Asennusohjelman valinnat, tiedostot, varmuuskopiot ja päivitykset sille, joka pystyttää palvelimen.",
-    "costTitle": "Mitä se suunnilleen maksaa",
-    "costItems": [
-      "Oma palvelin EU:ssa: noin 5–15 € kuukaudessa pienestä palvelimesta automaattisine varmuuskopioineen esimerkiksi Hetzneriltä. Palvelimen omalla levyllä olevat kuvat eivät maksa mitään lisää; objektitallennus suurelle arkistolle maksaa muutaman euron lisää kuukaudessa teratavua kohden.",
-      "Tavallinen webhotelli: paketti, josta jo maksat, kunhan siinä on PHP 8.2 tai uudempi.",
-      "Cloudflare Workers: 5 dollaria kuukaudessa Workers Paid -tilauksesta sekä R2-tallennustila, noin 1,50 dollaria kuukaudessa 100 Gt:n kuvamäärää kohden. Latausmaksuja ei ole.",
-      "Kumppani: kumppanin oma hinta. Kysy, mitä siihen sisältyy: päivitykset, varmuuskopiot, oma verkkotunnus ja kaiken tiedon vienti, jos lopetat.",
-      "Oma aikasi: varaa ensimmäisellä kerralla tunnista kahteen tuntiin, mukaan lukien verkkotunnus ja varmuuskopion palautuksen testaus, ja noin tunti kuukaudessa päivityksiin ja varmuuskopioiden tarkistamiseen."
-    ],
-    "costNote": "Suuntaa antavat hinnat marraskuulta 2026, ilman arvonlisäveroa. Tarkista palveluntarjoajan ajantasaiset hinnat ennen valintaa.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "Go-versio hakee itse Let's Encrypt -varmenteen heti, kun verkkotunnuksesi osoittaa palvelimeen, uusii sen automaattisesti ja ohjaa http-liikenteen https:ään. TypeScript-versio tekee saman Caddyn avulla, jonka asennusohjelma määrittää. Eikö varmennetta tule? Tarkista dig-komennolla, että verkkotunnus näyttää palvelimen osoitteen, ja että portit 80 ja 443 ovat auki.",
-    "backupTitle": "Varmuuskopiot",
-    "backupP": "Ota käyttöön palveluntarjoajan palvelinvarmuuskopiot ja lisää yöllinen portaalin varmuuskopio, jonka kopioit myös pois palvelimelta. Säilytä salainen avain erikseen salasanojen hallintaohjelmassa: se on OBX_SECRET_KEY asetustiedostossa tai secret.key datakansiossa. Ilman sitä varmuuskopiota ei voi palauttaa kokonaan. Kokeile palautusta kerran, jotta tiedät sen toimivan.",
-    "updateTitle": "Päivitykset",
-    "updateP": "Ota varmuuskopio ja lue julkaisutiedot. Aja sitten sama asennuskomento uudelleen: se asentaa uusimman julkaisun, säilyttää asetuksesi ja tietosi ja käynnistää portaalin uudelleen. Tietokanta päivittyy itsestään käynnistyksen yhteydessä.",
-    "cfCliP": "Tai omalta tietokoneeltasi Bunin ja Wrangler-työkalun avulla:",
-    "cfBackupP": "Varmuuskopiot: Workers Paid -tilauksella D1 säilyttää tietokannan historian 30 päivän ajalta (Time Travel). Jos haluat kopion Cloudflaren ulkopuolelle, vie tietokanta säännöllisesti. Kuvat ovat R2:ssa; kopioi bucket millä tahansa S3-työkalulla.",
-    "cfUpdateP": "Päivitykset: yhdistä uusi julkaisu omaan kopioosi repositoriosta ja tee push; Cloudflare julkaisee sen uudelleen.",
     "installCta": "Asenna omalle palvelimelle",
     "exampleDomain": "portal.brandisi.fi",
     "ownTitle": "1. Oma palvelin (suositus)",
-    "ownP": "Vuokraa pieni Linux-palvelin, osoita verkkotunnuksesi siihen ja aja yksi komento. Asennusohjelma lataa portaalin, hakee maksuttoman HTTPS-varmenteen Let's Encryptiltä ja käynnistää portaalin palveluna, joka käynnistyy itsestään uudelleenkäynnistyksen jälkeen.",
+    "ownP": "Vuokraa pieni Linux-palvelin (mikä tahansa VPS, x86_64 tai arm64), osoita verkkotunnuksesi siihen ja asenna portaali palveluksi, jonka edessä Caddy hoitaa automaattisen HTTPS:n. Palvelu käynnistyy itsestään uudelleenkäynnistyksen jälkeen.",
     "needTitle": "Mitä tarvitset",
     "needItems": [
       "Linux-palvelin (VPS), jossa on Ubuntu 22.04 tai 24.04, Debian 12 tai 13 tai vastaava. 1 Gt muistia riittää alkuun. Mikä tahansa palveluntarjoaja käy, esimerkiksi Hetzner Cloud, DigitalOcean, TransIP VPS tai Scaleway.",
       "Julkinen IPv4-osoite (IPv6 on valinnainen), ja portit 80 ja 443 auki.",
       "Verkkotunnus tai aliverkkotunnus portaalille, esimerkiksi portal.brandisi.fi."
     ],
-    "ownStepsTitle": "Kolme vaihetta",
+    "ownStepsTitle": "Viisi vaihetta",
     "ownSteps": [
-      "Luo palvelin ja kirjoita muistiin sen IP-osoite.",
-      "Osoita portal.brandisi.fi palvelimeen yhdellä DNS-tietueella (katso alta).",
-      "Kirjaudu palvelimelle SSH:lla ja aja tämä komento omalla osoitteellasi:"
+      "Osoita {domain} palvelimeen A-tietueella (katso alta).",
+      "Lataa palvelimellesi sopiva node-rs uusimmasta julkaisusta ja asenna se komennolla sudo install node-rs /usr/local/bin/.",
+      "Asenna repositoriosta systemd-yksikkö deploy/node-rs.service. Se ajaa portaalia käyttäjänä node-rs, säilyttää tiedot hakemistossa /var/lib/node-rs ja asettaa OBX_PUBLIC_URL-arvoksi https://{domain}.",
+      "Asenna Caddy ja anna sille alla oleva lyhyt Caddyfile. Se hakee HTTPS-varmenteen puolestasi ja ohjaa kävijät portaaliin.",
+      "Avaa https://{domain} ja syötä kertakäyttöinen asennuskoodi, jonka näet komennolla journalctl -u node-rs."
     ],
-    "ownDone": "Kun asennus on valmis, asennusohjelma näyttää portaalisi osoitteen ja kertakäyttöisen asennuskoodin. Avaa osoite, syötä koodi ja käy käyttöönottoavustaja läpi. Päivitä myöhemmin ajamalla sama komento uudelleen: asetuksesi ja tietosi säilyvät.",
-    "ownTs": "Tämä asentaa Go-version eli Portaalin omalle palvelimelle. TypeScript-version saat lisäämällä samaan komentoon --edition ts.",
     "ownEu": "Valitse datakeskus EU:sta, niin luettelosi, kuvasi ja tietokantasi pysyvät EU:ssa.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "Käytätkö jo Dockeria? Yksi compose-tiedosto käynnistää portaalin (Docker-image ghcr.io/openbrandexchange/node-rs) yhdessä Caddyn kanssa HTTPS:ää varten. Osoita ensin verkkotunnuksesi palvelimeen (katso DNS alta) ja aja sitten:",
+    "dockerDone": "Avaa sitten https://{domain} ja syötä kertakäyttöinen asennuskoodi, jonka näet komennolla docker compose logs node-rs.",
     "dnsTitle": "DNS: osoita verkkotunnuksesi palvelimeen",
     "dnsP": "Lisää yksi tietue siihen yritykseen, joka hallinnoi verkkotunnustasi:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Tarkista",
     "dnsCheckP": "Omalla tietokoneellasi tämän pitää näyttää palvelimen osoite (tai käytä verkossa olevaa DNS-tarkistinta, kuten dnschecker.org):",
-    "dnsWait": "Se kestää yleensä 5–60 minuuttia, joskus muutaman tunnin. Asennusohjelma tarkistaa sen myös ja kertoo, mitä vielä puuttuu.",
-    "optionsTitle": "Asennusohjelman valinnat",
-    "options": [
-      "portaalin osoite, esimerkiksi portal.brandisi.fi (pakollinen)",
-      "sähköpostiosoite Let's Encryptille (valinnainen)",
-      "tietty julkaisu uusimman sijaan",
-      "go (oletus) asentaa Go-version; ts asentaa TypeScript-version",
-      "ei omaa HTTPS:ää: portaali kuuntelee osoitteessa 127.0.0.1:8080 oman välityspalvelimesi takana",
-      "näytä vain, mitä tehtäisiin, älä muuta mitään",
-      "poista ohjelma ja palvelu; tietosi ja asetuksesi säilyvät (lisää --purge, niin nekin poistetaan)"
-    ],
-    "checksP": "Ennen kuin asennusohjelma muuttaa mitään, se tarkistaa järjestelmän (Linux amd64 tai arm64 ja systemd), pääkäyttäjän oikeudet, levytilan, että verkkotunnus osoittaa tähän palvelimeen, että portit 80 ja 443 ovat vapaina, sekä palomuurin. Jos käytössä on ufw tai firewalld, se näyttää tarkan komennon porttien 80 ja 443 avaamiseen.",
-    "filesTitle": "Missä kaikki on",
-    "filesHead": [
-      "Mitä",
-      "Go-versio",
-      "TypeScript-versio"
-    ],
-    "filesRows": [
-      "Ohjelma",
-      "Tiedot",
-      "Asetukset",
-      "Palvelu"
-    ],
+    "dnsWait": "Se kestää yleensä 5–60 minuuttia, joskus muutaman tunnin. Caddy hakee varmenteen heti, kun verkkotunnus osoittaa palvelimeen.",
+    "techTitle": "Tekniset tiedot IT-tiimillesi",
+    "techLead": "Tallennus, asetukset, varmuuskopiot ja päivitykset sille, joka pystyttää palvelimen.",
+    "storageTitle": "Tallennus ja asetukset",
+    "storageP": "Portaali käyttää SQLiteä: yksi tiedosto, ei tietokantapalvelinta. Kuvat tallennetaan palvelimen omalle levylle tai mihin tahansa S3-yhteensopivaan bucketiin (OBX_BLOB_URL). Jokainen asetus on OBX_*-ympäristömuuttuja, samoilla nimillä kuin versiossa node-go.",
     "commandsTitle": "Hyödyllisiä komentoja",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "Ei palvelinta ylläpidettäväksi: portaali toimii omalla Cloudflare-tililläsi. Napsauta painiketta, kirjaudu sisään ja seuraa vaiheita.",
-    "cfDnsTitle": "DNS: oma verkkotunnus Workerille",
-    "cfDnsP": "Lisää osoite Workerin omaksi verkkotunnukseksi: Workers & Pages → oma Workerisi → Settings → Domains & Routes → Add → Custom domain. Jos verkkotunnuksesi on jo Cloudflaressa, DNS ja varmenne määritetään automaattisesti. Jos ei, siirrä ensin verkkotunnuksen DNS Cloudflareen (maksuton; verkkotunnus pysyy rekisteröitynä nykyisessä paikassaan) ja lisää sitten oma verkkotunnus. Aseta sitten OBX_PUBLIC_URL tähän osoitteeseen ja julkaise uudelleen.",
-    "webDnsTitle": "DNS: aliverkkotunnus ohjauspaneelissa",
-    "webDnsP": "Luo aliverkkotunnus webhotellisi ohjauspaneelissa (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain tai Subdomains; Plesk: Websites & Domains → Add Subdomain). Jos verkkotunnuksesi DNS on samalla webhotellilla, muuta ei tarvita. Muuten lisää aliverkkotunnukselle A-tietue, joka osoittaa webhotellipalvelimen IP-osoitteeseen; paneeli näyttää sen. Ota sitten paneelissa Let's Encrypt käyttöön aliverkkotunnukselle."
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy hakee Let's Encrypt -varmenteen heti, kun verkkotunnuksesi osoittaa palvelimeen, uusii sen automaattisesti ja ohjaa http-liikenteen https:ään. Eikö varmennetta tule? Tarkista dig-komennolla, että verkkotunnus näyttää palvelimen osoitteen, ja että portit 80 ja 443 ovat auki.",
+    "backupTitle": "Varmuuskopiot",
+    "backupP": "Ota käyttöön palveluntarjoajan palvelinvarmuuskopiot ja säilytä portaalista yöllinen salattu kopio toisella palveluntarjoajalla tai toisella alueella. Harjoittele palautusta joka neljännesvuosi, jotta tiedät sen toimivan.",
+    "backupLink": "Varmuuskopioi muualle",
+    "updateTitle": "Päivitykset",
+    "updateP": "Ota varmuuskopio ja lue julkaisutiedot. Linuxissa asenna uusi binääri samalla tavalla ja käynnistä palvelu uudelleen. Dockerilla aja docker compose pull ja sitten docker compose up -d. Tietokanta päivittyy itsestään käynnistyksen yhteydessä.",
+    "releaseLink": "Lataa uusin julkaisu",
+    "migrateTitle": "Siirtyminen versiosta node-go, node-php tai node-ts",
+    "migrateP": "Tietosi, kuvasi ja asetuksesi siirtyvät mukana. Siirto-ohjeessa on vaiheet jokaiselle aiemmalle versiolle.",
+    "migrateLink": "Lue siirto-ohje",
+    "p1Title": "3. Kumppani ylläpitää sen puolestasi",
+    "p1P": "Etkö halua ylläpitää itse? Kumppanit voivat ylläpitää ja huoltaa portaalia puolestasi.",
+    "partnerLink": "Katso kumppanit",
+    "fieldBased": "Kotipaikka",
+    "fieldLanguages": "Kielet",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Vie kaikki sisältösi",
+    "fieldWebsite": "Verkkosivusto",
+    "listTitle": "Haluatko listalle palveluntarjoajana?",
+    "listP": "Listalle pääsyn ehdot ovat kaikille samat:",
+    "listItems": [
+      "portaalisi läpäisee nykyisen version yhdenmukaisuustestin",
+      "brändi voi viedä kaikki tietonsa ja kuvansa ja lähteä",
+      "julkaiset omat hintasi ja ehtosi omalla sivustollasi"
+    ],
+    "listHow": "Yhteensopivuus on maksutonta; paikka tällä listalla kuuluu viralliseen kumppanuuteen.",
+    "costTitle": "Mitä se suunnilleen maksaa",
+    "costItems": [
+      "Oma palvelin EU:ssa: noin 5–15 € kuukaudessa pienestä palvelimesta automaattisine varmuuskopioineen esimerkiksi Hetzneriltä. Palvelimen omalla levyllä olevat kuvat eivät maksa mitään lisää; objektitallennus suurelle arkistolle maksaa muutaman euron lisää kuukaudessa teratavua kohden.",
+      "Kumppani: kumppanin oma hinta. Kysy, mitä siihen sisältyy: päivitykset, varmuuskopiot, oma verkkotunnus ja kaiken tiedon vienti, jos lopetat.",
+      "Oma aikasi: varaa ensimmäisellä kerralla tunnista kahteen tuntiin, mukaan lukien verkkotunnus ja varmuuskopion palautuksen testaus, ja noin tunti kuukaudessa päivityksiin ja varmuuskopioiden tarkistamiseen."
+    ],
+    "costNote": "Suuntaa antavat hinnat marraskuulta 2026, ilman arvonlisäveroa. Tarkista palveluntarjoajan ajantasaiset hinnat ennen valintaa.",
+    "firstTitle": "Asennuksen jälkeen: ensimmäinen käynnistys",
+    "first": [
+      "Avaa portaalisi osoite selaimessa.",
+      "Syötä kertakäyttöinen asennuskoodi. Se näkyy lokissa ensimmäisellä käynnistyskerralla (journalctl -u node-rs tai docker compose logs node-rs), tai asetat sen etukäteen OBX_SETUP_CODE-arvolla.",
+      "Täytä yrityksesi ja ensimmäinen brändisi ja valitse oma salasana. Oletussalasanaa ei ole koskaan."
+    ],
+    "firstWhy": "Asennuskoodi varmistaa, ettei kukaan muu voi ottaa haltuunsa juuri asennettua portaalia.",
+    "domainTitle": "Oma verkkotunnus",
+    "domainP": "Käytä aliverkkotunnusta, kuten jalleenmyyjat.brandisi.fi tai b2b.brandisi.fi. Jälleenmyyjät näkevät nimesi, ja osoite pysyy samana, vaikka vaihtaisit ylläpitoa.",
+    "compareTitle": "Yksi portaali, kirjoitettu Rustilla",
+    "compareP": "Referenssiportaaleja on yksi, node-rs. Siinä on sama hallinta ja sama jälleenmyyjäportaali missä tahansa se toimii, joten voit siirtyä oman palvelimen, Dockerin ja kumppanin välillä milloin tahansa.",
+    "retireNote": "Aiemmista versioista node-go, node-php ja node-ts luovutaan."
   },
   "retailers": {
     "h1": "Jälleenmyyjille",
@@ -712,10 +670,9 @@
       "määrittely, skeemat, testidata",
       "Go-SDK, obx-työkalu, yhdenmukaisuustestit, mock-palvelin",
       "yhteinen verkkokäyttöliittymä: hallinta ja jälleenmyyjäportaali",
-      "Go: oma palvelin, yhden rivin asennusohjelmalla",
-      "PHP: tavallinen webhotelli",
-      "TypeScript: Cloudflare Workers"
+      "referenssiportaali, Rustilla: Linux tai Docker"
     ],
+    "implRef": "Referenssiportaali",
     "statusDraft": "0.3",
     "implP": "Rakennatko oman toteutuksen tai asiakkaan? Kerro siitä issuella tai pull requestilla; se lisätään taulukkoon, kun se läpäisee yhdenmukaisuustestit.",
     "docsTitle": "Dokumentit",
@@ -737,20 +694,12 @@
         "d": "Määrittely, skeemat ja testidata"
       },
       {
+        "name": "node-rs",
+        "d": "Referenssiportaali, Rustilla"
+      },
+      {
         "name": "obx-go",
         "d": "Go SDK, obx-työkalu ja yhdenmukaisuustesti"
-      },
-      {
-        "name": "node-ts",
-        "d": "Portaali Cloudflare Workersille"
-      },
-      {
-        "name": "node-go",
-        "d": "Portaali omalle palvelimelle"
-      },
-      {
-        "name": "node-php",
-        "d": "Portaali tavalliseen webhotelliin"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Avointa lähdekoodia, GitHubissa.",
     "reposTitle": "Repositoriot",
-    "reposP": "Kaikki on avointa lähdekoodia GitHubissa: määrittely, yhteinen koodi ja kolme portaaliversiota.",
+    "reposP": "Kaikki on avointa lähdekoodia GitHubissa: määrittely, yhteinen koodi ja Rustilla kirjoitettu referenssiportaali.",
     "newTitle": "Uutta versiossa 0.3",
     "newItems": [
       "Materiaalit ja hoito-ohjeet ovat koodeja, joilla on nimet englanniksi, hollanniksi, saksaksi ja ranskaksi. Ne tulevat yhteisistä sanastoista osoitteessa /vocabularies/v0.3/.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "Onko se valmis?",
-        "a": "Kyllä, versio 0.3: määrittely, kolme portaaliversiota ja työkalut on julkaistu ja vapaasti käytettävissä. Olemme alussa: ensimmäiset brändit liittyvät nyt."
+        "a": "Kyllä, versio 0.3: määrittely ja työkalut on julkaistu ja vapaasti käytettävissä, ja portaali toimii Rustilla. Olemme alussa: ensimmäiset brändit liittyvät nyt."
       },
       {
         "q": "Kuka sen takana on?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Lisenssit",
-        "p": "Määrittelyn lisenssi on CC-BY-4.0. SDK:n, obx-työkalun ja yhteisen verkkokäyttöliittymän lisenssi on Apache-2.0. Kolmen portaaliversion lisenssi on AGPL-3.0, joten niihin tehdyt parannukset pysyvät avoimina. Tällä sivustolla ei ole avointa lisenssiä: kaikki oikeudet sen koodiin, ulkoasuun ja teksteihin pidätetään. Sivuston jakamat määrittelyn tiedostot, kuten skeemat, mallipohjat ja esimerkit, säilyttävät CC-BY-4.0-lisenssinsä."
+        "p": "Määrittelyn lisenssi on CC-BY-4.0. SDK:n, obx-työkalun ja yhteisen verkkokäyttöliittymän lisenssi on Apache-2.0. Portaalin, node-rs, lisenssi on AGPL-3.0, joten siihen tehdyt parannukset pysyvät avoimina. Tällä sivustolla ei ole avointa lisenssiä: kaikki oikeudet sen koodiin, ulkoasuun ja teksteihin pidätetään. Sivuston jakamat määrittelyn tiedostot, kuten skeemat, mallipohjat ja esimerkit, säilyttävät CC-BY-4.0-lisenssinsä."
       }
     ],
     "nameTitle": "Nimestä",
@@ -1036,7 +985,7 @@
       "Lataa Excel-vientisi ja kuvasi käsin, tai anna hakea ne joka yö",
       "Automaattinen toimitus PIM- tai ERP-järjestelmästäsi tai jaetusta kansiosta",
       "Käyttöoikeuspyynnöt, kutsut ja API-avaimet jälleenmyyjiesi ohjelmistoille",
-      "Kolme versiota: oma palvelin, Cloudflare Workers ja tavallinen webhotelli"
+      "Yksi portaali Rustilla: oma Linux-palvelin tai Docker"
     ],
     "brandsComing": [
       "Ensimmäinen julkinen julkaisu, asennus yhdellä napsautuksella",
@@ -1098,8 +1047,8 @@
           "l": "standardi, vapaasti kaikkien käytettävissä"
         },
         {
-          "v": "3",
-          "l": "portaaliversiota"
+          "v": "72",
+          "l": "automaattista yhdenmukaisuustarkistusta"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Ylläpito",
       "editionsTitle": "Aja missä haluat. Maksat vain ylläpidosta.",
-      "editionsLead": "Saman kuvaportaalin kolme versiota. Ne toimivat samalla tavalla, joten voit siirtyä versiosta toiseen milloin tahansa.",
+      "editionsLead": "OBX toimii Rustilla: yksi kuvaportaali, jota ylläpidät omalla Linux-palvelimellasi tai Dockerilla tai jota kumppani ylläpitää puolestasi. Voit vaihtaa milloin tahansa.",
       "editionsLink": "Vertaa ylläpitovaihtoehtoja",
       "editionFields": [
         "Alusta",
@@ -1197,27 +1146,18 @@
           "name": "Oma palvelin",
           "runs": "Mikä tahansa Linux-palvelin (VPS), esimerkiksi Hetzneriltä, DigitalOceanilta, TransIP:ltä tai Scalewaylta",
           "need": "Palvelin, verkkotunnus ja SSH-yhteys",
-          "setup": "Yksi komento, sitten käyttöönottoavustaja",
+          "setup": "Asenna ohjelma ja Caddy, sitten käyttöönottoavustaja",
           "cost": "Noin 5–15 € kuukaudessa pienestä palvelimesta varmuuskopioineen",
           "cta": "Asenna omalle palvelimelle"
         },
         {
-          "tag": "Ei palvelinta",
-          "name": "Cloudflare Workers",
-          "runs": "Oma Cloudflare-tilisi, tietokantana D1 ja kuville R2",
-          "need": "Cloudflare-tili ja Workers Paid -tilaus",
-          "setup": "Yksi klikkaus, sitten käyttöönottoavustaja",
-          "cost": "5 dollaria kuukaudessa sekä tallennustila",
-          "cta": "Ota käyttöön Cloudflaressa"
-        },
-        {
-          "tag": "Ei komentoja",
-          "name": "Tavallinen webhotelli",
-          "runs": "Eurooppalainen webhotelli, jossa on PHP ja tietokanta, kuten TransIP, Strato tai OVHcloud",
-          "need": "FTP-ohjelma",
-          "setup": "Lataa zip, sitten asennusohjelma",
-          "cost": "Webhotelli, josta jo maksat (PHP 8.2 tai uudempi)",
-          "cta": "Ota käyttöön webhotellissa"
+          "tag": "Kontit",
+          "name": "Docker",
+          "runs": "Mikä tahansa palvelin, jossa on Docker ja Docker Compose",
+          "need": "Docker, verkkotunnus ja SSH-yhteys",
+          "setup": "Yksi compose-tiedosto, sitten käyttöönottoavustaja",
+          "cost": "Noin 5–15 € kuukaudessa pienestä palvelimesta varmuuskopioineen",
+          "cta": "Aloita Dockerilla"
         },
         {
           "tag": "Helpoin",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Kuvaportaalisi avoimella standardilla.",
       "retailersSoftware": "Ohjelmistollesi",
-      "hostingEditions": "Kolme versiota"
+      "hostingEditions": "Käyttövaihtoehdot"
     }
   },
   "partners": {

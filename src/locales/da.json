@@ -14,15 +14,12 @@
     "footerMore": "Mere",
     "footerSource": "Kildekode og specifikation",
     "footerLicence": "© 2026 {foundation}. Alle rettigheder forbeholdes. Specifikationen er CC-BY-4.0.",
-    "editionCloudflare": "Portal til Cloudflare",
-    "editionHosting": "Portal til webhotel",
     "yes": "Ja",
     "inDevelopment": "Under udvikling",
     "available": "Tilgængelig",
     "footerContact": "Kontakt",
     "madeInEu": "Fremstillet i EU",
-    "footerDiscuss": "Deltag i diskussionen",
-    "editionServer": "Portal til din egen server"
+    "footerDiscuss": "Deltag i diskussionen"
   },
   "nav": {
     "brands": "For brands",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Din forhandlerportal, hvor du vil: på din egen server med én kommando, på Cloudflare Workers, på et almindeligt webhotel eller hostet af en partner."
+      "description": "Din forhandlerportal, hvor du vil: Rust-portalen på din egen Linux-server eller med Docker, eller hostet af en partner."
     },
     "retailers": {
       "title": "For forhandlere",
@@ -361,7 +358,6 @@
     "httpProduct": "Vare (for eksempel når den ændres i dit PIM)",
     "httpVariant": "Farve og størrelse med EAN",
     "httpImage": "Billede: først oplysningerne, så selve filen",
-    "httpImageNote": "Portal til Cloudflare laver ikke selv webversioner af fotos. Udgiv der med obx eller via \"Importer\" i jeres administration: de laver dem for jer. Fotos, der kommer ind på anden vis, fx via en planlagt import, vises indtil da i original størrelse.",
     "httpOffline": "Tage noget offline",
     "httpHooks": "Vil du have besked, når der sker noget? Tilføj i din administration en notifikation (webhook) for en færdig import eller en ny adgangsanmodning, og lad den starte en trigger i n8n, Make eller Zapier.",
     "apiTitle": "6. API'et direkte (for udviklere)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Hvert brand har sin egen forhandlerportal. Installér den på din egen server med én kommando, kør den på Cloudflare Workers, upload den til et almindeligt webhotel, eller lad en partner hoste den.",
-    "p1Title": "4. En partner hoster den for dig",
-    "p1P": "Vil du helst ikke selv hoste? Partnere kan hoste og vedligeholde portalen for dig.",
-    "fieldBased": "Hjemsted",
-    "fieldLanguages": "Sprog",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "Eksportér alt dit indhold",
-    "fieldWebsite": "Websted",
-    "listTitle": "Vil du stå her som udbyder?",
-    "listP": "Kravene for at komme på listen her er de samme for alle:",
-    "listItems": [
-      "din portal består konformitetstesten for den aktuelle version",
-      "et brand kan eksportere alle sine data og billeder og gå",
-      "du offentliggør dine egne priser og vilkår på dit eget websted"
-    ],
-    "listHow": "Det er gratis at være kompatibel; en plads her er en del af det officielle partnerskab.",
-    "cfP": "Kører på Cloudflare Workers, med D1 som database og R2 til billederne. Klik på knappen, log ind hos Cloudflare, og følg trinene. En portal i daglig brug kræver abonnementet Workers Paid (5 dollar om måneden); gratisabonnementet rækker kun til at se sig omkring. Webversioner af jeres fotos laves af jeres browser og værktøjet obx.",
-    "cfButton": "Installér på Cloudflare",
-    "phpP": "Til det webhotel, du måske allerede har, med PHP og en database. Ingen kommandoer nødvendige:",
-    "phpSteps": [
-      "Download obx-portal-php-<version>.zip fra den nyeste udgivelse.",
-      "Pak den ud, og upload mappen til dit webhotel med (S)FTP.",
-      "Peg dit (under)domæne, for eksempel forhandler.ditbrand.dk, på mappen public.",
-      "Gør mapperne data og config skrivbare (rettigheder 775; siger installationen stadig, at de ikke er det, 777).",
-      "Åbn adressen. Installationen tjekker din server og beder om opsætningskoden fra filen data/SETUP-CODE.txt, som du åbner med dit FTP-program. Klik derefter på “Åbn opsætningsguiden”.",
-      "Tilføj den cron-adresse, installationen viser, som cronjob i dit webhotels kontrolpanel, hvert 5. minut. Portalen virker også uden."
-    ],
-    "phpDownload": "Download den nyeste udgivelse",
-    "firstTitle": "Efter installationen: første start",
-    "first": [
-      "Åbn adressen på din portal i browseren.",
-      "Indtast engangskoden til opsætning. Installationsprogrammet på din egen server viser den til sidst. Ellers står den i loggen ved første start (Portal til webhotel: i data/SETUP-CODE.txt, og installationen udfylder den for dig), eller du angiver den på forhånd med OBX_SETUP_CODE.",
-      "Udfyld din virksomhed og dit første brand, og vælg din egen adgangskode. Der er aldrig en standardadgangskode."
-    ],
-    "firstWhy": "Opsætningskoden sikrer, at ingen andre kan overtage en nyinstalleret portal.",
-    "domainTitle": "Dit eget domæne",
-    "domainP": "Brug et underdomæne som forhandler.ditbrand.dk eller b2b.ditbrand.dk. Forhandlerne ser så dit navn, og din adresse forbliver den samme, hvis du skifter hosting.",
-    "compareTitle": "Tre udgaver, én portal",
-    "compareP": "De tre udgaver gør det samme og har samme administration og samme forhandlerportal. Vælg det, der passer til din hosting; du kan skifte senere.",
-    "compareLink": "Se implementeringerne",
+    "lead": "Hvert brand har sin egen forhandlerportal. OBX kører i Rust: installér den på din egen Linux-server eller med Docker, eller lad en partner hoste den.",
     "heroTitle": "Din forhandlerportal, hvor du vil.",
-    "heroLead": "Softwaren er gratis. Det nemmeste er en lille server af din egen og én kommando. Du kan flytte når som helst.",
+    "heroLead": "Softwaren er gratis og kører i Rust. Det nemmeste er en lille server af din egen, som tjeneste eller med Docker. Du kan flytte når som helst.",
     "heroChecks": [
       "Gratis software, du betaler kun for hosting",
-      "Én kommando installerer portalen, med HTTPS",
+      "Ét program i Rust, med automatisk HTTPS via Caddy",
       "Den samme portal overalt, så du altid kan skifte",
       "Vil du helst ikke selv? En partner hoster den for dig"
     ],
-    "webTitle": "3. Almindeligt webhotel",
-    "webP": "PHP-udgaven kører på et almindeligt europæisk webhotel med PHP og en database, for eksempel hos TransIP, Strato eller OVHcloud. Uden kommandoer:",
-    "partnerLink": "Se partnere",
-    "techTitle": "Tekniske detaljer til din it-afdeling",
-    "techLead": "Indstillinger til installationsprogrammet, filer, backup og opdateringer, til den person, der sætter serveren op.",
-    "costTitle": "Hvad det cirka koster",
-    "costItems": [
-      "Din egen server i EU: ca. 5-15 € om måneden for en lille server med automatisk backup hos en udbyder som Hetzner. Billeder på serverens egen disk koster ikke ekstra; objektlagring til et stort arkiv koster nogle få euro ekstra om måneden pr. terabyte.",
-      "Almindeligt webhotel: den pakke, du allerede betaler for, så længe den har PHP 8.2 eller nyere.",
-      "Cloudflare Workers: 5 dollar om måneden for Workers Paid plus R2-lagerplads til ca. 1,50 dollar om måneden pr. 100 GB billeder. Der er ingen downloadgebyrer.",
-      "En partner: partnerens egen pris. Spørg, hvad der er inkluderet: opdateringer, backup, dit eget domæne og eksport af alle data, hvis du stopper.",
-      "Din egen tid: regn med en til to timer første gang, inklusive domænet og en testgendannelse af en backup, og omkring en time om måneden til opdateringer og kontrol af backupperne."
-    ],
-    "costNote": "Vejledende priser fra november 2026, ekskl. moms. Tjek udbyderens aktuelle priser, før du vælger.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "Go-udgaven anmoder selv om et Let's Encrypt-certifikat, så snart dit domæne peger på serveren, fornyer det automatisk og omdirigerer http til https. TypeScript-udgaven gør det samme via Caddy, som installationsprogrammet sætter op. Intet certifikat? Tjek med dig, at domænet viser serverens adresse, og at port 80 og 443 er åbne.",
-    "backupTitle": "Backup",
-    "backupP": "Slå udbyderens serverbackup til, og tilføj en natlig backup af portalen, som du også kopierer væk fra serveren. Opbevar den hemmelige nøgle separat i en adgangskodeadministrator: det er OBX_SECRET_KEY i indstillingsfilen eller secret.key i datamappen. Uden den kan en backup ikke gendannes fuldt ud. Prøv en gendannelse én gang, så du ved, at det virker.",
-    "updateTitle": "Opdateringer",
-    "updateP": "Tag en backup, og læs udgivelsesnoterne. Kør derefter den samme installationskommando igen: den installerer den nyeste udgivelse, beholder dine indstillinger og data og genstarter portalen. Databasen opdaterer sig selv ved start.",
-    "cfCliP": "Eller fra din egen computer med Bun og Wrangler-værktøjet:",
-    "cfBackupP": "Backup: Med Workers Paid gemmer D1 30 dages databasehistorik (Time Travel). Vil du have en kopi uden for Cloudflare, så eksportér databasen regelmæssigt. Billederne ligger i R2; kopiér bucketten med et vilkårligt S3-værktøj.",
-    "cfUpdateP": "Opdateringer: Flet den nye udgivelse ind i din kopi af repositoriet, og push; Cloudflare udruller den så igen.",
     "installCta": "Installér på din egen server",
     "exampleDomain": "portal.ditbrand.dk",
     "ownTitle": "1. Din egen server (anbefalet)",
-    "ownP": "Lej en lille Linux-server, peg dit domæne på den, og kør én kommando. Installationsprogrammet henter portalen, får et gratis HTTPS-certifikat fra Let's Encrypt og starter portalen som en tjeneste, der selv starter igen efter en genstart.",
+    "ownP": "Lej en lille Linux-server (en hvilken som helst VPS, x86_64 eller arm64), peg dit domæne på den, og installér portalen som en tjeneste med Caddy foran til automatisk HTTPS. Tjenesten starter selv igen efter en genstart.",
     "needTitle": "Det skal du bruge",
     "needItems": [
       "En Linux-server (VPS) med Ubuntu 22.04 eller 24.04, Debian 12 eller 13 eller lignende. 1 GB hukommelse er nok til at starte med. Alle udbydere er fine, for eksempel Hetzner Cloud, DigitalOcean, TransIP VPS eller Scaleway.",
       "En offentlig IPv4-adresse (IPv6 er valgfri), med port 80 og 443 åbne.",
       "Et domæne eller underdomæne til portalen, for eksempel portal.ditbrand.dk."
     ],
-    "ownStepsTitle": "Tre trin",
+    "ownStepsTitle": "Fem trin",
     "ownSteps": [
-      "Opret serveren, og notér dens IP-adresse.",
-      "Peg portal.ditbrand.dk på serveren med én DNS-post (se nedenfor).",
-      "Log ind på serveren med SSH, og kør denne kommando med din egen adresse:"
+      "Peg {domain} på serveren med en A-post (se nedenfor).",
+      "Hent node-rs til din server fra den nyeste udgivelse, og installér den med sudo install node-rs /usr/local/bin/.",
+      "Installér systemd-enheden deploy/node-rs.service fra repositoriet. Den kører portalen som brugeren node-rs, gemmer dataene i /var/lib/node-rs og sætter OBX_PUBLIC_URL til https://{domain}.",
+      "Installér Caddy, og giv den den korte Caddyfile nedenfor. Den henter HTTPS-certifikatet for dig og sender besøgende videre til portalen.",
+      "Åbn https://{domain}, og indtast engangskoden til opsætning fra journalctl -u node-rs."
     ],
-    "ownDone": "Når den er færdig, viser installationsprogrammet adressen på din portal og en engangskode til opsætning. Åbn adressen, indtast koden, og gennemfør opsætningsguiden. Vil du opdatere senere, kører du bare den samme kommando igen: dine indstillinger og data bliver.",
-    "ownTs": "Det installerer Go-udgaven, Portal til din egen server. Vil du have TypeScript-udgaven, tilføjer du --edition ts til den samme kommando.",
     "ownEu": "Vælg et datacenter i EU, så bliver dit katalog, dine billeder og din database i EU.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "Bruger du allerede Docker? Én compose-fil starter portalen (imaget ghcr.io/openbrandexchange/node-rs) sammen med Caddy til HTTPS. Peg først dit domæne på serveren (se DNS nedenfor), og kør derefter:",
+    "dockerDone": "Åbn derefter https://{domain}, og indtast engangskoden til opsætning fra docker compose logs node-rs.",
     "dnsTitle": "DNS: peg dit domæne på serveren",
     "dnsP": "Tilføj én post hos det firma, der administrerer dit domæne:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Tjek det",
     "dnsCheckP": "På din egen computer skal dette vise serverens adresse (eller brug et online DNS-tjek som dnschecker.org):",
-    "dnsWait": "Det tager som regel 5 til 60 minutter, nogle gange et par timer. Installationsprogrammet tjekker det også og fortæller dig, hvad der stadig mangler.",
-    "optionsTitle": "Indstillinger til installationsprogrammet",
-    "options": [
-      "portalens adresse, for eksempel portal.ditbrand.dk (påkrævet)",
-      "en e-mailadresse til Let's Encrypt (valgfri)",
-      "en bestemt udgivelse i stedet for den nyeste",
-      "go (standard) installerer Go-udgaven; ts installerer TypeScript-udgaven",
-      "ingen egen HTTPS: portalen lytter på 127.0.0.1:8080 bag din egen proxy",
-      "vis kun, hvad den ville gøre, og ændr intet",
-      "fjern programmet og tjenesten; dine data og indstillinger bliver (tilføj --purge for også at slette dem)"
-    ],
-    "checksP": "Før installationsprogrammet ændrer noget, tjekker det systemet (Linux amd64 eller arm64 med systemd), root-rettigheder, diskplads, at domænet peger på denne server, at port 80 og 443 er ledige, og firewallen. Med ufw eller firewalld viser det den præcise kommando til at åbne port 80 og 443.",
-    "filesTitle": "Hvor alting ligger",
-    "filesHead": [
-      "Hvad",
-      "Go-udgaven",
-      "TypeScript-udgaven"
-    ],
-    "filesRows": [
-      "Program",
-      "Data",
-      "Indstillinger",
-      "Tjeneste"
-    ],
+    "dnsWait": "Det tager som regel 5 til 60 minutter, nogle gange et par timer. Caddy henter certifikatet, så snart domænet peger på serveren.",
+    "techTitle": "Tekniske detaljer til din it-afdeling",
+    "techLead": "Lagring, indstillinger, backup og opdateringer, til den person, der sætter serveren op.",
+    "storageTitle": "Lagring og indstillinger",
+    "storageP": "Portalen bruger SQLite: én fil, ingen databaseserver. Billeder ligger på serverens egen disk eller i en hvilken som helst S3-kompatibel bucket (OBX_BLOB_URL). Hver indstilling er en OBX_*-miljøvariabel med de samme navne som i node-go.",
     "commandsTitle": "Nyttige kommandoer",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "Ingen server at passe: portalen kører på din egen Cloudflare-konto. Klik på knappen, log ind, og følg trinene.",
-    "cfDnsTitle": "DNS: et eget domæne på din Worker",
-    "cfDnsP": "Tilføj adressen som eget domæne på din Worker: Workers & Pages → din Worker → Settings → Domains & Routes → Add → Custom domain. Ligger dit domæne allerede hos Cloudflare, sættes DNS og certifikat op automatisk. Hvis ikke, så flyt først dit domænes DNS til Cloudflare (gratis; domænet forbliver registreret, hvor det er), og tilføj derefter dit eget domæne. Sæt derefter OBX_PUBLIC_URL til den adresse, og udrul igen.",
-    "webDnsTitle": "DNS: et underdomæne i dit kontrolpanel",
-    "webDnsP": "Opret underdomænet i dit webhotels kontrolpanel (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain eller Subdomains; Plesk: Websites & Domains → Add Subdomain). Ligger dit domænes DNS hos samme webhotel, er det alt. Ellers tilføjer du en A-post for underdomænet, der peger på webhotelserverens IP-adresse, som panelet viser. Slå derefter Let's Encrypt til for underdomænet i panelet."
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy anmoder om et Let's Encrypt-certifikat, så snart dit domæne peger på serveren, fornyer det automatisk og omdirigerer http til https. Intet certifikat? Tjek med dig, at domænet viser serverens adresse, og at port 80 og 443 er åbne.",
+    "backupTitle": "Backup",
+    "backupP": "Slå udbyderens serverbackup til, og gem en natlig krypteret kopi af portalen hos en anden udbyder eller i en anden region. Øv en gendannelse hvert kvartal, så du ved, at det virker.",
+    "backupLink": "Backup et andet sted",
+    "updateTitle": "Opdateringer",
+    "updateP": "Tag en backup, og læs udgivelsesnoterne. På Linux installerer du den nye binærfil på samme måde og genstarter tjenesten. Med Docker kører du docker compose pull og derefter docker compose up -d. Databasen opdaterer sig selv ved start.",
+    "releaseLink": "Download den nyeste udgivelse",
+    "migrateTitle": "Flytning fra node-go, node-php eller node-ts",
+    "migrateP": "Dine data, billeder og indstillinger flytter med. Migreringsvejledningen har trinnene for hver tidligere udgave.",
+    "migrateLink": "Læs migreringsvejledningen",
+    "p1Title": "3. En partner hoster den for dig",
+    "p1P": "Vil du helst ikke selv hoste? Partnere kan hoste og vedligeholde portalen for dig.",
+    "partnerLink": "Se partnere",
+    "fieldBased": "Hjemsted",
+    "fieldLanguages": "Sprog",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Eksportér alt dit indhold",
+    "fieldWebsite": "Websted",
+    "listTitle": "Vil du stå her som udbyder?",
+    "listP": "Kravene for at komme på listen her er de samme for alle:",
+    "listItems": [
+      "din portal består konformitetstesten for den aktuelle version",
+      "et brand kan eksportere alle sine data og billeder og gå",
+      "du offentliggør dine egne priser og vilkår på dit eget websted"
+    ],
+    "listHow": "Det er gratis at være kompatibel; en plads her er en del af det officielle partnerskab.",
+    "costTitle": "Hvad det cirka koster",
+    "costItems": [
+      "Din egen server i EU: ca. 5-15 € om måneden for en lille server med automatisk backup hos en udbyder som Hetzner. Billeder på serverens egen disk koster ikke ekstra; objektlagring til et stort arkiv koster nogle få euro ekstra om måneden pr. terabyte.",
+      "En partner: partnerens egen pris. Spørg, hvad der er inkluderet: opdateringer, backup, dit eget domæne og eksport af alle data, hvis du stopper.",
+      "Din egen tid: regn med en til to timer første gang, inklusive domænet og en testgendannelse af en backup, og omkring en time om måneden til opdateringer og kontrol af backupperne."
+    ],
+    "costNote": "Vejledende priser fra november 2026, ekskl. moms. Tjek udbyderens aktuelle priser, før du vælger.",
+    "firstTitle": "Efter installationen: første start",
+    "first": [
+      "Åbn adressen på din portal i browseren.",
+      "Indtast engangskoden til opsætning. Den står i loggen ved første start (journalctl -u node-rs eller docker compose logs node-rs), eller du angiver den på forhånd med OBX_SETUP_CODE.",
+      "Udfyld din virksomhed og dit første brand, og vælg din egen adgangskode. Der er aldrig en standardadgangskode."
+    ],
+    "firstWhy": "Opsætningskoden sikrer, at ingen andre kan overtage en nyinstalleret portal.",
+    "domainTitle": "Dit eget domæne",
+    "domainP": "Brug et underdomæne som forhandler.ditbrand.dk eller b2b.ditbrand.dk. Forhandlerne ser så dit navn, og din adresse forbliver den samme, hvis du skifter hosting.",
+    "compareTitle": "Én portal, skrevet i Rust",
+    "compareP": "Der er én referenceportal, node-rs. Den har samme administration og samme forhandlerportal, uanset hvor den kører, så du til enhver tid kan flytte mellem din egen server, Docker og en partner.",
+    "retireNote": "De tidligere udgaver node-go, node-php og node-ts udfases."
   },
   "retailers": {
     "h1": "For forhandlere",
@@ -712,10 +670,9 @@
       "specifikation, skemaer, testdata",
       "Go-SDK, obx-værktøj, konformitetstests, mockserver",
       "fælles webgrænseflade: administration og forhandlerportal",
-      "Go: din egen server, med et installationsprogram på én linje",
-      "PHP: almindeligt webhotel",
-      "TypeScript: Cloudflare Workers"
+      "referenceportalen, i Rust: Linux eller Docker"
     ],
+    "implRef": "Referenceportal",
     "statusDraft": "0.3",
     "implP": "Bygger du din egen implementering eller klient? Giv besked med et issue eller en pull request; den kommer i tabellen, så snart den består konformitetstestene.",
     "docsTitle": "Dokumenter",
@@ -737,20 +694,12 @@
         "d": "Specifikationen, skemaer og testdata"
       },
       {
+        "name": "node-rs",
+        "d": "Referenceportalen, i Rust"
+      },
+      {
         "name": "obx-go",
         "d": "Go SDK, obx-værktøjet og konformitetstesten"
-      },
-      {
-        "name": "node-ts",
-        "d": "Portal til Cloudflare Workers"
-      },
-      {
-        "name": "node-go",
-        "d": "Portal til din egen server"
-      },
-      {
-        "name": "node-php",
-        "d": "Portal til almindelig webhosting"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Open source, på GitHub.",
     "reposTitle": "Repositories",
-    "reposP": "Alt er open source på GitHub: specifikationen, den fælles kode og de tre portaludgaver.",
+    "reposP": "Alt er open source på GitHub: specifikationen, den fælles kode og referenceportalen i Rust.",
     "newTitle": "Nyt i version 0.3",
     "newItems": [
       "Materialer og vaskeanvisninger er koder med navne på engelsk, nederlandsk, tysk og fransk, fra fælles vokabularer udgivet på /vocabularies/v0.3/.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "Er det klar?",
-        "a": "Ja, version 0.3: specifikationen, de tre portaludgaver og værktøjerne er udgivet og frie at bruge. Vi er i starten: de første brands kommer med nu."
+        "a": "Ja, version 0.3: specifikationen og værktøjerne er udgivet og frie at bruge, og portalen kører i Rust. Vi er i starten: de første brands kommer med nu."
       },
       {
         "q": "Hvem står bag?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Licenser",
-        "p": "Specifikationen er CC-BY-4.0. SDK'et, obx-værktøjet og den fælles webgrænseflade er Apache-2.0. De tre portaludgaver er AGPL-3.0, så forbedringer af dem forbliver åbne. Dette websted har ikke en åben licens: Alle rettigheder til kode, design og tekster forbeholdes. Filer fra specifikationen, som webstedet stiller til rådighed, for eksempel skemaer, skabeloner og eksempler, beholder deres CC-BY-4.0-licens."
+        "p": "Specifikationen er CC-BY-4.0. SDK'et, obx-værktøjet og den fælles webgrænseflade er Apache-2.0. Portalen, node-rs, er AGPL-3.0, så forbedringer af den forbliver åbne. Dette websted har ikke en åben licens: Alle rettigheder til kode, design og tekster forbeholdes. Filer fra specifikationen, som webstedet stiller til rådighed, for eksempel skemaer, skabeloner og eksempler, beholder deres CC-BY-4.0-licens."
       }
     ],
     "nameTitle": "Om navnet",
@@ -1036,7 +985,7 @@
       "Upload din Excel-eksport og dine fotos manuelt, eller få dem hentet hver nat",
       "Automatisk levering fra dit PIM, ERP eller en delt mappe",
       "Adgangsanmodninger, invitationer og API-nøgler til dine forhandleres software",
-      "Tre udgaver: din egen server, Cloudflare Workers og almindeligt webhotel"
+      "Én portal i Rust: på din egen Linux-server eller med Docker"
     ],
     "brandsComing": [
       "Den første offentlige udgivelse, med installation med ét klik",
@@ -1098,8 +1047,8 @@
           "l": "standard, fri for alle"
         },
         {
-          "v": "3",
-          "l": "portaludgaver"
+          "v": "72",
+          "l": "automatiske konformitetstests"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Kør den, hvor du vil. Betal kun for hosting.",
-      "editionsLead": "Tre udgaver af den samme forhandlerportal. De virker på samme måde, så du kan til enhver tid skifte fra den ene til den anden.",
+      "editionsLead": "OBX kører i Rust: én forhandlerportal, som du hoster på din egen Linux-server eller med Docker, eller som en partner hoster for dig. Du kan flytte når som helst.",
       "editionsLink": "Sammenlign hostingmulighederne",
       "editionFields": [
         "Kører på",
@@ -1197,27 +1146,18 @@
           "name": "Din egen server",
           "runs": "Enhver Linux-server (VPS), for eksempel hos Hetzner, DigitalOcean, TransIP eller Scaleway",
           "need": "En server, et domænenavn og SSH-adgang",
-          "setup": "Én kommando, derefter opsætningsguiden",
+          "setup": "Installér programmet og Caddy, derefter opsætningsguiden",
           "cost": "Ca. 5-15 € om måneden for en lille server med backup",
           "cta": "Installér på din egen server"
         },
         {
-          "tag": "Ingen server",
-          "name": "Cloudflare Workers",
-          "runs": "Din egen Cloudflare-konto, med D1 som database og R2 til billederne",
-          "need": "En Cloudflare-konto med abonnementet Workers Paid",
-          "setup": "Ét klik, derefter opsætningsguiden",
-          "cost": "5 dollar om måneden plus lagerplads",
-          "cta": "Opsæt på Cloudflare"
-        },
-        {
-          "tag": "Ingen kommandoer",
-          "name": "Almindeligt webhotel",
-          "runs": "Europæisk webhotel med PHP og en database, som TransIP, Strato eller OVHcloud",
-          "need": "Et FTP-program",
-          "setup": "Upload en zip, derefter installationsprogrammet",
-          "cost": "Det webhotel, du allerede betaler for (PHP 8.2 eller nyere)",
-          "cta": "Opsæt på webhotel"
+          "tag": "Containere",
+          "name": "Docker",
+          "runs": "Enhver server med Docker og Docker Compose",
+          "need": "Docker, et domænenavn og SSH-adgang",
+          "setup": "Én compose-fil, derefter opsætningsguiden",
+          "cost": "Ca. 5-15 € om måneden for en lille server med backup",
+          "cta": "Start med Docker"
         },
         {
           "tag": "Nemmest",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Din forhandlerportal, på den åbne standard.",
       "retailersSoftware": "Til din software",
-      "hostingEditions": "De tre udgaver"
+      "hostingEditions": "Sådan kan du køre den"
     }
   },
   "partners": {

@@ -163,11 +163,14 @@ export function brandsHtml(lang, t = loadMessages(lang)) {
     .map((bl) => `<div class="block"><h3>${esc(fill(bl.h, { portal: t.portalWord }))}</h3><p>${esc(fill(bl.p, { portal: t.portalWord }))}</p><ul>${bl.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>`)
     .join('');
   const admin = t.brands.admin.map((a) => `<dt>${esc(a.k)}</dt><dd>${esc(a.v)}</dd>`).join('');
+  // A card text without its details in parentheses (architectures, image name): the page has them.
+  const short = (text) => text.replace(/\s*[(（][^)）]*[)）]/g, '');
   const hosting = [
     // The first sentence of the own-server text: the whole route in one line (the page has the rest).
-    [t.hosting.ownTitle, t.hosting.ownP.replace(/^(.+?[.!?])\s.*$/s, '$1')],
-    [t.hosting.cfTitle, t.hosting.cfLead],
-    [t.hosting.webTitle, t.hosting.webP.replace(/[:：]\s*$/, '.')],
+    [t.hosting.ownTitle, short(t.hosting.ownP.replace(/^(.+?[.!?])\s.*$/s, '$1'))],
+    // Docker: the text without its last sentence, which leads into the commands on the page.
+    [t.hosting.dockerTitle, short(t.hosting.dockerP.replace(/\s*[^.!?。]*[:：]\s*$/, ''))],
+    [t.hosting.p1Title, t.hosting.p1P],
   ]
     .map(([h, p]) => `<div class="card"><h3>${esc(h)}</h3><p>${esc(p)}</p></div>`)
     .join('');

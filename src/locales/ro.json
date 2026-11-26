@@ -14,15 +14,12 @@
     "footerMore": "Mai mult",
     "footerSource": "Cod sursă și specificație",
     "footerLicence": "© 2026 {foundation}. Toate drepturile rezervate. Specificația este sub licența CC-BY-4.0.",
-    "editionCloudflare": "Portal pentru Cloudflare",
-    "editionHosting": "Portal pentru găzduire web",
     "yes": "Da",
     "inDevelopment": "În dezvoltare",
     "available": "Disponibil",
     "footerContact": "Contact",
     "madeInEu": "Fabricat în UE",
-    "footerDiscuss": "Alăturați-vă discuției",
-    "editionServer": "Portal pentru propriul server"
+    "footerDiscuss": "Alăturați-vă discuției"
   },
   "nav": {
     "brands": "Pentru mărci",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Găzduire",
-      "description": "Portalul dvs. de imagini oriunde doriți: pe propriul server cu o singură comandă, pe Cloudflare Workers, pe găzduire web obișnuită sau găzduit de un partener."
+      "description": "Portalul dvs. de imagini oriunde doriți: portalul Rust pe propriul server Linux sau cu Docker, ori găzduit de un partener."
     },
     "retailers": {
       "title": "Pentru comercianți",
@@ -361,7 +358,6 @@
     "httpProduct": "Articol (de exemplu când se modifică în PIM)",
     "httpVariant": "Culoare și mărime, cu EAN",
     "httpImage": "Fotografie: întâi datele, apoi fișierul",
-    "httpImageNote": "Portal pentru Cloudflare nu creează singur versiuni web ale fotografiilor. Publicați acolo cu obx sau prin „Importuri” în administrare: acestea le creează pentru dvs. Fotografiile care sosesc altfel, de exemplu printr-un import programat, sunt afișate până atunci la dimensiunea originală.",
     "httpOffline": "Retragerea a ceva",
     "httpHooks": "Vreți să fiți anunțat când se întâmplă ceva? În administrare, adăugați o notificare (webhook) pentru un import finalizat sau o nouă cerere de acces și folosiți-o ca declanșator în n8n, Make sau Zapier.",
     "apiTitle": "6. API-ul direct (pentru dezvoltatori)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Găzduire",
-    "lead": "Fiecare marcă are propriul portal de imagini. Instalați-l pe propriul server cu o singură comandă, rulați-l pe Cloudflare Workers, încărcați-l pe găzduire web obișnuită sau lăsați un partener să îl găzduiască.",
-    "p1Title": "4. Un partener îl găzduiește pentru dvs.",
-    "p1P": "Preferați să nu găzduiți singur? Partenerii pot găzdui și întreține portalul pentru dvs.",
-    "fieldBased": "Sediul",
-    "fieldLanguages": "Limbi",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "Exportul întregului conținut",
-    "fieldWebsite": "Site web",
-    "listTitle": "Doriți să apăreți aici ca furnizor?",
-    "listP": "Criteriile pentru a apărea aici sunt aceleași pentru toți:",
-    "listItems": [
-      "portalul dvs. trece testul de conformitate pentru versiunea curentă",
-      "o marcă își poate exporta toate datele și fotografiile și poate pleca",
-      "vă publicați prețurile și condițiile pe propriul site"
-    ],
-    "listHow": "Compatibilitatea este gratuită; listarea aici face parte din parteneriatul oficial.",
-    "cfP": "Rulează pe Cloudflare Workers, cu D1 ca bază de date și R2 pentru imagini. Apăsați butonul, conectați-vă la Cloudflare și urmați pașii. Un portal folosit zilnic are nevoie de planul Workers Paid (5 dolari pe lună); planul gratuit ajunge doar pentru o privire de ansamblu. Versiunile web ale fotografiilor le creează browserul dvs. și instrumentul obx.",
-    "cfButton": "Instalați pe Cloudflare",
-    "phpP": "Pentru găzduirea web pe care poate o aveți deja, cu PHP și o bază de date. Fără comenzi:",
-    "phpSteps": [
-      "Descărcați obx-portal-php-<version>.zip din cea mai recentă versiune.",
-      "Dezarhivați-l și încărcați folderul pe găzduire prin (S)FTP.",
-      "Direcționați (sub)domeniul, de exemplu comercianti.marcavoastra.ro, către folderul public.",
-      "Permiteți scrierea în dosarele data și config (permisiuni 775; dacă programul de instalare încă spune că nu se poate, 777).",
-      "Deschideți adresa. Programul de instalare verifică serverul și cere codul de instalare din fișierul data/SETUP-CODE.txt, pe care îl deschideți cu programul FTP. Apoi faceți clic pe „Deschideți asistentul de configurare“.",
-      "Adăugați adresa cron afișată de programul de instalare ca sarcină cron în panoul găzduirii, la fiecare 5 minute. Și fără ea portalul funcționează."
-    ],
-    "phpDownload": "Descărcați cea mai recentă versiune",
-    "firstTitle": "După instalare: prima pornire",
-    "first": [
-      "Deschideți adresa portalului în browser.",
-      "Introduceți codul de instalare de unică folosință. Pe propriul server, programul de instalare îl afișează la final. Altfel, îl găsiți în jurnal la prima pornire (Portal pentru găzduire web: în data/SETUP-CODE.txt, iar programul de instalare îl completează pentru dvs.) sau îl setați dinainte cu OBX_SETUP_CODE.",
-      "Completați compania și prima marcă și alegeți-vă propria parolă. Nu există niciodată o parolă implicită."
-    ],
-    "firstWhy": "Codul de configurare asigură că nimeni altcineva nu poate prelua un portal proaspăt instalat.",
-    "domainTitle": "Propriul domeniu",
-    "domainP": "Folosiți un subdomeniu precum comercianti.marcavoastra.ro sau b2b.marcavoastra.ro. Comercianții vă văd numele, iar adresa rămâne aceeași dacă schimbați găzduirea.",
-    "compareTitle": "Trei ediții, un singur portal",
-    "compareP": "Cele trei ediții fac același lucru și au aceeași administrare și același portal pentru comercianți. Alegeți ce se potrivește găzduirii dvs.; puteți schimba mai târziu.",
-    "compareLink": "Vedeți implementările",
+    "lead": "Fiecare marcă are propriul portal de imagini. OBX rulează în Rust: instalați-l pe propriul server Linux sau cu Docker, ori lăsați un partener să îl găzduiască.",
     "heroTitle": "Portalul dvs. de imagini, oriunde doriți.",
-    "heroLead": "Software-ul este gratuit. Cel mai simplu este un server mic propriu și o singură comandă. Vă puteți muta oricând.",
+    "heroLead": "Software-ul este gratuit și rulează în Rust. Cel mai simplu este un server mic propriu, ca serviciu sau cu Docker. Vă puteți muta oricând.",
     "heroChecks": [
       "Software gratuit, plătiți doar găzduirea",
-      "O singură comandă instalează portalul, cu HTTPS",
+      "Un singur program în Rust, cu HTTPS automat prin Caddy",
       "Același portal peste tot, deci puteți schimba oricând",
       "Preferați să nu vă ocupați singur? Un partener îl găzduiește pentru dvs."
     ],
-    "webTitle": "3. Găzduire web obișnuită",
-    "webP": "Ediția PHP rulează pe găzduire web europeană obișnuită, cu PHP și o bază de date, de exemplu la TransIP, Strato sau OVHcloud. Fără comenzi:",
-    "partnerLink": "Vedeți partenerii",
-    "techTitle": "Detalii tehnice pentru echipa dvs. IT",
-    "techLead": "Opțiunile programului de instalare, fișiere, copii de rezervă și actualizări, pentru persoana care configurează serverul.",
-    "costTitle": "Cât costă, aproximativ",
-    "costItems": [
-      "Propriul server în UE: circa 5–15 € pe lună pentru un server mic cu copii de rezervă automate, la un furnizor precum Hetzner. Fotografiile stocate pe discul serverului nu costă nimic în plus; stocarea de obiecte pentru o arhivă mare adaugă câțiva euro pe lună pentru fiecare terabyte.",
-      "Găzduire web obișnuită: pachetul pe care îl plătiți deja, cu condiția să aibă PHP 8.2 sau mai nou.",
-      "Cloudflare Workers: 5 dolari pe lună pentru Workers Paid, plus stocare R2 de circa 1,50 dolari pe lună pentru 100 GB de fotografii. Nu există taxe pentru descărcări.",
-      "Un partener: prețul propriu. Întrebați ce include: actualizări, copii de rezervă, propriul domeniu și exportul complet dacă plecați.",
-      "Timpul dvs.: prima dată, socotiți una până la două ore, inclusiv domeniul și o restaurare de probă a unei copii de rezervă, apoi circa o oră pe lună pentru actualizări și verificarea copiilor de rezervă."
-    ],
-    "costNote": "Prețuri orientative din noiembrie 2026, fără TVA. Verificați prețurile actuale ale furnizorului înainte să alegeți.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "Ediția Go solicită singură un certificat Let's Encrypt imediat ce domeniul indică spre server, îl reînnoiește automat și redirecționează http către https. Ediția TypeScript face același lucru prin Caddy, pe care îl configurează programul de instalare. Niciun certificat? Verificați cu dig că domeniul afișează adresa serverului și că porturile 80 și 443 sunt deschise.",
-    "backupTitle": "Copii de rezervă",
-    "backupP": "Activați copiile de rezervă ale serverului la furnizor și adăugați o copie de rezervă nocturnă a portalului, pe care o copiați și în afara serverului. Păstrați cheia secretă separat, într-un manager de parole: este OBX_SECRET_KEY în fișierul de setări sau secret.key în folderul de date. Fără ea, o copie de rezervă nu poate fi restaurată complet. Încercați o dată o restaurare, ca să știți că funcționează.",
-    "updateTitle": "Actualizări",
-    "updateP": "Faceți o copie de rezervă și citiți notele versiunii. Apoi rulați din nou aceeași comandă de instalare: instalează cea mai nouă versiune, păstrează setările și datele și repornește portalul. Baza de date se actualizează singură la pornire.",
-    "cfCliP": "Sau de pe propriul calculator, cu Bun și instrumentul Wrangler:",
-    "cfBackupP": "Copii de rezervă: cu Workers Paid, D1 păstrează 30 de zile de istoric al bazei de date (Time Travel). Pentru o copie în afara Cloudflare, exportați regulat baza de date. Imaginile sunt în R2; copiați bucket-ul cu orice instrument S3.",
-    "cfUpdateP": "Actualizări: integrați noua versiune în copia dvs. a repository-ului și faceți push; Cloudflare o implementează din nou.",
     "installCta": "Instalați pe propriul server",
     "exampleDomain": "portal.marcavoastra.ro",
     "ownTitle": "1. Propriul server (recomandat)",
-    "ownP": "Închiriați un server Linux mic, îndreptați domeniul spre el și rulați o singură comandă. Programul de instalare descarcă portalul, obține un certificat HTTPS gratuit de la Let's Encrypt și pornește portalul ca serviciu, care revine singur după o repornire.",
+    "ownP": "Închiriați un server Linux mic (orice VPS, x86_64 sau arm64), îndreptați domeniul spre el și instalați portalul ca serviciu, cu Caddy în față pentru HTTPS automat. Serviciul revine singur după o repornire.",
     "needTitle": "De ce aveți nevoie",
     "needItems": [
       "Un server Linux (VPS) cu Ubuntu 22.04 sau 24.04, Debian 12 sau 13 ori ceva similar. Pentru început, 1 GB de memorie este suficient. Orice furnizor este bun, de exemplu Hetzner Cloud, DigitalOcean, TransIP VPS sau Scaleway.",
       "O adresă IPv4 publică (IPv6 este opțional), cu porturile 80 și 443 deschise.",
       "Un domeniu sau subdomeniu pentru portal, de exemplu portal.marcavoastra.ro."
     ],
-    "ownStepsTitle": "Trei pași",
+    "ownStepsTitle": "Cinci pași",
     "ownSteps": [
-      "Creați serverul și notați-i adresa IP.",
-      "Îndreptați portal.marcavoastra.ro spre server cu o singură înregistrare DNS (vedeți mai jos).",
-      "Conectați-vă la server prin SSH și rulați această comandă, cu propria adresă:"
+      "Îndreptați {domain} spre server cu o înregistrare A (vedeți mai jos).",
+      "Descărcați node-rs pentru serverul dvs. din cea mai nouă versiune și instalați-l cu sudo install node-rs /usr/local/bin/.",
+      "Instalați unitatea systemd deploy/node-rs.service din depozit. Ea rulează portalul ca utilizatorul node-rs, păstrează datele în /var/lib/node-rs și setează OBX_PUBLIC_URL la https://{domain}.",
+      "Instalați Caddy și dați-i fișierul Caddyfile scurt de mai jos. Obține certificatul HTTPS pentru dvs. și trimite vizitatorii mai departe către portal.",
+      "Deschideți https://{domain} și introduceți codul de instalare de unică folosință din journalctl -u node-rs."
     ],
-    "ownDone": "La final, programul de instalare afișează adresa portalului și un cod de instalare de unică folosință. Deschideți adresa, introduceți codul și parcurgeți asistentul de configurare. Pentru actualizări ulterioare, rulați din nou aceeași comandă: setările și datele rămân.",
-    "ownTs": "Astfel se instalează ediția Go, Portalul pentru propriul server. Pentru ediția TypeScript, adăugați --edition ts la aceeași comandă.",
     "ownEu": "Alegeți un centru de date din UE, iar catalogul, imaginile și baza de date rămân în UE.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "Folosiți deja Docker? Un singur fișier compose pornește portalul (imaginea ghcr.io/openbrandexchange/node-rs) împreună cu Caddy pentru HTTPS. Îndreptați mai întâi domeniul spre server (vedeți DNS mai jos), apoi rulați:",
+    "dockerDone": "Apoi deschideți https://{domain} și introduceți codul de instalare de unică folosință din docker compose logs node-rs.",
     "dnsTitle": "DNS: îndreptați domeniul spre server",
     "dnsP": "Adăugați o înregistrare la compania care vă administrează domeniul:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Verificați",
     "dnsCheckP": "Pe propriul computer, această comandă trebuie să afișeze adresa serverului (sau folosiți un verificator DNS online, precum dnschecker.org):",
-    "dnsWait": "De obicei durează între 5 și 60 de minute, uneori câteva ore. Programul de instalare verifică și el și vă spune ce mai lipsește.",
-    "optionsTitle": "Opțiunile programului de instalare",
-    "options": [
-      "adresa portalului, de exemplu portal.marcavoastra.ro (obligatoriu)",
-      "o adresă de e-mail pentru Let's Encrypt (opțional)",
-      "o anumită versiune în locul celei mai noi",
-      "go (implicit) instalează ediția Go; ts instalează ediția TypeScript",
-      "fără HTTPS propriu: portalul ascultă pe 127.0.0.1:8080, în spatele propriului proxy",
-      "doar afișează ce ar face, fără să schimbe nimic",
-      "elimină programul și serviciul; datele și setările rămân (adăugați --purge ca să le ștergeți și pe ele)"
-    ],
-    "checksP": "Înainte de a schimba ceva, programul de instalare verifică sistemul (Linux amd64 sau arm64 cu systemd), drepturile de root, spațiul pe disc, dacă domeniul indică spre acest server, dacă porturile 80 și 443 sunt libere, precum și firewall-ul. Cu ufw sau firewalld, afișează exact comanda care deschide porturile 80 și 443.",
-    "filesTitle": "Unde se află totul",
-    "filesHead": [
-      "Ce",
-      "Ediția Go",
-      "Ediția TypeScript"
-    ],
-    "filesRows": [
-      "Program",
-      "Date",
-      "Setări",
-      "Serviciu"
-    ],
+    "dnsWait": "De obicei durează între 5 și 60 de minute, uneori câteva ore. Caddy obține certificatul imediat ce domeniul indică spre server.",
+    "techTitle": "Detalii tehnice pentru echipa dvs. IT",
+    "techLead": "Stocare, setări, copii de rezervă și actualizări, pentru persoana care configurează serverul.",
+    "storageTitle": "Stocare și setări",
+    "storageP": "Portalul folosește SQLite: un singur fișier, fără server de baze de date. Imaginile stau pe discul serverului sau în orice bucket compatibil S3 (OBX_BLOB_URL). Fiecare setare este o variabilă de mediu OBX_*, cu aceleași nume ca la node-go.",
     "commandsTitle": "Comenzi utile",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "Niciun server de administrat: portalul rulează în propriul cont Cloudflare. Faceți clic pe buton, conectați-vă și urmați pașii.",
-    "cfDnsTitle": "DNS: un domeniu propriu pentru Worker",
-    "cfDnsP": "Adăugați adresa ca domeniu propriu al Workerului: Workers & Pages → Workerul dvs. → Settings → Domains & Routes → Add → Custom domain. Dacă domeniul este deja pe Cloudflare, DNS-ul și certificatul se configurează automat. Dacă nu, mutați mai întâi DNS-ul domeniului la Cloudflare (gratuit; domeniul rămâne înregistrat unde este), după care adăugați domeniul propriu. Apoi setați OBX_PUBLIC_URL la acea adresă și publicați din nou.",
-    "webDnsTitle": "DNS: un subdomeniu în panoul de control",
-    "webDnsP": "Creați subdomeniul în panoul de control al găzduirii (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain sau Subdomains; Plesk: Websites & Domains → Add Subdomain). Dacă DNS-ul domeniului este la aceeași firmă de găzduire, asta e tot. Altfel, adăugați pentru subdomeniu o înregistrare A care indică spre adresa IP a serverului de găzduire, afișată în panou. Apoi activați Let's Encrypt pentru subdomeniu din panou."
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy solicită un certificat Let's Encrypt imediat ce domeniul indică spre server, îl reînnoiește automat și redirecționează http către https. Niciun certificat? Verificați cu dig că domeniul afișează adresa serverului și că porturile 80 și 443 sunt deschise.",
+    "backupTitle": "Copii de rezervă",
+    "backupP": "Activați copiile de rezervă ale serverului la furnizor și păstrați o copie criptată nocturnă a portalului la alt furnizor sau în altă regiune. Încercați o restaurare în fiecare trimestru, ca să știți că funcționează.",
+    "backupLink": "Copie de rezervă în altă locație",
+    "updateTitle": "Actualizări",
+    "updateP": "Faceți o copie de rezervă și citiți notele versiunii. Pe Linux, instalați noul binar în același mod și reporniți serviciul. Cu Docker, rulați docker compose pull și apoi docker compose up -d. Baza de date se actualizează singură la pornire.",
+    "releaseLink": "Descărcați cea mai recentă versiune",
+    "migrateTitle": "Trecerea de la node-go, node-php sau node-ts",
+    "migrateP": "Datele, imaginile și setările vin cu dvs. Ghidul de migrare are pașii pentru fiecare ediție anterioară.",
+    "migrateLink": "Citiți ghidul de migrare",
+    "p1Title": "3. Un partener îl găzduiește pentru dvs.",
+    "p1P": "Preferați să nu găzduiți singur? Partenerii pot găzdui și întreține portalul pentru dvs.",
+    "partnerLink": "Vedeți partenerii",
+    "fieldBased": "Sediul",
+    "fieldLanguages": "Limbi",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Exportul întregului conținut",
+    "fieldWebsite": "Site web",
+    "listTitle": "Doriți să apăreți aici ca furnizor?",
+    "listP": "Criteriile pentru a apărea aici sunt aceleași pentru toți:",
+    "listItems": [
+      "portalul dvs. trece testul de conformitate pentru versiunea curentă",
+      "o marcă își poate exporta toate datele și fotografiile și poate pleca",
+      "vă publicați prețurile și condițiile pe propriul site"
+    ],
+    "listHow": "Compatibilitatea este gratuită; listarea aici face parte din parteneriatul oficial.",
+    "costTitle": "Cât costă, aproximativ",
+    "costItems": [
+      "Propriul server în UE: circa 5–15 € pe lună pentru un server mic cu copii de rezervă automate, la un furnizor precum Hetzner. Fotografiile stocate pe discul serverului nu costă nimic în plus; stocarea de obiecte pentru o arhivă mare adaugă câțiva euro pe lună pentru fiecare terabyte.",
+      "Un partener: prețul propriu. Întrebați ce include: actualizări, copii de rezervă, propriul domeniu și exportul complet dacă plecați.",
+      "Timpul dvs.: prima dată, socotiți una până la două ore, inclusiv domeniul și o restaurare de probă a unei copii de rezervă, apoi circa o oră pe lună pentru actualizări și verificarea copiilor de rezervă."
+    ],
+    "costNote": "Prețuri orientative din noiembrie 2026, fără TVA. Verificați prețurile actuale ale furnizorului înainte să alegeți.",
+    "firstTitle": "După instalare: prima pornire",
+    "first": [
+      "Deschideți adresa portalului în browser.",
+      "Introduceți codul de instalare de unică folosință. Îl găsiți în jurnal la prima pornire (journalctl -u node-rs sau docker compose logs node-rs) sau îl setați dinainte cu OBX_SETUP_CODE.",
+      "Completați compania și prima marcă și alegeți-vă propria parolă. Nu există niciodată o parolă implicită."
+    ],
+    "firstWhy": "Codul de configurare asigură că nimeni altcineva nu poate prelua un portal proaspăt instalat.",
+    "domainTitle": "Propriul domeniu",
+    "domainP": "Folosiți un subdomeniu precum comercianti.marcavoastra.ro sau b2b.marcavoastra.ro. Comercianții vă văd numele, iar adresa rămâne aceeași dacă schimbați găzduirea.",
+    "compareTitle": "Un singur portal, scris în Rust",
+    "compareP": "Există un singur portal de referință, node-rs. Are aceeași administrare și același portal pentru comercianți oriunde rulează, deci puteți trece oricând între propriul server, Docker și un partener.",
+    "retireNote": "Edițiile anterioare node-go, node-php și node-ts sunt retrase treptat."
   },
   "retailers": {
     "h1": "Pentru comercianți",
@@ -712,10 +670,9 @@
       "specificație, scheme, date de test",
       "SDK Go, instrumentul obx, teste de conformitate, server simulat",
       "interfață web comună: administrare și portal pentru comercianți",
-      "Go: propriul server, cu un program de instalare dintr-o singură linie",
-      "PHP: găzduire web obișnuită",
-      "TypeScript: Cloudflare Workers"
+      "portalul de referință, în Rust: Linux sau Docker"
     ],
+    "implRef": "Portal de referință",
     "statusDraft": "0.3",
     "implP": "Construiți propria implementare sau un client? Anunțați-ne printr-un issue sau pull request; intră în acest tabel după ce trece testele de conformitate.",
     "docsTitle": "Documente",
@@ -737,20 +694,12 @@
         "d": "Specificația, schemele și datele de test"
       },
       {
+        "name": "node-rs",
+        "d": "Portalul de referință, în Rust"
+      },
+      {
         "name": "obx-go",
         "d": "Go SDK, instrumentul obx și testul de conformitate"
-      },
-      {
-        "name": "node-ts",
-        "d": "Portal pentru Cloudflare Workers"
-      },
-      {
-        "name": "node-go",
-        "d": "Portal pentru propriul server"
-      },
-      {
-        "name": "node-php",
-        "d": "Portal pentru găzduire web obișnuită"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Open source, pe GitHub.",
     "reposTitle": "Depozite de cod",
-    "reposP": "Totul este open source pe GitHub: specificația, codul comun și cele trei ediții ale portalului.",
+    "reposP": "Totul este open source pe GitHub: specificația, codul comun și portalul de referință în Rust.",
     "newTitle": "Ce este nou în versiunea 0.3",
     "newItems": [
       "Materialele și îngrijirea sunt coduri cu denumiri în engleză, neerlandeză, germană și franceză, din vocabulare comune publicate la /vocabularies/v0.3/.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "Este gata?",
-        "a": "Da, versiunea 0.3: specificația, cele trei ediții ale portalului și instrumentele au fost lansate și sunt libere de folosit. Suntem la început: primele mărci se alătură acum."
+        "a": "Da, versiunea 0.3: specificația și instrumentele au fost lansate și sunt libere de folosit, iar portalul rulează în Rust. Suntem la început: primele mărci se alătură acum."
       },
       {
         "q": "Cine se află în spate?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Licențe",
-        "p": "Specificația este sub licența CC-BY-4.0. SDK-ul, instrumentul obx și interfața web comună sunt sub licența Apache-2.0. Cele trei ediții ale portalului sunt sub licența AGPL-3.0, pentru ca îmbunătățirile aduse lor să rămână deschise. Acest site nu are o licență deschisă: codul, designul și textele sale sunt protejate, cu toate drepturile rezervate. Fișierele din specificație pe care le oferă, precum schemele, șabloanele și exemplele, își păstrează licența CC-BY-4.0."
+        "p": "Specificația este sub licența CC-BY-4.0. SDK-ul, instrumentul obx și interfața web comună sunt sub licența Apache-2.0. Portalul, node-rs, este sub licența AGPL-3.0, pentru ca îmbunătățirile aduse lui să rămână deschise. Acest site nu are o licență deschisă: codul, designul și textele sale sunt protejate, cu toate drepturile rezervate. Fișierele din specificație pe care le oferă, precum schemele, șabloanele și exemplele, își păstrează licența CC-BY-4.0."
       }
     ],
     "nameTitle": "Despre nume",
@@ -1036,7 +985,7 @@
       "Încărcați manual exportul Excel și fotografiile sau lăsați-le preluate în fiecare noapte",
       "Livrare automată din PIM, ERP sau dintr-un folder partajat",
       "Cereri de acces, invitații și chei API pentru software-ul comercianților dvs.",
-      "Trei ediții: propriul server, Cloudflare Workers și găzduire web obișnuită"
+      "Un singur portal în Rust: pe propriul server Linux sau cu Docker"
     ],
     "brandsComing": [
       "Prima versiune publică, cu instalare dintr-un clic",
@@ -1098,8 +1047,8 @@
           "l": "standard, liber pentru oricine"
         },
         {
-          "v": "3",
-          "l": "ediții ale portalului"
+          "v": "72",
+          "l": "verificări automate de conformitate"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Găzduire",
       "editionsTitle": "Unde doriți. Plătiți doar găzduirea.",
-      "editionsLead": "Trei ediții ale aceluiași portal de imagini. Funcționează la fel, deci puteți trece oricând de la una la alta.",
+      "editionsLead": "OBX rulează în Rust: un singur portal de imagini pe care îl găzduiți pe propriul server Linux sau cu Docker, ori pe care un partener îl găzduiește pentru dvs. Vă puteți muta oricând.",
       "editionsLink": "Comparați opțiunile de găzduire",
       "editionFields": [
         "Rulează pe",
@@ -1197,27 +1146,18 @@
           "name": "Propriul server",
           "runs": "Orice server Linux (VPS), de exemplu la Hetzner, DigitalOcean, TransIP sau Scaleway",
           "need": "Un server, un nume de domeniu și acces SSH",
-          "setup": "O singură comandă, apoi asistentul de configurare",
+          "setup": "Instalați programul și Caddy, apoi asistentul de configurare",
           "cost": "Circa 5–15 € pe lună pentru un server mic cu copii de rezervă",
           "cta": "Instalați pe propriul server"
         },
         {
-          "tag": "Fără server",
-          "name": "Cloudflare Workers",
-          "runs": "Propriul dvs. cont Cloudflare, cu D1 ca bază de date și R2 pentru imagini",
-          "need": "Un cont Cloudflare cu planul Workers Paid",
-          "setup": "Un clic, apoi asistentul de configurare",
-          "cost": "5 dolari pe lună plus stocarea",
-          "cta": "Configurați pe Cloudflare"
-        },
-        {
-          "tag": "Fără comenzi",
-          "name": "Găzduire web obișnuită",
-          "runs": "Găzduire web europeană cu PHP și o bază de date, precum TransIP, Strato sau OVHcloud",
-          "need": "Un program FTP",
-          "setup": "Încărcați un zip, apoi rulați instalatorul",
-          "cost": "Găzduirea pe care o plătiți deja (PHP 8.2 sau mai nou)",
-          "cta": "Configurați pe găzduire web"
+          "tag": "Containere",
+          "name": "Docker",
+          "runs": "Orice server cu Docker și Docker Compose",
+          "need": "Docker, un nume de domeniu și acces SSH",
+          "setup": "Un fișier compose, apoi asistentul de configurare",
+          "cost": "Circa 5–15 € pe lună pentru un server mic cu copii de rezervă",
+          "cta": "Începeți cu Docker"
         },
         {
           "tag": "Cel mai simplu",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Portalul dvs. de imagini, pe standardul deschis.",
       "retailersSoftware": "Pentru software-ul dvs.",
-      "hostingEditions": "Cele trei ediții"
+      "hostingEditions": "Moduri de rulare"
     }
   },
   "partners": {

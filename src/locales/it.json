@@ -14,15 +14,12 @@
     "footerMore": "Altro",
     "footerSource": "Codice sorgente e specifica",
     "footerLicence": "© 2026 {foundation}. Tutti i diritti riservati. La specifica è CC-BY-4.0.",
-    "editionCloudflare": "Portale per Cloudflare",
-    "editionHosting": "Portale per web hosting",
     "yes": "Sì",
     "inDevelopment": "In sviluppo",
     "available": "Disponibile",
     "footerContact": "Contatti",
     "madeInEu": "Prodotto nell'UE",
-    "footerDiscuss": "Partecipa alla discussione",
-    "editionServer": "Portale per il tuo server"
+    "footerDiscuss": "Partecipa alla discussione"
   },
   "nav": {
     "brands": "Per i brand",
@@ -55,7 +52,7 @@
     },
     "hosting": {
       "title": "Hosting",
-      "description": "Il tuo portale immagini dove preferisci: sul tuo server con un solo comando, su Cloudflare Workers, su un normale web hosting o gestito da un partner."
+      "description": "Il tuo portale immagini dove preferisci: il portale in Rust sul tuo server Linux o con Docker, oppure gestito da un partner."
     },
     "retailers": {
       "title": "Per i rivenditori",
@@ -361,7 +358,6 @@
     "httpProduct": "Articolo (per esempio quando cambia nel PIM)",
     "httpVariant": "Colore e taglia, con il suo EAN",
     "httpImage": "Foto: prima i dati, poi il file",
-    "httpImageNote": "Il Portale per Cloudflare non crea da solo le versioni web delle foto. Lì pubblica con obx o da «Importazioni» nella tua amministrazione: le creano loro per te. Le foto che arrivano in altro modo, per esempio da un'importazione pianificata, fino ad allora sono mostrate nel formato originale.",
     "httpOffline": "Ritirare qualcosa",
     "httpHooks": "Vuoi un avviso quando succede qualcosa? Nella tua amministrazione aggiungi una notifica (webhook) per un import concluso o una nuova richiesta di accesso, e usala per avviare un trigger in n8n, Make o Zapier.",
     "apiTitle": "6. L'API direttamente (per sviluppatori)",
@@ -383,96 +379,37 @@
   },
   "hosting": {
     "h1": "Hosting",
-    "lead": "Ogni brand ha il proprio portale immagini. Installalo sul tuo server con un solo comando, fallo girare su Cloudflare Workers, caricalo su un normale web hosting o fallo ospitare da un partner.",
-    "p1Title": "4. Un partner lo ospita per te",
-    "p1P": "Preferisci non ospitarlo tu? I partner possono ospitare e gestire il portale per te.",
-    "fieldBased": "Sede",
-    "fieldLanguages": "Lingue",
-    "fieldStatus": "Open Brand Exchange",
-    "fieldExport": "Esporta tutti i tuoi contenuti",
-    "fieldWebsite": "Sito web",
-    "listTitle": "Vuoi comparire qui come provider?",
-    "listP": "I criteri per comparire qui sono uguali per tutti:",
-    "listItems": [
-      "il tuo portale supera il test di conformità della versione attuale",
-      "un brand può esportare tutti i suoi dati e immagini e andarsene",
-      "pubblichi prezzi e condizioni sul tuo sito"
-    ],
-    "listHow": "Essere compatibili è gratuito; la presenza in questa pagina fa parte della partnership ufficiale.",
-    "cfP": "Funziona su Cloudflare Workers, con D1 come database e R2 per le immagini. Clicca il pulsante, accedi a Cloudflare e segui i passaggi. Un portale in uso ogni giorno richiede il piano Workers Paid (5 dollari al mese); il piano gratuito basta solo per dare un'occhiata. Le versioni web delle tue foto le crea il tuo browser insieme allo strumento obx.",
-    "cfButton": "Installa su Cloudflare",
-    "phpP": "Per il pacchetto di web hosting che forse hai già, con PHP e un database. Nessun comando necessario:",
-    "phpSteps": [
-      "Scarica obx-portal-php-<version>.zip dall'ultima release.",
-      "Estrailo e carica la cartella sul tuo hosting via (S)FTP.",
-      "Punta il tuo (sotto)dominio, per esempio rivenditori.tuobrand.it, sulla cartella public.",
-      "Rendi scrivibili le cartelle data e config (permessi 775; se l'installer dice ancora che non lo sono, 777).",
-      "Apri quell'indirizzo. L'installer controlla il server e chiede il codice di installazione dal file data/SETUP-CODE.txt, che apri con il tuo programma FTP. Poi fai clic su “Apri la procedura guidata”.",
-      "Aggiungi l'indirizzo cron mostrato dall'installer come cron job nel pannello del tuo hosting, ogni 5 minuti. Anche senza, il portale funziona."
-    ],
-    "phpDownload": "Scarica l'ultima release",
-    "firstTitle": "Dopo l'installazione: il primo avvio",
-    "first": [
-      "Apri l'indirizzo del tuo portale nel browser.",
-      "Inserisci il codice di installazione monouso. L'installer sul tuo server lo mostra alla fine. Altrimenti lo trovi nel log al primo avvio (Portale per web hosting: in data/SETUP-CODE.txt, e l'installer lo compila per te), oppure lo imposti in anticipo con OBX_SETUP_CODE.",
-      "Inserisci la tua azienda e il tuo primo brand e scegli la tua password. Non esiste mai una password predefinita."
-    ],
-    "firstWhy": "Il codice di configurazione garantisce che nessun altro possa appropriarsi di un portale appena installato.",
-    "domainTitle": "Il tuo dominio",
-    "domainP": "Usa un sottodominio come rivenditori.tuobrand.it o b2b.tuobrand.it. I rivenditori vedono il tuo nome e l'indirizzo resta lo stesso se cambi hosting.",
-    "compareTitle": "Tre edizioni, un portale",
-    "compareP": "Le tre edizioni fanno la stessa cosa e condividono la stessa amministrazione e la stessa area rivenditori. Scegli quella adatta al tuo hosting; puoi cambiare in seguito.",
-    "compareLink": "Vedi le implementazioni",
+    "lead": "Ogni brand ha il proprio portale immagini. OBX funziona in Rust: installalo sul tuo server Linux o con Docker, oppure fallo ospitare da un partner.",
     "heroTitle": "Il tuo portale immagini, dove preferisci.",
-    "heroLead": "Il software è gratuito. La via più semplice è un piccolo server tuo e un solo comando. Puoi spostarti in qualsiasi momento.",
+    "heroLead": "Il software è gratuito e funziona in Rust. La via più semplice è un piccolo server tuo, come servizio o con Docker. Puoi spostarti in qualsiasi momento.",
     "heroChecks": [
       "Software gratuito, paghi solo l'hosting",
-      "Un solo comando installa il portale, con HTTPS",
+      "Un solo programma in Rust, con HTTPS automatico tramite Caddy",
       "Lo stesso portale ovunque, quindi puoi sempre cambiare",
       "Preferisci non farlo da solo? Un partner lo ospita per te"
     ],
-    "webTitle": "3. Normale web hosting",
-    "webP": "L'edizione PHP funziona su un normale web hosting europeo con PHP e un database, per esempio presso TransIP, Strato o OVHcloud. Nessun comando necessario:",
-    "partnerLink": "Vedi i partner",
-    "techTitle": "Dettagli tecnici per il tuo reparto IT",
-    "techLead": "Opzioni dell'installer, file, backup e aggiornamenti, per chi configura il server.",
-    "costTitle": "Quanto costa, più o meno",
-    "costItems": [
-      "Il tuo server nell'UE: circa 5-15 € al mese per un piccolo server con backup automatici, presso un provider come Hetzner. Le foto sul disco del server non costano nulla in più; un object storage per un grande archivio aggiunge qualche euro al mese per terabyte.",
-      "Web hosting tradizionale: il pacchetto che paghi già, purché abbia PHP 8.2 o successivo.",
-      "Cloudflare Workers: 5 dollari al mese per Workers Paid, più lo storage R2 a circa 1,50 dollari al mese ogni 100 GB di foto. I download non si pagano.",
-      "Un partner: il suo prezzo. Chiedi cosa comprende: aggiornamenti, backup, il tuo dominio e l'esportazione di tutto se te ne vai.",
-      "Il tuo tempo: la prima volta conta da una a due ore, compresi il dominio e un ripristino di prova di un backup, poi circa un'ora al mese per aggiornamenti e controllo dei backup."
-    ],
-    "costNote": "Prezzi indicativi di novembre 2026, IVA esclusa. Verifica i prezzi attuali del provider prima di scegliere.",
-    "httpsTitle": "HTTPS",
-    "httpsP": "L'edizione Go richiede da sola un certificato Let's Encrypt appena il tuo dominio punta al server, lo rinnova automaticamente e reindirizza http su https. L'edizione TypeScript fa lo stesso tramite Caddy, che l'installer configura. Nessun certificato? Controlla con dig che il dominio restituisca l'indirizzo del server e che le porte 80 e 443 siano aperte.",
-    "backupTitle": "Backup",
-    "backupP": "Attiva i backup del server presso il tuo provider e aggiungi un backup notturno del portale da copiare anche fuori dal server. Conserva la chiave segreta a parte, in un password manager: è OBX_SECRET_KEY nel file delle impostazioni, oppure secret.key nella cartella dei dati. Senza di essa un backup non si può ripristinare del tutto. Prova un ripristino almeno una volta, così sai che funziona.",
-    "updateTitle": "Aggiornamenti",
-    "updateP": "Fai un backup e leggi le note di rilascio. Poi esegui di nuovo lo stesso comando di installazione: installa l'ultima release, mantiene impostazioni e dati e riavvia il portale. Il database si aggiorna da solo all'avvio.",
-    "cfCliP": "Oppure dal tuo computer, con Bun e lo strumento Wrangler:",
-    "cfBackupP": "Backup: con Workers Paid, D1 conserva 30 giorni di cronologia del database (Time Travel). Per una copia fuori da Cloudflare, esporta regolarmente il database. Le immagini sono in R2; copia il bucket con qualsiasi strumento S3.",
-    "cfUpdateP": "Aggiornamenti: fai il merge della nuova release nella tua copia del repository e fai push; Cloudflare la ripubblica.",
     "installCta": "Installa sul tuo server",
     "exampleDomain": "portal.tuobrand.it",
     "ownTitle": "1. Il tuo server (consigliato)",
-    "ownP": "Noleggia un piccolo server Linux, fai puntare il tuo dominio verso di esso ed esegui un solo comando. L'installer scarica il portale, ottiene un certificato HTTPS gratuito da Let's Encrypt e avvia il portale come servizio che riparte da solo dopo un riavvio.",
+    "ownP": "Noleggia un piccolo server Linux (qualsiasi VPS, x86_64 o arm64), fai puntare il tuo dominio verso di esso e installa il portale come servizio, con Caddy davanti per l'HTTPS automatico. Il servizio riparte da solo dopo un riavvio.",
     "needTitle": "Cosa ti serve",
     "needItems": [
       "Un server Linux (VPS) con Ubuntu 22.04 o 24.04, Debian 12 o 13, o simile. Per iniziare basta 1 GB di memoria. Va bene qualsiasi provider, per esempio Hetzner Cloud, DigitalOcean, TransIP VPS o Scaleway.",
       "Un indirizzo IPv4 pubblico (IPv6 è facoltativo), con le porte 80 e 443 aperte.",
       "Un dominio o sottodominio per il portale, per esempio portal.tuobrand.it."
     ],
-    "ownStepsTitle": "Tre passaggi",
+    "ownStepsTitle": "Cinque passaggi",
     "ownSteps": [
-      "Crea il server e annota il suo indirizzo IP.",
-      "Fai puntare portal.tuobrand.it al server con un record DNS (vedi sotto).",
-      "Accedi al server via SSH ed esegui questo comando, con il tuo indirizzo:"
+      "Fai puntare {domain} al server con un record A (vedi sotto).",
+      "Scarica node-rs per il tuo server dall'ultima release e installalo con sudo install node-rs /usr/local/bin/.",
+      "Installa l'unità systemd deploy/node-rs.service dal repository. Esegue il portale come utente node-rs, conserva i dati in /var/lib/node-rs e imposta OBX_PUBLIC_URL su https://{domain}.",
+      "Installa Caddy e dagli il breve Caddyfile qui sotto. Ottiene il certificato HTTPS per te e inoltra i visitatori al portale.",
+      "Apri https://{domain} e inserisci il codice di installazione monouso che trovi in journalctl -u node-rs."
     ],
-    "ownDone": "Alla fine l'installer mostra l'indirizzo del tuo portale e un codice di installazione monouso. Apri l'indirizzo, inserisci il codice e completa la procedura guidata. Per aggiornare in seguito, esegui di nuovo lo stesso comando: impostazioni e dati restano.",
-    "ownTs": "Così installi l'edizione Go, il Portale per il tuo server. Per l'edizione TypeScript, aggiungi --edition ts allo stesso comando.",
     "ownEu": "Scegli un data center nell'UE e il tuo catalogo, le immagini e il database restano nell'UE.",
+    "dockerTitle": "2. Docker",
+    "dockerP": "Usi già Docker? Un solo file compose avvia il portale (l'immagine ghcr.io/openbrandexchange/node-rs) insieme a Caddy per l'HTTPS. Prima fai puntare il tuo dominio al server (vedi DNS sotto), poi esegui:",
+    "dockerDone": "Poi apri https://{domain} e inserisci il codice di installazione monouso che trovi in docker compose logs node-rs.",
     "dnsTitle": "DNS: fai puntare il tuo dominio al server",
     "dnsP": "Aggiungi un record presso la società che gestisce il tuo dominio:",
     "dnsHead": [
@@ -495,37 +432,58 @@
     ],
     "dnsCheckTitle": "Verifica",
     "dnsCheckP": "Sul tuo computer, questo deve mostrare l'indirizzo del server (oppure usa un controllo DNS online come dnschecker.org):",
-    "dnsWait": "Di solito servono da 5 a 60 minuti, a volte qualche ora. Anche l'installer lo verifica e ti dice cosa manca ancora.",
-    "optionsTitle": "Opzioni dell'installer",
-    "options": [
-      "l'indirizzo del portale, per esempio portal.tuobrand.it (obbligatorio)",
-      "un indirizzo e-mail per Let's Encrypt (facoltativo)",
-      "una release specifica invece dell'ultima",
-      "go (predefinito) installa l'edizione Go; ts installa l'edizione TypeScript",
-      "nessun HTTPS proprio: il portale ascolta su 127.0.0.1:8080 dietro il tuo proxy",
-      "mostra solo cosa farebbe, senza cambiare nulla",
-      "rimuove il programma e il servizio; dati e impostazioni restano (aggiungi --purge per eliminare anche quelli)"
-    ],
-    "checksP": "Prima di cambiare qualcosa, l'installer controlla il sistema (Linux amd64 o arm64 con systemd), i permessi di root, lo spazio su disco, che il dominio punti a questo server, che le porte 80 e 443 siano libere, e il firewall. Con ufw o firewalld mostra il comando esatto per aprire le porte 80 e 443.",
-    "filesTitle": "Dove si trova tutto",
-    "filesHead": [
-      "Cosa",
-      "Edizione Go",
-      "Edizione TypeScript"
-    ],
-    "filesRows": [
-      "Programma",
-      "Dati",
-      "Impostazioni",
-      "Servizio"
-    ],
+    "dnsWait": "Di solito servono da 5 a 60 minuti, a volte qualche ora. Caddy ottiene il certificato appena il dominio punta al server.",
+    "techTitle": "Dettagli tecnici per il tuo reparto IT",
+    "techLead": "Archiviazione, impostazioni, backup e aggiornamenti, per chi configura il server.",
+    "storageTitle": "Archiviazione e impostazioni",
+    "storageP": "Il portale usa SQLite: un solo file, nessun server di database. Le immagini restano sul disco del server o in qualsiasi bucket compatibile con S3 (OBX_BLOB_URL). Ogni impostazione è una variabile d'ambiente OBX_*, con gli stessi nomi usati da node-go.",
     "commandsTitle": "Comandi utili",
-    "cfTitle": "2. Cloudflare Workers",
-    "cfLead": "Nessun server da gestire: il portale gira sul tuo account Cloudflare. Clicca il pulsante, accedi e segui i passaggi.",
-    "cfDnsTitle": "DNS: un dominio personalizzato sul Worker",
-    "cfDnsP": "Aggiungi l'indirizzo come dominio personalizzato del Worker: Workers & Pages → il tuo Worker → Settings → Domains & Routes → Add → Custom domain. Se il tuo dominio è già su Cloudflare, DNS e certificato vengono configurati automaticamente. Altrimenti sposta prima il DNS del tuo dominio su Cloudflare (gratis; il dominio resta registrato dove si trova), poi aggiungi il dominio personalizzato. Poi imposta OBX_PUBLIC_URL su quell'indirizzo e fai di nuovo il deploy.",
-    "webDnsTitle": "DNS: un sottodominio nel tuo pannello di controllo",
-    "webDnsP": "Crea il sottodominio nel pannello di controllo del tuo hosting (DirectAdmin: Subdomain Management; cPanel: Domains → Create a new domain, oppure Subdomains; Plesk: Websites & Domains → Add Subdomain). Se il DNS del tuo dominio è presso lo stesso hosting, hai finito. Altrimenti aggiungi per il sottodominio un record A che punti all'indirizzo IP del server di hosting, indicato nel pannello. Poi attiva Let's Encrypt per il sottodominio nel pannello."
+    "httpsTitle": "HTTPS",
+    "httpsP": "Caddy richiede un certificato Let's Encrypt appena il tuo dominio punta al server, lo rinnova automaticamente e reindirizza http su https. Nessun certificato? Controlla con dig che il dominio restituisca l'indirizzo del server e che le porte 80 e 443 siano aperte.",
+    "backupTitle": "Backup",
+    "backupP": "Attiva i backup del server presso il tuo provider e conserva ogni notte una copia cifrata del portale presso un altro provider o in un'altra regione. Prova un ripristino ogni trimestre, così sai che funziona.",
+    "backupLink": "Backup fuori sede",
+    "updateTitle": "Aggiornamenti",
+    "updateP": "Fai un backup e leggi le note di rilascio. Su Linux, installa il nuovo binario allo stesso modo e riavvia il servizio. Con Docker, esegui docker compose pull e poi docker compose up -d. Il database si aggiorna da solo all'avvio.",
+    "releaseLink": "Scarica l'ultima release",
+    "migrateTitle": "Passare da node-go, node-php o node-ts",
+    "migrateP": "Dati, immagini e impostazioni vengono con te. La guida alla migrazione contiene i passaggi per ogni edizione precedente.",
+    "migrateLink": "Leggi la guida alla migrazione",
+    "p1Title": "3. Un partner lo ospita per te",
+    "p1P": "Preferisci non ospitarlo tu? I partner possono ospitare e gestire il portale per te.",
+    "partnerLink": "Vedi i partner",
+    "fieldBased": "Sede",
+    "fieldLanguages": "Lingue",
+    "fieldStatus": "Open Brand Exchange",
+    "fieldExport": "Esporta tutti i tuoi contenuti",
+    "fieldWebsite": "Sito web",
+    "listTitle": "Vuoi comparire qui come provider?",
+    "listP": "I criteri per comparire qui sono uguali per tutti:",
+    "listItems": [
+      "il tuo portale supera il test di conformità della versione attuale",
+      "un brand può esportare tutti i suoi dati e immagini e andarsene",
+      "pubblichi prezzi e condizioni sul tuo sito"
+    ],
+    "listHow": "Essere compatibili è gratuito; la presenza in questa pagina fa parte della partnership ufficiale.",
+    "costTitle": "Quanto costa, più o meno",
+    "costItems": [
+      "Il tuo server nell'UE: circa 5-15 € al mese per un piccolo server con backup automatici, presso un provider come Hetzner. Le foto sul disco del server non costano nulla in più; un object storage per un grande archivio aggiunge qualche euro al mese per terabyte.",
+      "Un partner: il suo prezzo. Chiedi cosa comprende: aggiornamenti, backup, il tuo dominio e l'esportazione di tutto se te ne vai.",
+      "Il tuo tempo: la prima volta conta da una a due ore, compresi il dominio e un ripristino di prova di un backup, poi circa un'ora al mese per aggiornamenti e controllo dei backup."
+    ],
+    "costNote": "Prezzi indicativi di novembre 2026, IVA esclusa. Verifica i prezzi attuali del provider prima di scegliere.",
+    "firstTitle": "Dopo l'installazione: il primo avvio",
+    "first": [
+      "Apri l'indirizzo del tuo portale nel browser.",
+      "Inserisci il codice di installazione monouso. Lo trovi nel log al primo avvio (journalctl -u node-rs, oppure docker compose logs node-rs), oppure lo imposti in anticipo con OBX_SETUP_CODE.",
+      "Inserisci la tua azienda e il tuo primo brand e scegli la tua password. Non esiste mai una password predefinita."
+    ],
+    "firstWhy": "Il codice di configurazione garantisce che nessun altro possa appropriarsi di un portale appena installato.",
+    "domainTitle": "Il tuo dominio",
+    "domainP": "Usa un sottodominio come rivenditori.tuobrand.it o b2b.tuobrand.it. I rivenditori vedono il tuo nome e l'indirizzo resta lo stesso se cambi hosting.",
+    "compareTitle": "Un portale, scritto in Rust",
+    "compareP": "C'è un unico portale di riferimento: node-rs. Ha la stessa amministrazione e la stessa area rivenditori ovunque giri, quindi puoi spostarti tra il tuo server, Docker e un partner in qualsiasi momento.",
+    "retireNote": "Le edizioni precedenti node-go, node-php e node-ts vengono dismesse."
   },
   "retailers": {
     "h1": "Per i rivenditori",
@@ -712,10 +670,9 @@
       "specifica, schemi, dati di test",
       "SDK Go, strumento obx, test di conformità, server fittizio",
       "interfaccia web condivisa: amministrazione e area rivenditori",
-      "Go: il tuo server, con un installer di una riga",
-      "PHP: normale web hosting",
-      "TypeScript: Cloudflare Workers"
+      "il portale di riferimento, in Rust: Linux o Docker"
     ],
+    "implRef": "Portale di riferimento",
     "statusDraft": "0.3",
     "implP": "Stai costruendo una tua implementazione o un client? Faccelo sapere con una issue o una pull request; entrerà in questa tabella appena supera i test di conformità.",
     "docsTitle": "Documenti",
@@ -737,20 +694,12 @@
         "d": "La specifica, gli schemi e i dati di prova"
       },
       {
+        "name": "node-rs",
+        "d": "Il portale di riferimento, in Rust"
+      },
+      {
         "name": "obx-go",
         "d": "SDK Go, lo strumento obx e il test di conformità"
-      },
-      {
-        "name": "node-ts",
-        "d": "Portale per Cloudflare Workers"
-      },
-      {
-        "name": "node-go",
-        "d": "Portale per il tuo server"
-      },
-      {
-        "name": "node-php",
-        "d": "Portale per un normale hosting web"
       },
       {
         "name": "admin-ui",
@@ -771,7 +720,7 @@
     ],
     "title": "Open source, su GitHub.",
     "reposTitle": "Repository",
-    "reposP": "Tutto è open source su GitHub: la specifica, il codice condiviso e le tre edizioni del portale.",
+    "reposP": "Tutto è open source su GitHub: la specifica, il codice condiviso e il portale di riferimento in Rust.",
     "newTitle": "Novità della versione 0.3",
     "newItems": [
       "Materiali e manutenzione sono codici con nomi in inglese, olandese, tedesco e francese, presi da vocabolari condivisi pubblicati su /vocabularies/v0.3/.",
@@ -874,7 +823,7 @@
       },
       {
         "q": "È pronto?",
-        "a": "Sì, versione 0.3: la specifica, le tre edizioni del portale e gli strumenti sono pubblicati e liberi da usare. Siamo all’inizio: i primi brand si stanno unendo ora."
+        "a": "Sì, versione 0.3: la specifica e gli strumenti sono pubblicati e liberi da usare, e il portale funziona in Rust. Siamo all’inizio: i primi brand si stanno unendo ora."
       },
       {
         "q": "Chi c'è dietro?",
@@ -908,7 +857,7 @@
       },
       {
         "h": "Licenze",
-        "p": "La specifica è CC-BY-4.0. L'SDK, lo strumento obx e l'interfaccia web condivisa sono Apache-2.0. Le tre edizioni del portale sono AGPL-3.0, così i miglioramenti restano aperti. Questo sito non ha una licenza aperta: codice, design e testi sono protetti, con tutti i diritti riservati. I file della specifica che il sito mette a disposizione, come schemi, modelli ed esempi, mantengono la loro licenza CC-BY-4.0."
+        "p": "La specifica è CC-BY-4.0. L'SDK, lo strumento obx e l'interfaccia web condivisa sono Apache-2.0. Il portale, node-rs, è AGPL-3.0, così i suoi miglioramenti restano aperti. Questo sito non ha una licenza aperta: codice, design e testi sono protetti, con tutti i diritti riservati. I file della specifica che il sito mette a disposizione, come schemi, modelli ed esempi, mantengono la loro licenza CC-BY-4.0."
       }
     ],
     "nameTitle": "Sul nome",
@@ -1036,7 +985,7 @@
       "Carica a mano il tuo export Excel e le foto, oppure falli raccogliere ogni notte",
       "Consegna automatica dal tuo PIM, ERP o da una cartella condivisa",
       "Richieste di accesso, inviti e chiavi API per il software dei tuoi rivenditori",
-      "Tre edizioni: il tuo server, Cloudflare Workers e normale web hosting"
+      "Un solo portale in Rust: sul tuo server Linux o con Docker"
     ],
     "brandsComing": [
       "La prima versione pubblica, con installazione in un clic",
@@ -1098,8 +1047,8 @@
           "l": "standard, libero per chiunque"
         },
         {
-          "v": "3",
-          "l": "edizioni del portale"
+          "v": "72",
+          "l": "controlli di conformità automatici"
         },
         {
           "v": "1",
@@ -1183,7 +1132,7 @@
       ],
       "editionsEyebrow": "Hosting",
       "editionsTitle": "Dove vuoi tu. Paghi solo l'hosting.",
-      "editionsLead": "Tre edizioni dello stesso portale immagini. Funzionano allo stesso modo, così puoi passare dall'una all'altra in qualsiasi momento.",
+      "editionsLead": "OBX funziona in Rust: un solo portale immagini che ospiti sul tuo server Linux o con Docker, oppure che un partner ospita per te. Puoi spostarti in qualsiasi momento.",
       "editionsLink": "Confronta le opzioni di hosting",
       "editionFields": [
         "Gira su",
@@ -1197,27 +1146,18 @@
           "name": "Il tuo server",
           "runs": "Qualsiasi server Linux (VPS), per esempio presso Hetzner, DigitalOcean, TransIP o Scaleway",
           "need": "Un server, un nome di dominio e accesso SSH",
-          "setup": "Un comando, poi la procedura guidata",
+          "setup": "Installa il programma e Caddy, poi la procedura guidata",
           "cost": "Circa 5-15 € al mese per un piccolo server con backup",
           "cta": "Installa sul tuo server"
         },
         {
-          "tag": "Nessun server",
-          "name": "Cloudflare Workers",
-          "runs": "Il tuo account Cloudflare, con D1 come database e R2 per le immagini",
-          "need": "Un account Cloudflare con il piano Workers Paid",
-          "setup": "Un clic, poi la procedura guidata",
-          "cost": "5 dollari al mese più lo storage",
-          "cta": "Configura su Cloudflare"
-        },
-        {
-          "tag": "Nessun comando",
-          "name": "Normale web hosting",
-          "runs": "Web hosting europeo con PHP e un database, come TransIP, Strato o OVHcloud",
-          "need": "Un programma FTP",
-          "setup": "Carica uno zip, poi l'installer",
-          "cost": "L'hosting che paghi già (PHP 8.2 o successivo)",
-          "cta": "Configura sul web hosting"
+          "tag": "Container",
+          "name": "Docker",
+          "runs": "Qualsiasi server con Docker e Docker Compose",
+          "need": "Docker, un nome di dominio e accesso SSH",
+          "setup": "Un file compose, poi la procedura guidata",
+          "cost": "Circa 5-15 € al mese per un piccolo server con backup",
+          "cta": "Inizia con Docker"
         },
         {
           "tag": "La più semplice",
@@ -1352,7 +1292,7 @@
     "pages": {
       "brandsH1": "Il tuo portale immagini, sullo standard aperto.",
       "retailersSoftware": "Per il tuo software",
-      "hostingEditions": "Le tre edizioni"
+      "hostingEditions": "Modi per farlo girare"
     }
   },
   "partners": {
